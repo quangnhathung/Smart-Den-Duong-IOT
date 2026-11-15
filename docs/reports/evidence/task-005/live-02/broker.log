@@ -1,0 +1,5 @@
+mosquitto-1  | 2026-11-15T13:32:28.691074407Z 1794749548: New connection from 172.18.0.1:51104 on port 1883.
+mosquitto-1  | 2026-11-15T13:32:28.691148572Z 1794749548: New client connected from 172.18.0.1:51104 as auto-67C8CAE0-9173-F7D5-0F30-91575C20C2F8 (p4, c1, k60).
+mosquitto-1  | 2026-11-15T13:32:28.691507723Z 1794749548: Client auto-67C8CAE0-9173-F7D5-0F30-91575C20C2F8 [172.18.0.1:51104] disconnected: connection closed by client.
+mosquitto-1  | 2026-11-15T13:33:05.068972062Z 1794749585: mosquitto version 2.1.2 terminating
+[Kmosquitto-1 exited with code 0

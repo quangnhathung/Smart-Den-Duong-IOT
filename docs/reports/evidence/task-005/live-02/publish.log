@@ -1,0 +1,21 @@
+ Container smartlight-p0-mqtt-client-run-5b81b4ec3b9c Creating 
+ Container smartlight-p0-mqtt-client-run-5b81b4ec3b9c Created 
+Client null sending CONNECT
+Client (null) received CONNACK (0)
+Client null sending PUBLISH (d0, q1, r0, m1, 'huit/nhom7/smartlight/v1/node_01/diagnostics/ping', ... (11 bytes))
+Client null received PUBACK (Mid: 1, RC:0)
+Client null sending DISCONNECT
+ Container smartlight-p0-mqtt-client-run-15db80ff4bf8 Creating 
+ Container smartlight-p0-mqtt-client-run-15db80ff4bf8 Created 
+Client null sending CONNECT
+Client (null) received CONNACK (0)
+Client null sending PUBLISH (d0, q1, r0, m1, 'huit/nhom7/smartlight/v1/node_01/diagnostics/ping', ... (11 bytes))
+Client null received PUBACK (Mid: 1, RC:0)
+Client null sending DISCONNECT
+ Container smartlight-p0-mqtt-client-run-913ed224205a Creating 
+ Container smartlight-p0-mqtt-client-run-913ed224205a Created 
+Client null sending CONNECT
+Client (null) received CONNACK (0)
+Client null sending PUBLISH (d0, q1, r0, m1, 'huit/nhom7/smartlight/v1/node_01/diagnostics/ping', ... (11 bytes))
+Client null received PUBACK (Mid: 1, RC:0)
+Client null sending DISCONNECT

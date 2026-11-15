@@ -1,0 +1,483 @@
+ Container smartlight-p0-mqtt-client-run-5b374b15a362 Creating 
+ Container smartlight-p0-mqtt-client-run-5b374b15a362 Created 
+Client null sending CONNECT
+Client (null) received CONNACK (0)
+Client null sending SUBSCRIBE (Mid: 1, Topic: huit/nhom7/smartlight/v1/node_01/diagnostics/#, QoS: 1, Options: 0x00)
+Client null received SUBACK
+Subscribed (mid: 1): 1
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1395217}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1397231}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1399248}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1401265}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1403282}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1405300}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1407317}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1409331}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1411348}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1413365}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1415382}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1417398}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1419419}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1421436}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1423453}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1425469}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1427486}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1429500}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1431517}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1433531}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1435551}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1437568}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1439585}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1441600}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1443617}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1445631}
+Client null sending PINGREQ
+Client null received PINGRESP
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1447648}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1449668}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (21 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":1451685}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (18 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":5901}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (18 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":7907}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (18 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":9915}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":11916}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":13924}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":15930}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":17931}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":19931}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":21939}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":23940}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":25948}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":27956}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":29964}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":31965}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":33973}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":35973}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":37974}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":39981}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":41989}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":43996}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":45997}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":48005}
+Client null sending PINGREQ
+Client null received PINGRESP
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":50006}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":52007}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":54015}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":56023}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":58032}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":60034}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":62043}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":64052}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":66061}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":68062}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":70070}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":72077}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":74077}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":76085}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":78093}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":80095}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":82096}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":84104}
+Client null received PUBLISH (d0, q1, r0, m1, 'huit/nhom7/smartlight/v1/node_01/diagnostics/ping', ... (11 bytes))
+Client null sending PUBACK (m1, rc0)
+huit/nhom7/smartlight/v1/node_01/diagnostics/ping task005-002
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/pong', ... (11 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/pong task005-002
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":86104}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":88112}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":90113}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":92121}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":94129}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":96135}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (19 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":98136}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":100144}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":102144}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":104145}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":106153}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":108160}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":110161}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":112169}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":114177}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":116178}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":118179}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":120187}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":122194}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":124194}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":126202}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":128210}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":130218}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":132222}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":134230}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":136238}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":138238}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":140246}
+Client null sending PINGREQ
+Client null received PINGRESP
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":142254}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":144262}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":146267}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":148275}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":150281}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":152289}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":154290}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":156297}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":158305}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":160306}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":162308}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":164316}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":166324}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":168325}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":170333}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":172340}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":174340}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":176341}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":178349}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":180357}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":182357}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":184365}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":186373}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":188374}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":190382}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":192383}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":194390}
+Client null sending PINGREQ
+Client null received PINGRESP
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":196391}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":198399}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":200407}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":202408}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":204416}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":206417}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":208418}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":210426}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":212434}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":214441}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":216442}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":218450}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":220457}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":222460}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":224467}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":226475}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":228476}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":230484}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":232492}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":234499}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":236504}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":238512}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":240520}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":242521}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":244529}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":246537}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":248538}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":250546}
+Client null sending PINGREQ
+Client null received PINGRESP
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":252547}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":254554}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":256554}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":258562}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":260570}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":262571}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":264579}
+Client null received PUBLISH (d0, q1, r0, m2, 'huit/nhom7/smartlight/v1/node_01/diagnostics/ping', ... (11 bytes))
+Client null sending PUBACK (m2, rc0)
+huit/nhom7/smartlight/v1/node_01/diagnostics/ping task005-003
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/pong', ... (11 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/pong task005-003
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":266588}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":268589}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":270597}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":272604}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":274611}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":276612}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":278620}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":280622}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":282623}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":284630}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":286638}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":288647}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":290655}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":292663}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":294670}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":296673}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":298680}
+ Container smartlight-p0-mqtt-client-run-362ea3537736 Creating 
+ Container smartlight-p0-mqtt-client-run-362ea3537736 Created 
+Client null sending CONNECT
+Client (null) received CONNACK (0)
+Client null sending SUBSCRIBE (Mid: 1, Topic: huit/nhom7/smartlight/v1/node_01/diagnostics/#, QoS: 1, Options: 0x00)
+Client null received SUBACK
+Subscribed (mid: 1): 1
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":416325}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":418332}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":420333}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":422341}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":424348}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":426348}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":428356}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":430358}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":432359}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":434367}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":436374}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":438381}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":440382}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":442390}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":444398}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":446402}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":448410}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":450418}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":452418}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":454426}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":456434}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":458441}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":460446}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":462454}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":464462}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":466463}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":468471}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":470479}
+Client null sending PINGREQ
+Client null received PINGRESP
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":472480}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":474488}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":476489}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":478496}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":480497}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":482504}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":484512}
+Client null received PUBLISH (d0, q1, r0, m1, 'huit/nhom7/smartlight/v1/node_01/diagnostics/ping', ... (11 bytes))
+Client null sending PUBACK (m1, rc0)
+huit/nhom7/smartlight/v1/node_01/diagnostics/ping task005-004
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/pong', ... (11 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/pong task005-004
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":486515}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":488523}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":490530}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":492531}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":494539}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":496547}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":498547}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":500555}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":502556}
+Client null received PUBLISH (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat', ... (20 bytes))
+huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat {"uptime_ms":504563}
