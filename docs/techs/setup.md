@@ -4,7 +4,7 @@
 
 [SRS](../srs.md) mục 3.1, 4, 10.2–10.3, 11–12. Đây là firmware chẩn đoán môi trường, chưa có cảm biến, AUTO/MANUAL, telemetry hoặc ACK nghiệp vụ. Giữ workspace firmware hiện tại; infra nằm trong workspace này, không di chuyển thư mục cha.
 
-Đã quan sát: PlatformIO Core 6.1.19, Espressif32 8.0.0, Arduino ESP32 3.3.12 (package 4.30312.261113), ESP32 libs 3.3.12; Docker CLI 29.9.2, Compose 5.7.0, Wokwi extension 4.1.0. Các phiên bản này chưa được nghiệm thu bằng build/live. Platform chưa pin trong platformio.ini: chỉ khóa sau khi kiểm chứng build và smoke test thành công, theo SRS. PubSubClient được khai báo chính xác 2.8 cho firmware mới.
+Đã quan sát: PlatformIO Core 6.1.19, Espressif32 8.0.0, Arduino ESP32 3.3.12 (package 4.30312.261113), ESP32 libs 3.3.12; Docker CLI 29.9.2, Compose 5.7.0, Wokwi extension 4.1.0. Build esp32dev đã PASS sau sửa lỗi min; Wokwi/MQTT live chưa được nghiệm thu. Platform chưa pin trong platformio.ini: chỉ khóa sau khi kiểm chứng build và smoke test thành công, theo SRS. PubSubClient được khai báo chính xác 2.8 cho firmware mới.
 
 ## 1. Điều kiện và broker Docker
 
@@ -131,4 +131,17 @@ Không cần xóa volume hệ thống; không dùng docker system prune. Stop Wo
 
 [Wokwi PlatformIO](https://docs.wokwi.com/vscode/platformio), [Wokwi config](https://docs.wokwi.com/vscode/project-config), [Wokwi license](https://docs.wokwi.com/vscode/getting-started), [Mosquitto config](https://mosquitto.org/man/mosquitto-conf-5.html).
 
-Build trong phiên agent hiện bị chặn quyền cache; chưa chạy Docker/Wokwi live. Không có kết quả nghiệm thu giả lập hoặc cảm biến. Tài liệu firmware/mạch/MQTT thử nghiệm được gộp trong trang setup này để tránh lặp giữa các trang khi mới có một kịch bản P0.
+Build mới trong phiên agent đã PASS với core dir tạm trong /tmp, dùng platform/package có sẵn; xem cập nhật bên dưới. Chưa chạy Docker/Wokwi live. Không có kết quả nghiệm thu giả lập hoặc cảm biến. Tài liệu firmware/mạch/MQTT thử nghiệm được gộp trong trang setup này để tránh lặp giữa các trang khi mới có một kịch bản P0.
+
+## Cập nhật TASK-002: sửa lỗi kiểu min
+
+Log gốc [build.log](../reports/evidence/task-002/build.log) đã chạy compiler và FAIL tại EnvironmentSmokeTest.cpp do hai đối số min khác kiểu unsigned long/unsigned int. Đã thêm <algorithm>, dùng std::min<uint32_t> để thống nhất kiểu; giữ nguyên backoff tăng gấp đôi và trần 10000 ms.
+
+Formatter PASS. Build esp32dev PASS, exit 0, 10.19 giây; RAM 47276/327680 byte, flash 896199/1310720 byte. [Log sau sửa](../reports/evidence/task-002/build-min-fix.log). Lệnh kiểm chứng trong phiên này:
+
+```bash
+clang-format --dry-run --Werror src/EnvironmentSmokeTest.cpp
+PLATFORMIO_CORE_DIR=/tmp/iot-pio-check-de41spu8 PLATFORMIO_SETTING_ENABLE_TELEMETRY=no /home/quangnhathung/.platformio/penv/bin/pio run -e esp32dev
+```
+
+Core dir trên là thư mục tạm đã có, tham chiếu package/platform cài cục bộ; không phải cấu hình cần sao chép sang máy khác. Terminal thông thường vẫn dùng lệnh build ở mục 3. Không nâng phiên bản hoặc sửa quyền hệ thống. Chưa chạy copy artifact, Docker hoặc Wokwi; chưa khóa phiên bản vì còn chờ smoke test live. Giữ các log thất bại trước đó làm lịch sử, không dùng chúng để phủ nhận kết quả build mới.
