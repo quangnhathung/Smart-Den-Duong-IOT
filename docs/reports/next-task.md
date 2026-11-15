@@ -1,28 +1,30 @@
-# TASK-002 — Kiểm chứng môi trường P0
+# TASK-002 — Tiếp tục kiểm chứng live P0
 
 - Trạng thái: Chưa bắt đầu
-- Tiến độ: 0/4 mục
-- Cập nhật: 2026-11-15T17:36:07+07:00
+- Tiến độ: 1/4 mục nghiệm thu
+- Cập nhật: 2026-11-15T17:55:23+07:00
+
+Đây là phần tiếp tục của task đang bị chặn, không cấp mã mới và không triển khai tự động. Sau khi đạt đủ nghiệm thu sẽ đề xuất TASK-004 chốt phần kiến trúc/giao thức A0 còn lại.
 
 ## Mô tả và phạm vi
 
-Đề xuất kiểm chứng môi trường build, Wokwi, gateway và MQTT local trước khi triển khai chức năng đèn. Đây là task tiếp theo được đề xuất, chưa được tự động bắt đầu.
+Đã chuẩn bị firmware Serial/PWM/MQTT chẩn đoán, Docker Compose và Wokwi một node theo kế hoạch. Người dùng tự chạy Docker và Wokwi; chưa có bằng chứng live. Chưa triển khai cảm biến hoặc AUTO/MANUAL, chưa hoàn tất toàn bộ P0/A0.
 
 ## Tham chiếu SRS
 
-[SRS](../srs.md): mục 3.1, 4.3–4.5, 10.2–10.3 (P0), 11.2 (đầu vào cho A0), 12. Chỉ là bước kiểm chứng môi trường, không đồng nghĩa hoàn thành mọi đầu ra kiến trúc/giao thức của P0/A0.
+[SRS](../srs.md) mục 3.1, 4.3–4.5, 10.2–10.3, 11–12.
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [ ] Xác nhận phiên bản PlatformIO/platform/framework, build esp32dev và ghi log/kết quả thực tế.
-- [ ] Xác nhận quyền Wokwi và chạy một ESP32 với Serial/PWM có bằng chứng.
-- [ ] Xác nhận Mosquitto local, gateway và publish/subscribe từ mô phỏng, ghi cấu hình và kết quả.
-- [ ] Cập nhật techs liên quan cùng báo cáo; ghi rõ kiểm tra đạt, lỗi và phần còn lại của P0.
+- [ ] Build mới esp32dev thành công và khóa phiên bản platform/framework sau smoke test đạt.
+- [ ] License Wokwi, Serial và năm mức PWM được xác nhận bằng log/ảnh.
+- [ ] Broker qua host, ba ping/pong và mất/khôi phục broker đạt bằng chứng live.
+- [x] Chuẩn bị mã/cấu hình, tài liệu setup và hồ sơ kiểm tra; ghi rõ phần chưa xác minh.
 
 ## Vướng mắc và cách giải quyết
 
-Chưa kiểm tra trong task này. SRS ghi nhận lần build trước bị chặn ghi khóa trong ~/.platformio; cần xác minh lại bằng môi trường có quyền phù hợp. License Wokwi và MQTT local chưa được xác nhận; cần kiểm tra quyền tài khoản và kết nối thật, không suy ra từ việc có extension hoặc artifact.
+Build mẫu và firmware mới bị chặn quyền cache ~/.platformio; chưa thể kết luận mã mới biên dịch được. Chạy build theo [setup](../techs/setup.md) trên terminal ngoài phiên, kiểm tra SUCCESS rồi chuẩn bị artifact. Chưa tự khởi động Docker hoặc Wokwi vì người dùng chọn tự chạy. Cần lưu log/ảnh theo [bằng chứng](evidence/task-002/README.md) rồi tiếp tục TASK-002 để nghiệm thu; chưa đưa vào checklist task hoàn thành.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Chỉ bắt đầu khi người dùng giao task này. Cần PlatformIO khả dụng, quyền ghi cache build, VS Code/Wokwi có quyền sử dụng và Mosquitto local. Không tự mua license, mở broker ra Internet hoặc tắt sandbox để vượt giới hạn phiên.
+Đã được người dùng giao triển khai. Phần tiếp theo cần Docker daemon khả dụng, quyền build cache và license Wokwi. Không tự tắt sandbox, sửa quyền hệ thống hay mua dịch vụ.

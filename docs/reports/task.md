@@ -1,29 +1,28 @@
-# TASK-003 — Dùng chung convention cho Codex, Claude Code và OpenCode
+# TASK-002 — Kiểm chứng môi trường P0
 
-- Trạng thái: Hoàn thành
-- Tiến độ: 3/3 mục
-- Cập nhật: 2026-11-15T17:41:58+07:00
+- Trạng thái: Bị chặn
+- Tiến độ: 1/4 mục nghiệm thu
+- Cập nhật: 2026-11-15T17:55:23+07:00
 
 ## Mô tả và phạm vi
 
-Bảo đảm ba công cụ có entry point nạp convention chung từ AGENTS.md tại gốc firmware. Thêm import cho Claude Code, ghi cách khởi động và kiểm tra, không thay cấu hình global hoặc chức năng firmware.
+Đã chuẩn bị firmware Serial/PWM/MQTT chẩn đoán, Docker Compose và Wokwi một node theo kế hoạch. Người dùng tự chạy Docker và Wokwi; chưa có bằng chứng live. Chưa triển khai cảm biến hoặc AUTO/MANUAL, chưa hoàn tất toàn bộ P0/A0.
 
 ## Tham chiếu SRS
 
-[SRS](../srs.md), mục 11 và 16: hướng dẫn agent và quản lý thay đổi. Task hỗ trợ phát triển, không nghiệm thu FR. TASK-002 đã được dành cho đề xuất P0 trong next-task.md nên yêu cầu mới này dùng TASK-003.
+[SRS](../srs.md) mục 3.1, 4.3–4.5, 10.2–10.3, 11–12.
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [x] Đối chiếu cơ chế nạp hướng dẫn chính thức của ba công cụ; thiết lập entry point tương ứng.
-- [x] Cập nhật tài liệu development với cách dùng, kiểm tra và giới hạn xác minh.
-- [x] Kiểm tra import/liên kết, bảo toàn lịch sử và dữ liệu; hoàn thiện hồ sơ task.
-
-Bằng chứng: [báo cáo TASK-003](report.md). Kiểm tra cấu trúc/import đạt; chưa xác minh context bằng phiên model mới.
+- [ ] Build mới esp32dev thành công và khóa phiên bản platform/framework sau smoke test đạt.
+- [ ] License Wokwi, Serial và năm mức PWM được xác nhận bằng log/ảnh.
+- [ ] Broker qua host, ba ping/pong và mất/khôi phục broker đạt bằng chứng live.
+- [x] Chuẩn bị mã/cấu hình, tài liệu setup và hồ sơ kiểm tra; ghi rõ phần chưa xác minh.
 
 ## Vướng mắc và cách giải quyết
 
-Claude CLI không có trong PATH của phiên. OpenCode cần ghi log ngoài vùng được phép; dùng thư mục dữ liệu/cache/state tạm trong /tmp để đọc phiên bản. Không dùng phiên gọi model để kiểm thử trong task này; ghi rõ giới hạn xác minh ở báo cáo.
+Build mẫu và firmware mới bị chặn quyền cache ~/.platformio; chưa thể kết luận mã mới biên dịch được. Chạy build theo [setup](../techs/setup.md) trên terminal ngoài phiên, kiểm tra SUCCESS rồi chuẩn bị artifact. Chưa tự khởi động Docker hoặc Wokwi vì người dùng chọn tự chạy. Cần lưu log/ảnh theo [bằng chứng](evidence/task-002/README.md) rồi tiếp tục TASK-002 để nghiệm thu; chưa đưa vào checklist task hoàn thành.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Người dùng đã yêu cầu đồng bộ convention. Giữ đề xuất TASK-002 kiểm chứng P0, không tự triển khai.
+Đã được người dùng giao triển khai. Phần tiếp theo cần Docker daemon khả dụng, quyền build cache và license Wokwi. Không tự tắt sandbox, sửa quyền hệ thống hay mua dịch vụ.

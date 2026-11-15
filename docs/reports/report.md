@@ -1,3 +1,37 @@
+## 2026-11-15T17:55:23+07:00 — TASK-002 — Chuẩn bị môi trường P0
+
+- Trạng thái: Bị chặn
+- Tiến độ: 1/4 mục nghiệm thu
+
+### Đã thực hiện
+
+- Tạo Docker Compose Mosquitto 2.1.2-alpine và service MQTT client profile tools trên host networking Linux; broker chỉ publish 127.0.0.1:1883, cấu hình read-only, anonymous local, không persistence.
+- Thay code mẫu bằng main điều phối EnvironmentSmokeTest: Serial, LEDC 5 kHz/8 bit, năm mức PWM, Wi-Fi/MQTT với retry hữu hạn, ping/pong tối đa 64 byte, không retained. Thêm PubSubClient 2.8; chưa pin platform/framework vì chưa build/smoke đạt.
+- Tạo sơ đồ và cấu hình Wokwi node_01, script chuẩn bị BIN/ELF kiểm tra freshness/checksum và gitignore artifact.
+- Tạo [setup](../techs/setup.md), README, cập nhật development và [bằng chứng](evidence/task-002/README.md). Giữ nguyên SRS và lịch sử checklist; chưa có task hoàn thành mới.
+
+### Kiểm tra và kết quả
+
+PASS: Compose config, clang-format, JSON/TOML, liên kết tài liệu; thử script với fixture tạm gồm thiếu file, artifact cũ và copy checksum. Chi tiết tại [kiểm tra tĩnh](evidence/task-002/static-checks.md).
+
+Build code mẫu và code mới: bị chặn quyền cache PlatformIO, xem baseline-build.log/smoke-build.log trong thư mục bằng chứng. Chưa xác nhận biên dịch mã mới. Chuẩn bị artifact thật từ chối vì thiếu BIN/ELF; không xuất artifact cũ.
+
+Docker runtime, license Wokwi, Serial/PWM live, broker host và ping/pong/reconnect: chưa chạy. Không coi kiểm tra tĩnh là kết quả nghiệm thu mô phỏng.
+
+### Vướng mắc
+
+PlatformIO không ghi được cache/lock trong ~/.platformio ở sandbox. Người dùng chọn tự chạy Docker Compose và Wokwi; chưa có log live.
+
+### Cách giải quyết
+
+Chạy theo setup từ terminal ngoài phiên: khởi động broker, xác nhận host pub/sub, build SUCCESS, copy artifact, chọn cấu hình và chạy Wokwi, thử ba ping/pong rồi stop/start broker. Lưu log và ảnh vào evidence/task-002. Sau khi có bằng chứng đạt, tiếp tục cùng TASK-002 để khóa toolchain đã kiểm chứng và nghiệm thu. Không cần thay quyền hệ thống hoặc xóa cache từ agent.
+
+### Tài liệu và bước tiếp theo
+
+[SRS](../srs.md) mục 3, 4, 10–12; setup là tài liệu chính cho firmware/mạch/MQTT thử P0. [Task tiếp theo](next-task.md) là phần kiểm chứng còn lại của TASK-002; TASK-004 chỉ được đề xuất khi P0 môi trường đạt. Chưa tự triển khai A0/P1.
+
+---
+
 ## 2026-11-15T17:41:58+07:00 — TASK-003 — Dùng chung convention cho Codex, Claude Code và OpenCode
 
 - Trạng thái: Hoàn thành
