@@ -1,17 +1,14 @@
 # Bằng chứng TASK-002
 
-baseline-build.log và smoke-build.log: build đã thử trong phiên agent, thất bại do quyền cache PlatformIO. Không phải lỗi biên dịch đã xác nhận.
+## Hiện trạng mới nhất
 
-Khi chạy ngoài phiên, thêm build.log (build mới), broker.log, serial.log, mqtt.log, ảnh LED. Mỗi ca ghi thời gian, phiên bản, checksum BIN/ELF, kỳ vọng, thực tế và PASS/FAIL. Đã có build.log FAIL do lỗi min; chưa có bằng chứng Wokwi/MQTT live.
+Xem [kết quả live và nguồn bằng chứng](live-progress.md), [ảnh Wokwi gốc](wokwi-first-run.png).
 
-| Ca | Trạng thái hiện tại |
-| --- | --- |
-| Build mẫu | Log cũ bị chặn quyền cache |
-| Firmware sau sửa min | PASS: build-min-fix.log; chưa có smoke live |
-| Wokwi, Serial và năm mức PWM | Chưa chạy |
-| Broker publish/subscribe qua host | Chưa chạy |
-| Ba ping/pong và mất/khôi phục broker | Chưa chạy |
+- build.log hiện tại: SUCCESS 7.31 giây, người dùng đã chạy lại và thay nội dung log trước đó.
+- build-min-fix.log: SUCCESS 10.19 giây của lượt sửa min trước đó.
+- baseline-build.log/smoke-build.log: lịch sử lỗi quyền cache, không phản ánh build hiện tại.
+- broker.log: broker chạy, nhận client ESP32 ba lần rồi ngắt do exceeded timeout.
+- Host pub/sub và thao tác restart lấy từ đầu ra terminal người dùng cung cấp; chưa có mqtt.log/serial.log thô đầy đủ.
+- Wokwi đã chạy, PWM mới có bằng chứng một phần; ba pong và phục hồi sau restart chưa đạt.
 
-## Lượt sửa min — 2026-11-15T18:10:41+07:00
-
-Giữ nguyên build.log lỗi biên dịch gốc. build-min-fix.log là build mới sau sửa std::min<uint32_t>, exit 0, SUCCESS 10.19 giây. clang-format --dry-run --Werror src/EnvironmentSmokeTest.cpp: PASS. Core dir tạm /tmp/iot-pio-check-de41spu8 dùng lại package/platform đã cài; không sửa quyền/toolchain. BIN/ELF mới đã tạo trong .pio/build/esp32dev; chưa copy sang mô phỏng, chưa chạy Wokwi/MQTT.
+Không thay đổi các log đầu vào trong lượt cập nhật này. Lịch sử báo cáo trước giữ nguyên; các câu ghi build.log là lỗi min mô tả thời điểm cũ, log đó đã được người dùng thay bằng build thành công.

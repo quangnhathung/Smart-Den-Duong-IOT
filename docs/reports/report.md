@@ -1,3 +1,32 @@
+## 2026-11-15T18:19:35+07:00 — TASK-002 — Cập nhật tiến độ theo bằng chứng live
+
+- Trạng thái: Bị chặn
+- Tiến độ: 1/4 nhóm nghiệm thu gốc; đã đạt thêm nhiều bước con
+
+### Đã thực hiện
+
+Cập nhật task/next-task, setup và README bằng chứng; thêm [tổng hợp live](evidence/task-002/live-progress.md) và bản sao nguyên ảnh Wokwi người dùng. Giữ nguyên firmware, cấu hình, SRS, log và checklist các task hoàn thành. Không tự chạy Docker/Wokwi hoặc gói kế tiếp.
+
+### Kiểm tra và kết quả
+
+Build.log hiện tại SUCCESS 7.31 giây. Đã đối chiếu checksum BIN/ELF nguồn và copy khớp nhau/khớp đầu ra người dùng. Ảnh xác nhận Wokwi/Serial, ready=1 và PWM 0%/25%; chưa đủ năm mức. Host pub/sub PASS theo terminal người dùng; chưa có mqtt.log thô riêng. Broker.log có ESP32 kết nối ba lần, timeout 22–23 giây. Chưa xác nhận ba pong, SUBACK hay phục hồi sau restart.
+
+Kiểm tra tài liệu: liên kết mới, bảo toàn ảnh/checksum, lịch sử report và các tệp ngoài phạm vi. Không build lại vì chỉ cập nhật hồ sơ dựa trên bằng chứng đã có.
+
+### Vướng mắc
+
+MQTT chưa ổn định, thiếu Serial đầy đủ và pong. Mô phỏng chậm là giả thuyết, chưa kết luận nguyên nhân. Build.log lỗi cũ đã được người dùng thay bằng log SUCCESS; không phục dựng hoặc giả tạo log cũ.
+
+### Cách giải quyết
+
+Lần thử tiếp khởi động lại broker sau compose down, giữ Wokwi chạy, thu Serial và kiểm tra heartbeat; nghiệm thu đủ PWM và ping/pong trước/sau restart. Chỉ khóa toolchain sau khi smoke live đạt. Giữ 1/4 vì tiêu chí build còn gộp khóa phiên bản, PWM thiếu mức, MQTT chưa đạt; không ghi phần trăm tùy ý.
+
+### Tài liệu và bước tiếp theo
+
+Setup cập nhật theo SRS 4.3–4.5, 10–12. Next-task giữ TASK-002, chưa triển khai đề xuất sửa timeout. Không thêm task chưa hoàn thành vào checklists.md. Lịch sử report cũ giữ nguyên toàn bộ phía sau.
+
+---
+
 ## 2026-11-15T18:10:41+07:00 — TASK-002 — Sửa lỗi biên dịch min
 
 - Trạng thái: Bị chặn (còn chờ nghiệm thu live)

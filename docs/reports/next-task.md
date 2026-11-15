@@ -1,14 +1,12 @@
-# TASK-002 — Tiếp tục kiểm chứng live P0
+# TASK-002 — Tiếp tục xử lý timeout và nghiệm thu live P0
 
 - Trạng thái: Chưa bắt đầu
-- Tiến độ: 1/4 mục nghiệm thu
-- Cập nhật: 2026-11-15T18:10:41+07:00
-
-Đây là phần tiếp tục của task đang bị chặn, không cấp mã mới và không triển khai tự động. Sau khi đạt đủ nghiệm thu sẽ đề xuất TASK-004 chốt phần kiến trúc/giao thức A0 còn lại.
+- Tiến độ: 1/4 nhóm nghiệm thu; nhiều bước con đã đạt
+- Cập nhật: 2026-11-15T18:19:35+07:00
 
 ## Mô tả và phạm vi
 
-Đã chuẩn bị firmware Serial/PWM/MQTT chẩn đoán, Docker Compose và Wokwi một node theo kế hoạch. Người dùng tự chạy Docker và Wokwi; chưa có bằng chứng live. Chưa triển khai cảm biến hoặc AUTO/MANUAL, chưa hoàn tất toàn bộ P0/A0.
+Đã có build thành công, artifact đã copy khớp checksum, Wokwi khởi chạy với Serial/PWM và broker host pub/sub đạt theo bằng chứng người dùng. ESP32 đã kết nối Mosquitto nhưng bị timeout lặp lại. Chưa có đủ năm mức PWM, ba pong hoặc phục hồi sau restart broker. Chưa triển khai cảm biến/AUTO/MANUAL hoặc hoàn tất P0/A0. Lượt này chỉ cập nhật tài liệu.
 
 ## Tham chiếu SRS
 
@@ -16,15 +14,29 @@
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [ ] Build mới esp32dev thành công và khóa phiên bản platform/framework sau smoke test đạt.
-- [ ] License Wokwi, Serial và năm mức PWM được xác nhận bằng log/ảnh.
-- [ ] Broker qua host, ba ping/pong và mất/khôi phục broker đạt bằng chứng live.
+- [ ] Build mới esp32dev thành công và khóa phiên bản platform/framework sau smoke test đạt. Build đã PASS; khóa phiên bản còn chờ live đạt.
+- [ ] License Wokwi, Serial và năm mức PWM được xác nhận bằng log/ảnh. Đã chạy Wokwi/Serial, thấy 0%/25%; còn thiếu 50%/70%/100%.
+- [ ] Broker qua host, ba ping/pong và mất/khôi phục broker đạt bằng chứng live. Host pub/sub đạt; node kết nối nhưng timeout; chưa xác nhận pong/phục hồi.
 - [x] Chuẩn bị mã/cấu hình, tài liệu setup và hồ sơ kiểm tra; ghi rõ phần chưa xác minh.
+
+Giữ 1/4 nhóm nghiệm thu gốc vì ba nhóm đầu đều còn điều kiện chưa đủ; không quy đổi thành phần trăm hoàn thành dự án. Chi tiết từng phần đã đạt tại [bằng chứng live](evidence/task-002/live-progress.md).
 
 ## Vướng mắc và cách giải quyết
 
-Đã sửa lỗi min(unsigned long, unsigned int) bằng std::min<uint32_t> và include <algorithm>. Build esp32dev PASS (exit 0, 10.19 giây), formatter PASS. Dùng PLATFORMIO_CORE_DIR=/tmp/iot-pio-check-de41spu8 với package/platform cục bộ có sẵn; không đổi toolchain hoặc quyền hệ thống. Log mới: [build-min-fix.log](evidence/task-002/build-min-fix.log). Giữ nguyên build.log ghi lỗi gốc và baseline-build.log/smoke-build.log ghi lỗi cache trước đó. Wokwi/Serial/PWM và MQTT live chưa chạy; người dùng tiếp tục theo setup. Chưa khóa platform/framework vì còn chờ smoke test live theo tiêu chí SRS; TASK-002 vẫn 1/4, chưa hoàn thành.
+Lỗi min đã sửa; build.log hiện tại là bản SUCCESS 7.31 giây do người dùng chạy lại, không còn là log lỗi cũ. Broker ghi smartlight-node_01-p0 kết nối ba lần rồi exceeded timeout sau 22–23 giây. Tốc độ mô phỏng thấp là giả thuyết cần kiểm tra, chưa kết luận nguyên nhân. Thu Serial đầy đủ và đối chiếu hoạt động MQTT/heartbeat; không tự đổi broker hoặc hostname. Chưa khóa platform/framework vì smoke live chưa đủ.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Đã được người dùng giao triển khai. Phần tiếp theo cần Docker daemon khả dụng, quyền build cache và license Wokwi. Không tự tắt sandbox, sửa quyền hệ thống hay mua dịch vụ.
+Theo chuỗi thao tác người dùng, phiên cuối đã compose down. Lần thử tiếp cần up -d mosquitto, giữ Wokwi chạy liên tục, chờ subscribe rồi mở subscriber trước khi gửi ping. Cần log Serial, ba pong, bằng chứng đủ năm mức PWM và pong sau restart broker. Không tự sửa firmware hoặc khởi chạy dịch vụ trong lượt cập nhật tiến độ.
+
+## Phần đã hoàn tất trong TASK-002
+
+- [x] Chuẩn bị mã/cấu hình/tài liệu P0.
+- [x] Sửa kiểu min, kiểm tra formatter, build thành công (lượt trước).
+- [x] Đối chiếu build mới và checksum nguồn/copy.
+- [x] Ghi nhận Wokwi/Serial/PWM một phần và broker host pub/sub.
+- [x] Lưu ảnh gốc, tổng hợp timeout, cập nhật hồ sơ; chưa đánh dấu P0 hoàn thành.
+
+## Đề xuất tiếp theo
+
+Tiếp tục cùng TASK-002: kiểm tra tốc độ/clock và lịch phục vụ MQTT, thu Serial đầy đủ, chỉ sửa khi được giao; build/copy lại nếu có sửa. Nghiệm thu năm mức PWM, ba ping/pong, giữ kết nối và pong mới sau restart broker không reset ESP32. Sau khi đủ live mới khóa toolchain và đề xuất TASK-004 chốt A0. Không tự thực hiện đề xuất trong lượt cập nhật tài liệu.
