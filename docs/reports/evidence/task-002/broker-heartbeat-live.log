@@ -197,3 +197,4 @@ mosquitto-1  | 1794744284: New connection from 172.18.0.1:40012 on port 1883.
 mosquitto-1  | 1794744284: New client connected from 172.18.0.1:40012 as auto-8D1B8079-CAFC-FA7E-1FCE-5F0CB423A701 (p4, c1, k60).
 mosquitto-1  | 1794744284: Client auto-8D1B8079-CAFC-FA7E-1FCE-5F0CB423A701 [172.18.0.1:40012] disconnected: connection closed by client.
 mosquitto-1  | 1794744544: Client smartlight-node_01-p0 [172.18.0.1:36532] disconnected: exceeded timeout.
+mosquitto-1  | 1794744869: Client auto-63984308-9683-F7FE-37C5-3DA0B665E636 [172.18.0.1:48578] disconnected.

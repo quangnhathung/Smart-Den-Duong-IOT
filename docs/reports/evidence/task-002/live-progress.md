@@ -1,5 +1,7 @@
 # Cập nhật bằng chứng live TASK-002
 
+> Bản ghi theo thời điểm 18:19; trạng thái đã được thay bằng [biên bản nghiệm thu](acceptance.md). Giữ nguyên dữ liệu quan sát cũ bên dưới.
+
 - Đối chiếu: 2026-11-15T18:19:35+07:00.
 - Nguồn: log có sẵn, checksum artifact, ảnh và đầu ra terminal người dùng cung cấp trong hội thoại. Agent không tự chạy Docker/Wokwi trong lượt này.
 

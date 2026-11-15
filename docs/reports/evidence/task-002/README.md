@@ -1,6 +1,10 @@
 # Bằng chứng TASK-002
 
-## Hiện trạng mới nhất
+## Hiện trạng đã chốt
+
+TASK-002 đạt 4/4 ca môi trường, xem [nghiệm thu](acceptance.md). Build sau pin: [log](build-pinned-retry.log), [checksum](prepare-pinned.log). Đủ pong p0-001 đến p0-004, PWM theo Serial hội thoại; người dùng xác nhận không reset ESP32 khi phục hồi broker. Giữ hạn chế timeout phiên dài và nguồn bằng chứng trong biên bản. Các mục bên dưới là lịch sử, không phải trạng thái hiện tại.
+
+## Lịch sử bằng chứng trước khi chốt
 
 Xem [kết quả live và nguồn bằng chứng](live-progress.md), [ảnh Wokwi gốc](wokwi-first-run.png).
 

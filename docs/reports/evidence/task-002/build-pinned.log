@@ -4,3 +4,4 @@ Removing unused dependencies...
 Library Manager: Removing PubSubClient @ 2.8.0
 Library Manager: PubSubClient@2.8.0 has been removed!
 Library Manager: Installing knolleary/PubSubClient @ 2.8.0
+HTTPClientError: 
