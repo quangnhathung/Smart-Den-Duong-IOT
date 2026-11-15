@@ -3,15 +3,176 @@
   "author": "Smartlight Group 7",
   "editor": "wokwi",
   "parts": [
-    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
-    { "type": "wokwi-led", "id": "led", "top": 0, "left": 240, "attrs": { "color": "yellow" } },
-    { "type": "wokwi-resistor", "id": "r", "top": 80, "left": 200, "attrs": { "value": "220" } }
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led",
+      "top": 0,
+      "left": 240,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r",
+      "top": 80,
+      "left": 200,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr",
+      "top": -140,
+      "left": -250,
+      "attrs": {
+        "lux": "500"
+      }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir",
+      "top": 0,
+      "left": -250,
+      "attrs": {
+        "delayTime": "1"
+      }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic",
+      "top": 200,
+      "left": -250,
+      "attrs": {
+        "distance": "100"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "currentSim",
+      "top": -140,
+      "left": 240,
+      "attrs": {
+        "value": "1023"
+      }
+    }
   ],
   "connections": [
-    [ "esp:26", "r:1", "green", [] ],
-    [ "r:2", "led:A", "green", [] ],
-    [ "led:C", "esp:GND.1", "black", [] ],
-    [ "esp:TX", "$serialMonitor:RX", "", [] ],
-    [ "esp:RX", "$serialMonitor:TX", "", [] ]
+    [
+      "esp:26",
+      "r:1",
+      "green",
+      []
+    ],
+    [
+      "r:2",
+      "led:A",
+      "green",
+      []
+    ],
+    [
+      "led:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "ldr:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "ldr:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "ldr:AO",
+      "esp:34",
+      "green",
+      []
+    ],
+    [
+      "pir:VCC",
+      "esp:5V",
+      "red",
+      []
+    ],
+    [
+      "pir:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pir:OUT",
+      "esp:27",
+      "green",
+      []
+    ],
+    [
+      "currentSim:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "currentSim:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "currentSim:SIG",
+      "esp:35",
+      "green",
+      []
+    ],
+    [
+      "ultrasonic:VCC",
+      "esp:5V",
+      "red",
+      []
+    ],
+    [
+      "ultrasonic:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "ultrasonic:TRIG",
+      "esp:18",
+      "blue",
+      []
+    ],
+    [
+      "ultrasonic:ECHO",
+      "esp:19",
+      "purple",
+      []
+    ]
   ]
 }
