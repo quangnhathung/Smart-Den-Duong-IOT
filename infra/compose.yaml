@@ -1,0 +1,14 @@
+name: smartlight-p0
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2.1.2-alpine
+    ports: ["127.0.0.1:1883:1883"]
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+    restart: "no"
+  mqtt-client:
+    image: eclipse-mosquitto:2.1.2-alpine
+    profiles: [tools]
+    network_mode: host
+    entrypoint: []
+    command: [mosquitto_pub, --help]
