@@ -1,44 +1,28 @@
-# TASK-002 — Tiếp tục xử lý timeout và nghiệm thu live P0
+# TASK-005 — Mạch và đọc cảm biến một node P1/A1
 
 - Trạng thái: Chưa bắt đầu
-- Tiến độ: 1/4 nhóm nghiệm thu; nhiều bước con đã đạt
-- Cập nhật: 2026-11-15T18:32:51+07:00
+- Tiến độ: 0/4 mục nghiệm thu
+- Cập nhật: 2026-11-15T19:15:52+07:00
 
 ## Mô tả và phạm vi
 
-Đã có build thành công, artifact đã copy khớp checksum, Wokwi khởi chạy với Serial/PWM và broker host pub/sub đạt theo bằng chứng người dùng. ESP32 đã kết nối Mosquitto nhưng bị timeout lặp lại. Chưa có đủ năm mức PWM, ba pong hoặc phục hồi sau restart broker. Chưa triển khai cảm biến/AUTO/MANUAL hoặc hoàn tất P0/A0. Lượt mới đã sửa firmware heartbeat/nghỉ ngắn/log theo kế hoạch; build/copy đạt, chờ live bản mới.
+Đề xuất dựng một node Wokwi đầy đủ cảm biến, đọc/in raw Serial và giữ ca kiểm tra PWM. Giữ source dùng chung và entry main, không di chuyển workspace. Chưa triển khai AUTO/MANUAL, phân loại người/xe, fault, telemetry/ACK nghiệp vụ hoặc nhiều node.
 
 ## Tham chiếu SRS
 
-[SRS](../srs.md) mục 3.1, 4.3–4.5, 10.2–10.3, 11–12.
+[SRS](../srs.md) mục 4.1, 4.4, 5.1, 10.2 P1, 11 A1, 12; [kiến trúc](../techs/architecture.md), [MQTT đã chốt](../techs/mqtt.md).
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [ ] Build mới esp32dev thành công và khóa phiên bản platform/framework sau smoke test đạt. Build đã PASS; khóa phiên bản còn chờ live đạt.
-- [ ] License Wokwi, Serial và năm mức PWM được xác nhận bằng log/ảnh. Đã chạy Wokwi/Serial, thấy 0%/25%; còn thiếu 50%/70%/100%.
-- [ ] Broker qua host, ba ping/pong và mất/khôi phục broker đạt bằng chứng live. Host pub/sub đạt; node kết nối nhưng timeout; chưa xác nhận pong/phục hồi.
-- [x] Chuẩn bị mã/cấu hình, tài liệu setup và hồ sơ kiểm tra; ghi rõ phần chưa xác minh.
-
-Giữ 1/4 nhóm nghiệm thu gốc vì ba nhóm đầu đều còn điều kiện chưa đủ; không quy đổi thành phần trăm hoàn thành dự án. Chi tiết từng phần đã đạt tại [bằng chứng live](evidence/task-002/live-progress.md).
+- [ ] Mạch đủ LDR34, PIR27, HC-SR04 TRIG18/ECHO19, biến trở35, LED26 với điện trở 220 Ω; đúng nguồn/GND.
+- [ ] Đọc raw ADC12 bit, PIR và distance có timeout; Serial rõ đơn vị, kiểm chứng chiều ánh sáng/ADC và tín hiệu từng linh kiện.
+- [ ] Build esp32dev với package đã pin; xác nhận PWM 0/25/50/70/100 và cảm biến trên Wokwi có log/ảnh.
+- [ ] Cập nhật hardware/simulation/testing hoặc setup phù hợp; hồ sơ đủ kết quả thực tế và giới hạn giả lập.
 
 ## Vướng mắc và cách giải quyết
 
-Lỗi min đã sửa; build.log hiện tại là bản SUCCESS 7.31 giây do người dùng chạy lại, không còn là log lỗi cũ. Broker ghi smartlight-node_01-p0 kết nối ba lần rồi exceeded timeout sau 22–23 giây. Tốc độ mô phỏng thấp là giả thuyết cần kiểm tra, chưa kết luận nguyên nhân. Thu Serial đầy đủ và đối chiếu hoạt động MQTT/heartbeat; không tự đổi broker hoặc hostname. Chưa khóa platform/framework vì smoke live chưa đủ.
+Chưa bắt đầu nên chưa có lỗi triển khai được xác nhận. Giữ diagnostics P0 tách khỏi hợp đồng nghiệp vụ, không coi raw sensor là telemetry v1. Không bỏ package pin để xử lý lỗi.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Theo chuỗi thao tác người dùng, phiên cuối đã compose down. Lần thử tiếp cần up -d mosquitto, giữ Wokwi chạy liên tục, chờ subscribe rồi mở subscriber trước khi gửi ping. Cần log Serial, ba pong, bằng chứng đủ năm mức PWM và pong sau restart broker. Firmware đã sửa theo yêu cầu mới; không khởi chạy dịch vụ live trong lượt này.
-
-## Phần đã hoàn tất trong TASK-002
-
-- [x] Chuẩn bị mã/cấu hình/tài liệu P0.
-- [x] Sửa kiểu min, kiểm tra formatter, build thành công (lượt trước).
-- [x] Đối chiếu build mới và checksum nguồn/copy.
-- [x] Ghi nhận Wokwi/Serial/PWM một phần và broker host pub/sub.
-- [x] Lưu ảnh gốc, tổng hợp timeout, cập nhật hồ sơ; chưa đánh dấu P0 hoàn thành.
-
-## Đề xuất tiếp theo
-
-Firmware mới đã thêm nghỉ 10 ms, heartbeat 2 giây và log chẩn đoán. Build/copy PASS; xem build-heartbeat.log và prepare-heartbeat.log. Người dùng khởi động broker và restart Wokwi để nạp bản mới; mở subscriber trước, chờ subscribe, nhận ba pong, đủ năm mức PWM, ổn định 3 phút thực, rồi stop/start broker và nhận p0-004 không reset ESP32. Nếu vẫn lỗi thu Serial/PCAP. Chỉ khóa toolchain sau smoke live đạt; chưa chạy A0/P1 hoặc nghiệm thu ba node.
-
-Kết quả lượt heartbeat: formatter PASS; build esp32dev SUCCESS 4.89 giây, RAM 47276 byte, flash 897039 byte; copy BIN/ELF khớp SHA-256. Bản cũ đã kết nối nhưng timeout; người dùng xác nhận Serial từng có dòng subscribe. Chưa có kết quả live cho bản firmware mới, giữ 1/4 nhóm nghiệm thu.
+TASK-004 đã hoàn thành A0. Cần người dùng giao TASK-005; vận hành Wokwi theo phương thức đã thống nhất. Không tự thực hiện đề xuất này.

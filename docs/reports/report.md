@@ -1,3 +1,57 @@
+## 2026-11-15T19:15:52+07:00 — TASK-004 — Chốt kiến trúc và giao thức A0
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 3/3 mục nghiệm thu
+
+### Đã thực hiện
+
+Tạo architecture.md về trách nhiệm, luồng, trạng thái hiện tại/mục tiêu và điểm bàn giao. Tạo mqtt.md theo SRS với topic/QoS/retain, telemetry, availability/LWT, command/ACK, deadline_uptime_ms, result/reason/status, retry/cache và tám JSON. Cập nhật README và development theo source P0 thực tế. Hoàn tất TASK-004, đề xuất TASK-005/P1-A1; không tự triển khai.
+
+### Kiểm tra và kết quả
+
+PASS tám nhóm kiểm tra: formatter ba source/header, Compose config, liên kết file/UTF-8/LF, import convention, JSON/TOML/Python, tám JSON hợp đồng và đối chiếu SRS, build/pin/checksum, bảo toàn source/infra/lịch sử. [Chi tiết](evidence/task-004/convention-checks.md). Không tạo model session mới để kiểm tra convention runtime. Không chạy Wokwi/Docker live hoặc MQTT v1 nghiệp vụ trong A0.
+
+### Vướng mắc
+
+Không có vướng mắc A0 còn chặn. Timeout phiên dài P0 là giới hạn đã ghi tại [nghiệm thu](evidence/task-002/acceptance.md), chưa kết luận nguyên nhân. Không coi ví dụ hợp đồng là code đã triển khai.
+
+### Cách giải quyết
+
+Giữ hạn chế trong tài liệu và theo dõi ở A3; các gói triển khai dùng hợp đồng A0 và bổ sung kiểm thử thực tế. Không ghi PASS cho phần chưa chạy hoặc thay SRS để hợp thức hóa lỗi.
+
+### Tài liệu và bước tiếp theo
+
+SRS 3–7, 10–12, 16. [Task hiện tại](task.md) hoàn thành và giữ nguyên tới lần giao việc mới. [TASK-005](next-task.md) chưa bắt đầu. Giữ nguyên mọi byte báo cáo cũ phía sau.
+
+---
+
+## 2026-11-15T19:12:53+07:00 — TASK-002 — Chốt smoke P0 và phiên bản kiểm chứng
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 4/4 nhóm nghiệm thu môi trường
+
+### Đã thực hiện
+
+Khóa platform/framework/libs/PubSubClient; sửa đúng hai đường dẫn đề cương trong SRS, không đổi yêu cầu; cập nhật README/setup/bằng chứng. Lưu [task đã nghiệm thu](evidence/task-002/accepted-task.md), [biên bản](evidence/task-002/acceptance.md). Source ứng dụng không đổi.
+
+### Kiểm tra và kết quả
+
+PASS formatter, Compose config và các kiểm tra tĩnh trước đó. Lần build sau pin đầu lỗi tải registry; retry với package cục bộ đã hiện hữu PASS 8.37 giây, RAM 47276 byte, flash 897039 byte. Copy/checksum PASS. File MQTT xác nhận đủ pong 001–004, broker restart 19:02:25 và node trở lại 19:02:27; Serial hội thoại đủ năm PWM. Người dùng xác nhận không restart ESP32. Không tự chạy Docker/Wokwi live.
+
+### Vướng mắc
+
+Đã xử lý trở ngại build qua retry, giữ cả log lỗi và log đạt. Timeout cuối phiên dài chưa được kết luận nguyên nhân; đây là giới hạn theo dõi, không được xóa hoặc diễn giải thành ổn định tuyệt đối. Chưa có serial.log thô đầy đủ; nguồn Serial là hội thoại.
+
+### Cách giải quyết
+
+Nghiệm thu các ca smoke đã thỏa; giữ hạn chế trong biên bản và theo dõi ở mạng nghiệp vụ. Không cần nâng toolchain. Build/copy sau pin không được tính là lượt live mới.
+
+### Tài liệu và bước tiếp theo
+
+Đã ghi checklist TASK-002; người dùng giao tiếp TASK-004 để hoàn thiện A0. Giữ nguyên toàn bộ báo cáo cũ phía sau.
+
+---
+
 ## 2026-11-15T18:32:51+07:00 — TASK-002 — Firmware chẩn đoán timeout MQTT
 
 - Trạng thái: Bị chặn (chờ live bản mới)
