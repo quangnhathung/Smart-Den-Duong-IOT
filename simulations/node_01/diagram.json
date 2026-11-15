@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Smartlight Group 7",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led", "top": 0, "left": 240, "attrs": { "color": "yellow" } },
+    { "type": "wokwi-resistor", "id": "r", "top": 80, "left": 200, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:26", "r:1", "green", [] ],
+    [ "r:2", "led:A", "green", [] ],
+    [ "led:C", "esp:GND.1", "black", [] ],
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ]
+  ]
+}
