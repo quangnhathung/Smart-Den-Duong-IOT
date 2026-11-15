@@ -151,3 +151,23 @@ Core dir trên là thư mục tạm đã có, tham chiếu package/platform cài
 Xem [kết quả chi tiết](../reports/evidence/task-002/live-progress.md). Build mới SUCCESS 7.31 giây, BIN/ELF copy khớp checksum; Wokwi/Serial đã chạy, mới xác nhận PWM 0%/25%. Host subscriber nhận p0-broker-001 theo terminal người dùng. Broker nhận smartlight-node_01-p0 ba lần nhưng ngắt do timeout sau 22–23 giây (k15); chưa có ba pong hoặc phục hồi sau restart.
 
 Ảnh có tốc độ mô phỏng 39%: lệch clock là giả thuyết cần kiểm chứng bằng Serial/packet capture, không phải nguyên nhân đã xác nhận. Không cần thay cấu hình broker/hostname dựa trên bằng chứng hiện có. Sau compose down phải up -d lại trước khi thử. Mở subscriber trước, đợi node subscribe rồi gửi ping; lưu đủ Serial/PWM và pong trước/sau restart. Lượt cập nhật chỉ sửa tài liệu, không chạy dịch vụ hoặc sửa firmware.
+
+## Firmware P0 có heartbeat (lượt xử lý timeout)
+
+EnvironmentSmokeTest hiện nghỉ 10 ms ở đầu mỗi vòng, giữ MQTT keepalive 15 giây và gọi mqtt.loop khi kết nối. Khi loop thành công, gửi heartbeat không retained mỗi 2000 ms theo millis(), payload JSON chỉ có uptime_ms, topic huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat. Timer dùng phép trừ unsigned để chịu tràn; sau mỗi lần subscribe thành công bắt đầu chu kỳ heartbeat mới. Kiểm tra buffer/kết quả publish và log HEARTBEAT published=0/1. Đây là chẩn đoán P0, không phải telemetry v1 nghiệp vụ.
+
+Thêm log có uptime cho connect attempt/failed, thay đổi connected/disconnected, mqtt.loop lỗi và Wi-Fi reconnect. Giữ hostname, port, timeout socket 1 giây, ping/pong và retry 1/2/4/8/10 giây. Nghỉ 10 ms chỉ dành cho firmware thử P0; chưa tuyên bố đạt timing nghiệp vụ. Khoảng nghỉ giúp giảm vòng lặp bận; heartbeat cung cấp gói MQTT định kỳ. Chưa có bằng chứng live xác nhận nguyên nhân cũ hoặc hết timeout.
+
+Build cuối sau formatter PASS (4.89 giây), xem [build-heartbeat.log](../reports/evidence/task-002/build-heartbeat.log). Script chuẩn bị artifact PASS, xem [prepare-heartbeat.log](../reports/evidence/task-002/prepare-heartbeat.log). Core dir kiểm tra tạm /tmp/iot-pio-check-de41spu8 dùng package/platform cục bộ có sẵn; không nâng toolchain. Chưa chạy Docker/Wokwi bản mới.
+
+### Kiểm chứng bản mới
+
+Artifact đã được chuẩn bị trong simulations/node_01/build. Khởi động broker theo mục 1, restart Wokwi để nạp bản mới. Giữ mô phỏng hiển thị, không pause. Mở terminal nhận toàn bộ topic chẩn đoán trước khi gửi ping:
+
+```bash
+docker compose -f infra/compose.yaml --profile tools run --rm mqtt-client mosquitto_sub -h 127.0.0.1 -t 'huit/nhom7/smartlight/v1/node_01/diagnostics/#' -W 240 -v | tee docs/reports/evidence/task-002/mqtt-heartbeat-live.log
+```
+
+Đợi Serial báo MQTT connected; ping subscribed và HEARTBEAT published=1. Terminal khác gửi ba ping theo mục 5. Phải thấy các dòng topic kết thúc /pong có đủ p0-001/002/003; dòng /ping không phải phản hồi. Quan sát /heartbeat và broker ít nhất 3 phút thực, không có exceeded timeout ngoài lần cố ý stop broker. Serial có đủ PWM 0/25/50/70/100. Lưu Serial thành serial-heartbeat-live.log và broker thành broker-heartbeat-live.log, không ghi đè bằng chứng cũ.
+
+Sau đó thử stop/start broker theo mục 6, mở subscriber mới nếu cửa sổ nghe đã hết hạn hoặc bị ngắt; đợi node subscribe lại và gửi p0-004, phải có pong mà không reset ESP32. Nếu vẫn lỗi, giữ log đầy đủ và thu PCAP; chưa thay broker/hostname hoặc tăng timeout để bỏ qua lỗi. Chỉ khóa toolchain và nghiệm thu khi live đạt. PubSubClient subscribe trả true chỉ xác nhận gửi yêu cầu, pong nhận được mới xác nhận luồng hai chiều.
