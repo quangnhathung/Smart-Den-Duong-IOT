@@ -1,3 +1,30 @@
+## 2026-11-15T19:29:24+07:00 — TASK-005 — Triển khai mạch và raw sensor P1/A1
+
+- Trạng thái: Bị chặn
+- Tiến độ: 2/4 nhóm nghiệm thu
+
+### Đã thực hiện
+
+Thêm SensorReader setup/update/snapshot, raw ADC12 bit, PIR20 ms, ADC100 ms, siêu âm200 ms timeout30000 µs; timeout xóa distance cũ/cờ invalid. Tích hợp vào EnvironmentSmokeTest, banner P1/A1, log SENSORS mỗi giây, PIR đổi mức, CRLF; giữ P0 PWM/MQTT. Mở rộng sơ đồ một node, thêm cấu hình timeout ECHO dùng cùng artifact. Thêm host checks cho code SensorReader thật. Cập nhật hardware/firmware/simulation/testing, README, architecture, development và hồ sơ. Giữ main, SRS, package pin và hợp đồng MQTT.
+
+### Kiểm tra và kết quả
+
+PASS host pin/lịch lấy mẫu, xung trigger, giới hạn timeout, invalidation/recovery và tràn uint32; đây là stub GPIO/ADC, không phải live. Formatter và wiring/JSON/TOML/tài liệu kiểm tra tĩnh PASS. Build sạch cuối SUCCESS 9.06 giây, RAM 47388 byte, flash 908071 byte; artifact copy/hash khớp. [Bằng chứng](evidence/task-005/README.md), [host](evidence/task-005/host-checks.log), [build](evidence/task-005/build-fresh.log), [checksum](evidence/task-005/prepare-final.log). Không chạy Docker/Wokwi hoặc ca P1 live; các ca đó chưa PASS.
+
+### Vướng mắc
+
+Script copy từ chối artifact cũ sau lần sửa comment: build SUCCESS nhưng SCons không relink. Đã clean/rebuild thật và copy đạt; giữ log từ chối, không bỏ freshness. Còn thiếu nghiệm thu live LDR/PIR/pot/distance/PWM/MQTT và timeout. Giới hạn timeout phiên dài P0 chưa được khẳng định đã giải quyết.
+
+### Cách giải quyết
+
+Người dùng chạy P1-01 đến P1-08 theo simulation/testing, lưu Serial/ảnh/log đúng task. Cấu hình timeout riêng chỉ bỏ ECHO; không thay sơ đồ chính. Theo dõi polling có thể chậm quanh pulseIn/MQTT connect, không khẳng định hard realtime. Không coi lịch sử P0 là nghiệm thu P1.
+
+### Tài liệu và bước tiếp theo
+
+TASK-005 tiếp tục phần live, chưa vào checklist task hoàn thành; checklist các task cũ giữ nguyên. Chưa triển khai TASK-006/P2/A2. Toàn bộ byte report cũ giữ nguyên phía sau.
+
+---
+
 ## 2026-11-15T19:15:52+07:00 — TASK-004 — Chốt kiến trúc và giao thức A0
 
 - Trạng thái: Hoàn thành

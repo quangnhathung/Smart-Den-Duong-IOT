@@ -1,0 +1,3 @@
+PASS: pin setup, ADC/PIR scheduling, trigger pulse, 30 ms timeout, stale distance clearing and recovery at 2/100/400 cm
+PASS: analog, PIR and distance schedules across uint32 millis wrap
+Host tests use mocked GPIO/ADC/echo; Wokwi electrical and live network behavior NOT verified.

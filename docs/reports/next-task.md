@@ -1,28 +1,28 @@
-# TASK-005 — Mạch và đọc cảm biến một node P1/A1
+# TASK-005 — Tiếp tục nghiệm thu live P1/A1
 
 - Trạng thái: Chưa bắt đầu
-- Tiến độ: 0/4 mục nghiệm thu
-- Cập nhật: 2026-11-15T19:15:52+07:00
+- Tiến độ: 2/4 nhóm nghiệm thu TASK-005
+- Cập nhật: 2026-11-15T19:29:24+07:00
 
 ## Mô tả và phạm vi
 
-Đề xuất dựng một node Wokwi đầy đủ cảm biến, đọc/in raw Serial và giữ ca kiểm tra PWM. Giữ source dùng chung và entry main, không di chuyển workspace. Chưa triển khai AUTO/MANUAL, phân loại người/xe, fault, telemetry/ACK nghiệp vụ hoặc nhiều node.
+Code/mạch đã chuẩn bị, chưa chốt task vì thiếu Wokwi live. Người vận hành chạy các ca chính và timeout, giữ một ESP32, lưu log/ảnh trong evidence/task-005. Không bắt đầu P2 trước nghiệm thu cảm biến.
 
 ## Tham chiếu SRS
 
-[SRS](../srs.md) mục 4.1, 4.4, 5.1, 10.2 P1, 11 A1, 12; [kiến trúc](../techs/architecture.md), [MQTT đã chốt](../techs/mqtt.md).
+[SRS](../srs.md) 4.1/4.4, 5.3, 10 P1, 11 A1, 12; [cách chạy](../techs/simulation.md), [ma trận](../techs/testing.md).
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [ ] Mạch đủ LDR34, PIR27, HC-SR04 TRIG18/ECHO19, biến trở35, LED26 với điện trở 220 Ω; đúng nguồn/GND.
-- [ ] Đọc raw ADC12 bit, PIR và distance có timeout; Serial rõ đơn vị, kiểm chứng chiều ánh sáng/ADC và tín hiệu từng linh kiện.
-- [ ] Build esp32dev với package đã pin; xác nhận PWM 0/25/50/70/100 và cảm biến trên Wokwi có log/ảnh.
-- [ ] Cập nhật hardware/simulation/testing hoặc setup phù hợp; hồ sơ đủ kết quả thực tế và giới hạn giả lập.
+- [x] Mạch kiểm tra tĩnh và tài liệu/hồ sơ đã có.
+- [ ] P1-01 đến P1-05: LDR/pot/PIR/distance và timeout có Serial/ảnh thực.
+- [ ] P1-06 đến P1-08: năm PWM, heartbeat/pong và broker offline/recovery có bằng chứng, không reset node trong ca phục hồi.
+- [ ] Đối chiếu live rồi chốt TASK-005 4/4, thêm checklist hoàn thành.
 
 ## Vướng mắc và cách giải quyết
 
-Chưa bắt đầu nên chưa có lỗi triển khai được xác nhận. Giữ diagnostics P0 tách khỏi hợp đồng nghiệp vụ, không coi raw sensor là telemetry v1. Không bỏ package pin để xử lý lỗi.
+Không tự đánh dấu live PASS từ host test/build. Nếu còn lỗi, giữ cùng TASK-005 và log thật; sửa trong phạm vi được giao. Theo dõi giới hạn timeout P0, không tự nâng toolchain.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-TASK-004 đã hoàn thành A0. Cần người dùng giao TASK-005; vận hành Wokwi theo phương thức đã thống nhất. Không tự thực hiện đề xuất này.
+Firmware mới đã copy; cần Docker/broker và Wokwi license trên máy người dùng. Dừng phiên cũ trước khi mở cấu hình mới. Sau TASK-005 đạt mới đề xuất TASK-006 — thuật toán chiếu sáng P2/A2; chưa thực hiện TASK-006.
