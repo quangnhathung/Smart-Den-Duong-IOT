@@ -1,3 +1,30 @@
+## 2026-11-15T18:10:41+07:00 — TASK-002 — Sửa lỗi biên dịch min
+
+- Trạng thái: Bị chặn (còn chờ nghiệm thu live)
+- Tiến độ: 1/4 mục nghiệm thu tổng; lượt sửa lỗi hoàn tất
+
+### Đã thực hiện
+
+Thêm <algorithm>, đổi min thành std::min<uint32_t> trong EnvironmentSmokeTest.cpp để xử lý xung đột unsigned long/unsigned int; không đổi thuật toán hoặc mức trần backoff. Cập nhật task, next-task, setup và README bằng chứng. Giữ nguyên build.log và các log cũ.
+
+### Kiểm tra và kết quả
+
+PASS: clang-format --dry-run --Werror src/EnvironmentSmokeTest.cpp. PASS: build esp32dev, exit 0, SUCCESS 10.19 giây, RAM 47276/327680 byte, flash 896199/1310720 byte. Xem [log mới](evidence/task-002/build-min-fix.log). Dùng core dir tạm /tmp/iot-pio-check-de41spu8 với package/platform cục bộ; không nâng toolchain hoặc sửa quyền hệ thống.
+
+### Vướng mắc
+
+Lỗi biên dịch đã xử lý. Wokwi/Serial/PWM, broker và ping/pong/reconnect live chưa chạy. Tiêu chí đầu tiên còn gộp build và khóa phiên bản sau smoke live nên chưa đánh dấu đạt toàn mục.
+
+### Cách giải quyết
+
+Người vận hành tiếp tục chuẩn bị artifact và nghiệm thu live theo setup; sau khi đạt mới khóa platform/framework. Không tự chạy Docker/Wokwi trong lượt sửa này.
+
+### Tài liệu và bước tiếp theo
+
+Tham chiếu SRS 4.3–4.5, 10–12. Giữ TASK-002 chờ kiểm chứng; không đánh dấu task hoàn thành hoặc thêm mục hoàn thành vào checklists.md. Lịch sử checklist giữ nguyên. Toàn bộ nội dung report cũ giữ nguyên ở phía sau.
+
+---
+
 ## 2026-11-15T17:55:23+07:00 — TASK-002 — Chuẩn bị môi trường P0
 
 - Trạng thái: Bị chặn

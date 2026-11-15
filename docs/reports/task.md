@@ -2,7 +2,7 @@
 
 - Trạng thái: Bị chặn
 - Tiến độ: 1/4 mục nghiệm thu
-- Cập nhật: 2026-11-15T17:55:23+07:00
+- Cập nhật: 2026-11-15T18:10:41+07:00
 
 ## Mô tả và phạm vi
 
@@ -21,8 +21,16 @@
 
 ## Vướng mắc và cách giải quyết
 
-Build mẫu và firmware mới bị chặn quyền cache ~/.platformio; chưa thể kết luận mã mới biên dịch được. Chạy build theo [setup](../techs/setup.md) trên terminal ngoài phiên, kiểm tra SUCCESS rồi chuẩn bị artifact. Chưa tự khởi động Docker hoặc Wokwi vì người dùng chọn tự chạy. Cần lưu log/ảnh theo [bằng chứng](evidence/task-002/README.md) rồi tiếp tục TASK-002 để nghiệm thu; chưa đưa vào checklist task hoàn thành.
+Đã sửa lỗi min(unsigned long, unsigned int) bằng std::min<uint32_t> và include <algorithm>. Build esp32dev PASS (exit 0, 10.19 giây), formatter PASS. Dùng PLATFORMIO_CORE_DIR=/tmp/iot-pio-check-de41spu8 với package/platform cục bộ có sẵn; không đổi toolchain hoặc quyền hệ thống. Log mới: [build-min-fix.log](evidence/task-002/build-min-fix.log). Giữ nguyên build.log ghi lỗi gốc và baseline-build.log/smoke-build.log ghi lỗi cache trước đó. Wokwi/Serial/PWM và MQTT live chưa chạy; người dùng tiếp tục theo setup. Chưa khóa platform/framework vì còn chờ smoke test live theo tiêu chí SRS; TASK-002 vẫn 1/4, chưa hoàn thành.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
 Đã được người dùng giao triển khai. Phần tiếp theo cần Docker daemon khả dụng, quyền build cache và license Wokwi. Không tự tắt sandbox, sửa quyền hệ thống hay mua dịch vụ.
+
+## Lượt sửa lỗi biên dịch
+
+Tiếp tục TASK-002: sửa xung đột kiểu trong min tại EnvironmentSmokeTest.cpp, kiểm tra formatter và build esp32dev; giữ nguyên thuật toán backoff, không chạy Docker/Wokwi hoặc gói tiếp theo. Log build.log hiện có ghi FAIL do unsigned long/unsigned int, khác lỗi cache trong các log trước.
+
+- [x] Sửa kiểu đối số min một cách tường minh.
+- [x] Kiểm tra định dạng và build PASS; lưu kết quả thật.
+- [x] Cập nhật setup và hồ sơ bằng chứng, giữ nguyên log lỗi gốc.
