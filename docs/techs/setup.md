@@ -131,11 +131,11 @@ Không cần xóa volume hệ thống; không dùng docker system prune. Stop Wo
 
 [Wokwi PlatformIO](https://docs.wokwi.com/vscode/platformio), [Wokwi config](https://docs.wokwi.com/vscode/project-config), [Wokwi license](https://docs.wokwi.com/vscode/getting-started), [Mosquitto config](https://mosquitto.org/man/mosquitto-conf-5.html).
 
-Build mới trong phiên agent đã PASS với core dir tạm trong /tmp, dùng platform/package có sẵn; xem cập nhật bên dưới. Chưa chạy Docker/Wokwi live. Không có kết quả nghiệm thu giả lập hoặc cảm biến. Tài liệu firmware/mạch/MQTT thử nghiệm được gộp trong trang setup này để tránh lặp giữa các trang khi mới có một kịch bản P0.
+Build mới trong phiên agent đã PASS với core dir tạm trong /tmp, dùng platform/package có sẵn; xem cập nhật bên dưới. Người dùng đã chạy Docker/Wokwi; xem kết quả đối chiếu mới nhất bên dưới. Chưa nghiệm thu đủ PWM/MQTT live; chưa triển khai cảm biến. Tài liệu firmware/mạch/MQTT thử nghiệm được gộp trong trang setup này để tránh lặp giữa các trang khi mới có một kịch bản P0.
 
 ## Cập nhật TASK-002: sửa lỗi kiểu min
 
-Log gốc [build.log](../reports/evidence/task-002/build.log) đã chạy compiler và FAIL tại EnvironmentSmokeTest.cpp do hai đối số min khác kiểu unsigned long/unsigned int. Đã thêm <algorithm>, dùng std::min<uint32_t> để thống nhất kiểu; giữ nguyên backoff tăng gấp đôi và trần 10000 ms.
+Ở lượt sửa min, build.log khi đó đã chạy compiler và FAIL tại EnvironmentSmokeTest.cpp do hai đối số min khác kiểu unsigned long/unsigned int. Đã thêm <algorithm>, dùng std::min<uint32_t> để thống nhất kiểu; giữ nguyên backoff tăng gấp đôi và trần 10000 ms.
 
 Formatter PASS. Build esp32dev PASS, exit 0, 10.19 giây; RAM 47276/327680 byte, flash 896199/1310720 byte. [Log sau sửa](../reports/evidence/task-002/build-min-fix.log). Lệnh kiểm chứng trong phiên này:
 
@@ -144,4 +144,10 @@ clang-format --dry-run --Werror src/EnvironmentSmokeTest.cpp
 PLATFORMIO_CORE_DIR=/tmp/iot-pio-check-de41spu8 PLATFORMIO_SETTING_ENABLE_TELEMETRY=no /home/quangnhathung/.platformio/penv/bin/pio run -e esp32dev
 ```
 
-Core dir trên là thư mục tạm đã có, tham chiếu package/platform cài cục bộ; không phải cấu hình cần sao chép sang máy khác. Terminal thông thường vẫn dùng lệnh build ở mục 3. Không nâng phiên bản hoặc sửa quyền hệ thống. Chưa chạy copy artifact, Docker hoặc Wokwi; chưa khóa phiên bản vì còn chờ smoke test live. Giữ các log thất bại trước đó làm lịch sử, không dùng chúng để phủ nhận kết quả build mới.
+Core dir trên là thư mục tạm đã có, tham chiếu package/platform cài cục bộ; không phải cấu hình cần sao chép sang máy khác. Terminal thông thường vẫn dùng lệnh build ở mục 3. Không nâng phiên bản hoặc sửa quyền hệ thống. Tại lượt sửa min chưa chạy copy artifact, Docker hoặc Wokwi. Sau đó người dùng đã chạy các bước này; xem cập nhật mới bên dưới. Chưa khóa phiên bản vì còn chờ smoke test live. Giữ các log thất bại trước đó làm lịch sử, không dùng chúng để phủ nhận kết quả build mới.
+
+## Cập nhật bằng chứng live — 2026-11-15T18:19:35+07:00
+
+Xem [kết quả chi tiết](../reports/evidence/task-002/live-progress.md). Build mới SUCCESS 7.31 giây, BIN/ELF copy khớp checksum; Wokwi/Serial đã chạy, mới xác nhận PWM 0%/25%. Host subscriber nhận p0-broker-001 theo terminal người dùng. Broker nhận smartlight-node_01-p0 ba lần nhưng ngắt do timeout sau 22–23 giây (k15); chưa có ba pong hoặc phục hồi sau restart.
+
+Ảnh có tốc độ mô phỏng 39%: lệch clock là giả thuyết cần kiểm chứng bằng Serial/packet capture, không phải nguyên nhân đã xác nhận. Không cần thay cấu hình broker/hostname dựa trên bằng chứng hiện có. Sau compose down phải up -d lại trước khi thử. Mở subscriber trước, đợi node subscribe rồi gửi ping; lưu đủ Serial/PWM và pong trước/sau restart. Lượt cập nhật chỉ sửa tài liệu, không chạy dịch vụ hoặc sửa firmware.
