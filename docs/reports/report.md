@@ -1,3 +1,30 @@
+## 2026-11-15T18:32:51+07:00 — TASK-002 — Firmware chẩn đoán timeout MQTT
+
+- Trạng thái: Bị chặn (chờ live bản mới)
+- Tiến độ: 1/4 nhóm nghiệm thu; triển khai lượt heartbeat hoàn tất
+
+### Đã thực hiện
+
+Thêm nghỉ 10 ms đầu loopSmokeTest, heartbeat mỗi 2 giây theo millis không retained trên diagnostics/heartbeat, payload uptime_ms, kiểm tra độ dài/publish; reset timer sau subscribe. Giữ keepalive 15 giây, broker/pin/topic ping-pong. Thêm log uptime cho chuyển kết nối, connect failed, loop failed, Wi-Fi reconnect và heartbeat. Build/copy artifact mới; cập nhật setup, task, next-task và README bằng chứng. Không chạy Docker/Wokwi, không mở rộng cảm biến/AUTO hoặc nhiều node.
+
+### Kiểm tra và kết quả
+
+Formatter ban đầu phát hiện xuống dòng; đã format đúng file thay đổi, dry-run PASS. Build cuối esp32dev exit 0, SUCCESS 4.89 giây, RAM 47276/327680 byte, flash 897039/1310720 byte: [log](evidence/task-002/build-heartbeat.log). Build dùng core dir tạm /tmp/iot-pio-check-de41spu8 và package/platform cục bộ. Script prepare-simulation PASS; [checksum](evidence/task-002/prepare-heartbeat.log). Kiểm tra liên kết mới, artifact khớp checksum, lịch sử report và tệp ngoài phạm vi được giữ nguyên.
+
+### Vướng mắc
+
+Chưa có live cho bản mới. Bằng chứng cũ cho thấy timeout 22–23 giây; tốc độ mô phỏng chậm là giả thuyết. Người dùng xác nhận từng thấy dòng subscribe; chưa đủ chứng minh kết nối ổn định. Không đánh dấu fix runtime/P0 PASS từ build.
+
+### Cách giải quyết
+
+Người dùng restart Wokwi với artifact mới, mở subscriber diagnostics/# trước khi gửi ping, xác nhận heartbeat và ba pong, giữ 3 phút thực, đủ năm PWM, rồi thử stop/start broker và pong p0-004 không reset ESP32. Nếu còn lỗi thu Serial/PCAP. Không chỉ tăng keepalive để che lỗi.
+
+### Tài liệu và bước tiếp theo
+
+Setup mô tả bản P0 hiện tại và lệnh nhận heartbeat/pong. Giữ TASK-002, chưa khóa toolchain hoặc thêm vào danh sách task hoàn thành; checklists.md giữ nguyên. Tham chiếu SRS 4.3–4.5, 10–12. Giữ toàn bộ lịch sử report và log trước.
+
+---
+
 ## 2026-11-15T18:19:35+07:00 — TASK-002 — Cập nhật tiến độ theo bằng chứng live
 
 - Trạng thái: Bị chặn

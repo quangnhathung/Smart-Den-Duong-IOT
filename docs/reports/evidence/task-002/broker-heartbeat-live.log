@@ -1,0 +1,199 @@
+mosquitto-1  | 1794741830: Info: running mosquitto as user: mosquitto.
+mosquitto-1  | 1794741830: mosquitto version 2.1.2 starting
+mosquitto-1  | 1794741830: Config loaded from /mosquitto/config/mosquitto.conf.
+mosquitto-1  | 1794741830: Bridge support available.
+mosquitto-1  | 1794741830: Persistence support available.
+mosquitto-1  | 1794741830: TLS support available.
+mosquitto-1  | 1794741830: TLS-PSK support available.
+mosquitto-1  | 1794741830: Websockets support available.
+mosquitto-1  | 1794741830: Opening ipv4 listen socket on port 1883.
+mosquitto-1  | 1794741830: mosquitto version 2.1.2 running
+mosquitto-1  | 1794741911: New connection from 172.18.0.1:56570 on port 1883.
+mosquitto-1  | 1794741911: New client connected from 172.18.0.1:56570 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741934: Client smartlight-node_01-p0 [172.18.0.1:56570] disconnected: exceeded timeout.
+mosquitto-1  | 1794741934: New connection from 172.18.0.1:54966 on port 1883.
+mosquitto-1  | 1794741934: New client connected from 172.18.0.1:54966 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741957: Client smartlight-node_01-p0 [172.18.0.1:54966] disconnected: exceeded timeout.
+mosquitto-1  | 1794741957: New connection from 172.18.0.1:38412 on port 1883.
+mosquitto-1  | 1794741957: New client connected from 172.18.0.1:38412 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741980: Client smartlight-node_01-p0 [172.18.0.1:38412] disconnected: exceeded timeout.
+mosquitto-1  | 1794741997: New connection from 172.18.0.1:51876 on port 1883.
+mosquitto-1  | 1794741997: New client connected from 172.18.0.1:51876 as auto-522681F5-73EE-D277-085E-A154602EE170 (p4, c1, k60).
+mosquitto-1  | 1794742030: New connection from 172.18.0.1:54208 on port 1883.
+mosquitto-1  | 1794742030: New client connected from 172.18.0.1:54208 as auto-165C3B29-770C-F403-CF44-32DA6A9666BB (p4, c1, k60).
+mosquitto-1  | 1794742030: Client auto-165C3B29-770C-F403-CF44-32DA6A9666BB [172.18.0.1:54208] disconnected: connection closed by client.
+mosquitto-1  | 1794742030: New connection from 172.18.0.1:54224 on port 1883.
+mosquitto-1  | 1794742030: New client connected from 172.18.0.1:54224 as auto-97FA4549-2530-03C4-64FE-0A932CFA2A1A (p4, c1, k60).
+mosquitto-1  | 1794742030: Client auto-97FA4549-2530-03C4-64FE-0A932CFA2A1A [172.18.0.1:54224] disconnected: connection closed by client.
+mosquitto-1  | 1794742031: New connection from 172.18.0.1:54230 on port 1883.
+mosquitto-1  | 1794742031: New client connected from 172.18.0.1:54230 as auto-305DEDB4-BE47-C5F5-4CE5-B827BDA92A82 (p4, c1, k60).
+mosquitto-1  | 1794742031: Client auto-305DEDB4-BE47-C5F5-4CE5-B827BDA92A82 [172.18.0.1:54230] disconnected: connection closed by client.
+mosquitto-1  | 1794742057: Client auto-522681F5-73EE-D277-085E-A154602EE170 [172.18.0.1:51876] disconnected.
+mosquitto-1  | 1794742072: New connection from 172.18.0.1:34306 on port 1883.
+mosquitto-1  | 1794742072: New client connected from 172.18.0.1:34306 as auto-E1595E62-BE0C-E549-189A-5FE9A2AD73C9 (p4, c1, k60).
+mosquitto-1  | 1794742077: New connection from 172.18.0.1:54392 on port 1883.
+mosquitto-1  | 1794742077: New client connected from 172.18.0.1:54392 as auto-64074BFD-AFB3-5DBB-EEC0-7D7D66025C4B (p4, c1, k60).
+mosquitto-1  | 1794742088: Client auto-E1595E62-BE0C-E549-189A-5FE9A2AD73C9 [172.18.0.1:34306] disconnected.
+mosquitto-1  | 1794742089: Client auto-64074BFD-AFB3-5DBB-EEC0-7D7D66025C4B [172.18.0.1:54392] disconnected.
+mosquitto-1  | 1794742361: New connection from 172.18.0.1:55766 on port 1883.
+mosquitto-1  | 1794742361: New client connected from 172.18.0.1:55766 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794742384: Client smartlight-node_01-p0 [172.18.0.1:55766] disconnected: exceeded timeout.
+mosquitto-1  | 1794742693: New connection from 172.18.0.1:54828 on port 1883.
+mosquitto-1  | 1794742693: New client connected from 172.18.0.1:54828 as auto-F0DEA7EA-50C4-F20B-B22B-90458C2E0FAF (p4, c1, k60).
+mosquitto-1  | 1794742717: New connection from 172.18.0.1:51258 on port 1883.
+mosquitto-1  | 1794742717: New client connected from 172.18.0.1:51258 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794743293: Client auto-F0DEA7EA-50C4-F20B-B22B-90458C2E0FAF [172.18.0.1:54828] disconnected.
+mosquitto-1  | 1794743380: Client smartlight-node_01-p0 [172.18.0.1:51258] disconnected: exceeded timeout.
+mosquitto-1  | 1794741830: Info: running mosquitto as user: mosquitto.
+mosquitto-1  | 1794741830: mosquitto version 2.1.2 starting
+mosquitto-1  | 1794741830: Config loaded from /mosquitto/config/mosquitto.conf.
+mosquitto-1  | 1794741830: Bridge support available.
+mosquitto-1  | 1794741830: Persistence support available.
+mosquitto-1  | 1794741830: TLS support available.
+mosquitto-1  | 1794741830: TLS-PSK support available.
+mosquitto-1  | 1794741830: Websockets support available.
+mosquitto-1  | 1794741830: Opening ipv4 listen socket on port 1883.
+mosquitto-1  | 1794741830: mosquitto version 2.1.2 running
+mosquitto-1  | 1794741911: New connection from 172.18.0.1:56570 on port 1883.
+mosquitto-1  | 1794741911: New client connected from 172.18.0.1:56570 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741934: Client smartlight-node_01-p0 [172.18.0.1:56570] disconnected: exceeded timeout.
+mosquitto-1  | 1794741934: New connection from 172.18.0.1:54966 on port 1883.
+mosquitto-1  | 1794741934: New client connected from 172.18.0.1:54966 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741957: Client smartlight-node_01-p0 [172.18.0.1:54966] disconnected: exceeded timeout.
+mosquitto-1  | 1794741957: New connection from 172.18.0.1:38412 on port 1883.
+mosquitto-1  | 1794741957: New client connected from 172.18.0.1:38412 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741980: Client smartlight-node_01-p0 [172.18.0.1:38412] disconnected: exceeded timeout.
+mosquitto-1  | 1794741997: New connection from 172.18.0.1:51876 on port 1883.
+mosquitto-1  | 1794741997: New client connected from 172.18.0.1:51876 as auto-522681F5-73EE-D277-085E-A154602EE170 (p4, c1, k60).
+mosquitto-1  | 1794742030: New connection from 172.18.0.1:54208 on port 1883.
+mosquitto-1  | 1794742030: New client connected from 172.18.0.1:54208 as auto-165C3B29-770C-F403-CF44-32DA6A9666BB (p4, c1, k60).
+mosquitto-1  | 1794742030: Client auto-165C3B29-770C-F403-CF44-32DA6A9666BB [172.18.0.1:54208] disconnected: connection closed by client.
+mosquitto-1  | 1794742030: New connection from 172.18.0.1:54224 on port 1883.
+mosquitto-1  | 1794742030: New client connected from 172.18.0.1:54224 as auto-97FA4549-2530-03C4-64FE-0A932CFA2A1A (p4, c1, k60).
+mosquitto-1  | 1794742030: Client auto-97FA4549-2530-03C4-64FE-0A932CFA2A1A [172.18.0.1:54224] disconnected: connection closed by client.
+mosquitto-1  | 1794742031: New connection from 172.18.0.1:54230 on port 1883.
+mosquitto-1  | 1794742031: New client connected from 172.18.0.1:54230 as auto-305DEDB4-BE47-C5F5-4CE5-B827BDA92A82 (p4, c1, k60).
+mosquitto-1  | 1794742031: Client auto-305DEDB4-BE47-C5F5-4CE5-B827BDA92A82 [172.18.0.1:54230] disconnected: connection closed by client.
+mosquitto-1  | 1794742057: Client auto-522681F5-73EE-D277-085E-A154602EE170 [172.18.0.1:51876] disconnected.
+mosquitto-1  | 1794742072: New connection from 172.18.0.1:34306 on port 1883.
+mosquitto-1  | 1794742072: New client connected from 172.18.0.1:34306 as auto-E1595E62-BE0C-E549-189A-5FE9A2AD73C9 (p4, c1, k60).
+mosquitto-1  | 1794742077: New connection from 172.18.0.1:54392 on port 1883.
+mosquitto-1  | 1794742077: New client connected from 172.18.0.1:54392 as auto-64074BFD-AFB3-5DBB-EEC0-7D7D66025C4B (p4, c1, k60).
+mosquitto-1  | 1794742088: Client auto-E1595E62-BE0C-E549-189A-5FE9A2AD73C9 [172.18.0.1:34306] disconnected.
+mosquitto-1  | 1794742089: Client auto-64074BFD-AFB3-5DBB-EEC0-7D7D66025C4B [172.18.0.1:54392] disconnected.
+mosquitto-1  | 1794742361: New connection from 172.18.0.1:55766 on port 1883.
+mosquitto-1  | 1794742361: New client connected from 172.18.0.1:55766 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794742384: Client smartlight-node_01-p0 [172.18.0.1:55766] disconnected: exceeded timeout.
+mosquitto-1  | 1794742693: New connection from 172.18.0.1:54828 on port 1883.
+mosquitto-1  | 1794742693: New client connected from 172.18.0.1:54828 as auto-F0DEA7EA-50C4-F20B-B22B-90458C2E0FAF (p4, c1, k60).
+mosquitto-1  | 1794742717: New connection from 172.18.0.1:51258 on port 1883.
+mosquitto-1  | 1794742717: New client connected from 172.18.0.1:51258 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794743293: Client auto-F0DEA7EA-50C4-F20B-B22B-90458C2E0FAF [172.18.0.1:54828] disconnected.
+mosquitto-1  | 1794743380: Client smartlight-node_01-p0 [172.18.0.1:51258] disconnected: exceeded timeout.
+mosquitto-1  | 1794743473: New connection from 172.18.0.1:57340 on port 1883.
+mosquitto-1  | 1794743473: New client connected from 172.18.0.1:57340 as auto-CCF525B8-1390-FC10-A33F-E9ECE391199D (p4, c1, k60).
+mosquitto-1  | 1794743486: New connection from 172.18.0.1:57342 on port 1883.
+mosquitto-1  | 1794743486: New client connected from 172.18.0.1:57342 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794743572: New connection from 172.18.0.1:59354 on port 1883.
+mosquitto-1  | 1794743572: New client connected from 172.18.0.1:59354 as auto-4F5D8061-6FE8-EB60-A5E6-6BEDB7C6C98D (p4, c1, k60).
+mosquitto-1  | 1794743572: Client auto-4F5D8061-6FE8-EB60-A5E6-6BEDB7C6C98D [172.18.0.1:59354] disconnected: connection closed by client.
+mosquitto-1  | 1794743601: New connection from 172.18.0.1:49400 on port 1883.
+mosquitto-1  | 1794743601: New client connected from 172.18.0.1:49400 as auto-C9C5458F-F2EA-F80C-5D7B-D703699303B3 (p4, c1, k60).
+mosquitto-1  | 1794743601: Client auto-C9C5458F-F2EA-F80C-5D7B-D703699303B3 [172.18.0.1:49400] disconnected: connection closed by client.
+mosquitto-1  | 1794743616: New connection from 172.18.0.1:36604 on port 1883.
+mosquitto-1  | 1794743616: New client connected from 172.18.0.1:36604 as auto-AE09A7DB-26C1-8D89-5DF6-DEA86A594D8E (p4, c1, k60).
+mosquitto-1  | 1794743616: Client auto-AE09A7DB-26C1-8D89-5DF6-DEA86A594D8E [172.18.0.1:36604] disconnected: connection closed by client.
+mosquitto-1  | 1794743713: Client smartlight-node_01-p0 [172.18.0.1:57342] disconnected: exceeded timeout.
+mosquitto-1  | 1794744073: Client auto-CCF525B8-1390-FC10-A33F-E9ECE391199D [172.18.0.1:57340] disconnected.
+mosquitto-1  | 1794744081: New connection from 172.18.0.1:40132 on port 1883.
+mosquitto-1  | 1794744081: New client connected from 172.18.0.1:40132 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794744093: mosquitto version 2.1.2 terminating
+[Kmosquitto-1 exited with code 0
+mosquitto-1  | 1794741830: Info: running mosquitto as user: mosquitto.
+mosquitto-1  | 1794741830: mosquitto version 2.1.2 starting
+mosquitto-1  | 1794741830: Config loaded from /mosquitto/config/mosquitto.conf.
+mosquitto-1  | 1794741830: Bridge support available.
+mosquitto-1  | 1794741830: Persistence support available.
+mosquitto-1  | 1794741830: TLS support available.
+mosquitto-1  | 1794741830: TLS-PSK support available.
+mosquitto-1  | 1794741830: Websockets support available.
+mosquitto-1  | 1794741830: Opening ipv4 listen socket on port 1883.
+mosquitto-1  | 1794741830: mosquitto version 2.1.2 running
+mosquitto-1  | 1794741911: New connection from 172.18.0.1:56570 on port 1883.
+mosquitto-1  | 1794741911: New client connected from 172.18.0.1:56570 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741934: Client smartlight-node_01-p0 [172.18.0.1:56570] disconnected: exceeded timeout.
+mosquitto-1  | 1794741934: New connection from 172.18.0.1:54966 on port 1883.
+mosquitto-1  | 1794741934: New client connected from 172.18.0.1:54966 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741957: Client smartlight-node_01-p0 [172.18.0.1:54966] disconnected: exceeded timeout.
+mosquitto-1  | 1794741957: New connection from 172.18.0.1:38412 on port 1883.
+mosquitto-1  | 1794741957: New client connected from 172.18.0.1:38412 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741980: Client smartlight-node_01-p0 [172.18.0.1:38412] disconnected: exceeded timeout.
+mosquitto-1  | 1794741997: New connection from 172.18.0.1:51876 on port 1883.
+mosquitto-1  | 1794741997: New client connected from 172.18.0.1:51876 as auto-522681F5-73EE-D277-085E-A154602EE170 (p4, c1, k60).
+mosquitto-1  | 1794742030: New connection from 172.18.0.1:54208 on port 1883.
+mosquitto-1  | 1794742030: New client connected from 172.18.0.1:54208 as auto-165C3B29-770C-F403-CF44-32DA6A9666BB (p4, c1, k60).
+mosquitto-1  | 1794742030: Client auto-165C3B29-770C-F403-CF44-32DA6A9666BB [172.18.0.1:54208] disconnected: connection closed by client.
+mosquitto-1  | 1794742030: New connection from 172.18.0.1:54224 on port 1883.
+mosquitto-1  | 1794742030: New client connected from 172.18.0.1:54224 as auto-97FA4549-2530-03C4-64FE-0A932CFA2A1A (p4, c1, k60).
+mosquitto-1  | 1794742030: Client auto-97FA4549-2530-03C4-64FE-0A932CFA2A1A [172.18.0.1:54224] disconnected: connection closed by client.
+mosquitto-1  | 1794742031: New connection from 172.18.0.1:54230 on port 1883.
+mosquitto-1  | 1794742031: New client connected from 172.18.0.1:54230 as auto-305DEDB4-BE47-C5F5-4CE5-B827BDA92A82 (p4, c1, k60).
+mosquitto-1  | 1794742031: Client auto-305DEDB4-BE47-C5F5-4CE5-B827BDA92A82 [172.18.0.1:54230] disconnected: connection closed by client.
+mosquitto-1  | 1794742057: Client auto-522681F5-73EE-D277-085E-A154602EE170 [172.18.0.1:51876] disconnected.
+mosquitto-1  | 1794742072: New connection from 172.18.0.1:34306 on port 1883.
+mosquitto-1  | 1794742072: New client connected from 172.18.0.1:34306 as auto-E1595E62-BE0C-E549-189A-5FE9A2AD73C9 (p4, c1, k60).
+mosquitto-1  | 1794742077: New connection from 172.18.0.1:54392 on port 1883.
+mosquitto-1  | 1794742077: New client connected from 172.18.0.1:54392 as auto-64074BFD-AFB3-5DBB-EEC0-7D7D66025C4B (p4, c1, k60).
+mosquitto-1  | 1794742088: Client auto-E1595E62-BE0C-E549-189A-5FE9A2AD73C9 [172.18.0.1:34306] disconnected.
+mosquitto-1  | 1794742089: Client auto-64074BFD-AFB3-5DBB-EEC0-7D7D66025C4B [172.18.0.1:54392] disconnected.
+mosquitto-1  | 1794742361: New connection from 172.18.0.1:55766 on port 1883.
+mosquitto-1  | 1794742361: New client connected from 172.18.0.1:55766 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794742384: Client smartlight-node_01-p0 [172.18.0.1:55766] disconnected: exceeded timeout.
+mosquitto-1  | 1794742693: New connection from 172.18.0.1:54828 on port 1883.
+mosquitto-1  | 1794742693: New client connected from 172.18.0.1:54828 as auto-F0DEA7EA-50C4-F20B-B22B-90458C2E0FAF (p4, c1, k60).
+mosquitto-1  | 1794742717: New connection from 172.18.0.1:51258 on port 1883.
+mosquitto-1  | 1794742717: New client connected from 172.18.0.1:51258 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794743293: Client auto-F0DEA7EA-50C4-F20B-B22B-90458C2E0FAF [172.18.0.1:54828] disconnected.
+mosquitto-1  | 1794743380: Client smartlight-node_01-p0 [172.18.0.1:51258] disconnected: exceeded timeout.
+mosquitto-1  | 1794743473: New connection from 172.18.0.1:57340 on port 1883.
+mosquitto-1  | 1794743473: New client connected from 172.18.0.1:57340 as auto-CCF525B8-1390-FC10-A33F-E9ECE391199D (p4, c1, k60).
+mosquitto-1  | 1794743486: New connection from 172.18.0.1:57342 on port 1883.
+mosquitto-1  | 1794743486: New client connected from 172.18.0.1:57342 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794743572: New connection from 172.18.0.1:59354 on port 1883.
+mosquitto-1  | 1794743572: New client connected from 172.18.0.1:59354 as auto-4F5D8061-6FE8-EB60-A5E6-6BEDB7C6C98D (p4, c1, k60).
+mosquitto-1  | 1794743572: Client auto-4F5D8061-6FE8-EB60-A5E6-6BEDB7C6C98D [172.18.0.1:59354] disconnected: connection closed by client.
+mosquitto-1  | 1794743601: New connection from 172.18.0.1:49400 on port 1883.
+mosquitto-1  | 1794743601: New client connected from 172.18.0.1:49400 as auto-C9C5458F-F2EA-F80C-5D7B-D703699303B3 (p4, c1, k60).
+mosquitto-1  | 1794743601: Client auto-C9C5458F-F2EA-F80C-5D7B-D703699303B3 [172.18.0.1:49400] disconnected: connection closed by client.
+mosquitto-1  | 1794743616: New connection from 172.18.0.1:36604 on port 1883.
+mosquitto-1  | 1794743616: New client connected from 172.18.0.1:36604 as auto-AE09A7DB-26C1-8D89-5DF6-DEA86A594D8E (p4, c1, k60).
+mosquitto-1  | 1794743616: Client auto-AE09A7DB-26C1-8D89-5DF6-DEA86A594D8E [172.18.0.1:36604] disconnected: connection closed by client.
+mosquitto-1  | 1794743713: Client smartlight-node_01-p0 [172.18.0.1:57342] disconnected: exceeded timeout.
+mosquitto-1  | 1794744073: Client auto-CCF525B8-1390-FC10-A33F-E9ECE391199D [172.18.0.1:57340] disconnected.
+mosquitto-1  | 1794744081: New connection from 172.18.0.1:40132 on port 1883.
+mosquitto-1  | 1794744081: New client connected from 172.18.0.1:40132 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794744093: mosquitto version 2.1.2 terminating
+mosquitto-1  | 1794744145: Info: running mosquitto as user: mosquitto.
+mosquitto-1  | 1794744145: mosquitto version 2.1.2 starting
+mosquitto-1  | 1794744145: Config loaded from /mosquitto/config/mosquitto.conf.
+mosquitto-1  | 1794744145: Bridge support available.
+mosquitto-1  | 1794744145: Persistence support available.
+mosquitto-1  | 1794744145: TLS support available.
+mosquitto-1  | 1794744145: TLS-PSK support available.
+mosquitto-1  | 1794744145: Websockets support available.
+mosquitto-1  | 1794744145: Opening ipv4 listen socket on port 1883.
+mosquitto-1  | 1794744145: mosquitto version 2.1.2 running
+mosquitto-1  | 1794744147: New connection from 172.18.0.1:36532 on port 1883.
+mosquitto-1  | 1794744147: New client connected from 172.18.0.1:36532 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794744246: New connection from 172.18.0.1:47216 on port 1883.
+mosquitto-1  | 1794744246: New client connected from 172.18.0.1:47216 as auto-32448F2C-C281-3DF8-2AF6-5C98E7AD9C61 (p4, c1, k60).
+mosquitto-1  | 1794744246: Client auto-32448F2C-C281-3DF8-2AF6-5C98E7AD9C61 [172.18.0.1:47216] disconnected: connection closed by client.
+mosquitto-1  | 1794744269: New connection from 172.18.0.1:48578 on port 1883.
+mosquitto-1  | 1794744269: New client connected from 172.18.0.1:48578 as auto-63984308-9683-F7FE-37C5-3DA0B665E636 (p4, c1, k60).
+mosquitto-1  | 1794744271: New connection from 172.18.0.1:48586 on port 1883.
+mosquitto-1  | 1794744271: New client connected from 172.18.0.1:48586 as auto-B551A524-ED15-D559-B784-29026C2DC078 (p4, c1, k60).
+mosquitto-1  | 1794744271: Client auto-B551A524-ED15-D559-B784-29026C2DC078 [172.18.0.1:48586] disconnected: connection closed by client.
+mosquitto-1  | 1794744284: New connection from 172.18.0.1:40012 on port 1883.
+mosquitto-1  | 1794744284: New client connected from 172.18.0.1:40012 as auto-8D1B8079-CAFC-FA7E-1FCE-5F0CB423A701 (p4, c1, k60).
+mosquitto-1  | 1794744284: Client auto-8D1B8079-CAFC-FA7E-1FCE-5F0CB423A701 [172.18.0.1:40012] disconnected: connection closed by client.
+mosquitto-1  | 1794744544: Client smartlight-node_01-p0 [172.18.0.1:36532] disconnected: exceeded timeout.
