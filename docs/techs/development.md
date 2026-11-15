@@ -51,6 +51,7 @@ Tạo `docs/techs/<danh-muc>.md` khi có nội dung, tên tiếng Anh dạng `ke
 
 | Danh mục | Nội dung |
 | --- | --- |
+| `setup` | [Môi trường P0, firmware thử nghiệm, Docker MQTT, Wokwi và nghiệm thu](setup.md) |
 | `development` | Quy trình agent, convention, mẫu báo cáo và công cụ định dạng |
 | `firmware` | Module, thuật toán, timer, AUTO/MANUAL, PWM và lỗi tải |
 | `hardware` | Pin map, linh kiện, đấu nối và giới hạn giả lập |
