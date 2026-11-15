@@ -1,0 +1,51 @@
+mosquitto-1  | 1794740709: Info: running mosquitto as user: mosquitto.
+mosquitto-1  | 1794740709: mosquitto version 2.1.2 starting
+mosquitto-1  | 1794740709: Config loaded from /mosquitto/config/mosquitto.conf.
+mosquitto-1  | 1794740709: Bridge support available.
+mosquitto-1  | 1794740709: Persistence support available.
+mosquitto-1  | 1794740709: TLS support available.
+mosquitto-1  | 1794740709: TLS-PSK support available.
+mosquitto-1  | 1794740709: Websockets support available.
+mosquitto-1  | 1794740709: Opening ipv4 listen socket on port 1883.
+mosquitto-1  | 1794740709: mosquitto version 2.1.2 running
+mosquitto-1  | 1794740755: New connection from 172.18.0.1:36350 on port 1883.
+mosquitto-1  | 1794740755: New client connected from 172.18.0.1:36350 as auto-09D18A72-60FC-BF66-808F-5D5D3B32BDB1 (p4, c1, k60).
+mosquitto-1  | 1794740770: Client auto-09D18A72-60FC-BF66-808F-5D5D3B32BDB1 [172.18.0.1:36350] disconnected.
+mosquitto-1  | 1794740786: New connection from 172.18.0.1:36586 on port 1883.
+mosquitto-1  | 1794740786: New client connected from 172.18.0.1:36586 as auto-6ADB7762-E3F4-37C5-4EA4-36C70D797A39 (p4, c1, k60).
+mosquitto-1  | 1794740790: New connection from 172.18.0.1:36600 on port 1883.
+mosquitto-1  | 1794740790: New client connected from 172.18.0.1:36600 as auto-926894CD-89A2-73FF-0007-FA943C455C70 (p4, c1, k60).
+mosquitto-1  | 1794740790: Client auto-926894CD-89A2-73FF-0007-FA943C455C70 [172.18.0.1:36600] disconnected.
+mosquitto-1  | 1794740790: Client auto-6ADB7762-E3F4-37C5-4EA4-36C70D797A39 [172.18.0.1:36586] disconnected.
+mosquitto-1  | 1794741177: New connection from 172.18.0.1:53848 on port 1883.
+mosquitto-1  | 1794741178: New client connected from 172.18.0.1:53848 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741200: Client smartlight-node_01-p0 [172.18.0.1:53848] disconnected: exceeded timeout.
+mosquitto-1  | 1794741210: New connection from 172.18.0.1:39796 on port 1883.
+mosquitto-1  | 1794741210: New client connected from 172.18.0.1:39796 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741233: Client smartlight-node_01-p0 [172.18.0.1:39796] disconnected: exceeded timeout.
+mosquitto-1  | 1794741239: New connection from 172.18.0.1:42554 on port 1883.
+mosquitto-1  | 1794741239: New client connected from 172.18.0.1:42554 as smartlight-node_01-p0 (p4, c1, k15).
+mosquitto-1  | 1794741262: Client smartlight-node_01-p0 [172.18.0.1:42554] disconnected: exceeded timeout.
+mosquitto-1  | 1794741287: New connection from 172.18.0.1:55608 on port 1883.
+mosquitto-1  | 1794741287: New client connected from 172.18.0.1:55608 as auto-BABDEB9F-1C32-E39C-8BA4-40BCEA076750 (p4, c1, k60).
+mosquitto-1  | 1794741292: New connection from 172.18.0.1:55610 on port 1883.
+mosquitto-1  | 1794741292: New client connected from 172.18.0.1:55610 as auto-AD723F77-6F90-C247-8506-F37D7287F299 (p4, c1, k60).
+mosquitto-1  | 1794741292: Client auto-AD723F77-6F90-C247-8506-F37D7287F299 [172.18.0.1:55610] disconnected: connection closed by client.
+mosquitto-1  | 1794741293: New connection from 172.18.0.1:55622 on port 1883.
+mosquitto-1  | 1794741293: New client connected from 172.18.0.1:55622 as auto-1C97524B-79DE-061B-3BEF-46C7EBFDF7A2 (p4, c1, k60).
+mosquitto-1  | 1794741293: Client auto-1C97524B-79DE-061B-3BEF-46C7EBFDF7A2 [172.18.0.1:55622] disconnected: connection closed by client.
+mosquitto-1  | 1794741293: New connection from 172.18.0.1:55624 on port 1883.
+mosquitto-1  | 1794741293: New client connected from 172.18.0.1:55624 as auto-867D9FE4-D9EA-B177-72E2-337E434748D9 (p4, c1, k60).
+mosquitto-1  | 1794741293: Client auto-867D9FE4-D9EA-B177-72E2-337E434748D9 [172.18.0.1:55624] disconnected: connection closed by client.
+mosquitto-1  | 1794741315: Client auto-BABDEB9F-1C32-E39C-8BA4-40BCEA076750 [172.18.0.1:55608] disconnected.
+mosquitto-1  | 1794741321: mosquitto version 2.1.2 terminating
+mosquitto-1  | 1794741335: Info: running mosquitto as user: mosquitto.
+mosquitto-1  | 1794741335: mosquitto version 2.1.2 starting
+mosquitto-1  | 1794741335: Config loaded from /mosquitto/config/mosquitto.conf.
+mosquitto-1  | 1794741335: Bridge support available.
+mosquitto-1  | 1794741335: Persistence support available.
+mosquitto-1  | 1794741335: TLS support available.
+mosquitto-1  | 1794741335: TLS-PSK support available.
+mosquitto-1  | 1794741335: Websockets support available.
+mosquitto-1  | 1794741335: Opening ipv4 listen socket on port 1883.
+mosquitto-1  | 1794741335: mosquitto version 2.1.2 running
