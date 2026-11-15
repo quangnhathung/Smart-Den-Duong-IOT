@@ -4,7 +4,7 @@
 
 [SRS](../srs.md) mục 3.1, 4, 10.2–10.3, 11–12. Đây là firmware chẩn đoán môi trường, chưa có cảm biến, AUTO/MANUAL, telemetry hoặc ACK nghiệp vụ. Giữ workspace firmware hiện tại; infra nằm trong workspace này, không di chuyển thư mục cha.
 
-Đã quan sát: PlatformIO Core 6.1.19, Espressif32 8.0.0, Arduino ESP32 3.3.12 (package 4.30312.261113), ESP32 libs 3.3.12; Docker CLI 29.9.2, Compose 5.7.0, Wokwi extension 4.1.0. Build esp32dev đã PASS sau sửa lỗi min; Wokwi/MQTT live chưa được nghiệm thu. Platform chưa pin trong platformio.ini: chỉ khóa sau khi kiểm chứng build và smoke test thành công, theo SRS. PubSubClient được khai báo chính xác 2.8 cho firmware mới.
+Đã quan sát: PlatformIO Core 6.1.19, Espressif32 8.0.0, Arduino ESP32 3.3.12 (package 4.30312.261113), ESP32 libs 3.3.12; Docker CLI 29.9.2, Compose 5.7.0, Wokwi extension 4.1.0. P0 đã đạt các ca smoke test theo [biên bản](../reports/evidence/task-002/acceptance.md); platform/framework và PubSubClient đã pin đúng phiên bản kiểm chứng. Kết quả này không bao gồm nghiệm thu cảm biến, mạng nghiệp vụ hay độ ổn định ba node.
 
 ## 1. Điều kiện và broker Docker
 
@@ -171,3 +171,7 @@ docker compose -f infra/compose.yaml --profile tools run --rm mqtt-client mosqui
 Đợi Serial báo MQTT connected; ping subscribed và HEARTBEAT published=1. Terminal khác gửi ba ping theo mục 5. Phải thấy các dòng topic kết thúc /pong có đủ p0-001/002/003; dòng /ping không phải phản hồi. Quan sát /heartbeat và broker ít nhất 3 phút thực, không có exceeded timeout ngoài lần cố ý stop broker. Serial có đủ PWM 0/25/50/70/100. Lưu Serial thành serial-heartbeat-live.log và broker thành broker-heartbeat-live.log, không ghi đè bằng chứng cũ.
 
 Sau đó thử stop/start broker theo mục 6, mở subscriber mới nếu cửa sổ nghe đã hết hạn hoặc bị ngắt; đợi node subscribe lại và gửi p0-004, phải có pong mà không reset ESP32. Nếu vẫn lỗi, giữ log đầy đủ và thu PCAP; chưa thay broker/hostname hoặc tăng timeout để bỏ qua lỗi. Chỉ khóa toolchain và nghiệm thu khi live đạt. PubSubClient subscribe trả true chỉ xác nhận gửi yêu cầu, pong nhận được mới xác nhận luồng hai chiều.
+
+## Chốt nghiệm thu TASK-002
+
+Ưu tiên [biên bản mới nhất](../reports/evidence/task-002/acceptance.md) khi đọc tiến độ; các đoạn cập nhật theo thời điểm ở trên được giữ như lịch sử. Đã nhận đủ bốn pong và người vận hành xác nhận không restart ESP32 khi thử stop/start broker. Đủ năm mức PWM theo Serial trong hội thoại. Platform pin 8.0.0, Arduino package 4.30312.261113, ESP32 libs 3.3.12, PubSubClient 2.8.0; build sau pin và copy đạt. Các log timeout phiên dài vẫn được giữ và chưa khẳng định nguyên nhân; cần theo dõi ở giai đoạn mạng nghiệp vụ. Không ghi toàn đồ án hoặc ba node là PASS.

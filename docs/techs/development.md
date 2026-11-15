@@ -4,7 +4,7 @@
 
 - Hướng dẫn bắt buộc: [AGENTS.md](../../AGENTS.md).
 - Nguồn yêu cầu: [SRS](../srs.md), đặc biệt mục 3–6 (cấu trúc, firmware, giao thức), 10–12 (gói việc, agent, kiểm thử), 16 (quản lý thay đổi).
-- Hiện trạng: PlatformIO, `esp32dev`, Arduino; source vẫn là code mẫu. Convention không phải bằng chứng các chức năng đồ án đã được triển khai.
+- Hiện trạng: PlatformIO, `esp32dev`, Arduino; source hiện là EnvironmentSmokeTest P0, chưa có logic chiếu sáng nghiệp vụ. Convention không phải bằng chứng các chức năng đồ án đã được triển khai.
 - Mỗi yêu cầu có đầu ra riêng là một task; bước kỹ thuật là checklist con, không tự tạo task mới cho từng lệnh. Gói P0–P8/A0–A7 trong SRS là tham chiếu phạm vi, không thay thế mã task.
 - Tài liệu và báo cáo viết tiếng Việt; định danh code dùng tiếng Anh. Thời điểm báo cáo dùng ISO 8601 với múi giờ `Asia/Ho_Chi_Minh` (`+07:00`).
 
@@ -51,11 +51,12 @@ Tạo `docs/techs/<danh-muc>.md` khi có nội dung, tên tiếng Anh dạng `ke
 
 | Danh mục | Nội dung |
 | --- | --- |
+| `architecture` | [Kiến trúc A0 và điểm bàn giao](architecture.md) |
 | `setup` | [Môi trường P0, firmware thử nghiệm, Docker MQTT, Wokwi và nghiệm thu](setup.md) |
 | `development` | Quy trình agent, convention, mẫu báo cáo và công cụ định dạng |
 | `firmware` | Module, thuật toán, timer, AUTO/MANUAL, PWM và lỗi tải |
 | `hardware` | Pin map, linh kiện, đấu nối và giới hạn giả lập |
-| `mqtt` | Topic, schema, ACK, deadline, chống trùng và reconnect |
+| `mqtt` | [Hợp đồng MQTT v1](mqtt.md): topic, schema, ACK, deadline, chống trùng và reconnect |
 | `simulation` | Wokwi, cấu hình từng node, gateway và cách chạy demo |
 | `testing` | Cách chạy kiểm tra, ma trận SRS, dữ liệu và bằng chứng |
 
@@ -104,7 +105,7 @@ clang-format --dry-run --Werror src/LightController.cpp include/LightController.
 
 Khi được phép sửa mã, dùng `clang-format -i` với đúng các tệp trong phạm vi task. Các đường dẫn ví dụ trên chưa tồn tại; không coi đây là lệnh build hiện tại. Công cụ phải hỗ trợ các khóa trong [cấu hình](../../.clang-format); bản 23.1.4 hiện có đã đọc được cấu hình. Nếu gặp khóa không hỗ trợ, ghi phiên bản/lỗi và đề xuất công cụ tương thích, không âm thầm bỏ quy tắc.
 
-Không thêm hook hoặc CI trong task thiết lập này. Code mẫu hiện tại chưa được format lại. Thay đổi thuần tài liệu/cấu hình formatter không yêu cầu build firmware; thay đổi code phải build environment bị ảnh hưởng và chạy ca logic tương ứng. Khi có ba environment thì kiểm tra đủ các environment bị ảnh hưởng, không báo ba node đạt khi mới có `esp32dev`.
+Không thêm hook hoặc CI trong task thiết lập này. Source P0 hiện tại đã được kiểm tra formatter; không suy ra đã format hoặc nghiệm thu các module nghiệp vụ chưa tồn tại. Thay đổi thuần tài liệu/cấu hình formatter không yêu cầu build firmware; thay đổi code phải build environment bị ảnh hưởng và chạy ca logic tương ứng. Khi có ba environment thì kiểm tra đủ các environment bị ảnh hưởng, không báo ba node đạt khi mới có `esp32dev`.
 
 ## Mẫu task hiện tại và task tiếp theo
 
