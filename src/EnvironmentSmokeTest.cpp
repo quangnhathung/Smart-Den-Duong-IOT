@@ -3,6 +3,7 @@
 #include <Arduino.h>
 #include <PubSubClient.h>
 #include <WiFi.h>
+#include <algorithm>
 #include <esp_arduino_version.h>
 
 namespace {
@@ -93,5 +94,5 @@ void loopSmokeTest() {
       return;
     }
   }
-  retryMs = min(retryMs * 2U, 10000U);
+  retryMs = std::min<uint32_t>(retryMs * 2U, 10000U);
 }
