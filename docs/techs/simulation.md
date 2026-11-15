@@ -4,7 +4,7 @@
 
 [SRS](../srs.md) mục 4.4, 10 P1, 11 A1, 12; [pin map](hardware.md), [ma trận kiểm tra](testing.md), [setup broker P0](setup.md). Chỉ một node/client smartlight-node_01-p0. Dừng mô phỏng cũ trước để tránh trùng client ID.
 
-Firmware và hai cấu hình đã chuẩn bị; chưa có kết quả live P1. Người dùng vận hành Docker/Wokwi, agent không tự chạy trong TASK-005.
+Firmware và hai cấu hình đã chạy live P1; TASK-005 hoàn thành 4/4 theo [biên bản](../reports/evidence/task-005/windows-live-20261116-003644/acceptance-final.md). Người dùng thao tác Wokwi; agent chạy capture và một lượt stop/start riêng broker theo ủy quyền. Các bước dưới đây là runbook tái lập, không yêu cầu chạy lại ca đã PASS. Khi lựa chọn cấu hình bị nhầm, mở riêng thư mục node_01 hoặc timeout trong VS Code để bảo đảm diagram.json cạnh wokwi.toml đúng; chỉ một mô phỏng cùng client ID.
 
 ## 1. Chuẩn bị bằng terminal thông thường
 

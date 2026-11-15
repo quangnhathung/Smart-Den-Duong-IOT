@@ -1,0 +1,26 @@
+﻿2026-11-15T19:28:32.160504520Z 1794770912: New connection from 172.19.0.1:40356 on port 1883.
+2026-11-15T19:28:32.160694133Z 1794770912: New client connected from 172.19.0.1:40356 as auto-348E804C-51E6-A7CB-015A-157AC5095BE0 (p4, c1, k60).
+2026-11-15T19:29:15.425389209Z 1794770955: mosquitto version 2.1.2 terminating
+2026-11-15T19:29:36.682578736Z 1794770976: mosquitto version 2.1.2 starting
+2026-11-15T19:29:36.682602637Z 1794770976: Config loaded from /mosquitto/config/mosquitto.conf.
+2026-11-15T19:29:36.682610038Z 1794770976: Bridge support available.
+2026-11-15T19:29:36.682630139Z 1794770976: Persistence support available.
+2026-11-15T19:29:36.682635040Z 1794770976: TLS support available.
+2026-11-15T19:29:36.682639440Z 1794770976: TLS-PSK support available.
+2026-11-15T19:29:36.682643740Z 1794770976: Websockets support available.
+2026-11-15T19:29:36.682960662Z 1794770976: Opening ipv4 listen socket on port 1883.
+2026-11-15T19:29:36.682975163Z 1794770976: mosquitto version 2.1.2 running
+2026-11-15T19:29:37.451274988Z 1794770977: New connection from 172.19.0.1:50326 on port 1883.
+2026-11-15T19:29:37.500275140Z 1794770977: New client connected from 172.19.0.1:50326 as auto-0353D745-867A-790C-A0AF-3D5897878DA8 (p4, c1, k60).
+2026-11-15T19:29:46.660253348Z 1794770986: New connection from 172.19.0.1:39298 on port 1883.
+2026-11-15T19:29:46.786364477Z 1794770986: New client connected from 172.19.0.1:39298 as smartlight-node_01-p0 (p4, c1, k15).
+2026-11-15T19:30:19.170071457Z 1794771019: New connection from 172.19.0.1:55910 on port 1883.
+2026-11-15T19:30:19.170358076Z 1794771019: New client connected from 172.19.0.1:55910 as auto-645BAE39-8D29-93B8-CC68-703B5F85EEAE (p4, c1, k60).
+2026-11-15T19:30:19.172703535Z 1794771019: Client auto-645BAE39-8D29-93B8-CC68-703B5F85EEAE [172.19.0.1:55910] disconnected: connection closed by client.
+docker : 2026-11-15T19:29:36.682466928Z 1794770976: Info: running mosquitto as user: mosquitto.
+At line:2 char:1
++ docker logs --since 2026-11-15T19:28:30Z --timestamps smartlight-p0-m ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2026-11-15T19:2...ser: mosquitto.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

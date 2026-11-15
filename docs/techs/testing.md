@@ -1,5 +1,9 @@
 # Kiểm tra TASK-005 P1/A1
 
+## Kết quả nghiệm thu cuối
+
+TASK-005 đã hoàn thành 4/4 nhóm nghiệm thu; P1-01 đến P1-08 PASS theo [biên bản và ma trận evidence](../reports/evidence/task-005/windows-live-20261116-003644/acceptance-final.md). Các trạng thái “Chưa chạy” trong ma trận bên dưới là trạng thái ban đầu khi lập kế hoạch, không phải kết quả cuối. P1-08 dùng bộ bằng chứng bổ sung của hai lượt recovery, ghi rõ nguồn thời gian; không tuyên bố một capture đồng bộ duy nhất. Không nghiệm thu AUTO/MANUAL hoặc mạng nghiệp vụ ở P1.
+
 ## Tham chiếu SRS
 
 [SRS](../srs.md) mục 4.1, 5.3, 10 P1, 11 A1, 12. Các TC AUTO/MANUAL/fault trong SRS thuộc A2 trở đi, chưa nghiệm thu tại P1. [Firmware](firmware.md), [cách chạy Wokwi](simulation.md), [bằng chứng](../reports/evidence/task-005/README.md).

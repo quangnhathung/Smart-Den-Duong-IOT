@@ -1,0 +1,23 @@
+SENSORS uptime_ms=261390 ldr_adc=156 pir=0 current_adc=4095 distance_valid=1 distance_cm=203.83
+PIR uptime_ms=262058 motion=1
+uptime_ms=262403 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=262404 ldr_adc=156 pir=1 current_adc=4095 distance_valid=1 distance_cm=203.83
+uptime_ms=263102 HEARTBEAT published=1 state=0
+PWM requested=25% duty=64 ready=1
+uptime_ms=263419 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=263420 ldr_adc=156 pir=1 current_adc=4095 distance_valid=1 distance_cm=203.83
+uptime_ms=264431 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=264432 ldr_adc=156 pir=1 current_adc=4095 distance_valid=1 distance_cm=203.83
+PIR uptime_ms=264877 motion=0
+uptime_ms=265111 HEARTBEAT published=1 state=0
+PWM requested=50% duty=128 ready=1
+uptime_ms=265448 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=265449 ldr_adc=156 pir=0 current_adc=4095 distance_valid=1 distance_cm=203.83
+uptime_ms=266460 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=266461 ldr_adc=156 pir=0 current_adc=4095 distance_valid=1 distance_cm=203.83
+uptime_ms=267119 HEARTBEAT published=1 state=0
+PWM requested=70% duty=179 ready=1
+uptime_ms=267476 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=267477 ldr_adc=156 pir=0 current_adc=4095 distance_valid=1 distance_cm=203.83
+uptime_ms=268488 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=268489 ldr_adc=156 pir=0 current_adc=4095 distance_valid=1 distance_cm=203.83

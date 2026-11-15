@@ -1,3 +1,43 @@
+## 2026-11-16T03:04:48+07:00 — TASK-005 — Kiểm tra trước commit/push main
+
+- Đã làm: rà 51 file TASK-005 (8 tài liệu, 43 evidence), không có file ngoài phạm vi; origin/main ngang main sau fetch. Người dùng cho phép commit/push trực tiếp main, không tạo nhánh/PR.
+- Kiểm tra/kết quả: build esp32dev SUCCESS exit 0 (4.52 giây), RAM 47388 byte, flash 908071 byte; host g++ C++17 với -Wall -Wextra -Werror PASS lịch cảm biến, timeout/invalidation/recovery và tràn uint32. Rà credential/token theo mẫu không có phát hiện; liên kết Markdown nội bộ hợp lệ. Không stage .pio/BIN/ELF/.env; giữ log/ảnh nghiệm thu đã rà soát.
+- Vướng mắc: Không có. Giữ nguyên giới hạn host test không thay Wokwi; không chạy lại Wokwi hoặc dừng broker. Không sửa firmware hoặc triển khai TASK-006.
+- Cách xử lý: stage đúng tập file đã rà, commit theo thông điệp người dùng, push thường lên origin/main; nếu remote đổi hoặc lỗi/conflict thì dừng, không force push. Kết quả push và commit hash báo trực tiếp sau thao tác, không ghi PASS trước khi chạy.
+
+---
+
+## 2026-11-16T02:56:10+07:00 — TASK-005 — Nghiệm thu cuối P1/A1
+
+- Trạng thái: Hoàn thành; 4/4 nhóm nghiệm thu, P1-01 đến P1-08 PASS trong phạm vi raw sensor/diagnostics một node.
+- Đã làm: đọc toàn bộ Serial recovery mới 159 dòng, đối chiếu lịch sử MQTT recovery đã PASS; cập nhật biên bản, task/checklist/next-task và tài liệu. Không chạy lại test hoặc thao tác broker/firmware.
+- Kiểm tra/kết quả: 14 mẫu SENSORS trong đoạn offline, năm mức PWM/duty/ready=1, retry và reconnect 120163 ms, heartbeat từ 122171 ms; uptime tăng, không banner boot. P1-02 đã đủ 4095/2122/0 và xác nhận vị trí núm. MQTT/pong sau recovery có bằng chứng lượt 02:29, Serial bổ sung từ lượt 02:50; ghi rõ hai lượt và nguồn xác nhận mốc thời gian.
+- Vướng mắc: Không còn vướng mắc chặn TASK-005. Giữ giới hạn metadata/ảnh và timeout phiên dài chưa rõ nguyên nhân, không tuyên bố nghiệm thu toàn hệ thống.
+- Cách giải quyết: nhận log bổ sung, đối chiếu dữ liệu thực; giữ các báo cáo PARTIAL cũ như lịch sử, không giả log/ảnh hoặc gộp sai timestamp.
+- [Biên bản và ma trận bằng chứng](evidence/task-005/windows-live-20261116-003644/acceptance-final.md). Đủ điều kiện đề xuất TASK-006 P2/A2, chưa triển khai. Không commit/push.
+
+---
+
+## 2026-11-16T02:36:12+07:00 — TASK-005 — Chốt P1-02, rà Serial offline P1-08
+
+- Đã làm: đọc nguyên log biến trở cuối, xác nhận đủ 4095/2122/0 tại đúng uptime; vị trí tối đa/giữa/thấp nhất do người dùng xác nhận. P1-02 PASS, không thử lại.
+- Kiểm tra/kết quả: TASK-005 3/4 nhóm nghiệm thu, P1-08 recovery MQTT đã PASS nhưng toàn ca vẫn PARTIAL. Tìm log đã lưu chưa có Serial offline/retry. Cửa sổ Wokwi còn mở, đọc terminal/screenshot qua UI bị timeout nên chưa xác định buffer còn hay mất.
+- Vướng mắc/cách giải quyết: chỉ cần xuất đoạn Serial đang có của lượt 02:29:15–02:29:46 để chứng minh raw/PWM/retry và không boot lại; nếu không còn bằng chứng thì giữ PARTIAL, không tự tạo log hoặc ngắt broker.
+- [Báo cáo chi tiết](evidence/task-005/windows-live-20261116-003644/p102-final-and-p108-gap-20261116.md). Không sửa firmware, build, commit/push, đóng TASK-005 hoặc triển khai TASK-006.
+
+---
+
+## 2026-11-16T02:32:06+07:00 — TASK-005 — Kiểm thử recovery P1-08 trên Windows
+
+- Trạng thái: Bị chặn; 2/4 nhóm nghiệm thu, còn đối chiếu hồ sơ.
+- Đã làm: xác minh đúng project/service/config/container Mosquitto; capture timestamp; stop riêng mosquitto, giữ offline 20 giây, start lại trong finally. Không tác động PostgreSQL/Redis hoặc source.
+- Kiểm tra: PASS recovery MQTT thực tế: broker start 02:29:36, node reconnect 02:29:46, heartbeat tiếp tục, pong khớp payload lúc 02:30:19. P1-07 đã PASS với 184 giây thực và 40 heartbeat khớp Serial boot thứ hai.
+- Vướng mắc: thiếu Serial chứng minh raw/PWM/retry và không reset trong khoảng offline để chốt P1-08; người dùng xác nhận ADC 4095/2122/0 nhưng chưa thấy mẫu 2122 trong log hiện có.
+- Cách giải quyết: xuất đoạn Serial đang có, không thử lại các ca PASS hoặc ngắt broker thêm lần nữa. Giữ TASK-005 chưa hoàn thành; chưa triển khai TASK-006.
+- Bằng chứng: [tổng hợp và timeline/MQTT/broker](evidence/task-005/windows-live-20261116-003644/p108-20261116-022831-review.md). Broker đã khôi phục, đang chạy. Không commit/push. Toàn bộ byte báo cáo cũ được giữ bên dưới.
+
+---
+
 ## 2026-11-15T19:29:24+07:00 — TASK-005 — Triển khai mạch và raw sensor P1/A1
 
 - Trạng thái: Bị chặn

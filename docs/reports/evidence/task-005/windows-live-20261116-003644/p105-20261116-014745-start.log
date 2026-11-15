@@ -1,0 +1,6 @@
+﻿2026-11-16T01:47:45.3740579+07:00
+Configuration: simulations/node_01/timeout/wokwi.toml
+ECHO wire absent in timeout diagram; VCC/GND/TRIG present
+State: capture preparation only; simulation not yet started by user
+Broker running, restart count=0 before capture
+Subscriber limit: 1800 wall-clock seconds

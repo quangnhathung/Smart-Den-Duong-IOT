@@ -1,0 +1,174 @@
+SENSORS uptime_ms=48331 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=49350 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=49351 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.86
+uptime_ms=50022 HEARTBEAT published=1 state=0
+PWM requested=0% duty=0 ready=1
+uptime_ms=50371 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=50372 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=51388 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=51389 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=52030 HEARTBEAT published=1 state=0
+PWM requested=25% duty=64 ready=1
+uptime_ms=52408 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=52409 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.74
+uptime_ms=53425 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=53426 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=54037 HEARTBEAT published=1 state=0
+PWM requested=50% duty=128 ready=1
+uptime_ms=54446 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=54447 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=55463 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=55464 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=56042 HEARTBEAT published=1 state=0
+PWM requested=70% duty=179 ready=1
+uptime_ms=56484 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=56485 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=57501 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=57502 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=58050 HEARTBEAT published=1 state=0
+PWM requested=100% duty=255 ready=1
+uptime_ms=58522 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=58523 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.84
+uptime_ms=59539 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=59540 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=60058 HEARTBEAT published=1 state=0
+PWM requested=0% duty=0 ready=1
+uptime_ms=60560 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=60561 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=61577 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=61578 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=62066 HEARTBEAT published=1 state=0
+PWM requested=25% duty=64 ready=1
+uptime_ms=62598 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=62599 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=63615 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=63616 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.78
+uptime_ms=64074 HEARTBEAT published=1 state=0
+PWM requested=50% duty=128 ready=1
+uptime_ms=64627 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=64628 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=65639 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=65640 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=66076 HEARTBEAT published=1 state=0
+PWM requested=70% duty=179 ready=1
+uptime_ms=66655 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=66656 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=67667 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=67668 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=68084 HEARTBEAT published=1 state=0
+PWM requested=100% duty=255 ready=1
+uptime_ms=68683 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=68684 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=69695 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=69696 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=70092 HEARTBEAT published=1 state=0
+PWM requested=0% duty=0 ready=1
+uptime_ms=70711 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=70712 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.76
+uptime_ms=71723 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=71724 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=72098 HEARTBEAT published=1 state=0
+PWM requested=25% duty=64 ready=1
+uptime_ms=72739 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=72740 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=73751 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=73752 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=74106 HEARTBEAT published=1 state=0
+PWM requested=50% duty=128 ready=1
+uptime_ms=74767 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=74768 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=75779 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=75780 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=76114 HEARTBEAT published=1 state=0
+PWM requested=70% duty=179 ready=1
+uptime_ms=76795 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=76796 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.76
+uptime_ms=77807 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=77808 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=78122 HEARTBEAT published=1 state=0
+PWM requested=100% duty=255 ready=1
+uptime_ms=78823 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=78824 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=79839 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=79840 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=80124 HEARTBEAT published=1 state=0
+PWM requested=0% duty=0 ready=1
+uptime_ms=80855 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=80856 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=81867 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=81868 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=82132 HEARTBEAT published=1 state=0
+PWM requested=25% duty=64 ready=1
+uptime_ms=82883 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=82884 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=83895 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=83896 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=84140 HEARTBEAT published=1 state=0
+PWM requested=50% duty=128 ready=1
+uptime_ms=84911 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=84912 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=85923 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=85924 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=86148 HEARTBEAT published=1 state=0
+PWM requested=70% duty=179 ready=1
+uptime_ms=86939 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=86940 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=87951 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=87952 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=88156 HEARTBEAT published=1 state=0
+PWM requested=100% duty=255 ready=1
+uptime_ms=88967 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=88968 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=89979 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=89980 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=90174 HEARTBEAT published=1 state=0
+PWM requested=0% duty=0 ready=1
+uptime_ms=90995 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=90996 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=92007 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=92008 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=92180 HEARTBEAT published=1 state=0
+PWM requested=25% duty=64 ready=1
+uptime_ms=93023 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=93024 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=94035 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=94036 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=94188 HEARTBEAT published=1 state=0
+PWM requested=50% duty=128 ready=1
+uptime_ms=95054 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=95055 ldr_adc=156 pir=0 current_adc=348 distance_valid=1 distance_cm=203.74
+uptime_ms=96066 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=96067 ldr_adc=156 pir=0 current_adc=348 distance_valid=1 distance_cm=203.83
+uptime_ms=96189 HEARTBEAT published=1 state=0
+PWM requested=70% duty=179 ready=1
+uptime_ms=97082 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=97083 ldr_adc=156 pir=0 current_adc=2926 distance_valid=1 distance_cm=203.83
+uptime_ms=98094 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=98095 ldr_adc=156 pir=0 current_adc=2926 distance_valid=1 distance_cm=203.83
+uptime_ms=98197 HEARTBEAT published=1 state=0
+PWM requested=100% duty=255 ready=1
+uptime_ms=99110 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=99111 ldr_adc=156 pir=0 current_adc=2926 distance_valid=1 distance_cm=203.81
+uptime_ms=100122 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=100123 ldr_adc=156 pir=0 current_adc=2926 distance_valid=1 distance_cm=203.81
+uptime_ms=100205 HEARTBEAT published=1 state=0
+PWM requested=0% duty=0 ready=1
+uptime_ms=101138 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=101139 ldr_adc=156 pir=0 current_adc=3823 distance_valid=1 distance_cm=203.83
+uptime_ms=102150 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=102151 ldr_adc=156 pir=0 current_adc=4095 distance_valid=1 distance_cm=203.83
+uptime_ms=102213 HEARTBEAT published=1 state=0
+PWM requested=25% duty=64 ready=1
+uptime_ms=103166 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=103167 ldr_adc=156 pir=0 current_adc=3671 distance_valid=1 distance_cm=203.83
+uptime_ms=104178 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=104179 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.83
+uptime_ms=104221 HEARTBEAT published=1 state=0
+PWM requested=50% duty=128 ready=1
+uptime_ms=105194 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=105195 ldr_adc=156 pir=0 current_adc=4095 distance_valid=1 distance_cm=203.83
+uptime_ms=106206 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=106207 ldr_adc=156 pir=0 current_adc=4095 distance_valid=1 distance_cm=203.83
+uptime_ms=106229 HEARTBEAT published=1 state=0
+PWM requested=70% duty=179 ready=1
+uptime_ms=107222 wifi=3 mqtt=1 state=0
