@@ -39,7 +39,7 @@
 
 ### 1.1. Đầu vào
 
-- [Đề cương “Đèn đường thông minh_DeCuongNhom7 (1).docx”](<Đèn đường thông minh_DeCuongNhom7 (1).docx>).
+- [Đề cương “Đèn đường thông minh_DeCuongNhom7 (1).docx”](<../Đèn đường thông minh_DeCuongNhom7 (1).docx>).
 - [Cuộc trò chuyện Gemini do người dùng cung cấp](https://share.gemini.google/aFrU2sfgj0uK).
 - Cấu trúc và cấu hình PlatformIO đã kiểm tra trong thư mục `firmware/`.
 - Các lựa chọn được người dùng xác nhận trong quá trình lập kế hoạch.
@@ -848,7 +848,7 @@ Mọi kết quả thực nghiệm phải gắn với cấu hình đã dùng. Tha
 
 ## 17. Tài liệu tham khảo
 
-- [Đề cương nhóm 7](<Đèn đường thông minh_DeCuongNhom7 (1).docx>).
+- [Đề cương nhóm 7](<../Đèn đường thông minh_DeCuongNhom7 (1).docx>).
 - [Cuộc trò chuyện Gemini](https://share.gemini.google/aFrU2sfgj0uK).
 - [Wokwi FAQ — giới hạn nhiều vi điều khiển](https://docs.wokwi.com/faq).
 - [Wokwi VS Code — cài đặt và license](https://docs.wokwi.com/vscode/getting-started).
