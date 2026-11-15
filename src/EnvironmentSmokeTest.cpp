@@ -10,18 +10,44 @@ namespace {
 constexpr uint8_t LED_PIN = 26;
 constexpr uint32_t PWM_INTERVAL_MS = 2000;
 constexpr uint32_t LOG_INTERVAL_MS = 1000;
+constexpr uint32_t LOOP_IDLE_MS = 10;
+constexpr uint32_t HEARTBEAT_INTERVAL_MS = 2000;
+constexpr uint16_t MQTT_KEEPALIVE_SECONDS = 15;
 constexpr uint8_t LEVELS[] = {0, 25, 50, 70, 100};
 constexpr char PING_TOPIC[] = "huit/nhom7/smartlight/v1/node_01/diagnostics/ping";
 constexpr char PONG_TOPIC[] = "huit/nhom7/smartlight/v1/node_01/diagnostics/pong";
+constexpr char HEARTBEAT_TOPIC[] = "huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat";
 WiFiClient networkClient;
 PubSubClient mqtt(networkClient);
 uint32_t lastPwmMs = 0;
 uint32_t lastLogMs = 0;
 uint32_t lastAttemptMs = 0;
+uint32_t lastHeartbeatMs = 0;
 uint32_t retryMs = 1000;
 size_t levelIndex = 0;
 bool pwmReady = false;
 bool mqttReady = false;
+bool wasMqttConnected = false;
+
+void logMqttTransition() {
+  const bool connected = mqtt.connected();
+  if (connected != wasMqttConnected) {
+    Serial.printf("uptime_ms=%lu MQTT %s state=%d wifi=%d\n", static_cast<unsigned long>(millis()), connected ? "connected" : "disconnected", mqtt.state(),
+                  WiFi.status());
+    wasMqttConnected = connected;
+  }
+}
+
+void publishHeartbeat(uint32_t now) {
+  if (now - lastHeartbeatMs < HEARTBEAT_INTERVAL_MS) {
+    return;
+  }
+  lastHeartbeatMs = now;
+  char payload[48];
+  const int length = snprintf(payload, sizeof(payload), "{\"uptime_ms\":%lu}", static_cast<unsigned long>(now));
+  const bool sent = length > 0 && static_cast<size_t>(length) < sizeof(payload) && mqtt.publish(HEARTBEAT_TOPIC, payload, false);
+  Serial.printf("uptime_ms=%lu HEARTBEAT published=%d state=%d\n", static_cast<unsigned long>(now), sent, mqtt.state());
+}
 
 void applyLevel() {
   const uint8_t percent = LEVELS[levelIndex];
@@ -52,6 +78,7 @@ void setupSmokeTest() {
   networkClient.setConnectionTimeout(1000);
   mqtt.setServer("host.wokwi.internal", 1883);
   mqtt.setSocketTimeout(1);
+  mqtt.setKeepAlive(MQTT_KEEPALIVE_SECONDS);
   mqtt.setCallback(receivePing);
   mqttReady = mqtt.setBufferSize(2048);
   if (!mqttReady) {
@@ -63,7 +90,10 @@ void setupSmokeTest() {
 }
 
 void loopSmokeTest() {
+  // Short cooperative sleep for Wokwi; this is diagnostic P0 firmware.
+  delay(LOOP_IDLE_MS);
   const uint32_t now = millis();
+  logMqttTransition();
   if (now - lastPwmMs >= PWM_INTERVAL_MS) {
     lastPwmMs = now;
     levelIndex = (levelIndex + 1) % (sizeof(LEVELS) / sizeof(LEVELS[0]));
@@ -75,7 +105,12 @@ void loopSmokeTest() {
   }
   if (mqttReady && WiFi.status() == WL_CONNECTED && mqtt.connected()) {
     retryMs = 1000;
-    mqtt.loop();
+    if (mqtt.loop()) {
+      publishHeartbeat(millis());
+    } else {
+      Serial.printf("uptime_ms=%lu MQTT loop failed state=%d\n", static_cast<unsigned long>(millis()), mqtt.state());
+    }
+    logMqttTransition();
     return;
   }
   if (now - lastAttemptMs < retryMs) {
@@ -83,14 +118,24 @@ void loopSmokeTest() {
   }
   lastAttemptMs = now;
   if (WiFi.status() != WL_CONNECTED) {
-    WiFi.reconnect();
-  } else if (mqttReady && mqtt.connect("smartlight-node_01-p0")) {
+    const bool started = WiFi.reconnect();
+    Serial.printf("uptime_ms=%lu WiFi reconnect started=%d wifi=%d\n", static_cast<unsigned long>(millis()), started, WiFi.status());
+  } else if (mqttReady) {
+    Serial.printf("uptime_ms=%lu MQTT connect attempt retry_ms=%lu\n", static_cast<unsigned long>(now), static_cast<unsigned long>(retryMs));
+    if (!mqtt.connect("smartlight-node_01-p0")) {
+      Serial.printf("uptime_ms=%lu MQTT connect failed state=%d wifi=%d\n", static_cast<unsigned long>(millis()), mqtt.state(), WiFi.status());
+      retryMs = std::min<uint32_t>(retryMs * 2U, 10000U);
+      return;
+    }
+    logMqttTransition();
     if (!mqtt.subscribe(PING_TOPIC, 1)) {
       Serial.println("MQTT subscribe failed; retry connection");
       mqtt.disconnect();
+      logMqttTransition();
     } else {
       Serial.println("MQTT connected; ping subscribed");
       retryMs = 1000;
+      lastHeartbeatMs = millis();
       return;
     }
   }
