@@ -1,5 +1,7 @@
 # Setup P0: Docker MQTT và Wokwi một node
 
+> Source hiện đã tích hợp cảm biến P1/A1. Các bước P0 dưới đây giữ làm nền broker/diagnostics; chạy và nghiệm thu bản mới theo [simulation](simulation.md), [firmware](firmware.md), [testing](testing.md). Banner hiện tại là P1/A1 sensor diagnostics.
+
 ## Tham chiếu và hiện trạng
 
 [SRS](../srs.md) mục 3.1, 4, 10.2–10.3, 11–12. Đây là firmware chẩn đoán môi trường, chưa có cảm biến, AUTO/MANUAL, telemetry hoặc ACK nghiệp vụ. Giữ workspace firmware hiện tại; infra nằm trong workspace này, không di chuyển thư mục cha.

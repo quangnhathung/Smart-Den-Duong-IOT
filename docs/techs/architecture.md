@@ -9,9 +9,9 @@ Tài liệu chốt thiết kế A0 cho các gói tiếp theo. Nghiệm thu môi 
 ## Hiện trạng đã triển khai
 
 - Một ESP32 `esp32dev`, source dùng chung với entry point `src/main.cpp`.
-- EnvironmentSmokeTest: LED GPIO26 qua điện trở 220 Ω, năm PWM, Serial, Wi-Fi, MQTT ping/pong và heartbeat diagnostics.
+- EnvironmentSmokeTest tích hợp SensorReader đọc raw cảm biến P1; LED GPIO26, năm PWM, Serial, Wi-Fi, MQTT ping/pong và heartbeat diagnostics.
 - Một cấu hình Wokwi node_01, script copy artifact, Mosquitto Docker local.
-- Chưa có cảm biến, AUTO/MANUAL, telemetry/ACK nghiệp vụ, backend, SQLite hoặc dashboard.
+- Đã có code/sơ đồ cảm biến P1 nhưng chưa nghiệm thu live. Chưa có AUTO/MANUAL, telemetry/ACK nghiệp vụ, backend, SQLite hoặc dashboard.
 - Đã pin các package trong PlatformIO. PlatformIO Core 6.1.19 là phiên bản công cụ đã dùng, không được cài lại bởi tệp cấu hình dự án.
 
 ## Kiến trúc mục tiêu
@@ -50,14 +50,14 @@ Broker container nghe 1883 bên trong, host chỉ publish 127.0.0.1:1883. ESP32 
 
 Giữ workspace hiện tại, infra và simulations đang nằm tại đây; không di chuyển source theo cây thư mục dự kiến trong SRS. Chỉ tạo backend/dashboard khi đến đúng gói được giao, không tạo khung trong A0.
 
-Pin map mục tiêu giữ SRS 4.1: LDR34, PIR27, TRIG18, ECHO19, tải35, LED26. Pin map đã chạy P0 chỉ gồm LED26. Phải xác minh cảm biến trong A1 trước khi dùng ngưỡng trong A2.
+Pin map mục tiêu giữ SRS 4.1: LDR34, PIR27, TRIG18, ECHO19, tải35, LED26. Pin map P1 đã cấu hình theo thiết kế; pin map đã nghiệm thu live P0 chỉ gồm LED26. Phải xác minh cảm biến trong A1 trước khi dùng ngưỡng trong A2.
 
 ## Thứ tự giao việc và điểm bàn giao
 
 | Gói | Đầu vào | Đầu ra để review | Chưa làm ở gói này |
 |---|---|---|---|
 | A0/TASK-004 | P0 đã nghiệm thu, SRS | Kiến trúc, hợp đồng MQTT, cấu hình cố định, kiểm tra convention | Cảm biến, ứng dụng nghiệp vụ |
-| A1/TASK-005 đề xuất | Pin map, cấu hình A0 | Một mạch đủ cảm biến, Serial raw và ca PWM | AUTO/MANUAL, phân loại, fault |
+| A1/TASK-005 (chờ live) | Pin map, cấu hình A0 | Một mạch đủ cảm biến, Serial raw và ca PWM | AUTO/MANUAL, phân loại, fault |
 | A2 | Cảm biến đã kiểm chứng | Logic ánh sáng/timer/dimming/fault, kiểm thử clock | Backend/dashboard |
 | A3 | Logic và MQTT v1 | Telemetry/command/ACK/availability, reconnect | Xây giao diện web |
 | A4 | Hợp đồng và fixture có nhãn | Collector/API/database/năng lượng | Tuyên bố dữ liệu fixture là live |

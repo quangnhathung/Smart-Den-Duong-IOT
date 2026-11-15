@@ -4,7 +4,7 @@
 
 - Hướng dẫn bắt buộc: [AGENTS.md](../../AGENTS.md).
 - Nguồn yêu cầu: [SRS](../srs.md), đặc biệt mục 3–6 (cấu trúc, firmware, giao thức), 10–12 (gói việc, agent, kiểm thử), 16 (quản lý thay đổi).
-- Hiện trạng: PlatformIO, `esp32dev`, Arduino; source hiện là EnvironmentSmokeTest P0, chưa có logic chiếu sáng nghiệp vụ. Convention không phải bằng chứng các chức năng đồ án đã được triển khai.
+- Hiện trạng: PlatformIO, `esp32dev`, Arduino; source hiện là EnvironmentSmokeTest tích hợp SensorReader P1, chưa có logic chiếu sáng nghiệp vụ. Convention không phải bằng chứng các chức năng đồ án đã được triển khai.
 - Mỗi yêu cầu có đầu ra riêng là một task; bước kỹ thuật là checklist con, không tự tạo task mới cho từng lệnh. Gói P0–P8/A0–A7 trong SRS là tham chiếu phạm vi, không thay thế mã task.
 - Tài liệu và báo cáo viết tiếng Việt; định danh code dùng tiếng Anh. Thời điểm báo cáo dùng ISO 8601 với múi giờ `Asia/Ho_Chi_Minh` (`+07:00`).
 
@@ -54,11 +54,11 @@ Tạo `docs/techs/<danh-muc>.md` khi có nội dung, tên tiếng Anh dạng `ke
 | `architecture` | [Kiến trúc A0 và điểm bàn giao](architecture.md) |
 | `setup` | [Môi trường P0, firmware thử nghiệm, Docker MQTT, Wokwi và nghiệm thu](setup.md) |
 | `development` | Quy trình agent, convention, mẫu báo cáo và công cụ định dạng |
-| `firmware` | Module, thuật toán, timer, AUTO/MANUAL, PWM và lỗi tải |
-| `hardware` | Pin map, linh kiện, đấu nối và giới hạn giả lập |
+| `firmware` | [Module đọc raw P1](firmware.md); chưa có thuật toán AUTO/MANUAL/fault |
+| `hardware` | [Pin map, đấu nối và giới hạn giả lập](hardware.md) |
 | `mqtt` | [Hợp đồng MQTT v1](mqtt.md): topic, schema, ACK, deadline, chống trùng và reconnect |
-| `simulation` | Wokwi, cấu hình từng node, gateway và cách chạy demo |
-| `testing` | Cách chạy kiểm tra, ma trận SRS, dữ liệu và bằng chứng |
+| `simulation` | [Chạy và nghiệm thu Wokwi P1](simulation.md) |
+| `testing` | [Host checks và ma trận live P1](testing.md) |
 
 Chưa tạo sẵn các trang trống. Task chạm nhiều danh mục phải cập nhật các trang chịu ảnh hưởng; nếu kiểm tra không dẫn đến thay đổi kỹ thuật, ghi kết quả ở báo cáo và lý do không cần sửa techs. Không biến thiết kế dự kiến thành mô tả triển khai thực tế.
 
