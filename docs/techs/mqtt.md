@@ -6,7 +6,7 @@ TASK-006/A2 giữ nguyên diagnostics ping/pong/heartbeat, chuyển network sang
 
 [SRS](../srs.md) mục 5–7, 11–12, 16; [kiến trúc](architecture.md); [diagnostics P0 đang chạy](setup.md).
 
-Hợp đồng A0 dưới đây đã được triển khai ở firmware một node trong TASK-007; chưa có backend/A4. Kết quả live A3 chưa chạy tại máy này; hướng dẫn ở cuối trang. TASK-004 được giao chốt các tên `deadline_uptime_ms`, `result`, `reason`, `status`; đây là chi tiết wire của yêu cầu SRS, không thêm chức năng.
+Hợp đồng A0 dưới đây đã được triển khai ở firmware một node trong TASK-007; TASK-008 bổ sung [backend/API A4](backend.md), chưa nghiệm thu tích hợp live. Kết quả live A3 chưa chạy tại máy này; hướng dẫn ở cuối trang. TASK-004 được giao chốt các tên `deadline_uptime_ms`, `result`, `reason`, `status`; đây là chi tiết wire của yêu cầu SRS, không thêm chức năng.
 
 ## Topic, QoS và nhận dạng
 
@@ -114,7 +114,7 @@ APPLIED xác nhận chế độ/mục tiêu, không xác nhận PWM đã dimming
 
 ## Diagnostics P0 và giới hạn
 
-Các topic diagnostics/ping, pong và heartbeat chỉ dùng setup. Heartbeat hiện gửi uptime_ms 32 bit, không có boot_id/schema_version; không được đọc nó như telemetry v1 unsigned 64 bit. Hợp đồng nghiệp vụ đã có code firmware trong TASK-007, chưa có backend; các ví dụ A0 trước đây được kiểm tra tĩnh tại [TASK-004](../reports/evidence/task-004/convention-checks.md), không phải test MQTT nghiệp vụ.
+Các topic diagnostics/ping, pong và heartbeat chỉ dùng setup. Heartbeat hiện gửi uptime_ms 32 bit, không có boot_id/schema_version; không được đọc nó như telemetry v1 unsigned 64 bit. Hợp đồng nghiệp vụ đã có code firmware TASK-007 và backend TASK-008; các ví dụ A0 trước đây được kiểm tra tĩnh tại [TASK-004](../reports/evidence/task-004/convention-checks.md), không phải test MQTT nghiệp vụ.
 
 Timeout phiên dài P0 vẫn cần theo dõi ở A3. Không tự đổi keepalive, broker, QoS hoặc bỏ deadline nhằm làm ca thử đạt. Khi sửa giao thức, cập nhật các phía và tài liệu đồng bộ trước khi công bố phiên bản mới.
 
@@ -188,3 +188,8 @@ if ($LASTEXITCODE -eq 0) { Get-Content -Raw "$env:TEMP/task007-command.json" | d
 Với stop/start broker, chỉ người vận hành chạy `docker compose -f infra/compose.yaml stop mosquitto` rồi `start mosquitto`; không dùng down/prune/dừng service khác. Subscriber có thể thoát khi broker dừng: khởi động lại subscriber để capture recovery. Nếu Wokwi không chạy hoặc thiếu giấy phép, ghi chưa chạy, không đổi sang broker public.
 
 Mỗi ca ghi PASS/FAIL/chưa chạy, command/payload, Serial + MQTT/broker nhận, hash/config và nguồn thời gian. published=1 trên Serial không đủ chứng minh broker nhận; APPLIED không đủ chứng minh PWM vật lý. Ba node30phút/backend/UI ngoài phạm vi. Chưa có kết quả live A3 trong TASK-007 bàn giao code.
+
+
+## Backend TASK-008/A4
+
+Collector/API theo [backend.md](backend.md), giữ schema v1. Không lấy diagnostics làm telemetry; strict validation, boot/seq/order/dedup, lỗi cũ và offline tách riêng. HTTP đổi uint64 thành decimal string để JS không mất chính xác, MQTT vẫn number. Command có persist-before-publish/QoS1/non-retain/retry2s/TIMEOUT10s; Paho client mới sau disconnect để không mang outgoing cũ qua session. Code/API test fixture đã có, chưa nghiệm thu broker/Wokwi/ba node thực.

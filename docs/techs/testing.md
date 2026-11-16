@@ -1,5 +1,9 @@
 # Kiểm tra firmware — TASK-007 và lịch sử P2/P1
 
+## TASK-008 P4/A4 — backend
+
+Chạy `.venv/bin/python scripts/check.py` từ repo DoAn/backend (PowerShell dùng .venv/Scripts/python.exe).66 test collector/command/API/energy/transport, Ruff check/format PASS trên Linux; [log và giới hạn](../reports/evidence/task-008/README.md), [cách chạy](backend.md). Pytest dùng DB tạm, fake MQTT/clock, không mở broker. Không cần build firmware vì TASK-008 không sửa C++/PlatformIO. Lệnh Windows và live được bàn giao nhưng chưa chạy tại máy này.
+
 ## TASK-007 P3/A3 — bàn giao code/test/hướng dẫn
 
 SRS6,5.7,9.1 và TC17–22/26 trong phạm vi một node/client giả. Chạy từ gốc firmware:
