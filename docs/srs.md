@@ -7,7 +7,7 @@
 | Đề tài                   | Đèn đường thông minh tự động điều chỉnh độ sáng                         |
 | Nhóm                     | Nhóm 7                                                                  |
 | Thành viên theo đề cương | Quang Nhật Hưng, Nguyễn Văn Anh Tuấn                                    |
-| Phiên bản                | 1.0                                                                     |
+| Phiên bản                | 1.1                                                                     |
 | Ngày lập                 | 15/11/2026                                                              |
 | Thời gian dự kiến        | 4 tuần, tính từ khi bắt đầu triển khai                                  |
 | Hình thức                | Mô phỏng Wokwi trên VS Code; backend, dashboard và broker chạy trên máy |
@@ -57,7 +57,7 @@
 | Giao tiếp            | MQTT; Mosquitto local                                            |
 | Backend              | Python FastAPI                                                   |
 | Database             | SQLite                                                           |
-| Dashboard            | React + TypeScript + Vite                                        |
+| Dashboard            | HTML/CSS/JavaScript thuần; VS Code Live Server                    |
 | Chuyển động          | PIR                                                              |
 | Người/xe             | PIR + HC-SR04 theo quy ước tạo kịch bản mô phỏng                 |
 | Dòng điện và lỗi tải | Biến trở giả lập; không phải đo dòng điện thật                   |
@@ -153,7 +153,7 @@ flowchart LR
     M[Mosquitto local]
     B[FastAPI và MQTT collector]
     D[(SQLite)]
-    U[React Dashboard]
+    U[HTML/CSS/JS Dashboard]
     N1 <--> G
     N2 <--> G
     N3 <--> G
@@ -481,11 +481,13 @@ Ràng buộc duy nhất cho telemetry theo node/boot/seq. Chỉ mục theo node 
 | GET `/api/commands/{command_id}`       | Kết quả lệnh                        |
 | GET `/api/alerts`                      | Cảnh báo và lịch sử                 |
 | GET `/api/stats`                       | Điện năng, baseline, độ phủ dữ liệu |
+| GET `/api/experiments`                 | Danh sách phiên, có phân trang      |
+| GET `/api/experiments/{id}`            | Chi tiết cấu hình và thời gian phiên |
 | POST `/api/experiments`                | Bắt đầu phiên thực nghiệm           |
 | POST `/api/experiments/{id}/stop`      | Kết thúc phiên                      |
 | GET `/api/experiments/{id}/export.csv` | Xuất CSV                            |
 
-History/stats dùng `from`, `to` ISO 8601 UTC; mặc định một giờ gần nhất. History có phân trang tối đa 1000 bản ghi/lần. Dashboard chuyển UTC sang giờ Việt Nam. Một thời điểm chỉ có một phiên thực nghiệm đang mở; thao tác stop lặp lại trả phiên đã kết thúc.
+History/stats dùng `from`, `to` ISO 8601 UTC; mặc định một giờ gần nhất. History có phân trang tối đa 1000 bản ghi/lần; mỗi mẫu trả `continuity` để biểu đồ không nối qua ranh giới run/session/barrier. Danh sách phiên mặc định100, tối đa1000 mục/lần, offset không âm, mới nhất trước. Dashboard chuyển UTC sang giờ Việt Nam. Một thời điểm chỉ có một phiên thực nghiệm đang mở; thao tác stop lặp lại trả phiên đã kết thúc.
 
 Đầu vào command: `{"mode":"AUTO"}` hoặc `{"mode":"MANUAL","brightness":80}`. AUTO không chấp nhận brightness; MANUAL bắt buộc số nguyên 0–100; từ chối trường không thuộc hợp đồng.
 
@@ -845,6 +847,10 @@ Khi triển khai phát hiện không khả thi, ghi vấn đề và bằng chứ
 Mọi kết quả thực nghiệm phải gắn với cấu hình đã dùng. Thay ngưỡng hay mô hình năng lượng sau khi đo thì chạy lại các phiên bị ảnh hưởng; không trộn số liệu không cùng giả định.
 
 **Định nghĩa hoàn thành:** mô hình ba node hoạt động xuyên suốt, có điều khiển được xác nhận, kiểm thử và số liệu giải thích được; có thể chạy lại theo tài liệu. Định nghĩa này là đích của giai đoạn triển khai tương lai.
+
+### 16.3. Thay đổi được người dùng chốt — TASK-009, 2026-11-16
+
+Dashboard chuyển từ React/TypeScript/Vite sang HTML/CSS/JavaScript thuần, chạy bằng VS Code Live Server local; giao diện sáng. Bổ sung read API list/detail experiments, continuity của history và CORS localhost/127.0.0.1:5500, giữ5173. Không thay MQTTv1, pin map, thuật toán điều khiển/năng lượng hoặc tiêu chí nghiệm thu tích hợp. Trạng thái triển khai và giới hạn xem [TASK-009](reports/evidence/task-009/README.md); phần kế hoạch ban đầu trong tài liệu không phải bằng chứng đã nghiệm thu.
 
 ## 17. Tài liệu tham khảo
 
