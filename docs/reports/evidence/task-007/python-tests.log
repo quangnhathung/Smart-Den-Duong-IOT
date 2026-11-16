@@ -1,0 +1,16 @@
+test_cli_requires_fresh_capture (test_mqtt_command.CommandFixtureChecks.test_cli_requires_fresh_capture) ... ok
+test_fault_cases (test_mqtt_command.CommandFixtureChecks.test_fault_cases) ... ok
+test_invalid_arguments (test_mqtt_command.CommandFixtureChecks.test_invalid_arguments) ... ok
+test_valid_modes_deadline_and_id (test_mqtt_command.CommandFixtureChecks.test_valid_modes_deadline_and_id) ... ok
+test_acceptance_required_and_applied (test_wokwi_serial.VerificationChecks.test_acceptance_required_and_applied) ... ok
+test_auto (test_wokwi_serial.VerificationChecks.test_auto) ... ok
+test_cli_sends_newline_and_captures_reply (test_wokwi_serial.VerificationChecks.test_cli_sends_newline_and_captures_reply) ... ok
+test_early_fallback_and_offline_are_not_timeout_pass (test_wokwi_serial.VerificationChecks.test_early_fallback_and_offline_are_not_timeout_pass) ... ok
+test_manual_timeout (test_wokwi_serial.VerificationChecks.test_manual_timeout) ... ok
+test_reject_restart_and_uptime_decrease (test_wokwi_serial.VerificationChecks.test_reject_restart_and_uptime_decrease) ... ok
+test_second_command_invalidates_timeout (test_wokwi_serial.VerificationChecks.test_second_command_invalidates_timeout) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.007s
+
+OK

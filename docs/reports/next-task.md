@@ -1,32 +1,28 @@
-# TASK-006 — Hoàn thiện hồ sơ nghiệm thu P2/A2
+# TASK-008 — Backend, SQLite và API P4/A4
 
 - Trạng thái: Chưa bắt đầu
-- Tiến độ: 4/5 mục nghiệm thu TASK-006
-- Cập nhật: 2026-11-16T11:21:17+07:00
+- Tiến độ: 0/4 nhóm nghiệm thu dự kiến
+- Cập nhật: 2026-11-16T12:02:01+07:00
 
 ## Mô tả và phạm vi
 
-Code AUTO/MANUAL/hold/dimming/fault và vòng điều khiển/ISR/network task đã tích hợp; bốn suite host và build PASS. Chỉ còn đối chiếu live P2 với 5 bước trong simulation.md; không kiểm thử lại hoặc thay kết quả TASK-005.
+Đề xuất triển khai collector MQTT, SQLite, FastAPI, lệnh/ACK và tính điện năng theo SRS7/9, dùng hợp đồng MQTTv1 đã có code firmware. Chỉ là đề xuất, không tự tạo backend/dashboard hoặc deploy. Không suy test fixture thành tích hợp live.
 
 ## Tham chiếu SRS
 
-SRS 5.1–5.8, P2/A2 và TC-01–16/27/28. MQTT command/ACK và backend/dashboard thuộc các gói sau, chưa triển khai.
+SRS7,9,10P4,11A4,12; mqtt.md và đầu ra TASK-007. API endpoint/status theo SRS7.3, một worker collector; đọc lại và lập checklist chi tiết khi giao task.
 
-## Tiêu chí và tiến độ
+## Tiêu chí hoàn thành và tiến độ
 
-- [x] State machine, AUTO/MANUAL, dimming/fault, invalid/wrap/offline test đạt.
-- [x] Firmware build, host sensor/app/MQTT regression và artifact/hash đạt; [log](evidence/task-006/validation.log).
-- [ ] Wokwi P2: ISR ECHO/task core0, LDR/motion/hold, MANUAL/timeout, fault/recovery và diagnostics có Serial/ảnh.
-- [ ] Đối chiếu live rồi quyết định chốt TASK-006; chưa tự bắt đầu A3.
+- [ ] Collector validate/dedup/order/boot, trạng thái mới/cũ/offline và SQLite persistence đạt kiểm thử.
+- [ ] API/lệnh/ACK retry-timeout đúng SRS, không coi publish là áp dụng.
+- [ ] Điện năng/coverage/gap/export theo mô hình, fixture có nhãn rõ.
+- [ ] Test backend/API và tài liệu/chạy lại/bằng chứng phù hợp; phân biệt fixture và tích hợp thật.
 
 ## Vướng mắc và cách giải quyết
 
-Chưa chạy live bản P2 nên không lấy bằng chứng P1 hoặc host stub thay cho kết quả này. Kiểm tra timing theo clock node; không đụng Docker/container nếu chưa được giao. Nếu lỗi, giữ Serial/điều kiện cụ thể rồi sửa đúng phạm vi A2.
+Live A3 chưa chạy tại máy này. TASK-007 đã bàn giao code/test/hướng dẫn5/5; trước nghiệm thu tích hợp firmware–backend cần kết quả live A3 theo mqtt.md A3-01…08 từ máy dev. Có thể làm backend với fixture có nhãn từ hợp đồng; chưa được báo end-to-end PASS trước khi chạy thật.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Artifact mới đã copy tới simulations/node_01/build. Người vận hành mở đúng cấu hình Wokwi chính, giữ một phiên; xem [5 bước](../techs/simulation.md). Không mua/cài/nâng toolchain, không commit/push. Chưa triển khai TASK-007/A3.
-
-## Rà soát sau live
-
-MANUAL80 và timeout60s có file gốc PASS, bốn suite host +7 test RFC và build kiểm tra lại PASS. Người dùng đã chạy các bài live khác; chưa lưu đủ log/ảnh nên không yêu cầu làm lại toàn bộ. Chỉ bổ sung nguồn đã có hoặc ghi nguồn xác nhận theo [acceptance-review](evidence/task-006/acceptance-review.md). TASK-006 giữ4/5; kế hoạch Git là chuyển an toàn sang nhánh tuan cùng base rồi commit chọn lọc, chưa thực hiện khi chưa được đồng ý. Không tự push/merge hoặc bắt đầu A3.
+Người dùng giao TASK-008 riêng; hợp đồng MQTTv1 và test TASK-007 là đầu vào, giữ nguyên kết quả P2 và evidence. Người vận hành có thể kiểm chứng live A3 bằng runbook đã giao; không tự stop/start broker hoặc chạy gói tiếp theo từ đề xuất này. Không commit/push/deploy khi chưa được giao.

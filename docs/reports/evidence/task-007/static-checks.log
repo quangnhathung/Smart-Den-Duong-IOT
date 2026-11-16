@@ -1,0 +1,6 @@
+PASS 148 local Markdown file links (archived TASK-006 links resolved against original location)
+PASS Python syntax, PlatformIO INI pins/board/framework and diagram JSON
+PASS BIN/ELF source/copy SHA256 equality
+PASS original report tail bytes, TASK-006 archive bytes, existing TASK-005/006 evidence preservation
+PASS SRS, P2 controller/sensors/dimming/fault, infra and main diagram unchanged
+PASS git diff --check; no commit/push or live broker/Wokwi run

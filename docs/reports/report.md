@@ -1,3 +1,29 @@
+## 2026-11-16T12:02:01+07:00 — TASK-007 — MQTT nghiệp vụ một node P3/A3
+
+- Trạng thái: Hoàn thành 5/5 đầu ra code/test/hướng dẫn; live A3 chưa chạy tại máy này.
+
+### Đã thực hiện
+
+Thêm MqttProtocol/CommandProcessor/cacheFIFO32, MqttMailbox queue8/snapshot; nối FirmwareApp core1 với Connectivity core0. Telemetry uptime64/boot/seq/current-power/null/fault, strict JSON command/deadline/dedup, ACK sau controller nhận target, availability/LWT/reconnect. Pin ArduinoJson7.4.2 sau smoke/build, giữ toolchain/P2/diagnostics. Có generator command và runbook Linux/PowerShell A3-01…08.
+
+### Kiểm tra và kết quả
+
+PASS mới: 5 suite C++ host,11 unittest Python (7 RFC+4 generator), formatter14 file; build esp32dev SUCCESS exit0/6.73s, RAM53644/327680, flash933143/1310720; copy/hash BIN/ELF đạt. [Log và giới hạn](evidence/task-007/README.md). Không chạy Wokwi, Docker/broker hoặc kiểm mạng/RTOS thật; không tuyên bố live PASS.
+
+### Vướng mắc
+
+Không có vướng mắc còn chặn đầu ra được giao. Các assertion fixture/API trong phát triển đã sửa và chạy lại PASS. Timeout phiên dài lịch sử và live A3 còn cần xác nhận theo runbook.
+
+### Cách giải quyết
+
+Dùng ArduinoJson đúng API phiên bản pin, test JSON đầy đủ/NUL, cache invalid-ID reuse và session flush; không đổi SRS/schema hoặc nâng toolchain. Chuẩn bị hướng dẫn để máy dev kiểm chứng live, không tự chạy lại P2.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật mqtt/firmware/testing/simulation/architecture/development, task/checklists/next-task; bản task P2 và evidence cũ giữ nguyên. Đề xuất backend/A4 sau này theo hợp đồng/fixture; nghiệm thu tích hợp phụ thuộc live A3. Không commit/push. Mọi byte report cũ giữ nguyên bên dưới.
+
+---
+
 ## 2026-11-16T11:28:57+07:00 - TASK-006 - Save implementation on tuan
 
 - Work: fetched origin; verified TASK-005 PR #1 merge commit 9dbff58 preserves b24ac60; switched to tuan and fast-forwarded to origin/main without creating another merge commit. Preparing the requested TASK-006 commit; no push.

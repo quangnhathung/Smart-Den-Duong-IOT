@@ -1,3 +1,16 @@
+# TASK-007 — MQTT nghiệp vụ một node P3/A3
+
+- Hoàn thành đầu ra bàn giao: 2026-11-16T12:02:01+07:00; 5/5 mục code/test/hướng dẫn.
+- [x] Telemetry/schema/boot/seq/uptime64/current-power và giới hạn200ms/2s.
+- [x] Command validation/deadline/cache32/ACK sau áp dụng; queue8 và session flush.
+- [x] LWT/availability/reconnect, P2 offline và diagnostics giữ đúng trong host.
+- [x] 5 suite host,11 unittest Python, formatter/build/copy/hash PASS.
+- [x] Tài liệu, generator và runbook live Linux/PowerShell có tiêu chí/evidence.
+
+[Bằng chứng và giới hạn](evidence/task-007/README.md). **Chưa nghiệm thu live A3 tại máy này**; đây là hoàn thành phạm vi code/test/hướng dẫn người dùng đã chọn. Không nâng trạng thái TASK-006 hoặc toàn đồ án từ kết quả này.
+
+---
+
 # Cập nhật nghiệm thu TASK-005
 
 ## TASK-005 — Mạch và đọc cảm biến một node P1/A1
