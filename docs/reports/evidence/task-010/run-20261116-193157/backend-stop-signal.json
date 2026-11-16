@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-16T12:40:03.760583+00:00",
+  "target_pid": 32248,
+  "signal": "CTRL_C_EVENT",
+  "scope": "Only temporary Backend console created by agent; broker/Wokwi not targeted",
+  "attached": true,
+  "attach_error": 0,
+  "console_pids": [
+    1196,
+    32248,
+    42596,
+    44164
+  ],
+  "signal_sent": true,
+  "signal_error": 0
+}

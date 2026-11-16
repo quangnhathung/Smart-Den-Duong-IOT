@@ -1,0 +1,5 @@
+{
+  "source": "user-confirmed",
+  "statement_vi": "Trang ?o lu?n nh?n th?y b?n c?nh Wokwi trong l??t4",
+  "note": "Preserve together with contradictory browser visibility hidden/visible events; do not infer user switched tabs. Latency interval still crosses 3s."
+}

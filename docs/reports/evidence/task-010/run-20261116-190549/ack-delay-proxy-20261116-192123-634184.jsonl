@@ -1,0 +1,4 @@
+{"at": "2026-11-16T12:21:23.639182+00:00", "perf_ns": 1881487339868100, "event": "LISTEN", "host": "127.0.0.1", "port": 1884, "upstream": "127.0.0.1:1883"}
+{"at": "2026-11-16T12:21:37.167630+00:00", "perf_ns": 1881500867702100, "event": "CLIENT_CONNECT", "client_id": "proxy-smoke-88255e8e"}
+{"at": "2026-11-16T12:21:37.176039+00:00", "perf_ns": 1881500876429500, "event": "CONNECTION_END", "peer": "('127.0.0.1', 61599)", "detail": "0 bytes read on a total of 1 expected bytes"}
+{"at": "2026-11-16T12:21:43.640806+00:00", "perf_ns": 1881507341069300, "event": "STOP"}

@@ -1,0 +1,32 @@
+{
+  "source": "evidence-analysis",
+  "event": "sensor-action-observed",
+  "trial_id": 2,
+  "target_cm": 150,
+  "observed_cm": 149,
+  "action_low_ms": 1794836484854,
+  "action_high_ms": 1794836485582,
+  "previous": {
+    "at": "2026-11-16T13:41:25.221293+00:00",
+    "host_ms": 1794836485221.2932,
+    "perf_ns": 1886288921500500,
+    "source": "node-ui-observer",
+    "event": "distance-observation",
+    "trial_id": 2,
+    "start_ms": 1794836484854,
+    "end_ms": 1794836485218,
+    "value": 154
+  },
+  "first_new": {
+    "at": "2026-11-16T13:41:25.584626+00:00",
+    "host_ms": 1794836485584.6262,
+    "perf_ns": 1886289285131300,
+    "source": "node-ui-observer",
+    "event": "distance-observation",
+    "trial_id": 2,
+    "start_ms": 1794836485221,
+    "end_ms": 1794836485582,
+    "value": 149
+  },
+  "method": "Retrospective derivation from immutable raw accessibility observations: first 149cm, stable through observer end. Exact-150 observer did not terminate; no raw record was edited."
+}

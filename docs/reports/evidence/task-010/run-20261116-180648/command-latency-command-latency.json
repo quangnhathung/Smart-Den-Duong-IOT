@@ -1,0 +1,438 @@
+{
+  "result": "PASS",
+  "count": 10,
+  "median_ms": 686.217,
+  "max_ms": 1002.001,
+  "samples": [
+    {
+      "index": 1,
+      "command_id": "79450fbc-1a50-4e5f-ad4b-a8f73c60f60a",
+      "result": "APPLIED",
+      "mode": "MANUAL",
+      "server_sent_to_ack_ms": 457.109,
+      "client_request_to_mqtt_ack_ms": 460.2104,
+      "mqtt_ack": {
+        "topic": "huit/nhom7/smartlight/v1/node_01/ack",
+        "retain": false,
+        "qos": 0,
+        "body": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "79450fbc-1a50-4e5f-ad4b-a8f73c60f60a",
+          "result": "APPLIED",
+          "reason": null
+        },
+        "received_ns": 1877206598422100
+      },
+      "command": {
+        "command_id": "79450fbc-1a50-4e5f-ad4b-a8f73c60f60a",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "79450fbc-1a50-4e5f-ad4b-a8f73c60f60a",
+          "deadline_uptime_ms": "375303",
+          "mode": "MANUAL",
+          "brightness": 80
+        },
+        "created_at": "2026-11-16T11:10:02.440873Z",
+        "sent_at": "2026-11-16T11:10:02.441383Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-16T11:10:02.898492Z",
+        "attempts": 1
+      }
+    },
+    {
+      "index": 2,
+      "command_id": "ad917ebb-1bbb-42a1-8747-742031456d57",
+      "result": "APPLIED",
+      "mode": "AUTO",
+      "server_sent_to_ack_ms": 693.024,
+      "client_request_to_mqtt_ack_ms": 696.0954,
+      "mqtt_ack": {
+        "topic": "huit/nhom7/smartlight/v1/node_01/ack",
+        "retain": false,
+        "qos": 0,
+        "body": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "ad917ebb-1bbb-42a1-8747-742031456d57",
+          "result": "APPLIED",
+          "reason": null
+        },
+        "received_ns": 1877208475919100
+      },
+      "command": {
+        "command_id": "ad917ebb-1bbb-42a1-8747-742031456d57",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "ad917ebb-1bbb-42a1-8747-742031456d57",
+          "deadline_uptime_ms": "375955",
+          "mode": "AUTO"
+        },
+        "created_at": "2026-11-16T11:10:04.082063Z",
+        "sent_at": "2026-11-16T11:10:04.082572Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-16T11:10:04.775596Z",
+        "attempts": 1
+      }
+    },
+    {
+      "index": 3,
+      "command_id": "7095c5cc-fc7b-4f82-b8b3-ada0fb1ef944",
+      "result": "APPLIED",
+      "mode": "MANUAL",
+      "server_sent_to_ack_ms": 656.109,
+      "client_request_to_mqtt_ack_ms": 691.132,
+      "mqtt_ack": {
+        "topic": "huit/nhom7/smartlight/v1/node_01/ack",
+        "retain": false,
+        "qos": 0,
+        "body": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "7095c5cc-fc7b-4f82-b8b3-ada0fb1ef944",
+          "result": "APPLIED",
+          "reason": null
+        },
+        "received_ns": 1877210240471000
+      },
+      "command": {
+        "command_id": "7095c5cc-fc7b-4f82-b8b3-ada0fb1ef944",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "7095c5cc-fc7b-4f82-b8b3-ada0fb1ef944",
+          "deadline_uptime_ms": "376157",
+          "mode": "MANUAL",
+          "brightness": 80
+        },
+        "created_at": "2026-11-16T11:10:05.851799Z",
+        "sent_at": "2026-11-16T11:10:05.884229Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-16T11:10:06.540338Z",
+        "attempts": 1
+      }
+    },
+    {
+      "index": 4,
+      "command_id": "79cfd532-b60b-48d2-95be-994fe019cc08",
+      "result": "APPLIED",
+      "mode": "AUTO",
+      "server_sent_to_ack_ms": 679.41,
+      "client_request_to_mqtt_ack_ms": 730.0917,
+      "mqtt_ack": {
+        "topic": "huit/nhom7/smartlight/v1/node_01/ack",
+        "retain": false,
+        "qos": 0,
+        "body": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "79cfd532-b60b-48d2-95be-994fe019cc08",
+          "result": "APPLIED",
+          "reason": null
+        },
+        "received_ns": 1877212061114300
+      },
+      "command": {
+        "command_id": "79cfd532-b60b-48d2-95be-994fe019cc08",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "79cfd532-b60b-48d2-95be-994fe019cc08",
+          "deadline_uptime_ms": "376571",
+          "mode": "AUTO"
+        },
+        "created_at": "2026-11-16T11:10:07.633266Z",
+        "sent_at": "2026-11-16T11:10:07.681347Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-16T11:10:08.360757Z",
+        "attempts": 1
+      }
+    },
+    {
+      "index": 5,
+      "command_id": "9c78ccce-15ad-4e21-a0b2-71b3307411ff",
+      "result": "APPLIED",
+      "mode": "MANUAL",
+      "server_sent_to_ack_ms": 841.82,
+      "client_request_to_mqtt_ack_ms": 845.0764,
+      "mqtt_ack": {
+        "topic": "huit/nhom7/smartlight/v1/node_01/ack",
+        "retain": false,
+        "qos": 0,
+        "body": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "9c78ccce-15ad-4e21-a0b2-71b3307411ff",
+          "result": "APPLIED",
+          "reason": null
+        },
+        "received_ns": 1877213993738000
+      },
+      "command": {
+        "command_id": "9c78ccce-15ad-4e21-a0b2-71b3307411ff",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "9c78ccce-15ad-4e21-a0b2-71b3307411ff",
+          "deadline_uptime_ms": "376775",
+          "mode": "MANUAL",
+          "brightness": 80
+        },
+        "created_at": "2026-11-16T11:10:09.450567Z",
+        "sent_at": "2026-11-16T11:10:09.451566Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-16T11:10:10.293386Z",
+        "attempts": 1
+      }
+    },
+    {
+      "index": 6,
+      "command_id": "edb303d5-d18d-4fd7-bc3f-aa5f2c15e0ff",
+      "result": "APPLIED",
+      "mode": "AUTO",
+      "server_sent_to_ack_ms": 923.102,
+      "client_request_to_mqtt_ack_ms": 933.8647,
+      "mqtt_ack": {
+        "topic": "huit/nhom7/smartlight/v1/node_01/ack",
+        "retain": false,
+        "qos": 0,
+        "body": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "edb303d5-d18d-4fd7-bc3f-aa5f2c15e0ff",
+          "result": "APPLIED",
+          "reason": null
+        },
+        "received_ns": 1877215978713000
+      },
+      "command": {
+        "command_id": "edb303d5-d18d-4fd7-bc3f-aa5f2c15e0ff",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "edb303d5-d18d-4fd7-bc3f-aa5f2c15e0ff",
+          "deadline_uptime_ms": "376982",
+          "mode": "AUTO"
+        },
+        "created_at": "2026-11-16T11:10:11.347652Z",
+        "sent_at": "2026-11-16T11:10:11.355185Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-16T11:10:12.278287Z",
+        "attempts": 1
+      }
+    },
+    {
+      "index": 7,
+      "command_id": "0f684fe2-e163-4d71-a38e-8fbbeae1249e",
+      "result": "APPLIED",
+      "mode": "MANUAL",
+      "server_sent_to_ack_ms": 429.67,
+      "client_request_to_mqtt_ack_ms": 448.1186,
+      "mqtt_ack": {
+        "topic": "huit/nhom7/smartlight/v1/node_01/ack",
+        "retain": false,
+        "qos": 0,
+        "body": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "0f684fe2-e163-4d71-a38e-8fbbeae1249e",
+          "result": "APPLIED",
+          "reason": null
+        },
+        "received_ns": 1877217459138200
+      },
+      "command": {
+        "command_id": "0f684fe2-e163-4d71-a38e-8fbbeae1249e",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "0f684fe2-e163-4d71-a38e-8fbbeae1249e",
+          "deadline_uptime_ms": "377186",
+          "mode": "MANUAL",
+          "brightness": 80
+        },
+        "created_at": "2026-11-16T11:10:13.312114Z",
+        "sent_at": "2026-11-16T11:10:13.329154Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-16T11:10:13.758824Z",
+        "attempts": 1
+      }
+    },
+    {
+      "index": 8,
+      "command_id": "4d33a7b4-7acc-418f-8654-47016d8b1f77",
+      "result": "APPLIED",
+      "mode": "AUTO",
+      "server_sent_to_ack_ms": 624.2529999999999,
+      "client_request_to_mqtt_ack_ms": 626.8628,
+      "mqtt_ack": {
+        "topic": "huit/nhom7/smartlight/v1/node_01/ack",
+        "retain": false,
+        "qos": 0,
+        "body": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "4d33a7b4-7acc-418f-8654-47016d8b1f77",
+          "result": "APPLIED",
+          "reason": null
+        },
+        "received_ns": 1877219192899700
+      },
+      "command": {
+        "command_id": "4d33a7b4-7acc-418f-8654-47016d8b1f77",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "4d33a7b4-7acc-418f-8654-47016d8b1f77",
+          "deadline_uptime_ms": "377423",
+          "mode": "AUTO"
+        },
+        "created_at": "2026-11-16T11:10:14.867322Z",
+        "sent_at": "2026-11-16T11:10:14.868324Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-16T11:10:15.492577Z",
+        "attempts": 1
+      }
+    },
+    {
+      "index": 9,
+      "command_id": "116b7da0-97e7-4094-823b-45013672f267",
+      "result": "APPLIED",
+      "mode": "MANUAL",
+      "server_sent_to_ack_ms": 1002.001,
+      "client_request_to_mqtt_ack_ms": 1039.3762,
+      "mqtt_ack": {
+        "topic": "huit/nhom7/smartlight/v1/node_01/ack",
+        "retain": false,
+        "qos": 0,
+        "body": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "116b7da0-97e7-4094-823b-45013672f267",
+          "result": "APPLIED",
+          "reason": null
+        },
+        "received_ns": 1877221273394000
+      },
+      "command": {
+        "command_id": "116b7da0-97e7-4094-823b-45013672f267",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "116b7da0-97e7-4094-823b-45013672f267",
+          "deadline_uptime_ms": "377623",
+          "mode": "MANUAL",
+          "brightness": 80
+        },
+        "created_at": "2026-11-16T11:10:16.536453Z",
+        "sent_at": "2026-11-16T11:10:16.571101Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-16T11:10:17.573102Z",
+        "attempts": 1
+      }
+    },
+    {
+      "index": 10,
+      "command_id": "98ff6b27-0506-4d0d-bc95-47fdb18824bc",
+      "result": "APPLIED",
+      "mode": "AUTO",
+      "server_sent_to_ack_ms": 718.889,
+      "client_request_to_mqtt_ack_ms": 722.4222,
+      "mqtt_ack": {
+        "topic": "huit/nhom7/smartlight/v1/node_01/ack",
+        "retain": false,
+        "qos": 0,
+        "body": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "98ff6b27-0506-4d0d-bc95-47fdb18824bc",
+          "result": "APPLIED",
+          "reason": null
+        },
+        "received_ns": 1877223070986200
+      },
+      "command": {
+        "command_id": "98ff6b27-0506-4d0d-bc95-47fdb18824bc",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "3268eb79",
+          "command_id": "98ff6b27-0506-4d0d-bc95-47fdb18824bc",
+          "deadline_uptime_ms": "378035",
+          "mode": "AUTO"
+        },
+        "created_at": "2026-11-16T11:10:18.649979Z",
+        "sent_at": "2026-11-16T11:10:18.651979Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-16T11:10:19.370868Z",
+        "attempts": 1
+      }
+    }
+  ],
+  "source": "actual server sent_at and ack_at, corroborated by MQTT ACK",
+  "sensor_to_dashboard": "PENDING: requires timestamped sensor action and observed rendered DOM",
+  "machine": "Windows-10-10.0.19045-SP0",
+  "python": "3.12.10",
+  "conditions": "single node, backend8001, dashboard5500, receiver UTC; Wokwi speed not measured"
+}

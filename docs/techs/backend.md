@@ -1,5 +1,9 @@
 # Backend/API P4/A4 — TASK-008 và bổ sung TASK-009
 
+TASK-010 trên máy Windows hiện dùng API127.0.0.1:8001 theo lựa chọn người dùng; không đổi cấu hình mặc định8000 của Backend. Dashboard nhánh task/010-live-integration gọi8001. [Bằng chứng một node live](../reports/evidence/task-010/run-20261116-180648/README.md) đã có API/MQTT/SQLite/command/CSV/stats; [restart giữ dữ liệu và gap](../reports/evidence/task-010/run-20261116-190549/README.md) đã đối chiếu PASS sau PID18828→43632. Timeout/no-replay cho lệnh đang chờ, phiên mở và các phần còn thiếu ghi riêng PENDING. Không chạy init_db khi Backend đang hoạt động, không xóa SQLite để restart.
+
+Bổ sung [TIMEOUT/ACK muộn qua proxy local](../reports/evidence/task-010/run-20261116-193157/README.md) đã PASS với ACK firmware thật, không sửa schema/thuật toán; một retry dự kiến/attempts2, ACK muộn không đổi TIMEOUT. Backend tạm32248 dùng1884, sau test đã khôi phục14144 dùng1883/8001/một worker, proxy dừng; không giữ biến hệ thống hoặc .env thay đổi. Broker outage/no-replay cho lệnh chờ và phiên mở vẫn cần ca riêng.
+
 ## Tham chiếu và phạm vi
 
 SRS6/7/9/12, FR06/08/09/10/11, TC17–22/24/26 và ca năng lượng. [MQTT v1](mqtt.md) giữ nguyên; [README backend](../../../backend/README.md) có lệnh Linux/PowerShell và bộ kiểm live. Đầu ra TASK-008 là code/test/OpenAPI/hướng dẫn, không phải nghiệm thu broker/Wokwi/ba node thật. Dashboard TASK-009 đã có ở repo cùng cấp; [tài liệu](dashboard.md).

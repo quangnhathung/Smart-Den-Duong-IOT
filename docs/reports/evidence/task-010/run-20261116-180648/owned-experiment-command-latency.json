@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "name": "TASK-010 live command latency",
+  "configuration": {
+    "source": "live Wokwi node_01",
+    "firmware_sha256": "4a9757047d4b52cec55116e5ceb2a3aca6e99d7fac41641abc5247cd634d108a",
+    "voltage_v": 12,
+    "rated_power_w": 24,
+    "api_port": 8001
+  },
+  "notes": "10 alternating MANUAL80/AUTO commands; latency is server sent_at to real ACK; not EX-series",
+  "started_at": "2026-11-16T11:10:02.423254Z",
+  "ended_at": null
+}

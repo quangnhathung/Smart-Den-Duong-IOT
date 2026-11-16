@@ -1,0 +1,175 @@
+{
+  "trial_id": 5,
+  "page_id": "9adbee81-080b-489e-851c-f1a542ae91c3",
+  "key": "3268eb79/1285",
+  "sensor_action": {
+    "at": "2026-11-16T14:06:40.286213+00:00",
+    "host_ms": 1794838000286.2134,
+    "perf_ns": 1887803986559400,
+    "source": "node-ui-observer",
+    "event": "sensor-action-observed",
+    "trial_id": 5,
+    "target_cm": 50,
+    "observed_cm": 48,
+    "action_low_ms": 1794837997478,
+    "action_high_ms": 1794837998501,
+    "previous": {
+      "source": "node-ui-observer",
+      "event": "distance-observation",
+      "trial_id": 5,
+      "start_ms": 1794837997478,
+      "end_ms": 1794837998087,
+      "value": 43
+    },
+    "first_new": {
+      "source": "node-ui-observer",
+      "event": "distance-observation",
+      "trial_id": 5,
+      "start_ms": 1794837998094,
+      "end_ms": 1794837998501,
+      "value": 48
+    },
+    "confirmed_stable_until_ms": 1794838000277,
+    "method": "Readonly accessibility brackets first observation of stable final Distance; no native input"
+  },
+  "render": {
+    "at": "2026-11-16T14:10:01.162148+00:00",
+    "host_ms": 1794838201162.148,
+    "perf_ns": 1888004862777000,
+    "source": "browser",
+    "event": "render-match",
+    "recorder_version": "marker-baseline-v2",
+    "page_id": "9adbee81-080b-489e-851c-f1a542ae91c3",
+    "time_origin": 1794838184469.7,
+    "visibility": "visible",
+    "browser_ms": 1794838201116.3,
+    "trial": {
+      "id": 5,
+      "revision": 1,
+      "target_cm": 50,
+      "require_marker": true,
+      "actor": "user manual; native readonly timestamp bounds plus marker baseline v2",
+      "seq_at_arm": "1269",
+      "boot_at_arm": "3268eb79",
+      "armed_host_ms": 1794837955277.7124,
+      "browser_ready": true
+    },
+    "key": "3268eb79/1285",
+    "telemetry": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": "1285",
+      "uptime_ms": "2527942",
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "ldr_adc": 3917,
+      "motion": "NONE",
+      "distance_cm": 49.68966,
+      "brightness_target": 25,
+      "brightness_applied": 25,
+      "current_adc": 4095,
+      "current_ma_sim": 500,
+      "power_sim_w": 6,
+      "faults": []
+    },
+    "api_received_at": "2026-11-16T14:10:00.576450Z",
+    "render_ms": 1794838201116.2,
+    "paint_method": "MutationObserver + two requestAnimationFrame, matching boot/seq/distance",
+    "ui": {
+      "badge": "Online",
+      "apiBadge": "M\u00e1y ch\u1ee7 s\u1eb5n s\u00e0ng",
+      "feedback": "Ch\u1ecdn ch\u1ebf \u0111\u1ed9 v\u00e0 b\u1ea5m \u00c1p d\u1ee5ng \u0111\u1ec3 g\u1eedi l\u1ec7nh.",
+      "locked": false,
+      "lockReason": "S\u1eb5n s\u00e0ng g\u1eedi y\u00eau c\u1ea7u \u0111\u1ebfn node_01.",
+      "key": "3268eb79/1285",
+      "readings": {
+        "Ch\u1ebf \u0111\u1ed9 \u0111ang ch\u1ea1y": "T\u1ef1 \u0111\u1ed9ng",
+        "M\u00f4i tr\u01b0\u1eddng": "Ban \u0111\u00eam",
+        "M\u1ee5c ti\u00eau / \u0111ang \u00e1p d\u1ee5ng": "25% / 25%",
+        "Chuy\u1ec3n \u0111\u1ed9ng": "Kh\u00f4ng chuy\u1ec3n \u0111\u1ed9ng",
+        "LDR \u00b7 ADC raw": "3.917",
+        "T\u1ea3i \u00b7 ADC raw": "4.095",
+        "Kho\u1ea3ng c\u00e1ch": "49,7 cm",
+        "D\u00f2ng / c\u00f4ng su\u1ea5t m\u00f4 ph\u1ecfng": "500 mA / 6 W",
+        "Fault t\u1ea3i": "Kh\u00f4ng c\u00f3 l\u1ed7i t\u1ea3i",
+        "Nh\u1eadn d\u1eef li\u1ec7u l\u1ea7n cu\u1ed1i": "21:10:00 16/11/26",
+        "Uptime node": "0 gi\u1edd 42 ph\u00fat 7 gi\u00e2y",
+        "Boot / sequence": "3268eb79 / 1285"
+      },
+      "visibility": "visible",
+      "frame_visible": true
+    },
+    "marker": {
+      "trialId": 5,
+      "revision": 1,
+      "started": 1794838187074,
+      "baseline": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 1284,
+        "uptime_ms": 2525938,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_adc": 3917,
+        "current_adc": 4095,
+        "distance_cm": 79.12069,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_ma_sim": 500,
+        "power_sim_w": 6,
+        "faults": []
+      },
+      "host_upper_ms": 1794838187107.0518
+    },
+    "request_start_ms": 1794838201084.7,
+    "response_ms": 1794838201104.2
+  },
+  "status": "INCOMPLETE",
+  "action_host_interval_ms": [
+    1794837997475.7476,
+    1794837998504.7476
+  ],
+  "render_host_interval_ms": [
+    1794838201112.8518,
+    1794838201149.2517
+  ],
+  "latency_interval_ms": [
+    202608.10424804688,
+    203673.50415039062
+  ],
+  "mqtt": {
+    "at": "2026-11-16T14:10:00.576449+00:00",
+    "host_ms": 1794838200576.45,
+    "perf_ns": 1888004277316300,
+    "source": "mqtt",
+    "event": "message",
+    "topic": "huit/nhom7/smartlight/v1/node_01/telemetry",
+    "body": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": 1285,
+      "uptime_ms": 2527942,
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "motion": "NONE",
+      "ldr_adc": 3917,
+      "current_adc": 4095,
+      "distance_cm": 49.68966,
+      "brightness_target": 25,
+      "brightness_applied": 25,
+      "current_ma_sim": 500,
+      "power_sim_w": 6,
+      "faults": []
+    },
+    "retain": false,
+    "qos": 0
+  },
+  "reasons": [
+    "Page visibility not established at action start"
+  ],
+  "audit_note": "Native sensor timing exists, but render is much later and foreground continuity/page identity around action is not established. Do not report the ~203s interval as normal product latency. User confirmed recorder displayed trial5 captured. No native input was performed."
+}

@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "lock_owned_by_running_backend": true,
+  "message": "Database already owned by another backend; run one worker",
+  "at": "2026-11-16T11:41:30.652480+00:00",
+  "limitation": "Proves singleton DB ownership, not arbitrary OS process topology"
+}

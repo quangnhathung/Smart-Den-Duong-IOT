@@ -1,0 +1,16 @@
+﻿{
+    "at":  "2026-11-16T19:41:50.7468952+07:00",
+    "action":  "Stop own unattached proxy after restoration",
+    "proxy_pid":  44580,
+    "backend_health":  {
+                           "status":  "OK",
+                           "database":  true,
+                           "broker":  true,
+                           "queue":  true,
+                           "dropped_events":  0
+                       },
+    "backend_proxy_clients":  [
+
+                              ],
+    "proxy_stopped":  true
+}

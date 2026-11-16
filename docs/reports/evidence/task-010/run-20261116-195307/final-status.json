@@ -1,0 +1,113 @@
+{
+  "at": "2026-11-16T14:13:04.862662+00:00",
+  "task_status": "PENDING",
+  "acceptance_groups": [
+    {
+      "group": 1,
+      "status": "PASS",
+      "basis": "Previous verified one-node live integration; not repeated"
+    },
+    {
+      "group": 2,
+      "status": "PENDING",
+      "remaining": [
+        "Command terminal UI states",
+        "Isolated broker outage/reconnect/no replay",
+        "Firmware AUTO while MQTT offline"
+      ]
+    },
+    {
+      "group": 3,
+      "status": "PASS",
+      "basis": "Previous verified history/alerts/experiments/CSV/stats/gap/restart retention; not repeated"
+    },
+    {
+      "group": 4,
+      "status": "PENDING",
+      "command_to_ack_samples": 10,
+      "sensor_to_dashboard_qualified_samples": 0,
+      "sensor_trials_attempted": 5,
+      "unattempted_trial_ids": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "latency_trials": [
+    {
+      "id": 1,
+      "status": "INCOMPLETE",
+      "reasons": [
+        "Browser events have no page identity",
+        "Missing clock calibration or action lower bound"
+      ]
+    },
+    {
+      "id": 2,
+      "status": "INCOMPLETE",
+      "reasons": [
+        "Measurement page hidden during trial"
+      ]
+    },
+    {
+      "id": 3,
+      "status": "INCOMPLETE",
+      "reasons": [
+        "Missing sensor baseline captured at start marker",
+        "Rendered MQTT sample predates start marker; not a new sensor transition"
+      ]
+    },
+    {
+      "id": 4,
+      "status": "INCOMPLETE",
+      "reasons": [
+        "Measurement page hidden during trial"
+      ]
+    },
+    {
+      "id": 5,
+      "status": "INCOMPLETE",
+      "reasons": [
+        "Page visibility not established at action start"
+      ]
+    },
+    {
+      "id": 6,
+      "status": "PENDING",
+      "reasons": "Missing action or matching render"
+    },
+    {
+      "id": 7,
+      "status": "PENDING",
+      "reasons": "Missing action or matching render"
+    },
+    {
+      "id": 8,
+      "status": "PENDING",
+      "reasons": "Missing action or matching render"
+    },
+    {
+      "id": 9,
+      "status": "PENDING",
+      "reasons": "Missing action or matching render"
+    },
+    {
+      "id": 10,
+      "status": "PENDING",
+      "reasons": "Missing action or matching render"
+    }
+  ],
+  "health": {
+    "status": "OK",
+    "database": true,
+    "broker": true,
+    "queue": true,
+    "dropped_events": 0
+  },
+  "source_note": "User confirmations and machine evidence remain separate. Recorder display means capture, not acceptance PASS. Trial4 user reported both windows visible despite browser hidden events. Trial5 long delay is confounded, not a valid system latency measurement.",
+  "capture_note": "Cutoff snapshot is an immutable complete-line prefix. Original collector remains active; Windows process inventory returned Access denied, so no unverified process was stopped. Backend/Wokwi/Mosquitto left running.",
+  "git_note": "No commit, push, merge, reset, DB deletion or algorithm/schema change."
+}

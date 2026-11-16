@@ -1,0 +1,66 @@
+{
+  "result": "PASS",
+  "samples": 12,
+  "sums": {
+    "total_energy_wh": 0.0018346,
+    "auto_energy_wh": 0.00013933333333333332,
+    "baseline_wh": 0.0,
+    "valid_uptime_s": 2.284,
+    "covered_wall_s": 16.618040084838867
+  },
+  "stats": {
+    "from_time": "2026-11-16T11:10:02.423254Z",
+    "to_time": "2026-11-16T11:10:20.446668Z",
+    "clock_basis": {
+      "energy": "node_uptime",
+      "coverage": "receiver_utc"
+    },
+    "nodes": [
+      {
+        "node_id": "node_01",
+        "total_energy_wh": 0.0018346,
+        "auto_energy_wh": 0.00013933333333333332,
+        "baseline_wh": 0.0,
+        "saving_percent": null,
+        "valid_uptime_s": 2.284,
+        "covered_wall_s": 16.618040084838867,
+        "missing_wall_s": 1.4053733348846436,
+        "coverage_percent": 92.20251290831122,
+        "auto_valid_uptime_s": 0.209,
+        "sample_count": 12,
+        "excluded_intervals": {
+          "FIRST_SAMPLE": 1,
+          "MANUAL": 10,
+          "STATE_CHANGE": 9
+        }
+      }
+    ],
+    "total_energy_wh": 0.0018346,
+    "auto_energy_wh": 0.00013933333333333332,
+    "baseline_wh": 0.0,
+    "saving_percent": null,
+    "valid_uptime_s": 2.284,
+    "covered_wall_s": 16.618040084838867,
+    "missing_wall_s": 1.4053733348846436,
+    "coverage_percent": 92.20251290831122
+  },
+  "experiment": {
+    "id": 1,
+    "name": "TASK-010 live command latency",
+    "configuration": {
+      "source": "live Wokwi node_01",
+      "firmware_sha256": "4a9757047d4b52cec55116e5ceb2a3aca6e99d7fac41641abc5247cd634d108a",
+      "voltage_v": 12,
+      "rated_power_w": 24,
+      "api_port": 8001
+    },
+    "notes": "10 alternating MANUAL80/AUTO commands; latency is server sent_at to real ACK; not EX-series",
+    "started_at": "2026-11-16T11:10:02.423254Z",
+    "ended_at": "2026-11-16T11:10:20.446668Z"
+  },
+  "clock_basis": {
+    "energy": "node_uptime",
+    "coverage": "receiver_utc"
+  },
+  "limitation": "API/CSV live comparison; dashboard rendering and independent energy derivation separate"
+}

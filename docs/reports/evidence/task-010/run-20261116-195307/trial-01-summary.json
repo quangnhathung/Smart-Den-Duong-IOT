@@ -1,0 +1,133 @@
+{
+  "trial_id": 1,
+  "status": "INCOMPLETE",
+  "reason": "Browser visibility changed hidden/visible; old browser events have no page identity. Capture succeeded but cannot establish uninterrupted foreground rendering. Do not count as valid acceptance latency or declare 3s PASS/FAIL.",
+  "sensor_observation": {
+    "at": "2026-11-16T13:34:32.253954+00:00",
+    "host_ms": 1794836072253.9548,
+    "perf_ns": 1885875954517200,
+    "source": "node-ui-observer",
+    "event": "sensor-action-observed",
+    "trial_id": 1,
+    "target_cm": 50,
+    "action_low_ms": 1794836071462,
+    "action_high_ms": 1794836072241,
+    "previous": {
+      "source": "node-ui-observer",
+      "event": "distance-observation",
+      "trial_id": 1,
+      "start_ms": 1794836071462,
+      "end_ms": 1794836071870,
+      "value": 53
+    },
+    "first_new": {
+      "source": "node-ui-observer",
+      "event": "distance-observation",
+      "trial_id": 1,
+      "start_ms": 1794836071873,
+      "end_ms": 1794836072241,
+      "value": 50
+    },
+    "polls": 24,
+    "method": "Read-only accessibility observation interval; no sensor input automation"
+  },
+  "mqtt": {
+    "at": "2026-11-16T13:34:34.735312+00:00",
+    "host_ms": 1794836074735.313,
+    "perf_ns": 1885878435774300,
+    "source": "mqtt",
+    "event": "message",
+    "topic": "huit/nhom7/smartlight/v1/node_01/telemetry",
+    "body": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": 1138,
+      "uptime_ms": 2234379,
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "motion": "NONE",
+      "ldr_adc": 3917,
+      "current_adc": 4095,
+      "distance_cm": 50.7069,
+      "brightness_target": 25,
+      "brightness_applied": 25,
+      "current_ma_sim": 500,
+      "power_sim_w": 6,
+      "faults": []
+    },
+    "retain": false,
+    "qos": 0
+  },
+  "render": {
+    "at": "2026-11-16T13:34:45.248027+00:00",
+    "host_ms": 1794836085248.0276,
+    "perf_ns": 1885888948995300,
+    "source": "browser",
+    "event": "render-match",
+    "browser_ms": 1794836085114.2,
+    "trial": {
+      "id": 1,
+      "revision": 2,
+      "target_cm": 50,
+      "actor": "user manual Distance change; readonly accessibility bounds",
+      "seq_at_arm": "1130",
+      "boot_at_arm": "3268eb79",
+      "armed_host_ms": 1794835935862.0967,
+      "browser_ready": true
+    },
+    "key": "3268eb79/1138",
+    "telemetry": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": "1138",
+      "uptime_ms": "2234379",
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "ldr_adc": 3917,
+      "motion": "NONE",
+      "distance_cm": 50.7069,
+      "brightness_target": 25,
+      "brightness_applied": 25,
+      "current_adc": 4095,
+      "current_ma_sim": 500,
+      "power_sim_w": 6,
+      "faults": []
+    },
+    "api_received_at": "2026-11-16T13:34:34.735313Z",
+    "render_ms": 1794836085114.2,
+    "paint_method": "MutationObserver + two requestAnimationFrame, matching boot/seq/distance",
+    "ui": {
+      "badge": "Offline \u00b7 d\u1eef li\u1ec7u c\u0169",
+      "apiBadge": "M\u00e1y ch\u1ee7 s\u1eb5n s\u00e0ng",
+      "feedback": "Ch\u1ecdn ch\u1ebf \u0111\u1ed9 v\u00e0 b\u1ea5m \u00c1p d\u1ee5ng \u0111\u1ec3 g\u1eedi l\u1ec7nh.",
+      "locked": true,
+      "lockReason": "D\u1eef li\u1ec7u \u0111\u00e3 c\u0169 ho\u1eb7c node \u0111ang offline.",
+      "key": "3268eb79/1138",
+      "readings": {
+        "Ch\u1ebf \u0111\u1ed9 \u0111ang ch\u1ea1y": "T\u1ef1 \u0111\u1ed9ng",
+        "M\u00f4i tr\u01b0\u1eddng": "Ban \u0111\u00eam",
+        "M\u1ee5c ti\u00eau / \u0111ang \u00e1p d\u1ee5ng": "25% / 25%",
+        "Chuy\u1ec3n \u0111\u1ed9ng": "Kh\u00f4ng chuy\u1ec3n \u0111\u1ed9ng",
+        "LDR \u00b7 ADC raw": "3.917",
+        "T\u1ea3i \u00b7 ADC raw": "4.095",
+        "Kho\u1ea3ng c\u00e1ch": "50,7 cm",
+        "D\u00f2ng / c\u00f4ng su\u1ea5t m\u00f4 ph\u1ecfng": "500 mA / 6 W",
+        "Fault t\u1ea3i": "Kh\u00f4ng c\u00f3 l\u1ed7i t\u1ea3i",
+        "Nh\u1eadn d\u1eef li\u1ec7u l\u1ea7n cu\u1ed1i": "20:34:34 16/11/26",
+        "Uptime node": "0 gi\u1edd 37 ph\u00fat 14 gi\u00e2y",
+        "Boot / sequence": "3268eb79 / 1138"
+      },
+      "visibility": "visible",
+      "frame_visible": true
+    },
+    "request_start_ms": 1794836085003.5999,
+    "response_ms": 1794836085089.7998
+  },
+  "uncorrected_observation_interval_ms": [
+    12873.199951171875,
+    13652.199951171875
+  ],
+  "method_note": "Sensor action bound refers to final settled 50cm; slider traversed intermediate values. Clock error has not been added to the descriptive interval."
+}

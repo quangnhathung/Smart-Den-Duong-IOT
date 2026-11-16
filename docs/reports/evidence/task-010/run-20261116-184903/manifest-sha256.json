@@ -1,0 +1,98 @@
+{
+  "capture-restart-watch.jsonl": {
+    "bytes": 907381,
+    "sha256": "e0a615187fb4811a438f64d457079ef5d78c2597b3338082f187d13f67e9283b"
+  },
+  "experiment-3-comparison-night-observation.json": {
+    "bytes": 2062,
+    "sha256": "04a82ec24b932f9979a651262a38de7703eb81647332163cce619bec0e43da32"
+  },
+  "experiment-3-night-observation.csv": {
+    "bytes": 28183,
+    "sha256": "fb083eacd6da74b6c323fbec096ab50deee87a795b1739b38d3b48b23ea3ac70"
+  },
+  "experiment-export-night-observation.jsonl": {
+    "bytes": 58541,
+    "sha256": "1f1429362f5a4847dc180ce51c3a0835a3c14b756de4425849ff677cba307ada"
+  },
+  "fault-audit.json": {
+    "bytes": 55493,
+    "sha256": "877d20ce78f2943f8001abf4a1e25532fa5b9f5b63e9c691a6c5ae88a477e29f"
+  },
+  "fault-audit.py": {
+    "bytes": 4380,
+    "sha256": "5b788c140426b50a5fa4d8475d1ca12f57985ab65b54c62a25178041e59f568f"
+  },
+  "live-evidence.py": {
+    "bytes": 17592,
+    "sha256": "9e14052425afad400923387f827e671fb47edd32e977c173d1c288a313fabbb7"
+  },
+  "night-gap-audit.json": {
+    "bytes": 453,
+    "sha256": "97b7be5e8b961ec8252995551b5ec8b79dd0f9e6f5109d2f12c057875c5391dd"
+  },
+  "owned-experiment-stop.json": {
+    "bytes": 595,
+    "sha256": "445ece575eebc09de1357c531617f354cb0401af0f2c291cdab085939084f4fe"
+  },
+  "owned-experiment.json": {
+    "bytes": 509,
+    "sha256": "304c49ffbd264824f060c4aedd10fa96946ec2b46586c5d3500a1d6b67967c1f"
+  },
+  "post-recovery-serial-audit.json": {
+    "bytes": 7824,
+    "sha256": "1d6f4110e27b4a0c32bcfdf88645e79dea2ae90cf47a54987ee83a7ddc9a4cc5"
+  },
+  "README.md": {
+    "bytes": 7189,
+    "sha256": "8f3ea97980e50c7df6db03f987f0779787af9b2204ea86e8242d6e61c608c9fd"
+  },
+  "report-entry.md": {
+    "bytes": 3514,
+    "sha256": "66e3f6c0feb2a84a3065a7533dfd3db9fc6e4c6b72c1062d79cf90a94d9c6d4f"
+  },
+  "report-preservation.json": {
+    "bytes": 164,
+    "sha256": "cc6bf7ad06c8a79b49931b88931e81fe1e68ee0f3ed8c0184e86e4c29bd94db2"
+  },
+  "restart-observation.json": {
+    "bytes": 960,
+    "sha256": "3af22f8b2bfc7659787bdf2a3d2dbdc725c125a2ea3eba4f466881f4bdd4b751"
+  },
+  "serial-capture.py": {
+    "bytes": 1595,
+    "sha256": "4ce98aa477dd5ed23b17a9496155d783e5fba92715f0cea51d300e620f412123"
+  },
+  "serial-post-recovery-185255.jsonl": {
+    "bytes": 10297,
+    "sha256": "68aadd688bc3860c141b072708bd179438222f9534858f230b885d4ddc57b11a"
+  },
+  "serial-post-recovery.jsonl": {
+    "bytes": 329,
+    "sha256": "21abea254b448bf6a350772a20368a26bdc39eca97f1a2da08845bd764e033c9"
+  },
+  "snapshot-before-restart.jsonl": {
+    "bytes": 395182,
+    "sha256": "37937a5978cdd6b60d2b633d4fad3ad729bb5ecd5c2362dc889b446c65abb3f7"
+  },
+  "snapshot-final.jsonl": {
+    "bytes": 383519,
+    "sha256": "d1fa0007ab05b7144f2269654359b5e98924caf6dbb8b44b90cdb5a89e211554"
+  },
+  "snapshot-initial.jsonl": {
+    "bytes": 392928,
+    "sha256": "d8a21ae6e1a3386fe21b99d80257b1c7e47b3f75cd6a2b7029acc82c319cc0e4"
+  },
+  "sqlite-before-restart.json": {
+    "bytes": 544119,
+    "sha256": "00d43dc6a06a44e64b8938aa79e1861013f541a3fb87f074bc86959e85ca8e9a"
+  },
+  "sqlite-final.json": {
+    "bytes": 589658,
+    "sha256": "545ffa2d643240ac468b9289020d2ac1d5f25f27991e4fcfd8eab1a2eb8a23e2"
+  },
+  "sqlite-initial.json": {
+    "bytes": 541113,
+    "sha256": "c930c61241967fdb87004c76258842167395cd03d2851f3a5d4671ac613374d8"
+  }
+}

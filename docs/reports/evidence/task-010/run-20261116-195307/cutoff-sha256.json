@@ -1,0 +1,9 @@
+{
+  "latency-events-cutoff.jsonl": "6b2ab6a37c9baabe5477fe2512520d94416f4b60cb368f3b8376264d334f4525",
+  "final-status.json": "58ab90f540250bd8e9f45a304cf2b288d3382c46fd3c6e16f503c741ab86352f",
+  "trial-04-summary.json": "dd374be50ac37fc4c4fe8763bef247bbc2c45bbf96a60140700530e5327d3c5f",
+  "trial-04-user-observation.json": "234fb3d2797c35107f48194e48addbdabfb1a4d6dd2547cc2e3fbb28a69ba3fd",
+  "trial-05-summary.json": "7b1eeee67ad98cbe3e1d51d5e5c7470dd750087423e50df9938b45cac63a3f7d",
+  "analyze-latency.py": "2ac8243782598e8af2a4fe75e260235c3b87187724963705c9c9a6b823e5bd5c",
+  "report-prepend-audit-final.json": "46bb883cb323085f04ac9974170710d7448e3e8469f2bda67e14c7b724a13303"
+}

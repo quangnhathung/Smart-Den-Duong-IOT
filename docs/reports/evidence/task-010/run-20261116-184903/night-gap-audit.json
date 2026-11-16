@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "scope": "Real offline/stale continuity gaps, not backend-restart gap",
+  "csv_rows": 50,
+  "zero_energy_gap_boundaries": 48,
+  "independent_energy_wh": 0.0033416666666666664,
+  "coverage_percent": 1.5349870073267045,
+  "valid_node_uptime_s": 2.005,
+  "saving_percent_on_valid_subset_only": 75.0,
+  "warning": "1.535% coverage is insufficient to generalize observed 75% modeled savings to whole observation interval."
+}

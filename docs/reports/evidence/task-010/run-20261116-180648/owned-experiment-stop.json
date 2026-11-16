@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-16T11:41:06.565770+00:00",
+  "status": 200,
+  "response": {
+    "id": 2,
+    "name": "TASK-010 live fault and persistence",
+    "configuration": {
+      "source": "live Wokwi node_01",
+      "firmware_sha256": "4a9757047d4b52cec55116e5ceb2a3aca6e99d7fac41641abc5247cd634d108a",
+      "voltage_v": 12,
+      "rated_power_w": 24,
+      "api_port": 8001
+    },
+    "notes": "Observe operator fault/recovery and backend restart; not EX-series",
+    "started_at": "2026-11-16T11:12:46.101970Z",
+    "ended_at": "2026-11-16T11:41:06.561770Z"
+  },
+  "reason": "Bounded capture ended; close only agent-owned experiment, no actual restart observed"
+}

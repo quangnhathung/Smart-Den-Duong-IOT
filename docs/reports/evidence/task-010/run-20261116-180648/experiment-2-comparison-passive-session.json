@@ -1,0 +1,64 @@
+{
+  "result": "PASS",
+  "samples": 423,
+  "sums": {
+    "total_energy_wh": 0.0,
+    "auto_energy_wh": 0.0,
+    "baseline_wh": 0.0,
+    "valid_uptime_s": 845.943,
+    "covered_wall_s": 1697.8235342502594
+  },
+  "stats": {
+    "from_time": "2026-11-16T11:12:46.101970Z",
+    "to_time": "2026-11-16T11:41:06.561770Z",
+    "clock_basis": {
+      "energy": "node_uptime",
+      "coverage": "receiver_utc"
+    },
+    "nodes": [
+      {
+        "node_id": "node_01",
+        "total_energy_wh": 0.0,
+        "auto_energy_wh": 0.0,
+        "baseline_wh": 0.0,
+        "saving_percent": null,
+        "valid_uptime_s": 845.943,
+        "covered_wall_s": 1697.8235342502594,
+        "missing_wall_s": 2.636265993118286,
+        "coverage_percent": 99.84496746158062,
+        "auto_valid_uptime_s": 845.943,
+        "sample_count": 423,
+        "excluded_intervals": {
+          "FIRST_SAMPLE": 1
+        }
+      }
+    ],
+    "total_energy_wh": 0.0,
+    "auto_energy_wh": 0.0,
+    "baseline_wh": 0.0,
+    "saving_percent": null,
+    "valid_uptime_s": 845.943,
+    "covered_wall_s": 1697.8235342502594,
+    "missing_wall_s": 2.636265993118286,
+    "coverage_percent": 99.84496746158062
+  },
+  "experiment": {
+    "id": 2,
+    "name": "TASK-010 live fault and persistence",
+    "configuration": {
+      "source": "live Wokwi node_01",
+      "firmware_sha256": "4a9757047d4b52cec55116e5ceb2a3aca6e99d7fac41641abc5247cd634d108a",
+      "voltage_v": 12,
+      "rated_power_w": 24,
+      "api_port": 8001
+    },
+    "notes": "Observe operator fault/recovery and backend restart; not EX-series",
+    "started_at": "2026-11-16T11:12:46.101970Z",
+    "ended_at": "2026-11-16T11:41:06.561770Z"
+  },
+  "clock_basis": {
+    "energy": "node_uptime",
+    "coverage": "receiver_utc"
+  },
+  "limitation": "API/CSV live comparison; dashboard rendering and independent energy derivation separate"
+}

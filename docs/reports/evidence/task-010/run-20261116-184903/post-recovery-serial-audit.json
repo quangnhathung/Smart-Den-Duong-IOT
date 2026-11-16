@@ -1,0 +1,317 @@
+{
+  "result": "PASS",
+  "scope": "post-recovery steady state only, not an OPEN_LOAD retest or sensor-to-Dashboard latency",
+  "control_lines": [
+    {
+      "at": "2026-11-16T11:52:56.436188+00:00",
+      "fields": {
+        "uptime_ms": "1400431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:53:02.123457+00:00",
+      "fields": {
+        "uptime_ms": "1401431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:53:07.587915+00:00",
+      "fields": {
+        "uptime_ms": "1402431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:53:13.890023+00:00",
+      "fields": {
+        "uptime_ms": "1403431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:53:19.615198+00:00",
+      "fields": {
+        "uptime_ms": "1404431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:53:25.978870+00:00",
+      "fields": {
+        "uptime_ms": "1405431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:53:32.038091+00:00",
+      "fields": {
+        "uptime_ms": "1406431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:53:38.371952+00:00",
+      "fields": {
+        "uptime_ms": "1407431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:53:44.701757+00:00",
+      "fields": {
+        "uptime_ms": "1408431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:53:51.567504+00:00",
+      "fields": {
+        "uptime_ms": "1409431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:53:57.601305+00:00",
+      "fields": {
+        "uptime_ms": "1410431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:54:03.600207+00:00",
+      "fields": {
+        "uptime_ms": "1411431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:54:10.352303+00:00",
+      "fields": {
+        "uptime_ms": "1412431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:54:18.161084+00:00",
+      "fields": {
+        "uptime_ms": "1413431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:54:24.335655+00:00",
+      "fields": {
+        "uptime_ms": "1414431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:54:32.573371+00:00",
+      "fields": {
+        "uptime_ms": "1415431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:54:39.411609+00:00",
+      "fields": {
+        "uptime_ms": "1416431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:54:44.948171+00:00",
+      "fields": {
+        "uptime_ms": "1417431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    },
+    {
+      "at": "2026-11-16T11:54:50.335974+00:00",
+      "fields": {
+        "uptime_ms": "1418431",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_filtered": "3917",
+        "target": "25",
+        "applied": "25",
+        "duty": "64",
+        "ready": "1",
+        "fault": "OK",
+        "mqtt": "1"
+      }
+    }
+  ],
+  "control_count": 19,
+  "node_wall_ratio_median": 0.16031581814966045,
+  "mqtt_telemetry_count": 27,
+  "mqtt_wall_gap_median_s": 12.6965145,
+  "mqtt_wall_gap_max_s": 15.62118,
+  "api_unavailable_events": 0,
+  "interpretation": "Measured wall cadence may trigger freshness timeout even while Serial mqtt=1. Do not alter thresholds to force PASS."
+}

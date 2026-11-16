@@ -1,0 +1,8 @@
+{
+  "excluded_dynamic_files": [
+    "backend-restored.log"
+  ],
+  "frozen_copy": "backend-restored-at-verification.log",
+  "reason": "Restored Backend remains running; access log can grow after verification.",
+  "backend_pid": 14144
+}

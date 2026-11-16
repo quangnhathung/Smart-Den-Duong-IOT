@@ -1,0 +1,98 @@
+{
+  "ack-delay-check.py": {
+    "bytes": 8599,
+    "sha256": "6f27c285781e67445c166185842bb0ca563da06b6f1bbbccc1dd0afe449e95f9"
+  },
+  "ack-delay-proxy-20261116-192123-634184.jsonl": {
+    "bytes": 573,
+    "sha256": "d69c8ceb6b782474a637f5ece06a20f593938d65b58ac7ec4bf1483e602eee14"
+  },
+  "ack-delay-proxy-offline-check.json": {
+    "bytes": 339,
+    "sha256": "3e01edc8b66b5f599aff81dccf820373e31e355a897019e30fd608f3ba5e9540"
+  },
+  "ack-delay-proxy-smoke.json": {
+    "bytes": 437,
+    "sha256": "897240e8c188548a5d9a76f4cc264a3314842b1c9478d72adcbcfb1ae84f1ba4"
+  },
+  "ack-delay-proxy.py": {
+    "bytes": 7645,
+    "sha256": "4c2c31e8bd04080261c4af3807780b77f3b59679801926e46ebdaf17ff3d88bf"
+  },
+  "ack-delay-status.json": {
+    "bytes": 114,
+    "sha256": "aa77dba32527fbf780a6fc220cd4f0ee2e98dbefce5805fb67812e4cf2754848"
+  },
+  "backend-listener.log": {
+    "bytes": 235,
+    "sha256": "2377496719b86171e589144136d35a47f4a2c3091d6db154ca0ea14672510f6e"
+  },
+  "backend-process.json": {
+    "bytes": 195,
+    "sha256": "bc9c79abc3f8a340429dab81d9566b027dd7abdd6ba0d9f263993ace85a1cfe0"
+  },
+  "capture-after-restart.jsonl": {
+    "bytes": 114749,
+    "sha256": "c5ef329ae438c04658b0e8bcb0e95edcc6258d9db393a544ba80f4574071f95c"
+  },
+  "experiment-1-after-restart.csv": {
+    "bytes": 8096,
+    "sha256": "c4a9c15275a4f048379b9b3615a303563c05bf9d9add04d161a968e1a607c880"
+  },
+  "experiment-2-after-restart.csv": {
+    "bytes": 250109,
+    "sha256": "61c59fbb5c3fc705823762503618b49e79f9a6676d23739cbe8f031224a6f206"
+  },
+  "experiment-3-after-restart.csv": {
+    "bytes": 28183,
+    "sha256": "fb083eacd6da74b6c323fbec096ab50deee87a795b1739b38d3b48b23ea3ac70"
+  },
+  "live-evidence.py": {
+    "bytes": 17592,
+    "sha256": "9e14052425afad400923387f827e671fb47edd32e977c173d1c288a313fabbb7"
+  },
+  "README.md": {
+    "bytes": 8244,
+    "sha256": "924547cbe2a71b3ba73d4ad7aad30ef9b96a075e01341f0eff0a6014c54e8ac3"
+  },
+  "report-entry.md": {
+    "bytes": 3330,
+    "sha256": "e69c7ef4dc9d8806d9fd058fa845973b3d4be690ccf94349620e263ecf0ae4a1"
+  },
+  "report-preservation.json": {
+    "bytes": 164,
+    "sha256": "5497736325d12d047c4bf787b36cc29cbe408de1e1027fa8df49d43883a1cc16"
+  },
+  "restart-audit.json": {
+    "bytes": 344878,
+    "sha256": "ea805c985dabae1301b27fc6b8f6b6d346a6ecc0a81b5d99f82354f070ab1f2d"
+  },
+  "restart-audit.py": {
+    "bytes": 5927,
+    "sha256": "2dff467c8490740071bd0191610a842a517fb75aec71c6259b126ff0c2f41aba"
+  },
+  "snapshot-after-restart.jsonl": {
+    "bytes": 362248,
+    "sha256": "5bf2e91cc36d5dbc867f7e0f6041be5365298a9b6a87895e5af9b86bbe03cf38"
+  },
+  "sqlite-after-restart.json": {
+    "bytes": 608201,
+    "sha256": "11d69ae80976b30ac405d122e72e3bde0d86333eb29deccd1f259018234e5845"
+  },
+  "timeout-20261116-191322-428249-summary.json": {
+    "bytes": 897,
+    "sha256": "d4013df7af03c34f89e4edb497b4dea72bb869f7a5c3e0a07e5595fa0af5feec"
+  },
+  "timeout-20261116-191322-428249.jsonl": {
+    "bytes": 7216,
+    "sha256": "7f60572ad176295680ea7dd12e35cd8b36248b9fa15278f164d4e5d7e3de64df"
+  },
+  "timeout-check.py": {
+    "bytes": 6444,
+    "sha256": "2ddb024171cbcf7c5da328b30857aade8dd8c6c429705aab052c40d2b7e8208f"
+  },
+  "timeout-diagnosis.json": {
+    "bytes": 2339,
+    "sha256": "c223c7c146eec0cace7880114dc7a870268df779fa086083783bc605eeb97673"
+  }
+}

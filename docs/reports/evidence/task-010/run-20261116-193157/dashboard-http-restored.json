@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-16T12:44:04.546270+00:00",
+  "dashboard_http": 200,
+  "config_http": 200,
+  "config_body": "export const API_BASE_URL = \"http://127.0.0.1:8001\";\r\nexport const REQUEST_TIMEOUT_MS = 4000;\r\n",
+  "api_health": {
+    "status": "OK",
+    "database": true,
+    "broker": true,
+    "queue": true,
+    "dropped_events": 0
+  },
+  "api_cors": "http://127.0.0.1:5500",
+  "rendering": "Awaiting user confirmation; HTTP200 is not a browser rendering check"
+}

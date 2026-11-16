@@ -1,3 +1,196 @@
+# TASK-010 — Trạng thái khi bàn giao để mở PR
+
+Người dùng đã cho phép add, commit và push nhánh `tuan` ở các repository có thay đổi. Người dùng sẽ tự tạo PR vào `main`; không merge hoặc force push.
+
+TASK-010 đang thực hiện, đạt 2/4 nhóm nghiệm thu. Tích hợp một node và lưu trữ/lịch sử/phiên đo/CSV/gap/restart đã PASS theo bằng chứng trước. TIMEOUT/ACK muộn qua proxy và khôi phục MQTT1883 đã PASS. Backend dùng API8001, Dashboard5500; không đổi thuật toán hoặc MQTT schema.
+
+Còn PENDING: UI trạng thái lệnh cuối, broker outage/reconnect/no-replay/AUTO offline và latency cảm biến đến Dashboard. Đã thao tác 5 lượt cảm biến nhưng chưa có đủ mẫu đạt điều kiện nghiệm thu; không khẳng định đã hoàn thành 10 lượt. Xem `run-20261116-195307/final-status.json`, `trial-05-summary.json` và `latency-events-cutoff.jsonl`. Xác nhận người dùng được phân biệt với dữ liệu máy thu trực tiếp. TASK-011 vẫn chờ đặc tả chính thức.
+
+Dashboard chỉ đổi địa chỉ API sang8001 và bổ sung bộ ghi thử nghiệm live trong `tests/`. Bộ ghi còn giới hạn về timestamp/visibility và không phải tính năng production đã nghiệm thu. Backend không có thay đổi mã nguồn nên không tạo commit riêng.
+
+Giữ SQLite và toàn bộ log tại máy. Hai stream đang ghi tiếp được loại khỏi Git bằng đường dẫn cụ thể trong `.gitignore`; các bản chụp bằng chứng đã chốt vẫn được commit. Không đưa `.env`, SQLite, môi trường Python hoặc firmware build vào commit. Kiểm tra cú pháp JavaScript, Python AST và `git diff --check`; không chạy lại kiểm thử live đã PASS.
+
+Một số ghi chú trong đợt đo trước bị mất dấu khi truyền qua PowerShell. Dùng bản tổng hợp này và JSON gốc để đối chiếu; không sửa dữ liệu bằng chứng gốc hoặc xóa nhật ký cũ.
+
+
+---
+
+## TASK-010 ? Ch?t b?ng ch?ng, c?n2/4 nh?m PENDING
+
+?? thao t?c5 l??t sensor, nh?ng0/10 m?u ??t ?? ?i?u ki?n nghi?m thu. L??t1 thi?u m? trang;2 browser b?o hidden;3 m?u c? tr??c marker;4 kho?ng1,469?6,081s c?t ng??ng3s, browser hidden d? ng??i d?ng x?c nh?n hai c?a s? lu?n nh?n th?y;5 ?? c? kho?ng t?c ??ng native48cm nh?ng render tr?/?i?u ki?n trang kh?ng li?n t?c, kh?ng d?ng kho?ng~203s l?m latency s?n ph?m b?nh th??ng. C?c l??t6?10 ch?a ch?y. Kh?ng th? suy ra ch? c?n5 thao t?c n?a l? ho?n t?t. B? ?o ch?a ?n ??nh ?? g?y nhi?u thao t?c cho ng??i d?ng; kh?ng y?u c?u thao t?c c?m bi?n th?m trong ??t n?y.
+
+Ch?t4 nh?m: nh?m1 t?ch h?p m?t node PASS; nh?m2 ?? tin c?y PENDING (UI terminal command, outage/reconnect/no-replay/AUTO offline); nh?m3 d? li?u/restart/CSV/gap PASS; nh?m4 latency PENDING (10 command?ACK PASS c?; sensor ch?a ?? m?u). Kh?ng ch?y l?i PASS c?. Backend healthOK/database/broker/queue true. Gi? nguy?n SQLite v? ?ng d?ng ?ang ch?y, kh?ng command m?i. TASK-011 ch? ??c t?.
+
+final-status.json v? snapshot latency-events-cutoff.jsonl ch?t b?ng ch?ng hi?n c?; JSONL g?c v?n ?ang ???c collector ghi. Tra c?u PID b?ng Windows CIM b? Access denied; kh?ng d?ng process ch?a x?c minh. Snapshot l? prefix ??y ?? d?ng, kh?ng ch?nh s?a d? li?u g?c. Kh?ng commit/push/merge ho?c thay schema/thu?t to?n. Chu?n b? outage ch? d?ng ? ph??ng ?n proxy ri?ng cho Backend; ch?a c? ph??ng ?n c?t ri?ng ???ng MQTT node ?? tin c?y, kh?ng d?ng Mosquitto d?ng chung.
+
+Xem evidence/task-010/run-20261116-195307/final-status.json.
+
+---
+
+## TASK-010 ? ??i chi?u l??t4 (2026-11-16T21:04:57+07:00)
+
+L??t4 ?? thu ???c baseline seq1239/distance69,96552cm, marker13:58:59.4735Z, MQTT/APIseq1240/distance151,1035cm13:59:04.072285Z, DOM ??ng151,1cm sau hai rAF13:59:05.5443Z. B? ghi marker-baseline-v2 ?? ch?n m?u c? th?nh c?ng. Kho?ng sensor?render1,469216?6,080600s c?t ng??ng3s, n?n INCOMPLETE. MQTT?render kho?ng1,472s ch? l? ?o?n truy?n sau MQTT, kh?ng thay sensor latency. ??ng page_id15197d89-1b03-44dd-ad2e-77abbb4505b8 b?o hidden13:59:03.2071Z?visible13:59:05.4744Z.
+
+Ng??i d?ng x?c nh?n trang ?o lu?n nh?n th?y b?n c?nh Wokwi; l?u ri?ng trial-04-user-observation.json. Kh?ng quy nguy?n nh?n hidden cho ng??i d?ng chuy?n tab. Ch?a x?c ??nh nguy?n nh?n kh?c bi?t gi?a quan s?t ng??i d?ng v? Page Visibility. Kh?ng s?a log ho?c k?t lu?n PASS3s. trial-04-summary.json gi? ??y ?? m?c/ngu?n. B? ph?n t?ch ban ??u g?p KeyError seq v? x?t c? MQTT availability; ?? gi?i h?n ??ng topic /telemetry, ch?y l?i tr?n log hi?n c? th?nh c?ng, kh?ng ch?y l?i thao t?c sensor.
+
+Sau khi reset kernel v? kh?i t?o m?i, Computer Use list_apps/??c accessibility kh?ng screenshot ho?t ??ng tr? l?i (<1s cho l?n ??c). M? ph?ng41:11.585, t?c ??12%; b?ng Distance hi?n ??ng. Ch? ?? ngh? m? b?ng ?? quan s?t th? ??ng v? thu h?p sai s? ? l??t k? ti?p, ch?a ch?y l??t5. Kh?ng ?i?u khi?n sensor b?ng tool, kh?ng d?ng Wokwi/Mosquitto/Backend. Hai nh?m1/3 gi? PASS c?; nh?m2/4 c?n PENDING, ch?a ??10 m?u sensor latency. Kh?ng commit/push/merge; TASK-011 ch?a tri?n khai.
+
+B?ng ch?ng: evidence/task-010/run-20261116-195307/README.md.
+
+---
+
+## TASK-010 ? Ki?m tra nh?n qu? l??t3 (2026-11-16T20:55:02+07:00)
+
+L??t3: ng??i d?ng x?c nh?n b? ghi hi?n ?? ghi. ??i chi?u c?ng boot3268eb79/seq1210/distance50,7069cm: MQTT13:51:09.498210Z, marker13:51:16.7248Z, render13:51:17.4558Z. M?u ??n tr??c marker7,2266s n?n INCOMPLETE; kh?ng d?ng kho?ng ?m ho?c render-marker0,731s l?m sensor latency. B?ng ch?ng g?c gi? nguy?n; trial-03-summary-causal-audit.json l? k?t lu?n s?a sau ki?m tra nh?n qu?, c?n trial-03-summary.json gi? b?n ph?n t?ch ??u.
+
+B? ghi test ???c s?a marker-baseline-v2: baseline MQTT t?i l?c b?m; t? ch?i baseline ?? ? target, ch? nh?n seq m?i c?ng boot v? API last_seen sau c?n tr?n timestamp marker ?? ??ng b?. Analyzer ?? lo?i m?u seq1210 c? b?ng causal check, assertion tr?n b?ng ch?ng th?t PASS; JS node --check PASS. Kh?ng ph?i k?t qu? nghi?m thu live c?a b? ghi m?i. Ch?a c?10 m?u latency h?p l?. L??t4/150cm chu?n b?; ch? t?i l?i tr??c t?c ??ng. Kh?ng ch?y l?i PASS c?, kh?ng ??i firmware/schema/ng??ng3s, kh?ng restart backend/broker, kh?ng commit/push/merge; TASK-011 v?n ch? ??c t?.
+
+Xem evidence/task-010/run-20261116-195307/README.md.
+
+---
+
+## TASK-010 ? ??i chi?u l??t2, chu?n b? marker l??t3
+
+## C?p nh?t l??t2 v? ph??ng ph?p kh?ng ph? thu?c native UI
+
+Ng??i d?ng x?c nh?n trang ?? ghi l??t2. Raw accessibility cho th?y slider cu?i149cm, gi? ?n ??nh ??n khi observer d?ng; `trial-02-derived-action.json` suy ra m?c t? hai b?n ghi th?t k?m nguy?n d? li?u ngu?n, kh?ng s?a JSONL. API/MQTT/DOM c?ng boot3268eb79/seq1172/distance151,1035cm. Trang c? page_id5e90c658-15b9-4a77-87ee-0ba963c69a98; ch?nh trang n?y chuy?n hidden13:41:29.3748Z v?13:41:33.0034Z tr??c render13:41:36.0827Z. K?t lu?n INCOMPLETE, kh?ng ghi PASS3s. Kh?ng y?u c?u l?m l?i l??t2 trong b??c hi?n t?i.
+
+Native observer ch? ??ng150cm n?n kh?ng ph?t sensor-action-observed; tool call timeout300s v? phi?n Computer Use b?o ?? k?t th?c, kh?ng g?i ti?p native UI. B? ph?n t?ch d?ng b?n suy ra t? raw cho l??t2. B? ghi m?i c? n?t B?t ??u: marker browser l? c?n d??i tr??c t?c ??ng; MQTT th?t ??u ti?n nh?n gi? tr? m?i l? c?n tr?n sau t?c ??ng. t0 ???c gi? d?ng kho?ng, kh?ng d?ng MQTT l?m timestamp t?c ??ng ch?nh x?c. Kh?ng thay firmware, schema, chu k? hay ng??ng3s. Kho?ng c?t3s v?n INCOMPLETE; kh?ng h?a ph??ng ph?p n?y cho ?? ?? ch?nh x?c trong m? ph?ng ch?m. Kh?ng c? marker th? l??t require_marker kh?ng ghi render-match. L??t3/50cm ?? chu?n b?, ch? n?p trang m?i; ch?a ??i sensor.
+
+Ki?m tra `node --check` b? ghi JS PASS. B? ph?n t?ch hi?n0 m?u nghi?m thu h?p l?: l??t1/2 INCOMPLETE,3?10 PENDING. Hai nh?m nghi?m thu1/3 gi? PASS c?; nh?m2/4 c?n PENDING. Kh?ng ch?y l?i ca ?? PASS, kh?ng th? outage ho?c d?ng broker, kh?ng commit/push/merge. TASK-011 ch?a tri?n khai.
+
+B?ng ch?ng: evidence/task-010/run-20261116-195307/trial-02-summary.json v? README.md.
+
+---
+
+## TASK-010 ? ?o live v? quan s?t UI, 2026-11-16T20:36:33+07:00
+
+## C?p nh?t ?o live l??t1
+
+?? quan s?t ng??i d?ng k?o Distance100?50cm (qua c?c gi? tr? trung gian), kh?ng ph?t command. MQTT seq1138/boot3268eb79/distance50,7069 t?i13:34:34.735312Z; Dashboard ghi ??ng50,7cm sau hai rAF t?i13:34:45.1142Z. `trial-01-summary.json` gi? c?c m?c th?c. K?t qu? INCOMPLETE v? nghi?m thu latency: c? visibility hidden/visible nh?ng c?c event c? ch?a mang m? trang, kh?ng x?c ??nh ch?c trang ?o n?o b? ?n. Kho?ng m? t?12,873?13,652s ch?a c?ng sai s? clock, kh?ng ???c d?ng l?m k?t lu?n PASS/FAIL3s. Kh?ng x?a ho?c s?a log c?. B? ghi b? sung page_id/time_origin/visibility cho m?i event browser; ch? t?i l?i tr??c l??t2/150cm. Ch?a c?10 m?u h?p l?.
+
+B?n nh?m hi?n t?i: (1) t?ch h?p m?t node PASS theo h? s? tr??c; (2) ?? tin c?y PENDING ? timeout/ACK mu?n PASS c?, UI stale/kh?a/ph?c h?i ?? quan s?t live, c?n terminal command UI/broker reconnect/AUTO offline; (3) d? li?u/phi?n/CSV/gap/restart PASS theo h? s? tr??c; (4) latency PENDING ? command?ACK10 m?u PASS c?, sensor?Dashboard ch?a ??10 m?u h?p l?. TASK-011 v?n ch? ??c t?.
+
+Chu?n b? outage: proxy ri?ng ph?a Backend c? th? ki?m m?t/ph?c h?i k?t n?i Backend m? kh?ng d?ng Mosquitto1883 d?ng chung. N? kh?ng c?t k?t n?i Wokwi?1883, do ?? kh?ng ?? ch?ng minh AUTO offline ? node. Ch?a th?c hi?n outage trong l??t n?y; c?n ph??ng ?n c? l?p ri?ng ???ng k?t n?i node tr??c khi k?t lu?n ti?u ch? ??. Kh?ng thay c?u h?nh1883 ?ang ho?t ??ng.
+
+B?ng ch?ng: [run-20261116-195307](evidence/task-010/run-20261116-195307/README.md). Kh?ng commit/push/merge.
+
+---
+
+## 2026-11-16T19:46:02+07:00 — TASK-010 — TIMEOUT/ACK muộn thật qua proxy và khôi phục: PASS
+
+- Trạng thái: Đang thực hiện;2/4 nhóm nghiệm thu toàn TASK-010. Lượt kiểm proxy được giao đã PASS, không chạy lượt thứ hai.
+
+### Đã thực hiện
+
+Đọc lại harness/config và thông báo rollback trước thay đổi. Người dùng dừng graceful Backend43632; agent khởi động tạm32248/API8001/workers1/cùng SQLite/MQTT1884 qua proxy44580. Wokwi/Mosquitto giữ1883, không Pause/init_db/xóa dữ liệu. Preflight hai telemetry932/933 qua proxy/healthOK trước một POST AUTO.
+
+### Kiểm tra và kết quả
+
+PASS command0d8f20f5-4700-4be4-b5cc-37b555396adc: gửi19:37:15.226902+07, retry duy nhất19:37:17.268317; GET đầu TIMEOUT19:37:25.308628, script quan sát10,088672s. ACK firmware thật tới proxy sớm, được thả19:37:27.254744/27.255748 ở mốc12s từ lệnh đầu, hash raw bytes lúc giữ/thả khớp. Hai ACK vào SQLite LATE_OR_DUPLICATE; API/DB cuối TIMEOUT/ACK_TIMEOUT/attempts2. Một POST/một ID mới/hai MQTT publish cùng payload; không có retry/replay khác trong capture và sau khôi phục. [Log, audit, thời gian và giới hạn](evidence/task-010/run-20261116-193157/README.md).
+
+Backend đã khôi phục14144→MQTT1883/API8001/workers1, health/database/broker/queue true, dropped0. Chỉ sau healthOK/proxy0 client mới dừng proxy; recorder dừng sau quan sát thêm. Dashboard HTTP/config/CORS PASS và người dùng xác nhận ONLINE/AUTO NIGHT25/LDR3917/boot3268eb79/seq963→969/dữ liệu mới19:44:21, không gửi thêm lệnh. Bảo toàn907 telemetry/14 command/21 ACK/245 alert/3 phiên cũ; chỉ thêm1 command và2 ACK đúng bài test, không mất bản ghi cũ.
+
+### Vướng mắc và cách giải quyết
+
+Ctrl+C qua PTY/pipeline không đến Uvicorn; control event trong riêng console Backend tạm đã cho application shutdown hoàn tất, không force-kill Backend hoặc dừng broker/Wokwi. Proxy chỉ bị dừng khi không còn client/frame chờ. Log status proxy là snapshot cuối trước dừng, trạng thái hiện tại xác nhận qua network và proxy-stop-action. Backend phục hồi vẫn chạy, nên manifest dùng bản sao log cố định và loại log đang tăng.
+
+Không đổi thuật toán/schema hoặc dùng ACK fixture. Trễ12s là fault injection tính từ lệnh đầu, không gọi là mất ACK tự nhiên. Không dựng timeout_at vì DB không có cột này; ghi mốc quan sát thật. Nhóm2 còn broker outage/reconnect/no-replay lệnh chờ/AUTO offline/UI terminal, nhóm4 còn sensor→Dashboard10 lượt; chưa4/4.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật task.md/next-task.md/techs/testing/backend và evidence; checklist task hoàn thành giữ nguyên. Giữ các hồ sơ PASS/INCOMPLETE cũ nguyên byte. TASK-011 tiếp tục chờ đặc tả. Không commit/push/merge/xóa DB/log; report cũ giữ nguyên làm phần đuôi.
+
+
+---
+
+## 2026-11-16T19:25:44+07:00 — TASK-010 — restart giữ dữ liệu và phân tích ca TIMEOUT chưa đạt
+
+- Trạng thái: Đang thực hiện;2/4 nhóm nghiệm thu, nhóm1/3 PASS theo phạm vi giao việc.
+
+### Đã thực hiện
+
+Người dùng xác nhận Backend18828 dừng,43632 chạy8001/workers1, không init_db/xóa SQLite, giữ Wokwi/Mosquitto. Agent ghi PID/start/listener, capture MQTT/API75s sau restart và SQLite read-only; đối chiếu snapshot ngay trước lượt này với snapshot cuối trước restart. Không chạy lại OPEN_LOAD/MANUAL60s/build/68 Pytest đã PASS.
+
+### Kiểm tra và kết quả
+
+PASS quick_check/schema1/cùng đường dẫn DB;760 telemetry cũ giữ nguyên,13 command/20 ACK còn nguyên từng trường,106 alert và3 phiên còn. OPEN_LOAD30/33 giữ đúng thời điểm đóng. CSV3 phiên tải lại sau restart giống từng byte/SHA256; metadata cấu hình/notes/start/end khớp. Backend run ID đổi26989c18…→44cc197e…, firmware boot3268eb79 giữ nguyên/AUTO NIGHT25. Ranh giới row765→766 có continuity mới; history/stats cửa sổ hai đầu mút có DISCONTINUITY và0 năng lượng/valid_uptime, không nội suy qua gap. [Log/snapshot/CSV/audit](evidence/task-010/run-20261116-190549/README.md).
+
+### Vướng mắc và cách giải quyết
+
+Recorder trước đó kết thúc trước thao tác restart, nên không có log API outage/STALE ngay lúc khởi động; không tái tạo log quá khứ. Không có lệnh PENDING/phiên mở tại restart, không chốt no-replay/khôi phục các tình huống này. Nhóm2 còn timeout/ACK muộn, broker disconnect/reconnect/no-replay/AUTO offline và UI terminal; nhóm4 còn sensor→Dashboard10 lượt. Tốc độ mô phỏng/độ phủ thấp ở lượt trước vẫn là giới hạn, không đổi ngưỡng để ép PASS.
+
+Người dùng chạy timeout-check.py nhưng INCOMPLETE. Đã đọc nguyên log/summary và SQLite/API: command7aa224a2… có APPLIED/ACK ACCEPTED sau1,0231297s, attempts1, không retry. observed_timeout_wall_s≈1,297 là lúc script thấy APPLIED, không phải timer timeout Backend. Không có mốc Pause/halt MCU nên chưa phân biệt thao tác muộn với transport tiếp tục xử lý. Giữ nguyên source/log của phép thử, không yêu cầu lặp lại cửa sổ2s.
+
+Đã chuẩn bị ack-delay-proxy.py/ack-delay-check.py: proxy local1884 giữ nguyên ACK thật12s trong khi chuyển telemetry bình thường, driver tự gửi một AUTO sau telemetry mới, không cần Pause. Công cụ PASS kiểm offline framing/không chặn frame thường/byte preservation và diagnostics roundtrip thật qua broker; không giả ACK hoặc gọi đó là TIMEOUT live PASS. Proxy smoke20s đã dừng. Chưa chuyển Backend hiện tại sang proxy hoặc tự restart; runbook ghi rõ cách tạm route1884 rồi khôi phục1883/giữ DB một worker. Không mở phiên đo mới, không dừng Backend/Wokwi/broker.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật task.md/next-task.md/techs/testing/backend và hồ sơ mới. Checklist task hoàn thành giữ nguyên vì TASK-010 chưa4/4. TASK-011 chờ đặc tả. Không commit/push/merge/xóa DB/log/sửa schema hoặc thuật toán; report cũ giữ nguyên byte làm phần đuôi.
+
+
+---
+
+## 2026-11-16T19:00:00+07:00 — TASK-010 — đối chiếu OPEN_LOAD và phục hồi đã chạy
+
+- Trạng thái: Đang thực hiện;1/4 nhóm nghiệm thu. OPEN_LOAD/phục hồi được đánh dấu PASS trong nhóm3, không chạy lại.
+
+### Đã thực hiện
+
+Đối chiếu xác nhận người vận hành về NIGHT/PIR0/AUTO25, current_adc0 gây OPEN_LOAD và tải4095 phục hồi; Serial báo OK tại uptime1340431ms/duty64/mqtt1, người dùng đã chụp ảnh. Chưa thấy file ảnh trong repo. Xuất SQLite read-only và API history/alerts/stats, giữ rõ nguồn bằng chứng. [Hồ sơ lượt này](evidence/task-010/run-20261116-184903/README.md).
+
+### Kiểm tra và kết quả
+
+PASS:16 mẫu quanh hai đợt đều AUTO/NIGHT/NONE/target25/applied25, cùng boot3268eb79. Hai OPEN_LOAD alert30/33 có thời gian mở/đóng; đợt cuối bắt đầu seq683/uptime1323338ms/current_adc0, hết lỗi seq692/uptime1340238ms/current_adc4095, đóng alert33 tại11:46:15.004905Z. Mốc telemetry sớm hơn Serial193ms; giữ cả hai, không đổi mốc hoặc suy exact timer từ mẫu thưa. Stats cùng cửa sổ loại FAULT_OR_RECOVERY/LOAD_CALIBRATION/STATE_CHANGE và DISCONTINUITY đúng dữ liệu.
+
+Capture cũ kết thúc trước thao tác fault, vì vậy không có raw MQTT quá khứ; payload telemetry quá khứ lấy từ SQLite/API thật. Capture Serial mới sau phục hồi chỉ đọc, không gửi lệnh:48 dòng, gồm19 CONTROL AUTO25/duty64/faultOK/mqtt1. Clock node/wall trung vị≈0,1603; telemetry thực quan sát trung vị12,70s/max15,62s, có thể quá ngưỡng freshness10s dù mqtt1. Không sửa ngưỡng hoặc suy thành latency sensor→Dashboard.
+
+### Vướng mắc và cách giải quyết
+
+Đã lưu baseline, mở phiên3/capture600s và hướng dẫn người dùng Ctrl+C Backend/chờ5s/khởi động lại8001/workers1; không dừng cưỡng bức tiến trình người dùng. Restart chưa được chốt nếu không có bằng chứng thao tác/API outage/run mới. Timeout/ACK muộn, mất broker/reconnect/no-replay/AUTO offline, UI fault/terminal states và latency cảm biến→render vẫn cần phối hợp. Không chạy lại OPEN_LOAD/MANUAL60s/build/68 Pytest đã đủ xác nhận.
+
+Cuối lượt: capture600s kết thúc,0 API outage/run ID không đổi/chưa có xác nhận restart, nên restart PENDING. Đã đóng riêng phiên3 và dừng recorders. CSV phiên3 có50 mẫu NIGHT6W, API/stats khớp;48 boundary gap không nối năng lượng, tổng0,0033416667Wh. Coverage chỉ1,534987%/valid_uptime2,005s; saving75% chỉ trên tập hợp hợp lệ nhỏ, không đại diện toàn khoảng. Bản ghi cũ còn đủ trong khoảng quan sát; không gọi là đã bảo toàn qua restart.
+
+Audit lần đầu gặp lệch precision ở mép truy vấn ISO; đã sửa riêng script kiểm chứng dùng mép có đệm rồi chạy lại trên dữ liệu cũ PASS. Mở Serial lần đầu dùng write_timeout không được RFC2217 hỗ trợ; đã bỏ tùy chọn, giữ log lỗi và capture mới. Không sửa firmware/schema/thuật toán, không ghi log giả.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật task.md/next-task.md/techs/testing và evidence. Checklist task hoàn thành giữ nguyên vì TASK-010 chưa4/4. TASK-011 vẫn Chưa bắt đầu, chờ đặc tả chính thức. Không commit/push/merge, không xóa SQLite/log; report cũ giữ nguyên byte làm phần đuôi.
+
+
+---
+
+## 2026-11-16T18:41:30+07:00 — TASK-010 — bổ sung bằng chứng tích hợp live một node
+
+- Trạng thái: Đang thực hiện;1/4 nhóm nghiệm thu, nhóm2–4 còn PENDING.
+
+### Đã thực hiện
+
+Ghi riêng [xác nhận người vận hành](evidence/task-010/run-20261116-180648/user-confirmation.md) về Python3.12/68 Pytest/Ruff/SQLite/build P3/A3/prepare/Dashboard MANUAL80/PWM80/tự AUTO60s; không chạy lại các bài này. Agent thu API8001/MQTT1883/SQLite read-only/hash build và mô phỏng; Dashboard5500 giữ cấu hình cổng8001 đã được người dùng chọn. Không sửa mã ứng dụng, MQTTv1, thuật toán, ngưỡng; không xóa DB/log hoặc commit/push/merge.
+
+### Kiểm tra và kết quả
+
+PASS: health OK, node_01 ONLINE/FRESH, node_02/03 UNKNOWN; singleton DB lock/quick_check/schema1, BIN/ELF khớp. SQLite tìm lại2 command MANUAL80 APPLIED/ACK và32 mẫu PWM80. PASS input sai422/node_02 offline409/command lạ404, pending guard409;3 reject wire đúng reason; cache lệnh AUTO sau deadline/ID trùng đổi nội dung không ghi đè cache gốc. Đo10/10 command→ACK từ server sent_at/ack_at có ACK MQTT: median686,217ms/max1002,001ms.
+
+Hai phiên agent tạo đã đóng. Phiên1: CSV12 mẫu,0,0018346Wh, coverage92,2025129083%, valid_uptime2,284s; Phiên2: CSV423 mẫu DAY0W. API/history/CSV/stats/quality/clock khớp, phép tính điện năng độc lập PASS. Không phải EX-series hoặc nghiệm thu ba node. [Bộ log, CSV, audit, giới hạn](evidence/task-010/run-20261116-180648/README.md).
+
+### Vướng mắc
+
+Chưa nhận phản hồi thao tác fault Wokwi. Capture420s không có OPEN_LOAD hoặc API outage, chưa test restart. GUI observation hết thời gian chờ cấp quyền, không có ảnh mới. PENDING timeout/ACK muộn/UI REJECTED-TIMEOUT, mất API/broker/reconnect/no-replay/AUTO offline, OPEN_LOAD/phục hồi, restart giữ dữ liệu/gap, latency cảm biến→Dashboard10 lượt.
+
+SQLite ban đầu có20 OFFLINE alert đã đóng;187 cặp có21 gap nhận≥10s thực, max13,83255s. Cần kiểm tốc độ mô phỏng/kết nối, chưa kết luận nguyên nhân. Probe cache lần đầu dùng nhầm chuỗi deadline HTTP trên MQTT nên INVALID_COMMAND; đã sửa riêng script bằng chứng sang JSON integer, chạy lại PASS với tag mới, giữ cả log lỗi. Firmware/schema không sửa.
+
+### Cách giải quyết
+
+Giữ Backend/Wokwi/Dashboard đang chạy; không dừng cưỡng bức tiến trình người dùng. Đã đóng riêng phiên1/2 và kết thúc capture. Ca tiếp theo cần người vận hành phối hợp pause/resume Wokwi để test timeout, tạo fault/phục hồi và Ctrl+C/restart Backend cùng DB trong khi agent capture; không thực hiện trước khi capture mới được bật. Đo sensor→UI cần timestamp thao tác và render thật, không thay bằng HTTP RTT hoặc MQTT→API.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật task.md, techs/testing/backend và next-task.md; checklist task hoàn thành giữ nguyên vì TASK-010 chưa đủ4/4. TASK-011 chưa có đặc tả chính thức, ghi Chưa bắt đầu/0/0, không tự suy P6/P7. Nội dung report cũ được giữ nguyên byte làm phần đuôi; manifest/preservation được lưu trong thư mục lượt này.
+
+
+---
+
 ## 2026-11-16T14:18:00+07:00 — TASK-009 — Dashboard HTML/CSS/JS qua Live Server
 
 - Trạng thái: Hoàn thành phạm vi code/test/hướng dẫn P5/A5.
