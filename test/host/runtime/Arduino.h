@@ -44,3 +44,10 @@ constexpr unsigned long pdMS_TO_TICKS(unsigned long milliseconds) {
 }
 int xTaskCreatePinnedToCore(void (*task)(void *), const char *name, unsigned long stack, void *argument, int priority, void *handle, int core);
 void vTaskDelay(unsigned long ticks);
+
+struct portMUX_TYPE {};
+#define portMUX_INITIALIZER_UNLOCKED                                                                                                                           \
+  {                                                                                                                                                            \
+  }
+inline void portENTER_CRITICAL(portMUX_TYPE *) {}
+inline void portEXIT_CRITICAL(portMUX_TYPE *) {}

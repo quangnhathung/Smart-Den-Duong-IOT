@@ -1,4 +1,6 @@
 #include "FirmwareApp.h"
+#include "Connectivity.h"
+#include "MqttMailbox.h"
 #include "LocalControlCommand.h"
 #include "SensorReader.h"
 #include <Arduino.h>
@@ -15,6 +17,17 @@ SensorSnapshot sensors = {};
 bool connected = true;
 uint32_t losses = 0;
 unsigned int connectivityStarts = 0;
+MqttMailbox appMailbox;
+MqttProtocol::TelemetrySnapshot latestSnapshot;
+void enqueueRemote(const MqttProtocol::RemoteCommand &command) {
+  assert(appMailbox.enqueue(command));
+}
+MqttProtocol::CommandResult popResult() {
+  MqttProtocol::CommandResult result;
+  assert(appMailbox.peekResult(result));
+  appMailbox.popResult();
+  return result;
+}
 unsigned int pwmWrites = 0;
 uint32_t lastDuty = 0;
 uint32_t lastWriteMs = 0;
@@ -66,6 +79,21 @@ bool isMqttConnected() {
 }
 uint32_t mqttDisconnectCount() {
   return losses;
+}
+const char *mqttBootId() {
+  return "b7e28a10";
+}
+uint64_t firmwareUptimeMs() {
+  return appNow;
+}
+void updateMqttSnapshot(const MqttProtocol::TelemetrySnapshot &snapshot) {
+  latestSnapshot = snapshot;
+}
+bool takeRemoteCommand(MqttProtocol::RemoteCommand &command) {
+  return appMailbox.takeCommand(command);
+}
+bool completeRemoteCommand(const MqttProtocol::CommandResult &result) {
+  return appMailbox.complete(result);
 }
 void setupSensors() {
   sensors.ldrAdc = 1000;
@@ -134,6 +162,65 @@ int main() {
   sensors.pirMotion = false;
   runFor(2000);
   assert(lastDuty == 64);
-  assert(Serial.output.find("P2/A2 lighting control") != std::string::npos);
+  // Actual FirmwareApp -> processor -> controller -> result path, no direct network ACK.
+  using namespace MqttProtocol;
+  RemoteCommand remote;
+  std::strcpy(remote.commandId, "4113a6c8-27a4-4b2d-a37c-2a7956d673aa");
+  std::strcpy(remote.bootId, mqttBootId());
+  remote.valid = true;
+  remote.manual = true;
+  remote.brightness = 80;
+  remote.session = losses;
+  remote.deadlineMs = appNow + 5000;
+  const uint32_t appliedAt = appNow;
+  enqueueRemote(remote);
+  loopFirmware();
+  assert(popResult().reason == CommandReason::None);
+  assert(latestSnapshot.control.mode == ControlMode::Manual && latestSnapshot.control.brightnessTarget == 80);
+  assert(latestSnapshot.control.brightnessApplied != 80); // ACK means accepted target, not dimming done
+  runFor(2000);
+  assert(lastDuty == 204);
+  runFor(4000); // deadline now expired; exact retry must still ACK old result
+  enqueueRemote(remote);
+  loopFirmware();
+  assert(popResult().reason == CommandReason::None);
+  remote.brightness = 79;
+  enqueueRemote(remote);
+  loopFirmware();
+  assert(popResult().reason == CommandReason::InvalidCommand && latestSnapshot.control.brightnessTarget == 80);
+  runFor(60001 - (appNow - appliedAt));
+  assert(latestSnapshot.control.mode == ControlMode::Auto); // duplicate did not refresh 60s
+  remote.commandId[35] = 'b';
+  remote.brightness = 90;
+  remote.deadlineMs = appNow - 1;
+  enqueueRemote(remote);
+  loopFirmware();
+  assert(popResult().reason == CommandReason::Expired && latestSnapshot.control.mode == ControlMode::Auto);
+  remote.commandId[35] = 'c';
+  remote.deadlineMs = appNow + 5000;
+  std::strcpy(remote.bootId, "00000000");
+  enqueueRemote(remote);
+  loopFirmware();
+  assert(popResult().reason == CommandReason::BootMismatch);
+  std::strcpy(remote.bootId, mqttBootId());
+  remote.commandId[35] = 'd';
+  remote.manual = false;
+  remote.brightness = 0;
+  // Serial is processed first, then MQTT AUTO wins in the same control loop.
+  Serial.input = "MANUAL 40\n";
+  enqueueRemote(remote);
+  loopFirmware();
+  assert(popResult().reason == CommandReason::None && latestSnapshot.control.mode == ControlMode::Auto);
+  remote.commandId[35] = 'e';
+  remote.manual = true;
+  remote.brightness = 100;
+  remote.session = losses - 1;
+  enqueueRemote(remote);
+  loopFirmware();
+  CommandResult absent;
+  assert(!appMailbox.peekResult(absent) && latestSnapshot.control.mode == ControlMode::Auto);
+  std::puts(
+    "PASS remote app: ACK after target acceptance, dimming separate, expired/boot/session rejection, duplicate no MANUAL refresh, Serial/MQTT ordering");
+  assert(Serial.output.find("P3/A3 lighting control") != std::string::npos);
   std::puts("PASS app integration: one PWM owner/no diagnostic cycle, nonblocking Serial/overflow/parser, manual/AUTO/offline control, sensor/CONTROL logs");
 }

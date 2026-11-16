@@ -14,3 +14,8 @@ Script dùng g++ trong PATH, C++17 với -Wall -Wextra -Werror; build executable
 - ConnectivityChecks: compile implementation Connectivity.cpp trong cùng TU để điều khiển networkStep với WiFi/PubSubClient/RTOS giả. Kiểm tra binary ping/pong, giới hạn64byte, heartbeat/topic/retain/QoS, backoff và resubscribe. Không chạy TCP/broker thật.
 
 Arduino.h và runtime/ chỉ dùng host, không phải include firmware. Chưa chứng minh ISR điện thực, RTOS scheduling, PWM vật lý hoặc Wokwi live. Các test/evidence TASK-005 cũ giữ lịch sử; SensorReaderChecks hiện kiểm tra triển khai async P2, không chạy lại nghiệm thu P1.
+
+
+## TASK-007/A3
+
+Sau `pio pkg install`, script check-firmware.py tìm header ArduinoJson7.4.2 ở .pio/libdeps/esp32dev/ArduinoJson/src. Có thêm suite MqttProtocolChecks (parse/serialize/cache32/mailbox8); app/network suite mở rộng cho lệnh MQTT/ACK và reconnect/telemetry/LWT stub. Tổng5 suite. Chạy thêm `python -B test/host/test_mqtt_command.py` (4 unittest generator), giữ7 test RFC2217. Không cần broker/giấy phép Wokwi cho host checks; không cài dependency tự động từ script kiểm tra.

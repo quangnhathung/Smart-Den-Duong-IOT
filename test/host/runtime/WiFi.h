@@ -5,6 +5,10 @@ constexpr int WL_CONNECTED = 3;
 constexpr int WIFI_STA = 1;
 struct WiFiClient {
   unsigned long timeout = 0;
+  bool open = false;
+  void stop() {
+    open = false;
+  }
   void setConnectionTimeout(unsigned long value) {
     timeout = value;
   }
