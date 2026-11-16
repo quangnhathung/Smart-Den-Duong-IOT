@@ -4,7 +4,7 @@
 
 - Hướng dẫn bắt buộc: [AGENTS.md](../../AGENTS.md).
 - Nguồn yêu cầu: [SRS](../srs.md), đặc biệt mục 3–6 (cấu trúc, firmware, giao thức), 10–12 (gói việc, agent, kiểm thử), 16 (quản lý thay đổi).
-- Hiện trạng: PlatformIO, `esp32dev`, Arduino; source hiện là EnvironmentSmokeTest tích hợp SensorReader P1, chưa có logic chiếu sáng nghiệp vụ. Convention không phải bằng chứng các chức năng đồ án đã được triển khai.
+- Hiện trạng: PlatformIO, `esp32dev`, Arduino; FirmwareApp/LightingController/SensorReader/Connectivity thực hiện P2/A2 và diagnostics, xem firmware.md về phần đã kiểm tra và giới hạn. Convention không phải bằng chứng chức năng đã nghiệm thu live.
 - Mỗi yêu cầu có đầu ra riêng là một task; bước kỹ thuật là checklist con, không tự tạo task mới cho từng lệnh. Gói P0–P8/A0–A7 trong SRS là tham chiếu phạm vi, không thay thế mã task.
 - Tài liệu và báo cáo viết tiếng Việt; định danh code dùng tiếng Anh. Thời điểm báo cáo dùng ISO 8601 với múi giờ `Asia/Ho_Chi_Minh` (`+07:00`).
 

@@ -1,3 +1,53 @@
+## 2026-11-16T11:28:57+07:00 - TASK-006 - Save implementation on tuan
+
+- Work: fetched origin; verified TASK-005 PR #1 merge commit 9dbff58 preserves b24ac60; switched to tuan and fast-forwarded to origin/main without creating another merge commit. Preparing the requested TASK-006 commit; no push.
+- Checks/results: backed up all 48 changed paths (46 existing files, 2 deletions), verified SHA-256 before/after branch switch. Build and host tests passed in the preceding review; this Git-only operation does not rerun Wokwi or touch the broker. Select only TASK-006 changes; leave TASK-005 evidence unchanged.
+- Status: TASK-006 evidence remains PENDING as documented in acceptance-review.md. Saving implementation does not complete acceptance.
+- Blockers: None for Git synchronization. Missing live evidence and its documented resolution remain unchanged; no unsupported PASS results added.
+
+## 2026-11-16T11:21:17+07:00 — TASK-006 — Đối chiếu evidence live và kế hoạch commit tuan
+
+- Trạng thái: Đang thực hiện4/5; toàn task PENDING hồ sơ, chưa chốt PASS.
+- Đã làm: đọc log RFC2217, tìm CONTROL trên toàn repo ngoài cache/build; xác minh MANUAL80/applied80 và timeout23399→83399ms/mqtt1/RESULT PASS. Lưu trích đoạn fault/timeout do người dùng cung cấp vào báo cáo với nguồn rõ ràng, không tạo log gốc giả.
+- Kiểm tra/kết quả: build esp32dev SUCCESS exit0 3.28s, RAM48028/327680, flash912763/1310720; bốn suite C++ host PASS,7 unittest RFC PASS; git diff --check đạt. Chưa thấy file live AUTO ba vùng/PIR-VEHICLE/OPEN_LOAD/timeout/reconnect ngoài lời xác nhận và trích đoạn người dùng.
+- Vướng mắc/cách giải quyết: thiếu hồ sơ để đối chiếu độc lập các ca nêu trên; ưu tiên xuất dữ liệu đã có, không bắt kiểm thử lại toàn bộ hoặc thay đổi thuật toán. Giữ TASK-005/evidence cũ và Docker nguyên trạng.
+- Git: đang main, local tuan và origin/tuan cùng b24ac60; chưa stage/checkout/commit/push/merge. Đề xuất switch tuan cùng base rồi commit chọn lọc, chỉ push khi được đồng ý. [Báo cáo, ma trận và kế hoạch](evidence/task-006/acceptance-review.md).
+
+---
+
+## 2026-11-16T11:03:41+07:00 — TASK-006 — Chuẩn bị Serial TCP RFC2217 cho MANUAL
+
+- Đã làm: chỉ thêm rfc2217ServerPort=4000 trong cấu hình Wokwi chính; pyserial3.5 đã có trong Python PlatformIO. Tạo script gửi MANUAL/AUTO có LF, PROBE, ghi RX/TX timestamp và kiểm tra timeout60s theo uptime; không sửa thuật toán.
+- Kiểm tra: 7 test Python offline PASS, gồm bytes newline và nhận xác nhận giả lập. Cấu hình hiện trước restart chưa có listener4000; chưa gửi lệnh live hoặc kết luận MANUAL PASS. Không cần build lại vì không sửa firmware.
+- Vướng mắc: Terminal Wokwi không nhận input theo báo cáo người dùng; chưa xác minh nguyên nhân frontend. Giải quyết bằng RFC2217 chính thức, yêu cầu Stop/Start Wokwi đúng một lần rồi kiểm tra port/PROBE. Giữ TASK-006 Đang thực hiện4/5.
+- [Lệnh CMD và tiêu chí](../techs/simulation.md). Không Docker/TASK-005/commit/push, không cài hoặc đổi dependency. Các test transport giả không phải evidence Wokwi.
+
+---
+
+## 2026-11-16T10:41:14+07:00 — TASK-006 — AUTO/MANUAL P2/A2, code và kiểm tra tự động
+
+- Trạng thái: Đang thực hiện; 4/5 mục nghiệm thu, chờ Wokwi P2.
+
+### Đã thực hiện
+
+State machine thuần với cấu hình SRS có tên, filter LDR5 mẫu/hysteresis/dwell1s, AUTO/PIR/distance/invalid/max-hold5s, MANUAL0–100/60s/offline fallback và hủy hold cũ; dimming2điểm/20ms, OPEN_LOAD stable1s/detect2s/recover3s, fault độc lập mode/không tự cắt PWM. FirmwareApp thay EnvironmentSmokeTest, một chủ PWM. SensorReader chuyển pulseIn sang ISR ECHO/timeout hữu hạn; WiFi/PubSubClient thuộc task core0, atomic status/loss-count bảo vệ MANUAL cả khi mất/kết nối lại giữa poll. Giữ topic diagnostics, pin map, dependency và sơ đồ. MANUAL cục bộ qua API/Serial, chưa triển khai command/ACK A3.
+
+File code: src/ControlConfig.h, ControlTypes.h, LightingController.h/.cpp, DimmingController.h/.cpp, FaultDetector.h/.cpp, FirmwareApp.h/.cpp, Connectivity.h/.cpp, LocalControlCommand.h/.cpp; sửa SensorReader.h/.cpp và main.cpp, bỏ EnvironmentSmokeTest.h/.cpp. Test: test/host/LightingControllerChecks.cpp, SensorReaderChecks.cpp, FirmwareAppChecks.cpp, ConnectivityChecks.cpp, Arduino.h/runtime stubs, README; scripts/check-firmware.py. Tài liệu: README, architecture/development/firmware/mqtt/simulation/testing, task/next-task/report. Evidence TASK-005 và checklists lịch sử không đổi.
+
+### Kiểm tra và kết quả
+
+PASS bốn suite host g++ C++17 -Wall -Wextra -Werror, formatter clang-format17.0.3 đọc cấu hình dự án; build cuối esp32dev SUCCESS exit0, 58.48s, RAM48028/327680 (14.7%), flash912763/1310720 (69.6%). Script prepare freshness/copy/hash PASS. [Log thực tế](evidence/task-006/validation.log). Test chạy code thật với GPIO/ADC/RTOS/network stub, không phải mạng thật hoặc Wokwi; không kiểm thử lại nghiệm thu TASK-005. Không chạy hoặc thao tác container.
+
+### Vướng mắc và cách giải quyết
+
+Đã sửa lỗi phát hiện qua test/code review: mất MQTT quá nhanh che fallback MANUAL (thêm loss-count); cạnh ECHO sau deadline và dao động PWM giữa kỳ fault (bổ sung test). Những test cuối đều PASS. Chưa xác minh live ISR/task hai core, timing và Serial/Wokwi sau thay đổi kiến trúc. Chưa coi task PASS hoặc thêm vào checklist hoàn thành. Không nâng toolchain/thêm thư viện hoặc sửa SRS để hợp thức hóa.
+
+### Bước tiếp theo
+
+[5 bước Wokwi P2](../techs/simulation.md): môi trường, PIR/hold, MANUAL/AUTO/60s, fault/recovery, timeout-ECHO. Artifact đã chuẩn bị. Tiếp tục cùng TASK-006 sau khi có Serial/ảnh; không tự chạy A3. Không commit/push. Lịch sử report cũ bảo toàn nguyên byte.
+
+---
+
 ## 2026-11-16T03:04:48+07:00 — TASK-005 — Kiểm tra trước commit/push main
 
 - Đã làm: rà 51 file TASK-005 (8 tài liệu, 43 evidence), không có file ngoài phạm vi; origin/main ngang main sau fetch. Người dùng cho phép commit/push trực tiếp main, không tạo nhánh/PR.

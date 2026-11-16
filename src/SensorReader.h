@@ -8,6 +8,7 @@ struct SensorSnapshot {
   bool pirMotion;
   float distanceCm; // Only meaningful when distanceValid is true.
   bool distanceValid;
+  uint32_t analogSequence;
 };
 
 void setupSensors();

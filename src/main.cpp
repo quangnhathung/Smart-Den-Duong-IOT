@@ -1,9 +1,9 @@
-#include "EnvironmentSmokeTest.h"
+#include "FirmwareApp.h"
 
 void setup() {
-  setupSmokeTest();
+  setupFirmware();
 }
 
 void loop() {
-  loopSmokeTest();
+  loopFirmware();
 }

@@ -1,5 +1,7 @@
 # Hợp đồng MQTT v1 — chốt A0
 
+TASK-006/A2 giữ nguyên diagnostics ping/pong/heartbeat, chuyển network sang FreeRTOS task riêng và dùng atomic trạng thái/mất kết nối để điều khiển fallback. Không subscribe command v1 hoặc phát telemetry/ACK trong A2. `AUTO` / `MANUAL <0..100>` trên Serial là giao diện thử cục bộ, không phải MQTT schema; command/ACK/deadline/cache thuộc A3.
+
 ## Tham chiếu và trạng thái
 
 [SRS](../srs.md) mục 5–7, 11–12, 16; [kiến trúc](architecture.md); [diagnostics P0 đang chạy](setup.md).

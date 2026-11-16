@@ -1,28 +1,32 @@
-# TASK-006 — Thuật toán chiếu sáng AUTO/MANUAL P2/A2
+# TASK-006 — Hoàn thiện hồ sơ nghiệm thu P2/A2
 
 - Trạng thái: Chưa bắt đầu
-- Tiến độ: 0/4 mục nghiệm thu dự kiến
-- Cập nhật: 2026-11-16T02:56:10+07:00
+- Tiến độ: 4/5 mục nghiệm thu TASK-006
+- Cập nhật: 2026-11-16T11:21:17+07:00
 
 ## Mô tả và phạm vi
 
-Đề xuất triển khai logic chiếu sáng một node: AUTO theo môi trường/chuyển động, MANUAL có thời hạn, hold/dimming và fault theo SRS. Giữ source dùng chung, pin map, toolchain và hợp đồng đã chốt. Chưa triển khai trong lượt nghiệm thu TASK-005.
+Code AUTO/MANUAL/hold/dimming/fault và vòng điều khiển/ISR/network task đã tích hợp; bốn suite host và build PASS. Chỉ còn đối chiếu live P2 với 5 bước trong simulation.md; không kiểm thử lại hoặc thay kết quả TASK-005.
 
 ## Tham chiếu SRS
 
-SRS mục 5, 10 P2, 11 A2, 12; architecture.md và mqtt.md. Trước khi triển khai phải đọc lại bảng ngưỡng/timer/ưu tiên và chốt checklist cụ thể trong task.md.
+SRS 5.1–5.8, P2/A2 và TC-01–16/27/28. MQTT command/ACK và backend/dashboard thuộc các gói sau, chưa triển khai.
 
-## Tiêu chí hoàn thành và tiến độ
+## Tiêu chí và tiến độ
 
-- [ ] Logic AUTO, môi trường/chuyển động và ưu tiên đúng SRS; kiểm thử dữ liệu/clock giả lập.
-- [ ] MANUAL, thời hạn/fallback, hold và dimming đúng SRS; không tự mở rộng giao thức MQTT A3.
-- [ ] Fault/phục hồi và các biên timer/tràn được kiểm tra theo phạm vi A2.
-- [ ] Build environment bị ảnh hưởng, tài liệu và bằng chứng phù hợp; phân biệt host/build/live, không tự triển khai A3.
+- [x] State machine, AUTO/MANUAL, dimming/fault, invalid/wrap/offline test đạt.
+- [x] Firmware build, host sensor/app/MQTT regression và artifact/hash đạt; [log](evidence/task-006/validation.log).
+- [ ] Wokwi P2: ISR ECHO/task core0, LDR/motion/hold, MANUAL/timeout, fault/recovery và diagnostics có Serial/ảnh.
+- [ ] Đối chiếu live rồi quyết định chốt TASK-006; chưa tự bắt đầu A3.
 
 ## Vướng mắc và cách giải quyết
 
-Không có phụ thuộc TASK-005 còn chặn. Các hạn chế mạng diagnostics/polling được giữ để đánh giá ở A2/A3; không mặc định firmware đã đáp ứng hard realtime.
+Chưa chạy live bản P2 nên không lấy bằng chứng P1 hoặc host stub thay cho kết quả này. Kiểm tra timing theo clock node; không đụng Docker/container nếu chưa được giao. Nếu lỗi, giữ Serial/điều kiện cụ thể rồi sửa đúng phạm vi A2.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-TASK-005 đã nghiệm thu 4/4: [biên bản](evidence/task-005/windows-live-20261116-003644/acceptance-final.md). Bắt đầu sau khi người dùng giao triển khai TASK-006; chuyển phạm vi sang task.md trước khi sửa mã. Không bắt đầu tự động từ đề xuất này.
+Artifact mới đã copy tới simulations/node_01/build. Người vận hành mở đúng cấu hình Wokwi chính, giữ một phiên; xem [5 bước](../techs/simulation.md). Không mua/cài/nâng toolchain, không commit/push. Chưa triển khai TASK-007/A3.
+
+## Rà soát sau live
+
+MANUAL80 và timeout60s có file gốc PASS, bốn suite host +7 test RFC và build kiểm tra lại PASS. Người dùng đã chạy các bài live khác; chưa lưu đủ log/ảnh nên không yêu cầu làm lại toàn bộ. Chỉ bổ sung nguồn đã có hoặc ghi nguồn xác nhận theo [acceptance-review](evidence/task-006/acceptance-review.md). TASK-006 giữ4/5; kế hoạch Git là chuyển an toàn sang nhánh tuan cùng base rồi commit chọn lọc, chưa thực hiện khi chưa được đồng ý. Không tự push/merge hoặc bắt đầu A3.

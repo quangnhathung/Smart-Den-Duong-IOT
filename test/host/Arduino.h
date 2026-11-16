@@ -7,9 +7,18 @@ constexpr uint8_t HIGH = 1;
 constexpr uint8_t INPUT = 1;
 constexpr uint8_t OUTPUT = 3;
 constexpr uint8_t INPUT_PULLDOWN = 9;
+constexpr uint8_t CHANGE = 2;
+#define IRAM_ATTR
 enum adc_attenuation_t { ADC_11db };
 
 unsigned long millis();
+unsigned long micros();
+void noInterrupts();
+void interrupts();
+void attachInterrupt(uint8_t pin, void (*handler)(), int mode);
+constexpr uint8_t digitalPinToInterrupt(uint8_t pin) {
+  return pin;
+}
 void pinMode(uint8_t pin, uint8_t mode);
 void digitalWrite(uint8_t pin, uint8_t value);
 int digitalRead(uint8_t pin);
