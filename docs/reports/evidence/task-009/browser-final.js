@@ -1,0 +1,22 @@
+async (page) => {
+ const errors=[],exceptions=[];
+ const onConsole=m=>{if(m.type()==='error')errors.push(m.text());};
+ const onPageError=e=>exceptions.push(e.message);
+ page.on('console',onConsole);page.on('pageerror',onPageError);
+ await page.setViewportSize({width:1440,height:900});
+ await page.goto('http://127.0.0.1:5500/');
+ await page.waitForFunction(()=>document.getElementById('apiBadge').textContent==='Máy chủ sẵn sàng');
+ await page.getByRole('link',{name:'Điều khiển node',exact:true}).click();
+ await page.waitForFunction(()=>!document.getElementById('applyCommand').disabled);
+ await page.locator('#controlMode').selectOption('AUTO');
+ await page.locator('#applyCommand').click();
+ await page.waitForFunction(()=>document.getElementById('commandFeedback').textContent.includes('Node đã chấp nhận'));
+ await page.getByRole('link',{name:'Lịch sử dữ liệu',exact:true}).click();
+ await page.waitForFunction(()=>document.getElementById('historyMessage').textContent.includes('Đang xem'));
+ await page.getByRole('link',{name:'Phiên thực nghiệm',exact:true}).click();
+ await page.waitForFunction(()=>document.getElementById('experimentList').textContent.includes('EX-02'));
+ await page.waitForTimeout(1200);
+ page.off('console',onConsole);page.off('pageerror',onPageError);
+ if(errors.length||exceptions.length)throw Error(JSON.stringify({errors,exceptions}));
+ return {servedRoot:'DoAn/dashboard',backend:'DoAn/backend (synthetic QA transport)',health:'OK',command:'APPLIED',history:'loaded',experiments:'loaded',consoleErrors:errors.length,uncaughtExceptions:exceptions.length};
+}

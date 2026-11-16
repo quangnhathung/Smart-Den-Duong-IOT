@@ -1,0 +1,31 @@
+async (page) => {
+ const checks=[],errors=[];
+ const assert=(ok,message)=>{if(!ok)throw Error(message);checks.push(message);};
+ const onError=error=>errors.push(error.message);page.on('pageerror',onError);
+ await page.goto('http://127.0.0.1:5500/#nodes/node_01');
+ await page.waitForFunction(()=>!document.getElementById('applyCommand').disabled);
+ for(const [result,reason,expected] of [['REJECTED','EXPIRED','Node từ chối'],['TIMEOUT','ACK_TIMEOUT','Máy chủ hết thời gian']]) {
+   await page.route('**/api/commands/*',async route=>{const response=await route.fetch();const data=await response.json();await route.fulfill({response,json:{...data,result,reason}});});
+   await page.locator('#controlMode').selectOption('AUTO');
+   await page.locator('#applyCommand').click();
+   await page.waitForFunction(text=>document.getElementById('commandFeedback').textContent.includes(text),expected);
+   assert((await page.locator('#commandFeedback').innerText()).includes(reason),'mocked backend '+result+'/'+reason+' visible');
+   await page.unroute('**/api/commands/*');
+   await page.waitForFunction(()=>!document.getElementById('applyCommand').disabled);
+ }
+ let posts=0;
+ await page.route('**/api/nodes/node_01/commands',route=>{posts++;return route.abort();});
+ await page.locator('#applyCommand').click();
+ await page.waitForFunction(()=>document.getElementById('commandFeedback').textContent.includes('Chưa xác định'));
+ await page.waitForTimeout(1500);
+ assert(posts===1,'unknown POST outcome has no automatic retry');
+ await page.unroute('**/api/nodes/node_01/commands');
+ await page.setViewportSize({width:375,height:900});
+ for(const route of ['nodes/node_01','history','alerts','experiments']) {
+   await page.goto('http://127.0.0.1:5500/#'+route);
+   await page.waitForFunction(()=>document.getElementById('apiBadge').textContent==='Máy chủ sẵn sàng');
+   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'no document overflow375 '+route);
+ }
+ assert(errors.length===0,'no uncaught JS exceptions in negative/mobile phase');
+ page.off('pageerror',onError);return checks;
+}

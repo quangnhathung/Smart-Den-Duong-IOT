@@ -1,28 +1,28 @@
-# TASK-009 — Dashboard giám sát và điều khiển P5/A5
+# TASK-010 — Tích hợp một node MQTT–backend–dashboard
 
 - Trạng thái: Chưa bắt đầu
 - Tiến độ: 0/4 nhóm nghiệm thu dự kiến
-- Cập nhật: 2026-11-16T13:17:56+07:00
+- Cập nhật: 2026-11-16T14:18:00+07:00
 
 ## Mô tả và phạm vi
 
-Đề xuất dashboard React/TypeScript/Vite theo SRS8, dùng API TASK-008. Tổng quan/tuyến3 node/chi tiết/lịch sử/cảnh báo/phiên/CSV, điều khiển AUTO/MANUAL có xác nhận. Bắt buộc đọc và vận dụng skill ui-ux-pro-max khi lập kế hoạch/thiết kế/triển khai UI theo yêu cầu người dùng. Không tạo dashboard, chọn theme hay chạy task này tự động trong TASK-008.
+Đề xuất kiểm chứng xuyên suốt một node trước khi mở rộng ba node P6/A6: firmware A3 → broker local → backend A4/SQLite → dashboard A5/Live Server. Dùng code đã có, không đổi stack/ngưỡng/schema để làm test đạt. Đầu ra là runbook và bằng chứng live có cấu hình/hash/log/thời gian, sửa lỗi tích hợp có bằng chứng nếu phát hiện. Không tự thực hiện task này trong TASK-009.
 
 ## Tham chiếu SRS
 
-SRS7.3/8/9/10P5/11A5/12. API types/clock/uint64 theo backend.md và OpenAPI TASK-008. Giữ MQTTv1, dashboard chỉ gọi HTTP, không publish MQTT trực tiếp.
+SRS6/7/8/9/12, TC17–22/26, ma trận live A3 trong mqtt.md và runbook backend/README.md. Điều kiện chuẩn bị cho tích hợp ba node; không coi một node đạt là toàn hệ thống đạt.
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [ ] Chốt vị trí/repo, thiết kế theo ui-ux-pro-max, responsive/a11y và trạng thái loading/empty/stale/error có lý do rõ.
-- [ ] Tổng quan/3 node/chi tiết hiển thị target/applied/fault/offline/mô phỏng đúng; không bịa node chưa chạy.
-- [ ] AUTO/MANUAL nút Áp dụng, pending/ACK/reject/timeout và khóa thao tác đúng API; polling1s, stats/alerts5s.
-- [ ] Lịch sử/gap/coverage/experiment/export, API errors/CORS/precision64 và kiểm thử UI/build/tài liệu đạt.
+- [ ] Broker/Wokwi node_01 thật, backend một worker và dashboard Live Server kết nối; node02/03 chưa chạy giữ unknown, telemetry/target/applied/fault/clock hiển thị đúng.
+- [ ] AUTO/MANUAL/ACK/reject/timeout/60s theo node, input sai/pending guard và mất API/broker/reconnect được kiểm theo ma trận, không replay lệnh cũ; firmware tiếp tục AUTO.
+- [ ] Restart giữ history/alerts/experiments, gap không bị nối; phiên thực/CSV/stats/coverage khớp cùng mẫu và cấu hình; phân biệt thời gian node/wall clock.
+- [ ] Đo latency cảm biến→dashboard và command→ACK ít nhất10 lượt, ghi median/max/điều kiện máy; lưu bằng chứng, kết quả chưa đạt và kế hoạch ba node tiếp theo.
 
 ## Vướng mắc và cách giải quyết
 
-Live A3/A4 chưa chạy tại máy này. Có thể làm UI với fixture có nhãn và API thật, nhưng không coi fixture là hệ thống live hoặc lấp gap bằng dữ liệu giả. Trước nghiệm thu tích hợp cần kết quả runbook máy dev, kiểm độ trễ thật và ba node ở giai đoạn tích hợp.
+Chưa có kết quả tích hợp live A3–A5 tại máy kiểm tra TASK-009; fixture không thay thế được socket/Paho/ESP32/Wokwi. Cần máy có VS Code/Wokwi gateway, quyền tài khoản mô phỏng và broker local. Có thể dùng máy dev đã chạy firmware; giữ nguyên kết quả P2 người dùng xác nhận, chỉ bổ sung bằng chứng lớp tích hợp.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Chỉ bắt đầu khi người dùng giao TASK-009 và chốt vị trí/repo/dashboard preferences. Backend repo DoAn/backend có code/test/OpenAPI, README hướng dẫn. Không tự chỉnh firmware/API/schema hoặc deploy cloud để làm UI đạt. Không tự commit/push.
+Chỉ bắt đầu khi được giao. Ba repo firmware/backend/dashboard đặt cạnh nhau; môi trường Python backend đã cài, VS Code Live Server và Wokwi hoạt động. Kiểm tra cổng/dịch vụ hiện có; không dừng dịch vụ người dùng hoặc ghi fixture vào DB live. Đọc README ba repo, techs/mqtt/backend/dashboard/testing và evidence TASK-007/008/009. Nếu yêu cầu sửa UI, tiếp tục dùng ui-ux-pro-max. Ba node/stability30phút và EX-series sẽ có tiêu chí riêng sau bước một node.

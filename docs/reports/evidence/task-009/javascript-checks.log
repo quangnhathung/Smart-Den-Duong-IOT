@@ -1,0 +1,26 @@
+CWD /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/dashboard
+COMMAND node --test tests/api.test.mjs tests/core.test.mjs
+✔ health 503 is readable, other 503 cannot become success (24.924592ms)
+✔ POST happens once with correct JSON even if response is lost (0.396567ms)
+✔ CSV error is not downloaded as a blob (1.208783ms)
+✔ query keeps UTC and omits undefined (0.214231ms)
+✔ poller does not overlap, respects hidden document, aborts when stopped (67.862911ms)
+✔ uint64 stays exact beyond JS safe integer (2.208822ms)
+✔ Vietnam clock input converts to UTC and rejects invalid date (30.093984ms)
+✔ command is explicit integer and AUTO omits brightness (1.221846ms)
+✔ series breaks boot/continuity/order/gap/quality instead of interpolation (0.594414ms)
+✔ big uptimes use BigInt differences without rounding (0.25501ms)
+✔ submit locks synchronously, no retry or fake success from telemetry (0.384627ms)
+✔ unknown POST result waits for reconciliation, does not label TIMEOUT/APPLIED (0.261466ms)
+✔ uncertain request without pending can allow new explicit action after fresh sync (0.197103ms)
+✔ formatters keep empty values empty and metadata escaped (3.921296ms)
+✔ SVG charts have labels, no fake line through disconnected singletons (1.223905ms)
+✔ terminal REJECTED/TIMEOUT retain backend reason and release pending lock (0.196441ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 153.9259

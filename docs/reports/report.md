@@ -1,3 +1,32 @@
+## 2026-11-16T14:18:00+07:00 — TASK-009 — Dashboard HTML/CSS/JS qua Live Server
+
+- Trạng thái: Hoàn thành phạm vi code/test/hướng dẫn P5/A5.
+- Tiến độ:4/4 nhóm nghiệm thu.
+
+### Đã thực hiện
+
+Tạo DoAn/dashboard Git riêng, HTML/CSS/JS ES modules/SVG, theme sáng Data-Dense theo ui-ux-pro-max;5 view tổng quan/tuyến đèn/chi tiết, history, alerts, experiments/CSV. Polling không chồng, pause hidden/abort, draft và telemetry tách riêng, điều khiển chỉ gửi khi Áp dụng, ACK/PWM/unknown/stale rõ; giữ uint64/UTC/gap. Cấu hình VS Code Live Server5500, không npm/build/framework/CDN để chạy. Backend thêm GET list/detail experiments, history.continuity và CORS5500 giữ5173; không đổi MQTT/SQLite schema/năng lượng. SRS cập nhật đúng stack/API do người dùng chốt. Không commit/push/deploy hoặc sửa firmware/toolchain.
+
+### Kiểm tra và kết quả
+
+PASS16 Node test; backend tại repo bàn giao Ruff check/format và68 Pytest/1 warning cũ; OpenAPI11 paths/12 thao tác. Playwright18 kiểm tra luồng chính +8 bổ sung PASS trên engine Live Server2.2.0 từ extension5.7.10, API/SQLite thật/transport giả, ảnh có nhãn fixture. Responsive375/768/1024/1440, keyboard/range, reduced motion, command/draft, history/alerts/experiment/reload/CSV và API mất/phục hồi/no-retry. REJECTED/TIMEOUT ở pha bổ sung được mock. Smoke cuối ở repo bàn giao:0 console error/0 uncaught exception. Copy/hashes khớp manifest; dịch vụ QA đã dừng. [Toàn bộ log/ảnh/scripts/giới hạn](evidence/task-009/README.md).
+
+Chưa chạy MQTT/Paho/socket/Wokwi thật, VS Code Go Live thao tác tay/Windows, latency10 lượt, ba node30phút hoặc EX-series. Không build lại firmware vì không đổi source; không ghi tích hợp PASS từ fixture.
+
+### Vướng mắc
+
+Không có vướng mắc còn chặn phạm vi bàn giao. Trong QA, ảnh/log từng kích hoạt Live Server reload; một assertion ban đầu chờ PWM ngay sau ACK chưa đúng hợp đồng.1 deprecation warning TestClient/HTTPX đã tồn tại. Repo dashboard/backend nằm ngoài writable root.
+
+### Cách giải quyết
+
+Thêm ignoreFiles/ignore output/tests/Markdown cho Live Server, chạy lại browser đạt; tách chờ ACK và telemetry trong kiểm tra. Giữ dependency pin và warning rõ, không nâng toolchain. Ghi hai repo cùng cấp bằng quyền công cụ, guard hash gốc và xác minh sau copy để bảo toàn công việc có sẵn.
+
+### Tài liệu và bước tiếp theo
+
+README ba repo, dashboard design-system, techs/dashboard/backend/architecture/testing/development, SRS1.1, task/checklist/evidence cập nhật. Đề xuất TASK-010 kiểm chứng một node xuyên suốt MQTT–backend–dashboard trước khi mở rộng ba node; chỉ lập đề xuất, chưa thực hiện.
+
+---
+
 ## 2026-11-16T13:17:56+07:00 — TASK-008 — Backend, SQLite và API P4/A4
 
 - Trạng thái: Hoàn thành4/4 đầu ra code/test/OpenAPI/hướng dẫn; live A4 chưa chạy tại máy này.

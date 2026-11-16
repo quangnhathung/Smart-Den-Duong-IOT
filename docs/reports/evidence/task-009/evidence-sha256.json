@@ -1,0 +1,20 @@
+{
+  "task-008-before-task009.md": "4c550cc0bdce5882f9a7ca13c00cefa371736b5495c821674f127a957fe22eb8",
+  "backend-checks.log": "352c3893aa2445a9a3944f7ec659243da0266cfdb76303b6287575092cf78608",
+  "javascript-checks.log": "690f2a5e382e8f6db8c8c52d037da8056a9856708389f93b59d0acbe94339fd5",
+  "openapi.json": "1d39bedaf9e20876748f9be634c9099e995b1cfd75823268f6768605abf53eec",
+  "overview-desktop-fixture.png": "d1a50ada66d0352e69f1e2d4683f22690fcc48f0ba95141aa554ba6504d089e4",
+  "overview-mobile-fixture.png": "8b7d26c15e13845a5d656b5e45ed655b991c73b0939964e14050b06fa1e469a0",
+  "node-desktop-fixture.png": "7e29cc746cf5cb6f6f90a90c6319348d76a9d2e8964e527b793979ebdf6ffc57",
+  "history-desktop-fixture.png": "488f530483cef313221c971a082db79e389b03c9a3faae399a13ada87158ea37",
+  "browser-checks.log": "2ceb002bc799897f5676cb34011f8333896e05e288ce19bc8f3cf48e63d50c0a",
+  "browser-negative.log": "aa97b34859260bc2b0496392941eea3a48da1d1c9e66211d7da6832afa8fd55b",
+  "browser-final.log": "bfb65caa556a2c5f0aab02df31b88dbb61a7022a4bd75a503447fe70e951d04d",
+  "experiment-fixture.csv": "78230c6d2488d43dbaa768a719e687a36eb663c9ca943ee0d9a9e9d33d190747",
+  "source-manifest.json": "82c7f0ae639c3269d5eabe7fad4d35325a89cff75285a259330ba9041af2eb52",
+  "browser-flow.js": "f49452767445983a90cc610e87473bca012a5eaedb452e2c7d34e8ec504e77e0",
+  "browser-negative.js": "a201868e0a4322d7d47e2639f20fcc31bbb2d48e2846924238b017fc9a4a2c53",
+  "browser-final.js": "f49f2c24e3feaefcb94e8568d7c054b6de05aeb5c98e178c34008d4e6f69cf94",
+  "qa-fixture.py": "4d3e235e7661783c9955ec29c3900ebae78832b75d245817761aaf1533872469",
+  "README.md": "04e7a2211d679f7812992793598362c89f0c5f52e631c5f68eaaa4e165a29ad7"
+}

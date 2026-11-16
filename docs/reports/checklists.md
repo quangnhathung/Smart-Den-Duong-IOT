@@ -1,3 +1,15 @@
+# TASK-009 — Dashboard HTML/CSS/JS qua Live Server
+
+- Hoàn thành đầu ra code/test/hướng dẫn:2026-11-16T14:18:00+07:00;4/4 nhóm nghiệm thu.
+- [x] Dashboard sáng theo ui-ux-pro-max,5 view, native HTML/CSS/JS/SVG, responsive/keyboard/reduced motion và cấu hình Live Server5500.
+- [x] Polling/stale/uint64, draft/AUTO/MANUAL/pending/ACK/reject/timeout/unknown, POST không tự retry.
+- [x] History gap/continuity/charts/table, alerts, experiments/reload/CSV, API list/detail/CORS5500 giữ5173.
+- [x]16 Node test,68 Pytest/Ruff,26 browser checks đạt; smoke repo bàn giao0 console error/0 uncaught exception; tài liệu/SRS/bằng chứng hoàn tất.
+
+[Bằng chứng và manifest](evidence/task-009/README.md). API/SQLite thật nhưng MQTT/telemetry là fixture; chưa nghiệm thu MQTT/Wokwi live, latency, Windows hoặc ba node30phút. Không commit/push/deploy, không tự thực hiện TASK-010.
+
+---
+
 # TASK-008 — Backend, SQLite và API P4/A4
 
 - Hoàn thành đầu ra code/test/hướng dẫn: 2026-11-16T13:17:56+07:00;4/4 nhóm nghiệm thu được giao.
