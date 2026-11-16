@@ -1,4 +1,24 @@
-# Kiểm tra firmware — TASK-006 và lịch sử TASK-005
+# Kiểm tra firmware — TASK-007 và lịch sử P2/P1
+
+## TASK-007 P3/A3 — bàn giao code/test/hướng dẫn
+
+SRS6,5.7,9.1 và TC17–22/26 trong phạm vi một node/client giả. Chạy từ gốc firmware:
+
+```bash
+# Một lần sau checkout để cài đúng dependency đã pin; không nâng toolchain.
+~/.platformio/penv/bin/pio pkg install
+python3 scripts/check-firmware.py
+python3 -B test/host/test_wokwi_serial.py
+python3 -B test/host/test_mqtt_command.py
+~/.platformio/penv/bin/pio run -e esp32dev
+python3 scripts/prepare-simulation.py
+```
+
+check-firmware.py dùng g++/C++17 -Wall -Wextra -Werror, link ArduinoJson7.4.2 thật từ .pio/libdeps; không mock JSON. Năm suite: protocol/controller/sensors/app/mqtt. Protocol kiểm schema/type/range/UUID/boot/uint64/trailing/invalid, telemetry16 trường/current-power/null/fault, cacheFIFO32/deadline/dedup/rejected ID và mailbox queue8/backpressure. App chạy code thật tới controller/PWM stub, xác minh ACK sau nhận target, duplicate không gia hạn60s, sai boot/expired/session và Serial trước MQTT. Network kiểm CONNECT will/clean session/QoS/retain/subscriptions, telemetry200ms/2s/seq/reconnect, ACK publish fail và session flush; GPIO/network/RTOS vẫn là stub.
+
+Bảy unittest RFC2217 giữ nguyên; bốn unittest generator kiểm input/deadline64/UUID/fixture sai và tuổi file telemetry3s. scripts/mqtt-command.py chỉ tạo JSON, không gửi dữ liệu hoặc kiểm chứng broker.
+
+Bằng chứng mới lưu ở [TASK-007](../reports/evidence/task-007/README.md). [Ma trận/lệnh live A3](mqtt.md#bộ-kiểm-tra-live-a3-trên-máy-dev-chưa-chạy-tại-máy-này) chưa chạy tại máy này. Không suy host/build thành LWT thực, timing hai core hoặc ba node30phút PASS. Các đoạn TASK-006 bên dưới là lịch sử P2 trước khi thêm A3.
 
 ## TASK-006 P2/A2
 

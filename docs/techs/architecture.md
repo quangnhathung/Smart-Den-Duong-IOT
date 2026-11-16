@@ -11,7 +11,7 @@ Tài liệu chốt thiết kế A0 cho các gói tiếp theo. Nghiệm thu môi 
 - Một ESP32 `esp32dev`, source dùng chung với entry point `src/main.cpp`.
 - FirmwareApp điều phối SensorReader, LightingController, DimmingController/FaultDetector; LED GPIO26 theo AUTO/MANUAL, Serial và MQTT ping/pong/heartbeat diagnostics. Connectivity sở hữu PubSubClient ở task core0, vòng điều khiển core1 đọc atomic status/loss-count; ECHO bắt cạnh, không pulseIn.
 - Một cấu hình Wokwi node_01, script copy artifact, Mosquitto Docker local.
-- P1 đã nghiệm thu TASK-005; P2/A2 đã có code AUTO/MANUAL/hold/dimming/fault, host checks và build, chưa kiểm tra Wokwi P2. MANUAL thử qua Serial/API; telemetry/command/ACK nghiệp vụ, backend, SQLite và dashboard chưa triển khai.
+- P1 đã nghiệm thu TASK-005; P2 có code và xác nhận live từ máy dev theo TASK-006. TASK-007 triển khai telemetry/command/ACK/availability một node, test/build và hướng dẫn live; chưa nghiệm thu live A3 tại máy này. Backend, SQLite và dashboard chưa triển khai.
 - Đã pin các package trong PlatformIO. PlatformIO Core 6.1.19 là phiên bản công cụ đã dùng, không được cài lại bởi tệp cấu hình dự án.
 
 ## Kiến trúc mục tiêu
@@ -42,7 +42,7 @@ Node vẫn xử lý AUTO khi broker/backend dừng. MANUAL có thời hạn và 
 - Firmware–broker–backend: [MQTT v1](mqtt.md), JSON có version và định danh phiên boot. Diagnostics P0 tách riêng.
 - Dashboard–backend: endpoint và mã HTTP giữ đúng SRS 7.3. POST command trả 202 chỉ là tiếp nhận, ACK APPLIED xác nhận mục tiêu; mức PWM thật tiếp tục lấy từ telemetry.
 - Backend–database: các nhóm nodes/telemetry/alerts/commands/experiments theo SRS 7.2. UTC tiếp nhận để truy vấn; uptime node để tính khoảng hoạt động.
-- Firmware dự kiến tách SensorReader, LightingController, DimmingController, FaultDetector, Connectivity và Telemetry/Command theo SRS 5.1. Chưa tạo module trống trong A0.
+- Firmware có SensorReader, LightingController, DimmingController, FaultDetector, Connectivity và MqttProtocol/MqttMailbox theo SRS5.1. Hàng đợi/snapshot nối task mạng core0 với vòng điều khiển core1; cache lệnh chỉ nằm ở core1. Không tạo module trống cho các gói sau.
 
 ## Hạ tầng và workspace
 

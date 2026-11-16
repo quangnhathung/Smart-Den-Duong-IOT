@@ -1,4 +1,4 @@
-# Hợp đồng MQTT v1 — chốt A0
+# MQTT v1 — hợp đồng A0 và triển khai TASK-007/A3
 
 TASK-006/A2 giữ nguyên diagnostics ping/pong/heartbeat, chuyển network sang FreeRTOS task riêng và dùng atomic trạng thái/mất kết nối để điều khiển fallback. Không subscribe command v1 hoặc phát telemetry/ACK trong A2. `AUTO` / `MANUAL <0..100>` trên Serial là giao diện thử cục bộ, không phải MQTT schema; command/ACK/deadline/cache thuộc A3.
 
@@ -6,7 +6,7 @@ TASK-006/A2 giữ nguyên diagnostics ping/pong/heartbeat, chuyển network sang
 
 [SRS](../srs.md) mục 5–7, 11–12, 16; [kiến trúc](architecture.md); [diagnostics P0 đang chạy](setup.md).
 
-Đây là hợp đồng cho A3/A4 và các gói sau. Firmware hiện chỉ chạy diagnostics; telemetry/command/ACK/availability dưới đây chưa được triển khai. TASK-004 được giao chốt các tên `deadline_uptime_ms`, `result`, `reason`, `status`; đây là chi tiết wire của yêu cầu SRS, không thêm chức năng.
+Hợp đồng A0 dưới đây đã được triển khai ở firmware một node trong TASK-007; chưa có backend/A4. Kết quả live A3 chưa chạy tại máy này; hướng dẫn ở cuối trang. TASK-004 được giao chốt các tên `deadline_uptime_ms`, `result`, `reason`, `status`; đây là chi tiết wire của yêu cầu SRS, không thêm chức năng.
 
 ## Topic, QoS và nhận dạng
 
@@ -114,6 +114,77 @@ APPLIED xác nhận chế độ/mục tiêu, không xác nhận PWM đã dimming
 
 ## Diagnostics P0 và giới hạn
 
-Các topic diagnostics/ping, pong và heartbeat chỉ dùng setup. Heartbeat hiện gửi uptime_ms 32 bit, không có boot_id/schema_version; không được đọc nó như telemetry v1 unsigned 64 bit. Hợp đồng nghiệp vụ trên chưa triển khai ở firmware hoặc backend; ví dụ được kiểm tra tĩnh tại [TASK-004](../reports/evidence/task-004/convention-checks.md), không phải test MQTT nghiệp vụ.
+Các topic diagnostics/ping, pong và heartbeat chỉ dùng setup. Heartbeat hiện gửi uptime_ms 32 bit, không có boot_id/schema_version; không được đọc nó như telemetry v1 unsigned 64 bit. Hợp đồng nghiệp vụ đã có code firmware trong TASK-007, chưa có backend; các ví dụ A0 trước đây được kiểm tra tĩnh tại [TASK-004](../reports/evidence/task-004/convention-checks.md), không phải test MQTT nghiệp vụ.
 
 Timeout phiên dài P0 vẫn cần theo dõi ở A3. Không tự đổi keepalive, broker, QoS hoặc bỏ deadline nhằm làm ca thử đạt. Khi sửa giao thức, cập nhật các phía và tài liệu đồng bộ trước khi công bố phiên bản mới.
+
+
+## Triển khai TASK-007/A3
+
+Tham chiếu SRS6,5.7,9.1,TC17–22/26. `MqttProtocol` dùng ArduinoJson **7.4.2** đã smoke host/build rồi pin; PubSubClient2.8.0 và framework giữ nguyên. Bộ mã reason/schema/QoS/retain không đổi. Prefix/node hiện cố định node_01; chưa build ba environment.
+
+- Boot ID dùng esp_random, 8 hex; giữ qua reconnect. Uptime64 lấy esp_timer_get_time()/1000, independent với timer32 của P2. seq bắt đầu0, tăng sau publish telemetry thành công; lần publish thất bại có thể retry cùng seq để phía nhận chống trùng.
+- Snapshot sensor/control/uptime được copy trong critical section ngắn. Network core0 là chủ MQTT; core1 sở hữu controller/cache và PWM. Không parse/serialize/network trong critical section. Network stack8192 byte; queue lệnh8 và kết quả8 phần tử, cấp phát tĩnh.
+- Command callback parse bằng độ dài, sao chép các trường sang kiểu riêng, không giữ pointer vào buffer PubSubClient. JSON hỏng, embedded NUL/trailing garbage hoặc command_id không phải UUIDv4 thì chỉ log/drop; topic khác chỉ drop. Payload có ID hợp lệ nhưng schema/node/range sai trả INVALID_COMMAND. UUID/boot hex được chuẩn hóa chữ thường. Không phát ACK khi chưa nhận diện được ID.
+- Core1 lấy tối đa1 lệnh/vòng khi result queue còn chỗ, kiểm tra phiên/loss-count và deadline64 tại lúc xử lý. Serial xử lý trước MQTT nếu cùng vòng. Sau requestAuto/requestManual và controller.update mới đưa kết quả sang task mạng. APPLIED không đo PWM hay xác nhận đã dimming xong.
+- Cache FIFO32 ở core1 giữ nội dung chuẩn hóa và reason, không refresh vị trí khi retry. Retry sau deadline vẫn nhận kết quả cũ; nội dung khác cùng ID bị từ chối, không sửa cache gốc. Kết quả invalid có ID hợp lệ cũng chiếm cache để tránh tái dùng ID đó thành lệnh khác. Sai boot được kiểm tra trước cache. Cache reset khi boot, giữ qua reconnect.
+- Callback gặp command queue đầy thì log/drop, không áp dụng hoặc thêm mã reason mới. Result queue đầy ngăn lấy lệnh mới. ACK publish thất bại giữ đầu queue để thử lại lúc network tick, không áp dụng lại controller; client còn có retry cùng ID. Session mất thì flush command/result đang chờ, giữ cache; result của lệnh đã lấy ở phiên cũ bị loại.
+- Snapshot mới nhất thay thế snapshot cũ, không có history offline. Chỉ mode/environment/motion/target/applied/fault làm bẩn trạng thái; raw ADC/distance vẫn cập nhật ở bản tin định kỳ. Telemetry định kỳ2s, thay đổi được gộp với khoảng cách tối thiểu200ms giữa mọi lần thử publish (kể cả thất bại/reconnect), tối đa5/s. Không phát lại các bước dimming đã bị gộp.
+- Current mô phỏng =2000mA×applied/100×current_adc/4095, power=12×current_mA/1000. distance invalid/nonfinite/nonpositive là null, ADC ngoài range không phát bản tin giả. Buffer2048 gồm MQTT header/topic; kiểm tra measureJson/overflow/serialize/publish.
+- CONNECT clean session, LWT OFFLINE retain/QoS0 được chuẩn bị trước; subscribe diagnostics/ping và command QoS1. Sau subscribe gửi ONLINE retain rồi snapshot telemetry mới nhất ở network tick tiếp. ONLINE publish fail sẽ thử lại trước telemetry. Ngắt chủ động khi transport còn dùng được phải publish OFFLINE trước DISCONNECT; transport mất/ghi lỗi thì đóng TCP, giữ will để broker phát. Broker chết không tự phát LWT tới client khác; backend tương lai phải dựa mất kết nối/stale.
+- PubSubClient callback không cung cấp retained flag: việc command không retained là yêu cầu publisher; không tuyên bố node nhận diện/reject retained command. Môi trường demo phải dùng broker sạch retained command; tuyệt đối không thêm -r cho command.
+
+Host stubs không chứng minh contention hai core, timing Serial/ISR, broker thực nhận hay LWT thực tế. [Log TASK-007](../reports/evidence/task-007/host-checks.log). Hạn chế timeout phiên dài còn cần theo dõi live; không tăng keepalive hoặc che lỗi để làm PASS.
+
+## Bộ kiểm tra live A3 trên máy dev (chưa chạy tại máy này)
+
+### Chuẩn bị
+
+Build/copy theo simulation.md; chỉ1 phiên Wokwi cấu hình node_01. Broker local theo setup.md do người vận hành khởi động. Lưu hash BIN/ELF, phiên bản dependency, giờ bắt đầu thực và toàn Serial. Artifact/clock của lượt này phải tách TASK-005/006; không dùng uptime làm giờ thực.
+
+Trong terminal A tại gốc firmware, nghe trước khi gửi lệnh (Linux bash):
+
+```bash
+mkdir -p docs/reports/evidence/task-007/live
+# Lưu thời điểm bắt đầu riêng, không sửa log cũ.
+date --iso-8601=seconds > docs/reports/evidence/task-007/live/start-time.log
+docker compose -f infra/compose.yaml --profile tools run --rm -T mqtt-client mosquitto_sub -h 127.0.0.1 -t 'huit/nhom7/smartlight/v1/node_01/#' -v -W 600 | tee docs/reports/evidence/task-007/live/mqtt.log
+```
+
+### Lệnh mới từ telemetry thật
+
+Terminal B: mỗi lệnh mới cần capture mới; không gõ boot_id/deadline từ ví dụ cố định. Script dưới **chỉ tạo JSON**, không publish, chỉ đọc telemetry capture không quá3s (mtime dùng cho độ mới file đầu vào, không dùng làm timestamp nghiệm thu).
+
+```bash
+docker compose -f infra/compose.yaml --profile tools run --rm -T mqtt-client mosquitto_sub -h 127.0.0.1 -t huit/nhom7/smartlight/v1/node_01/telemetry -C 1 -W 15 > /tmp/task007-telemetry.json
+if python3 scripts/mqtt-command.py --telemetry /tmp/task007-telemetry.json --mode MANUAL --brightness 80 > /tmp/task007-command.json; then
+  cat /tmp/task007-command.json | docker compose -f infra/compose.yaml --profile tools run --rm -T mqtt-client mosquitto_pub -h 127.0.0.1 -t huit/nhom7/smartlight/v1/node_01/command -q 1 -s
+fi
+```
+
+Chỉ gửi khi script exit0 và file command không rỗng; gửi ngay sau tạo, không chờ quá deadline. Nếu script báo telemetry cũ/không có telemetry thì dừng, capture mới trước khi thử lại; không bỏ kiểm tra độ mới. Lưu command JSON vào evidence/live cùng capture tương ứng sau khi gửi.
+
+Windows PowerShell tương đương (Python PlatformIO hoặc python có sẵn, không cài thư viện thêm):
+
+```powershell
+docker compose -f infra/compose.yaml --profile tools run --rm -T mqtt-client mosquitto_sub -h 127.0.0.1 -t huit/nhom7/smartlight/v1/node_01/telemetry -C 1 -W 15 | Set-Content -Encoding utf8 "$env:TEMP/task007-telemetry.json"
+python scripts/mqtt-command.py --telemetry "$env:TEMP/task007-telemetry.json" --mode MANUAL --brightness 80 | Set-Content -Encoding utf8 "$env:TEMP/task007-command.json"
+if ($LASTEXITCODE -eq 0) { Get-Content -Raw "$env:TEMP/task007-command.json" | docker compose -f infra/compose.yaml --profile tools run --rm -T mqtt-client mosquitto_pub -h 127.0.0.1 -t huit/nhom7/smartlight/v1/node_01/command -q 1 -s }
+```
+
+### Ma trận và kỳ vọng
+
+| Ca | Thao tác | Bằng chứng đạt |
+|---|---|---|
+| A3-01 Telemetry | Đổi LDR/PIR/distance/tải, nghe3 phút thực | Đủ16 trường, target/applied đúng CONTROL; seq tăng, boot không đổi, null khi timeout; current/power theo mô hình, không quá5 bản tin/s theo uptime. Lưu tốc độ mô phỏng và broker/log lỗi |
+| A3-02 MANUAL/AUTO | MANUAL80; lệnh mới --mode AUTO (không brightness) | ACK đúng command_id/boot APPLIED/reason null; target80 rồi applied80; AUTO trở mức nền. MANUAL60s tự fallback theo uptime |
+| A3-03 Retry | Gửi lại nguyên command JSON sau2s, không sinh UUID/deadline mới | ACK kết quả cũ, không refresh timer60s. Gửi lại sau deadline cũng trả ACK cũ nếu ID còn cache. Hai lần gửi không phải hai lần áp dụng |
+| A3-04 Reject | Capture mới mỗi ca; thêm --case expired/wrong-boot/invalid-brightness/wrong-node | EXPIRED/BOOT_MISMATCH/INVALID_COMMAND đúng; controller không đổi. Sửa brightness cùng ID đã xử lý phải INVALID_COMMAND, cache gốc không đổi |
+| A3-05 JSON hỏng/đúng đích | Gửi `{` hoặc payload >buffer; publish command vào topic node_02 | Không crash/ACK giả, node_01 không đổi. Chưa nghiệm thu ba node từ phép thử này |
+| A3-06 Mất/phục hồi broker | Người vận hành stop riêng mosquitto, giữ Wokwi và đổi cảm biến, start lại | AUTO/raw/PWM tiếp tục, MANUAL cũ hủy; subscribe lại, ONLINE + telemetry mới, cùng boot/seq tiếp tục; gửi lệnh mới sau reconnect có ACK |
+| A3-07 LWT | Broker vẫn chạy, dừng riêng phiên Wokwi không gửi clean DISCONNECT | Subscriber nhận OFFLINE retained khi broker phát hiện mất session; subscriber mới cũng nhận OFFLINE. Khởi động lại có boot mới/ONLINE/telemetry; lệnh boot cũ BOOT_MISMATCH |
+| A3-08 Mất ACK mô phỏng | Bỏ qua ACK lần đầu ở test client; sau2s replay cùng JSON một lần | Cache không áp dụng/gia hạn lần hai; nếu bỏ qua cả ACK thì client ghi TIMEOUT sau10s, không báo thành công. Đây là mô phỏng client, không phải backend đã triển khai |
+
+Với stop/start broker, chỉ người vận hành chạy `docker compose -f infra/compose.yaml stop mosquitto` rồi `start mosquitto`; không dùng down/prune/dừng service khác. Subscriber có thể thoát khi broker dừng: khởi động lại subscriber để capture recovery. Nếu Wokwi không chạy hoặc thiếu giấy phép, ghi chưa chạy, không đổi sang broker public.
+
+Mỗi ca ghi PASS/FAIL/chưa chạy, command/payload, Serial + MQTT/broker nhận, hash/config và nguồn thời gian. published=1 trên Serial không đủ chứng minh broker nhận; APPLIED không đủ chứng minh PWM vật lý. Ba node30phút/backend/UI ngoài phạm vi. Chưa có kết quả live A3 trong TASK-007 bàn giao code.

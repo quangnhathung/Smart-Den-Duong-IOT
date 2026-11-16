@@ -1,8 +1,8 @@
-# Firmware P2/A2 — điều khiển AUTO/MANUAL
+# Firmware P2/A2 và MQTT P3/A3
 
 ## Phạm vi và tham chiếu
 
-SRS 5.1–5.8, P2/A2, TC-01–16/27/28. TASK-005 đã nghiệm thu và giữ nguyên evidence; TASK-006 chuyển runtime từ PWM diagnostics sang điều khiển. Không triển khai MQTT command/ACK/telemetry A3 hoặc backend/dashboard.
+SRS 5.1–5.8, P2/A2, TC-01–16/27/28. TASK-005 đã nghiệm thu và giữ nguyên evidence; TASK-006 chuyển runtime từ PWM diagnostics sang điều khiển. TASK-007 bổ sung MQTT command/ACK/telemetry/availability A3 theo [MQTT](mqtt.md); chưa có backend/dashboard. Các phần P2 bên dưới giữ mô tả nền controller, giao diện Serial và thuật toán.
 
 ## Module và luồng thực tế
 
@@ -10,7 +10,7 @@ SRS 5.1–5.8, P2/A2, TC-01–16/27/28. TASK-005 đã nghiệm thu và giữ ngu
 - SensorReader giữ pin map, ADC12bit/PIR20ms/analog100ms/siêu âm200ms. analogSequence tăng mỗi mẫu analog để filter không đếm lại cùng mẫu theo số vòng loop. ECHO GPIO19 INPUT_PULLDOWN được bắt cạnh CHANGE; trigger LOW2us/HIGH10us; timeout30ms theo micros unsigned, bỏ cạnh muộn, xóa distance/invalid khi timeout. Không gọi pulseIn; chỉ chờ microsecond để phát TRIG. ISR chỉ ghi dữ liệu, critical section ngắn ở cùng core app.
 - ControlConfig.h gom ngưỡng, mức sáng và timer SRS bằng hằng có tên; không đổi giá trị đã chốt. LightingController thuần C++, không Arduino/mạng. ControlInput/ControlState tách mode, environment, motion, target/applied/fault.
 - DimmingController tăng/giảm tối đa2 điểm mỗi20ms, dừng đúng mức lẻ, không catch-up nhảy nhiều bước khi loop bị chậm. FaultDetector đánh giá100ms nhưng quan sát mọi thay đổi applied để không bỏ qua dao động giữa hai kỳ kiểm tra.
-- Connectivity sở hữu duy nhất WiFiClient/PubSubClient trong FreeRTOS task core0, stack6144B, priority1, yield10ms. App/core1 chỉ đọc atomic connected/loss-count; không gọi connect/publish. Giữ hostname/clientID/topics diagnostics, ping/pong tối đa64byte và heartbeat2s uptime32bit; không đổi hợp đồng nghiệp vụ. Buffer2048, socket/TCP timeout1s mỗi bước, backoff1/2/4/8/10s; subscribe lại sau reconnect. Loss-count buộc MANUAL về AUTO cả khi disconnect/reconnect xảy ra giữa hai lần đọc status.
+- Connectivity sở hữu duy nhất WiFiClient/PubSubClient trong FreeRTOS task core0, stack8192B, priority1, yield10ms. App/core1 chỉ đọc atomic connected/loss-count; không gọi connect/publish. Giữ hostname/clientID/topics diagnostics, ping/pong tối đa64byte và heartbeat2s uptime32bit; không đổi hợp đồng nghiệp vụ. Buffer2048, socket/TCP timeout1s mỗi bước, backoff1/2/4/8/10s; subscribe lại sau reconnect. Loss-count buộc MANUAL về AUTO cả khi disconnect/reconnect xảy ra giữa hai lần đọc status.
 - Loop foreground yield1ms, không chờ echo hoặc mạng; log CONTROL/SENSORS1s và PIR cạnh. Không tuyên bố hard realtime từ thiết kế task/host test; Serial/hardware/RTOS cần đo live.
 
 ## AUTO và điều kiện đầu vào
@@ -25,7 +25,7 @@ Hold5s từ lần cuối PIR HIGH, giữ mức cao nhất còn hiệu lực, s�
 
 API requestManual(int, nowMs) nhận0–100, từ chối ngoài range; requestAuto() xóa hold và loop đánh giá ngay cảm biến hiện tại. Boot AUTO, MANUAL ưu tiên cả DAY, timeout60s; lệnh MANUAL mới refresh thời hạn. MQTT được xác định ngắt thì AUTO; reconnect không phục hồi MANUAL cũ. Filter môi trường vẫn cập nhật trong MANUAL. OPEN_LOAD không bị xóa vì đổi mode.
 
-Trong Wokwi Serial gửi dòng `MANUAL 80` hoặc `AUTO` kết thúc newline. Đây là giao diện thử cục bộ A2, không phải MQTT command v1. App chỉ nhận MANUAL khi connected để không báo nhận rồi fallback ngay. Buffer32byte, xử lý tối đa16byte/loop; bỏ cả dòng overflow/non-ASCII/NUL, không nhận suffix của dòng lỗi. Parser không nhận số âm, thập phân, >100 hoặc ký tự thừa. MQTT JSON command/deadline/cache32ID/ACK vẫn thuộc A3; chưa subscribe topic command.
+Trong Wokwi Serial gửi dòng `MANUAL 80` hoặc `AUTO` kết thúc newline. Đây là giao diện thử cục bộ A2, không phải MQTT command v1. App chỉ nhận MANUAL khi connected để không báo nhận rồi fallback ngay. Buffer32byte, xử lý tối đa16byte/loop; bỏ cả dòng overflow/non-ASCII/NUL, không nhận suffix của dòng lỗi. Parser không nhận số âm, thập phân, >100 hoặc ký tự thừa. MQTT JSON command/deadline/cache32ID/ACK đã triển khai ở TASK-007, tách khỏi parser Serial.
 
 ## OPEN_LOAD
 
@@ -33,4 +33,13 @@ Với applied≥20% ổn định1s, current_adc/4095 <10% liên tục2s thì OPE
 
 ## Kiểm tra và giới hạn
 
-[Testing](testing.md), [Wokwi 5 bước](simulation.md), [log TASK-006](../reports/evidence/task-006/validation.log). Bốn suite host chạy code thật với stub ADC/GPIO/mạng/RTOS; không kiểm chứng vật lý, contention hai core hoặc latency thực. Build dùng package pin hiện có, không thêm thư viện. Chưa chạy Wokwi bản P2; không chuyển kết quả live TASK-005 thành PASS P2. Task mạng tạo không thành công thì log lỗi, AUTO vẫn chạy offline. PWM attach/write có kiểm tra trả về và log lỗi; không suy applied từ CONTROL là phép đo điện thật.
+[Testing](testing.md), [Wokwi 5 bước](simulation.md), [log TASK-006](../reports/evidence/task-006/validation.log). Bốn suite host chạy code thật với stub ADC/GPIO/mạng/RTOS; không kiểm chứng vật lý, contention hai core hoặc latency thực. Build dùng package pin hiện có, không thêm thư viện. P2 có kết quả live theo hồ sơ TASK-006 và xác nhận máy dev của người dùng; TASK-007 không chạy lại P2 hoặc live A3. Task mạng tạo không thành công thì log lỗi, AUTO vẫn chạy offline. PWM attach/write có kiểm tra trả về và log lỗi; không suy applied từ CONTROL là phép đo điện thật.
+
+
+## Giao diện MQTT TASK-007
+
+MqttProtocol định nghĩa TelemetrySnapshot (sensor/control/uptime64), RemoteCommand (ID/boot/deadline/session/mode/brightness/validation), CommandResult (ID/session/reason) và CommandProcessor/cacheFIFO32 thuần C++. MqttMailbox có queue8 lệnh/8 kết quả và snapshot mới nhất; Connectivity bọc bằng portMUX critical section ngắn. Chi tiết wire và lỗi theo mqtt.md, không expose JSON vào LightingController.
+
+FirmwareApp xử lý Serial trước rồi tối đa1 remote command/vòng nếu queue kết quả còn chỗ; kiểm tra session/loss-count/deadline64 tại thời điểm dùng. Controller vẫn là chủ trạng thái/PWM duy nhất; kết quả tạo sau update và snapshot trước log/yield1ms. Không parse JSON hoặc gọi MQTT trên core1. Uptime64 dùng esp_timer_get_time; timer P2 vẫn unsigned32.
+
+Network task giữ diagnostics và thêm MQTTv1, đóng transport lỗi để LWT còn hiệu lực, phát ONLINE sau subscribe, ACK từ queue và telemetry rate-limit. Chỉ queue/snapshot được chia sẻ; boot_id bất biến sau setup. Tạo task thất bại vẫn cho AUTO offline. [Kiểm tra TASK-007](testing.md), [hướng dẫn live](mqtt.md#bộ-kiểm-tra-live-a3-trên-máy-dev-chưa-chạy-tại-máy-này).

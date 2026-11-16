@@ -1,3 +1,7 @@
+# Chạy Wokwi — cập nhật A3 và lịch sử P2/P1
+
+TASK-007 có banner `P3/A3 lighting control`, MQTT nghiệp vụ một node và diagnostics; build/copy theo hướng dẫn bên dưới. [Bộ kiểm tra A3 đầy đủ](mqtt.md#bộ-kiểm-tra-live-a3-trên-máy-dev-chưa-chạy-tại-máy-này) gồm telemetry/command/ACK/retry/reconnect/LWT và lệnh Linux/PowerShell. Chưa chạy live A3 tại máy này; P2 đã có xác nhận PASS ở máy dev kia, không yêu cầu chạy lại toàn bộ. Các quy trình P2/P1 dưới đây giữ làm lịch sử/runbook theo firmware tương ứng, không phải kết quả A3.
+
 # Chạy Wokwi — P2/A2 hiện tại, lưu runbook P1 bên dưới
 
 ## TASK-006: kiểm tra tối thiểu sau host/build
