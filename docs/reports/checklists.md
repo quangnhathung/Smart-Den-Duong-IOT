@@ -1,3 +1,20 @@
+# Cập nhật nghiệm thu TASK-005
+
+## TASK-005 — Mạch và đọc cảm biến một node P1/A1
+
+- Hoàn thành: 2026-11-16T02:56:10+07:00
+- Trạng thái: Hoàn thành
+- Tiến độ: 4/4 nhóm nghiệm thu
+
+- [x] Mạch/pin map chính và timeout, Wokwi thực tế.
+- [x] Raw cảm biến P1-01 đến P1-05, có Serial/ảnh/xác nhận giá trị đặt theo biên bản.
+- [x] Build/artifact/hash, PWM P1-06, MQTT P1-07 và recovery P1-08.
+- [x] Tài liệu/hồ sơ và đề xuất TASK-006; chưa triển khai tính năng tiếp theo.
+
+[Bằng chứng, nguồn xác nhận và giới hạn](evidence/task-005/windows-live-20261116-003644/acceptance-final.md). Chỉ nghiệm thu raw sensor/diagnostics một node, không phải AUTO/MANUAL hoặc toàn đồ án.
+
+---
+
 # Các task đã hoàn thành
 
 ## TASK-004 — Hoàn thiện kiến trúc và giao thức A0

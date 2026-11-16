@@ -1,0 +1,15 @@
+﻿TASK-005 / P1-07 - MQTT live check
+Capture: 2026-11-16T01:06:27+07:00 to 2026-11-16T01:09:47+07:00 (200 seconds wall time)
+Payload: p107-win-20261116-010626 (unique payload requested by user, replaces example task005-001)
+Ping publish: QoS 1, PUBACK received, exit 0
+Pong: exact topic and payload match in subscriber log; received QoS 0, retained=0
+Heartbeat: 45 received; first uptime_ms=276892, last=365210; simulation uptime is not wall time
+Broker: running; restart count=0; no node disconnect/timeout in captured broker interval
+Subscriber: existing subscriber kept running; new bounded subscriber disconnected after -W 200; exit 1/Timed out is the configured capture deadline
+Capture setup note: initial start-time write failed because Set-Content has no NoClobber parameter; subscriber still started. Capture bounds confirmed by broker connection/disconnection timestamps and file metadata. No old evidence overwritten.
+MQTT ping/pong and heartbeat: PASS
+Full P1-07: PARTIAL pending timestamped Serial/screenshots of sensor changes during this observation window. User reports correct sensor/PWM behavior; not independently verified here.
+P1-05: no evidence of deliberate ECHO-disconnected timeout test in this run
+P1-08: not run; broker stop/restart requires user approval
+P1-01/02/03/04/06: user reports success; verify case-specific Serial/images before formal acceptance
+No source/config changes, rebuild, broker stop/restart, commit, push, TASK-006 or TASK-005 completion

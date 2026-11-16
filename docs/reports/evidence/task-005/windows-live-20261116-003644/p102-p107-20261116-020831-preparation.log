@@ -1,0 +1,7 @@
+﻿2026-11-16T02:08:31.8386426+07:00
+Configuration: simulations/node_01/wokwi.toml
+Phase: subscriber preparation; user has not started simulation
+MQTT timestamp: %I is subscriber receive time inside container; ISO offset must be retained
+Measurement window: at least 180 wall-clock seconds with sensor changes, after simulation starts; preparation time does not count
+Capture max: 900 seconds, allows time for user Start and evidence export
+Broker: running, restarts=0 before capture

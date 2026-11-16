@@ -33,4 +33,4 @@ Giữ nghỉ 10 ms, LEDC 5 kHz/8 bit, vòng PWM 0/25/50/70/100%, MQTT host.wokwi
 
 Lịch lấy mẫu là mục tiêu trong một vòng điều phối: pulseIn có thể chặn đến 30 ms, MQTT connect có timeout P0 1 giây mỗi bước. Không cam kết thời gian thực cứng 20 ms; xung PIR ngắn có thể bị bỏ lỡ trong khoảng mạng đang chặn. Kiểm tra PIR ở kết nối ổn định; kiểm tra offline xác nhận vòng xử lý tiếp tục, không khẳng định bắt mọi xung. Timer/dimming nghiệp vụ sẽ được đánh giá ở A2/A3.
 
-Build và kiểm thử host đã chạy, xem [bằng chứng TASK-005](../reports/evidence/task-005/README.md). Chưa chạy mô phỏng live bản P1; không dùng bằng chứng P0 làm kết quả cảm biến.
+Build, host checks và Wokwi live P1 đã nghiệm thu; xem [biên bản TASK-005](../reports/evidence/task-005/windows-live-20261116-003644/acceptance-final.md). Raw/PWM tiếp tục trong đoạn broker offline, retry/reconnect và heartbeat/pong có bằng chứng bổ sung. Không dùng bằng chứng P0 làm kết quả cảm biến hoặc suy thành timing cứng/mạng nghiệp vụ đạt.

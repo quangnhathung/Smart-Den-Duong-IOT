@@ -1,0 +1,12 @@
+uptime_ms=8792 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=8793 ldr_adc=3894 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.76
+uptime_ms=9809 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=9810 ldr_adc=3894 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=14906 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=14907 ldr_adc=2045 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.76
+uptime_ms=15925 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=15926 ldr_adc=2045 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81
+uptime_ms=22040 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=22041 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.74
+uptime_ms=25096 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=25097 ldr_adc=156 pir=0 current_adc=3975 distance_valid=1 distance_cm=203.81

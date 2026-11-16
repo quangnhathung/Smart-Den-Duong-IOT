@@ -1,0 +1,81 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1156
+load:0x40078000,len:11456
+ho 0 tail 12 room 4
+load:0x40080400,len:2972
+entry 0x400805dc
+P1/A1 sensor diagnostics node_01 Arduino=3.3.12; no automatic lighting control
+PWM requested=0% duty=0 ready=1
+uptime_ms=1713 wifi=0 mqtt=0 state=-1
+SENSORS uptime_ms=1744 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+uptime_ms=1752 WiFi reconnect started=1 wifi=0
+PWM requested=25% duty=64 ready=1
+uptime_ms=2722 wifi=0 mqtt=0 state=-1
+SENSORS uptime_ms=2752 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+uptime_ms=3713 MQTT connect attempt retry_ms=2000
+uptime_ms=3884 MQTT connected state=0 wifi=3
+MQTT connected; ping subscribed
+uptime_ms=3896 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=3927 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+PWM requested=50% duty=128 ready=1
+uptime_ms=4904 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=4935 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+uptime_ms=5890 HEARTBEAT published=1 state=0
+uptime_ms=5913 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=5944 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+PWM requested=70% duty=179 ready=1
+uptime_ms=6920 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=6951 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+uptime_ms=7896 HEARTBEAT published=1 state=0
+uptime_ms=7929 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=7960 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+PWM requested=100% duty=255 ready=1
+uptime_ms=8936 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=8967 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+uptime_ms=9902 HEARTBEAT published=1 state=0
+uptime_ms=9945 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=9976 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+PWM requested=0% duty=0 ready=1
+uptime_ms=10952 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=10983 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+uptime_ms=11908 HEARTBEAT published=1 state=0
+uptime_ms=11961 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=11992 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+PWM requested=25% duty=64 ready=1
+uptime_ms=12968 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=12999 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+uptime_ms=13910 HEARTBEAT published=1 state=0
+uptime_ms=13973 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=14004 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+PWM requested=50% duty=128 ready=1
+uptime_ms=14980 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=15011 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+uptime_ms=15916 HEARTBEAT published=1 state=0
+uptime_ms=15989 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=16020 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+PWM requested=70% duty=179 ready=1
+uptime_ms=16996 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=17027 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+uptime_ms=17922 HEARTBEAT published=1 state=0
+uptime_ms=18005 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=18036 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+PWM requested=100% duty=255 ready=1
+uptime_ms=19005 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=19006 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+uptime_ms=19923 HEARTBEAT published=1 state=0
+uptime_ms=20005 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=20006 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+PWM requested=0% duty=0 ready=1
+uptime_ms=21013 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=21014 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+uptime_ms=21930 HEARTBEAT published=1 state=0
+uptime_ms=22013 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=22014 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA
+PWM requested=25% duty=64 ready=1
+uptime_ms=23021 wifi=3 mqtt=1 state=0
+SENSORS uptime_ms=23022 ldr_adc=1001 pir=0 current_adc=4095 distance_valid=0 distance_cm=NA

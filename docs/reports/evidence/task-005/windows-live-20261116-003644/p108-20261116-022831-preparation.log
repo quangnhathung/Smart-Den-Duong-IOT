@@ -1,0 +1,4 @@
+﻿2026-11-16T02:28:31.4405577+07:00
+Project smartlight-p0, service mosquitto, config D:/IOT/Smart-Den-Duong-IOT/infra/compose.yaml verified by container labels
+Only observed node client smartlight-node_01-p0 plus diagnostic test clients in broker logs; other running containers postgres/redis use separate ports
+Precondition: require fresh heartbeat before stop; capture interval maximum 600 seconds
