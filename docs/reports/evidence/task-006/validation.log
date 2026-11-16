@@ -1,0 +1,315 @@
+TASK-006 validation 2026-11-16T10:27:29.2865971+07:00
+FORMAT_EXIT=0
+CHECK controller
+PASS environment: 5 fresh samples, UNKNOWN startup, initial boundaries, hysteresis, 1s dwell, direct jumps, invalid ADC
+PASS AUTO/MANUAL: PIR gate, 100cm boundary, invalid distance, max hold/expiry, DAY priority, manual range/refresh/60s/offline, no stale hold
+PASS dimming/fault: 20ms/2-point limit, odd targets, duty mapping, stable1s, detect2s/recover3s, thresholds, invalid ADC, persistent fault
+PASS wrap: filter/dwell, MANUAL deadline, hold and fault across uint32 rollover
+CHECK sensors
+PASS sensors: async ECHO, 12us TRIG, 30ms timeout/late edges, invalidation/recovery 2/100/400cm, ADC/PIR scheduling, micros/millis wrap; no pulseIn
+CHECK app
+PASS app integration: one PWM owner/no diagnostic cycle, nonblocking Serial/overflow/parser, manual/AUTO/offline control, sensor/CONTROL logs
+CHECK mqtt
+PASS MQTT task: preserved topics/binary ping-pong/64-byte bound/non-retain heartbeat, QoS1 subscribe, retry cap, reconnect/resubscribe, loop failure status
+PASS: all 4 host suites; hardware, RTOS timing and Wokwi live remain separate checks
+HOST_EXIT=0
+Processing esp32dev (platform: platformio/espressif32@8.0.0; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (8.0.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 4.30312.261113 (3.3.12) 
+ - framework-arduinoespressif32-esp32-libs @ 3.3.12 
+ - tool-esptool @ 2.50400.0 (5.4.0) 
+ - tool-riscv32-esp-elf-gdb @ 11.2.0+20220823 
+ - tool-xtensa-esp-elf-gdb @ 11.2.0+20230208 
+ - toolchain-riscv32-esp @ 14.2.0+20260121 
+ - toolchain-xtensa-esp-elf @ 14.2.0+20260121
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 45 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- PubSubClient @ 2.8.0
+|-- WiFi @ 3.3.12
+Building in release mode
+Compiling .pio\build\esp32dev\src\Connectivity.cpp.o
+Compiling .pio\build\esp32dev\src\FirmwareApp.cpp.o
+Compiling .pio\build\esp32dev\src\LightingController.cpp.o
+Compiling .pio\build\esp32dev\src\SensorReader.cpp.o
+Compiling .pio\build\esp32dev\src\main.cpp.o
+Linking .pio\build\esp32dev\firmware.elf
+Retrieving maximum program size .pio\build\esp32dev\firmware.elf
+Checking size .pio\build\esp32dev\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.7% (used 48028 bytes from 327680 bytes)
+Flash: [=======   ]  69.6% (used 912651 bytes from 1310720 bytes)
+Building .pio\build\esp32dev\firmware.bin
+esptool v5.4.0
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+========================= [SUCCESS] Took 17.47 seconds =========================
+BUILD_EXIT=0
+FINAL checks 2026-11-16T10:29:35.5182389+07:00
+FORMAT_EXIT=0
+CHECK controller
+PASS environment: 5 fresh samples, UNKNOWN startup, initial boundaries, hysteresis, 1s dwell, direct jumps, invalid ADC
+PASS AUTO/MANUAL: PIR gate, 100cm boundary, invalid distance, max hold/expiry, DAY priority, manual range/refresh/60s/offline, no stale hold
+PASS dimming/fault: 20ms/2-point limit, odd targets, duty mapping, stable1s, detect2s/recover3s, thresholds, invalid ADC, persistent fault
+PASS wrap: filter/dwell, MANUAL deadline, hold and fault across uint32 rollover
+CHECK sensors
+PASS sensors: async ECHO, 12us TRIG, 30ms timeout/late edges, invalidation/recovery 2/100/400cm, ADC/PIR scheduling, micros/millis wrap; no pulseIn
+CHECK app
+PASS app integration: one PWM owner/no diagnostic cycle, nonblocking Serial/overflow/parser, manual/AUTO/offline control, sensor/CONTROL logs
+CHECK mqtt
+PASS MQTT task: preserved topics/binary ping-pong/64-byte bound/non-retain heartbeat, QoS1 subscribe, retry cap, reconnect/resubscribe, loop failure status
+PASS: all 4 host suites; hardware, RTOS timing and Wokwi live remain separate checks
+HOST_EXIT=0
+Processing esp32dev (platform: platformio/espressif32@8.0.0; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (8.0.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 4.30312.261113 (3.3.12) 
+ - framework-arduinoespressif32-esp32-libs @ 3.3.12 
+ - tool-esptool @ 2.50400.0 (5.4.0) 
+ - tool-riscv32-esp-elf-gdb @ 11.2.0+20220823 
+ - tool-xtensa-esp-elf-gdb @ 11.2.0+20230208 
+ - toolchain-riscv32-esp @ 14.2.0+20260121 
+ - toolchain-xtensa-esp-elf @ 14.2.0+20260121
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 45 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- PubSubClient @ 2.8.0
+|-- WiFi @ 3.3.12
+Building in release mode
+Compiling .pio\build\esp32dev\src\FaultDetector.cpp.o
+Compiling .pio\build\esp32dev\src\FirmwareApp.cpp.o
+Compiling .pio\build\esp32dev\src\LightingController.cpp.o
+Compiling .pio\build\esp32dev\src\SensorReader.cpp.o
+Linking .pio\build\esp32dev\firmware.elf
+Retrieving maximum program size .pio\build\esp32dev\firmware.elf
+Checking size .pio\build\esp32dev\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.7% (used 48028 bytes from 327680 bytes)
+Flash: [=======   ]  69.6% (used 912755 bytes from 1310720 bytes)
+Building .pio\build\esp32dev\firmware.bin
+esptool v5.4.0
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+========================= [SUCCESS] Took 15.71 seconds =========================
+BUILD_EXIT=0
+firmware.bin SHA-256 0b0832244b91a1276df028b4c8204841e577a57c269a18a645038d54ea2e4c8b
+firmware.elf SHA-256 ad206f76f7ee0ded1e030766356927561d4e7b7f104b195d53598361fa78df5a
+PREPARE_EXIT=0
+CHECK controller
+PASS environment: 5 fresh samples, UNKNOWN startup, initial boundaries, hysteresis, 1s dwell, direct jumps, invalid ADC
+PASS AUTO/MANUAL: PIR gate, 100cm boundary, invalid distance, max hold/expiry, DAY priority, manual range/refresh/60s/offline, no stale hold
+PASS dimming/fault: 20ms/2-point limit, odd targets, duty mapping, stable1s, detect2s/recover3s, thresholds, invalid ADC, persistent fault
+PASS wrap: filter/dwell, MANUAL deadline, hold and fault across uint32 rollover
+CHECK sensors
+PASS sensors: async ECHO, 12us TRIG, 30ms timeout/late edges, invalidation/recovery 2/100/400cm, ADC/PIR scheduling, micros/millis wrap; no pulseIn
+CHECK app
+PASS app integration: one PWM owner/no diagnostic cycle, nonblocking Serial/overflow/parser, manual/AUTO/offline control, sensor/CONTROL logs
+CHECK mqtt
+PASS MQTT task: preserved topics/binary ping-pong/64-byte bound/non-retain heartbeat, QoS1 subscribe, retry cap, reconnect/resubscribe, loop failure status
+PASS: all 4 host suites; hardware, RTOS timing and Wokwi live remain separate checks
+HOST_FINAL_EXIT=0
+Processing esp32dev (platform: platformio/espressif32@8.0.0; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (8.0.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 4.30312.261113 (3.3.12) 
+ - framework-arduinoespressif32-esp32-libs @ 3.3.12 
+ - tool-esptool @ 2.50400.0 (5.4.0) 
+ - tool-riscv32-esp-elf-gdb @ 11.2.0+20220823 
+ - tool-xtensa-esp-elf-gdb @ 11.2.0+20230208 
+ - toolchain-riscv32-esp @ 14.2.0+20260121 
+ - toolchain-xtensa-esp-elf @ 14.2.0+20260121
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 45 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- PubSubClient @ 2.8.0
+|-- WiFi @ 3.3.12
+Building in release mode
+Compiling .pio\build\esp32dev\src\Connectivity.cpp.o
+Linking .pio\build\esp32dev\firmware.elf
+Retrieving maximum program size .pio\build\esp32dev\firmware.elf
+Checking size .pio\build\esp32dev\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.7% (used 48028 bytes from 327680 bytes)
+Flash: [=======   ]  69.6% (used 912763 bytes from 1310720 bytes)
+Building .pio\build\esp32dev\firmware.bin
+esptool v5.4.0
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+========================= [SUCCESS] Took 15.73 seconds =========================
+BUILD_FINAL_EXIT=0
+firmware.bin SHA-256 79220ae4c32a280290b3ac573964f51f331716c8ce3643e45f904f7c1ffa5626
+firmware.elf SHA-256 323800001e940676e1b2f33a8853561311bd3916441ec4caaf8785f2061604ca
+PREPARE_FINAL_EXIT=0
+CHECK controller
+PASS environment: 5 fresh samples, UNKNOWN startup, initial boundaries, hysteresis, 1s dwell, direct jumps, invalid ADC
+PASS AUTO/MANUAL: PIR gate, 100cm boundary, invalid distance, max hold/expiry, DAY priority, manual range/refresh/60s/offline, no stale hold
+PASS dimming/fault: 20ms/2-point limit, odd targets, duty mapping, stable1s, detect2s/recover3s, thresholds, invalid ADC, persistent fault
+PASS wrap: filter/dwell, MANUAL deadline, hold and fault across uint32 rollover
+CHECK sensors
+PASS sensors: async ECHO, 12us TRIG, 30ms timeout/late edges, invalidation/recovery 2/100/400cm, ADC/PIR scheduling, micros/millis wrap; no pulseIn
+CHECK app
+PASS app integration: one PWM owner/no diagnostic cycle, nonblocking Serial/overflow/parser, manual/AUTO/offline control, sensor/CONTROL logs
+CHECK mqtt
+PASS MQTT task: preserved topics/binary ping-pong/64-byte bound/non-retain heartbeat, QoS1 subscribe, retry cap, reconnect/resubscribe, loop failure status
+PASS: all 4 host suites; hardware, RTOS timing and Wokwi live remain separate checks
+Processing esp32dev (platform: platformio/espressif32@8.0.0; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (8.0.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 4.30312.261113 (3.3.12) 
+ - framework-arduinoespressif32-esp32-libs @ 3.3.12 
+ - tool-esptool @ 2.50400.0 (5.4.0) 
+ - tool-riscv32-esp-elf-gdb @ 11.2.0+20220823 
+ - tool-xtensa-esp-elf-gdb @ 11.2.0+20230208 
+ - toolchain-riscv32-esp @ 14.2.0+20260121 
+ - toolchain-xtensa-esp-elf @ 14.2.0+20260121
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 45 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- PubSubClient @ 2.8.0
+|-- WiFi @ 3.3.12
+Building in release mode
+Compiling .pio\build\esp32dev\src\Connectivity.cpp.o
+Compiling .pio\build\esp32dev\src\DimmingController.cpp.o
+Compiling .pio\build\esp32dev\src\FaultDetector.cpp.o
+Compiling .pio\build\esp32dev\src\FirmwareApp.cpp.o
+Compiling .pio\build\esp32dev\src\LightingController.cpp.o
+Compiling .pio\build\esp32dev\src\LocalControlCommand.cpp.o
+Compiling .pio\build\esp32dev\src\SensorReader.cpp.o
+Compiling .pio\build\esp32dev\src\main.cpp.o
+Building .pio\build\esp32dev\bootloader.bin
+Generating partitions .pio\build\esp32dev\partitions.bin
+Compiling .pio\build\esp32dev\libf1b\PubSubClient\PubSubClient.cpp.o
+Compiling .pio\build\esp32dev\lib6a7\Network\NetworkClient.cpp.o
+Compiling .pio\build\esp32dev\lib6a7\Network\NetworkEvents.cpp.o
+esptool v5.4.0
+Creating ESP32 image...
+Merged 2 ELF sections.
+Successfully created ESP32 image.
+Compiling .pio\build\esp32dev\lib6a7\Network\NetworkInterface.cpp.o
+Compiling .pio\build\esp32dev\lib6a7\Network\NetworkManager.cpp.o
+Compiling .pio\build\esp32dev\lib6a7\Network\NetworkServer.cpp.o
+Compiling .pio\build\esp32dev\lib6a7\Network\NetworkUdp.cpp.o
+Archiving .pio\build\esp32dev\libf1b\libPubSubClient.a
+Indexing .pio\build\esp32dev\libf1b\libPubSubClient.a
+Compiling .pio\build\esp32dev\lib13e\WiFi\AP.cpp.o
+Compiling .pio\build\esp32dev\lib13e\WiFi\STA.cpp.o
+Compiling .pio\build\esp32dev\lib13e\WiFi\WiFi.cpp.o
+Compiling .pio\build\esp32dev\lib13e\WiFi\WiFiAP.cpp.o
+Compiling .pio\build\esp32dev\lib13e\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\esp32dev\lib13e\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\esp32dev\lib13e\WiFi\WiFiSTA.cpp.o
+Archiving .pio\build\esp32dev\lib6a7\libNetwork.a
+Indexing .pio\build\esp32dev\lib6a7\libNetwork.a
+Compiling .pio\build\esp32dev\lib13e\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\ColorFormat.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\Esp.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\FirmwareMSC.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\FunctionalInterrupt.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\HEXBuilder.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\HWCDC.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\HashBuilder.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\MacAddress.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\StringUtils.cpp.o
+Archiving .pio\build\esp32dev\lib13e\libWiFi.a
+Indexing .pio\build\esp32dev\lib13e\libWiFi.a
+Compiling .pio\build\esp32dev\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\USB.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\USBHost.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\USBMSC.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\chip-debug-report.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-hosted.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-i2c-ng.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-ldo.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-log-wrapper.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-periman.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-rgb-led.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-tinyusb.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-touch-ng.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\freertos_stats.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\idf_openthread_mpool_wrapper.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\main.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\esp32dev\libFrameworkArduino.a
+Indexing .pio\build\esp32dev\libFrameworkArduino.a
+Linking .pio\build\esp32dev\firmware.elf
+Retrieving maximum program size .pio\build\esp32dev\firmware.elf
+Checking size .pio\build\esp32dev\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.7% (used 48028 bytes from 327680 bytes)
+Flash: [=======   ]  69.6% (used 912763 bytes from 1310720 bytes)
+Building .pio\build\esp32dev\firmware.bin
+esptool v5.4.0
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+========================= [SUCCESS] Took 58.48 seconds =========================
+FINAL_BUILD_EXIT=0
+firmware.bin SHA-256 b194e241aa32345df23fe22968a536a80ba3e050159a641032c02eba0a98f2cd
+firmware.elf SHA-256 6ec531983a20e4e66d05cf43bfc5153f9494f9ae4d70677ab374f20556fbb00b
+FINAL_PREPARE_EXIT=0

@@ -9,9 +9,9 @@ Tài liệu chốt thiết kế A0 cho các gói tiếp theo. Nghiệm thu môi 
 ## Hiện trạng đã triển khai
 
 - Một ESP32 `esp32dev`, source dùng chung với entry point `src/main.cpp`.
-- EnvironmentSmokeTest tích hợp SensorReader đọc raw cảm biến P1; LED GPIO26, năm PWM, Serial, Wi-Fi, MQTT ping/pong và heartbeat diagnostics.
+- FirmwareApp điều phối SensorReader, LightingController, DimmingController/FaultDetector; LED GPIO26 theo AUTO/MANUAL, Serial và MQTT ping/pong/heartbeat diagnostics. Connectivity sở hữu PubSubClient ở task core0, vòng điều khiển core1 đọc atomic status/loss-count; ECHO bắt cạnh, không pulseIn.
 - Một cấu hình Wokwi node_01, script copy artifact, Mosquitto Docker local.
-- Đã có code/sơ đồ cảm biến P1 nhưng chưa nghiệm thu live. Chưa có AUTO/MANUAL, telemetry/ACK nghiệp vụ, backend, SQLite hoặc dashboard.
+- P1 đã nghiệm thu TASK-005; P2/A2 đã có code AUTO/MANUAL/hold/dimming/fault, host checks và build, chưa kiểm tra Wokwi P2. MANUAL thử qua Serial/API; telemetry/command/ACK nghiệp vụ, backend, SQLite và dashboard chưa triển khai.
 - Đã pin các package trong PlatformIO. PlatformIO Core 6.1.19 là phiên bản công cụ đã dùng, không được cài lại bởi tệp cấu hình dự án.
 
 ## Kiến trúc mục tiêu
@@ -57,7 +57,7 @@ Pin map mục tiêu giữ SRS 4.1: LDR34, PIR27, TRIG18, ECHO19, tải35, LED26.
 | Gói | Đầu vào | Đầu ra để review | Chưa làm ở gói này |
 |---|---|---|---|
 | A0/TASK-004 | P0 đã nghiệm thu, SRS | Kiến trúc, hợp đồng MQTT, cấu hình cố định, kiểm tra convention | Cảm biến, ứng dụng nghiệp vụ |
-| A1/TASK-005 (chờ live) | Pin map, cấu hình A0 | Một mạch đủ cảm biến, Serial raw và ca PWM | AUTO/MANUAL, phân loại, fault |
+| A1/TASK-005 (đã nghiệm thu) | Pin map, cấu hình A0 | Một mạch đủ cảm biến, Serial raw và ca PWM | AUTO/MANUAL, phân loại, fault |
 | A2 | Cảm biến đã kiểm chứng | Logic ánh sáng/timer/dimming/fault, kiểm thử clock | Backend/dashboard |
 | A3 | Logic và MQTT v1 | Telemetry/command/ACK/availability, reconnect | Xây giao diện web |
 | A4 | Hợp đồng và fixture có nhãn | Collector/API/database/năng lượng | Tuyên bố dữ liệu fixture là live |

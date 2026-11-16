@@ -1,0 +1,9 @@
+2026-11-16T11:06:43.131+07:00 HOST endpoint=rfc2217://127.0.0.1:4000 log=rfc2217-manual-20261116-110643-131632.log
+2026-11-16T11:06:43.542+07:00 HOST RFC2217 negotiation succeeded
+2026-11-16T11:06:43.542+07:00 TX b'MANUAL 80\n'
+2026-11-16T11:06:43.987+07:00 RX LOCAL command accepted=1; use AUTO or MANUAL 0..100 (MQTT connected)
+2026-11-16T11:06:51.042+07:00 RX CONTROL uptime_ms=13399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=61 duty=156 ready=1 fault=OK mqtt=1
+2026-11-16T11:06:51.053+07:00 RX SENSORS uptime_ms=13399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.93
+2026-11-16T11:06:51.140+07:00 RX uptime_ms=13879 HEARTBEAT published=1 state=0
+2026-11-16T11:06:51.171+07:00 RX CONTROL uptime_ms=14399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:06:51.172+07:00 RESULT PASS observed requested mode/applied level

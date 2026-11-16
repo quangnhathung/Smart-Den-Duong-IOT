@@ -1,0 +1,156 @@
+2026-11-16T11:07:21.893+07:00 HOST endpoint=rfc2217://127.0.0.1:4000 log=rfc2217-manual-20261116-110721-893400.log
+2026-11-16T11:07:22.313+07:00 HOST RFC2217 negotiation succeeded
+2026-11-16T11:07:22.313+07:00 TX b'MANUAL 80\n'
+2026-11-16T11:07:22.624+07:00 RX LOCAL command accepted=1; use AUTO or MANUAL 0..100 (MQTT connected)
+2026-11-16T11:07:22.838+07:00 RX CONTROL uptime_ms=23399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:22.939+07:00 RX SENSORS uptime_ms=23399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:25.028+07:00 RX uptime_ms=23907 HEARTBEAT published=1 state=0
+2026-11-16T11:07:26.677+07:00 RX CONTROL uptime_ms=24399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:26.768+07:00 RX SENSORS uptime_ms=24399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.62
+2026-11-16T11:07:29.384+07:00 RX CONTROL uptime_ms=25399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:29.473+07:00 RX SENSORS uptime_ms=25399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:31.102+07:00 RX uptime_ms=25915 HEARTBEAT published=1 state=0
+2026-11-16T11:07:32.341+07:00 RX CONTROL uptime_ms=26399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:32.422+07:00 RX SENSORS uptime_ms=26399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:35.289+07:00 RX CONTROL uptime_ms=27399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:35.370+07:00 RX SENSORS uptime_ms=27399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:36.667+07:00 RX uptime_ms=27921 HEARTBEAT published=1 state=0
+2026-11-16T11:07:37.879+07:00 RX CONTROL uptime_ms=28399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:37.965+07:00 RX SENSORS uptime_ms=28399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:41.097+07:00 RX CONTROL uptime_ms=29399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:41.194+07:00 RX SENSORS uptime_ms=29399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:42.437+07:00 RX uptime_ms=29925 HEARTBEAT published=1 state=0
+2026-11-16T11:07:43.614+07:00 RX CONTROL uptime_ms=30399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:43.693+07:00 RX SENSORS uptime_ms=30399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:46.164+07:00 RX CONTROL uptime_ms=31399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:46.247+07:00 RX SENSORS uptime_ms=31399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:47.703+07:00 RX uptime_ms=31931 HEARTBEAT published=1 state=0
+2026-11-16T11:07:48.886+07:00 RX CONTROL uptime_ms=32399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:48.968+07:00 RX SENSORS uptime_ms=32399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:51.365+07:00 RX CONTROL uptime_ms=33399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:51.445+07:00 RX SENSORS uptime_ms=33399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:52.703+07:00 RX uptime_ms=33935 HEARTBEAT published=1 state=0
+2026-11-16T11:07:53.970+07:00 RX CONTROL uptime_ms=34399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:54.052+07:00 RX SENSORS uptime_ms=34399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:56.469+07:00 RX CONTROL uptime_ms=35399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:56.552+07:00 RX SENSORS uptime_ms=35399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:07:57.887+07:00 RX uptime_ms=35944 HEARTBEAT published=1 state=0
+2026-11-16T11:07:58.960+07:00 RX CONTROL uptime_ms=36399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:07:59.043+07:00 RX SENSORS uptime_ms=36399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:08:01.470+07:00 RX CONTROL uptime_ms=37399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:01.552+07:00 RX SENSORS uptime_ms=37399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:08:02.900+07:00 RX uptime_ms=37948 HEARTBEAT published=1 state=0
+2026-11-16T11:08:04.126+07:00 RX CONTROL uptime_ms=38399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:04.216+07:00 RX SENSORS uptime_ms=38399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:08:06.797+07:00 RX CONTROL uptime_ms=39399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:06.896+07:00 RX SENSORS uptime_ms=39399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:08:08.305+07:00 RX uptime_ms=39954 HEARTBEAT published=1 state=0
+2026-11-16T11:08:09.534+07:00 RX CONTROL uptime_ms=40399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:09.618+07:00 RX SENSORS uptime_ms=40399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.93
+2026-11-16T11:08:12.783+07:00 RX CONTROL uptime_ms=41399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:12.882+07:00 RX SENSORS uptime_ms=41399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.93
+2026-11-16T11:08:14.444+07:00 RX uptime_ms=41959 HEARTBEAT published=1 state=0
+2026-11-16T11:08:15.736+07:00 RX CONTROL uptime_ms=42399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:15.822+07:00 RX SENSORS uptime_ms=42399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:08:18.486+07:00 RX CONTROL uptime_ms=43399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:18.579+07:00 RX SENSORS uptime_ms=43399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:08:20.267+07:00 RX uptime_ms=43964 HEARTBEAT published=1 state=0
+2026-11-16T11:08:21.773+07:00 RX CONTROL uptime_ms=44399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:21.874+07:00 RX SENSORS uptime_ms=44399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.93
+2026-11-16T11:08:25.243+07:00 RX CONTROL uptime_ms=45399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:25.349+07:00 RX SENSORS uptime_ms=45399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.93
+2026-11-16T11:08:26.913+07:00 RX uptime_ms=45969 HEARTBEAT published=1 state=0
+2026-11-16T11:08:28.214+07:00 RX CONTROL uptime_ms=46399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:28.311+07:00 RX SENSORS uptime_ms=46399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:08:31.103+07:00 RX CONTROL uptime_ms=47399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:31.193+07:00 RX SENSORS uptime_ms=47399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:08:33.453+07:00 RX uptime_ms=47974 HEARTBEAT published=1 state=0
+2026-11-16T11:08:34.997+07:00 RX CONTROL uptime_ms=48399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:35.095+07:00 RX SENSORS uptime_ms=48399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.93
+2026-11-16T11:08:38.135+07:00 RX CONTROL uptime_ms=49399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:38.271+07:00 RX SENSORS uptime_ms=49399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:08:40.069+07:00 RX uptime_ms=49974 HEARTBEAT published=1 state=0
+2026-11-16T11:08:41.266+07:00 RX CONTROL uptime_ms=50399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:41.354+07:00 RX SENSORS uptime_ms=50399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.93
+2026-11-16T11:08:44.266+07:00 RX CONTROL uptime_ms=51399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:44.362+07:00 RX SENSORS uptime_ms=51399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.93
+2026-11-16T11:08:46.109+07:00 RX uptime_ms=51979 HEARTBEAT published=1 state=0
+2026-11-16T11:08:47.215+07:00 RX CONTROL uptime_ms=52399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:47.310+07:00 RX SENSORS uptime_ms=52399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:08:50.323+07:00 RX CONTROL uptime_ms=53399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:50.423+07:00 RX SENSORS uptime_ms=53399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:08:52.389+07:00 RX uptime_ms=53985 HEARTBEAT published=1 state=0
+2026-11-16T11:08:53.540+07:00 RX CONTROL uptime_ms=54399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:53.628+07:00 RX SENSORS uptime_ms=54399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.55
+2026-11-16T11:08:56.444+07:00 RX CONTROL uptime_ms=55399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:56.536+07:00 RX SENSORS uptime_ms=55399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.55
+2026-11-16T11:08:58.130+07:00 RX uptime_ms=55992 HEARTBEAT published=1 state=0
+2026-11-16T11:08:59.524+07:00 RX CONTROL uptime_ms=56399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:08:59.616+07:00 RX SENSORS uptime_ms=56399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:02.249+07:00 RX CONTROL uptime_ms=57399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:02.335+07:00 RX SENSORS uptime_ms=57399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:03.884+07:00 RX uptime_ms=57997 HEARTBEAT published=1 state=0
+2026-11-16T11:09:05.068+07:00 RX CONTROL uptime_ms=58399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:05.156+07:00 RX SENSORS uptime_ms=58399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.55
+2026-11-16T11:09:07.705+07:00 RX CONTROL uptime_ms=59399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:07.815+07:00 RX SENSORS uptime_ms=59399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.55
+2026-11-16T11:09:09.380+07:00 RX uptime_ms=60002 HEARTBEAT published=1 state=0
+2026-11-16T11:09:10.438+07:00 RX CONTROL uptime_ms=60399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:10.526+07:00 RX SENSORS uptime_ms=60399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:13.099+07:00 RX CONTROL uptime_ms=61399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:13.187+07:00 RX SENSORS uptime_ms=61399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:15.235+07:00 RX uptime_ms=62007 HEARTBEAT published=1 state=0
+2026-11-16T11:09:16.350+07:00 RX CONTROL uptime_ms=62399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:16.461+07:00 RX SENSORS uptime_ms=62399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:19.297+07:00 RX CONTROL uptime_ms=63399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:19.427+07:00 RX SENSORS uptime_ms=63399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:21.086+07:00 RX uptime_ms=64011 HEARTBEAT published=1 state=0
+2026-11-16T11:09:22.165+07:00 RX CONTROL uptime_ms=64399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:22.252+07:00 RX SENSORS uptime_ms=64399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:25.116+07:00 RX CONTROL uptime_ms=65399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:25.221+07:00 RX SENSORS uptime_ms=65399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.55
+2026-11-16T11:09:27.354+07:00 RX uptime_ms=66012 HEARTBEAT published=1 state=0
+2026-11-16T11:09:28.589+07:00 RX CONTROL uptime_ms=66399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:28.694+07:00 RX SENSORS uptime_ms=66399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:31.318+07:00 RX CONTROL uptime_ms=67399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:31.404+07:00 RX SENSORS uptime_ms=67399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:32.964+07:00 RX uptime_ms=68016 HEARTBEAT published=1 state=0
+2026-11-16T11:09:34.143+07:00 RX CONTROL uptime_ms=68399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:34.242+07:00 RX SENSORS uptime_ms=68399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:36.911+07:00 RX CONTROL uptime_ms=69399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:37.025+07:00 RX SENSORS uptime_ms=69399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:38.667+07:00 RX uptime_ms=70021 HEARTBEAT published=1 state=0
+2026-11-16T11:09:39.725+07:00 RX CONTROL uptime_ms=70399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:39.808+07:00 RX SENSORS uptime_ms=70399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:42.327+07:00 RX CONTROL uptime_ms=71399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:42.411+07:00 RX SENSORS uptime_ms=71399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:44.157+07:00 RX uptime_ms=72025 HEARTBEAT published=1 state=0
+2026-11-16T11:09:45.209+07:00 RX CONTROL uptime_ms=72399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:45.315+07:00 RX SENSORS uptime_ms=72399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:47.997+07:00 RX CONTROL uptime_ms=73399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:48.086+07:00 RX SENSORS uptime_ms=73399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:49.672+07:00 RX uptime_ms=74031 HEARTBEAT published=1 state=0
+2026-11-16T11:09:50.614+07:00 RX CONTROL uptime_ms=74399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:50.694+07:00 RX SENSORS uptime_ms=74399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:53.130+07:00 RX CONTROL uptime_ms=75399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:53.212+07:00 RX SENSORS uptime_ms=75399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:54.869+07:00 RX uptime_ms=76035 HEARTBEAT published=1 state=0
+2026-11-16T11:09:55.791+07:00 RX CONTROL uptime_ms=76399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:55.871+07:00 RX SENSORS uptime_ms=76399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:58.290+07:00 RX CONTROL uptime_ms=77399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:09:58.367+07:00 RX SENSORS uptime_ms=77399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:09:59.921+07:00 RX uptime_ms=78041 HEARTBEAT published=1 state=0
+2026-11-16T11:10:00.794+07:00 RX CONTROL uptime_ms=78399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:10:00.874+07:00 RX SENSORS uptime_ms=78399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:10:03.304+07:00 RX CONTROL uptime_ms=79399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:10:03.395+07:00 RX SENSORS uptime_ms=79399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:10:05.044+07:00 RX uptime_ms=80049 HEARTBEAT published=1 state=0
+2026-11-16T11:10:05.890+07:00 RX CONTROL uptime_ms=80399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:10:05.969+07:00 RX SENSORS uptime_ms=80399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:10:08.347+07:00 RX CONTROL uptime_ms=81399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:10:08.428+07:00 RX SENSORS uptime_ms=81399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71
+2026-11-16T11:10:10.069+07:00 RX uptime_ms=82054 HEARTBEAT published=1 state=0
+2026-11-16T11:10:10.916+07:00 RX CONTROL uptime_ms=82399 mode=MANUAL environment=NIGHT motion=NONE ldr_filtered=3933 target=80 applied=80 duty=204 ready=1 fault=OK mqtt=1
+2026-11-16T11:10:10.998+07:00 RX SENSORS uptime_ms=82399 ldr_adc=3933 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.93
+2026-11-16T11:10:13.375+07:00 RX CONTROL uptime_ms=83399 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=3933 target=25 applied=72 duty=184 ready=1 fault=OK mqtt=1
+2026-11-16T11:10:13.376+07:00 RESULT PASS observed MANUAL/applied then AUTO near 60s simulated (+/-1s CONTROL resolution), mqtt=1

@@ -1,4 +1,21 @@
-# Kiểm tra TASK-005 P1/A1
+# Kiểm tra firmware — TASK-006 và lịch sử TASK-005
+
+## TASK-006 P2/A2
+
+Chạy `python scripts/check-firmware.py` bằng Python PlatformIO: bốn suite controller/sensors/app/mqtt; [cách chạy Windows và giới hạn stub](../../test/host/README.md). Code/host/build được kiểm tra trong [validation.log](../reports/evidence/task-006/validation.log); không chạy lại Wokwi TASK-005 hoặc thao tác broker.
+
+| Nhóm | Ca tự động | Trạng thái |
+|---|---|---|
+| AUTO/state | TC-01–11: 5 mẫu mới, boundary1200/2600, hysteresis1100/1300/2500/2700, dwell1s, motion100cm/invalid/PIR gate, hold5s/max, DAY cancel | Host PASS |
+| MANUAL | TC-12/13/27: range0–100, DAY priority, refresh60s, offline/reconnect và fast-loss giữa poll, AUTO không dùng hold cũ | Host PASS |
+| Dimming/fault | TC-14/15/16/28: 2điểm/20ms, target lẻ, không burst, stable1s/detect2s/recover3s, biên ADC409/410/818/819, invalid, mode/off không xóa, PWM không bị cắt | Host PASS |
+| Runtime/regression | ISR ECHO/timeout30ms/late edges/micros wrap, sample timers; Serial parser/overflow/NUL; MQTT binary pong/64byte/topic/retain/backoff/resubscribe | Host PASS |
+| Firmware đích | esp32dev, package pin, formatter | Xem log thực tế |
+| Wokwi P2 | [Bằng chứng và ma trận hiện tại](../reports/evidence/task-006/acceptance-review.md) | MANUAL80/timeout60s có file PASS; các bài live khác người dùng xác nhận, hồ sơ file PENDING |
+
+TC-17–20/26 JSON command/ACK, đa node/backend/dashboard và stability30phút thuộc A3 trở đi, chưa được coi PASS. Test MQTT hiện dùng stub, không thay kiểm tra broker/live. Một test tích hợp đã bắt lỗi reconnect quá nhanh che mất sự kiện offline; code có atomic loss-count và test hồi quy. Những assertion thử nghiệm thất bại trong quá trình phát triển đã được sửa rồi chạy lại; log cuối ghi kết quả thực, không tuyên bố không từng có lỗi.
+
+## TASK-005 P1/A1 — lịch sử nghiệm thu giữ nguyên
 
 ## Kết quả nghiệm thu cuối
 

@@ -1,4 +1,37 @@
-# Chạy và nghiệm thu Wokwi P1/A1
+# Chạy Wokwi — P2/A2 hiện tại, lưu runbook P1 bên dưới
+
+## TASK-006: kiểm tra tối thiểu sau host/build
+
+Rà soát sau live: RFC2217/MANUAL80/timeout60s có log gốc PASS; người vận hành xác nhận các bước khác đã chạy. [Ma trận nguồn bằng chứng](../reports/evidence/task-006/acceptance-review.md) còn thiếu file AUTO/PIR/fault/timeout/reconnect; ưu tiên xuất dữ liệu đã có, không yêu cầu chạy lại các bước đã đạt. Các bước dưới đây giữ làm runbook, không phải yêu cầu lặp toàn bộ.
+
+### Gửi MANUAL/AUTO qua RFC2217 khi Terminal không nhận input
+
+Sơ đồ chính node_01/wokwi.toml đã thêm `rfc2217ServerPort = 4000` trong [wokwi], giữ đường dẫn artifact. Đây là [tính năng chính thức Wokwi](https://docs.wokwi.com/vscode/project-config#serial-port-forwarding); không sửa thuật toán hoặc broker. Sau thay đổi cấu hình: F1 → Stop Simulator, rồi Start Simulator đúng cấu hình chính một lần, giữ tab hiển thị. Không build lại chỉ vì thay cổng Serial.
+
+Từ CMD ở gốc repo, dùng Python PlatformIO (đã có pyserial3.5):
+
+```cmd
+"%USERPROFILE%\.platformio\penv\Scripts\python.exe" scripts\wokwi-serial.py PROBE
+"%USERPROFILE%\.platformio\penv\Scripts\python.exe" scripts\wokwi-serial.py MANUAL 80
+"%USERPROFILE%\.platformio\penv\Scripts\python.exe" scripts\wokwi-serial.py AUTO
+"%USERPROFILE%\.platformio\penv\Scripts\python.exe" scripts\wokwi-serial.py MANUAL 80 --check-timeout
+```
+
+PROBE chỉ mở/đóng kết nối và xác nhận thương lượng RFC2217, không gửi lệnh điều khiển. MANUAL/AUTO tự thêm LF (`\n`), đợi LOCAL accepted=1 rồi CONTROL xác nhận mode; MANUAL còn phải applied=80 trước khi báo đạt. Client đặt DTR/RTS false trước mở để không chủ động reset ESP32. Không mở nhiều client Serial TCP đồng thời. Nếu lỗi kết nối, kiểm tra port4000 và cấu hình trước, không sửa thuật toán.
+
+Mỗi lần chạy tạo log UTF-8 tên mới `rfc2217-<mode>-<timestamp>.log` trong evidence/task-006, ghi host timestamp, TX dạng bytes và RX Serial thực. Không ghi đè. `--check-timeout` giữ kết nối đến khi nhận MANUAL/applied rồi AUTO, mqtt luôn1 trong CONTROL đã quan sát. So uptime giữa hai dòng CONTROL để xác nhận khoảng60s mô phỏng với độ phân giải log±1s; không dùng 60s thời gian thực. Giới hạn chờ mặc định300s thực, có thể tăng `--wall-timeout 600` nếu mô phỏng chậm. Không gửi AUTO hoặc lệnh khác trong lúc kiểm tra timeout. Early fallback, mất mạng, boot lại hoặc hết thời gian chờ không được báo PASS.
+
+Script và verifier đã có 7 test offline ở `test/host/test_wokwi_serial.py` (chạy Python với -B); test giả transport không phải bằng chứng RFC2217/Wokwi thật. Tại lượt chuẩn bị chưa có listener4000 và chưa restart Wokwi, nên việc gửi/nhận lệnh live vẫn chờ người vận hành.
+
+Artifact chuẩn bị bằng scripts/prepare-simulation.py sau build SUCCESS. Firmware hiện banner `P2/A2 lighting control`, dòng CONTROL có mode/environment/motion/target/applied/fault/mqtt; LED không còn tự cycle. Không chạy lại nghiệm thu TASK-005; các bước P1 cũ dưới đây là lịch sử của firmware trước.
+
+1. Chạy riêng `simulations/node_01/wokwi.toml`, giữ broker hiện có. LDR lần lượt 10000/100/1 lux (xem ADC thực), đợi filter+dwell rồi dimming: DAY0, TWILIGHT50, NIGHT25; boot đầu UNKNOWN50 là bình thường. Xem filtered ADC, không giả lux bằng ADC.
+2. NIGHT, PIR Simulate Motion với distance150cm rồi50cm: mục tiêu70 rồi100. Khi PIR LOW, giữ mức cao nhất5s theo uptime rồi dim về25. Khoảng cách gần mà PIR LOW không tự kích hoạt.
+3. Khi mqtt=1, nhập Serial `MANUAL 80` newline: target80 cả ban ngày. Gửi `AUTO` để về mức hiện tại, không dùng hold cũ; có thể gửi MANUAL lại và giữ60s mô phỏng để kiểm tra tự hết hạn. Không dừng broker; fallback offline đã có host test nhưng chưa đo live P2.
+4. MANUAL80, đợi applied ổn định; pot về0: sau stable1s và xác nhận2s xuất OPEN_LOAD, PWM vẫn80. Gửi MANUAL0: lỗi không tự xóa. Đưa pot tối đa, MANUAL80, đợi ổn định và phục hồi3s: OK.
+5. Sau khi xuất Serial/ảnh chính, Stop Simulator rồi chọn riêng `simulations/node_01/timeout/wokwi.toml`. NIGHT + PIR HIGH phải distance_valid=0/NA, motion UNKNOWN/target100; PWM/heartbeat tiếp tục. Chỉ chạy một client. Không stop/start Docker để làm bước này.
+
+Lưu một đoạn Serial/ảnh gọn trong evidence/task-006, ghi cấu hình và giờ thực. Timing điều khiển trên theo clock mô phỏng, không theo tốc độ đồng hồ Windows. Chưa có kết quả live P2: không đánh dấu PASS từ host/build. Lệnh Serial cần newline; `LOCAL command accepted=0` nếu malformed hoặc MANUAL khi MQTT chưa nối.
 
 ## Tham chiếu và điều kiện
 

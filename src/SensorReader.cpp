@@ -16,21 +16,76 @@ SensorSnapshot snapshot = {};
 uint32_t lastAnalogMs = 0;
 uint32_t lastPirMs = 0;
 uint32_t lastDistanceMs = 0;
+bool firstDistance = true;
+volatile bool echoPending = false;
+volatile bool echoHigh = false;
+volatile bool echoComplete = false;
+volatile uint32_t echoRiseUs = 0;
+volatile uint32_t echoDurationUs = 0;
+volatile uint32_t triggerSinceUs = 0;
+
+void IRAM_ATTR captureEcho() {
+  if (!echoPending) {
+    return;
+  }
+  const uint32_t nowUs = micros();
+  if (nowUs - triggerSinceUs >= ECHO_TIMEOUT_US) {
+    echoDurationUs = 0;
+    echoComplete = true;
+    echoPending = false;
+    return;
+  }
+  if (digitalRead(ECHO_PIN) == HIGH) {
+    echoRiseUs = nowUs;
+    echoHigh = true;
+  } else if (echoHigh) {
+    echoDurationUs = nowUs - echoRiseUs;
+    echoComplete = true;
+    echoPending = false;
+  }
+}
 
 void readAnalog() {
   snapshot.ldrAdc = analogRead(LDR_PIN);
   snapshot.currentAdc = analogRead(CURRENT_PIN);
+  ++snapshot.analogSequence;
 }
 
-void readDistance() {
+void updateDistance(uint32_t nowMs) {
+  // Only short critical sections; no busy wait for ECHO. Ignore late edges after timeout.
+  const uint32_t nowUs = micros();
+  noInterrupts();
+  const bool complete = echoComplete;
+  const uint32_t durationUs = echoDurationUs;
+  const bool timedOut = echoPending && nowUs - triggerSinceUs >= ECHO_TIMEOUT_US;
+  if (complete || timedOut) {
+    echoComplete = false;
+    echoPending = false;
+    echoHigh = false;
+  }
+  const bool pending = echoPending;
+  interrupts();
+  if (complete || timedOut) {
+    snapshot.distanceValid = complete && durationUs > 0 && durationUs <= ECHO_TIMEOUT_US;
+    snapshot.distanceCm = snapshot.distanceValid ? durationUs / 58.0f : 0.0f;
+  }
+  if (pending || (!firstDistance && nowMs - lastDistanceMs < DISTANCE_INTERVAL_MS)) {
+    return;
+  }
+  firstDistance = false;
+  lastDistanceMs = nowMs;
+  noInterrupts();
+  echoHigh = false;
+  echoComplete = false;
+  echoDurationUs = 0;
+  triggerSinceUs = micros();
+  echoPending = true;
+  interrupts();
   digitalWrite(TRIG_PIN, LOW);
   delayMicroseconds(2);
   digitalWrite(TRIG_PIN, HIGH);
   delayMicroseconds(10);
   digitalWrite(TRIG_PIN, LOW);
-  const unsigned long durationUs = pulseIn(ECHO_PIN, HIGH, ECHO_TIMEOUT_US);
-  snapshot.distanceValid = durationUs > 0;
-  snapshot.distanceCm = snapshot.distanceValid ? durationUs / 58.0f : 0.0f;
 }
 } // namespace
 
@@ -40,6 +95,12 @@ void setupSensors() {
   pinMode(PIR_PIN, INPUT);
   pinMode(TRIG_PIN, OUTPUT);
   pinMode(ECHO_PIN, INPUT_PULLDOWN);
+  noInterrupts();
+  echoPending = false;
+  echoHigh = false;
+  echoComplete = false;
+  interrupts();
+  attachInterrupt(digitalPinToInterrupt(ECHO_PIN), captureEcho, CHANGE);
   digitalWrite(TRIG_PIN, LOW);
   analogReadResolution(12);
   analogSetPinAttenuation(LDR_PIN, ADC_11db);
@@ -50,7 +111,8 @@ void setupSensors() {
   const uint32_t now = millis();
   lastAnalogMs = now;
   lastPirMs = now;
-  lastDistanceMs = now - DISTANCE_INTERVAL_MS;
+  lastDistanceMs = now;
+  firstDistance = true;
 }
 
 void updateSensors(uint32_t nowMs) {
@@ -62,10 +124,7 @@ void updateSensors(uint32_t nowMs) {
     lastAnalogMs = nowMs;
     readAnalog();
   }
-  if (nowMs - lastDistanceMs >= DISTANCE_INTERVAL_MS) {
-    lastDistanceMs = nowMs;
-    readDistance();
-  }
+  updateDistance(nowMs);
 }
 
 const SensorSnapshot &getSensorSnapshot() {

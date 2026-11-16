@@ -1,36 +1,36 @@
-# Firmware P1/A1 — SensorReader và chẩn đoán
+# Firmware P2/A2 — điều khiển AUTO/MANUAL
 
-## Tham chiếu SRS
+## Phạm vi và tham chiếu
 
-[SRS](../srs.md) mục 4.1, 5.1/5.3, 10–12; [pin map](hardware.md), [MQTT v1 chưa triển khai](mqtt.md). Hiện có đọc raw và diagnostics, chưa có thuật toán chiếu sáng AUTO/MANUAL.
+SRS 5.1–5.8, P2/A2, TC-01–16/27/28. TASK-005 đã nghiệm thu và giữ nguyên evidence; TASK-006 chuyển runtime từ PWM diagnostics sang điều khiển. Không triển khai MQTT command/ACK/telemetry A3 hoặc backend/dashboard.
 
-## Module và giao diện
+## Module và luồng thực tế
 
-SensorReader.h/.cpp cung cấp:
+- main.cpp chỉ gọi setupFirmware()/loopFirmware(). FirmwareApp lấy snapshot, nhận lệnh Serial hữu hạn, chạy LightingController và là chủ duy nhất ghi LED GPIO26 (LEDC 5kHz/8bit); không còn vòng PWM diagnostics. EnvironmentSmokeTest được thay bằng FirmwareApp/Connectivity.
+- SensorReader giữ pin map, ADC12bit/PIR20ms/analog100ms/siêu âm200ms. analogSequence tăng mỗi mẫu analog để filter không đếm lại cùng mẫu theo số vòng loop. ECHO GPIO19 INPUT_PULLDOWN được bắt cạnh CHANGE; trigger LOW2us/HIGH10us; timeout30ms theo micros unsigned, bỏ cạnh muộn, xóa distance/invalid khi timeout. Không gọi pulseIn; chỉ chờ microsecond để phát TRIG. ISR chỉ ghi dữ liệu, critical section ngắn ở cùng core app.
+- ControlConfig.h gom ngưỡng, mức sáng và timer SRS bằng hằng có tên; không đổi giá trị đã chốt. LightingController thuần C++, không Arduino/mạng. ControlInput/ControlState tách mode, environment, motion, target/applied/fault.
+- DimmingController tăng/giảm tối đa2 điểm mỗi20ms, dừng đúng mức lẻ, không catch-up nhảy nhiều bước khi loop bị chậm. FaultDetector đánh giá100ms nhưng quan sát mọi thay đổi applied để không bỏ qua dao động giữa hai kỳ kiểm tra.
+- Connectivity sở hữu duy nhất WiFiClient/PubSubClient trong FreeRTOS task core0, stack6144B, priority1, yield10ms. App/core1 chỉ đọc atomic connected/loss-count; không gọi connect/publish. Giữ hostname/clientID/topics diagnostics, ping/pong tối đa64byte và heartbeat2s uptime32bit; không đổi hợp đồng nghiệp vụ. Buffer2048, socket/TCP timeout1s mỗi bước, backoff1/2/4/8/10s; subscribe lại sau reconnect. Loss-count buộc MANUAL về AUTO cả khi disconnect/reconnect xảy ra giữa hai lần đọc status.
+- Loop foreground yield1ms, không chờ echo hoặc mạng; log CONTROL/SENSORS1s và PIR cạnh. Không tuyên bố hard realtime từ thiết kế task/host test; Serial/hardware/RTOS cần đo live.
 
-- setupSensors(): đặt chân ADC/PIR/TRIG/ECHO, ADC12 bit, attenuation ADC_11db trên GPIO34/35; đọc analog/PIR lần đầu, đặt distanceValid=false.
-- updateSensors(uint32_t nowMs): lấy mẫu theo lịch; đo siêu âm ngay ở lần update đầu, sau đó mỗi 200 ms.
-- getSensorSnapshot(): const reference dữ liệu mới nhất. SensorSnapshot gồm uint16_t ldrAdc/currentAdc, bool pirMotion, float distanceCm và bool distanceValid. distanceCm chỉ có nghĩa khi distanceValid=true.
+## AUTO và điều kiện đầu vào
 
-Module không chứa Wi-Fi, MQTT hoặc Serial, không lọc ADC, không chuyển sang lux/mA/W và không phân loại người/xe. EnvironmentSmokeTest gọi setup sau Serial.begin, update mỗi vòng và in kết quả. main.cpp giữ setup()/loop() như trước.
+LDR trung bình trượt5 mẫu mới, xác nhận ứng viên1s kể cả khởi tạo; trong khoảng chưa đủ dữ liệu UNKNOWN/target50%. Khởi tạo <1200 DAY, 1200–2600 TWILIGHT, >2600 NIGHT. Hysteresis giữ nguyên SRS: DAY ≥1300 sang TWILIGHT hoặc ≥2700 NIGHT; TWILIGHT ≤1100 DAY/≥2700 NIGHT; NIGHT ≤2500 TWILIGHT hoặc ≤1100 DAY. Cho nhảy trực tiếp, ứng viên bị ngắt phải xác nhận lại từ đầu.
 
-| Việc | Lịch |
-|---|---:|
-| PIR | 20 ms |
-| LDR/biến trở | 100 ms |
-| HC-SR04 | 200 ms |
-| Serial tổng hợp | 1 giây |
-| PWM diagnostics | Đổi mức mỗi 2 giây |
-| Heartbeat MQTT | 2 giây |
+DAY AUTO0% bất kể chuyển động, TWILIGHT nền50%, NIGHT nền25%. Chỉ PIR HIGH mới phân loại: distanceValid và khoảng cách dương hữu hạn <100cm VEHICLE/100%, ≥100cm PEDESTRIAN/70%; timeout/NaN/giá trị không hợp lệ UNKNOWN/100%. PIR LOW là NONE; khoảng cách gần đơn độc không tăng sáng. Chấp nhận khoảng cách dương >400 vì mô phỏng có sai số, không cắt giá trị valid thành lỗi chỉ vì405cm.
 
-Dùng phép trừ unsigned chịu tràn millis. TRIG LOW 2 µs, HIGH 10 µs rồi LOW; pulseIn(ECHO,HIGH,30000), khoảng cách duration/58.0 cm. Timeout trả distanceValid=false, xóa giá trị cũ về 0 nội bộ, Serial hiển thị NA. Không coi 0 là khoảng cách hợp lệ.
+Hold5s từ lần cuối PIR HIGH, giữ mức cao nhất còn hiệu lực, sự kiện mới làm mới timer. Sang DAY hủy hold. LDR raw ngoài0–4095: xóa filter, về UNKNOWN50%; đây là xử lý bảo vệ nội bộ cho input không hợp lệ, không phải phát hiện đứt LDR trên phần cứng. Fault ADC invalid đặt lại timer xác nhận/phục hồi, không xóa lỗi đã có.
 
-PIR đổi mức được log riêng ngay khi update phát hiện. Dòng tổng hợp: SENSORS uptime_ms=... ldr_adc=... pir=0/1 current_adc=... distance_valid=0/1 distance_cm=.../NA. Banner P1/A1 sensor diagnostics giúp phân biệt firmware mới. Các printf của ứng dụng dùng CRLF; log boot/ESP-IDF do framework quyết định cách xuống dòng.
+## MANUAL và giao diện thử cục bộ
 
-## Hồi quy P0 và giới hạn
+API requestManual(int, nowMs) nhận0–100, từ chối ngoài range; requestAuto() xóa hold và loop đánh giá ngay cảm biến hiện tại. Boot AUTO, MANUAL ưu tiên cả DAY, timeout60s; lệnh MANUAL mới refresh thời hạn. MQTT được xác định ngắt thì AUTO; reconnect không phục hồi MANUAL cũ. Filter môi trường vẫn cập nhật trong MANUAL. OPEN_LOAD không bị xóa vì đổi mode.
 
-Giữ nghỉ 10 ms, LEDC 5 kHz/8 bit, vòng PWM 0/25/50/70/100%, MQTT host.wokwi.internal:1883, keepalive 15 giây, buffer 2048, ping/pong tối đa 64 byte, heartbeat và retry P0. Dữ liệu cảm biến chưa được gửi vào heartbeat/telemetry. LED không phản ứng theo cảm biến trong P1.
+Trong Wokwi Serial gửi dòng `MANUAL 80` hoặc `AUTO` kết thúc newline. Đây là giao diện thử cục bộ A2, không phải MQTT command v1. App chỉ nhận MANUAL khi connected để không báo nhận rồi fallback ngay. Buffer32byte, xử lý tối đa16byte/loop; bỏ cả dòng overflow/non-ASCII/NUL, không nhận suffix của dòng lỗi. Parser không nhận số âm, thập phân, >100 hoặc ký tự thừa. MQTT JSON command/deadline/cache32ID/ACK vẫn thuộc A3; chưa subscribe topic command.
 
-Lịch lấy mẫu là mục tiêu trong một vòng điều phối: pulseIn có thể chặn đến 30 ms, MQTT connect có timeout P0 1 giây mỗi bước. Không cam kết thời gian thực cứng 20 ms; xung PIR ngắn có thể bị bỏ lỡ trong khoảng mạng đang chặn. Kiểm tra PIR ở kết nối ổn định; kiểm tra offline xác nhận vòng xử lý tiếp tục, không khẳng định bắt mọi xung. Timer/dimming nghiệp vụ sẽ được đánh giá ở A2/A3.
+## OPEN_LOAD
 
-Build, host checks và Wokwi live P1 đã nghiệm thu; xem [biên bản TASK-005](../reports/evidence/task-005/windows-live-20261116-003644/acceptance-final.md). Raw/PWM tiếp tục trong đoạn broker offline, retry/reconnect và heartbeat/pong có bằng chứng bổ sung. Không dùng bằng chứng P0 làm kết quả cảm biến hoặc suy thành timing cứng/mạng nghiệp vụ đạt.
+Với applied≥20% ổn định1s, current_adc/4095 <10% liên tục2s thì OPEN_LOAD; ≥20% dòng kỳ vọng liên tục3s thì phục hồi. Ratio so bằng số nguyên để giữ biên409/410 và818/819 chính xác. Mỗi đổi applied hủy stability/confirmation; invalid ADC hoặc điều kiện không còn hợp lệ đặt lại timer. Tắt đèn không phát sinh lỗi mới, không xóa lỗi cũ. Không cắt PWM vì OPEN_LOAD; không tuyên bố bảo vệ quá dòng/ngắn mạch.
+
+## Kiểm tra và giới hạn
+
+[Testing](testing.md), [Wokwi 5 bước](simulation.md), [log TASK-006](../reports/evidence/task-006/validation.log). Bốn suite host chạy code thật với stub ADC/GPIO/mạng/RTOS; không kiểm chứng vật lý, contention hai core hoặc latency thực. Build dùng package pin hiện có, không thêm thư viện. Chưa chạy Wokwi bản P2; không chuyển kết quả live TASK-005 thành PASS P2. Task mạng tạo không thành công thì log lỗi, AUTO vẫn chạy offline. PWM attach/write có kiểm tra trả về và log lỗi; không suy applied từ CONTROL là phép đo điện thật.
