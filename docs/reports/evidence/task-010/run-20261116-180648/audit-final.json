@@ -1,0 +1,104 @@
+{
+  "historical_manual": {
+    "commands": [
+      {
+        "command_id": "4613042f-a266-4bc8-a0fc-a63d643bb009",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"command_id\": \"4613042f-a266-4bc8-a0fc-a63d643bb009\", \"deadline_uptime_ms\": 133236, \"mode\": \"MANUAL\", \"brightness\": 80}",
+        "created_at": 1794826650.003136,
+        "sent_at": 1794826650.007135,
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": 1794826650.2948365,
+        "attempts": 1
+      },
+      {
+        "command_id": "f8c5de50-cbc9-4f01-8617-f593dda50cff",
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"command_id\": \"f8c5de50-cbc9-4f01-8617-f593dda50cff\", \"deadline_uptime_ms\": 137675, \"mode\": \"MANUAL\", \"brightness\": 80}",
+        "created_at": 1794826667.729772,
+        "sent_at": 1794826667.731777,
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": 1794826668.2474675,
+        "attempts": 1
+      }
+    ],
+    "ack_events": [
+      {
+        "id": 1,
+        "command_id": "4613042f-a266-4bc8-a0fc-a63d643bb009",
+        "received_at": 1794826650.2948365,
+        "payload": "{\"schema_version\":1,\"node_id\":\"node_01\",\"boot_id\":\"3268eb79\",\"command_id\":\"4613042f-a266-4bc8-a0fc-a63d643bb009\",\"result\":\"APPLIED\",\"reason\":null}",
+        "disposition": "ACCEPTED"
+      },
+      {
+        "id": 2,
+        "command_id": "f8c5de50-cbc9-4f01-8617-f593dda50cff",
+        "received_at": 1794826668.2474675,
+        "payload": "{\"schema_version\":1,\"node_id\":\"node_01\",\"boot_id\":\"3268eb79\",\"command_id\":\"f8c5de50-cbc9-4f01-8617-f593dda50cff\",\"result\":\"APPLIED\",\"reason\":null}",
+        "disposition": "ACCEPTED"
+      }
+    ],
+    "transitions": [
+      {
+        "seq": 0,
+        "uptime_ms": 3954,
+        "mode": "AUTO",
+        "target": 0,
+        "applied": 0,
+        "received_at_unix": 1794826381.399305
+      },
+      {
+        "seq": 63,
+        "uptime_ms": 129861,
+        "mode": "MANUAL",
+        "target": 80,
+        "applied": 0,
+        "received_at_unix": 1794826650.5292797
+      },
+      {
+        "seq": 99,
+        "uptime_ms": 193094,
+        "mode": "AUTO",
+        "target": 0,
+        "applied": 78,
+        "received_at_unix": 1794826989.9288766
+      }
+    ],
+    "samples_with_applied80": 32
+  },
+  "historical_timing": {
+    "pair_count": 187,
+    "wall_gap_max_s": 13.832549810409546,
+    "gaps_ge10_wall_s": 21,
+    "node_to_wall_median_ratio": 0.43616832125875027,
+    "note": "Sampling can be slower in wall time. Sensor action-to-render latency not measured by this ratio."
+  },
+  "energy": [
+    {
+      "file": "experiment-1-command-latency.csv",
+      "result": "PASS",
+      "rows": 12,
+      "independent_energy_wh": 0.0018346,
+      "continuity_boundaries": 0,
+      "nonzero_power_rows": 9
+    },
+    {
+      "file": "experiment-2-passive-session.csv",
+      "result": "PASS",
+      "rows": 423,
+      "independent_energy_wh": 0.0,
+      "continuity_boundaries": 0,
+      "nonzero_power_rows": 0
+    }
+  ],
+  "persistence": {
+    "result": "PENDING",
+    "reason": "No post-restart snapshot provided"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "result": "PASS",
+  "samples": 50,
+  "sums": {
+    "total_energy_wh": 0.003341666666666667,
+    "auto_energy_wh": 0.003341666666666667,
+    "baseline_wh": 0.013366666666666666,
+    "valid_uptime_s": 2.005,
+    "covered_wall_s": 10.00757884979248
+  },
+  "stats": {
+    "from_time": "2026-11-16T11:50:04.397913Z",
+    "to_time": "2026-11-16T12:00:56.362966Z",
+    "clock_basis": {
+      "energy": "node_uptime",
+      "coverage": "receiver_utc"
+    },
+    "nodes": [
+      {
+        "node_id": "node_01",
+        "total_energy_wh": 0.003341666666666667,
+        "auto_energy_wh": 0.003341666666666667,
+        "baseline_wh": 0.013366666666666666,
+        "saving_percent": 75.0,
+        "valid_uptime_s": 2.005,
+        "covered_wall_s": 10.00757884979248,
+        "missing_wall_s": 641.9574737548828,
+        "coverage_percent": 1.5349870073267045,
+        "auto_valid_uptime_s": 2.005,
+        "sample_count": 50,
+        "excluded_intervals": {
+          "FIRST_SAMPLE": 1,
+          "DISCONTINUITY": 48
+        }
+      }
+    ],
+    "total_energy_wh": 0.003341666666666667,
+    "auto_energy_wh": 0.003341666666666667,
+    "baseline_wh": 0.013366666666666666,
+    "saving_percent": 75.0,
+    "valid_uptime_s": 2.005,
+    "covered_wall_s": 10.00757884979248,
+    "missing_wall_s": 641.9574737548828,
+    "coverage_percent": 1.5349870073267045
+  },
+  "experiment": {
+    "id": 3,
+    "name": "TASK-010 backend restart live",
+    "configuration": {
+      "source": "live Wokwi node_01",
+      "api_port": 8001,
+      "voltage_v": 12,
+      "rated_power_w": 24
+    },
+    "notes": "Current NIGHT25 after operator OPEN_LOAD recovery; observe backend restart if operator performs it. No synthetic telemetry.",
+    "started_at": "2026-11-16T11:50:04.397913Z",
+    "ended_at": "2026-11-16T12:00:56.362966Z"
+  },
+  "clock_basis": {
+    "energy": "node_uptime",
+    "coverage": "receiver_utc"
+  },
+  "limitation": "API/CSV live comparison; dashboard rendering and independent energy derivation separate"
+}

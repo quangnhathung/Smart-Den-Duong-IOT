@@ -1,0 +1,126 @@
+{
+  "audit-evidence.py": {
+    "bytes": 5399,
+    "sha256": "83c7fdf1764c5bdf2d2be86d0cd50ef2538716c94db1c23daf0c51efb087d6e3"
+  },
+  "audit-final.json": {
+    "bytes": 3506,
+    "sha256": "6e407c91ee83898024bcbff022dba892fc099e96d4015f4fb403f4d7feff86db"
+  },
+  "audit-initial.json": {
+    "bytes": 3292,
+    "sha256": "91c51bd321dacbe6a773f4489fd685c6be3746899f1ef8444af618378c3c4aa8"
+  },
+  "cache-cached-auto-wire-int.jsonl": {
+    "bytes": 8609,
+    "sha256": "3c3b2b8532afe52accc227e8d53fef51ca9dae53614aa8658c8d98abfc86ea59"
+  },
+  "cache-cached-auto.jsonl": {
+    "bytes": 3802,
+    "sha256": "8623a70d367e2b7a84953555cc0320491b1ce38b05f6eec8401c5068dee3a12c"
+  },
+  "capture-operator-tests.jsonl": {
+    "bytes": 684754,
+    "sha256": "516b2b2fcbc51f0f905966b74e0751eb45e1047f1546b1fdbf51a2d1e83b14c6"
+  },
+  "command-latency-command-latency.json": {
+    "bytes": 14094,
+    "sha256": "cb57439176e6da6e6482d37e1b4ab1ee1513e501ebd0b6b6468605d8df01dfc4"
+  },
+  "db-lock-check.json": {
+    "bytes": 271,
+    "sha256": "9757a7839872b967f738ceafd26727bf6e784cf47bcfa65f90eaf9996f8c5b4e"
+  },
+  "experiment-1-command-latency.csv": {
+    "bytes": 8096,
+    "sha256": "c4a9c15275a4f048379b9b3615a303563c05bf9d9add04d161a968e1a607c880"
+  },
+  "experiment-1-comparison-command-latency.json": {
+    "bytes": 2072,
+    "sha256": "8bc91208699c05cbb2821feebf2e3884d38e7dca399ee69577852947b6f464e2"
+  },
+  "experiment-2-comparison-passive-session.json": {
+    "bytes": 1931,
+    "sha256": "31cee0ae3908a08997de2f129f048e0557c3535d804afc7051fd152c27312e58"
+  },
+  "experiment-2-passive-session.csv": {
+    "bytes": 250109,
+    "sha256": "61c59fbb5c3fc705823762503618b49e79f9a6676d23739cbe8f031224a6f206"
+  },
+  "experiment-export-passive-session.jsonl": {
+    "bytes": 486811,
+    "sha256": "9020dabf974ce03942ed20d47405337b49e844d93c050b15d02acc720fdff088"
+  },
+  "live-evidence.py": {
+    "bytes": 17592,
+    "sha256": "9e14052425afad400923387f827e671fb47edd32e977c173d1c288a313fabbb7"
+  },
+  "owned-experiment-command-latency.json": {
+    "bytes": 462,
+    "sha256": "74fe076d9cbf1c2c8b43845699bb3423dbf076beef24dd5e30417075e6f11d22"
+  },
+  "owned-experiment-stop.json": {
+    "bytes": 678,
+    "sha256": "a0b0ea1568164b8304c1e33508a1a89409f792214e14e2255321b7154a7dc9aa"
+  },
+  "pending-pending-guard.jsonl": {
+    "bytes": 7514,
+    "sha256": "1c0e830df77d5cafb2d2a0f6dc367dee3ae889c83b4bea8b46e472762dca3666"
+  },
+  "README.md": {
+    "bytes": 8825,
+    "sha256": "35d35607b49cf205fa5affae833cb9f609909b14f825715cea95f56debd0bc79"
+  },
+  "reject-wire-rejects.jsonl": {
+    "bytes": 6782,
+    "sha256": "485613e2f16de31770ba413105771b8c73eb2e542496ab77637384d4cbd08267"
+  },
+  "report-entry.md": {
+    "bytes": 3299,
+    "sha256": "d4217d43068058e66a8a3f765b48313ece787d198ad55ccd26b366131a90622e"
+  },
+  "report-preservation.json": {
+    "bytes": 154,
+    "sha256": "ac958a930eeffeb59644d90873b2ee1bf9a5054722634d430e18673dbca8a46f"
+  },
+  "restart-experiment.json": {
+    "bytes": 531,
+    "sha256": "e16f722baa31dd59770106902dcd55547956aceb53e56ec3495f86e9107775b6"
+  },
+  "run-command-latency.jsonl": {
+    "bytes": 128100,
+    "sha256": "7878300a3831754c46ed61547296113e7d1b359cd469f24f00630fa9a717a840"
+  },
+  "snapshot-before-restart.jsonl": {
+    "bytes": 142905,
+    "sha256": "76cd978dae0ed568e9f2440492aa2812ef5b31e27489448bd7ba9ab29e55e6ce"
+  },
+  "snapshot-final.jsonl": {
+    "bytes": 363404,
+    "sha256": "b39fef5c80bfec75006a167445432120632e2f70cfd1c700e6afe6082c339ce2"
+  },
+  "snapshot-initial.jsonl": {
+    "bytes": 107097,
+    "sha256": "9ba39d55a2d600ed99a4efc2d69c4bf95131d572a0471d67eb1e7a06ee93d4b4"
+  },
+  "sqlite-before-restart.json": {
+    "bytes": 191616,
+    "sha256": "747bf04e5b0cad9dbc8f373bba8c607c592358efa209fe9975459be8652dbb54"
+  },
+  "sqlite-command-latency.json": {
+    "bytes": 164329,
+    "sha256": "5ae4c6495506690052f015d83ecd9e5974ceca8e10059af557367a301a4b7447"
+  },
+  "sqlite-final.json": {
+    "bytes": 500835,
+    "sha256": "b034f56a9476ae7564e6e084eee2f83ee0bb9b5c0afb45b2b2ad230667004fee"
+  },
+  "sqlite-initial.json": {
+    "bytes": 142535,
+    "sha256": "9b15bef9360c65107d363fa289492dee560aee73c2ba2654f07a023608055444"
+  },
+  "user-confirmation.md": {
+    "bytes": 1312,
+    "sha256": "017e96d2c9bf388a8a219633cea16d13e03d56aef47863d3d8d8ed5e9872ff1e"
+  }
+}

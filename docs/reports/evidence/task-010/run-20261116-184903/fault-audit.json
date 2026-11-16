@@ -1,0 +1,1545 @@
+{
+  "result": "PASS",
+  "source": "existing real SQLite telemetry plus live read API; no fault retest",
+  "boot_id": "3268eb79",
+  "alerts": [
+    {
+      "id": 30,
+      "node_id": "node_01",
+      "kind": "OPEN_LOAD",
+      "started_at": 1794829431.803867,
+      "ended_at": 1794829452.009055
+    },
+    {
+      "id": 33,
+      "node_id": "node_01",
+      "kind": "OPEN_LOAD",
+      "started_at": 1794829466.1083353,
+      "ended_at": 1794829575.004905
+    }
+  ],
+  "last_fault_start_telemetry": [
+    {
+      "id": 684,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": "683",
+      "uptime_ms": "1323338",
+      "received_at": 1794829466.1083353,
+      "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 683, \"uptime_ms\": 1323338, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 0, \"current_ma_sim\": 0.0, \"power_sim_w\": 0.0, \"faults\": [\"OPEN_LOAD\"]}",
+      "quality": "ACCEPTED",
+      "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/33/0"
+    },
+    {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": 683,
+      "uptime_ms": 1323338,
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "ldr_adc": 3917,
+      "motion": "NONE",
+      "distance_cm": 101.4138,
+      "brightness_target": 25,
+      "brightness_applied": 25,
+      "current_adc": 0,
+      "current_ma_sim": 0.0,
+      "power_sim_w": 0.0,
+      "faults": [
+        "OPEN_LOAD"
+      ]
+    }
+  ],
+  "last_recovery_telemetry": [
+    {
+      "id": 693,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": "692",
+      "uptime_ms": "1340238",
+      "received_at": 1794829575.004905,
+      "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 692, \"uptime_ms\": 1340238, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+      "quality": "ACCEPTED",
+      "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/41/0"
+    },
+    {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": 692,
+      "uptime_ms": 1340238,
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "ldr_adc": 3917,
+      "motion": "NONE",
+      "distance_cm": 101.4138,
+      "brightness_target": 25,
+      "brightness_applied": 25,
+      "current_adc": 4095,
+      "current_ma_sim": 500.0,
+      "power_sim_w": 6.0,
+      "faults": []
+    }
+  ],
+  "user_serial_recovery_uptime_ms": 1340431,
+  "telemetry_recovery_uptime_ms": 1340238,
+  "serial_minus_telemetry_ms": 193,
+  "steady_auto25_samples": 16,
+  "interval": [
+    [
+      {
+        "id": 679,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "678",
+        "uptime_ms": "1316480",
+        "received_at": 1794829424.2191849,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 678, \"uptime_ms\": 1316480, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4483, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 0, \"current_ma_sim\": 0.0, \"power_sim_w\": 0.0, \"faults\": []}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/31/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 678,
+        "uptime_ms": 1316480,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4483,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 0,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": []
+      }
+    ],
+    [
+      {
+        "id": 680,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "679",
+        "uptime_ms": "1317734",
+        "received_at": 1794829431.803867,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 679, \"uptime_ms\": 1317734, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 0, \"current_ma_sim\": 0.0, \"power_sim_w\": 0.0, \"faults\": [\"OPEN_LOAD\"]}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/31/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 679,
+        "uptime_ms": 1317734,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 0,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      }
+    ],
+    [
+      {
+        "id": 681,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "680",
+        "uptime_ms": "1319739",
+        "received_at": 1794829443.9988668,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 680, \"uptime_ms\": 1319739, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 1457, \"current_ma_sim\": 177.8998779, \"power_sim_w\": 2.134798535, \"faults\": [\"OPEN_LOAD\"]}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/32/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 680,
+        "uptime_ms": 1319739,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 1457,
+        "current_ma_sim": 177.8998779,
+        "power_sim_w": 2.134798535,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      }
+    ],
+    [
+      {
+        "id": 682,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "681",
+        "uptime_ms": "1321136",
+        "received_at": 1794829452.009055,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 681, \"uptime_ms\": 1321136, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 3987, \"current_ma_sim\": 486.8131868, \"power_sim_w\": 5.841758242, \"faults\": []}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/32/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 681,
+        "uptime_ms": 1321136,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 3987,
+        "current_ma_sim": 486.8131868,
+        "power_sim_w": 5.841758242,
+        "faults": []
+      }
+    ],
+    [
+      {
+        "id": 683,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "682",
+        "uptime_ms": "1323138",
+        "received_at": 1794829464.2309234,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 682, \"uptime_ms\": 1323138, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 0, \"current_ma_sim\": 0.0, \"power_sim_w\": 0.0, \"faults\": []}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/33/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 682,
+        "uptime_ms": 1323138,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 0,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": []
+      }
+    ],
+    [
+      {
+        "id": 684,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "683",
+        "uptime_ms": "1323338",
+        "received_at": 1794829466.1083353,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 683, \"uptime_ms\": 1323338, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 0, \"current_ma_sim\": 0.0, \"power_sim_w\": 0.0, \"faults\": [\"OPEN_LOAD\"]}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/33/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 683,
+        "uptime_ms": 1323338,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 0,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      }
+    ],
+    [
+      {
+        "id": 685,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "684",
+        "uptime_ms": "1325343",
+        "received_at": 1794829482.3178453,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 684, \"uptime_ms\": 1325343, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 0, \"current_ma_sim\": 0.0, \"power_sim_w\": 0.0, \"faults\": [\"OPEN_LOAD\"]}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/34/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 684,
+        "uptime_ms": 1325343,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 0,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      }
+    ],
+    [
+      {
+        "id": 686,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "685",
+        "uptime_ms": "1327348",
+        "received_at": 1794829495.5004983,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 685, \"uptime_ms\": 1327348, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 0, \"current_ma_sim\": 0.0, \"power_sim_w\": 0.0, \"faults\": [\"OPEN_LOAD\"]}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/35/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 685,
+        "uptime_ms": 1327348,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 0,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      }
+    ],
+    [
+      {
+        "id": 687,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "686",
+        "uptime_ms": "1329356",
+        "received_at": 1794829509.1776776,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 686, \"uptime_ms\": 1329356, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 0, \"current_ma_sim\": 0.0, \"power_sim_w\": 0.0, \"faults\": [\"OPEN_LOAD\"]}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/36/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 686,
+        "uptime_ms": 1329356,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 0,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      }
+    ],
+    [
+      {
+        "id": 688,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "687",
+        "uptime_ms": "1331362",
+        "received_at": 1794829521.9798222,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 687, \"uptime_ms\": 1331362, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 0, \"current_ma_sim\": 0.0, \"power_sim_w\": 0.0, \"faults\": [\"OPEN_LOAD\"]}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/37/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 687,
+        "uptime_ms": 1331362,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 0,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      }
+    ],
+    [
+      {
+        "id": 689,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "688",
+        "uptime_ms": "1333367",
+        "received_at": 1794829536.0653636,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 688, \"uptime_ms\": 1333367, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 0, \"current_ma_sim\": 0.0, \"power_sim_w\": 0.0, \"faults\": [\"OPEN_LOAD\"]}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/38/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 688,
+        "uptime_ms": 1333367,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 0,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      }
+    ],
+    [
+      {
+        "id": 690,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "689",
+        "uptime_ms": "1335372",
+        "received_at": 1794829548.633209,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 689, \"uptime_ms\": 1335372, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 0, \"current_ma_sim\": 0.0, \"power_sim_w\": 0.0, \"faults\": [\"OPEN_LOAD\"]}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/39/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 689,
+        "uptime_ms": 1335372,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 0,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      }
+    ],
+    [
+      {
+        "id": 691,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "690",
+        "uptime_ms": "1337377",
+        "received_at": 1794829559.656664,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 690, \"uptime_ms\": 1337377, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 3791, \"current_ma_sim\": 462.8815629, \"power_sim_w\": 5.554578755, \"faults\": [\"OPEN_LOAD\"]}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/40/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 690,
+        "uptime_ms": 1337377,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 3791,
+        "current_ma_sim": 462.8815629,
+        "power_sim_w": 5.554578755,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      }
+    ],
+    [
+      {
+        "id": 692,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "691",
+        "uptime_ms": "1339377",
+        "received_at": 1794829570.5922194,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 691, \"uptime_ms\": 1339377, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": [\"OPEN_LOAD\"]}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/41/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 691,
+        "uptime_ms": 1339377,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      }
+    ],
+    [
+      {
+        "id": 693,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "692",
+        "uptime_ms": "1340238",
+        "received_at": 1794829575.004905,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 692, \"uptime_ms\": 1340238, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/41/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 692,
+        "uptime_ms": 1340238,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      }
+    ],
+    [
+      {
+        "id": 694,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "693",
+        "uptime_ms": "1342243",
+        "received_at": 1794829584.967573,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"seq\": 693, \"uptime_ms\": 1342243, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 3917, \"motion\": \"NONE\", \"distance_cm\": 101.4138, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+        "quality": "ACCEPTED",
+        "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/41/0"
+      },
+      {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 693,
+        "uptime_ms": 1342243,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      }
+    ]
+  ],
+  "api": {
+    "history": {
+      "at": "2026-11-16T11:51:48.253852+00:00",
+      "url": "http://127.0.0.1:8001/api/nodes/node_01/history?from=2026-11-16T11%3A43%3A36.803867Z&to=2026-11-16T11%3A46%3A30.004905Z&limit=1000",
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "id": 679,
+            "received_at": "2026-11-16T11:43:44.219185Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/31/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "678",
+              "uptime_ms": "1316480",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4483,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 0,
+              "current_ma_sim": 0.0,
+              "power_sim_w": 0.0,
+              "faults": []
+            }
+          },
+          {
+            "id": 680,
+            "received_at": "2026-11-16T11:43:51.803867Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/31/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "679",
+              "uptime_ms": "1317734",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 0,
+              "current_ma_sim": 0.0,
+              "power_sim_w": 0.0,
+              "faults": [
+                "OPEN_LOAD"
+              ]
+            }
+          },
+          {
+            "id": 681,
+            "received_at": "2026-11-16T11:44:03.998867Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/32/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "680",
+              "uptime_ms": "1319739",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 1457,
+              "current_ma_sim": 177.8998779,
+              "power_sim_w": 2.134798535,
+              "faults": [
+                "OPEN_LOAD"
+              ]
+            }
+          },
+          {
+            "id": 682,
+            "received_at": "2026-11-16T11:44:12.009055Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/32/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "681",
+              "uptime_ms": "1321136",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 3987,
+              "current_ma_sim": 486.8131868,
+              "power_sim_w": 5.841758242,
+              "faults": []
+            }
+          },
+          {
+            "id": 683,
+            "received_at": "2026-11-16T11:44:24.230923Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/33/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "682",
+              "uptime_ms": "1323138",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 0,
+              "current_ma_sim": 0.0,
+              "power_sim_w": 0.0,
+              "faults": []
+            }
+          },
+          {
+            "id": 684,
+            "received_at": "2026-11-16T11:44:26.108335Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/33/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "683",
+              "uptime_ms": "1323338",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 0,
+              "current_ma_sim": 0.0,
+              "power_sim_w": 0.0,
+              "faults": [
+                "OPEN_LOAD"
+              ]
+            }
+          },
+          {
+            "id": 685,
+            "received_at": "2026-11-16T11:44:42.317845Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/34/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "684",
+              "uptime_ms": "1325343",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 0,
+              "current_ma_sim": 0.0,
+              "power_sim_w": 0.0,
+              "faults": [
+                "OPEN_LOAD"
+              ]
+            }
+          },
+          {
+            "id": 686,
+            "received_at": "2026-11-16T11:44:55.500498Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/35/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "685",
+              "uptime_ms": "1327348",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 0,
+              "current_ma_sim": 0.0,
+              "power_sim_w": 0.0,
+              "faults": [
+                "OPEN_LOAD"
+              ]
+            }
+          },
+          {
+            "id": 687,
+            "received_at": "2026-11-16T11:45:09.177678Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/36/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "686",
+              "uptime_ms": "1329356",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 0,
+              "current_ma_sim": 0.0,
+              "power_sim_w": 0.0,
+              "faults": [
+                "OPEN_LOAD"
+              ]
+            }
+          },
+          {
+            "id": 688,
+            "received_at": "2026-11-16T11:45:21.979822Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/37/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "687",
+              "uptime_ms": "1331362",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 0,
+              "current_ma_sim": 0.0,
+              "power_sim_w": 0.0,
+              "faults": [
+                "OPEN_LOAD"
+              ]
+            }
+          },
+          {
+            "id": 689,
+            "received_at": "2026-11-16T11:45:36.065364Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/38/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "688",
+              "uptime_ms": "1333367",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 0,
+              "current_ma_sim": 0.0,
+              "power_sim_w": 0.0,
+              "faults": [
+                "OPEN_LOAD"
+              ]
+            }
+          },
+          {
+            "id": 690,
+            "received_at": "2026-11-16T11:45:48.633209Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/39/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "689",
+              "uptime_ms": "1335372",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 0,
+              "current_ma_sim": 0.0,
+              "power_sim_w": 0.0,
+              "faults": [
+                "OPEN_LOAD"
+              ]
+            }
+          },
+          {
+            "id": 691,
+            "received_at": "2026-11-16T11:45:59.656664Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/40/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "690",
+              "uptime_ms": "1337377",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 3791,
+              "current_ma_sim": 462.8815629,
+              "power_sim_w": 5.554578755,
+              "faults": [
+                "OPEN_LOAD"
+              ]
+            }
+          },
+          {
+            "id": 692,
+            "received_at": "2026-11-16T11:46:10.592219Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/41/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "691",
+              "uptime_ms": "1339377",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 4095,
+              "current_ma_sim": 500.0,
+              "power_sim_w": 6.0,
+              "faults": [
+                "OPEN_LOAD"
+              ]
+            }
+          },
+          {
+            "id": 693,
+            "received_at": "2026-11-16T11:46:15.004905Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/41/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "692",
+              "uptime_ms": "1340238",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 4095,
+              "current_ma_sim": 500.0,
+              "power_sim_w": 6.0,
+              "faults": []
+            }
+          },
+          {
+            "id": 694,
+            "received_at": "2026-11-16T11:46:24.967573Z",
+            "quality": "ACCEPTED",
+            "continuity": "26989c18-61ec-478e-95cf-82f310ba944b/16e55316-5fb6-4e77-942a-705f46de99b9/41/0",
+            "telemetry": {
+              "schema_version": 1,
+              "node_id": "node_01",
+              "boot_id": "3268eb79",
+              "seq": "693",
+              "uptime_ms": "1342243",
+              "mode": "AUTO",
+              "environment": "NIGHT",
+              "ldr_adc": 3917,
+              "motion": "NONE",
+              "distance_cm": 101.4138,
+              "brightness_target": 25,
+              "brightness_applied": 25,
+              "current_adc": 4095,
+              "current_ma_sim": 500.0,
+              "power_sim_w": 6.0,
+              "faults": []
+            }
+          }
+        ],
+        "total": 16,
+        "limit": 1000,
+        "offset": 0
+      }
+    },
+    "alerts": {
+      "at": "2026-11-16T11:51:48.280060+00:00",
+      "url": "http://127.0.0.1:8001/api/alerts?node_id=node_01",
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "id": 64,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:51:39.389603Z",
+            "ended_at": "2026-11-16T11:51:42.435540Z"
+          },
+          {
+            "id": 63,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:51:23.741558Z",
+            "ended_at": "2026-11-16T11:51:29.346504Z"
+          },
+          {
+            "id": 62,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:51:09.485019Z",
+            "ended_at": "2026-11-16T11:51:13.724797Z"
+          },
+          {
+            "id": 61,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:50:56.551454Z",
+            "ended_at": "2026-11-16T11:50:59.435560Z"
+          },
+          {
+            "id": 60,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:50:41.253046Z",
+            "ended_at": "2026-11-16T11:50:46.501770Z"
+          },
+          {
+            "id": 59,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:50:26.904778Z",
+            "ended_at": "2026-11-16T11:50:31.245326Z"
+          },
+          {
+            "id": 58,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:50:13.127267Z",
+            "ended_at": "2026-11-16T11:50:16.881474Z"
+          },
+          {
+            "id": 57,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:49:59.658270Z",
+            "ended_at": "2026-11-16T11:50:03.108954Z"
+          },
+          {
+            "id": 56,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:49:46.601973Z",
+            "ended_at": "2026-11-16T11:49:49.607952Z"
+          },
+          {
+            "id": 55,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:49:29.847196Z",
+            "ended_at": "2026-11-16T11:49:36.552815Z"
+          },
+          {
+            "id": 54,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:49:13.148617Z",
+            "ended_at": "2026-11-16T11:49:19.795684Z"
+          },
+          {
+            "id": 53,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:48:57.018777Z",
+            "ended_at": "2026-11-16T11:49:03.117580Z"
+          },
+          {
+            "id": 52,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:48:44.711232Z",
+            "ended_at": "2026-11-16T11:48:47.019117Z"
+          },
+          {
+            "id": 51,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:48:29.509981Z",
+            "ended_at": "2026-11-16T11:48:34.707605Z"
+          },
+          {
+            "id": 50,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:48:16.750844Z",
+            "ended_at": "2026-11-16T11:48:19.467715Z"
+          },
+          {
+            "id": 49,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:48:04.824786Z",
+            "ended_at": "2026-11-16T11:48:06.740745Z"
+          },
+          {
+            "id": 48,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:47:51.512000Z",
+            "ended_at": "2026-11-16T11:47:54.787111Z"
+          },
+          {
+            "id": 47,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:47:39.747967Z",
+            "ended_at": "2026-11-16T11:47:41.454358Z"
+          },
+          {
+            "id": 46,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:47:29.162601Z",
+            "ended_at": "2026-11-16T11:47:29.741243Z"
+          },
+          {
+            "id": 45,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:47:16.371818Z",
+            "ended_at": "2026-11-16T11:47:19.137664Z"
+          },
+          {
+            "id": 44,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:47:01.314089Z",
+            "ended_at": "2026-11-16T11:47:06.358975Z"
+          },
+          {
+            "id": 43,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:46:48.437500Z",
+            "ended_at": "2026-11-16T11:46:51.263515Z"
+          },
+          {
+            "id": 42,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:46:35.015964Z",
+            "ended_at": "2026-11-16T11:46:38.391195Z"
+          },
+          {
+            "id": 41,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:46:09.685017Z",
+            "ended_at": "2026-11-16T11:46:10.592219Z"
+          },
+          {
+            "id": 40,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:45:58.650402Z",
+            "ended_at": "2026-11-16T11:45:59.656664Z"
+          },
+          {
+            "id": 39,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:45:46.119389Z",
+            "ended_at": "2026-11-16T11:45:48.633209Z"
+          },
+          {
+            "id": 38,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:45:32.013029Z",
+            "ended_at": "2026-11-16T11:45:36.065364Z"
+          },
+          {
+            "id": 37,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:45:19.172063Z",
+            "ended_at": "2026-11-16T11:45:21.979822Z"
+          },
+          {
+            "id": 36,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:45:05.526623Z",
+            "ended_at": "2026-11-16T11:45:09.177678Z"
+          },
+          {
+            "id": 35,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:44:52.343050Z",
+            "ended_at": "2026-11-16T11:44:55.500498Z"
+          },
+          {
+            "id": 34,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:44:36.162358Z",
+            "ended_at": "2026-11-16T11:44:42.317845Z"
+          },
+          {
+            "id": 33,
+            "node_id": "node_01",
+            "kind": "OPEN_LOAD",
+            "started_at": "2026-11-16T11:44:26.108335Z",
+            "ended_at": "2026-11-16T11:46:15.004905Z"
+          },
+          {
+            "id": 32,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:44:22.015201Z",
+            "ended_at": "2026-11-16T11:44:24.230923Z"
+          },
+          {
+            "id": 31,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:44:01.808522Z",
+            "ended_at": "2026-11-16T11:44:03.998867Z"
+          },
+          {
+            "id": 30,
+            "node_id": "node_01",
+            "kind": "OPEN_LOAD",
+            "started_at": "2026-11-16T11:43:51.803867Z",
+            "ended_at": "2026-11-16T11:44:12.009055Z"
+          },
+          {
+            "id": 29,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:43:40.973754Z",
+            "ended_at": "2026-11-16T11:43:44.219185Z"
+          },
+          {
+            "id": 28,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:43:25.657433Z",
+            "ended_at": "2026-11-16T11:43:30.964123Z"
+          },
+          {
+            "id": 27,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:43:12.973602Z",
+            "ended_at": "2026-11-16T11:43:15.594092Z"
+          },
+          {
+            "id": 26,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:43:01.299896Z",
+            "ended_at": "2026-11-16T11:43:02.971432Z"
+          },
+          {
+            "id": 25,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:42:46.765865Z",
+            "ended_at": "2026-11-16T11:42:51.257948Z"
+          },
+          {
+            "id": 24,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:42:34.865082Z",
+            "ended_at": "2026-11-16T11:42:36.730235Z"
+          },
+          {
+            "id": 23,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:42:23.189755Z",
+            "ended_at": "2026-11-16T11:42:24.846338Z"
+          },
+          {
+            "id": 22,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:42:11.398417Z",
+            "ended_at": "2026-11-16T11:42:13.165416Z"
+          },
+          {
+            "id": 21,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:41:58.720924Z",
+            "ended_at": "2026-11-16T11:42:01.357693Z"
+          },
+          {
+            "id": 20,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:02:22.919762Z",
+            "ended_at": "2026-11-16T11:02:24.680010Z"
+          },
+          {
+            "id": 19,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:02:10.600319Z",
+            "ended_at": "2026-11-16T11:02:12.896129Z"
+          },
+          {
+            "id": 18,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:01:58.589812Z",
+            "ended_at": "2026-11-16T11:02:00.587132Z"
+          },
+          {
+            "id": 17,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:01:47.714238Z",
+            "ended_at": "2026-11-16T11:01:48.559758Z"
+          },
+          {
+            "id": 16,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:01:36.424633Z",
+            "ended_at": "2026-11-16T11:01:37.661080Z"
+          },
+          {
+            "id": 15,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:01:26.050604Z",
+            "ended_at": "2026-11-16T11:01:26.403771Z"
+          },
+          {
+            "id": 14,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:01:14.462787Z",
+            "ended_at": "2026-11-16T11:01:16.032897Z"
+          },
+          {
+            "id": 13,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:01:02.121439Z",
+            "ended_at": "2026-11-16T11:01:04.423507Z"
+          },
+          {
+            "id": 12,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:00:50.494755Z",
+            "ended_at": "2026-11-16T11:00:52.094103Z"
+          },
+          {
+            "id": 11,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:00:39.340080Z",
+            "ended_at": "2026-11-16T11:00:40.445575Z"
+          },
+          {
+            "id": 10,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:00:27.990776Z",
+            "ended_at": "2026-11-16T11:00:29.332820Z"
+          },
+          {
+            "id": 9,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:00:14.425567Z",
+            "ended_at": "2026-11-16T11:00:17.993841Z"
+          },
+          {
+            "id": 8,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T11:00:04.144826Z",
+            "ended_at": "2026-11-16T11:00:04.429844Z"
+          },
+          {
+            "id": 7,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T10:59:26.481481Z",
+            "ended_at": "2026-11-16T10:59:26.627356Z"
+          },
+          {
+            "id": 6,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T10:59:05.744823Z",
+            "ended_at": "2026-11-16T10:59:06.657451Z"
+          },
+          {
+            "id": 5,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T10:58:35.310045Z",
+            "ended_at": "2026-11-16T10:58:36.670332Z"
+          },
+          {
+            "id": 4,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T10:58:23.022496Z",
+            "ended_at": "2026-11-16T10:58:25.300728Z"
+          },
+          {
+            "id": 3,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T10:58:09.706730Z",
+            "ended_at": "2026-11-16T10:58:12.983345Z"
+          },
+          {
+            "id": 2,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T10:57:55.923142Z",
+            "ended_at": "2026-11-16T10:57:59.682581Z"
+          },
+          {
+            "id": 1,
+            "node_id": "node_01",
+            "kind": "OFFLINE",
+            "started_at": "2026-11-16T10:57:45.371382Z",
+            "ended_at": "2026-11-16T10:57:45.850031Z"
+          }
+        ],
+        "total": 64,
+        "limit": 100,
+        "offset": 0
+      }
+    },
+    "stats": {
+      "at": "2026-11-16T11:51:48.286507+00:00",
+      "url": "http://127.0.0.1:8001/api/stats?from=2026-11-16T11%3A43%3A36.803867Z&to=2026-11-16T11%3A46%3A30.004905Z&node_id=node_01",
+      "status": 200,
+      "body": {
+        "from_time": "2026-11-16T11:43:36.803867Z",
+        "to_time": "2026-11-16T11:46:30.004905Z",
+        "clock_basis": {
+          "energy": "node_uptime",
+          "coverage": "receiver_utc"
+        },
+        "nodes": [
+          {
+            "node_id": "node_01",
+            "total_energy_wh": 0.00632434025242625,
+            "auto_energy_wh": 0.003341666666666667,
+            "baseline_wh": 0.013366666666666666,
+            "saving_percent": 75.0,
+            "valid_uptime_s": 5.717,
+            "covered_wall_s": 31.847635746002197,
+            "missing_wall_s": 141.35340213775635,
+            "coverage_percent": 18.387670267528243,
+            "auto_valid_uptime_s": 2.005,
+            "sample_count": 16,
+            "excluded_intervals": {
+              "FIRST_SAMPLE": 1,
+              "FAULT_OR_RECOVERY": 4,
+              "LOAD_CALIBRATION_OR_FAULT_CONFIRMATION": 3,
+              "STATE_CHANGE": 4,
+              "DISCONTINUITY": 10
+            }
+          }
+        ],
+        "total_energy_wh": 0.00632434025242625,
+        "auto_energy_wh": 0.003341666666666667,
+        "baseline_wh": 0.013366666666666666,
+        "saving_percent": 75.0,
+        "valid_uptime_s": 5.717,
+        "covered_wall_s": 31.847635746002197,
+        "missing_wall_s": 141.35340213775635,
+        "coverage_percent": 18.387670267528243
+      }
+    }
+  },
+  "user_confirmed_fields": {
+    "ldr_lux": 1,
+    "pir": 0,
+    "duty": 64,
+    "mqtt": 1,
+    "serial_screenshot": "user reports captured; not present in repository"
+  },
+  "limitations": [
+    "Raw MQTT recorder from preceding run ended before fault actions.",
+    "SQLite rows preserve telemetry payloads, not original MQTT packet arrival metadata.",
+    "Serial and telemetry sample/log moments are distinct; do not replace either timestamp.",
+    "Not an independent verification of exact 2s/3s detector boundaries from sparse samples."
+  ]
+}

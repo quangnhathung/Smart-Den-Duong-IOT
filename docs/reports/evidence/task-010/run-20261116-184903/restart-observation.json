@@ -1,0 +1,41 @@
+{
+  "restart_result": "PENDING",
+  "reason": "No user restart confirmation, no API outage captured, backend run ID unchanged",
+  "api_unavailable_count": 0,
+  "before_backend_run_id": "26989c18-61ec-478e-95cf-82f310ba944b",
+  "final_backend_run_id": "26989c18-61ec-478e-95cf-82f310ba944b",
+  "rows_preserved_during_observation": {
+    "telemetry": {
+      "before": 710,
+      "after": 760,
+      "missing": 0
+    },
+    "commands": {
+      "before": 13,
+      "after": 13,
+      "missing": 0
+    },
+    "ack_events": {
+      "before": 20,
+      "after": 20,
+      "missing": 0
+    },
+    "alerts": {
+      "before": 57,
+      "after": 106,
+      "missing": 0
+    },
+    "experiments": {
+      "before": 3,
+      "after": 3,
+      "missing": 0
+    },
+    "availability": {
+      "before": 1,
+      "after": 1,
+      "missing": 0
+    }
+  },
+  "capture_complete": true,
+  "capture_phase_result_is_not_restart_pass": true
+}

@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-16T12:00:56.366965+00:00",
+  "status": 200,
+  "response": {
+    "id": 3,
+    "name": "TASK-010 backend restart live",
+    "configuration": {
+      "source": "live Wokwi node_01",
+      "api_port": 8001,
+      "voltage_v": 12,
+      "rated_power_w": 24
+    },
+    "notes": "Current NIGHT25 after operator OPEN_LOAD recovery; observe backend restart if operator performs it. No synthetic telemetry.",
+    "started_at": "2026-11-16T11:50:04.397913Z",
+    "ended_at": "2026-11-16T12:00:56.362966Z"
+  },
+  "reason": "Capture ended; no actual restart established"
+}

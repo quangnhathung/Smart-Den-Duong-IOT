@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "scope": "Offline framing and real diagnostics roundtrip through proxy; not ACK-delay acceptance",
+  "events": [
+    {
+      "event": "CONNACK",
+      "reason": "Success"
+    },
+    {
+      "event": "REAL_DIAGNOSTIC_ECHO",
+      "topic": "huit/nhom7/smartlight/v1/diagnostics/proxy-smoke-88255e8e",
+      "payload": "proxy-smoke-88255e8e"
+    }
+  ],
+  "business_telemetry_or_ack_published": false
+}

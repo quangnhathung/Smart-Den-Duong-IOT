@@ -1,0 +1,180 @@
+{
+  "trial_id": 3,
+  "page_id": "19b32d68-7d7f-4d7b-aead-f99a3c0ffa85",
+  "key": "3268eb79/1210",
+  "sensor_action": {
+    "source": "evidence-analysis",
+    "event": "sensor-action-observed",
+    "trial_id": 3,
+    "action_low_ms": 1794837076722.248,
+    "action_high_ms": 1794837082137.5828,
+    "host_clock": true,
+    "marker": {
+      "at": "2026-11-16T13:51:16.733810+00:00",
+      "host_ms": 1794837076733.8103,
+      "perf_ns": 1886880434754200,
+      "source": "browser",
+      "event": "manual-start-marker",
+      "page_id": "19b32d68-7d7f-4d7b-aead-f99a3c0ffa85",
+      "time_origin": 1794837004303.3,
+      "visibility": "visible",
+      "browser_ms": 1794837076724.9001,
+      "trial": {
+        "id": 3,
+        "revision": 2,
+        "target_cm": 50,
+        "require_marker": true,
+        "actor": "manual browser marker; sensor input bounded by first live changed sample",
+        "seq_at_arm": "1203",
+        "boot_at_arm": "3268eb79",
+        "armed_host_ms": 1794836890519.7258,
+        "browser_ready": true
+      },
+      "marker_ms": 1794837076724.8,
+      "method": "Lower bound before user changes physical simulator sensor; MQTT/Serial is an upper bound, not the action timestamp"
+    },
+    "first_changed_sample": {
+      "at": "2026-11-16T13:51:22.137582+00:00",
+      "host_ms": 1794837082137.5828,
+      "perf_ns": 1886885837954900,
+      "source": "mqtt",
+      "event": "message",
+      "topic": "huit/nhom7/smartlight/v1/node_01/telemetry",
+      "body": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": 1211,
+        "uptime_ms": 2380819,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_adc": 3917,
+        "current_adc": 4095,
+        "distance_cm": 50.7069,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_ma_sim": 500,
+        "power_sim_w": 6,
+        "faults": []
+      },
+      "retain": false,
+      "qos": 0
+    },
+    "method": "Action interval: browser marker lower bound to first changed real MQTT sample upper bound; not an exact action timestamp"
+  },
+  "render": {
+    "at": "2026-11-16T13:51:17.464111+00:00",
+    "host_ms": 1794837077464.1118,
+    "perf_ns": 1886881164817900,
+    "source": "browser",
+    "event": "render-match",
+    "page_id": "19b32d68-7d7f-4d7b-aead-f99a3c0ffa85",
+    "time_origin": 1794837004303.3,
+    "visibility": "visible",
+    "browser_ms": 1794837077455.8,
+    "trial": {
+      "id": 3,
+      "revision": 2,
+      "target_cm": 50,
+      "require_marker": true,
+      "actor": "manual browser marker; sensor input bounded by first live changed sample",
+      "seq_at_arm": "1203",
+      "boot_at_arm": "3268eb79",
+      "armed_host_ms": 1794836890519.7258,
+      "browser_ready": true
+    },
+    "key": "3268eb79/1210",
+    "telemetry": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": "1210",
+      "uptime_ms": "2378814",
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "ldr_adc": 3917,
+      "motion": "NONE",
+      "distance_cm": 50.7069,
+      "brightness_target": 25,
+      "brightness_applied": 25,
+      "current_adc": 4095,
+      "current_ma_sim": 500,
+      "power_sim_w": 6,
+      "faults": []
+    },
+    "api_received_at": "2026-11-16T13:51:09.498734Z",
+    "render_ms": 1794837077455.8,
+    "paint_method": "MutationObserver + two requestAnimationFrame, matching boot/seq/distance",
+    "ui": {
+      "badge": "Online",
+      "apiBadge": "M\u00e1y ch\u1ee7 s\u1eb5n s\u00e0ng",
+      "feedback": "Ch\u1ecdn ch\u1ebf \u0111\u1ed9 v\u00e0 b\u1ea5m \u00c1p d\u1ee5ng \u0111\u1ec3 g\u1eedi l\u1ec7nh.",
+      "locked": true,
+      "lockReason": "Node ch\u01b0a cho ph\u00e9p \u0111i\u1ec1u khi\u1ec3n: d\u1eef li\u1ec7u c\u00f3 th\u1ec3 qu\u00e1 3 gi\u00e2y ho\u1eb7c \u0111ang c\u00f3 l\u1ec7nh ch\u1edd.",
+      "key": "3268eb79/1210",
+      "readings": {
+        "Ch\u1ebf \u0111\u1ed9 \u0111ang ch\u1ea1y": "T\u1ef1 \u0111\u1ed9ng",
+        "M\u00f4i tr\u01b0\u1eddng": "Ban \u0111\u00eam",
+        "M\u1ee5c ti\u00eau / \u0111ang \u00e1p d\u1ee5ng": "25% / 25%",
+        "Chuy\u1ec3n \u0111\u1ed9ng": "Kh\u00f4ng chuy\u1ec3n \u0111\u1ed9ng",
+        "LDR \u00b7 ADC raw": "3.917",
+        "T\u1ea3i \u00b7 ADC raw": "4.095",
+        "Kho\u1ea3ng c\u00e1ch": "50,7 cm",
+        "D\u00f2ng / c\u00f4ng su\u1ea5t m\u00f4 ph\u1ecfng": "500 mA / 6 W",
+        "Fault t\u1ea3i": "Kh\u00f4ng c\u00f3 l\u1ed7i t\u1ea3i",
+        "Nh\u1eadn d\u1eef li\u1ec7u l\u1ea7n cu\u1ed1i": "20:51:09 16/11/26",
+        "Uptime node": "0 gi\u1edd 39 ph\u00fat 38 gi\u00e2y",
+        "Boot / sequence": "3268eb79 / 1210"
+      },
+      "visibility": "visible",
+      "frame_visible": true
+    },
+    "request_start_ms": 1794837077420.8,
+    "response_ms": 1794837077432.3
+  },
+  "status": "INCOMPLETE",
+  "action_host_interval_ms": [
+    1794837076722.248,
+    1794837082137.5828
+  ],
+  "render_host_interval_ms": [
+    1794837077453.248,
+    1794837077460.048
+  ],
+  "latency_interval_ms": [
+    -4684.334716796875,
+    737.800048828125
+  ],
+  "mqtt": {
+    "at": "2026-11-16T13:51:09.498210+00:00",
+    "host_ms": 1794837069498.2107,
+    "perf_ns": 1886873198535000,
+    "source": "mqtt",
+    "event": "message",
+    "topic": "huit/nhom7/smartlight/v1/node_01/telemetry",
+    "body": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": 1210,
+      "uptime_ms": 2378814,
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "motion": "NONE",
+      "ldr_adc": 3917,
+      "current_adc": 4095,
+      "distance_cm": 50.7069,
+      "brightness_target": 25,
+      "brightness_applied": 25,
+      "current_ma_sim": 500,
+      "power_sim_w": 6,
+      "faults": []
+    },
+    "retain": false,
+    "qos": 0
+  },
+  "reasons": [
+    "Uncertainty crosses threshold or inconsistent timing"
+  ]
+}

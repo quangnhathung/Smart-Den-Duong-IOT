@@ -1,0 +1,2 @@
+{"at": "2026-11-16T11:52:38.767725+00:00", "perf_ns": 1879762468126300, "event": "START", "seconds": 120, "serial_commands_sent": 0, "dtr": false, "rts": false}
+{"at": "2026-11-16T11:52:39.133227+00:00", "perf_ns": 1879762834223100, "event": "ERROR", "error": "NotImplementedError('write_timeout is currently not supported')"}

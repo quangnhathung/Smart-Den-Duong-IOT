@@ -1,5 +1,19 @@
 # Kiểm tra dự án — firmware, backend và dashboard
 
+## TASK-010 — kết quả live một node trên Windows
+
+[Lượt proxy ACK thật run-20261116-193157](../reports/evidence/task-010/run-20261116-193157/README.md) PASS: một POST AUTO, command0d8f20f5…, đúng1 retry2,041s; TIMEOUT quan sát10,089s;2 ACK thả ở mốc12s nguyên bytes và lưu LATE_OR_DUPLICATE, API/DB cuối vẫn TIMEOUT/attempts2. Preflight2 telemetry qua1884 và không replay sau khôi phục PASS. Backend đã vềMQTT1883/API8001/PID14144/một worker, healthOK, người dùng xác nhận Dashboard ONLINE/NIGHT25/dữ liệu mới19:44:21. Proxy/recorder dừng, DB/PASS cũ giữ nguyên. Nhóm2 vẫn còn broker outage/reconnect/lệnh chờ/AUTO offline/UI terminal, nhóm4 còn sensor→Dashboard10 lượt; không chạy lại bài đã PASS.
+
+Bổ sung restart thật: [run-20261116-190549](../reports/evidence/task-010/run-20261116-190549/README.md) PASS giữ dữ liệu đã lưu sau PID18828→43632 và run ID đổi; firmware boot giữ nguyên.760 telemetry/13 command/20 ACK/106 alert/3 phiên cũ còn,3 CSV tải lại giống từng byte. Ranh giới row765→766 khác continuity, history/stats không nối năng lượng qua gap. Không capture đúng API outage/STALE ban đầu, không có lệnh chờ/phiên mở lúc restart; các tình huống đó chưa được chốt. TASK-010 hiện2/4 nhóm, nhóm2/4 còn PENDING. Bài Pause2s đã INCOMPLETE do ACK APPLIED/ACCEPTED tới sau1,023s, trước timeout10s; mốc Pause không được ghi nên chưa xác định được thao tác muộn hay MCU còn xử lý. Quy trình thay thế dùng proxy giữ nguyên ACK thật12s, đã kiểm công cụ offline/diagnostics, chưa chạy TIMEOUT live qua proxy. Không tự gửi lại lệnh hoặc nâng PENDING thành PASS.
+
+Bổ sung OPEN_LOAD: [đối chiếu lượt run-20261116-184903](../reports/evidence/task-010/run-20261116-184903/README.md) PASS từ telemetry SQLite/API, alert30/33 đóng và16 mẫu giữ AUTO/NIGHT25. Telemetry hết lỗi tại1340238ms; Serial1340431ms/duty64/mqtt1 và ảnh do người dùng xác nhận, không đồng nhất hai timestamp. Không chạy lại fault. Capture Serial mới sau phục hồi có19 dòng CONTROL AUTO25/duty64/faultOK/mqtt1; đồng hồ node/wall trung vị≈0,1603, khoảng telemetry thực trung vị≈12,70s/max15,62s trong phần quan sát. Trạng thái offline vì telemetry quá10s thực cần tách khỏi MQTT ngắt; không sửa ngưỡng. Latency cảm biến→render vẫn cần bằng chứng riêng.
+
+Phiên3 NIGHT6W đã đóng:50 mẫu CSV/API/stats khớp,48 gap không nối năng lượng PASS. Coverage chỉ1,534987%, valid_uptime2,005s; không khái quát saving75% của tập mẫu hợp lệ nhỏ ra toàn khoảng. Capture600s lượt đó không ghi API outage/run ID không đổi nên khi ấy restart PENDING; sau đó người dùng thực hiện và lượt mới đối chiếu PASS như trên. Không còn phiên đo agent mở.
+
+[Hồ sơ live và ma trận PASS/PENDING](../reports/evidence/task-010/run-20261116-180648/README.md). Backend dùng cổng8001 theo lựa chọn người dùng để giữ nguyên dịch vụ khác ở8000; Dashboard5500, broker1883. Người dùng xác nhận Python3.12/build P3/A3/prepare/68 Pytest/Ruff, Dashboard live/MANUAL80/PWM80/tự AUTO60s; agent không chạy lại các bài đã đủ xác nhận. SQLite/API bổ sung command ID/ACK cũ và mẫu PWM80. Không có ảnh/Serial mới cho lượt xác nhận; phân biệt với dữ liệu MQTT/API/SQLite agent thu trực tiếp.
+
+PASS live: health/nodes, singleton DB lock/quick_check/hash;422/409/404/pending guard;3 reject wire; cache replay sau deadline/ID trùng khác nội dung; command→ACK10 lượt median686,217ms/max1002,001ms;phiên thực/CSV/stats/clock và phép tính điện năng độc lập; OPEN_LOAD/phục hồi, restart giữ dữ liệu/gap, TIMEOUT/ACK muộn/retry và khôi phục Dashboard theo bổ sung trên. PENDING: UI terminal states, broker outage/reconnect/no-replay cho lệnh chờ/AUTO offline, tình huống lệnh chờ/phiên mở qua restart và cảm biến→Dashboard10 lượt. GUI observation timeout nên chưa có ảnh mới trong repo; khôi phục Dashboard được người dùng xác nhận. Không đổi schema/thuật toán/ngưỡng, không lấy thời gian node chia lẫn wall clock, không nghiệm thu ba node hoặc EX-series. Tài liệu TASK-007/008/009 bên dưới giữ kết quả lịch sử ở thời điểm bàn giao.
+
 ## TASK-009 P5/A5 — dashboard và API read bổ sung
 
 Tại DoAn/dashboard: `node --test tests/*.test.mjs` →16 PASS (Node24.17). Tại DoAn/backend: `.venv/bin/python scripts/check.py` →Ruff check/format,68 Pytest PASS/1 deprecation warning cũ. OpenAPI11 paths/12 thao tác. Không đổi firmware/toolchain nên không build lại C++/Wokwi trong task UI.
@@ -88,3 +102,8 @@ Ghi cho từng ca: thời gian thực, bản firmware/checksum, cấu hình, tha
 ## Điều kiện hoàn tất
 
 Giữ bốn nhóm nghiệm thu TASK-005: mạch, raw cảm biến, build/live PWM-cảm biến, tài liệu. Sơ đồ kiểm tra tĩnh không được báo như đã xác minh live. Chỉ chốt toàn task sau khi đủ P1-01 đến P1-08 và không có lỗi chặn liên quan. Nếu chờ người vận hành, giữ task Bị chặn, không thêm vào checklist task hoàn thành. Không tự chạy A2/TASK-006.
+
+
+TASK-010: b? ghi quan s?t Dashboard th?t/MQTT/Serial qua loopback18765; t0 l? kho?ng accessibility th?y sensor ??i, hai rAF c?ng boot/seq/distance l? m?c render x?p x?. Event browser m?i c? page_id/time_origin/visibility; ph?i lo?i l??t kh?ng x?c minh ???c tr?ng th?i trang. Xem evidence/task-010/run-20261116-195307/README.md; ch?a ??10 m?u sensor?Dashboard.
+
+TASK-010 marker-baseline-v2: kh?ng ch?p nh?n sensor ?? ? target tr??c marker; ph?i c? seq m?i c?ng boot v? API last_seen sau c?n tr?n marker ?? ??ng b? clock. Ph?n t?ch ph?i lo?i m?u MQTT ?? nh?n tr??c marker. B?n ghi ?? ghi ch? x?c nh?n capture, ch?a ph?i PASS latency. Xem trial-03-summary-causal-audit.json.

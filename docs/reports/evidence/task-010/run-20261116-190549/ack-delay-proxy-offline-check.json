@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "scope": "Offline vectors only; no business MQTT published and no TASK-010 timeout PASS",
+  "checks": [
+    "MQTT CONNECT client ID parsing",
+    "ACK payload identification",
+    "ordinary frame passes while ACK delayed",
+    "delayed ACK released byte-for-byte unchanged",
+    "connection cleanup"
+  ]
+}

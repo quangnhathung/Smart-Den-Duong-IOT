@@ -1,0 +1,27 @@
+{
+  "result": "PENDING",
+  "command_id": "7aa224a2-5738-42ad-8b13-cf857629a670",
+  "scope": "API TIMEOUT and late ACK, not Dashboard rendering",
+  "final_at_timeout": {
+    "command_id": "7aa224a2-5738-42ad-8b13-cf857629a670",
+    "node_id": "node_01",
+    "boot_id": "3268eb79",
+    "payload": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "command_id": "7aa224a2-5738-42ad-8b13-cf857629a670",
+      "deadline_uptime_ms": "1599863",
+      "mode": "AUTO"
+    },
+    "created_at": "2026-11-16T12:13:36.967613Z",
+    "sent_at": "2026-11-16T12:13:36.973317Z",
+    "retry_at": null,
+    "result": "APPLIED",
+    "reason": null,
+    "ack_at": "2026-11-16T12:13:37.996447Z",
+    "attempts": 1
+  },
+  "observed_timeout_wall_s": 1.2972575998865068,
+  "reason": "AssertionError('No timeout: pause was missed or transport differed')"
+}

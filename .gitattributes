@@ -1,0 +1,2 @@
+# Preserve captured evidence bytes and existing hashes on Windows checkout.
+docs/reports/evidence/task-010/** -text whitespace=cr-at-eol,-blank-at-eof

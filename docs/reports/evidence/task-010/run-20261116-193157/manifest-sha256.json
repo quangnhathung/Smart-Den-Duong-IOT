@@ -1,0 +1,134 @@
+{
+  "ack-delay-check-20261116-193704-427746-summary.json": {
+    "bytes": 5249,
+    "sha256": "e14ccc3140e1cfd427f643effe61e1d6144ced73bcf7189f9eea2eceab7a020a"
+  },
+  "ack-delay-check-20261116-193704-427746.jsonl": {
+    "bytes": 43778,
+    "sha256": "600bf68944174816d9b88f76ee6efc881af91376db0e5aabb73d784f539bc5c3"
+  },
+  "ack-delay-check.py": {
+    "bytes": 9036,
+    "sha256": "eecb5c6fb43455a8486760a0370b5086627dd5096dfa2ea334afe4a47b30ca15"
+  },
+  "ack-delay-control.json": {
+    "bytes": 100,
+    "sha256": "613318f0cd5b8e3d8c17c37cfce21a1bdedef60e434450e642720c14b913d514"
+  },
+  "ack-delay-proxy-20261116-193220-531356.jsonl": {
+    "bytes": 2514,
+    "sha256": "0e25228a73721b6a3c1da857f06e50e7727f78c83011b8d7890605fc6f2f2dc3"
+  },
+  "ack-delay-proxy.py": {
+    "bytes": 7645,
+    "sha256": "4c2c31e8bd04080261c4af3807780b77f3b59679801926e46ebdaf17ff3d88bf"
+  },
+  "ack-delay-status.json": {
+    "bytes": 297,
+    "sha256": "727a17d7bc5f8f7dc7edffe7590067ac3be50658b04ab6ce22401107fceeaf51"
+  },
+  "backend-proxy.log": {
+    "bytes": 91382,
+    "sha256": "b9f744048cc4a6e00c415b2ae966a02218e73019bef8e41985dd963830db11b0"
+  },
+  "backend-restored-at-verification.log": {
+    "bytes": 58620,
+    "sha256": "6efa3a6866d0cf7ce719da6f160338148700f7bbb7081c96327c71bfeba366b9"
+  },
+  "backend-stop-signal.json": {
+    "bytes": 353,
+    "sha256": "81ea8954c83303ba21341a32572855a92dcf41f2dc0d540291cbca5290d89efa"
+  },
+  "capture-stop.json": {
+    "bytes": 142,
+    "sha256": "2639c5d628ac84dd4f63856efc1249bdc13c84d6dfe5586c4e4ca2297c7292b7"
+  },
+  "capture-whole-test.jsonl": {
+    "bytes": 667220,
+    "sha256": "b1817051d7f1ca025d62b135b4782f6df97bb7a96e45a5183560865cb21d8c5c"
+  },
+  "dashboard-http-restored.json": {
+    "bytes": 483,
+    "sha256": "9feffa41ef6e100d8ff0b79201162718c0b2b4ed85eeafcf0768fe73b720181e"
+  },
+  "final-audit.json": {
+    "bytes": 3961,
+    "sha256": "4b67a22fb1586027949aa8271157e530b3c5483f8d7cdaf7d1de0e0aa13e9035"
+  },
+  "final-audit.py": {
+    "bytes": 6649,
+    "sha256": "d35c378c948db745b4435410a0de5aad2dbb9d8e71d68ba18550a24774cc665b"
+  },
+  "live-evidence.py": {
+    "bytes": 17784,
+    "sha256": "1c6895d1f6c84d74bd25ef0d64f938b1f260f19a3efe377510d55d358b179928"
+  },
+  "manifest-notes.json": {
+    "bytes": 241,
+    "sha256": "838e1e8dc6fd454c370f3a92acf07150201402c743c0cd7a5a4e11df6cd66934"
+  },
+  "proxy-preflight.json": {
+    "bytes": 2110,
+    "sha256": "6d1efe31c0f6b2c4f4e4425733b89fb4898ccc792f303cdf4b9a1a03c0d4c68e"
+  },
+  "proxy-preflight.jsonl": {
+    "bytes": 51500,
+    "sha256": "5d51bf96979c49342fda28cf1918a4fe76b50fcc5d0b864d20656c9e64b50235"
+  },
+  "proxy-preflight.py": {
+    "bytes": 2562,
+    "sha256": "5fc98cfa5d8c213fa84fdf6b6b5bc1510a46b1fa76dc3ee54fdac09efd1a7ec7"
+  },
+  "proxy-stop-action.json": {
+    "bytes": 527,
+    "sha256": "b1d55dbaea75fa61485608059ad6baf0f3f5b27d4b39aeecd7e72cfdedf833bc"
+  },
+  "README.md": {
+    "bytes": 6981,
+    "sha256": "0e0d6a325ffd699b6809985f22c25e3b93f2c74ac7a4ea3a94cf74da97c56708"
+  },
+  "report-entry.md": {
+    "bytes": 3011,
+    "sha256": "c6a7d3f3c374b623b5af2911d8bf9dd753a8cf395a653d485db5ed3b7344444c"
+  },
+  "report-preservation.json": {
+    "bytes": 164,
+    "sha256": "0cd9dc805f8a3af383025063ababacd0c6d83576f99c599f8d8803d20f3f1825"
+  },
+  "restored-network.log": {
+    "bytes": 1135,
+    "sha256": "cb84938806126c89e209ee74ec0c58e1765938a2c37f2f869fe9123c74ff4747"
+  },
+  "snapshot-after-test.jsonl": {
+    "bytes": 198036,
+    "sha256": "3f984fce38a1fd73cf3fb91323c0c044c9e35c547abc51aa2f521a30e7a99609"
+  },
+  "snapshot-baseline.jsonl": {
+    "bytes": 230540,
+    "sha256": "f2286b3e9ea41296e1de90125b02644778dda3039308ec4d70cceb46730631e6"
+  },
+  "snapshot-final.jsonl": {
+    "bytes": 178676,
+    "sha256": "ef3dadbf39fc2731986ebbea7061bf840528d0c3f4d47c91d373fd9f4fcf6653"
+  },
+  "snapshot-restored.jsonl": {
+    "bytes": 179300,
+    "sha256": "fae449e1246aa8f22567d8a2a1f8bebeff84d494c293db232320aea2ea524f0a"
+  },
+  "sqlite-after-test.json": {
+    "bytes": 745477,
+    "sha256": "66481d20a9d2e51b9aa946f2e49208a08dcd97aaae446595fd99d7ec1c55dd38"
+  },
+  "sqlite-baseline.json": {
+    "bytes": 723943,
+    "sha256": "0c0a8e80353ba5183037f89168cb48d9255ee57467f0f544ff4a4ee02a310416"
+  },
+  "sqlite-final.json": {
+    "bytes": 770969,
+    "sha256": "18e4190f441c7c9249c10483bf52a437ff1e6aced4507329305e03cfae04b4fb"
+  },
+  "sqlite-restored.json": {
+    "bytes": 762735,
+    "sha256": "bf77fddbff392ceb1bd39baa00879ed0018a22389d312b669f635c998f671753"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "result": "PASS",
+  "scope": "Before test: Backend1884 forwarding two fresh real node_01 telemetry samples",
+  "baseline_seq": "911",
+  "samples": [
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-16T12:36:37.254821Z",
+      "age_s": 0.0779999999795109,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "932",
+        "uptime_ms": "1821448",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-16T12:36:49.677849Z",
+      "age_s": 0.10899999993853271,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "933",
+        "uptime_ms": "1823454",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    }
+  ],
+  "proxy": {
+    "at": "2026-11-16T12:36:49.594541+00:00",
+    "port": 1884,
+    "backend_clients": [
+      "smartlight-backend-5452d960081d"
+    ],
+    "targets": [],
+    "listening": true,
+    "log_path": "D:\\IOT\\Smart-Den-Duong-IOT\\docs\\reports\\evidence\\task-010\\run-20261116-193157\\ack-delay-proxy-20261116-193220-531356.jsonl"
+  },
+  "commands_sent": 0
+}

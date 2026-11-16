@@ -1,0 +1,56 @@
+{
+  "observed_ui_events": 30,
+  "states": [
+    {
+      "badge": "Offline \u00b7 d\u1eef li\u1ec7u c\u0169",
+      "locked": true,
+      "count": 11
+    },
+    {
+      "badge": "Online",
+      "locked": false,
+      "count": 5
+    },
+    {
+      "badge": "Online",
+      "locked": true,
+      "count": 9
+    },
+    {
+      "badge": "D\u1eef li\u1ec7u c\u0169",
+      "locked": true,
+      "count": 3
+    },
+    {
+      "badge": "Ch\u01b0a c\u00f3 d\u1eef li\u1ec7u",
+      "locked": true,
+      "count": 2
+    }
+  ],
+  "page_ready": [
+    {
+      "at": "2026-11-16T13:28:37.956317+00:00",
+      "host_ms": 1794835717956.3179,
+      "perf_ns": 1885521656698200,
+      "source": "browser",
+      "event": "page-ready",
+      "browser_ms": 1794835717918.3,
+      "url": "http://127.0.0.1:5500/tests/task010-live-latency.html?utm_source=chatgpt.com",
+      "frame_url": "http://127.0.0.1:5500/index.html#nodes/node_01",
+      "visibility": "hidden"
+    },
+    {
+      "at": "2026-11-16T13:32:25.244287+00:00",
+      "host_ms": 1794835945244.2876,
+      "perf_ns": 1885748944744200,
+      "source": "browser",
+      "event": "page-ready",
+      "browser_ms": 1794835945239.7,
+      "url": "http://127.0.0.1:5500/tests/task010-live-latency.html?utm_source=chatgpt.com",
+      "frame_url": "http://127.0.0.1:5500/index.html#nodes/node_01",
+      "visibility": "visible"
+    }
+  ],
+  "render_matches": 0,
+  "note": "Actual Dashboard DOM observations; natural telemetry gaps, not a broker-outage test. Initial connecting/empty state is not a confirmed API failure."
+}

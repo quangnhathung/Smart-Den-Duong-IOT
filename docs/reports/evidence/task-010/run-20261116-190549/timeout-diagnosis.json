@@ -1,0 +1,54 @@
+{
+  "at": "2026-11-16T12:23:50.721069+00:00",
+  "test_result": "PENDING/INCOMPLETE",
+  "command_id": "7aa224a2-5738-42ad-8b13-cf857629a670",
+  "sqlite_command": {
+    "command_id": "7aa224a2-5738-42ad-8b13-cf857629a670",
+    "node_id": "node_01",
+    "boot_id": "3268eb79",
+    "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"command_id\": \"7aa224a2-5738-42ad-8b13-cf857629a670\", \"deadline_uptime_ms\": 1599863, \"mode\": \"AUTO\"}",
+    "created_at": 1794831216.9676132,
+    "sent_at": 1794831216.9733174,
+    "retry_at": null,
+    "result": "APPLIED",
+    "reason": null,
+    "ack_at": 1794831217.996447,
+    "attempts": 1
+  },
+  "sqlite_ack_events": [
+    {
+      "id": 21,
+      "command_id": "7aa224a2-5738-42ad-8b13-cf857629a670",
+      "received_at": 1794831217.996447,
+      "payload": "{\"schema_version\":1,\"node_id\":\"node_01\",\"boot_id\":\"3268eb79\",\"command_id\":\"7aa224a2-5738-42ad-8b13-cf857629a670\",\"result\":\"APPLIED\",\"reason\":null}",
+      "disposition": "ACCEPTED"
+    }
+  ],
+  "api_status": 200,
+  "api_body": {
+    "command_id": "7aa224a2-5738-42ad-8b13-cf857629a670",
+    "node_id": "node_01",
+    "boot_id": "3268eb79",
+    "payload": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "command_id": "7aa224a2-5738-42ad-8b13-cf857629a670",
+      "deadline_uptime_ms": "1599863",
+      "mode": "AUTO"
+    },
+    "created_at": "2026-11-16T12:13:36.967613Z",
+    "sent_at": "2026-11-16T12:13:36.973317Z",
+    "retry_at": null,
+    "result": "APPLIED",
+    "reason": null,
+    "ack_at": "2026-11-16T12:13:37.996447Z",
+    "attempts": 1
+  },
+  "sent_to_ack_s": 1.0231297016143799,
+  "conclusion": "Real APPLIED ACK accepted before 10s; this invocation did not exercise timeout.",
+  "pause_timing": "Not recorded; cannot distinguish late Pause from transport/MCU continuing during UI pause.",
+  "procedure_issue": "Two-second human reaction window and no verified paused-state interlock. No automatic retry occurred.",
+  "timeout_backend_bug_demonstrated": false,
+  "replacement": "Local proxy delays actual ACK frames12s; forwards telemetry unchanged; automated one AUTO after fresh telemetry. Prepared/offline+diagnostics checked, not executed against live Backend."
+}

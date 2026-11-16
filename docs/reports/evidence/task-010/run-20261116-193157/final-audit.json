@@ -1,0 +1,132 @@
+{
+  "result": "PASS",
+  "command_id": "0d8f20f5-4700-4be4-b5cc-37b555396adc",
+  "one_http_post": true,
+  "mqtt_command_sends": 2,
+  "expected_application_retry_count": 1,
+  "unexpected_command_ids": [],
+  "server_sent_at": "2026-11-16T12:37:15.226902+00:00",
+  "server_retry_at": "2026-11-16T12:37:17.268317+00:00",
+  "retry_delay_s": 2.041414976119995,
+  "timeout_observed_utc": "2026-11-16T12:37:25.308628+00:00",
+  "timeout_observed_elapsed_s": 10.088671599980444,
+  "timeout_bounds_from_api_utc": [
+    "2026-11-16T12:37:25.102914+00:00",
+    "2026-11-16T12:37:25.308628+00:00"
+  ],
+  "timeout_note": "DB has no timeout_at column; report first observed TIMEOUT, not an invented exact transition timestamp.",
+  "real_ack_at_proxy_utc": [
+    "2026-11-16T12:37:15.857795+00:00",
+    "2026-11-16T12:37:17.854810+00:00"
+  ],
+  "real_ack_release_utc": [
+    "2026-11-16T12:37:27.254744+00:00",
+    "2026-11-16T12:37:27.255748+00:00"
+  ],
+  "ack_db_received_utc": [
+    "2026-11-16T12:37:27.254745+00:00",
+    "2026-11-16T12:37:27.255748+00:00"
+  ],
+  "late_ack_dispositions": [
+    "LATE_OR_DUPLICATE",
+    "LATE_OR_DUPLICATE"
+  ],
+  "final_command": {
+    "command_id": "0d8f20f5-4700-4be4-b5cc-37b555396adc",
+    "node_id": "node_01",
+    "boot_id": "3268eb79",
+    "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"3268eb79\", \"command_id\": \"0d8f20f5-4700-4be4-b5cc-37b555396adc\", \"deadline_uptime_ms\": 1832465, \"mode\": \"AUTO\"}",
+    "created_at": 1794832635.224901,
+    "sent_at": 1794832635.226902,
+    "retry_at": 1794832637.268317,
+    "result": "TIMEOUT",
+    "reason": "ACK_TIMEOUT",
+    "ack_at": null,
+    "attempts": 2
+  },
+  "raw_ack_bytes_unchanged": true,
+  "retained_rows": {
+    "telemetry": {
+      "before": 907,
+      "after": 957,
+      "missing_old_rows": 0
+    },
+    "commands": {
+      "before": 14,
+      "after": 15,
+      "missing_old_rows": 0
+    },
+    "ack_events": {
+      "before": 21,
+      "after": 23,
+      "missing_old_rows": 0
+    },
+    "alerts": {
+      "before": 245,
+      "after": 292,
+      "missing_old_rows": 0
+    },
+    "experiments": {
+      "before": 3,
+      "after": 3,
+      "missing_old_rows": 0
+    },
+    "availability": {
+      "before": 2,
+      "after": 4,
+      "missing_old_rows": 0
+    }
+  },
+  "restoration": {
+    "backend_mqtt": 1883,
+    "api": 8001,
+    "proxy1884_stopped": true,
+    "health": {
+      "status": "OK",
+      "database": true,
+      "broker": true,
+      "queue": true,
+      "dropped_events": 0
+    },
+    "latest_node_snapshot": {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-16T12:43:56.402868Z",
+      "age_s": 4.328999999910593,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "3268eb79",
+        "seq": "967",
+        "uptime_ms": "1891622",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 3917,
+        "motion": "NONE",
+        "distance_cm": 101.6552,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": false
+    },
+    "observed_commands_after_proxy_stop": 0,
+    "dashboard_user_confirmed": true,
+    "dashboard_user_observed_time": "2026-11-16T19:44:21+07:00",
+    "dashboard_user_seq_range": [
+      963,
+      969
+    ]
+  },
+  "limitations": [
+    "No claim of a naturally lost ACK: this is labeled delay injection of real firmware ACK.",
+    "Dashboard rendering restoration is user-confirmed; no new screenshot in repository.",
+    "Broker outage/offline fallback and sensor-to-Dashboard latency remain separate pending criteria."
+  ]
+}

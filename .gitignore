@@ -4,3 +4,7 @@ simulations/*/build/
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+
+# Active TASK-010 streams; frozen evidence snapshots are versioned.
+docs/reports/evidence/task-010/run-20261116-193157/backend-restored.log
+docs/reports/evidence/task-010/run-20261116-195307/latency-events-20261116-201020.jsonl

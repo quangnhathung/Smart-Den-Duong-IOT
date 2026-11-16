@@ -1,0 +1,150 @@
+{
+  "trial_id": 2,
+  "page_id": "5e90c658-15b9-4a77-87ee-0ba963c69a98",
+  "key": "3268eb79/1172",
+  "sensor_action": {
+    "source": "evidence-analysis",
+    "event": "sensor-action-observed",
+    "trial_id": 2,
+    "target_cm": 150,
+    "observed_cm": 149,
+    "action_low_ms": 1794836484854,
+    "action_high_ms": 1794836485582,
+    "previous": {
+      "at": "2026-11-16T13:41:25.221293+00:00",
+      "host_ms": 1794836485221.2932,
+      "perf_ns": 1886288921500500,
+      "source": "node-ui-observer",
+      "event": "distance-observation",
+      "trial_id": 2,
+      "start_ms": 1794836484854,
+      "end_ms": 1794836485218,
+      "value": 154
+    },
+    "first_new": {
+      "at": "2026-11-16T13:41:25.584626+00:00",
+      "host_ms": 1794836485584.6262,
+      "perf_ns": 1886289285131300,
+      "source": "node-ui-observer",
+      "event": "distance-observation",
+      "trial_id": 2,
+      "start_ms": 1794836485221,
+      "end_ms": 1794836485582,
+      "value": 149
+    },
+    "method": "Retrospective derivation from immutable raw accessibility observations: first 149cm, stable through observer end. Exact-150 observer did not terminate; no raw record was edited."
+  },
+  "render": {
+    "at": "2026-11-16T13:41:36.145787+00:00",
+    "host_ms": 1794836496145.7876,
+    "perf_ns": 1886299846058600,
+    "source": "browser",
+    "event": "render-match",
+    "page_id": "5e90c658-15b9-4a77-87ee-0ba963c69a98",
+    "time_origin": 1794836390765.9,
+    "visibility": "visible",
+    "browser_ms": 1794836496082.7,
+    "trial": {
+      "id": 2,
+      "revision": 1,
+      "target_cm": 150,
+      "actor": "user manual; page identity required",
+      "seq_at_arm": "1142",
+      "boot_at_arm": "3268eb79",
+      "armed_host_ms": 1794836138942.7544,
+      "browser_ready": true
+    },
+    "key": "3268eb79/1172",
+    "telemetry": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": "1172",
+      "uptime_ms": "2302547",
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "ldr_adc": 3917,
+      "motion": "NONE",
+      "distance_cm": 151.1035,
+      "brightness_target": 25,
+      "brightness_applied": 25,
+      "current_adc": 4095,
+      "current_ma_sim": 500,
+      "power_sim_w": 6,
+      "faults": []
+    },
+    "api_received_at": "2026-11-16T13:41:33.107113Z",
+    "render_ms": 1794836496082.7,
+    "paint_method": "MutationObserver + two requestAnimationFrame, matching boot/seq/distance",
+    "ui": {
+      "badge": "Online",
+      "apiBadge": "M\u00e1y ch\u1ee7 s\u1eb5n s\u00e0ng",
+      "feedback": "Ch\u1ecdn ch\u1ebf \u0111\u1ed9 v\u00e0 b\u1ea5m \u00c1p d\u1ee5ng \u0111\u1ec3 g\u1eedi l\u1ec7nh.",
+      "locked": false,
+      "lockReason": "S\u1eb5n s\u00e0ng g\u1eedi y\u00eau c\u1ea7u \u0111\u1ebfn node_01.",
+      "key": "3268eb79/1172",
+      "readings": {
+        "Ch\u1ebf \u0111\u1ed9 \u0111ang ch\u1ea1y": "T\u1ef1 \u0111\u1ed9ng",
+        "M\u00f4i tr\u01b0\u1eddng": "Ban \u0111\u00eam",
+        "M\u1ee5c ti\u00eau / \u0111ang \u00e1p d\u1ee5ng": "25% / 25%",
+        "Chuy\u1ec3n \u0111\u1ed9ng": "Kh\u00f4ng chuy\u1ec3n \u0111\u1ed9ng",
+        "LDR \u00b7 ADC raw": "3.917",
+        "T\u1ea3i \u00b7 ADC raw": "4.095",
+        "Kho\u1ea3ng c\u00e1ch": "151,1 cm",
+        "D\u00f2ng / c\u00f4ng su\u1ea5t m\u00f4 ph\u1ecfng": "500 mA / 6 W",
+        "Fault t\u1ea3i": "Kh\u00f4ng c\u00f3 l\u1ed7i t\u1ea3i",
+        "Nh\u1eadn d\u1eef li\u1ec7u l\u1ea7n cu\u1ed1i": "20:41:33 16/11/26",
+        "Uptime node": "0 gi\u1edd 38 ph\u00fat 22 gi\u00e2y",
+        "Boot / sequence": "3268eb79 / 1172"
+      },
+      "visibility": "visible",
+      "frame_visible": true
+    },
+    "request_start_ms": 1794836496004,
+    "response_ms": 1794836496066.5
+  },
+  "status": "INCOMPLETE",
+  "action_host_interval_ms": [
+    1794836484853.9949,
+    1794836485583.9949
+  ],
+  "render_host_interval_ms": [
+    1794836496042.685,
+    1794836496087.585
+  ],
+  "latency_interval_ms": [
+    10458.690185546875,
+    11233.590087890625
+  ],
+  "mqtt": {
+    "at": "2026-11-16T13:41:33.107113+00:00",
+    "host_ms": 1794836493107.1128,
+    "perf_ns": 1886296807694600,
+    "source": "mqtt",
+    "event": "message",
+    "topic": "huit/nhom7/smartlight/v1/node_01/telemetry",
+    "body": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "3268eb79",
+      "seq": 1172,
+      "uptime_ms": 2302547,
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "motion": "NONE",
+      "ldr_adc": 3917,
+      "current_adc": 4095,
+      "distance_cm": 151.1035,
+      "brightness_target": 25,
+      "brightness_applied": 25,
+      "current_ma_sim": 500,
+      "power_sim_w": 6,
+      "faults": []
+    },
+    "retain": false,
+    "qos": 0
+  },
+  "reasons": [
+    "Measurement page hidden during trial"
+  ]
+}
