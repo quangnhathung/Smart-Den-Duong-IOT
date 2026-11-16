@@ -1,10 +1,13 @@
 #include "Connectivity.h"
+#include "MqttMailbox.h"
 
 #include <Arduino.h>
 #include <PubSubClient.h>
 #include <WiFi.h>
 #include <algorithm>
 #include <atomic>
+#include <esp_random.h>
+#include <esp_timer.h>
 
 namespace {
 constexpr char PING_TOPIC[] = "huit/nhom7/smartlight/v1/node_01/diagnostics/ping";
@@ -19,8 +22,100 @@ uint32_t lastHeartbeatMs = 0;
 uint32_t retryMs = 1000;
 bool wasConnected = false;
 bool mqttReady = false;
+char bootId[9] = {};
+char willPayload[192] = {};
+char packetBuffer[MqttProtocol::PACKET_CAPACITY];
+MqttMailbox mailbox;
+portMUX_TYPE mailboxMux = portMUX_INITIALIZER_UNLOCKED;
+uint64_t telemetrySeq = 0;
+uint64_t lastTelemetryGeneration = 0;
+uint64_t lastTelemetrySentMs = 0;
+uint64_t lastTelemetryAttemptMs = 0;
+bool haveTelemetryAttempt = false;
+bool forceTelemetry = true;
+bool onlinePending = true;
+
+bool publishPacket(const char *topic, size_t length, bool retained) {
+  return length && mqtt.publish(topic, reinterpret_cast<const uint8_t *>(packetBuffer), length, retained);
+}
+
+void closeSession() {
+  mqttConnected.store(false);
+  portENTER_CRITICAL(&mailboxMux);
+  mailbox.disconnect();
+  portEXIT_CRITICAL(&mailboxMux);
+  // If a clean DISCONNECT can be sent, publish OFFLINE first; otherwise leave the will armed.
+  if (WiFi.status() == WL_CONNECTED && mqtt.connected()) {
+    const size_t length = MqttProtocol::encodeAvailability(bootId, false, packetBuffer, sizeof(packetBuffer));
+    if (publishPacket(MqttProtocol::AVAILABILITY_TOPIC, length, true)) {
+      mqtt.disconnect();
+      return;
+    }
+  }
+  networkClient.stop();
+}
+
+void publishBusiness() {
+  using namespace MqttProtocol;
+  if (onlinePending) {
+    const size_t length = encodeAvailability(bootId, true, packetBuffer, sizeof(packetBuffer));
+    if (!publishPacket(AVAILABILITY_TOPIC, length, true)) {
+      return;
+    }
+    onlinePending = false;
+  }
+  CommandResult result;
+  portENTER_CRITICAL(&mailboxMux);
+  const bool haveResult = mailbox.peekResult(result);
+  portEXIT_CRITICAL(&mailboxMux);
+  if (haveResult) {
+    const bool stale = result.session != disconnectCount.load();
+    const size_t length = stale ? 0 : encodeResult(result, bootId, packetBuffer, sizeof(packetBuffer));
+    if (stale || publishPacket(ACK_TOPIC, length, false)) {
+      portENTER_CRITICAL(&mailboxMux);
+      mailbox.popResult();
+      portEXIT_CRITICAL(&mailboxMux);
+    }
+  }
+  TelemetrySnapshot snapshot;
+  uint64_t generation;
+  portENTER_CRITICAL(&mailboxMux);
+  const bool ready = mailbox.latest(snapshot, generation);
+  portEXIT_CRITICAL(&mailboxMux);
+  const uint64_t nowMs = firmwareUptimeMs();
+  if (!ready || (haveTelemetryAttempt && nowMs - lastTelemetryAttemptMs < 200) ||
+      (!forceTelemetry && generation == lastTelemetryGeneration && nowMs - lastTelemetrySentMs < 2000)) {
+    return;
+  }
+  lastTelemetryAttemptMs = nowMs;
+  haveTelemetryAttempt = true;
+  const size_t length = encodeTelemetry(snapshot, bootId, telemetrySeq, packetBuffer, sizeof(packetBuffer));
+  if (publishPacket(TELEMETRY_TOPIC, length, false)) {
+    ++telemetrySeq;
+    lastTelemetryGeneration = generation;
+    lastTelemetrySentMs = nowMs;
+    forceTelemetry = false;
+  } else {
+    Serial.println("MQTT telemetry serialize/publish failed");
+  }
+}
 
 void receivePing(char *topic, uint8_t *payload, unsigned int length) {
+  if (strcmp(topic, MqttProtocol::COMMAND_TOPIC) == 0) {
+    MqttProtocol::RemoteCommand command;
+    if (!mqttConnected.load() || !MqttProtocol::parseCommand(topic, payload, length, command)) {
+      Serial.println("MQTT command dropped: malformed payload, ID or session");
+      return;
+    }
+    command.session = disconnectCount.load();
+    portENTER_CRITICAL(&mailboxMux);
+    const bool queued = mailbox.enqueue(command);
+    portEXIT_CRITICAL(&mailboxMux);
+    if (!queued) {
+      Serial.println("MQTT command queue full; not applied");
+    }
+    return;
+  }
   if (strcmp(topic, PING_TOPIC) != 0 || length > 64) {
     Serial.println("PING rejected: topic or length");
     return;
@@ -49,6 +144,7 @@ void networkStep() {
     retryMs = 1000;
     if (mqtt.loop()) {
       publishHeartbeat(millis());
+      publishBusiness();
     } else {
       Serial.printf("uptime_ms=%lu MQTT loop failed state=%d\r\n", static_cast<unsigned long>(millis()), mqtt.state());
     }
@@ -60,8 +156,8 @@ void networkStep() {
       Serial.printf("uptime_ms=%lu MQTT disconnected state=%d wifi=%d\r\n", static_cast<unsigned long>(millis()), mqtt.state(), WiFi.status());
       wasConnected = false;
       disconnectCount.fetch_add(1);
-      mqtt.disconnect(); // Close a stale session after Wi-Fi loss before retry/resubscribe.
-      return;            // Publish loss before attempting a new session on a later network tick.
+      closeSession(); // Keep will armed when transport is already lost.
+      return;         // Publish loss before attempting a new session on a later network tick.
     }
     if (nowMs - lastAttemptMs < retryMs) {
       return;
@@ -72,16 +168,19 @@ void networkStep() {
       Serial.printf("uptime_ms=%lu WiFi reconnect started=%d wifi=%d\r\n", static_cast<unsigned long>(millis()), started, WiFi.status());
     } else if (mqttReady) {
       Serial.printf("uptime_ms=%lu MQTT connect attempt retry_ms=%lu\r\n", static_cast<unsigned long>(nowMs), static_cast<unsigned long>(retryMs));
-      if (mqtt.connect("smartlight-node_01-p0") && mqtt.subscribe(PING_TOPIC, 1)) {
+      if (mqtt.connect("smartlight-node_01-p0", nullptr, nullptr, MqttProtocol::AVAILABILITY_TOPIC, 0, true, willPayload, true) &&
+          mqtt.subscribe(PING_TOPIC, 1) && mqtt.subscribe(MqttProtocol::COMMAND_TOPIC, 1)) {
         wasConnected = true;
         mqttConnected.store(true);
         lastHeartbeatMs = millis();
+        onlinePending = true;
+        forceTelemetry = true;
         retryMs = 1000;
         Serial.println("MQTT connected; ping subscribed");
         return;
       }
       Serial.printf("uptime_ms=%lu MQTT connect failed state=%d wifi=%d\r\n", static_cast<unsigned long>(millis()), mqtt.state(), WiFi.status());
-      mqtt.disconnect();
+      closeSession();
     }
     retryMs = std::min<uint32_t>(retryMs * 2U, 10000U);
   } else {
@@ -110,7 +209,12 @@ void networkTask(void *) {
 } // namespace
 
 bool startConnectivity() {
-  return xTaskCreatePinnedToCore(networkTask, "smartlight-mqtt", 6144, nullptr, 1, nullptr, 0) == pdPASS;
+  snprintf(bootId, sizeof(bootId), "%08lx", static_cast<unsigned long>(esp_random()));
+  if (!MqttProtocol::encodeAvailability(bootId, false, willPayload, sizeof(willPayload))) {
+    Serial.println("MQTT will serialization failed");
+    return false;
+  }
+  return xTaskCreatePinnedToCore(networkTask, "smartlight-mqtt", 8192, nullptr, 1, nullptr, 0) == pdPASS;
 }
 
 bool isMqttConnected() {
@@ -119,4 +223,32 @@ bool isMqttConnected() {
 
 uint32_t mqttDisconnectCount() {
   return disconnectCount.load();
+}
+
+const char *mqttBootId() {
+  return bootId;
+}
+
+uint64_t firmwareUptimeMs() {
+  return static_cast<uint64_t>(esp_timer_get_time()) / 1000;
+}
+
+void updateMqttSnapshot(const MqttProtocol::TelemetrySnapshot &snapshot) {
+  portENTER_CRITICAL(&mailboxMux);
+  mailbox.update(snapshot);
+  portEXIT_CRITICAL(&mailboxMux);
+}
+
+bool takeRemoteCommand(MqttProtocol::RemoteCommand &command) {
+  portENTER_CRITICAL(&mailboxMux);
+  const bool taken = mailbox.takeCommand(command);
+  portEXIT_CRITICAL(&mailboxMux);
+  return taken;
+}
+
+bool completeRemoteCommand(const MqttProtocol::CommandResult &result) {
+  portENTER_CRITICAL(&mailboxMux);
+  const bool queued = result.session == disconnectCount.load() && mqttConnected.load() && mailbox.complete(result);
+  portEXIT_CRITICAL(&mailboxMux);
+  return queued;
 }

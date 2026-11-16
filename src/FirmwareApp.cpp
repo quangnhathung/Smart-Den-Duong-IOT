@@ -10,6 +10,7 @@
 namespace {
 constexpr uint8_t LED_PIN = 26;
 LightingController controller;
+MqttProtocol::CommandProcessor commandProcessor;
 bool pwmReady = false;
 int lastDuty = -1;
 bool lastPirMotion = false;
@@ -83,7 +84,7 @@ void logState(uint32_t nowMs, const ControlState &state) {
 
 void setupFirmware() {
   Serial.begin(115200);
-  Serial.printf("P2/A2 lighting control node_01 Arduino=%s; Serial: AUTO / MANUAL 0..100\r\n", ESP_ARDUINO_VERSION_STR);
+  Serial.printf("P3/A3 lighting control node_01 Arduino=%s; Serial: AUTO / MANUAL 0..100\r\n", ESP_ARDUINO_VERSION_STR);
   setupSensors();
   controller.reset(millis());
   lastPirMotion = getSensorSnapshot().pirMotion;
@@ -95,6 +96,7 @@ void setupFirmware() {
   if (!startConnectivity()) {
     Serial.println("MQTT task creation failed; AUTO continues offline");
   }
+  commandProcessor.reset(mqttBootId());
 }
 
 void loopFirmware() {
@@ -113,7 +115,30 @@ void loopFirmware() {
   // A quick disconnect/reconnect must still cancel MANUAL, even between control polls.
   const bool connectedForControl = isMqttConnected() && disconnectCount == lastDisconnectCount;
   lastDisconnectCount = disconnectCount;
+  MqttProtocol::RemoteCommand command;
+  MqttProtocol::CommandResult result;
+  bool haveResult = false;
+  if (takeRemoteCommand(command) && connectedForControl && command.session == disconnectCount) {
+    bool apply = false;
+    result = commandProcessor.evaluate(command, firmwareUptimeMs(), apply);
+    if (apply) {
+      if (command.manual) {
+        controller.requestManual(command.brightness, nowMs);
+      } else {
+        controller.requestAuto();
+      }
+    }
+    haveResult = true;
+  }
   const ControlState &state = controller.update(input, nowMs, connectedForControl);
+  if (haveResult && !completeRemoteCommand(result)) {
+    Serial.println("MQTT result discarded after session loss");
+  }
+  MqttProtocol::TelemetrySnapshot snapshot;
+  snapshot.sensors = sensors;
+  snapshot.control = state;
+  snapshot.uptimeMs = firmwareUptimeMs();
+  updateMqttSnapshot(snapshot);
   writePwm(state);
   if (sensors.pirMotion != lastPirMotion) {
     Serial.printf("PIR uptime_ms=%lu motion=%d\r\n", static_cast<unsigned long>(nowMs), sensors.pirMotion);
