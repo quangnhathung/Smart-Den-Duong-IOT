@@ -1,3 +1,29 @@
+## 2026-11-16T13:17:56+07:00 — TASK-008 — Backend, SQLite và API P4/A4
+
+- Trạng thái: Hoàn thành4/4 đầu ra code/test/OpenAPI/hướng dẫn; live A4 chưa chạy tại máy này.
+
+### Đã thực hiện
+
+Tạo DoAn/backend cùng cấp firmware với Git/venv riêng, không remote/commit/push. Collector MQTTv1/Pydantic strict, actor một SQLite writer/WAL/version/OS lock, persistence/quality/boot/alerts, API10 endpoint, command/ACK/retry/timeout không replay, năng lượng/baseline/coverage/experiment/CSV. Khóa dependency sau smoke; có README Linux/Windows và runbook live, không dashboard.
+
+### Kiểm tra và kết quả
+
+PASS tại thư mục bàn giao:66 Pytest/0.99s, Ruff lint/format21 file, pip check, init DB schema1 chạy2 lần an toàn, OpenAPI10 endpoint có response models.1 Starlette TestClient deprecation warning không bị ẩn. [Log/manifest/OpenAPI/giới hạn](evidence/task-008/README.md). Tất cả test MQTT/clock dùng fixture và DB tạm; không Wokwi/broker/Windows/ba node thật. Không build firmware vì không sửa code firmware.
+
+### Vướng mắc
+
+Không có vướng mắc còn chặn đầu ra được giao. DNS pip và ghi thư mục ngoài workspace ban đầu cần quyền; đã được cấp và xử lý. Tích hợp live và warning compatibility giữ rõ trong tài liệu.
+
+### Cách giải quyết
+
+Virtualenv riêng, dependency pin, một DB writer + OS lock; không tự nâng firmware/toolchain hoặc đổi giao thức. Kiểm ACK đúng10s, read-only/closed DB, no outgoing replay qua client Paho mới, precision64 và clock riêng; test cuối PASS. Live bàn giao người vận hành qua README, không giả evidence.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật backend.md, architecture/mqtt/testing/development/README và task/checklist/next-task; giữ nguyên task007/evidence cũ và mọi byte report bên dưới. Đề xuất TASK-009 dashboard dùng ui-ux-pro-max, chưa triển khai. Git hai repo chưa commit/push.
+
+---
+
 ## 2026-11-16T12:02:01+07:00 — TASK-007 — MQTT nghiệp vụ một node P3/A3
 
 - Trạng thái: Hoàn thành 5/5 đầu ra code/test/hướng dẫn; live A3 chưa chạy tại máy này.

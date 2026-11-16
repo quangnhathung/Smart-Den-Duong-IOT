@@ -1,28 +1,28 @@
-# TASK-008 — Backend, SQLite và API P4/A4
+# TASK-009 — Dashboard giám sát và điều khiển P5/A5
 
 - Trạng thái: Chưa bắt đầu
 - Tiến độ: 0/4 nhóm nghiệm thu dự kiến
-- Cập nhật: 2026-11-16T12:02:01+07:00
+- Cập nhật: 2026-11-16T13:17:56+07:00
 
 ## Mô tả và phạm vi
 
-Đề xuất triển khai collector MQTT, SQLite, FastAPI, lệnh/ACK và tính điện năng theo SRS7/9, dùng hợp đồng MQTTv1 đã có code firmware. Chỉ là đề xuất, không tự tạo backend/dashboard hoặc deploy. Không suy test fixture thành tích hợp live.
+Đề xuất dashboard React/TypeScript/Vite theo SRS8, dùng API TASK-008. Tổng quan/tuyến3 node/chi tiết/lịch sử/cảnh báo/phiên/CSV, điều khiển AUTO/MANUAL có xác nhận. Bắt buộc đọc và vận dụng skill ui-ux-pro-max khi lập kế hoạch/thiết kế/triển khai UI theo yêu cầu người dùng. Không tạo dashboard, chọn theme hay chạy task này tự động trong TASK-008.
 
 ## Tham chiếu SRS
 
-SRS7,9,10P4,11A4,12; mqtt.md và đầu ra TASK-007. API endpoint/status theo SRS7.3, một worker collector; đọc lại và lập checklist chi tiết khi giao task.
+SRS7.3/8/9/10P5/11A5/12. API types/clock/uint64 theo backend.md và OpenAPI TASK-008. Giữ MQTTv1, dashboard chỉ gọi HTTP, không publish MQTT trực tiếp.
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [ ] Collector validate/dedup/order/boot, trạng thái mới/cũ/offline và SQLite persistence đạt kiểm thử.
-- [ ] API/lệnh/ACK retry-timeout đúng SRS, không coi publish là áp dụng.
-- [ ] Điện năng/coverage/gap/export theo mô hình, fixture có nhãn rõ.
-- [ ] Test backend/API và tài liệu/chạy lại/bằng chứng phù hợp; phân biệt fixture và tích hợp thật.
+- [ ] Chốt vị trí/repo, thiết kế theo ui-ux-pro-max, responsive/a11y và trạng thái loading/empty/stale/error có lý do rõ.
+- [ ] Tổng quan/3 node/chi tiết hiển thị target/applied/fault/offline/mô phỏng đúng; không bịa node chưa chạy.
+- [ ] AUTO/MANUAL nút Áp dụng, pending/ACK/reject/timeout và khóa thao tác đúng API; polling1s, stats/alerts5s.
+- [ ] Lịch sử/gap/coverage/experiment/export, API errors/CORS/precision64 và kiểm thử UI/build/tài liệu đạt.
 
 ## Vướng mắc và cách giải quyết
 
-Live A3 chưa chạy tại máy này. TASK-007 đã bàn giao code/test/hướng dẫn5/5; trước nghiệm thu tích hợp firmware–backend cần kết quả live A3 theo mqtt.md A3-01…08 từ máy dev. Có thể làm backend với fixture có nhãn từ hợp đồng; chưa được báo end-to-end PASS trước khi chạy thật.
+Live A3/A4 chưa chạy tại máy này. Có thể làm UI với fixture có nhãn và API thật, nhưng không coi fixture là hệ thống live hoặc lấp gap bằng dữ liệu giả. Trước nghiệm thu tích hợp cần kết quả runbook máy dev, kiểm độ trễ thật và ba node ở giai đoạn tích hợp.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Người dùng giao TASK-008 riêng; hợp đồng MQTTv1 và test TASK-007 là đầu vào, giữ nguyên kết quả P2 và evidence. Người vận hành có thể kiểm chứng live A3 bằng runbook đã giao; không tự stop/start broker hoặc chạy gói tiếp theo từ đề xuất này. Không commit/push/deploy khi chưa được giao.
+Chỉ bắt đầu khi người dùng giao TASK-009 và chốt vị trí/repo/dashboard preferences. Backend repo DoAn/backend có code/test/OpenAPI, README hướng dẫn. Không tự chỉnh firmware/API/schema hoặc deploy cloud để làm UI đạt. Không tự commit/push.

@@ -1,0 +1,7 @@
+PASS 25 backend source hashes match final installation
+PASS 165 local Markdown file links (archived task links use original base)
+PASS Python syntax and OpenAPI10 endpoints
+PASS original report tail and task007 archive bytes preserved
+PASS firmware C++/PlatformIO/tests/scripts/infra/simulations/SRS and old evidence unchanged
+PASS backend main has no commits/remotes; no commits/push in this task
+PASS git diff --check for both repositories

@@ -1,33 +1,32 @@
-# TASK-007 — MQTT nghiệp vụ một node P3/A3
+# TASK-008 — Backend, SQLite và API P4/A4
 
 - Trạng thái: Hoàn thành
-- Tiến độ: 5/5 mục nghiệm thu bàn giao code
-- Cập nhật: 2026-11-16T12:02:01+07:00
+- Tiến độ: 4/4 nhóm nghiệm thu bàn giao code/test/hướng dẫn
+- Cập nhật: 2026-11-16T13:17:56+07:00
 
 ## Mô tả và phạm vi
 
-Telemetry/command/ACK/availability/LWT/reconnect một node theo SRS6 và mqtt.md. Giữ P2, pin map, source chung và toolchain. Đầu ra được giao: code, host test/build và hướng dẫn live trên máy dev; không tự chạy Wokwi/broker, backend/dashboard hoặc commit/push.
+Backend tại DoAn/backend/ (cùng cấp firmware), Git riêng không remote/commit/push. Python3.12/FastAPI/Pydantic2/Paho2/SQLite WAL/Pytest: collector, API, command/ACK, năng lượng/phiên/CSV. Đầu ra code/test/OpenAPI/hướng dẫn; không dashboard, Wokwi/broker thực, cloud hoặc sửa firmware.
 
 ## Tham chiếu SRS
 
-SRS5.7,6,9.1,10P3,11A3,12TC17–22/26; hợp đồng MQTT v1. TC17 chỉ kiểm tra đúng đích một node; TC26 mô phỏng client retry, chưa nghiệm thu backend.
+SRS6/7/9/12, FR06/08/09/10/11; TC17–22/24/26 và ma trận năng lượng. Hợp đồng MQTTv1 và TASK-007 giữ nguyên.
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [x] Telemetry/schema/boot/seq/uptime64/công suất/rate limit đúng hợp đồng.
-- [x] Command strict validation/cache32/ACK sau áp dụng, hàng đợi hữu hạn và chống lệnh phiên cũ.
-- [x] LWT/availability/reconnect và P2 offline giữ đúng; diagnostics không đổi.
-- [x] Host hồi quy/protocol/tích hợp, RFC tests, formatter/build/copy/hash đạt.
-- [x] Tài liệu và bộ lệnh live có tiêu chí/evidence; report/checklist/next-task cập nhật.
+- [x] Collector strict/schema/boot/order/dedup, SQLite persistence/health/fault/offline đúng kiểm thử.
+- [x] API và command/ACK/retry/timeout/concurrency đạt, không phát lại lệnh offline/restart.
+- [x] Năng lượng/baseline/coverage/experiment/CSV đúng cùng dữ liệu và clock.
+- [x] Test/lint/startup/OpenAPI và tài liệu Linux/Windows/bằng chứng/report/checklist/next-task hoàn tất.
 
 ## Vướng mắc và cách giải quyết
 
-Không có vướng mắc chặn bàn giao. Live A3 chưa chạy tại máy này; chỉ chốt đầu ra code/test/hướng dẫn, không suy thành nghiệm thu live.
+Đã tạo/cài backend ngoài workspace theo quyền được cấp; DNS sandbox đã xử lý bằng quyền mạng. Không có vướng mắc còn chặn bàn giao. Live A4 chưa chạy; fixture được gắn nhãn, không thay kết quả ESP32 thực.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Người dùng giao triển khai kế hoạch TASK-007. Người dùng xác nhận P2 PASS ở máy dev khác; giữ nguyên hồ sơ cũ trong evidence TASK-006 và bản task trước chuyển ở evidence/task-007/task-006-before-task007.md. Không tự nâng trạng thái nghiệm thu P2.
+Người dùng giao thực hiện kế hoạch TASK-008, chọn backend cùng cấp và repo riêng. Lưu hồ sơ TASK-007 trước chuyển trong evidence/task-008/task-007-before-task008.md. Không tự làm TASK-009.
 
 ## Kết quả và giới hạn
 
-Năm suite C++,11 unittest Python, formatter/build/copy/hash PASS. [Bằng chứng](evidence/task-007/README.md). Đây là hoàn thành code/test/hướng dẫn theo phạm vi đã chọn, không phải live A3 PASS. Giữ nguyên hồ sơ P2 đã xác nhận tại máy dev kia.
+66 test backend/API/energy/transport, Ruff lint/format, pip check, OpenAPI10 endpoint và init DB idempotent PASS. [Bằng chứng](evidence/task-008/README.md). Backend có Git riêng/venv riêng, chưa commit/remote/push. Live A4/Windows chưa chạy; có1 deprecation warning TestClient. Chỉ hoàn thành code/test/hướng dẫn, không tuyên bố tích hợp ESP32 thực PASS.

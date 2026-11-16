@@ -1,3 +1,15 @@
+# TASK-008 — Backend, SQLite và API P4/A4
+
+- Hoàn thành đầu ra code/test/hướng dẫn: 2026-11-16T13:17:56+07:00;4/4 nhóm nghiệm thu được giao.
+- [x] Collector strict/boot/order/dedup, persistence/WAL/version/OS lock, quality/health/alerts.
+- [x] API10 endpoint/typed OpenAPI, command persist-before-publish/ACK/retry/timeout/concurrency/no-replay.
+- [x] Năng lượng/baseline/clock coverage/experiment/CSV dùng cùng thuật toán và kiểm thử.
+- [x]66 Pytest, Ruff lint/format, pip check/init DB/OpenAPI đạt; README Linux/Windows, evidence/report/next-task cập nhật.
+
+[Bằng chứng, manifest backend và giới hạn](evidence/task-008/README.md). Chưa nghiệm thu live A4 hoặc Windows; không suy fixture/host thành broker/ESP32 thực. Backend Git riêng chưa commit/push.
+
+---
+
 # TASK-007 — MQTT nghiệp vụ một node P3/A3
 
 - Hoàn thành đầu ra bàn giao: 2026-11-16T12:02:01+07:00; 5/5 mục code/test/hướng dẫn.
