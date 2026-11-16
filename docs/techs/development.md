@@ -56,6 +56,7 @@ Tạo `docs/techs/<danh-muc>.md` khi có nội dung, tên tiếng Anh dạng `ke
 | `development` | Quy trình agent, convention, mẫu báo cáo và công cụ định dạng |
 | `firmware` | [Controller P2 và MQTT A3](firmware.md); xem giới hạn host/live |
 | `backend` | [Backend/API A4, SQLite, command/ACK, năng lượng và kiểm tra](backend.md) |
+| `dashboard` | [HTML/CSS/JS A5, Live Server, polling và kiểm tra giao diện](dashboard.md) |
 | `hardware` | [Pin map, đấu nối và giới hạn giả lập](hardware.md) |
 | `mqtt` | [Hợp đồng MQTT v1](mqtt.md): topic, schema, ACK, deadline, chống trùng và reconnect |
 | `simulation` | [Chạy Wokwi và hướng dẫn A3](simulation.md) |

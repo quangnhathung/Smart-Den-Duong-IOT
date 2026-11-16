@@ -1,4 +1,12 @@
-# Kiểm tra firmware — TASK-007 và lịch sử P2/P1
+# Kiểm tra dự án — firmware, backend và dashboard
+
+## TASK-009 P5/A5 — dashboard và API read bổ sung
+
+Tại DoAn/dashboard: `node --test tests/*.test.mjs` →16 PASS (Node24.17). Tại DoAn/backend: `.venv/bin/python scripts/check.py` →Ruff check/format,68 Pytest PASS/1 deprecation warning cũ. OpenAPI11 paths/12 thao tác. Không đổi firmware/toolchain nên không build lại C++/Wokwi trong task UI.
+
+Playwright CLI với Live Server engine2.2.0 của VS Code extension5.7.10:18 kiểm tra luồng chính +8 kiểm tra bổ sung PASS; viewport375/768/1024/1440, chart/bảng/keyboard, draft, lệnh, phiên/reload/stop/CSV, mất API/recovery/no-retry, reduced motion và overflow mobile. Pha REJECTED/TIMEOUT dùng phản hồi API mock, lỗi mạng chủ động tạo console resource errors dự kiến; pha cuối trên repo bàn giao có0 console error/0 uncaught JS exception. API/SQLite thật, transport MQTT và dữ liệu giả có nhãn, không mở broker. [Bằng chứng và lệnh tái lập](../reports/evidence/task-009/README.md), [dashboard](dashboard.md).
+
+Chưa chạy UI với broker/ESP32 thật, VS Code Go Live thao tác tay/Windows, đo latency10 lượt, ba node30phút hay EX-series. Đó là kiểm tra tích hợp tiếp theo; không ghi PASS từ fixture.
 
 ## TASK-008 P4/A4 — backend
 
