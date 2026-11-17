@@ -14,6 +14,7 @@ struct PubSubClient {
   WiFiClient &client;
   bool connectedValue = false;
   bool publishSucceeds = true;
+  std::string clientId;
   std::string willTopic;
   std::string willPayload;
   bool willRetain = false;
@@ -46,7 +47,8 @@ struct PubSubClient {
   int state() {
     return connectedValue ? 0 : -2;
   }
-  bool connect(const char *) {
+  bool connect(const char *id) {
+    clientId = id;
     ++connects;
     connectedValue = connectSucceeds;
     client.open = connectSucceeds;

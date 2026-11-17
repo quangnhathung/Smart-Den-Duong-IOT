@@ -23,10 +23,12 @@ void step(uint32_t now) {
   networkStep();
 }
 void receive(const std::string &payload) {
-  char topic[] = "huit/nhom7/smartlight/v1/node_01/command";
+  char topic[sizeof(MqttProtocol::COMMAND_TOPIC)];
+  std::strcpy(topic, MqttProtocol::COMMAND_TOPIC);
   mqtt.callback(topic, reinterpret_cast<uint8_t *>(const_cast<char *>(payload.data())), payload.size());
 }
-const std::string COMMAND = "{\"schema_version\":1,\"node_id\":\"node_01\",\"boot_id\":\"b7e28a10\",\"command_id\":\"4113a6c8-27a4-4b2d-a37c-2a7956d673aa\","
+const std::string COMMAND = std::string("{\"schema_version\":1,\"node_id\":\"") + MqttProtocol::NODE_ID +
+                            "\",\"boot_id\":\"b7e28a10\",\"command_id\":\"4113a6c8-27a4-4b2d-a37c-2a7956d673aa\","
                             "\"deadline_uptime_ms\":5000,\"mode\":\"MANUAL\",\"brightness\":80}";
 } // namespace
 unsigned long millis() {
@@ -53,6 +55,7 @@ int main() {
   snapshot.sensors.currentAdc = 4095;
   updateMqttSnapshot(snapshot);
   step(1000);
+  assert(mqtt.clientId == std::string("smartlight-node_0") + std::to_string(SMARTLIGHT_NODE_INDEX) + "-p0");
   assert(isMqttConnected() && mqtt.subscribedQos == 1 && mqtt.subscribedTopic == COMMAND_TOPIC);
   assert(mqtt.subscriptions.size() == 2 && mqtt.subscriptions[0] == PING_TOPIC);
   assert(mqtt.cleanSession && mqtt.willRetain && mqtt.willQos == 0 && mqtt.willTopic == AVAILABILITY_TOPIC);
@@ -73,7 +76,8 @@ int main() {
   step(3000);
   assert(packetCount(HEARTBEAT_TOPIC) == 1);
   assert(mqtt.packets.back().topic == HEARTBEAT_TOPIC || packetCount(TELEMETRY_TOPIC) >= 5);
-  char pingTopic[] = "huit/nhom7/smartlight/v1/node_01/diagnostics/ping";
+  char pingTopic[sizeof(NodeIdentity::PING_TOPIC)];
+  std::strcpy(pingTopic, NodeIdentity::PING_TOPIC);
   uint8_t payload[] = {'A', 0, 'B'};
   mqtt.callback(pingTopic, payload, 3);
   assert(mqtt.packets.back().topic == PONG_TOPIC && mqtt.packets.back().payload == std::string("A\0B", 3));
@@ -159,6 +163,31 @@ int main() {
   WiFi.currentStatus = WL_CONNECTED;
   step(42010);
   assert(isMqttConnected());
+  step(42011); // force the first snapshot of the new session
+  const size_t sensorBaseline = packetCount(TELEMETRY_TOPIC);
+  snapshot.sensors.ldrAdc = 2345;
+  updateMqttSnapshot(snapshot);
+  step(42100);
+  assert(packetCount(TELEMETRY_TOPIC) == sensorBaseline); // still within the 200ms limit
+  step(42211);
+  assert(packetCount(TELEMETRY_TOPIC) == sensorBaseline + 1); // raw changed, control did not
+  deserializeJson(doc, mqtt.packets.back().payload);
+  assert(doc["ldr_adc"] == 2345 && doc["node_id"] == NODE_ID);
+  snapshot.sensors.ldrAdc = 3456;
+  updateMqttSnapshot(snapshot);
+  step(42300);
+  snapshot.sensors.ldrAdc = 3457;
+  updateMqttSnapshot(snapshot);
+  step(42350);
+  assert(packetCount(TELEMETRY_TOPIC) == sensorBaseline + 1);
+  step(42411);
+  assert(packetCount(TELEMETRY_TOPIC) == sensorBaseline + 2);
+  deserializeJson(doc, mqtt.packets.back().payload);
+  assert(doc["ldr_adc"] == 3457); // intermediate sensor samples coalesce to the latest value
+  ++snapshot.sensors.analogSequence;
+  updateMqttSnapshot(snapshot);
+  step(42611);
+  assert(packetCount(TELEMETRY_TOPIC) == sensorBaseline + 2); // counters alone cannot trigger a packet
   fakeEspTimeUs = 5000000000123LL;
   assert(firmwareUptimeMs() == 5000000000ULL);
   std::puts("PASS MQTT integration: diagnostics, clean/LWT/QoS/subscriptions, telemetry rate/seq/reconnect, ACK after result, publish failure retry, session "

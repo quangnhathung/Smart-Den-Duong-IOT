@@ -47,6 +47,8 @@ void checkParser() {
   RemoteCommand value;
   const std::string oversized(2048, ' ');
   assert(!parseCommand(COMMAND_TOPIC, reinterpret_cast<const uint8_t *>(oversized.data()), oversized.size(), value));
+  const std::string otherTopic = std::string("huit/nhom7/smartlight/v1/") + (SMARTLIGHT_NODE_INDEX == 2 ? "node_03" : "node_02") + "/command";
+  assert(!parseCommand(otherTopic.c_str(), reinterpret_cast<const uint8_t *>(json.data()), json.size(), value));
   assert(!parseCommand("other", reinterpret_cast<const uint8_t *>(json.data()), json.size(), value));
   for (const char *brightness : {"-1", "101", "1.5", "true", "null", "\"80\""}) {
     std::string bad = json;
@@ -81,7 +83,7 @@ void checkParser() {
   doc["extra"] = 1;
   assert(!parse(stringify(doc)).valid);
   doc.remove("extra");
-  doc["node_id"] = "node_02";
+  doc["node_id"] = SMARTLIGHT_NODE_INDEX == 2 ? "node_03" : "node_02";
   assert(!parse(stringify(doc)).valid);
   std::puts("PASS protocol parser: strict fields/types/ranges, UUID/boot, complete JSON, wrong topic/node, malformed/oversized payload");
 }
@@ -185,14 +187,51 @@ void checkMailbox() {
   assert(mailbox.latest(snapshot, version) && version == 1);
   ++snapshot.sensors.ldrAdc;
   mailbox.update(snapshot);
-  assert(mailbox.latest(snapshot, version) && version == 1);
+  assert(mailbox.latest(snapshot, version) && version == 2); // raw sensor change must not wait for periodic telemetry
+  ++snapshot.sensors.analogSequence;
+  mailbox.update(snapshot);
+  assert(mailbox.latest(snapshot, version) && version == 2); // sampling counters are not wire changes
   snapshot.control.openLoad = true;
   mailbox.update(snapshot);
-  assert(mailbox.latest(snapshot, version) && version == 2);
+  assert(mailbox.latest(snapshot, version) && version == 3);
+  ++snapshot.sensors.currentAdc;
+  mailbox.update(snapshot);
+  assert(mailbox.latest(snapshot, version) && version == 4);
+  snapshot.sensors.pirMotion = true;
+  mailbox.update(snapshot);
+  assert(mailbox.latest(snapshot, version) && version == 5);
+  snapshot.sensors.distanceValid = true;
+  snapshot.sensors.distanceCm = 150;
+  mailbox.update(snapshot);
+  assert(mailbox.latest(snapshot, version) && version == 6);
+  snapshot.sensors.distanceValid = false;
+  mailbox.update(snapshot);
+  assert(mailbox.latest(snapshot, version) && version == 7);
+  snapshot.sensors.distanceCm = std::numeric_limits<float>::quiet_NaN();
+  mailbox.update(snapshot);
+  snapshot.sensors.distanceValid = true;
+  mailbox.update(snapshot);
+  assert(mailbox.latest(snapshot, version) && version == 7); // both encode null
+  snapshot.sensors.distanceCm = 50;
+  mailbox.update(snapshot);
+  assert(mailbox.latest(snapshot, version) && version == 8);
+  mailbox.update(snapshot);
+  assert(mailbox.latest(snapshot, version) && version == 8);
+  snapshot.sensors.distanceCm = 51;
+  mailbox.update(snapshot);
+  assert(mailbox.latest(snapshot, version) && version == 9);
   std::puts("PASS mailbox: queue8 overflow, result reservation/backpressure, disconnect flush, coherent latest snapshot/change coalescing");
 }
 } // namespace
 int main() {
+  const std::string expected = "node_0" + std::to_string(SMARTLIGHT_NODE_INDEX);
+  const std::string prefix = "huit/nhom7/smartlight/v1/" + expected;
+  assert(NODE_ID == expected);
+  assert(COMMAND_TOPIC == prefix + "/command" && TELEMETRY_TOPIC == prefix + "/telemetry");
+  assert(ACK_TOPIC == prefix + "/ack" && AVAILABILITY_TOPIC == prefix + "/availability");
+  assert(NodeIdentity::PING_TOPIC == prefix + "/diagnostics/ping");
+  assert(NodeIdentity::PONG_TOPIC == prefix + "/diagnostics/pong");
+  assert(NodeIdentity::HEARTBEAT_TOPIC == prefix + "/diagnostics/heartbeat");
   checkParser();
   checkCache();
   checkWire();

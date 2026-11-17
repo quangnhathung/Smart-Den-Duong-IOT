@@ -27,13 +27,22 @@ SUITES = [
 def run_checks():
     with tempfile.TemporaryDirectory(prefix='task006-checks-') as folder:
         for name, sources, includes in SUITES:
-            executable = str(Path(folder) / (name + ('.exe' if sys.platform == 'win32' else '')))
-            print(f'CHECK {name}', flush=True)
-            command = [COMPILER, '-std=c++17', '-Wall', '-Wextra', '-Werror']
-            command += [f'-I{include}' for include in includes] + [f'-I{JSON_INCLUDE}']
-            subprocess.run(command + sources + ['-o', executable], cwd=ROOT, check=True)
-            subprocess.run([executable], cwd=ROOT, check=True)
-    print('PASS: all 5 host suites; hardware, RTOS timing and Wokwi live remain separate checks', flush=True)
+            for index in ((1, 2, 3) if name in ('protocol', 'app', 'mqtt') else (1,)):
+                label = f'{name}-node_0{index}'
+                executable = str(Path(folder) / (label + ('.exe' if sys.platform == 'win32' else '')))
+                print(f'CHECK {label}', flush=True)
+                command = [COMPILER, '-std=c++17', '-Wall', '-Wextra', '-Werror', f'-DSMARTLIGHT_NODE_INDEX={index}']
+                command += [f'-I{include}' for include in includes] + [f'-I{JSON_INCLUDE}']
+                subprocess.run(command + sources + ['-o', executable], cwd=ROOT, check=True)
+                subprocess.run([executable], cwd=ROOT, check=True)
+        # A bad deployment identity must fail at compile time, before any firmware can run.
+        for index in (0, 4):
+            result = subprocess.run([COMPILER, '-std=c++17', '-Isrc', f'-DSMARTLIGHT_NODE_INDEX={index}',
+                                     '-x', 'c++', '-fsyntax-only', '-'], input='#include "NodeIdentity.h"\n',
+                                    cwd=ROOT, text=True, capture_output=True)
+            if result.returncode == 0 or 'SMARTLIGHT_NODE_INDEX must be 1, 2 or 3' not in result.stderr:
+                raise RuntimeError(f'Invalid node index {index} did not fail with the expected diagnostic')
+    print('PASS: 11 host runs and 2 invalid identity checks; Wokwi live remains separate', flush=True)
 
 
 if __name__ == '__main__':

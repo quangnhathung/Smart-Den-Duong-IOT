@@ -38,6 +38,28 @@ class CommandFixtureChecks(unittest.TestCase):
         self.assertEqual(CLIENT.make_command(self.telemetry, 'AUTO', case='wrong-node')['node_id'], 'node_02')
         self.assertEqual(CLIENT.make_command(self.telemetry, 'AUTO', case='invalid-brightness')['brightness'], 101)
 
+    def test_three_node_destinations_and_wrong_node_cases(self):
+        for node in CLIENT.NODE_IDS:
+            telemetry = dict(self.telemetry, node_id=node)
+            result = CLIENT.make_command(telemetry, 'AUTO', node=node)
+            self.assertEqual(result['node_id'], node)
+            self.assertNotEqual(CLIENT.make_command(telemetry, 'AUTO', case='wrong-node', node=node)['node_id'], node)
+            other = next(n for n in CLIENT.NODE_IDS if n != node)
+            with self.assertRaises(ValueError):
+                CLIENT.make_command(telemetry, 'AUTO', node=other)
+        with self.assertRaises(ValueError):
+            CLIENT.make_command(self.telemetry, 'AUTO', node='node_04')
+
+    def test_cli_selects_node(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'telemetry.json'
+            for node in CLIENT.NODE_IDS:
+                path.write_text(json.dumps(dict(self.telemetry, node_id=node)))
+                output = io.StringIO()
+                with redirect_stdout(output):
+                    self.assertEqual(CLIENT.main(['--telemetry', str(path), '--mode', 'AUTO', '--node', node]), 0)
+                self.assertEqual(json.loads(output.getvalue())['node_id'], node)
+
     def test_cli_requires_fresh_capture(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / 'telemetry.json'

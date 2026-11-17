@@ -19,3 +19,9 @@ Arduino.h và runtime/ chỉ dùng host, không phải include firmware. Chưa c
 ## TASK-007/A3
 
 Sau `pio pkg install`, script check-firmware.py tìm header ArduinoJson7.4.2 ở .pio/libdeps/esp32dev/ArduinoJson/src. Có thêm suite MqttProtocolChecks (parse/serialize/cache32/mailbox8); app/network suite mở rộng cho lệnh MQTT/ACK và reconnect/telemetry/LWT stub. Tổng5 suite. Chạy thêm `python -B test/host/test_mqtt_command.py` (4 unittest generator), giữ7 test RFC2217. Không cần broker/giấy phép Wokwi cho host checks; không cài dependency tự động từ script kiểm tra.
+
+## TASK-011: ba định danh và coalescing cảm biến
+
+Runner chạy protocol/app/MQTT cho chỉ số 1/2/3, controller/sensors một lượt; tổng 11 lượt và hai ca compile-fail chỉ số 0/4. Các fixture chọn đúng node đang biên dịch, sai node/topic được từ chối, stub kiểm client ID/subscription/LWT riêng. Mailbox kiểm cảm biến raw kích gửi sớm, bỏ qua analogSequence và invalid distance cùng biểu diễn null; giới hạn thử publish 200ms và định kỳ 2s giữ nguyên. Các checks này không thay thế Wokwi hoặc đo clock thực.
+
+Unittest Python kiểm generator ba node, prepare artifact đúng environment/hash/freshness và ba diagram/cổng Serial/cap CPU; tổng 20 test cùng hồi quy Serial cũ. Test prepare dùng dummy artifact có nhãn, không gọi đó là firmware build thật.
