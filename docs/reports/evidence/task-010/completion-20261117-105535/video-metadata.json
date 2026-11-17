@@ -1,0 +1,17 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "width": 1920,
+      "height": 1040,
+      "avg_frame_rate": "30/1"
+    }
+  ],
+  "format": {
+    "duration": "180.000000",
+    "size": "6278524"
+  },
+  "acceptance_capture_covers_actions_and_render": true,
+  "time_reference_note": "Video is visual corroboration at30fps; quantitative result uses calibrated trusted action/render event intervals."
+}

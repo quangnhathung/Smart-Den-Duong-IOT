@@ -1,0 +1,19 @@
+Error: Executable doesn't exist at /home/quangnhathung/.cache/ms-playwright/chromium-1254/chrome-linux64/chrome
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     npx playwright install                                 ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝ Failed to launch browser.
+    at executablePathOrDie (/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright-core/lib/coreBundle.js:34924:19)
+    at Object.executablePathOrDie (/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright-core/lib/coreBundle.js:34937:49)
+    at Chromium._prepareToLaunch (/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright-core/lib/coreBundle.js:41661:43)
+    at async Chromium._launchProcess (/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright-core/lib/coreBundle.js:41673:26)
+    at async Chromium._innerLaunch (/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright-core/lib/coreBundle.js:41586:86)
+    at async Chromium._innerLaunchWithRetries (/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright-core/lib/coreBundle.js:41573:18)
+    at async /home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright-core/lib/coreBundle.js:59151:22
+    at async _ProgressController.run (/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright-core/lib/coreBundle.js:13369:27)
+    at async BrowserServerLauncherImpl.launchServer (/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright-core/lib/coreBundle.js:59142:21)
+    at async BrowserType2.launchServer (/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright-core/lib/coreBundle.js:65492:16)

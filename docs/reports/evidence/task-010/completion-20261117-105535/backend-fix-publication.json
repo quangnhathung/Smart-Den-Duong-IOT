@@ -1,0 +1,9 @@
+{
+  "branch": "task/task-010-restart-sync",
+  "old_service_sha256": "ff7547f71b3b6b14ce9c7060badcd96682d0ebc9189e0199fe6a0a41f9a82599",
+  "files": {
+    "smartlight/service.py": "ec336fcca2861e2771d8f254891670d9ca4501ce29bc5e6cf8aa29694f9ebd92",
+    "tests/test_service.py": "c7bb7b78a6fc4ffd01615ee92561def089a7f604dd65d704d4a321a5df2bafb9"
+  },
+  "committed": false
+}

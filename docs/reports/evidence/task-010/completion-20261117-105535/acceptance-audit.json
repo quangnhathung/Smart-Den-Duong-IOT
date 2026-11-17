@@ -1,0 +1,43 @@
+{
+  "task": "TASK-010",
+  "status": "PASS",
+  "acceptance_groups": [
+    {
+      "id": 1,
+      "status": "PASS",
+      "basis": "Historical integration plus current real QA flow"
+    },
+    {
+      "id": 2,
+      "status": "PASS",
+      "basis": "Live terminal UI, broker outage/reconnect/no replay, Serial AUTO offline; previous MANUAL/60s preserved"
+    },
+    {
+      "id": 3,
+      "status": "PASS",
+      "basis": "Historical data/CSV/gap plus current pending/open experiment restart and session race fix"
+    },
+    {
+      "id": 4,
+      "status": "PASS",
+      "basis": "10 current sensor→dashboard samples plus 10 prior command→ACK samples"
+    }
+  ],
+  "new_backend_tests": 72,
+  "backend_warning": "Existing TestClient/HTTPX deprecation warning unchanged",
+  "latency": {
+    "samples": 10,
+    "median_interval_ms": [
+      1417.8323974609375,
+      1464.490966796875
+    ],
+    "max_interval_ms": [
+      2353.967041015625,
+      2401.274169921875
+    ]
+  },
+  "source_limit": "Wokwi simulation; not physical hardware, three nodes or EX-series",
+  "cleanup_pending": false,
+  "completed_at": "2026-11-17T12:05:29+07:00",
+  "cleanup": "cleanup.json"
+}

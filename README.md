@@ -1,6 +1,6 @@
 # Firmware đèn đường thông minh
 
-ESP32 esp32dev, Arduino trên PlatformIO. Firmware hiện có controller P2 và MQTT nghiệp vụ A3 một node: telemetry, command AUTO/MANUAL, ACK/cache, availability/LWT và reconnect; giữ cảm biến, hold/dimming/fault, Serial và diagnostics. TASK-007 bàn giao code/test/build/hướng dẫn live; chưa chạy live A3 tại máy này, backend/API A4 đã có ở repo cùng cấp; dashboard HTML/CSS/JS A5 đã có ở repo cùng cấp, chạy qua VS Code Live Server; tích hợp MQTT/Wokwi còn chờ kiểm chứng.
+ESP32 esp32dev, Arduino trên PlatformIO. Firmware hiện có controller P2 và MQTT nghiệp vụ A3 một node: telemetry, command AUTO/MANUAL, ACK/cache, availability/LWT và reconnect; giữ cảm biến, hold/dimming/fault, Serial và diagnostics. TASK-007 bàn giao code/test/build/hướng dẫn; backend/API A4 và dashboard HTML/CSS/JS A5 chạy Live Server nằm ở repo cùng cấp. TASK-010 đã hoàn tất4/4 tích hợp live một node, gồm outage/reconnect/restart và10 mẫu cảm biến→dashboard dưới3s. Ba node và bộ thực nghiệm/bàn giao cuối chưa nghiệm thu.
 
 - [Chạy Wokwi và hướng dẫn A3](docs/techs/simulation.md)
 - [Pin map mô phỏng](docs/techs/hardware.md)
@@ -16,5 +16,6 @@ ESP32 esp32dev, Arduino trên PlatformIO. Firmware hiện có controller P2 và 
 - [Dashboard — chạy bằng Live Server](../dashboard/README.md)
 - [Thiết kế và hành vi dashboard A5](docs/techs/dashboard.md)
 - [Task hiện tại](docs/reports/task.md)
+- [Nghiệm thu TASK-010 live một node](docs/reports/evidence/task-010/completion-20261117-105535/README.md)
 
 Môi trường đã quan sát: PlatformIO Core 6.1.19 ở hồ sơ ban đầu và 6.2.0 trên Windows, Espressif32 8.0.0, Arduino ESP32 3.3.12 (package 4.30312.261113), ESP32 libs 3.3.12. PubSubClient 2.8.0, ArduinoJson 7.4.2, Mosquitto image 2.1.2-alpine. Platform/framework, PubSubClient và ArduinoJson đã pin. P0 đạt smoke test theo [biên bản](docs/reports/evidence/task-002/acceptance.md); P1/A1 đã nghiệm thu TASK-005 4/4, P1-01 đến P1-08 theo [bằng chứng cuối](docs/reports/evidence/task-005/windows-live-20261116-003644/acceptance-final.md). Giữ giới hạn timeout phiên dài, metadata và phạm vi mô phỏng đã ghi trong biên bản; chưa nghiệm thu toàn hệ thống. P2 đã được người dùng xác nhận PASS tại máy dev kia, giữ nguyên hồ sơ TASK-006. TASK-007 đạt5/5 đầu ra code/test/hướng dẫn; xem [bằng chứng](docs/reports/evidence/task-007/README.md) và [lệnh kiểm tra live A3](docs/techs/mqtt.md#bộ-kiểm-tra-live-a3-trên-máy-dev-chưa-chạy-tại-máy-này). Xem setup/simulation để biết cách chạy và điều kiện môi trường.

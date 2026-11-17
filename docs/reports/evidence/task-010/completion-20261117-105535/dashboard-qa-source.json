@@ -1,0 +1,22 @@
+{
+  "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/dashboard",
+  "root": "/tmp/task010-completion/dashboard",
+  "original_sha256": {
+    "AGENTS.md": "279b58ca52e78aeee28784db77af1c26e98ad62470f2d4de1fb99f9f22e73a2a",
+    "README.md": "4d1d09f080c3822beacbf16e1c54d1116d17c1c6fbf1ae8cf777901056959f28",
+    "favicon.svg": "81affb5daf6ec0325467c097773190a6bde5888e950bf97268a9d46d5940a38c",
+    "index.html": "8247fe2afd05766d6da0d224155254cbb695a2a5e0876dfd705bfdaaaeae1a99",
+    ".gitignore": "d9db6c80b984523c780da279b4b393dd906630a93341ae13421dfc9e88fc6c1b",
+    "config.js": "02ceba6acc44b7d804819cf2012c7ea28d2f2df3d78e799f522985970289ef47",
+    "design-system/MASTER.md": "db0ae45ba880c8db2672d3d93c48f320530056851c7b3c77a7fba0732210eca5",
+    ".vscode/settings.json": "719a53516f793256e4608c057ade624756cb72a59ded80782099653637c7b3a5",
+    "tests/api.test.mjs": "8c29040d0fd9fefe43775b10d53afeab0b7cd7429ae3136e1dd8f1af4f2c8564",
+    "tests/core.test.mjs": "2d6b05957d853d64ab0beffe3ab5af0f189191f4988799086a10b67cbe94e87c",
+    "css/styles.css": "65fd8463c0633b5ea637c64952cdc8501addb894b947bbbf3c54a76326d1f166",
+    "js/app.js": "2edff8351291b0c72c7dcc77e4d6b74a19a2980d4ba94e78ba4eb7eeb2cda7e2",
+    "js/charts.js": "ed7e095a1f84d17134b34e108e6c557ef04a12677483d165db47451357993783",
+    "js/api.js": "e762a05f1da54a3b1fa91a2002c400c649622530e1ed4f73622d68a3cef26f6e",
+    "js/core.js": "a08d1901a275fd407014dd4c0d7b97ad61c25f8f065c8ac91831fa242382a718"
+  },
+  "only_runtime_configuration_changed": "config.js API8001; other runtime files match source"
+}

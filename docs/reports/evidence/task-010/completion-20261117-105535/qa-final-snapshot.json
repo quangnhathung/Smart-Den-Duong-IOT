@@ -1,0 +1,157 @@
+{
+  "at_host_ms": 1794891468203.912,
+  "database": "QA-only /tmp/task010-completion/qa.db",
+  "quick_check": "ok",
+  "commands": [
+    {
+      "command_id": "463bde7c-290e-4e47-af84-cee938e197d1",
+      "result": "APPLIED",
+      "reason": null,
+      "attempts": 1,
+      "created_at": 1794889125.6623135,
+      "sent_at": 1794889125.6624238,
+      "ack_at": 1794889125.7785013
+    },
+    {
+      "command_id": "1aca308e-f69c-45df-8607-65905de3f3bf",
+      "result": "REJECTED",
+      "reason": "EXPIRED",
+      "attempts": 1,
+      "created_at": 1794889211.1217554,
+      "sent_at": 1794889211.1218166,
+      "ack_at": 1794889211.237824
+    },
+    {
+      "command_id": "24f6cf3a-0777-41d8-b747-858e2aacc87f",
+      "result": "TIMEOUT",
+      "reason": "ACK_TIMEOUT",
+      "attempts": 2,
+      "created_at": 1794889212.2912338,
+      "sent_at": 1794889212.291314,
+      "ack_at": null
+    },
+    {
+      "command_id": "816cb36d-f1ae-40e7-a505-24145ee15ee3",
+      "result": "TIMEOUT",
+      "reason": "BACKEND_RESTART",
+      "attempts": 1,
+      "created_at": 1794889387.7916667,
+      "sent_at": 1794889387.7917325,
+      "ack_at": null
+    },
+    {
+      "command_id": "ad61b2cf-a64e-45a9-a197-0bffed2a8bb1",
+      "result": "TIMEOUT",
+      "reason": "BACKEND_RESTART",
+      "attempts": 1,
+      "created_at": 1794890521.4301083,
+      "sent_at": 1794890521.4303007,
+      "ack_at": null
+    },
+    {
+      "command_id": "f654f2b1-251c-443c-909c-99f50846634f",
+      "result": "TIMEOUT",
+      "reason": "ACK_TIMEOUT",
+      "attempts": 1,
+      "created_at": 1794890565.0056705,
+      "sent_at": 1794890565.0058029,
+      "ack_at": null
+    },
+    {
+      "command_id": "feaf7e2a-1a11-4e38-9383-e73a2443929e",
+      "result": "APPLIED",
+      "reason": null,
+      "attempts": 1,
+      "created_at": 1794890686.8871107,
+      "sent_at": 1794890686.8871887,
+      "ack_at": 1794890686.9855847
+    }
+  ],
+  "experiments": [
+    {
+      "id": 1,
+      "name": "TASK-010 QA · pending restart",
+      "configuration": "{\"source\": \"live Wokwi VSCode\", \"scope\": \"TASK-010 pending restart\"}",
+      "notes": "",
+      "started_at": 1794889387.7133203,
+      "ended_at": 1794890025.5516346
+    },
+    {
+      "id": 2,
+      "name": "TASK-010 QA · pending restart",
+      "configuration": "{\"source\": \"live Wokwi VSCode\", \"scope\": \"TASK-010 pending restart\"}",
+      "notes": "",
+      "started_at": 1794890521.3538866,
+      "ended_at": 1794890523.8083353
+    }
+  ],
+  "quality_counts": [
+    {
+      "quality": "ACCEPTED",
+      "count": 715
+    },
+    {
+      "quality": "UNCONFIRMED_BOOT",
+      "count": 478
+    }
+  ],
+  "health": {
+    "status": "OK",
+    "database": true,
+    "broker": true,
+    "queue": true,
+    "dropped_events": 0
+  },
+  "nodes": [
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T04:57:47.495367Z",
+      "age_s": 0.7224365189995297,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "71a86c73",
+        "seq": "1193",
+        "uptime_ms": "2360876",
+        "mode": "AUTO",
+        "environment": "DAY",
+        "ldr_adc": 32,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 0,
+        "brightness_applied": 0,
+        "current_adc": 4095,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_02",
+      "connection": "UNKNOWN",
+      "freshness": "STALE",
+      "last_seen": null,
+      "age_s": null,
+      "telemetry": null,
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": false
+    },
+    {
+      "node_id": "node_03",
+      "connection": "UNKNOWN",
+      "freshness": "STALE",
+      "last_seen": null,
+      "age_s": null,
+      "telemetry": null,
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": false
+    }
+  ]
+}

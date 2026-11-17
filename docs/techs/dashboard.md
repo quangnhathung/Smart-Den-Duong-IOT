@@ -1,5 +1,12 @@
 # Dashboard P5/A5 — TASK-009
 
+## TASK-010 — UI đã kiểm live một node, 2026-11-17T12:05:29+07:00
+
+UI REJECTED/EXPIRED, TIMEOUT/ACK_TIMEOUT và ACK muộn giữ kết quả cuối đã quan sát trực tiếp; restart pending/open experiment, reload phiên, khóa khi broker QA ngừng và mở lại sau reconnect đều PASS. 10 mẫu LDR→DOM thật đạt3s, max cận trên2401,274ms; [ảnh/video, số liệu và phương pháp](../reports/evidence/task-010/completion-20261117-105535/README.md). Không dùng fixture hay mock response API trong các ca nghiệm thu này.
+
+Bản chạy QA là copy source đối chiếu hash, chỉ config.js đổi API8001/Live Server5500. Repo dashboard gốc vẫn API8000, không đổi giao diện hoặc runtime. Sửa nằm ở backend Service để không bỏ retained ONLINE sau restart. Hai cửa sổ cùng hiển thị, viewport thật và LDR raw trong vùng nhìn thấy; DOM sau hai rAF là đại diện render, không phải phép đo photon màn hình. Những giới hạn fixture/PENDING cũ phía dưới là hồ sơ thời điểm TASK-009/lượt trước, không phủ định bổ sung live này.
+
+
 ## Đối chiếu môi trường sau pull — 2026-11-17T09:45:17+07:00
 
 Repo dashboard local ở main `6cb402b`, sạch trước lượt rà soát; config.js dùng `http://127.0.0.1:8000`, chưa có `tests/task010-live-latency.html`. Bằng chứng TASK-010 trên Windows dùng API8001, Live Server5500 và bộ ghi trong tests/. Firmware main đã có bằng chứng mới không chứng minh repo dashboard ở máy khác đã đồng bộ source/cấu hình. Đây là khác biệt môi trường cần đối chiếu trước lượt live tiếp; chưa xác định lỗi chức năng và không tự đổi cổng hoặc pull repo khác.

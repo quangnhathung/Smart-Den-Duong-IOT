@@ -1,3 +1,35 @@
+## 2026-11-17T12:05:29+07:00 — TASK-010 — Hoàn tất nghiệm thu live một node: 4/4
+
+- Trạng thái: Hoàn thành;4/4 nhóm nghiệm thu TASK-010. Không phải nghiệm thu toàn đồ án/ba node.
+
+### Đã thực hiện
+
+Môi trường QA riêng trên Linux: Wokwi VSCode/ESP32 thật mô phỏng → proxy/Mosquitto QA → FastAPI một worker/SQLite → dashboard Live Server. UI REJECTED/EXPIRED và TIMEOUT/ACK muộn, pending/open experiment qua restart/reload, broker outage/reconnect/no-replay/AUTO offline đều bổ sung bằng chứng live. Giữ các PASS Windows và không đo lại10 command→ACK cũ.
+
+Phát hiện lỗi backend sau restart: availability retained đến trong lúc actor chờ queue bị xử lý với session cũ, node kẹt UNCONFIRMED_BOOT. Tạo nhánh `task/task-010-restart-sync`, sửa Service đồng bộ kết nối ngay sau dequeue/trước dispatch; thêm4 ca hồi quy, không đổi API/MQTT/schema/thuật toán. Node sau sửa trở lại fresh cùng boot, không restart ESP32.
+
+### Kiểm tra và kết quả
+
+PASS: hồi quy trước sửa2 FAIL/2 PASS → sau sửa72 Pytest/Ruff PASS/1 warning TestClient cũ;4 test lõi proxy PASS. UI và MQTT/Serial/API/SQLite thật xác nhận REJECTED/TIMEOUT, ACK muộn giữ trạng thái cuối, backend pending→TIMEOUT/BACKEND_RESTART, phiên mở còn sau reload rồi đóng. Khi broker QA dừng: mqtt0 vẫn AUTO, LDR đổi làm PWM25→0; reconnect cùng boot và0 publish lại command cũ, command mới APPLIED.
+
+PASS10/10 sensor→dashboard dưới3s: median theo khoảng1417,832–1464,491ms, max2353,967–2401,274ms. T0 trusted key LDR Home/End, t4 DOM sau2rAF; clock có chặn sai số trước/sau, MQTT/API/DOM cùng boot/seq/ADC, không hidden và ADC nhìn thấy; video30fps bổ trợ. Hai pilot định trước tách khỏi10 mẫu. Foreground driver bị kết thúc143 sau8 mẫu, controller giữ nguyên và chỉ thu tiếp9/10; không bỏ mẫu hoặc chọn lại mẫu nhanh. Serial dùng cho AUTO offline, không lấy Serial receipt/HTTP RTT/command ACK làm sensor latency.
+
+[Log, ảnh/video, audit và source công cụ](evidence/task-010/completion-20261117-105535/README.md). Snapshot cuối quick_check=ok, không còn pending/phiên QA mở. Cleanup đã dừng mọi dịch vụ/cửa sổ QA, không còn listener các cổng thử; bảo toàn dữ liệu/PASS cũ. Artifact firmware fresh/hash khớp nên không build lại.
+
+### Vướng mắc
+
+Đã giải quyết: CLI token hiện có bị Unauthorized; lỗi race session backend; proxy QA ban đầu nhầm hậu tố HTTP/MQTT; locator phiên kèm timestamp; bind kiểm ngay sau stop gặp TIME_WAIT. Không có vướng mắc còn chặn phạm vi TASK-010.
+
+### Cách giải quyết
+
+Dùng VSCode dự phòng đã chọn, không đăng ký/mua dịch vụ. Sửa race có bằng chứng tái hiện và kiểm live, giữ event session cũ bị loại. Sửa đúng công cụ/locator rồi kiểm lại phần còn thiếu, giữ log lỗi. Phân biệt LISTEN/connect_ex với TIME_WAIT khi xác minh cleanup. Preview có nền cửa sổ trong suốt được loại khỏi hồ sơ, video nghiệm thu quay hai cửa sổ opaque; dữ liệu timing không đổi.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật task/report/checklist/next-task, README, architecture/backend/testing/dashboard/simulation và hồ sơ completion; report cũ giữ nguyên từng byte ở phần đuôi. Backend README bổ sung hành vi/test72; source dashboard và C++ giữ nguyên, không đổi SRS hoặc toolchain. TASK-011 vẫn chờ đặc tả chính thức. Ba node/stability30phút, EX-series và bàn giao cuối chưa nghiệm thu. Không commit/push/merge.
+
+---
+
 ## 2026-11-17T09:45:17+07:00 — TASK-010 — Rà soát tiến độ sau pull và cập nhật flow report
 
 - Trạng thái TASK-010: Đang thực hiện; 2/4 nhóm nghiệm thu live. Lượt rà soát tài liệu hoàn tất 3/3 tiêu chí; không chốt hoàn thành TASK-010.

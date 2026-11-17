@@ -1,0 +1,3 @@
+{
+  "reason": "Initial native preview included translucent desktop background; excluded from report artifacts. Calibration timing JSON remains unchanged. Acceptance video starts after setting both owned windows opaque."
+}

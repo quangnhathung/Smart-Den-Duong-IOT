@@ -1,0 +1,264 @@
+[
+  {
+    "id": "pilot-1",
+    "pilot": true,
+    "key": "Home",
+    "before": "100k lux",
+    "after": "0.1 lux",
+    "baseline": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "71a86c73",
+      "seq": "964",
+      "uptime_ms": "1967919",
+      "mode": "AUTO",
+      "environment": "DAY",
+      "ldr_adc": 32,
+      "motion": "NONE",
+      "distance_cm": 101.4138,
+      "brightness_target": 0,
+      "brightness_applied": 0,
+      "current_adc": 4095,
+      "current_ma_sim": 0,
+      "power_sim_w": 0,
+      "faults": []
+    },
+    "action": {
+      "browser_ms": 1794891065089.3,
+      "page_id": "0e160762-84c9-4e7e-bd24-3e560b237090",
+      "key": "Home",
+      "trusted": true,
+      "visibility": "visible"
+    },
+    "action_host_interval_ms": [
+      1794891065084.1086,
+      1794891065089.9917
+    ],
+    "sensorClock": {
+      "low": 1794891065025.8894,
+      "remote": 1794891065030.6,
+      "high": 1794891065031.1401,
+      "rtt": 5.250732421875,
+      "offsetLow": -4.710693359375,
+      "offsetHigh": 0.5400390625
+    },
+    "sensorClockAfter": {
+      "low": 1794891066619.8086,
+      "remote": 1794891066625,
+      "high": 1794891066625.6917,
+      "rtt": 5.883056640625,
+      "offsetLow": -5.19140625,
+      "offsetHigh": 0.691650390625
+    },
+    "renderClock": {
+      "low": 1794891065052.7432,
+      "remote": 1794891065053.4001,
+      "high": 1794891065053.7236,
+      "rtt": 0.98046875,
+      "offsetLow": -0.656982421875,
+      "offsetHigh": 0.323486328125
+    },
+    "renderClockAfter": {
+      "low": 1794891066974.3228,
+      "remote": 1794891066974.9001,
+      "high": 1794891066975.3333,
+      "rtt": 1.010498046875,
+      "offsetLow": -0.577392578125,
+      "offsetHigh": 0.43310546875
+    },
+    "render": {
+      "host_ms": 1794891066591.7017,
+      "event": "dom_render",
+      "page_id": "fba32573-7d8e-4d6c-983c-2df33a27e23f",
+      "browser_ms": 1794891066590.7,
+      "visibility": "visible",
+      "key": "71a86c73 / 966",
+      "readings": {
+        "Chế độ đang chạy": "Tự động",
+        "Môi trường": "Ban đêm",
+        "Mục tiêu / đang áp dụng": "25% / 0%",
+        "Chuyển động": "Không chuyển động",
+        "LDR · ADC raw": "4.063",
+        "Tải · ADC raw": "4.095",
+        "Khoảng cách": "101,3 cm",
+        "Dòng / công suất mô phỏng": "0 mA / 0 W",
+        "Fault tải": "Không có lỗi tải",
+        "Nhận dữ liệu lần cuối": "11:51:06 17/11/26",
+        "Uptime node": "0 giờ 32 phút 50 giây",
+        "Boot / sequence": "71a86c73 / 966"
+      },
+      "ldr_visible": true,
+      "trial": "pilot-1"
+    },
+    "api": {
+      "host_ms": 1794891066589.3523,
+      "event": "api_sample",
+      "node": {
+        "node_id": "node_01",
+        "connection": "ONLINE",
+        "freshness": "FRESH",
+        "last_seen": "2026-11-17T04:51:06.478980Z",
+        "age_s": 0.10528687499936495,
+        "telemetry": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "71a86c73",
+          "seq": "966",
+          "uptime_ms": "1970430",
+          "mode": "AUTO",
+          "environment": "NIGHT",
+          "ldr_adc": 4063,
+          "motion": "NONE",
+          "distance_cm": 101.2586,
+          "brightness_target": 25,
+          "brightness_applied": 0,
+          "current_adc": 4095,
+          "current_ma_sim": 0,
+          "power_sim_w": 0,
+          "faults": []
+        },
+        "faults": [],
+        "pending_command_id": null,
+        "can_command": true
+      },
+      "trial": "pilot-1"
+    },
+    "latency_interval_ms": [
+      1500.05126953125,
+      1507.0244140625
+    ],
+    "status": "PASS",
+    "reasons": []
+  },
+  {
+    "id": "pilot-2",
+    "pilot": true,
+    "key": "End",
+    "before": "0.1 lux",
+    "after": "100k lux",
+    "baseline": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "71a86c73",
+      "seq": "968",
+      "uptime_ms": "1970838",
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "ldr_adc": 4063,
+      "motion": "NONE",
+      "distance_cm": 101.4138,
+      "brightness_target": 25,
+      "brightness_applied": 25,
+      "current_adc": 4095,
+      "current_ma_sim": 500,
+      "power_sim_w": 6,
+      "faults": []
+    },
+    "action": {
+      "browser_ms": 1794891068481.9,
+      "page_id": "0e160762-84c9-4e7e-bd24-3e560b237090",
+      "key": "End",
+      "trusted": true,
+      "visibility": "visible"
+    },
+    "action_host_interval_ms": [
+      1794891068435.5405,
+      1794891068482.6873
+    ],
+    "sensorClock": {
+      "low": 1794891068087.3406,
+      "remote": 1794891068133.7,
+      "high": 1794891068134.1653,
+      "rtt": 46.82470703125,
+      "offsetLow": -46.359375,
+      "offsetHigh": 0.46533203125
+    },
+    "sensorClockAfter": {
+      "low": 1794891070613.7292,
+      "remote": 1794891070630.3,
+      "high": 1794891070631.0874,
+      "rtt": 17.358154296875,
+      "offsetLow": -16.57080078125,
+      "offsetHigh": 0.787353515625
+    },
+    "renderClock": {
+      "low": 1794891068234.7297,
+      "remote": 1794891068235.3,
+      "high": 1794891068235.4834,
+      "rtt": 0.753662109375,
+      "offsetLow": -0.5703125,
+      "offsetHigh": 0.183349609375
+    },
+    "renderClockAfter": {
+      "low": 1794891070972.8306,
+      "remote": 1794891070973.3,
+      "high": 1794891070973.483,
+      "rtt": 0.65234375,
+      "offsetLow": -0.469482421875,
+      "offsetHigh": 0.182861328125
+    },
+    "render": {
+      "host_ms": 1794891070609.7957,
+      "event": "dom_render",
+      "page_id": "fba32573-7d8e-4d6c-983c-2df33a27e23f",
+      "browser_ms": 1794891070608.9001,
+      "visibility": "visible",
+      "key": "71a86c73 / 969",
+      "readings": {
+        "Chế độ đang chạy": "Tự động",
+        "Môi trường": "Ban đêm",
+        "Mục tiêu / đang áp dụng": "25% / 25%",
+        "Chuyển động": "Không chuyển động",
+        "LDR · ADC raw": "32",
+        "Tải · ADC raw": "4.095",
+        "Khoảng cách": "101,4 cm",
+        "Dòng / công suất mô phỏng": "500 mA / 6 W",
+        "Fault tải": "Không có lỗi tải",
+        "Nhận dữ liệu lần cuối": "11:51:10 17/11/26",
+        "Uptime node": "0 giờ 32 phút 52 giây",
+        "Boot / sequence": "71a86c73 / 969"
+      },
+      "ldr_visible": true,
+      "trial": "pilot-2"
+    },
+    "api": {
+      "host_ms": 1794891070607.1821,
+      "event": "api_sample",
+      "node": {
+        "node_id": "node_01",
+        "connection": "ONLINE",
+        "freshness": "FRESH",
+        "last_seen": "2026-11-17T04:51:10.229193Z",
+        "age_s": 0.37301193500024965,
+        "telemetry": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "71a86c73",
+          "seq": "969",
+          "uptime_ms": "1972845",
+          "mode": "AUTO",
+          "environment": "NIGHT",
+          "ldr_adc": 32,
+          "motion": "NONE",
+          "distance_cm": 101.4138,
+          "brightness_target": 25,
+          "brightness_applied": 25,
+          "current_adc": 4095,
+          "current_ma_sim": 500,
+          "power_sim_w": 6,
+          "faults": []
+        },
+        "faults": [],
+        "pending_command_id": null,
+        "can_command": true
+      },
+      "trial": "pilot-2"
+    },
+    "latency_interval_ms": [
+      2125.642578125,
+      2173.54296875
+    ],
+    "status": "PASS",
+    "reasons": []
+  }
+]

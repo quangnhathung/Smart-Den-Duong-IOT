@@ -1,0 +1,18 @@
+[
+  {
+    "name": "wokwi",
+    "window_id": "121634820",
+    "pid": 156833,
+    "owner_ancestor": 156833,
+    "title": "Wokwi Simulator - wokwi-project - Visual Studio Code",
+    "geometry": "WINDOW=121634820\nX=-1\nY=-1\nWIDTH=960\nHEIGHT=1040\nSCREEN=0"
+  },
+  {
+    "name": "dashboard",
+    "window_id": "134217732",
+    "pid": 164271,
+    "owner_ancestor": 164254,
+    "title": "Điều khiển node · SmartLight - Google Chrome",
+    "geometry": "WINDOW=134217732\nX=959\nY=-1\nWIDTH=960\nHEIGHT=1040\nSCREEN=0"
+  }
+]

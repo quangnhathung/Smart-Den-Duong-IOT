@@ -1,0 +1,56 @@
+{
+  "result": "PASS",
+  "broker_down": {
+    "begin_ms": 1794890565013.0142,
+    "end_ms": 1794890565437.9524,
+    "container": "smartlight-task010-20261117-105535",
+    "action": "stop"
+  },
+  "sensor_action": {
+    "host_ms": 1794890596015.0308,
+    "monotonic_ns": 8180041564046,
+    "source": "browser",
+    "event": "offline_sensor_action",
+    "before": "0.1 lux",
+    "after": "100k lux",
+    "begin_ms": 1794890595700,
+    "end_ms": 1794890596000
+  },
+  "night_before_action": {
+    "host_ms": 1794890595408.8875,
+    "monotonic_ns": 8179435420160,
+    "line": "CONTROL uptime_ms=1502430 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=4063 target=25 applied=25 duty=64 ready=1 fault=OK mqtt=0",
+    "fields": {
+      "uptime_ms": "1502430",
+      "mode": "AUTO",
+      "environment": "NIGHT",
+      "motion": "NONE",
+      "ldr_filtered": "4063",
+      "target": "25",
+      "applied": "25",
+      "duty": "64",
+      "ready": "1",
+      "fault": "OK",
+      "mqtt": "0"
+    }
+  },
+  "day_after_action": {
+    "host_ms": 1794890598035.3533,
+    "monotonic_ns": 8182061885714,
+    "line": "CONTROL uptime_ms=1504430 mode=AUTO environment=DAY motion=NONE ldr_filtered=32 target=0 applied=0 duty=0 ready=1 fault=OK mqtt=0",
+    "fields": {
+      "uptime_ms": "1504430",
+      "mode": "AUTO",
+      "environment": "DAY",
+      "motion": "NONE",
+      "ldr_filtered": "32",
+      "target": "0",
+      "applied": "0",
+      "duty": "0",
+      "ready": "1",
+      "fault": "OK",
+      "mqtt": "0"
+    }
+  },
+  "broker_restarted_host_ms": 1794890618135.173
+}

@@ -1,0 +1,10 @@
+{"host_ms": 1794889354392.7532, "event": "start", "pid": 172162}
+{"host_ms": 1794889387803.749, "event": "backend_stop", "pid": 150489}
+{"host_ms": 1794889388106.0852, "event": "backend_start", "old_pid": 150489, "pid": 173067}
+{"host_ms": 1794890357794.452, "event": "backend_stop", "pid": 173067}
+{"host_ms": 1794890358046.703, "event": "backend_start", "old_pid": 173067, "pid": 199323}
+{"host_ms": 1794890521441.2322, "event": "backend_stop", "pid": 199323}
+{"host_ms": 1794890521747.1492, "event": "backend_start", "old_pid": 199323, "pid": 204023}
+{"host_ms": 1794890565104.0015, "event": "broker_stop", "container": "smartlight-task010-20261117-105535"}
+{"host_ms": 1794890618135.173, "event": "broker_start", "container": "smartlight-task010-20261117-105535"}
+{"host_ms": 1794891541140.0635, "event": "stop"}

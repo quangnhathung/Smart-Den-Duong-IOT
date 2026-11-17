@@ -1,0 +1,48 @@
+{
+  "result": "PASS",
+  "broker_start_host_ms": 1794890618135.173,
+  "old_command": {
+    "command_id": "f654f2b1-251c-443c-909c-99f50846634f",
+    "node_id": "node_01",
+    "boot_id": "71a86c73",
+    "payload": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "71a86c73",
+      "command_id": "f654f2b1-251c-443c-909c-99f50846634f",
+      "deadline_uptime_ms": "1489316",
+      "mode": "AUTO"
+    },
+    "created_at": "2026-11-17T04:42:45.005671Z",
+    "sent_at": "2026-11-17T04:42:45.005803Z",
+    "retry_at": null,
+    "result": "TIMEOUT",
+    "reason": "ACK_TIMEOUT",
+    "ack_at": null,
+    "attempts": 1
+  },
+  "old_command_publish_after_reconnect": 0,
+  "new_command_id": "feaf7e2a-1a11-4e38-9383-e73a2443929e",
+  "same_boot": true,
+  "ui_feedback": "Node đã chấp nhận chế độ và mục tiêu. PWM có thể còn đang chuyển dần.",
+  "new_command_api": {
+    "command_id": "feaf7e2a-1a11-4e38-9383-e73a2443929e",
+    "node_id": "node_01",
+    "boot_id": "71a86c73",
+    "payload": {
+      "schema_version": 1,
+      "node_id": "node_01",
+      "boot_id": "71a86c73",
+      "command_id": "feaf7e2a-1a11-4e38-9383-e73a2443929e",
+      "deadline_uptime_ms": "1595953",
+      "mode": "AUTO"
+    },
+    "created_at": "2026-11-17T04:44:46.887111Z",
+    "sent_at": "2026-11-17T04:44:46.887189Z",
+    "retry_at": null,
+    "result": "APPLIED",
+    "reason": null,
+    "ack_at": "2026-11-17T04:44:46.985585Z",
+    "attempts": 1
+  }
+}

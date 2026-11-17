@@ -11,7 +11,7 @@ Tài liệu chốt thiết kế A0 cho các gói tiếp theo. Nghiệm thu môi 
 - Một ESP32 `esp32dev`, source dùng chung với entry point `src/main.cpp`.
 - FirmwareApp điều phối SensorReader, LightingController, DimmingController/FaultDetector; LED GPIO26 theo AUTO/MANUAL, Serial và MQTT ping/pong/heartbeat diagnostics. Connectivity sở hữu PubSubClient ở task core0, vòng điều khiển core1 đọc atomic status/loss-count; ECHO bắt cạnh, không pulseIn.
 - Một cấu hình Wokwi node_01, script copy artifact, Mosquitto Docker local.
-- P1 đã nghiệm thu TASK-005; P2 có code và xác nhận live từ máy dev theo TASK-006. TASK-007 triển khai telemetry/command/ACK/availability một node, test/build và hướng dẫn live; chưa nghiệm thu live A3 tại máy này. TASK-008 có backend/API/SQLite tại repo cùng cấp; TASK-009 có dashboard HTML/CSS/JS A5 chạy Live Server; browser test dùng fixture, tích hợp live chưa nghiệm thu.
+- P1 đã nghiệm thu TASK-005; P2 có code và xác nhận live từ máy dev theo TASK-006. TASK-007 triển khai telemetry/command/ACK/availability một node, test/build và hướng dẫn live; kết quả live một node được bổ sung ở TASK-010. TASK-008 có backend/API/SQLite tại repo cùng cấp; TASK-009 có dashboard HTML/CSS/JS A5 chạy Live Server; browser test TASK-009 dùng fixture; TASK-010 nay đạt4/4 tích hợp live một node và10 mẫu sensor→dashboard. Ba node/EX-series chưa nghiệm thu.
 - Đã pin các package trong PlatformIO. PlatformIO Core 6.1.19 là phiên bản công cụ đã dùng, không được cài lại bởi tệp cấu hình dự án.
 
 ## Kiến trúc mục tiêu

@@ -1,8 +1,26 @@
 # TASK-010 — Tích hợp một node MQTT–backend–dashboard
 
-- Trạng thái: Đang thực hiện
-- Tiến độ: 2/4 nhóm nghiệm thu live; nhóm 2 và 4 còn tiêu chí PENDING
-- Cập nhật: 2026-11-17T09:45:17+07:00
+- Trạng thái: Hoàn thành
+- Tiến độ: 4/4 nhóm nghiệm thu live một node
+- Cập nhật: 2026-11-17T12:05:29+07:00
+
+## Tiếp tục hoàn tất TASK-010 — 2026-11-17T10:55:35+07:00
+
+- Trạng thái lượt hoàn thiện: Hoàn thành 2026-11-17T12:05:29+07:00, 4/4 nhóm; các ghi chú 2/4 hoặc3/4 phía dưới là lịch sử trước nghiệm thu mới. [Kết quả chốt](evidence/task-010/completion-20261117-105535/README.md).
+- Phạm vi được giao: Linux hiện tại, ưu tiên Wokwi CLI tự động; VS Code/video là dự phòng đã chọn. Hoàn thiện UI REJECTED/TIMEOUT, broker outage/reconnect/no-replay/AUTO offline, restart có pending/phiên mở và 10 lượt sensor → dashboard.
+- Điều kiện nghiệm thu: API/Serial/MQTT/DOM thật, phân biệt clock và sai số; mục tiêu3s giữ nguyên. Bảo toàn các PASS trước, không thay schema/timer/thuật toán để làm test đạt. Broker/DB/backend/dashboard QA riêng; không dừng dịch vụ dùng chung.
+- Checklist lượt này: [x] preflight và VSCode dự phòng; [x] bộ ghi/kiểm logic; [x] UI/restart/outage/reconnect/AUTO offline; [x] latency10 mẫu hợp lệ; [x] tài liệu, manifest, cleanup và báo cáo.
+- Lỗi live mới: sau restart riêng Backend, availability retained có thể đến khi actor đang chờ queue; session chưa đồng bộ khiến ONLINE bị loại và telemetry sau đó UNCONFIRMED_BOOT. Phạm vi sửa bổ sung: đồng bộ trạng thái kết nối ngay sau dequeue trong Service; không đổi hợp đồng MQTT/thuật toán. Bộ tái hiện trước sửa có 2 FAIL/2 PASS; bản sửa staging có 72 Pytest/Ruff PASS, cần kiểm live sau bàn giao.
+- WOKWI_CLI_TOKEN đã khai báo trong .bashrc; dùng cấu hình sẵn có trong tiến trình con, không lưu secret vào bằng chứng. Không đăng ký/mua dịch vụ, không commit/push/merge hoặc triển khai TASK-011.
+
+## Kết quả nghiệm thu mới nhất — 2026-11-17T12:05:29+07:00
+
+- UI REJECTED/EXPIRED và TIMEOUT/ACK_TIMEOUT với ACK thật; ACK muộn không đổi kết quả cuối.
+- Restart pending/phiên mở, node fresh cùng boot và UI reload phục hồi; sửa race Service sau dequeue. Hồi quy72 Pytest/Ruff PASS/1 warning cũ,4 kiểm lõi proxy PASS.
+- Broker QA outage khi pending; mqtt0 vẫn AUTO và PWM đổi25→0 theo LDR; reconnect cùng boot, không publish lại command cũ, command mới APPLIED.
+- Latency10/10 PASS3s: median1417,832–1464,491ms, max2353,967–2401,274ms;2 pilot tách riêng. Giữ10 command→ACK cũ, không chạy lại các PASS khác.
+- Tất cả dịch vụ/cửa sổ QA đã dừng, không còn listener QA; DB/log/PASS cũ giữ nguyên. [Audit](evidence/task-010/completion-20261117-105535/acceptance-audit.json), [cleanup](evidence/task-010/completion-20261117-105535/cleanup.json), [tổng hợp](evidence/task-010/completion-20261117-105535/README.md).
+- Không còn vướng mắc chặn nghiệm thu TASK-010 một node. CLI Unauthorized được xử lý bằng VSCode dự phòng; các lỗi công cụ ban đầu giữ log và kết luận đúng phạm vi. Không sửa firmware/schema/SRS, không commit/push/merge; TASK-011 chờ đặc tả.
 
 ## Rà soát flow report sau pull — 2026-11-17T09:45:17+07:00
 
@@ -27,9 +45,9 @@ SRS6/7/8/9/12, TC17–22/26; ma trận A3-01…08 trong techs/mqtt.md và runboo
 ## Tiêu chí hoàn thành và tiến độ
 
 - [x] Broker/Wokwi thật, backend/SQLite một chủ ghi, dashboard Live Server; node_02/03 UNKNOWN; telemetry/target/applied/clock hiện tại đúng. API/MQTT/SQLite/hash do agent thu, hiển thị Dashboard do người dùng xác nhận. Fault tải→API/SQLite đã PASS; ảnh Serial do người dùng chụp chưa có file trong repo.
-- [ ] AUTO/MANUAL80/ACK/reject/timeout/60s theo node, input sai/pending guard, mất API/broker/reconnect, không replay và AUTO tiếp tục.
-- [x] Restart giữ history/alerts/experiments đã lưu; gap phía API không nối năng lượng, CSV3 phiên khớp từng byte trước/sau; stats/coverage/clock đã đối chiếu. Không có lệnh chờ/phiên mở trong ca này, không chốt các tình huống đó hoặc rendering Dashboard sau reload.
-- [ ] Latency cảm biến→dashboard và command→ACK ít nhất10 lượt mỗi loại; median/max/điều kiện máy, log/hash/cấu hình và kết quả thật.
+- [x] AUTO/MANUAL80/ACK/reject/timeout/60s theo node, input sai/pending guard, mất API/broker/reconnect, không replay và AUTO tiếp tục.
+- [x] Restart giữ history/alerts/experiments đã lưu; gap phía API không nối năng lượng, CSV3 phiên khớp từng byte trước/sau; stats/coverage/clock đã đối chiếu. Các ca Windows cũ không có pending/phiên mở; lượt Linux mới đã bổ sung pending/open experiment qua restart và UI reload trên bản sửa session.
+- [x] Latency cảm biến→dashboard10 mẫu mới hợp lệ dưới3s; giữ10 command→ACK cũ. Median/max có khoảng sai số/điều kiện máy/video/MQTT/API/DOM và log/hash.
 
 ## Vướng mắc và cách giải quyết
 

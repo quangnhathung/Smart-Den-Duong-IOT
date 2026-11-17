@@ -1,5 +1,12 @@
 # Chạy Wokwi — cập nhật A3 và lịch sử P2/P1
 
+## TASK-010 — môi trường nghiệm thu Linux đã hoàn tất
+
+Lượt 2026-11-17T12:05:29+07:00: dùng Wokwi VSCode4.1.0 với profile QA riêng, node_01/source/board/pin map giữ nguyên; copy BIN/ELF hiện có vào workspace QA và kiểm hash vì extension yêu cầu artifact trong workspace. Không build lại khi artifact còn fresh. CLI0.29.1 đã có nhưng token trả Unauthorized; không tự đăng ký/mua dịch vụ, dùng phương án VSCode dự phòng đã chọn.
+
+Broker QA11884, proxy1883 cho node và11883 cho backend, backend8001/SQLite riêng, Live Server5500 trên bản dashboard QA chỉ đổi URL API. Mất/phục hồi broker được kiểm bằng dừng/start đúng container có nhãn sở hữu, không dừng broker dùng chung. LDR được tác động thật bằng phím slider Home/End; Serial RFC2217 chỉ đọc dùng cho ca AUTO offline, không dùng làm mốc t0 latency. [Runbook, bằng chứng và cleanup](../reports/evidence/task-010/completion-20261117-105535/README.md). Các công cụ as-run có đường dẫn/PID guard riêng, cần thiết lập lượt mới trước khi tái sử dụng. Không coi một node đạt là ba node30phút hoặc EX-series đạt.
+
+
 TASK-007 có banner `P3/A3 lighting control`, MQTT nghiệp vụ một node và diagnostics; build/copy theo hướng dẫn bên dưới. [Bộ kiểm tra A3 đầy đủ](mqtt.md#bộ-kiểm-tra-live-a3-trên-máy-dev-chưa-chạy-tại-máy-này) gồm telemetry/command/ACK/retry/reconnect/LWT và lệnh Linux/PowerShell. Chưa chạy live A3 tại máy này; P2 đã có xác nhận PASS ở máy dev kia, không yêu cầu chạy lại toàn bộ. Các quy trình P2/P1 dưới đây giữ làm lịch sử/runbook theo firmware tương ứng, không phải kết quả A3.
 
 # Chạy Wokwi — P2/A2 hiện tại, lưu runbook P1 bên dưới

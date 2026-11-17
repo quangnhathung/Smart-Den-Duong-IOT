@@ -1,0 +1,8 @@
+{
+  "completed_at": "2026-11-17T12:05:29+07:00",
+  "before_sha256": "6609f4f733071c2ef7f5509e867aac905480069712f907f924dd65d000815fa9",
+  "before_bytes": 65402,
+  "initial_before_sha256": "6609f4f733071c2ef7f5509e867aac905480069712f907f924dd65d000815fa9",
+  "new_prefix_bytes": 3790,
+  "old_tail_byte_identical": true
+}

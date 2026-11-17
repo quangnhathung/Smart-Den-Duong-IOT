@@ -1,3 +1,15 @@
+# TASK-010 — Tích hợp live một node MQTT–backend–dashboard
+
+- Hoàn thành: 2026-11-17T12:05:29+07:00; **4/4 nhóm nghiệm thu**. Kết hợp PASS Windows được bảo toàn với lượt Linux bổ sung.
+- [x] Broker/Wokwi/SQLite/API/dashboard thật một node; node02/03 UNKNOWN.
+- [x] Giữ MANUAL/60s/guard/reject wire cũ; thêm UI REJECTED/TIMEOUT, ACK muộn, broker outage/reconnect/no-replay và Serial AUTO/PWM khi mqtt0.
+- [x] Giữ history/CSV/gap cũ; thêm pending/open experiment qua restart/reload, sửa race retained ONLINE sau chờ queue;72 Pytest/Ruff PASS.
+- [x]10 sensor→dashboard mới PASS3s (median1417,832–1464,491ms; max2353,967–2401,274ms),10 command→ACK cũ giữ nguyên; phương pháp/clock/video/hash có bằng chứng.
+
+[Hồ sơ nghiệm thu](evidence/task-010/completion-20261117-105535/README.md).4 test lõi proxy PASS; dịch vụ QA đã dừng, source firmware/dashboard và dữ liệu cũ giữ nguyên. Không nghiệm thu ba node/stability30phút/EX-series/phần cứng thật, không commit/push/merge. TASK-011 chờ đặc tả. Các ghi chú checklist phía dưới giữ đúng lịch sử từng lượt.
+
+---
+
 Ghi chú rà soát 2026-11-17T09:45:17+07:00: TASK-010 đang thực hiện, 2/4 nhóm nghiệm thu; TASK-011 chờ đặc tả. Lượt rà soát tài liệu đã hoàn tất, không thêm TASK-010 vào danh sách task hoàn thành. [Bằng chứng rà soát](evidence/task-010/review-20261117-094517/README.md). Toàn bộ checklist lịch sử bên dưới được giữ nguyên.
 
 ---

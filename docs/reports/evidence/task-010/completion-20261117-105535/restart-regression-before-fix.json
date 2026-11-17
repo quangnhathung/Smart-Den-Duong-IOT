@@ -1,0 +1,84 @@
+{
+  "kind": "LIVE_REGRESSION",
+  "symptom": "Fresh node telemetry stays UNCONFIRMED_BOOT after backend-only restart while same Wokwi boot continues",
+  "quality_counts": [
+    {
+      "quality": "ACCEPTED",
+      "count": 168
+    },
+    {
+      "quality": "UNCONFIRMED_BOOT",
+      "count": 440
+    }
+  ],
+  "availability": [
+    {
+      "id": 1,
+      "node_id": "node_01",
+      "boot_id": "71a86c73",
+      "status": "ONLINE",
+      "received_at": 1794889050.696131,
+      "session": "a35e4796-5325-40ec-9a83-f38455d7eab2"
+    },
+    {
+      "id": 2,
+      "node_id": "node_01",
+      "boot_id": "71a86c73",
+      "status": "OFFLINE",
+      "received_at": 1794889201.4679854,
+      "session": "e3d65639-7992-4e95-8951-f35712cb73af"
+    },
+    {
+      "id": 3,
+      "node_id": "node_01",
+      "boot_id": "71a86c73",
+      "status": "ONLINE",
+      "received_at": 1794889202.6362214,
+      "session": "e3d65639-7992-4e95-8951-f35712cb73af"
+    }
+  ],
+  "node_snapshot": [
+    {
+      "node_id": "node_01",
+      "boot_id": "71a86c73",
+      "last_seen": 1794889387.0626853
+    },
+    {
+      "node_id": "node_02",
+      "boot_id": null,
+      "last_seen": null
+    },
+    {
+      "node_id": "node_03",
+      "boot_id": null,
+      "last_seen": null
+    }
+  ],
+  "current_commands": [
+    {
+      "command_id": "463bde7c-290e-4e47-af84-cee938e197d1",
+      "result": "APPLIED",
+      "reason": null,
+      "attempts": 1
+    },
+    {
+      "command_id": "1aca308e-f69c-45df-8607-65905de3f3bf",
+      "result": "REJECTED",
+      "reason": "EXPIRED",
+      "attempts": 1
+    },
+    {
+      "command_id": "24f6cf3a-0777-41d8-b747-858e2aacc87f",
+      "result": "TIMEOUT",
+      "reason": "ACK_TIMEOUT",
+      "attempts": 2
+    },
+    {
+      "command_id": "816cb36d-f1ae-40e7-a505-24145ee15ee3",
+      "result": "TIMEOUT",
+      "reason": "BACKEND_RESTART",
+      "attempts": 1
+    }
+  ],
+  "hypothesis": "Actor checks transport readiness before a blocking queue.get; first retained ONLINE can arrive during wait and be processed against obsolete engine session."
+}

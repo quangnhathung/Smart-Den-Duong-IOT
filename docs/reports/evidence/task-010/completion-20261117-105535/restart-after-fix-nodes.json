@@ -1,0 +1,55 @@
+{
+  "nodes": [
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T04:39:56.516145Z",
+      "age_s": 1.403233345999979,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "71a86c73",
+        "seq": "665",
+        "uptime_ms": "1329791",
+        "mode": "AUTO",
+        "environment": "DAY",
+        "ldr_adc": 32,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 0,
+        "brightness_applied": 0,
+        "current_adc": 4095,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_02",
+      "connection": "UNKNOWN",
+      "freshness": "STALE",
+      "last_seen": null,
+      "age_s": null,
+      "telemetry": null,
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": false
+    },
+    {
+      "node_id": "node_03",
+      "connection": "UNKNOWN",
+      "freshness": "STALE",
+      "last_seen": null,
+      "age_s": null,
+      "telemetry": null,
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": false
+    }
+  ],
+  "note": "After scoped session synchronization fix; same Wokwi simulation kept running"
+}

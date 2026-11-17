@@ -1,5 +1,14 @@
 # Kiểm tra dự án — firmware, backend và dashboard
 
+## TASK-010 — nghiệm thu hoàn tất một node, 2026-11-17T12:05:29+07:00
+
+4/4 nhóm PASS theo [audit và hồ sơ](../reports/evidence/task-010/completion-20261117-105535/README.md). Bổ sung UI REJECTED/TIMEOUT bằng ACK thật, pending/phiên mở qua restart, broker QA outage/reconnect/no-replay và Serial AUTO/PWM khi mqtt0. Sửa race actor nhận retained ONLINE sau chờ queue;72 Pytest/Ruff PASS,4 test lõi proxy PASS. Các PASS Windows trước giữ nguyên, các đoạn PENDING phía dưới là lịch sử tại thời điểm từng lượt.
+
+10/10 mẫu sensor→dashboard mới PASS3s, median theo khoảng1417,832–1464,491ms, max2353,967–2401,274ms. T0 là phím LDR trusted trên Wokwi VSCode, DOM sau hai rAF, clock có chặn sai số trước/sau; MQTT/API/DOM cùng boot/seq/ADC, không hidden, giá trị nhìn thấy; video30fps bổ trợ. Hai pilot tách riêng; điều phối bị kết thúc143 sau8 mẫu nhưng bộ ghi giữ nguyên, chỉ thu tiếp9/10. Không dùng Serial receive/HTTP RTT/command ACK thay sensor latency. Giữ10 command→ACK cũ (median686,217ms/max1002,001ms), không chạy lại.
+
+LDR fallback dùng Home/End0,1/100000lux thay mức100/1000 dự kiến để có hành động UI rời rạc; không đổi ngưỡng/chu kỳ. CLI token bị Unauthorized, đã dùng VSCode theo phương án được chọn. Artifact fresh/hash khớp nên không build lại firmware. Không nghiệm thu ba node/stability30phút/EX-series hoặc phần cứng thật. Dịch vụ QA đã dừng, DB người dùng không bị sửa.
+
+
 ## Rà soát hồ sơ sau pull — 2026-11-17T09:45:17+07:00
 
 Đối chiếu main firmware `7e8f5c4` (PR #3) với file chốt TASK-010: nhóm 1 và 3 PASS, nhóm 2 và 4 PENDING, tổng 2/4 nhóm nghiệm thu. Kiểm tra mới tại máy Linux: 112/112 tệp trong 4 manifest SHA256 khớp, 70/70 JSON bằng chứng đọc hợp lệ. Không mở DB hoặc kết nối MQTT/API, không chạy lại build/host/pytest/Node/live đã được xác nhận trước đó. [Kết quả và phạm vi kiểm tra](../reports/evidence/task-010/review-20261117-094517/README.md).

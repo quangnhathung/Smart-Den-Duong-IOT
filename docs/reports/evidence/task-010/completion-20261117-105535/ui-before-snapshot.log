@@ -1,0 +1,118 @@
+### Page
+- Page URL: http://127.0.0.1:5500/#nodes/node_01
+- Page Title: Điều khiển node · SmartLight
+### Snapshot
+```yaml
+- generic [active] [ref=e1]:
+  - link "Đến nội dung chính" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e3]:
+    - complementary "Điều hướng chính" [ref=e4]:
+      - link "SmartLight HỆ THỐNG CHIẾU SÁNG" [ref=e5] [cursor=pointer]:
+        - /url: "#overview"
+        - generic [ref=e9]:
+          - text: SmartLight
+          - generic [ref=e10]: HỆ THỐNG CHIẾU SÁNG
+      - navigation [ref=e11]:
+        - link "Tổng quan" [ref=e12] [cursor=pointer]:
+          - /url: "#overview"
+        - link "Điều khiển node" [ref=e15] [cursor=pointer]:
+          - /url: "#nodes/node_01"
+        - link "Lịch sử dữ liệu" [ref=e18] [cursor=pointer]:
+          - /url: "#history"
+        - link "Cảnh báo —" [ref=e21] [cursor=pointer]:
+          - /url: "#alerts"
+          - text: Cảnh báo
+          - generic [ref=e24]: —
+        - link "Phiên thực nghiệm" [ref=e25] [cursor=pointer]:
+          - /url: "#experiments"
+    - generic [ref=e28]:
+      - banner [ref=e29]:
+        - generic [ref=e30]: SmartLight / Điều khiển node
+        - generic [ref=e32]:
+          - generic [ref=e33]: Máy chủ sẵn sàng
+          - generic "Nhóm 7" [ref=e34]: N7
+      - main [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - paragraph [ref=e38]: GIÁM SÁT & ĐIỀU KHIỂN
+            - heading "Điều khiển node" [level=1] [ref=e39]
+            - paragraph [ref=e40]: Đồng bộ trạng thái thực và gửi yêu cầu có xác nhận.
+          - button "Cập nhật" [ref=e41] [cursor=pointer]
+        - generic [ref=e44]:
+          - text: Dữ liệu cảm biến và điện năng thuộc
+          - strong [ref=e45]: mô hình mô phỏng
+          - text: ". Thời gian hiển thị: Việt Nam (UTC+7)."
+        - region "Điều khiển node" [ref=e46]:
+          - generic [ref=e47]:
+            - generic [ref=e48]: Node đang xem
+            - combobox "Node đang xem" [ref=e49]:
+              - option "node_01" [selected]
+              - option "node_02"
+              - option "node_03"
+            - generic [ref=e117]: Online
+          - generic [ref=e51]:
+            - generic [ref=e52]:
+              - generic [ref=e54]:
+                - heading "Trạng thái tại node" [level=2] [ref=e55]
+                - paragraph [ref=e56]: Giá trị thực nhận từ telemetry, không phải bản nháp điều khiển.
+              - generic [ref=e57]:
+                - generic [ref=e118]:
+                  - term [ref=e119]: Chế độ đang chạy
+                  - definition [ref=e120]: Tự động
+                - generic [ref=e121]:
+                  - term [ref=e122]: Môi trường
+                  - definition [ref=e123]: Ban ngày
+                - generic [ref=e124]:
+                  - term [ref=e125]: Mục tiêu / đang áp dụng
+                  - definition [ref=e126]: 0% / 0%
+                - generic [ref=e127]:
+                  - term [ref=e128]: Chuyển động
+                  - definition [ref=e129]: Không chuyển động
+                - generic [ref=e130]:
+                  - term [ref=e131]: LDR · ADC raw
+                  - definition [ref=e132]: "1.001"
+                - generic [ref=e133]:
+                  - term [ref=e134]: Tải · ADC raw
+                  - definition [ref=e135]: "4.095"
+                - generic [ref=e136]:
+                  - term [ref=e137]: Khoảng cách
+                  - definition [ref=e138]: 101,4 cm
+                - generic [ref=e139]:
+                  - term [ref=e140]: Dòng / công suất mô phỏng
+                  - definition [ref=e141]: 0 mA / 0 W
+                - generic [ref=e142]:
+                  - term [ref=e143]: Fault tải
+                  - definition [ref=e144]: Không có lỗi tải
+                - generic [ref=e145]:
+                  - term [ref=e146]: Nhận dữ liệu lần cuối
+                  - definition [ref=e147]: 11:18:42 17/11/26
+                - generic [ref=e148]:
+                  - term [ref=e149]: Uptime node
+                  - definition [ref=e150]: 0 giờ 1 phút 16 giây
+                - generic [ref=e151]:
+                  - term [ref=e152]: Boot / sequence
+                  - definition [ref=e153]: 71a86c73 / 36
+            - generic [ref=e94]:
+              - generic [ref=e96]:
+                - heading "Thiết lập điều khiển" [level=2] [ref=e97]
+                - paragraph [ref=e98]: Chỉ gửi khi bấm Áp dụng.
+              - generic [ref=e99]:
+                - generic [ref=e100]: Chế độ đề nghị
+                - combobox "Chế độ đề nghị" [ref=e101]:
+                  - option "AUTO · Tự động" [selected]
+                  - option "MANUAL · Thủ công"
+                - generic [ref=e102]:
+                  - generic [ref=e103]: Độ sáng đề nghị
+                  - generic [ref=e104]:
+                    - spinbutton "Độ sáng đề nghị phần trăm" [disabled] [ref=e105]: "0"
+                    - generic [ref=e106]: "%"
+                - slider "Độ sáng đề nghị" [disabled] [ref=e107]: "0"
+                - paragraph [ref=e108]: MANUAL tự trở về AUTO sau 60 giây theo đồng hồ node. Khi mất MQTT, node trở về AUTO.
+                - paragraph [ref=e109]: Sẵn sàng gửi yêu cầu đến node_01.
+                - button "Áp dụng thiết lập" [ref=e110] [cursor=pointer]
+                - status [ref=e113]: Chọn chế độ và bấm Áp dụng để gửi lệnh.
+        - generic [ref=e114]:
+          - generic [ref=e115]: SmartLight · Đồ án đèn đường thông minh
+          - generic [ref=e116]: "Nhận gần nhất: 11:18:43 17/11/26"
+```

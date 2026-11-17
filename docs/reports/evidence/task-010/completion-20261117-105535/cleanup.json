@@ -1,0 +1,112 @@
+{
+  "at_host_ms": 1794891541763.6973,
+  "actions": [
+    {
+      "pid": 220893,
+      "note": "already exited"
+    },
+    {
+      "port": 18767,
+      "path": "/stop",
+      "result": {}
+    },
+    {
+      "pid": 216805,
+      "signal": "SIGTERM",
+      "identity_guard": "latency.cjs"
+    },
+    {
+      "pid": 215812,
+      "note": "already exited"
+    },
+    {
+      "pid": 156833,
+      "signal": "SIGTERM",
+      "identity_guard": "/tmp/task010-completion/vscode-profile"
+    },
+    {
+      "pid": 153494,
+      "note": "already exited"
+    },
+    {
+      "pid": 204023,
+      "signal": "SIGINT",
+      "identity_guard": "uvicorn"
+    },
+    {
+      "pid": 150490,
+      "signal": "SIGTERM",
+      "identity_guard": "/tmp/task010-completion/live.cjs"
+    },
+    {
+      "port": 18765,
+      "path": "/stop",
+      "result": {
+        "stopping": true
+      }
+    },
+    {
+      "port": 18766,
+      "path": "/stop",
+      "result": {
+        "stopping": true
+      }
+    },
+    {
+      "container": "smartlight-task010-20261117-105535",
+      "removed_owned_broker": true
+    }
+  ],
+  "ports": {
+    "1883": "unavailable: [Errno 98] Address already in use",
+    "11883": "unavailable: [Errno 98] Address already in use",
+    "11884": "unavailable: [Errno 98] Address already in use",
+    "19011": "free",
+    "8001": "unavailable: [Errno 98] Address already in use",
+    "5500": "free",
+    "4000": "free",
+    "18765": "unavailable: [Errno 98] Address already in use",
+    "18766": "free",
+    "18767": "free",
+    "19222": "unavailable: [Errno 98] Address already in use"
+  },
+  "source_repos_and_existing_data": "Firmware/backend/dashboard source retained; QA DB remains in /tmp, no live DB deletion",
+  "result": "PASS",
+  "post_shutdown_connect_checks": {
+    "1883": {
+      "connect_ex": 111
+    },
+    "11883": {
+      "connect_ex": 111
+    },
+    "11884": {
+      "connect_ex": 111
+    },
+    "19011": {
+      "connect_ex": 111
+    },
+    "8001": {
+      "connect_ex": 111
+    },
+    "5500": {
+      "connect_ex": 111
+    },
+    "4000": {
+      "connect_ex": 111
+    },
+    "18765": {
+      "connect_ex": 111
+    },
+    "18766": {
+      "connect_ex": 111
+    },
+    "18767": {
+      "connect_ex": 111
+    },
+    "19222": {
+      "connect_ex": 111
+    }
+  },
+  "bind_check_note": "Immediate non-reuse bind can fail due to TCP TIME_WAIT; listener/connect verification is the service shutdown criterion.",
+  "verified_host_ms": 1794891622833.6807
+}

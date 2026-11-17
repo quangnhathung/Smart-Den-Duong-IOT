@@ -1,0 +1,38 @@
+{
+  "old_report_tail_byte_identical": true,
+  "old_checklist_tail_byte_identical": true,
+  "preexisting_evidence_files_checked": 273,
+  "preexisting_evidence_changes": [],
+  "all_repo_heads_unchanged": true,
+  "dashboard_worktree_unchanged": true,
+  "backend_branch": "task/task-010-restart-sync",
+  "firmware_tracked_changes": [
+    "README.md",
+    "docs/reports/checklists.md",
+    "docs/reports/next-task.md",
+    "docs/reports/report.md",
+    "docs/reports/task.md",
+    "docs/techs/architecture.md",
+    "docs/techs/backend.md",
+    "docs/techs/dashboard.md",
+    "docs/techs/simulation.md",
+    "docs/techs/testing.md"
+  ],
+  "firmware_runtime_unchanged": true,
+  "firmware_artifact_hashes_unchanged": true,
+  "backend_source_hashes_match": true,
+  "git_diff_check": "PASS",
+  "current_run_parse": {
+    "json_files": 36,
+    "jsonl_files": 6,
+    "jsonl_records": 16614,
+    "archived_python_ast": "PASS",
+    "archived_js_syntax": "PASS"
+  },
+  "added_links_checked": 57,
+  "missing_added_links": [],
+  "task010_complete4_of4_task011_unstarted": true,
+  "cleanup_confirmed": true,
+  "configured_cli_token_found_in_artifacts": false,
+  "result": "PASS"
+}

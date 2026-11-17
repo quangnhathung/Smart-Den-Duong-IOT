@@ -1,0 +1,5 @@
+{
+  "pid": 168017,
+  "script": "/tmp/task010-completion/controller.py",
+  "reason": "QA proxy corrected from HTTP /commands assumption to actual MQTT /command; no production change"
+}

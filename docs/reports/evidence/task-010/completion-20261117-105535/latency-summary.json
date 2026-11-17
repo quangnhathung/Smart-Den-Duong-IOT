@@ -1,0 +1,222 @@
+{
+  "result": "PASS",
+  "method": "Trusted native LDR keyboard Home/End in Wokwi VSCode; calibrated browser clock intervals; matching real MQTT/API/DOM after two rAF; video corroboration",
+  "source": "latency-trials.json; latency-events-v4.jsonl; events-v2.jsonl",
+  "threshold_ms": 3000,
+  "qualified_samples": 10,
+  "required_samples": 10,
+  "pilot_samples_excluded": 2,
+  "median_interval_ms": [
+    1417.8323974609375,
+    1464.490966796875
+  ],
+  "max_interval_ms": [
+    2353.967041015625,
+    2401.274169921875
+  ],
+  "samples": [
+    {
+      "id": "sample-1",
+      "boot_id": "71a86c73",
+      "seq": "1001",
+      "adc": 4063,
+      "action_host_interval_ms": [
+        1794891125997.2822,
+        1794891126038.5486
+      ],
+      "mqtt_host_ms": 1794891127623.3176,
+      "api_received_at": "2026-11-17T04:52:07.623360Z",
+      "dom_browser_ms": 1794891127923,
+      "latency_interval_ms": [
+        1883.6943359375,
+        1926.0869140625
+      ],
+      "mqtt_api_dom_match": true,
+      "visibility_valid": true
+    },
+    {
+      "id": "sample-2",
+      "boot_id": "71a86c73",
+      "seq": "1004",
+      "adc": 32,
+      "action_host_interval_ms": [
+        1794891129538.3157,
+        1794891129584.4666
+      ],
+      "mqtt_host_ms": 1794891131735.4038,
+      "api_received_at": "2026-11-17T04:52:11.735723Z",
+      "dom_browser_ms": 1794891131939.2,
+      "latency_interval_ms": [
+        2353.967041015625,
+        2401.274169921875
+      ],
+      "mqtt_api_dom_match": true,
+      "visibility_valid": true
+    },
+    {
+      "id": "sample-3",
+      "boot_id": "71a86c73",
+      "seq": "1008",
+      "adc": 4063,
+      "action_host_interval_ms": [
+        1794891133211.4985,
+        1794891133238.4631
+      ],
+      "mqtt_host_ms": 1794891134666.0767,
+      "api_received_at": "2026-11-17T04:52:14.666388Z",
+      "dom_browser_ms": 1794891134953.6,
+      "latency_interval_ms": [
+        1714.507080078125,
+        1742.421142578125
+      ],
+      "mqtt_api_dom_match": true,
+      "visibility_valid": true
+    },
+    {
+      "id": "sample-4",
+      "boot_id": "71a86c73",
+      "seq": "1011",
+      "adc": 32,
+      "action_host_interval_ms": [
+        1794891137274.4465,
+        1794891137321.1033
+      ],
+      "mqtt_host_ms": 1794891138344.2021,
+      "api_received_at": "2026-11-17T04:52:18.344233Z",
+      "dom_browser_ms": 1794891138976.5,
+      "latency_interval_ms": [
+        1654.638916015625,
+        1702.27392578125
+      ],
+      "mqtt_api_dom_match": true,
+      "visibility_valid": true
+    },
+    {
+      "id": "sample-5",
+      "boot_id": "71a86c73",
+      "seq": "1015",
+      "adc": 4063,
+      "action_host_interval_ms": [
+        1794891141104.6187,
+        1794891141110.3037
+      ],
+      "mqtt_host_ms": 1794891141915.2817,
+      "api_received_at": "2026-11-17T04:52:21.915579Z",
+      "dom_browser_ms": 1794891141991.3,
+      "latency_interval_ms": [
+        880.2568359375,
+        887.175537109375
+      ],
+      "mqtt_api_dom_match": true,
+      "visibility_valid": true
+    },
+    {
+      "id": "sample-6",
+      "boot_id": "71a86c73",
+      "seq": "1017",
+      "adc": 32,
+      "action_host_interval_ms": [
+        1794891142467.0183,
+        1794891142480.8882
+      ],
+      "mqtt_host_ms": 1794891142834.5388,
+      "api_received_at": "2026-11-17T04:52:22.834558Z",
+      "dom_browser_ms": 1794891142993.4001,
+      "latency_interval_ms": [
+        511.875244140625,
+        526.707763671875
+      ],
+      "mqtt_api_dom_match": true,
+      "visibility_valid": true
+    },
+    {
+      "id": "sample-7",
+      "boot_id": "71a86c73",
+      "seq": "1020",
+      "adc": 4063,
+      "action_host_interval_ms": [
+        1794891144717.0964,
+        1794891144762.2837
+      ],
+      "mqtt_host_ms": 1794891144930.3225,
+      "api_received_at": "2026-11-17T04:52:24.930335Z",
+      "dom_browser_ms": 1794891145005.2,
+      "latency_interval_ms": [
+        242.09423828125,
+        288.589111328125
+      ],
+      "mqtt_api_dom_match": true,
+      "visibility_valid": true
+    },
+    {
+      "id": "sample-8",
+      "boot_id": "71a86c73",
+      "seq": "1024",
+      "adc": 32,
+      "action_host_interval_ms": [
+        1794891146363.124,
+        1794891146410.9036
+      ],
+      "mqtt_host_ms": 1794891146897.6118,
+      "api_received_at": "2026-11-17T04:52:26.897639Z",
+      "dom_browser_ms": 1794891147016.2,
+      "latency_interval_ms": [
+        604.519775390625,
+        653.3603515625
+      ],
+      "mqtt_api_dom_match": true,
+      "visibility_valid": true
+    },
+    {
+      "id": "sample-9",
+      "boot_id": "71a86c73",
+      "seq": "1071",
+      "adc": 4063,
+      "action_host_interval_ms": [
+        1794891227765.976,
+        1794891227814.017
+      ],
+      "mqtt_host_ms": 1794891229206.7678,
+      "api_received_at": "2026-11-17T04:53:49.206776Z",
+      "dom_browser_ms": 1794891229474.4001,
+      "latency_interval_ms": [
+        1659.768798828125,
+        1708.84912109375
+      ],
+      "mqtt_api_dom_match": true,
+      "visibility_valid": true
+    },
+    {
+      "id": "sample-10",
+      "boot_id": "71a86c73",
+      "seq": "1074",
+      "adc": 32,
+      "action_host_interval_ms": [
+        1794891232271.4158,
+        1794891232316.428
+      ],
+      "mqtt_host_ms": 1794891232920.576,
+      "api_received_at": "2026-11-17T04:53:52.920851Z",
+      "dom_browser_ms": 1794891233498,
+      "latency_interval_ms": [
+        1181.02587890625,
+        1226.7080078125
+      ],
+      "mqtt_api_dom_match": true,
+      "visibility_valid": true
+    }
+  ],
+  "dashboard_uncaught_exceptions": 0,
+  "conditions": {
+    "sensor_levels_lux": [
+      0.1,
+      100000
+    ],
+    "sensor_level_note": "Fallback native Home/End extrema give discrete observable actions; source/timers/thresholds unchanged",
+    "simulation": "one ESP32 node_01, original esp32dev BIN/ELF; VSCode display approximately99–100% speed",
+    "viewport": "two owned windows960x1040 side-by-side; actual dashboard viewport; LDR visible throughout",
+    "clocks": "Host wall clock with browser offset bounds sampled before/after each trial; never subtract node uptime from wall time",
+    "serial_note": "Bounded Serial observer corroborates outage/AUTO; latency origin is trusted sensor UI action, not Serial receipt",
+    "orchestration_note": "Foreground driver exited143 after eight samples; persistent controller retained all; resumed only samples9/10 with unchanged predeclared delays. No sample repeated or omitted."
+  }
+}

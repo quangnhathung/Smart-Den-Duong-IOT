@@ -2,7 +2,13 @@
 
 - Trạng thái: Chưa bắt đầu
 - Tiến độ: 0/0 tiêu chí; chưa có đặc tả nghiệm thu
-- Cập nhật: 2026-11-17T09:45:17+07:00
+- Cập nhật: 2026-11-17T12:05:29+07:00
+
+## Trạng thái sau nghiệm thu TASK-010 — 2026-11-17T12:05:29+07:00
+
+TASK-010 đã hoàn tất **4/4 nhóm nghiệm thu một node**; UI terminal, pending/open experiment qua restart, outage/reconnect/no-replay/AUTO offline và10 mẫu sensor→dashboard đã đủ bằng chứng. Lỗi race session sau chờ queue được sửa trên nhánh backend,72 test/Ruff PASS. [Hồ sơ cuối](evidence/task-010/completion-20261117-105535/README.md). Những ghi chú PENDING/2/4 trước đây phía dưới là lịch sử, giữ nguyên để truy vết.
+
+TASK-011 vẫn **Chưa bắt đầu, 0/0 tiêu chí**, chờ đặc tả chính thức. Điều kiện triển khai tiếp: mục tiêu/phạm vi/đầu ra/tiêu chí do người dùng giao; đọc hồ sơ TASK-010 và thống nhất source/config giữa các máy. Ba node/stability30phút và EX-series còn trong kế hoạch tổng thể, không tự ánh xạ thành TASK-011. Không tự thực hiện hoặc commit/push/merge.
 
 ## Đối chiếu sau pull — 2026-11-17T09:45:17+07:00
 

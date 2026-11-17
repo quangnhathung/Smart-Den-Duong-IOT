@@ -1,5 +1,12 @@
 # Backend/API P4/A4 — TASK-008 và bổ sung TASK-009
 
+## TASK-010 — sửa race khi nhận availability sau restart/reconnect
+
+Hoàn tất 2026-11-17T12:05:29+07:00. Service đồng bộ transport connected/session ngay sau Queue.get và trước dispatch, bổ sung kiểm ở đầu vòng hiện có. Nếu readiness đổi khi actor đang chờ queue, retained ONLINE đầu tiên được xử lý theo session mới; event session cũ vẫn bị loại. Không thay schema/MQTT/API hoặc khôi phục freshness từ dữ liệu cũ. Cần telemetry mới hợp lệ trước khi can_command=true.
+
+Lỗi được phát hiện live: node cùng boot vẫn gửi nhưng latest bị kẹt UNCONFIRMED_BOOT sau restart. Hồi quy4 ca có2 FAIL trước sửa; sau sửa72 Pytest/Ruff PASS/1 warning TestClient cũ. Live sau sửa: pending→TIMEOUT/BACKEND_RESTART, node fresh cùng boot, phiên mở phục hồi sau reload; broker outage/reconnect/no-replay cũng đạt. Nhánh backend `task/task-010-restart-sync`, không commit/push. [Bằng chứng và giới hạn](../reports/evidence/task-010/completion-20261117-105535/README.md).
+
+
 TASK-010 trên máy Windows hiện dùng API127.0.0.1:8001 theo lựa chọn người dùng; không đổi cấu hình mặc định8000 của Backend. Dashboard nhánh task/010-live-integration gọi8001. [Bằng chứng một node live](../reports/evidence/task-010/run-20261116-180648/README.md) đã có API/MQTT/SQLite/command/CSV/stats; [restart giữ dữ liệu và gap](../reports/evidence/task-010/run-20261116-190549/README.md) đã đối chiếu PASS sau PID18828→43632. Timeout/no-replay cho lệnh đang chờ, phiên mở và các phần còn thiếu ghi riêng PENDING. Không chạy init_db khi Backend đang hoạt động, không xóa SQLite để restart.
 
 Bổ sung [TIMEOUT/ACK muộn qua proxy local](../reports/evidence/task-010/run-20261116-193157/README.md) đã PASS với ACK firmware thật, không sửa schema/thuật toán; một retry dự kiến/attempts2, ACK muộn không đổi TIMEOUT. Backend tạm32248 dùng1884, sau test đã khôi phục14144 dùng1883/8001/một worker, proxy dừng; không giữ biến hệ thống hoặc .env thay đổi. Broker outage/no-replay cho lệnh chờ và phiên mở vẫn cần ca riêng.
