@@ -1,5 +1,14 @@
 # Kiểm tra dự án — firmware, backend và dashboard
 
+## Rà soát hồ sơ sau pull — 2026-11-17T09:45:17+07:00
+
+Đối chiếu main firmware `7e8f5c4` (PR #3) với file chốt TASK-010: nhóm 1 và 3 PASS, nhóm 2 và 4 PENDING, tổng 2/4 nhóm nghiệm thu. Kiểm tra mới tại máy Linux: 112/112 tệp trong 4 manifest SHA256 khớp, 70/70 JSON bằng chứng đọc hợp lệ. Không mở DB hoặc kết nối MQTT/API, không chạy lại build/host/pytest/Node/live đã được xác nhận trước đó. [Kết quả và phạm vi kiểm tra](../reports/evidence/task-010/review-20261117-094517/README.md).
+
+Command → ACK: 10 lượt cũ, median 686,217 ms/max 1002,001 ms. Cảm biến → dashboard: 5 lượt đã thử, 0/10 mẫu đủ điều kiện; các lượt 1–5 INCOMPLETE và 6–10 chưa chạy. Không tính MQTT → render, HTTP RTT hoặc command → ACK thay cho cảm biến → render. Không dùng độ trễ khoảng 203s ở lượt 5 để kết luận latency sản phẩm bình thường vì điều kiện đo bị nhiễu.
+
+Còn kiểm UI REJECTED/TIMEOUT, broker outage/reconnect/no-replay/AUTO offline và latency cảm biến → dashboard. Những kết quả TIMEOUT/ACK muộn, OPEN_LOAD, restart/gap đã PASS ở các lượt bổ sung được giữ; các đoạn PENDING cũ bên dưới là lịch sử tại thời điểm từng lượt, không phủ định kết quả bổ sung. Một số ghi chú bị mất dấu, đối chiếu bản tổng hợp có dấu và JSON gốc, không viết lại bằng chứng.
+
+
 ## TASK-010 — kết quả live một node trên Windows
 
 [Lượt proxy ACK thật run-20261116-193157](../reports/evidence/task-010/run-20261116-193157/README.md) PASS: một POST AUTO, command0d8f20f5…, đúng1 retry2,041s; TIMEOUT quan sát10,089s;2 ACK thả ở mốc12s nguyên bytes và lưu LATE_OR_DUPLICATE, API/DB cuối vẫn TIMEOUT/attempts2. Preflight2 telemetry qua1884 và không replay sau khôi phục PASS. Backend đã vềMQTT1883/API8001/PID14144/một worker, healthOK, người dùng xác nhận Dashboard ONLINE/NIGHT25/dữ liệu mới19:44:21. Proxy/recorder dừng, DB/PASS cũ giữ nguyên. Nhóm2 vẫn còn broker outage/reconnect/lệnh chờ/AUTO offline/UI terminal, nhóm4 còn sensor→Dashboard10 lượt; không chạy lại bài đã PASS.

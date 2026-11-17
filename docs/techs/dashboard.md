@@ -1,5 +1,12 @@
 # Dashboard P5/A5 — TASK-009
 
+## Đối chiếu môi trường sau pull — 2026-11-17T09:45:17+07:00
+
+Repo dashboard local ở main `6cb402b`, sạch trước lượt rà soát; config.js dùng `http://127.0.0.1:8000`, chưa có `tests/task010-live-latency.html`. Bằng chứng TASK-010 trên Windows dùng API8001, Live Server5500 và bộ ghi trong tests/. Firmware main đã có bằng chứng mới không chứng minh repo dashboard ở máy khác đã đồng bộ source/cấu hình. Đây là khác biệt môi trường cần đối chiếu trước lượt live tiếp; chưa xác định lỗi chức năng và không tự đổi cổng hoặc pull repo khác.
+
+[Kết quả rà soát](../reports/evidence/task-010/review-20261117-094517/README.md) giữ TASK-010 ở 2/4 nhóm. Kết quả UI fixture TASK-009 và các xác nhận Dashboard live TASK-010 có nguồn riêng; chưa chốt UI trạng thái cuối REJECTED/TIMEOUT hoặc cảm biến → dashboard đủ 10 mẫu. Lượt này chỉ cập nhật tài liệu, không sửa giao diện nên không có thiết kế hoặc kiểm thử browser mới.
+
+
 ## Tham chiếu SRS
 
 SRS7.3/8/9/12, TC17–22/26 và các ca UI/clock. Người dùng chốt HTML/CSS/JavaScript thuần, VS Code Live Server, theme sáng và API read tối thiểu; thay phần React/TypeScript/Vite trong SRS theo yêu cầu mới. Không thay MQTTv1 hoặc logic điều khiển/năng lượng. Kết quả task là code/test/hướng dẫn A5; chưa nghiệm thu tích hợp live.
