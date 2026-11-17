@@ -1,0 +1,102 @@
+{
+  "verified_at": "2026-11-17T13:24:37+07:00",
+  "scope": "TASK-011 specification only; implementation unstarted",
+  "task011_status": "Chưa bắt đầu",
+  "acceptance_progress": "0/4",
+  "checks": {
+    "previous_specification_preserved_byte_for_byte": true,
+    "report_old_content_preserved_byte_for_byte": true,
+    "task.md_unchanged": true,
+    "checklists.md_unchanged": true,
+    "task011_unstarted_zero_of_four": true,
+    "four_unchecked_groups": true,
+    "task010_remains_completed_four_of_four": true,
+    "all_new_internal_links_exist": true,
+    "tracked_changes_only_specification_and_report": true,
+    "untracked_changes_only_specification_evidence": true,
+    "git_diff_check": true,
+    "new_documents_utf8_lf_with_final_newline": true,
+    "new_documents_have_no_trailing_whitespace": true
+  },
+  "old_specification_sha256": "8c960664882bb95b16e1ba05ed4066052bfba5e1db9f6dbcd875a27e076af565",
+  "archived_specification_sha256": "8c960664882bb95b16e1ba05ed4066052bfba5e1db9f6dbcd875a27e076af565",
+  "old_report_sha256": "8affb2a82a1c56c7045dbc8f44a52e5445e6eac88eff9d046e1641feff83c882",
+  "preserved_report_suffix_sha256": "8affb2a82a1c56c7045dbc8f44a52e5445e6eac88eff9d046e1641feff83c882",
+  "new_report_prefix_bytes": 3176,
+  "unchanged_original_tracked_file_count": 440,
+  "changed_tracked_paths": [
+    "docs/reports/next-task.md",
+    "docs/reports/report.md"
+  ],
+  "new_paths": [
+    "docs/reports/evidence/task-011/specification-20261117-131925/README.md",
+    "docs/reports/evidence/task-011/specification-20261117-131925/next-task-before.md",
+    "docs/reports/evidence/task-011/specification-20261117-131925/verification.json"
+  ],
+  "links": [
+    {
+      "source": "docs/reports/next-task.md",
+      "target": "task.md",
+      "exists": true
+    },
+    {
+      "source": "docs/reports/next-task.md",
+      "target": "evidence/task-010/completion-20261117-105535/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/reports/next-task.md",
+      "target": "evidence/task-011/specification-20261117-131925/next-task-before.md",
+      "exists": true
+    },
+    {
+      "source": "docs/reports/next-task.md",
+      "target": "../srs.md",
+      "exists": true
+    },
+    {
+      "source": "docs/reports/evidence/task-011/specification-20261117-131925/README.md",
+      "target": "../../../next-task.md",
+      "exists": true
+    },
+    {
+      "source": "docs/reports/evidence/task-011/specification-20261117-131925/README.md",
+      "target": "next-task-before.md",
+      "exists": true
+    },
+    {
+      "source": "docs/reports/evidence/task-011/specification-20261117-131925/README.md",
+      "target": "verification.json",
+      "exists": true
+    },
+    {
+      "source": "docs/reports/report.md",
+      "target": "next-task.md",
+      "exists": true
+    },
+    {
+      "source": "docs/reports/report.md",
+      "target": "evidence/task-011/specification-20261117-131925/next-task-before.md",
+      "exists": true
+    },
+    {
+      "source": "docs/reports/report.md",
+      "target": "evidence/task-011/specification-20261117-131925/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/reports/report.md",
+      "target": "evidence/task-011/specification-20261117-131925/verification.json",
+      "exists": true
+    }
+  ],
+  "diff_check_output": "",
+  "not_run": [
+    "host tests",
+    "firmware build",
+    "Wokwi live",
+    "backend/dashboard integration",
+    "30-minute stability"
+  ],
+  "archive_link_context": "Relative links inside next-task-before.md retain original docs/reports/next-task.md context; archive bytes are intentionally unchanged."
+}
