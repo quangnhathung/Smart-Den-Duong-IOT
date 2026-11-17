@@ -2,7 +2,7 @@
 
 ## TASK-011 — Kiểm tích hợp ba node, không đổi API/schema
 
-Backend hiện có nhận đủ node_01/02/03; TASK-011 dùng source tại nhánh có bản sửa session sync của TASK-010, giữ nguyên mọi thay đổi người dùng. Không sửa code backend hoặc migration. Trên MQTT/Wokwi live: ba định danh cùng thu thập, lệnh đúng đích, tắt một node không chặn hai node khác, broker reconnect không replay command cũ; restart backend QA một worker giữ hash telemetry cũ và cả ba boot. Cửa sổ ổn định 30 phút cuối đang được theo dõi, chưa coi hoàn thành trước khi đủ thời lượng. [Hồ sơ](../reports/evidence/task-011/run-20261117-135233/backend-restart.json).
+Backend hiện có nhận đủ node_01/02/03; TASK-011 dùng source tại nhánh có bản sửa session sync của TASK-010, giữ nguyên mọi thay đổi người dùng. Không sửa code backend hoặc migration. Trên MQTT/Wokwi live: ba định danh cùng thu thập, lệnh đúng đích, tắt một node không chặn hai node khác, broker reconnect không replay command cũ; restart backend QA một worker giữ hash telemetry cũ và cả ba boot. Cửa sổ cuối1800s đã được audit:5360 raw telemetry khớp SQLite ACCEPTED, không thiếu sequence/đổi boot, continuity và PID/start ticks backend giữ nguyên; health cuối dropped_events0, quick_check=ok. HTTP/resource probe chỉ672 mẫu rồi SIGTERM143 nên vẫn INCOMPLETE; không coi probe là đủ30 phút. [Audit](../reports/evidence/task-011/run-20261117-135233/stability-02/wire-audit.json), [giới hạn](../reports/evidence/task-011/run-20261117-135233/README.md). [Hồ sơ](../reports/evidence/task-011/run-20261117-135233/backend-restart.json).
 
 
 ## TASK-010 — sửa race khi nhận availability sau restart/reconnect

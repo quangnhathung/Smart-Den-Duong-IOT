@@ -1,6 +1,6 @@
 # Firmware đèn đường thông minh
 
-ESP32 esp32dev, Arduino trên PlatformIO. Firmware hiện có controller P2 và MQTT nghiệp vụ A3 dùng chung cho ba định danh: telemetry, command AUTO/MANUAL, ACK/cache, availability/LWT và reconnect; giữ cảm biến, hold/dimming/fault, Serial và diagnostics. TASK-007 bàn giao code/test/build/hướng dẫn; backend/API A4 và dashboard HTML/CSS/JS A5 chạy Live Server nằm ở repo cùng cấp. TASK-010 đã hoàn tất4/4 tích hợp live một node, gồm outage/reconnect/restart và10 mẫu cảm biến→dashboard dưới3s. TASK-011 đang nghiệm thu live ba node; bộ thực nghiệm/bàn giao cuối chưa thực hiện.
+ESP32 esp32dev, Arduino trên PlatformIO. Firmware hiện có controller P2 và MQTT nghiệp vụ A3 dùng chung cho ba định danh: telemetry, command AUTO/MANUAL, ACK/cache, availability/LWT và reconnect; giữ cảm biến, hold/dimming/fault, Serial và diagnostics. TASK-007 bàn giao code/test/build/hướng dẫn; backend/API A4 và dashboard HTML/CSS/JS A5 chạy Live Server nằm ở repo cùng cấp. TASK-010 đã hoàn tất4/4 tích hợp live một node, gồm outage/reconnect/restart và10 mẫu cảm biến→dashboard dưới3s. TASK-011 hoàn thành4/4 nghiệm thu live ba node và1800s monotonic; [hồ sơ và giới hạn](docs/reports/evidence/task-011/run-20261117-135233/README.md). Bộ thực nghiệm/bàn giao cuối chưa thực hiện.
 
 - [Chạy Wokwi và hướng dẫn A3](docs/techs/simulation.md)
 - [Pin map mô phỏng](docs/techs/hardware.md)

@@ -6,7 +6,7 @@
 
 Sửa lỗi trễ raw telemetry khi tích hợp ba node: MqttMailbox tăng generation khi ADC/khoảng cách hoặc PIR đầu vào của motion thay đổi, ngoài các thay đổi control hiện có. So sánh bỏ qua bộ đếm lấy mẫu và chuẩn hóa invalid distance thành null như serializer. Connectivity giữ rate-limit 200ms và heartbeat định kỳ 2s, luôn gửi snapshot mới nhất; không sửa thuật toán đèn. Ca tái hiện raw ADC đổi mà generation giữ nguyên đã FAIL trước sửa, sau sửa ma trận host ba node PASS. Các kết quả live/ổn định trước bản sửa được giữ riêng, không dùng thay nghiệm thu firmware mới.
 
-11 lượt host (protocol/app/MQTT × 3; controller/sensors × 1), 2 compile-fail và ba build đã PASS; kiểm tra live đang tiếp tục, chưa nghiệm thu toàn TASK-011. [Hồ sơ](../reports/evidence/task-011/run-20261117-135233/task-011-accepted.md). Tham chiếu SRS FR06/07/08/12, P6/A6, TC17/23/25.
+11 lượt host (protocol/app/MQTT × 3; controller/sensors × 1), 2 compile-fail và ba build cuối PASS. TASK-011 hoàn thành4/4:30 lệnh đúng đích,30 sensor→DOM dưới3s, lỗi/phục hồi và1800s đồng thời được audit raw MQTT/SQLite. [Hồ sơ và giới hạn](../reports/evidence/task-011/run-20261117-135233/README.md). Tham chiếu SRS FR06/07/08/12, P6/A6, TC17/23/25.
 
 
 ## Phạm vi và tham chiếu

@@ -8,7 +8,7 @@ Cả ba ESP32 trong diagram.json dùng `cpuFrequency: "4"`: giới hạn tốc �
 
 Mở riêng `simulations/node_01`, `simulations/node_02`, `simulations/node_03` trong ba cửa sổ VS Code rồi Wokwi: Start Simulator. Sơ đồ phần cứng giống nhau, source C++ dùng chung; cổng RFC2217 lần lượt 4000/4001/4002. Tại gốc firmware cũng có thể dùng Wokwi: Select Config File để chọn đúng toml trong từng cửa sổ. Không sửa launch.json do PlatformIO sinh. Giữ biến thể timeout node_01 làm hồi quy riêng.
 
-Bảo đảm broker QA mà node truy cập được qua host.wokwi.internal:1883, backend một worker/SQLite riêng và Dashboard Live Server5500. Không chiếm cổng hoặc dừng dịch vụ không thuộc QA. Máy cần đủ tài nguyên cho ba mô phỏng; kiểm tốc độ mô phỏng và thời gian nhận thực, không sửa ngưỡng 3s để làm kiểm thử đạt. [Đặc tả được giao](../reports/evidence/task-011/run-20261117-135233/task-011-accepted.md); kết quả live/giới hạn chốt trong báo cáo lượt này. Tham chiếu SRS P6/A6, TC17/21–25.
+Bảo đảm broker QA mà node truy cập được qua host.wokwi.internal:1883, backend một worker/SQLite riêng và Dashboard Live Server5500. Không chiếm cổng hoặc dừng dịch vụ không thuộc QA. Máy cần đủ tài nguyên cho ba mô phỏng; kiểm tốc độ mô phỏng và thời gian nhận thực, không sửa ngưỡng 3s để làm kiểm thử đạt. [Đặc tả được giao](../reports/evidence/task-011/run-20261117-135233/task-011-accepted.md); TASK-011 đã hoàn thành4/4, gồm1800s đồng thời qua audit raw MQTT/SQLite. [Kết quả live/giới hạn/cleanup](../reports/evidence/task-011/run-20261117-135233/README.md) nêu riêng probe HTTP bị dừng sớm, không suy thành hiệu năng MCU thật hoặc EX-series. Tham chiếu SRS P6/A6, TC17/21–25.
 
 
 ## TASK-010 — môi trường nghiệm thu Linux đã hoàn tất
