@@ -1,3 +1,15 @@
+# TASK-011 — Hoàn thiện ba node và nghiệm thu ổn định30 phút
+
+- Hoàn thành: 2026-11-17T16:32:01+07:00; **4/4 nhóm nghiệm thu**.
+- [x] Chung source,3 định danh/environment/sơ đồ;20 Python test,11 lượt host +2 compile-fail,3 build, artifact manifest và identity live.
+- [x]3 node cùng MQTT/API/DOM;30 lệnh đúng đích, cảm biến cách ly và MANUAL timeout theo clock node.
+- [x] OPEN_LOAD/phục hồi, tắt riêng node, AUTO offline/reconnect/no-replay, restart backend;30/30 sensor→DOM dưới3s,10/node, max cận trên1272,235ms.
+- [x] Một cửa sổ1800s monotonic,5360 raw telemetry khớp SQLite ACCEPTED, boot/seq/collector liên tục, dropped_events0; hồ sơ/techs/cleanup hoàn tất.
+
+[Hồ sơ nghiệm thu](evidence/task-011/run-20261117-135233/README.md). HTTP/resource probe bị SIGTERM143 trước hết cửa sổ vẫn **INCOMPLETE**; nghiệm thu30 phút dựa trên audit độc lập raw MQTT/SQLite bao phủ nguyên cửa sổ đã định trước, backend không đổi PID. Không tuyên bố giám sát HTTP/tài nguyên/dashboard liên tục đủ30 phút. Giữ FAIL/INCOMPLETE và lỗi parser nhãn100k trong raw. TASK-012 mới là đề xuất; chưa EX-series/điện năng đại diện/bàn giao cuối/phần cứng thật. Các mục dưới giữ nguyên lịch sử.
+
+---
+
 # TASK-010 — Tích hợp live một node MQTT–backend–dashboard
 
 - Hoàn thành: 2026-11-17T12:05:29+07:00; **4/4 nhóm nghiệm thu**. Kết hợp PASS Windows được bảo toàn với lượt Linux bổ sung.

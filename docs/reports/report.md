@@ -1,3 +1,32 @@
+## 2026-11-17T16:32:01+07:00 — TASK-011 — Hoàn thiện ba node và nghiệm thu30 phút
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 4/4 nhóm nghiệm thu
+
+### Đã thực hiện
+
+Tham số hóa định danh1/2/3 từ một source, thêm ba environment/sơ đồ/cổng Serial, công cụ prepare kiểm artifact/freshness/hash và command chọn node. Kiểm live phát hiện raw cảm biến chờ control/periodic làm trễ; sửa đánh dấu snapshot khi sensor đổi, giữ coalescing/rate-limit200ms/periodic2s. Không đổi controller/timer/pin map/schema, source backend/dashboard hoặc SRS. Ba mô phỏng cap4MHz; dashboard QA dùng HTML/CSS/JS và engine VS Code Live Server5500, API8001/SQLite riêng.
+
+### Kiểm tra và kết quả
+
+PASS20 Python test,11 lượt host +2 compile-fail đúng kỳ vọng,3 build firmware và format9 tệp C++. Live PASS30 lệnh đúng đích, cảm biến cách ly/MANUAL timeout, OPEN_LOAD, tắt node02, AUTO offline/reconnect/no-replay, restart backend giữ hash telemetry cũ.30/30 mẫu sensor→dashboard cuối (10/node) dưới3s, max cận trên1272,235ms; command→ACK có đủ10/node, số liệu riêng trong hồ sơ.
+
+PASS một cửa sổ1800 giây monotonic **15:36:05–16:06:05+07:00** ngày2026-11-17:1561/2216/1583 telemetry của ba node, tổng5360, không thiếu sequence/đổi boot, raw recorder không reconnect. Toàn bộ payload khớp SQLite ACCEPTED, continuity giữ nguyên, backend cùng PID/start ticks, health cuối dropped_events0, quick_check=ok. Cleanup PASS, các cổng QA đã đóng, dữ liệu/backup ngoài Git được giữ. [Bằng chứng, giới hạn và manifest](evidence/task-011/run-20261117-135233/README.md).
+
+### Vướng mắc
+
+Lỗi sensor telemetry chậm có ca red và FAIL live trước sửa. Công cụ QA đọc nhãn100k thành100 khiến raw trials End bị gắn INCOMPLETE. HTTP/resource probe nhận SIGTERM143 tại1346,506s/672 mẫu, nguyên nhân chính xác chưa xác định; stability-01 dừng trước sửa. Một số thao tác setup/recorder/cleanup gặp lỗi, có log tại qa-issues.json. Không còn vướng mắc chặn TASK-011 sau xử lý; các giới hạn quan sát vẫn được công bố.
+
+### Cách giải quyết
+
+Sửa coalescing, hồi quy/build cả3 và chạy lại trên firmware cuối; giữ FAIL cũ. Audit độc lập sửa riêng cách hiểu đơn vị k=1000 từ raw đã lưu, giữ timestamp/status gốc và đúng10 mẫu chính/node. stability-01 góp0 giây. Probe HTTP vẫn INCOMPLETE; audit raw MQTT/SQLite độc lập kiểm toàn bộ cửa sổ1800s đã định trước, không ghép đoạn hoặc tuyên bố probe đầy đủ. Không có bằng chứng HTTP/tài nguyên/dashboard liên tục trong phần probe thiếu. Cleanup ban đầu còn listener18773 đã xác minh đúng tiến trình QA rồi dừng, giữ cả kết quả ban đầu và cuối.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật README, architecture/firmware/MQTT/simulation/testing/backend/dashboard, task/checklist và đề xuất TASK-012 thực nghiệm/bàn giao cuối; chưa chạy TASK-012. Bảo toàn nguyên byte báo cáo/checklist cũ, TASK-010, đặc tả trước và source/thay đổi người dùng ở các repo anh em. Bước đóng hồ sơ không commit/push/merge. Chưa nghiệm thu EX-series, điện năng đại diện hoặc phần cứng thật.
+
+---
+
 ## 2026-11-17T13:24:37+07:00 — TASK-011 — Chốt đặc tả trước triển khai
 
 - Trạng thái TASK-011: Chưa bắt đầu; 0/4 nhóm nghiệm thu triển khai.
