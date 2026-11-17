@@ -10,9 +10,9 @@
 #include <esp_timer.h>
 
 namespace {
-constexpr char PING_TOPIC[] = "huit/nhom7/smartlight/v1/node_01/diagnostics/ping";
-constexpr char PONG_TOPIC[] = "huit/nhom7/smartlight/v1/node_01/diagnostics/pong";
-constexpr char HEARTBEAT_TOPIC[] = "huit/nhom7/smartlight/v1/node_01/diagnostics/heartbeat";
+using NodeIdentity::HEARTBEAT_TOPIC;
+using NodeIdentity::PING_TOPIC;
+using NodeIdentity::PONG_TOPIC;
 std::atomic<bool> mqttConnected{false};
 std::atomic<uint32_t> disconnectCount{0};
 WiFiClient networkClient;
@@ -168,7 +168,7 @@ void networkStep() {
       Serial.printf("uptime_ms=%lu WiFi reconnect started=%d wifi=%d\r\n", static_cast<unsigned long>(millis()), started, WiFi.status());
     } else if (mqttReady) {
       Serial.printf("uptime_ms=%lu MQTT connect attempt retry_ms=%lu\r\n", static_cast<unsigned long>(nowMs), static_cast<unsigned long>(retryMs));
-      if (mqtt.connect("smartlight-node_01-p0", nullptr, nullptr, MqttProtocol::AVAILABILITY_TOPIC, 0, true, willPayload, true) &&
+      if (mqtt.connect(NodeIdentity::CLIENT_ID, nullptr, nullptr, MqttProtocol::AVAILABILITY_TOPIC, 0, true, willPayload, true) &&
           mqtt.subscribe(PING_TOPIC, 1) && mqtt.subscribe(MqttProtocol::COMMAND_TOPIC, 1)) {
         wasConnected = true;
         mqttConnected.store(true);

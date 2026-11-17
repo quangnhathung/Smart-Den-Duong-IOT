@@ -1,16 +1,17 @@
 #pragma once
 
 #include "ControlTypes.h"
+#include "NodeIdentity.h"
 #include "SensorReader.h"
 #include <stddef.h>
 #include <stdint.h>
 
 namespace MqttProtocol {
-constexpr char NODE_ID[] = "node_01";
-constexpr char COMMAND_TOPIC[] = "huit/nhom7/smartlight/v1/node_01/command";
-constexpr char TELEMETRY_TOPIC[] = "huit/nhom7/smartlight/v1/node_01/telemetry";
-constexpr char ACK_TOPIC[] = "huit/nhom7/smartlight/v1/node_01/ack";
-constexpr char AVAILABILITY_TOPIC[] = "huit/nhom7/smartlight/v1/node_01/availability";
+using NodeIdentity::ACK_TOPIC;
+using NodeIdentity::AVAILABILITY_TOPIC;
+using NodeIdentity::COMMAND_TOPIC;
+using NodeIdentity::NODE_ID;
+using NodeIdentity::TELEMETRY_TOPIC;
 constexpr size_t PACKET_CAPACITY = 2048;
 
 enum class CommandReason { None, InvalidCommand, BootMismatch, Expired };
@@ -43,6 +44,7 @@ size_t encodeTelemetry(const TelemetrySnapshot &snapshot, const char *bootId, ui
 size_t encodeResult(const CommandResult &result, const char *bootId, char *output, size_t capacity);
 size_t encodeAvailability(const char *bootId, bool online, char *output, size_t capacity);
 bool controlChanged(const ControlState &left, const ControlState &right);
+bool sensorsChanged(const SensorSnapshot &left, const SensorSnapshot &right);
 
 class CommandProcessor {
 public:

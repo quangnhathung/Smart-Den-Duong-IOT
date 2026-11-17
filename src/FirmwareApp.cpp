@@ -84,7 +84,7 @@ void logState(uint32_t nowMs, const ControlState &state) {
 
 void setupFirmware() {
   Serial.begin(115200);
-  Serial.printf("P3/A3 lighting control node_01 Arduino=%s; Serial: AUTO / MANUAL 0..100\r\n", ESP_ARDUINO_VERSION_STR);
+  Serial.printf("P3/A3 lighting control %s Arduino=%s; Serial: AUTO / MANUAL 0..100\r\n", MqttProtocol::NODE_ID, ESP_ARDUINO_VERSION_STR);
   setupSensors();
   controller.reset(millis());
   lastPirMotion = getSensorSnapshot().pirMotion;
