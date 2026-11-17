@@ -2,7 +2,15 @@
 
 - Trạng thái: Chưa bắt đầu
 - Tiến độ: 0/0 tiêu chí; chưa có đặc tả nghiệm thu
-- Cập nhật: 2026-11-16T19:46:02+07:00
+- Cập nhật: 2026-11-17T09:45:17+07:00
+
+## Đối chiếu sau pull — 2026-11-17T09:45:17+07:00
+
+TASK-011 tiếp tục Chưa bắt đầu, 0/0 tiêu chí; chờ đặc tả chính thức. TASK-010 vẫn Đang thực hiện, 2/4 nhóm theo final-status.json: luồng một node và dữ liệu/restart/CSV/gap PASS; còn UI trạng thái lệnh cuối, broker outage/reconnect/no-replay/AUTO offline và cảm biến → dashboard đủ 10 mẫu. Năm lượt cảm biến đã thử đều INCOMPLETE, chưa có mẫu đủ điều kiện; không hiểu là chỉ cần thêm năm lượt. Command → ACK đã có 10 lượt PASS phép đo, giữ kết quả cũ.
+
+Bước cần chuẩn bị khi được giao tiếp: phương pháp đo cảm biến/render ổn định, xác định baseline/boot/seq/timestamp/visibility và sai số; phương án cô lập kết nối MQTT của node để kiểm offline mà không dừng broker dùng chung; đối chiếu cấu hình/source của repo dashboard trước khi dùng bộ ghi trên máy live. Đây là phụ thuộc cho TASK-010, không tự ánh xạ thành TASK-011 hoặc chạy thêm live. Ba node/stability30phút và EX-series vẫn chưa nghiệm thu.
+
+[Kết quả rà soát và khác biệt môi trường](evidence/task-010/review-20261117-094517/README.md). Các ghi chú cũ bên dưới giữ nguyên để truy vết.
 
 ## Mô tả và phạm vi
 

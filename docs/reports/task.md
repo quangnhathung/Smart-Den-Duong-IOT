@@ -2,7 +2,19 @@
 
 - Trạng thái: Đang thực hiện
 - Tiến độ: 2/4 nhóm nghiệm thu live; nhóm 2 và 4 còn tiêu chí PENDING
-- Cập nhật: 2026-11-16T19:53:07+07:00
+- Cập nhật: 2026-11-17T09:45:17+07:00
+
+## Rà soát flow report sau pull — 2026-11-17T09:45:17+07:00
+
+- Trạng thái lượt rà soát: Hoàn tất 3/3 tiêu chí tài liệu; tiếp tục hồ sơ TASK-010, không mở TASK-011.
+- Phạm vi: đối chiếu bản main đã pull, số nhóm nghiệm thu, JSON/manifest bằng chứng và cấu hình repo tại máy này; cập nhật báo cáo và tài liệu tổng hợp. Tham chiếu SRS10.2/12 và quy trình development.md.
+- Tiêu chí hoàn tất lượt tài liệu: (1) trạng thái có nguồn và phân biệt kiểm tra mới với live cũ; (2) report/task/checklist/next-task và techs nhất quán; (3) lịch sử report và bằng chứng cũ giữ nguyên, liên kết và diff hợp lệ.
+- TASK-010 vẫn Đang thực hiện, 2/4 nhóm nghiệm thu live. Không chạy lại các ca live đã PASS, đo thêm latency hoặc thay đổi dịch vụ trong lượt này.
+- Kiểm tra sau pull: firmware main `7e8f5c4` chứa PR #3; cả ba repo sạch trước lượt tài liệu. 112 tệp của 4 manifest SHA256 khớp; 70 JSON bằng chứng hợp lệ. Đây là kiểm tra mới trên file đã pull, không phải chạy lại live.
+- Nguồn chốt: `run-20261116-195307/final-status.json`. Nhóm 1 và 3 PASS; nhóm 2 còn UI trạng thái lệnh cuối, broker outage/reconnect/no-replay và AUTO offline; nhóm 4 còn cảm biến → dashboard đủ 10 mẫu. Đã thử 5 lượt cảm biến nhưng 0/10 mẫu đủ điều kiện; command → ACK có đủ 10 lượt, median 686,217 ms, max 1002,001 ms.
+- Dashboard local dùng API8000 và chưa có trang `tests/task010-live-latency.html`; bằng chứng Windows dùng API8001/Live Server5500. Khác biệt phiên bản/cấu hình giữa các repo cần được đối chiếu trước lượt live tiếp, chưa được xác định là lỗi production. Không tự đổi cổng hoặc pull repo khác.
+- Một số ghi chú cũ mất dấu; giữ nguyên nguồn cũ, dùng bản tổng hợp có dấu và JSON để đối chiếu. [Kết quả rà soát](evidence/task-010/review-20261117-094517/README.md).
+
 
 ## Mô tả và phạm vi
 

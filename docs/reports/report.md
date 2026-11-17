@@ -1,3 +1,31 @@
+## 2026-11-17T09:45:17+07:00 — TASK-010 — Rà soát tiến độ sau pull và cập nhật flow report
+
+- Trạng thái TASK-010: Đang thực hiện; 2/4 nhóm nghiệm thu live. Lượt rà soát tài liệu hoàn tất 3/3 tiêu chí; không chốt hoàn thành TASK-010.
+
+### Đã thực hiện
+
+Đối chiếu main firmware `7e8f5c4` sau PR #3 với publication-status/final-status và bằng chứng đã pull. Nhóm 1 (một node xuyên suốt) và 3 (dữ liệu/restart/CSV/gap) PASS; nhóm 2 còn UI trạng thái lệnh cuối, broker outage/reconnect/no-replay/AUTO offline; nhóm 4 còn cảm biến → dashboard đủ 10 mẫu. Command → ACK đã có 10 lượt, median 686,217 ms/max 1002,001 ms. Sensor đã thử 5 lượt nhưng 0/10 mẫu đủ điều kiện; không tính thành hoàn thành một nửa. TASK-011 giữ Chưa bắt đầu, chờ đặc tả chính thức.
+
+Cập nhật task/next-task và ghi chú checklist, thêm bản tổng hợp tiếng Việt có dấu vào testing/dashboard. Giữ nguyên ghi chú mất dấu, log và kết quả cũ. Repo dashboard local dùng API8000/chưa có trang ghi latency, khác bản Windows/API8001; ghi nhận để đối chiếu trước lượt live, không tự thay cấu hình. [Hồ sơ rà soát](evidence/task-010/review-20261117-094517/README.md).
+
+### Kiểm tra và kết quả
+
+PASS kiểm tra file mới tại máy này: 112/112 tệp của 4 manifest SHA256 khớp (31/24/24/33), 70/70 JSON TASK-010 đọc hợp lệ; trạng thái 2/4 và số liệu latency khớp JSON gốc. Ba repo sạch trước lượt tài liệu; checklist và bằng chứng cũ được bảo toàn, report cũ giữ nguyên từng byte ở phần đuôi. Kiểm tra liên kết, trạng thái tài liệu, phạm vi diff và git diff --check được lưu trong verification.json. Không chạy lại các bài live đã PASS, build, pytest hoặc Node; không tuyên bố kết quả live mới từ kiểm tra file.
+
+### Vướng mắc
+
+Không có vướng mắc chặn việc cập nhật báo cáo. Các tiêu chí TASK-010 còn PENDING: phương pháp đo sensor/render chưa ổn định và chưa đủ kiểm độ tin cậy/UI; một số ghi chú cũ mất dấu; source/config dashboard giữa máy local và bản live có khác biệt.
+
+### Cách giải quyết
+
+Dùng JSON gốc, manifest và bản tổng hợp khi bàn giao PR làm nguồn; thêm bản tổng hợp có dấu thay vì sửa raw evidence. Giữ nguyên trạng thái PENDING, xác nhận người vận hành và dữ liệu máy thu có nguồn riêng. Chuẩn bị phương pháp đo/cô lập kết nối và đối chiếu repo trước lượt live tiếp khi được giao; không mở thêm ca thử hoặc dừng dịch vụ trong lượt báo cáo này.
+
+### Tài liệu và bước tiếp theo
+
+Áp dụng quy trình development.md và tham chiếu SRS10.2/12. Task/report/checklist/next-task, techs/testing/dashboard và hồ sơ rà soát được cập nhật; không sửa SRS, firmware, backend/dashboard source, API hoặc schema. Không commit/push/merge; không tự thực hiện TASK-011.
+
+---
+
 # TASK-010 — Trạng thái khi bàn giao để mở PR
 
 Người dùng đã cho phép add, commit và push nhánh `tuan` ở các repository có thay đổi. Người dùng sẽ tự tạo PR vào `main`; không merge hoặc force push.

@@ -1,3 +1,7 @@
+Ghi chú rà soát 2026-11-17T09:45:17+07:00: TASK-010 đang thực hiện, 2/4 nhóm nghiệm thu; TASK-011 chờ đặc tả. Lượt rà soát tài liệu đã hoàn tất, không thêm TASK-010 vào danh sách task hoàn thành. [Bằng chứng rà soát](evidence/task-010/review-20261117-094517/README.md). Toàn bộ checklist lịch sử bên dưới được giữ nguyên.
+
+---
+
 # TASK-009 — Dashboard HTML/CSS/JS qua Live Server
 
 - Hoàn thành đầu ra code/test/hướng dẫn:2026-11-16T14:18:00+07:00;4/4 nhóm nghiệm thu.
