@@ -1,3 +1,34 @@
+## 2026-11-17T13:24:37+07:00 — TASK-011 — Chốt đặc tả trước triển khai
+
+- Trạng thái TASK-011: Chưa bắt đầu; 0/4 nhóm nghiệm thu triển khai.
+- Kết quả lượt tài liệu: hoàn tất đặc tả theo phạm vi người dùng đã chốt; chưa triển khai hoặc nghiệm thu ba node.
+
+### Đã thực hiện
+
+Cập nhật [next-task.md](next-task.md), thay nội dung chờ đặc tả bằng gói P6/A6: node_01/02/03 dùng chung source, ba environment/phiên Wokwi VS Code, đúng định danh/đúng đích, lỗi/phục hồi, latency từng node và một cửa sổ ổn định liên tục 1.800 giây thực. Ghi phương án công cụ, môi trường QA, trình tự, đầu ra, bốn nhóm nghiệm thu và điều kiện bắt đầu. Giữ Dashboard HTML/CSS/JS thuần chạy Live Server, schema/toolchain/thuật toán và giới hạn ngoài phạm vi.
+
+Lưu nguyên byte [mô tả cũ](evidence/task-011/specification-20261117-131925/next-task-before.md), kèm [hồ sơ cập nhật](evidence/task-011/specification-20261117-131925/README.md). TASK-010 vẫn Hoàn thành 4/4 trong task.md; checklists.md và toàn bộ bằng chứng cũ giữ nguyên. Theo yêu cầu chỉ chuẩn bị đặc tả trước, chưa chuyển TASK-011 thành task đang thực hiện hoặc thêm vào danh sách task hoàn thành.
+
+### Kiểm tra và kết quả
+
+PASS kiểm tra tài liệu: trạng thái Chưa bắt đầu — 0/4, đủ bốn checkbox chưa đánh dấu, phạm vi/phương án đã chốt và liên kết nội bộ tài liệu mới hợp lệ; bản lưu khớp từng byte; task/checklist không đổi; phần đuôi report khớp toàn bộ nội dung cũ; git diff --check đạt. [Kết quả và hash](evidence/task-011/specification-20261117-131925/verification.json).
+
+Không chạy host tests, build, Wokwi hoặc tích hợp; không khởi chạy dịch vụ và không suy kết quả kiểm tài liệu thành PASS chức năng. Chưa kiểm chứng quyền chạy đồng thời ba phiên hoặc năng lực máy; đó là bước preflight khi được giao triển khai.
+
+### Vướng mắc
+
+Không có vướng mắc về phạm vi hoặc cập nhật tài liệu. Giới hạn Wokwi CLI Unauthorized đã biết được ghi trong đặc tả cùng phương án VS Code; không coi đây là lỗi mới hoặc kết luận TASK-011 bị chặn.
+
+### Cách giải quyết
+
+Không có xử lý kỹ thuật mới. Lưu trạng thái cũ để truy vết, phân biệt kết quả hoàn thiện đặc tả với tiến độ triển khai; giữ nguyên tiêu chí live và yêu cầu xác minh môi trường trước khi thực hiện.
+
+### Tài liệu và bước tiếp theo
+
+Chỉ cập nhật next-task/report và hồ sơ đặc tả. Không sửa techs vì chưa thay đổi triển khai thực tế; không sửa SRS/source/config/runtime hoặc repo anh em. Khi người dùng giao triển khai, lưu task hiện tại, chuyển đặc tả TASK-011 sang task.md, đặt Đang thực hiện — 0/4 rồi thực hiện lần lượt. Chưa commit/push/merge hoặc chạy TASK-012.
+
+---
+
 ## 2026-11-17T12:05:29+07:00 — TASK-010 — Hoàn tất nghiệm thu live một node: 4/4
 
 - Trạng thái: Hoàn thành;4/4 nhóm nghiệm thu TASK-010. Không phải nghiệm thu toàn đồ án/ba node.

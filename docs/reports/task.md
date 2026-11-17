@@ -1,112 +1,103 @@
-# TASK-010 — Tích hợp một node MQTT–backend–dashboard
+# TASK-011 — Hoàn thiện ba node và nghiệm thu ổn định 30 phút
 
-- Trạng thái: Hoàn thành
-- Tiến độ: 4/4 nhóm nghiệm thu live một node
-- Cập nhật: 2026-11-17T12:05:29+07:00
-
-## Tiếp tục hoàn tất TASK-010 — 2026-11-17T10:55:35+07:00
-
-- Trạng thái lượt hoàn thiện: Hoàn thành 2026-11-17T12:05:29+07:00, 4/4 nhóm; các ghi chú 2/4 hoặc3/4 phía dưới là lịch sử trước nghiệm thu mới. [Kết quả chốt](evidence/task-010/completion-20261117-105535/README.md).
-- Phạm vi được giao: Linux hiện tại, ưu tiên Wokwi CLI tự động; VS Code/video là dự phòng đã chọn. Hoàn thiện UI REJECTED/TIMEOUT, broker outage/reconnect/no-replay/AUTO offline, restart có pending/phiên mở và 10 lượt sensor → dashboard.
-- Điều kiện nghiệm thu: API/Serial/MQTT/DOM thật, phân biệt clock và sai số; mục tiêu3s giữ nguyên. Bảo toàn các PASS trước, không thay schema/timer/thuật toán để làm test đạt. Broker/DB/backend/dashboard QA riêng; không dừng dịch vụ dùng chung.
-- Checklist lượt này: [x] preflight và VSCode dự phòng; [x] bộ ghi/kiểm logic; [x] UI/restart/outage/reconnect/AUTO offline; [x] latency10 mẫu hợp lệ; [x] tài liệu, manifest, cleanup và báo cáo.
-- Lỗi live mới: sau restart riêng Backend, availability retained có thể đến khi actor đang chờ queue; session chưa đồng bộ khiến ONLINE bị loại và telemetry sau đó UNCONFIRMED_BOOT. Phạm vi sửa bổ sung: đồng bộ trạng thái kết nối ngay sau dequeue trong Service; không đổi hợp đồng MQTT/thuật toán. Bộ tái hiện trước sửa có 2 FAIL/2 PASS; bản sửa staging có 72 Pytest/Ruff PASS, cần kiểm live sau bàn giao.
-- WOKWI_CLI_TOKEN đã khai báo trong .bashrc; dùng cấu hình sẵn có trong tiến trình con, không lưu secret vào bằng chứng. Không đăng ký/mua dịch vụ, không commit/push/merge hoặc triển khai TASK-011.
-
-## Kết quả nghiệm thu mới nhất — 2026-11-17T12:05:29+07:00
-
-- UI REJECTED/EXPIRED và TIMEOUT/ACK_TIMEOUT với ACK thật; ACK muộn không đổi kết quả cuối.
-- Restart pending/phiên mở, node fresh cùng boot và UI reload phục hồi; sửa race Service sau dequeue. Hồi quy72 Pytest/Ruff PASS/1 warning cũ,4 kiểm lõi proxy PASS.
-- Broker QA outage khi pending; mqtt0 vẫn AUTO và PWM đổi25→0 theo LDR; reconnect cùng boot, không publish lại command cũ, command mới APPLIED.
-- Latency10/10 PASS3s: median1417,832–1464,491ms, max2353,967–2401,274ms;2 pilot tách riêng. Giữ10 command→ACK cũ, không chạy lại các PASS khác.
-- Tất cả dịch vụ/cửa sổ QA đã dừng, không còn listener QA; DB/log/PASS cũ giữ nguyên. [Audit](evidence/task-010/completion-20261117-105535/acceptance-audit.json), [cleanup](evidence/task-010/completion-20261117-105535/cleanup.json), [tổng hợp](evidence/task-010/completion-20261117-105535/README.md).
-- Không còn vướng mắc chặn nghiệm thu TASK-010 một node. CLI Unauthorized được xử lý bằng VSCode dự phòng; các lỗi công cụ ban đầu giữ log và kết luận đúng phạm vi. Không sửa firmware/schema/SRS, không commit/push/merge; TASK-011 chờ đặc tả.
-
-## Rà soát flow report sau pull — 2026-11-17T09:45:17+07:00
-
-- Trạng thái lượt rà soát: Hoàn tất 3/3 tiêu chí tài liệu; tiếp tục hồ sơ TASK-010, không mở TASK-011.
-- Phạm vi: đối chiếu bản main đã pull, số nhóm nghiệm thu, JSON/manifest bằng chứng và cấu hình repo tại máy này; cập nhật báo cáo và tài liệu tổng hợp. Tham chiếu SRS10.2/12 và quy trình development.md.
-- Tiêu chí hoàn tất lượt tài liệu: (1) trạng thái có nguồn và phân biệt kiểm tra mới với live cũ; (2) report/task/checklist/next-task và techs nhất quán; (3) lịch sử report và bằng chứng cũ giữ nguyên, liên kết và diff hợp lệ.
-- TASK-010 vẫn Đang thực hiện, 2/4 nhóm nghiệm thu live. Không chạy lại các ca live đã PASS, đo thêm latency hoặc thay đổi dịch vụ trong lượt này.
-- Kiểm tra sau pull: firmware main `7e8f5c4` chứa PR #3; cả ba repo sạch trước lượt tài liệu. 112 tệp của 4 manifest SHA256 khớp; 70 JSON bằng chứng hợp lệ. Đây là kiểm tra mới trên file đã pull, không phải chạy lại live.
-- Nguồn chốt: `run-20261116-195307/final-status.json`. Nhóm 1 và 3 PASS; nhóm 2 còn UI trạng thái lệnh cuối, broker outage/reconnect/no-replay và AUTO offline; nhóm 4 còn cảm biến → dashboard đủ 10 mẫu. Đã thử 5 lượt cảm biến nhưng 0/10 mẫu đủ điều kiện; command → ACK có đủ 10 lượt, median 686,217 ms, max 1002,001 ms.
-- Dashboard local dùng API8000 và chưa có trang `tests/task010-live-latency.html`; bằng chứng Windows dùng API8001/Live Server5500. Khác biệt phiên bản/cấu hình giữa các repo cần được đối chiếu trước lượt live tiếp, chưa được xác định là lỗi production. Không tự đổi cổng hoặc pull repo khác.
-- Một số ghi chú cũ mất dấu; giữ nguyên nguồn cũ, dùng bản tổng hợp có dấu và JSON để đối chiếu. [Kết quả rà soát](evidence/task-010/review-20261117-094517/README.md).
-
+- Trạng thái: Đang thực hiện
+- Tiến độ: 3/4 nhóm nghiệm thu; source/config, tích hợp và lỗi/phục hồi/latency đạt; đang chờ đủ 30 phút thực
+- Cập nhật: 2026-11-17T13:19:25+07:00
 
 ## Mô tả và phạm vi
 
-Kiểm chứng ESP32 node_01 trong Wokwi → Mosquitto local → FastAPI một worker → SQLite → Dashboard Live Server5500. Dùng ba repo hiện có tại D:/IOT; không chạy node_02/03, không dùng fixture thay live, không đổi MQTT v1/thuật toán/ngưỡng. Nguồn yêu cầu là next-task.md trước lượt này, được giữ tại [bản giao việc](evidence/task-010/run-20261116-173103/task-010-accepted.md). TASK-009 trước chuyển được giữ nguyên tại [bản lưu](evidence/task-010/run-20261116-173103/task-009-before-task010.md).
+Người dùng đã chốt TASK-011 là gói tích hợp ba node đầy đủ, gồm triển khai, kiểm thử live và chạy ổn định 30 phút thực. Người dùng đã giao triển khai sau khi chốt đặc tả. Lượt hiện tại thực hiện TASK-011 theo phạm vi này. Không còn phụ thuộc “chờ đặc tả chính thức”.
+
+Đầu ra cần đạt: `node_01`, `node_02`, `node_03` dùng chung source firmware, chạy đồng thời trong ba phiên Wokwi VS Code, truyền dữ liệu riêng biệt qua MQTT → backend/SQLite → dashboard và nhận lệnh đúng đích. Dashboard giữ HTML/CSS/JavaScript thuần, chạy bằng VS Code Live Server.
+
+TASK-010 đã hoàn thành 4/4 nhóm nghiệm thu một node; đã lưu [task trước khi chuyển](evidence/task-011/run-20261117-135233/task-010-before.md) trước khi triển khai TASK-011. [Hồ sơ TASK-010](evidence/task-010/completion-20261117-105535/README.md) là đầu vào, không phải bằng chứng ba node. [Bản mô tả cũ](evidence/task-011/specification-20261117-131925/next-task-before.md) được lưu nguyên byte; các trạng thái cũ trong bản lưu và báo cáo lịch sử không còn là trạng thái hiện hành của TASK-011.
+
+### Giới hạn
+
+- Giữ PlatformIO, board `esp32dev`, Arduino, entry point `src/main.cpp`, pin map, thuật toán, timer, ngưỡng và hợp đồng MQTT v1. Không nhân bản source C++ theo node.
+- Backend/dashboard đã có mô hình ba node; kế hoạch không bổ sung API, đổi schema hoặc migration. Chỉ sửa lỗi liên quan trực tiếp nếu kiểm thử phát hiện, kèm tái hiện và hồi quy; nếu phải sửa giao diện, áp dụng skill ui-ux-pro-max.
+- Bảo toàn bản sửa backend, thay đổi đang có và dữ liệu/bằng chứng TASK-010. Không reset hoặc chuyển nhánh làm mất công việc.
+- Không bao gồm EX-series, phân tích tiết kiệm điện đại diện, báo cáo tổng kết, video bàn giao, thiết kế lại giao diện, deploy cloud hoặc mua/đăng ký dịch vụ. Không tự commit/push/merge hoặc chạy task tiếp theo.
 
 ## Tham chiếu SRS
 
-SRS6/7/8/9/12, TC17–22/26; ma trận A3-01…08 trong techs/mqtt.md và runbook backend/dashboard. Một node đạt chưa phải nghiệm thu ba node hoặc EX-series.
+[SRS](../srs.md): FR-06/07/08/09/10/12; mục 2.3 về độc lập node, độ trễ dashboard và ổn định; mục 6–9 về firmware/MQTT/backend/dashboard; P6 ở mục 10.2; A6 ở mục 11.2; kiểm thử mục 12.1–12.2. Ca live trọng tâm: TC-12/13/14/16/17/21/22/23/24/25. Giữ ca chống trùng, sai boot/deadline và input lỗi trong hồi quy host; không coi kết quả một node là nghiệm thu ba node.
+
+## Phương án thực hiện đã chốt
+
+### Firmware và cấu hình build
+
+- Thêm cấu hình biên dịch `SMARTLIGHT_NODE_INDEX=1|2|3`, mặc định `1`; giá trị ngoài tập hợp bị từ chối khi biên dịch. Một module định danh dùng chung tạo node ID, MQTT client ID, topic command/telemetry/ACK/availability/diagnostics và nhãn Serial từ cấu hình này.
+- Topic/payload/client ID phải nhất quán. Không đổi node lúc runtime hoặc sao chép module điều khiển theo node. Boot ID vẫn tạo mỗi lần khởi động; không yêu cầu boot ID duy nhất toàn hệ thống.
+- Dùng chung platform/framework/packages/dependencies đã pin; ba environment chỉ khác cấu hình node. Giữ `esp32dev` làm environment mặc định.
+
+| Node | Environment PlatformIO dự kiến | Thư mục mô phỏng dự kiến | Cổng RFC2217 |
+| --- | --- | --- | ---: |
+| `node_01` | `esp32dev` — mặc định | `simulations/node_01` | 4000 |
+| `node_02` | `node_02` | `simulations/node_02` | 4001 |
+| `node_03` | `node_03` | `simulations/node_03` | 4002 |
+
+### Mô phỏng và công cụ
+
+- Thêm hai cấu hình mô phỏng với phần cứng/pin map giống node_01; kiểm sơ đồ không lệch ngoài khác biệt định danh/cổng được phép. Giữ cấu hình timeout node_01 làm hồi quy riêng, không tính thành node thứ tư.
+- Mở rộng `scripts/prepare-simulation.py` với `--node node_01|node_02|node_03|all`, mặc định node_01; ánh xạ cố định node → environment. Kiểm artifact tồn tại, không rỗng, đủ mới so với source/config và SHA256 khớp sau sao chép. Manifest ghi node/environment/đường dẫn/hash BIN/ELF và đầu vào; xác nhận định danh thực qua Serial/MQTT khi chạy.
+- Mở rộng `scripts/mqtt-command.py` với `--node`, mặc định node_01; telemetry đúng node/schema/boot và đủ mới theo chính sách hiện có. Giữ deadline uptime 64 bit; ca sai node chọn một node khác trong ba node. Công cụ chỉ tạo JSON, không publish.
+- Công cụ Serial tiếp tục chọn qua `--port` 4000/4001/4002; bỏ thông báo gán cứng node_01 khi dùng cổng khác. Không sửa thủ công launch.json do PlatformIO sinh.
+
+### Môi trường live
+
+- Ba phiên Wokwi VS Code độc lập trên Linux hiện tại, mỗi phiên đúng cấu hình/artifact/node. Preflight xác nhận chạy đồng thời, client ID riêng và cổng Serial không xung đột. Dùng workspace/profile QA riêng khi cần, chỉ sao chép cấu hình/artifact, không tạo ba bộ source phát triển.
+- Broker QA riêng để node truy cập qua `host.wokwi.internal:1883`; backend một worker, SQLite QA riêng/API8001; dashboard QA chạy Live Server5500. Nếu đổi URL API, chỉ đổi trong bản QA có đối chiếu source, không ghi đè cấu hình dashboard gốc.
+- Kiểm quyền sở hữu tiến trình/container và cổng trước thao tác. Không giành cổng hoặc dừng dịch vụ dùng chung. Nếu chưa đáp ứng, ghi phụ thuộc và tiếp tục phần độc lập.
+- Wokwi CLI trước đó Unauthorized; mặc định dùng VS Code, không yêu cầu token mới hoặc mua gói để vượt lỗi. Khả năng chạy ba phiên là điều kiện cần kiểm chứng, chưa được ghi PASS.
+
+## Trình tự thực hiện và kiểm tra
+
+1. **Bắt đầu:** đọc source/config và hồ sơ TASK-010, ghi trạng thái Git/hash ba repo. Lưu task hiện tại trước khi chuyển đặc tả TASK-011 sang task.md và đặt `Đang thực hiện — 0/4`. Chỉ làm khi được giao triển khai.
+2. **Code/build:** tham số hóa định danh, thêm cấu hình/công cụ; chạy protocol/app/MQTT host checks cho từng chỉ số 1/2/3, controller/sensors một lượt. Kiểm client ID/topic/subscription/LWT riêng, từ chối command sai node và compile-fail khi chỉ số không hợp lệ. Kiểm prepare/generator: ánh xạ ba node, artifact thiếu/cũ/sai nguồn, mặc định tương thích, wrong-node và deadline 64 bit; giữ hồi quy Serial. Build đủ ba environment, đối chiếu manifest và xác nhận Serial/MQTT đúng node. Chạy kiểm backend/dashboard tương ứng nếu sửa các thành phần đó.
+3. **Tích hợp:** cả ba ONLINE/FRESH, MQTT/API/dashboard đúng từng cảm biến. Tác động cảm biến từng node trong khi giữ đầu vào hai node kia ổn định để kiểm dữ liệu không lẫn. Gửi AUTO/MANUAL lần lượt tới cả ba; đối chiếu command ID, node/boot, ACK, PWM và dashboard; hai node còn lại không đổi vì lệnh đó. Kiểm tự về AUTO sau 60 giây mô phỏng theo hợp đồng hiện có.
+4. **Lỗi/phục hồi:** tạo OPEN_LOAD node_02 rồi phục hồi, cảnh báo không lan sang node khác. Tắt node_02, hai node còn lại tiếp tục cập nhật/nhận lệnh; khởi động lại node_02, xác nhận boot mới đúng đích. Dừng/phục hồi broker QA: cả ba tiếp tục AUTO theo cảm biến khi offline, reconnect/subscribe/telemetry mới và không phát lại command cũ. Restart backend: dữ liệu cả ba còn, online xác nhận lại từ dữ liệu mới. Các ca gián đoạn thực hiện ngoài cửa sổ ổn định.
+5. **Latency khi ba node cùng chạy:** thu 10 mẫu sensor→dashboard và 10 lệnh→ACK mỗi node bằng dữ liệu live; ghi node/boot/seq hoặc command ID, timestamp, điều kiện quan sát và sai số. Sensor→dashboard không quá 3 giây thực; dùng phương pháp TASK-010 với mốc tác động và render rõ, không thay bằng HTTP RTT/ACK. Command→ACK báo median/max và kết quả theo timeout hiện có, không đặt ngưỡng mới. Mẫu thiếu bằng chứng là INCOMPLETE, giữ log và thu bổ sung; không bỏ mẫu chậm hợp lệ để chọn kết quả đẹp.
+6. **Ổn định:** sau ca gián đoạn, đưa ba node về AUTO, chờ ONLINE/FRESH rồi chạy đồng thời một cửa sổ liên tục ít nhất 1.800 giây theo clock monotonic máy. Không cộng ba lượt 10 phút hoặc dùng uptime mô phỏng thay thời gian thực. Thu boot/seq/uptime, khoảng cách telemetry, trạng thái MQTT/API/dashboard, sức khỏe collector, lỗi/drop hàng đợi và tài nguyên máy. Không chủ động restart/outage trong cửa sổ. Reset bất thường, collector dừng, mất dữ liệu do hàng đợi hoặc offline ngoài dự kiến làm lượt FAIL; giữ bằng chứng, xử lý rồi chạy lại đủ 30 phút, không ghép các đoạn đạt.
+7. **Đóng task:** đối chiếu dữ liệu SQLite/tính toàn vẹn, tổng hợp evidence/manifest; cập nhật techs/report/checklist/task theo quy trình. Chỉ dừng tài nguyên QA do lượt này tạo, giữ dữ liệu cũ. Đề xuất TASK-012 sau đó, không tự thực hiện.
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [x] Broker/Wokwi thật, backend/SQLite một chủ ghi, dashboard Live Server; node_02/03 UNKNOWN; telemetry/target/applied/clock hiện tại đúng. API/MQTT/SQLite/hash do agent thu, hiển thị Dashboard do người dùng xác nhận. Fault tải→API/SQLite đã PASS; ảnh Serial do người dùng chụp chưa có file trong repo.
-- [x] AUTO/MANUAL80/ACK/reject/timeout/60s theo node, input sai/pending guard, mất API/broker/reconnect, không replay và AUTO tiếp tục.
-- [x] Restart giữ history/alerts/experiments đã lưu; gap phía API không nối năng lượng, CSV3 phiên khớp từng byte trước/sau; stats/coverage/clock đã đối chiếu. Các ca Windows cũ không có pending/phiên mở; lượt Linux mới đã bổ sung pending/open experiment qua restart và UI reload trên bản sửa session.
-- [x] Latency cảm biến→dashboard10 mẫu mới hợp lệ dưới3s; giữ10 command→ACK cũ. Median/max có khoảng sai số/điều kiện máy/video/MQTT/API/DOM và log/hash.
+- [x] **Nhóm 1 — Source/config/công cụ:** một source, ba environment và ba cấu hình mô phỏng, định danh nhất quán; host/Python checks liên quan và build cả ba đạt, artifact được kiểm hash và định danh live.
+- [x] **Nhóm 2 — Tích hợp đúng đích:** ba node chạy đồng thời; MQTT/API/dashboard tách dữ liệu; AUTO/MANUAL/ACK/PWM và cảm biến đúng node, không tác động chéo.
+- [x] **Nhóm 3 — Lỗi/phục hồi/latency:** OPEN_LOAD, tắt riêng node, broker outage/reconnect/no-replay, backend restart đạt với bằng chứng ba node; đủ 10 mẫu sensor→dashboard đạt mục tiêu 3 giây thực và 10 lệnh→ACK mỗi node có kết quả đúng hợp đồng.
+- [ ] **Nhóm 4 — Ổn định và bàn giao:** một cửa sổ ba node liên tục đủ 30 phút thực đạt; collector/dữ liệu ổn định, hồ sơ tái lập và tài liệu hoàn tất, cleanup tài nguyên QA được kiểm chứng.
+
+Chỉ ghi Hoàn thành khi đủ 4/4. Build/host/fixture không thay Wokwi live; PASS một node trước đây không tự nâng tiến độ ba node. Mỗi nhóm có bằng chứng riêng; FAIL/INCOMPLETE/chưa chạy phải ghi đúng và nêu bước xử lý.
+
+## Đầu ra và bằng chứng bắt buộc
+
+- Source/config/công cụ đúng phạm vi; hướng dẫn build/chạy/đo tái lập; phiên bản, hash source/artifact và cấu hình thực chạy.
+- Log kiểm thử/build, Serial/MQTT/API, ảnh dashboard, snapshot dữ liệu QA; bảng latency từng mẫu, phân biệt clock mô phỏng/thời gian thực.
+- Log cửa sổ ổn định có mốc monotonic bắt đầu/kết thúc, thời lượng và diễn biến từng node/collector; giữ cả lượt lỗi và cách xử lý.
+- Báo cáo và manifest dưới `docs/reports/evidence/task-011/`. Không đưa secret, SQLite hoặc artifact build vào Git; ghi nơi lưu/hash dữ liệu QA và version hóa báo cáo/trích xuất cần thiết theo quy ước repo.
 
 ## Vướng mắc và cách giải quyết
 
-Người dùng xác nhận đã khắc phục môi trường: Python3.12,68 Pytest/Ruff PASS, SQLite, build P3/A3/prepare SUCCESS; Wokwi→MQTT→API→Dashboard live, MANUAL80/ACK/PWM80 và tự AUTO sau khoảng60s mô phỏng đã PASS. Đây là xác nhận người vận hành, tách khỏi log/ảnh trong repo. Log lỗi run-20261116-173103 là lịch sử trước khắc phục, giữ nguyên.
-
-Lượt tiếp tục [run-20261116-180648](evidence/task-010/run-20261116-180648/README.md): API health OK, node_01 ONLINE/FRESH AUTO DAY target/applied0, node_02/03 UNKNOWN; hash BIN/ELF build/mô phỏng khớp, SQLite quick_check OK và singleton DB lock PASS. Không chạy lại pytest/build/MANUAL60s đã được xác nhận. API8001 do người dùng chọn, Dashboard5500. Không commit/push/merge.
-
-## Kết quả tiêu chí con
-
-Lượt hoàn thiện tiếp: ưu tiên10 lượt sensor→Dashboard live có timestamp thao tác/cảm biến/MQTT/API/render, không thay bằng command latency hoặc HTTP RTT. Giữ các PASS trước, không chạy lại. Đang kiểm khả năng quan sát/điều khiển browser/Wokwi và chuẩn bị instrumentation ngoài luồng sản phẩm; ghi mọi giới hạn phương pháp. Broker outage chỉ chuẩn bị phương án cô lập, không dừng Mosquitto dùng chung hoặc đổi ngưỡng/schema. Một bước thủ công mỗi lần nếu cần.
-
-PASS [lượt proxy live](evidence/task-010/run-20261116-193157/README.md): preflight2 telemetry seq932/933 qua Backend1884, healthOK. Đúng một POST AUTO/command0d8f20f5-4700-4be4-b5cc-37b555396adc; Backend retry đúng1 lần sau2,041s, TIMEOUT quan sát10,089s. Hai ACK thật giữ/thả ở mốc12s từ lệnh đầu, raw hash khớp; DB lưu LATE_OR_DUPLICATE, API/SQLite cuối vẫn TIMEOUT/ACK_TIMEOUT/attempts2. Không thêm command hoặc replay sau khôi phục. Backend đã về1883/PID14144/API8001/workers1, healthOK; proxy/recorder dừng. Người dùng xác nhận Dashboard ONLINE/AUTO NIGHT25/LDR3917/dữ liệu mới19:44:21/boot3268eb79/seq963→969. SQLite/log/PASS cũ giữ nguyên, không init_db, không Pause Wokwi hoặc dừng broker.
-
-PASS restart theo [đối chiếu mới](evidence/task-010/run-20261116-190549/README.md): người dùng xác nhận PID18828→43632/API8001/workers1, không init_db/xóa SQLite, giữ Wokwi/Mosquitto. Listener43632/start19:03:07+07, Backend run ID đã đổi, firmware boot3268eb79 giữ nguyên. Bảo toàn760 mẫu telemetry cũ,13 command,20 ACK,106 alert,3 phiên; CSV3 phiên tải lại giống từng byte. Row765→766 khác continuity, API stats không nối năng lượng qua gap. Capture mới chỉ thu sau restart, không dựng lại API outage hoặc STALE lúc khởi động.
-
-PASS OPEN_LOAD/phục hồi theo [đối chiếu mới](evidence/task-010/run-20261116-184903/README.md):16 mẫu quanh hai đợt đều AUTO/NIGHT/NONE/target25/applied25, cùng boot. Alert30/33 đã đóng; đợt cuối seq683/uptime1323338ms/current_adc0 bắt đầu lỗi, seq692/uptime1340238ms/current_adc4095 hết lỗi và đóng alert33. Giữ riêng mốc Serial1340431ms/duty64/mqtt1 do người dùng xác nhận; ảnh chưa có trong repo. Không chạy lại OPEN_LOAD. Capture cũ kết thúc trước thao tác; chứng cứ quá khứ là telemetry lưu SQLite/API, không phải raw MQTT capture.
-
-- PASS: hai command MANUAL80 cũ APPLIED/ACK lưu trong SQLite,32 mẫu PWM80; telemetry tự AUTO uptime193094ms. Giữ riêng mốc Serial193431/194431ms do người dùng xác nhận.
-- PASS:5 input sai422, node_02 không dữ liệu409, command không tồn tại404; AUTO202/PENDING và lệnh kế tiếp409, cuối APPLIED.
-- PASS: ACK thật REJECTED/EXPIRED, BOOT_MISMATCH, INVALID_COMMAND qua MQTT. Retry nguyên lệnh AUTO đã quá deadline trả ACK cũ; ID trùng đổi nội dung bị từ chối, cache gốc còn nguyên. Đây là wire probe, chưa chứng minh UI REJECTED.
-- PASS:10/10 command→ACK, median686,217ms/max1002,001ms; lưu cả timestamp server và ACK MQTT. Không suy thành latency cảm biến→Dashboard.
-- PASS: phiên thực1/2 đã đóng, CSV12/423 mẫu khớp API/history/stats; tính độc lập công thức điện năng, quality/clock/coverage. Phiên1 tổng0,0018346Wh/coverage92,2025%; phiên2 toàn DAY0W, không phải EX-series.
-- PASS: phiên3 NIGHT25/6W đã đóng,50 mẫu CSV khớp API/stats;48 continuity gap đều không nối năng lượng. Coverage chỉ1,534987%, valid_uptime2,005s/tổng0,0033416667Wh; saving75% chỉ thuộc tập mẫu hợp lệ nhỏ, không đại diện toàn khoảng. Serial sau phục hồi có19 CONTROL giữ AUTO25/duty64/faultOK/mqtt1.
-- PASS: TIMEOUT10s/ACK muộn/retry1 lần và khôi phục API/MQTT/Dashboard qua một lượt proxy thật như trên. Bài Pause2s trước đó giữ nguyên INCOMPLETE; không sửa kết quả cũ thành PASS hoặc chạy lại.
-- PENDING: UI REJECTED/TIMEOUT (chưa quan sát trực tiếp), broker outage/reconnect/no-replay cho lệnh đang chờ/AUTO offline, lệnh chờ/phiên mở qua restart (không có trong ca đã chạy), latency cảm biến→Dashboard10 lượt. API mất/kết nối lại khi chuyển Backend đã được capture, không suy thành broker outage PASS.
-
-GUI lượt trước hết thời gian chờ cấp quyền quan sát; người dùng đã phản hồi OPEN_LOAD và ảnh Serial. Không dừng cưỡng bức Backend do người dùng khởi chạy. Capture600s cũ kết thúc trước restart; giữ kết luận cũ như lịch sử, dùng snapshot/process/run ID/CSV mới để xác nhận restart thật. Phiên1/2/3 đã đóng, lượt mới không mở phiên đo. Serial sau phục hồi đo node/wall≈0,1603, telemetry thực trung vị12,70s/max15,62s dù mqtt1; cần đánh giá tốc độ mô phỏng trước ca latency, không sửa ngưỡng.
+Không có vướng mắc còn lại về phạm vi. Khả năng chạy ba phiên Wokwi đồng thời và mức tải máy chưa được kiểm chứng; đây là phụ thuộc preflight, chưa phải bằng chứng task bị chặn. Nếu lỗi thực tế xuất hiện, ghi nguyên nhân/log/tác động, tiếp tục code/host/build độc lập và không hạ tiêu chí live. Wokwi CLI Unauthorized có phương án VS Code nêu trên.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Người dùng đã giao TASK-010→011. Chỉ triển khai TASK-011 khi có đặc tả rõ; hiện chưa tìm thấy trong tài liệu. Giữ DB/log và lịch sử; không push/merge/reset. Nếu cần sửa tính năng backend/dashboard phải tạo nhánh công việc trước.
+- TASK-010 hoàn thành 4/4, giữ hồ sơ và bản sửa backend session sync; đối chiếu source ba repo trên máy này trước khi chạy.
+- Người dùng đã giao triển khai TASK-011 trong lượt hiện tại.
+- Có môi trường build đã pin, Wokwi VS Code/gateway, ba cổng Serial, broker QA, backend một worker/SQLite QA và VS Code Live Server. Truy cập/sửa repo anh em tuân theo quyền được cấp.
+- Khi triển khai, cập nhật techs firmware/simulation/testing và phần MQTT/backend/dashboard thực sự bị ảnh hưởng. Lượt đặc tả không sửa mô tả triển khai thực tế trong techs, SRS, task.md hoặc checklist task hoàn thành.
 
+## Nhật ký triển khai hiện tại
 
-C?p nh?t ?o live: run-20261116-195307/trial-01-summary.json ghi INCOMPLETE do ch?a ph?n bi?t c?c trang browser/visibility; sensor50cm, MQTTseq1138 v? DOM50,7cm ?? thu th?t. B? ghi th?m page_id; ch? t?i l?i tr??c l??t2. UI stale/kh?a/kh?i ph?c ?? c? DOM th?t; c?c nh?m nghi?m thu v?n2/4, kh?ng t?nh l??t1 th?nh PASS latency.
+- 2026-11-17T13:52:33+07:00: lưu baseline ba repo, lưu task trước và đặc tả được giao; bắt đầu triển khai. Host/build/live chưa chạy.
 
-L??t2 ?? kh?i ph?c m?c slider149cm t? raw accessibility nh?ng INCOMPLETE do ??ng page_id b? ?n tr??c render. Native observer timeout/k?t th?c phi?n; chu?n b? marker th? c?ng tr?n trang ?o v? t0 d?ng kho?ng [marker, MQTT m?i ??u ti?n] (Serial n?u c?) ?? kh?ng ph? thu?c native UI. Kh?ng l?y MQTT l?m th?i ?i?m t?c ??ng ch?nh x?c; gi? ng??ng3s v? ghi sai s?.
+- Cập nhật triển khai: 20 Python test, 11 lượt host + 2 compile-fail, ba build PASS. Cả ba MQTT/API/dashboard live, 30 command đúng đích, cảm biến cách ly và MANUAL timeout theo clock node đạt. CPU mô phỏng giới hạn 4 MHz theo tài liệu Wokwi để giảm tải, không đổi timer ngoại vi; đang kiểm lại live trên cấu hình này. Giữ các mẫu latency FAIL/INCOMPLETE trước khi chốt cấu hình.
 
-L??t3 nh?n renderseq1210 nh?ng MQTT50,7069cm c? tr??c marker~7,2s; INCOMPLETE, kh?ng ch?p nh?n latency?m. S?a b? ghi test ?? ch?p baseline l?c b?m, t? ch?i baseline ?? ? target, y?u c?u seq m?i sau marker v? APIreceived_at sau marker; kh?ng s?a Dashboard production/Backend/firmware. B? sung causal check tr?n d? li?u th?t ?? thu tr??c khi h??ng d?n l??t4.
+- Live đã PASS: cảm biến/PWM riêng từng node; OPEN_LOAD/phục hồi node_02; TC23 tắt node_02, node_01/03 vẫn nhận lệnh; broker outage AUTO/PWM25 mqtt0 cả ba, reconnect/no-replay kiểm cả raw MQTT và log broker; restart backend giữ hash toàn bộ telemetry cũ, ba boot không đổi. Còn chốt đủ mẫu latency trên CPU4 và cửa sổ ổn định 30 phút.
 
-L??t4 INCOMPLETE: bounded sensor latency1,469?6,081s; MQTT/API/DOMseq1240 kh?p, browser b?o hidden nh?ng ng??i d?ng x?c nh?n lu?n nh?n th?y c?nh Wokwi. Kh?ng quy l?i thao t?c. Native read-only ?? ph?c h?i sau reset kernel, ch? m? l?i Distance ?? thu h?p t0 cho l??t5. Xem trial-04-summary.json v? trial-04-user-observation.json.
+## Bổ sung sửa lỗi trễ dữ liệu cảm biến
 
+Bằng chứng node_03-sample-79 trong latency-trials.json vẫn vượt 3s trên runtime CPU4. MqttMailbox chỉ tăng generation khi controlChanged, bỏ qua thay đổi trường cảm biến đã nằm trong telemetry; raw chỉ được gửi cùng control hoặc đợi periodic 2s mô phỏng. Bổ sung so sánh trường cảm biến trên wire để kích gửi sớm, bỏ qua analogSequence/uptime và giá trị distance không hợp lệ cùng biểu diễn null. Giữ nguyên timer điều khiển, schema, heartbeat định kỳ 2s và rate-limit 200ms (tối đa 5/s). Đây là sửa FR06/SRS2.3 trong TASK-011, không thêm thuật toán chiếu sáng hoặc trường dữ liệu mới. Thêm ca red/green và kiểm lại ba build/live; stability-01 kết thúc INCOMPLETE, phải chạy cửa sổ mới đủ 1.800s sau bản sửa.
 
-Ch?t ??t thu latency: ?? thao t?c5 l??t sensor, nh?ng0/10 m?u ??t ?? ?i?u ki?n nghi?m thu. L??t1 thi?u m? trang;2 browser b?o hidden;3 m?u c? tr??c marker;4 kho?ng1,469?6,081s c?t ng??ng3s, browser hidden d? ng??i d?ng x?c nh?n hai c?a s? lu?n nh?n th?y;5 ?? c? kho?ng t?c ??ng native48cm nh?ng render tr?/?i?u ki?n trang kh?ng li?n t?c, kh?ng d?ng kho?ng~203s l?m latency s?n ph?m b?nh th??ng. C?c l??t6?10 ch?a ch?y. Kh?ng th? suy ra ch? c?n5 thao t?c n?a l? ho?n t?t. B? ?o ch?a ?n ??nh ?? g?y nhi?u thao t?c cho ng??i d?ng; kh?ng y?u c?u thao t?c c?m bi?n th?m trong ??t n?y.
-
-Ch?t4 nh?m: nh?m1 t?ch h?p m?t node PASS; nh?m2 ?? tin c?y PENDING (UI terminal command, outage/reconnect/no-replay/AUTO offline); nh?m3 d? li?u/restart/CSV/gap PASS; nh?m4 latency PENDING (10 command?ACK PASS c?; sensor ch?a ?? m?u). Kh?ng ch?y l?i PASS c?. Backend healthOK/database/broker/queue true. Gi? nguy?n SQLite v? ?ng d?ng ?ang ch?y, kh?ng command m?i. TASK-011 ch? ??c t?.
-
-final-status.json v? snapshot latency-events-cutoff.jsonl ch?t b?ng ch?ng hi?n c?; JSONL g?c v?n ?ang ???c collector ghi. Tra c?u PID b?ng Windows CIM b? Access denied; kh?ng d?ng process ch?a x?c minh. Snapshot l? prefix ??y ?? d?ng, kh?ng ch?nh s?a d? li?u g?c. Kh?ng commit/push/merge ho?c thay schema/thu?t to?n. Chu?n b? outage ch? d?ng ? ph??ng ?n proxy ri?ng cho Backend; ch?a c? ph??ng ?n c?t ri?ng ???ng MQTT node ?? tin c?y, kh?ng d?ng Mosquitto d?ng chung.
-
-
-# TASK-010 — Trạng thái khi bàn giao để mở PR
-
-Người dùng đã cho phép add, commit và push nhánh `tuan` ở các repository có thay đổi. Người dùng sẽ tự tạo PR vào `main`; không merge hoặc force push.
-
-TASK-010 đang thực hiện, đạt 2/4 nhóm nghiệm thu. Tích hợp một node và lưu trữ/lịch sử/phiên đo/CSV/gap/restart đã PASS theo bằng chứng trước. TIMEOUT/ACK muộn qua proxy và khôi phục MQTT1883 đã PASS. Backend dùng API8001, Dashboard5500; không đổi thuật toán hoặc MQTT schema.
-
-Còn PENDING: UI trạng thái lệnh cuối, broker outage/reconnect/no-replay/AUTO offline và latency cảm biến đến Dashboard. Đã thao tác 5 lượt cảm biến nhưng chưa có đủ mẫu đạt điều kiện nghiệm thu; không khẳng định đã hoàn thành 10 lượt. Xem `run-20261116-195307/final-status.json`, `trial-05-summary.json` và `latency-events-cutoff.jsonl`. Xác nhận người dùng được phân biệt với dữ liệu máy thu trực tiếp. TASK-011 vẫn chờ đặc tả chính thức.
-
-Dashboard chỉ đổi địa chỉ API sang8001 và bổ sung bộ ghi thử nghiệm live trong `tests/`. Bộ ghi còn giới hạn về timestamp/visibility và không phải tính năng production đã nghiệm thu. Backend không có thay đổi mã nguồn nên không tạo commit riêng.
-
-Giữ SQLite và toàn bộ log tại máy. Hai stream đang ghi tiếp được loại khỏi Git bằng đường dẫn cụ thể trong `.gitignore`; các bản chụp bằng chứng đã chốt vẫn được commit. Không đưa `.env`, SQLite, môi trường Python hoặc firmware build vào commit. Kiểm tra cú pháp JavaScript, Python AST và `git diff --check`; không chạy lại kiểm thử live đã PASS.
-
-Một số ghi chú trong đợt đo trước bị mất dấu khi truyền qua PowerShell. Dùng bản tổng hợp này và JSON gốc để đối chiếu; không sửa dữ liệu bằng chứng gốc hoặc xóa nhật ký cũ.
+- Lượt cuối: 30/30 sensor→dashboard hợp lệ theo latency-final-audit.json, đúng 10 mẫu/node trên firmware sửa coalescing; max cận trên 1272,235ms. Giữ nguyên raw trials INCOMPLETE do parser nhãn 100k và mọi FAIL trước sửa; audit sửa riêng đơn vị k=1000, không đổi clock/loại mẫu. stability-02 bắt đầu 2026-11-17T15:36:05+07:00, chưa đủ 1.800s nên nhóm 4 chưa đạt.
