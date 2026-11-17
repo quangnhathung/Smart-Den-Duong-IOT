@@ -1,0 +1,199 @@
+{
+  "status": "PASS",
+  "before": [
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:02:02.405496Z",
+      "age_s": 0.911446268997679,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "7c30d5e4",
+        "seq": "240",
+        "uptime_ms": "540562",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.5345,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_02",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:02:01.500019Z",
+      "age_s": 1.816973737997614,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "c96867c8",
+        "seq": "67",
+        "uptime_ms": "221844",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_03",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:02:00.177995Z",
+      "age_s": 3.139012970001204,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "2d32a9e8",
+        "seq": "239",
+        "uptime_ms": "539952",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": false
+    }
+  ],
+  "after": [
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:02:05.889956Z",
+      "age_s": 1.2873476309978287,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "7c30d5e4",
+        "seq": "241",
+        "uptime_ms": "542562",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.5345,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_02",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:02:05.060545Z",
+      "age_s": 2.11681121500078,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "c96867c8",
+        "seq": "68",
+        "uptime_ms": "223844",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_03",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:02:07.172686Z",
+      "age_s": 0.004695895000622841,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "2d32a9e8",
+        "seq": "241",
+        "uptime_ms": "543961",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    }
+  ],
+  "counts_before": {
+    "telemetry": 3865,
+    "commands": 50,
+    "alerts": 21,
+    "boots": 17
+  },
+  "counts_after": {
+    "telemetry": 3868,
+    "commands": 50,
+    "alerts": 21,
+    "boots": 17
+  },
+  "old_telemetry_before": {
+    "cutoff": 3865,
+    "rows": 3865,
+    "sha256": "00aaede858b9e9b002f5314be3f9f7dab601aacfd8d4494d18b57cb97474b384"
+  },
+  "old_telemetry_after": {
+    "cutoff": 3865,
+    "rows": 3865,
+    "sha256": "00aaede858b9e9b002f5314be3f9f7dab601aacfd8d4494d18b57cb97474b384"
+  },
+  "pid_before": 371359,
+  "pid_after": 518926
+}

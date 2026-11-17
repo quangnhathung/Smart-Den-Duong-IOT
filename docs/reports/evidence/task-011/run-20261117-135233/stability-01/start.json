@@ -1,0 +1,123 @@
+{
+  "started_at": "2026-11-17T08:06:15.571792+00:00",
+  "start_monotonic_ns": 20359598310649,
+  "start_wall_ms": 1794902775571.7825,
+  "required_seconds": 1800,
+  "boots": {
+    "node_01": "7c30d5e4",
+    "node_02": "c96867c8",
+    "node_03": "2d32a9e8"
+  },
+  "backend": {
+    "name": "backend",
+    "pid": 518926,
+    "args": [
+      "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/backend/.venv/bin/python",
+      "-B",
+      "-m",
+      "uvicorn",
+      "smartlight.api:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8001",
+      "--workers",
+      "1"
+    ],
+    "proc_start_ticks": "2010756"
+  },
+  "initial_nodes": [
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:06:13.430895Z",
+      "age_s": 2.1356632950009953,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "7c30d5e4",
+        "seq": "310",
+        "uptime_ms": "680618",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.5345,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_02",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:06:15.132475Z",
+      "age_s": 0.43413313799828757,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "c96867c8",
+        "seq": "140",
+        "uptime_ms": "367894",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_03",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:06:13.461750Z",
+      "age_s": 2.1048731619994214,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "2d32a9e8",
+        "seq": "311",
+        "uptime_ms": "683995",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    }
+  ],
+  "initial_health": {
+    "status": "OK",
+    "database": true,
+    "broker": true,
+    "queue": true,
+    "dropped_events": 0
+  },
+  "runtime": "independent profiles with background throttling disabled; product timers unchanged"
+}

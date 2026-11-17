@@ -1,0 +1,1 @@
+PASS: clang-format --dry-run --Werror on changed C++ files

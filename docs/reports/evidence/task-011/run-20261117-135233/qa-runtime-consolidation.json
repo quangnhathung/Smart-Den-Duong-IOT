@@ -1,0 +1,58 @@
+{
+  "old_owned_groups_stopped": [
+    371363,
+    371364,
+    379988
+  ],
+  "new_profile": "/tmp/task011-20261117-135233/vscode-shared-profile",
+  "cdp_port": 19226,
+  "reason": "Three independent VS Code profiles consume unnecessary main/GPU/background processes; use independent windows sharing one QA process. Firmware/timers/schema unchanged.",
+  "old_latency_results_preserved": "latency-trials.json",
+  "new_launches": [
+    {
+      "name": "vscode-shared-1",
+      "pid": 435877,
+      "args": [
+        "/usr/share/code/code",
+        "--new-window",
+        "--user-data-dir=/tmp/task011-20261117-135233/vscode-shared-profile",
+        "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+        "--remote-debugging-port=19226",
+        "--skip-welcome",
+        "--skip-release-notes",
+        "/tmp/task011-20261117-135233/node_01"
+      ],
+      "proc_start_ticks": "1794703"
+    },
+    {
+      "name": "vscode-shared-2",
+      "pid": 436437,
+      "args": [
+        "/usr/share/code/code",
+        "--new-window",
+        "--user-data-dir=/tmp/task011-20261117-135233/vscode-shared-profile",
+        "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+        "--remote-debugging-port=19226",
+        "--skip-welcome",
+        "--skip-release-notes",
+        "/tmp/task011-20261117-135233/node_02"
+      ],
+      "proc_start_ticks": "1794854"
+    },
+    {
+      "name": "vscode-shared-3",
+      "pid": 436655,
+      "args": [
+        "/usr/share/code/code",
+        "--new-window",
+        "--user-data-dir=/tmp/task011-20261117-135233/vscode-shared-profile",
+        "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+        "--remote-debugging-port=19226",
+        "--skip-welcome",
+        "--skip-release-notes",
+        "/tmp/task011-20261117-135233/node_03"
+      ],
+      "proc_start_ticks": "1794954"
+    }
+  ]
+}

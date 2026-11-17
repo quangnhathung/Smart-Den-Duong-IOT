@@ -1,0 +1,2 @@
+CHECK protocol-node_01
+protocol-node_01: test/host/MqttProtocolChecks.cpp:190: void {anonymous}::checkMailbox(): Assertion `mailbox.latest(snapshot, version) && version == 2' failed.

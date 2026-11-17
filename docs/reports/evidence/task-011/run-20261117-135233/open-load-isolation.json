@@ -1,0 +1,447 @@
+{
+  "status": "PASS",
+  "before": [
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:25:00.519118Z",
+      "age_s": 1.2319615430023987,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "d6fe6a8a",
+        "seq": "497",
+        "uptime_ms": "361259",
+        "mode": "AUTO",
+        "environment": "DAY",
+        "ldr_adc": 32,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 0,
+        "brightness_applied": 0,
+        "current_adc": 4095,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_02",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:25:01.520434Z",
+      "age_s": 0.23066012900017085,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "e3566c84",
+        "seq": "868",
+        "uptime_ms": "357156",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.431,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_03",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:25:01.494368Z",
+      "age_s": 0.2567312800019863,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "9fbc1fc2",
+        "seq": "853",
+        "uptime_ms": "358695",
+        "mode": "AUTO",
+        "environment": "DAY",
+        "ldr_adc": 32,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 0,
+        "brightness_applied": 0,
+        "current_adc": 4095,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    }
+  ],
+  "fault": [
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:25:07.063082Z",
+      "age_s": 1.683823155999562,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "d6fe6a8a",
+        "seq": "503",
+        "uptime_ms": "367261",
+        "mode": "AUTO",
+        "environment": "DAY",
+        "ldr_adc": 32,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 0,
+        "brightness_applied": 0,
+        "current_adc": 4095,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_02",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:25:08.687248Z",
+      "age_s": 0.059709940000175266,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "e3566c84",
+        "seq": "875",
+        "uptime_ms": "360073",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 0,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": [
+          "OPEN_LOAD"
+        ]
+      },
+      "faults": [
+        "OPEN_LOAD"
+      ],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_03",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:25:08.404114Z",
+      "age_s": 0.3428605599983712,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "9fbc1fc2",
+        "seq": "870",
+        "uptime_ms": "364869",
+        "mode": "AUTO",
+        "environment": "DAY",
+        "ldr_adc": 32,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 0,
+        "brightness_applied": 0,
+        "current_adc": 4095,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    }
+  ],
+  "recovered": [
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:25:15.751827Z",
+      "age_s": 1.7594490330011467,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "d6fe6a8a",
+        "seq": "510",
+        "uptime_ms": "375258",
+        "mode": "AUTO",
+        "environment": "DAY",
+        "ldr_adc": 32,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 0,
+        "brightness_applied": 0,
+        "current_adc": 4095,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_02",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:25:17.308520Z",
+      "age_s": 0.20279477999793016,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "e3566c84",
+        "seq": "891",
+        "uptime_ms": "363534",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.431,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_03",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:25:16.557775Z",
+      "age_s": 0.9535467700006848,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "9fbc1fc2",
+        "seq": "884",
+        "uptime_ms": "372070",
+        "mode": "AUTO",
+        "environment": "DAY",
+        "ldr_adc": 32,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 0,
+        "brightness_applied": 0,
+        "current_adc": 4095,
+        "current_ma_sim": 0.0,
+        "power_sim_w": 0.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    }
+  ],
+  "alerts": {
+    "items": [
+      {
+        "id": 25,
+        "node_id": "node_02",
+        "kind": "OPEN_LOAD",
+        "started_at": "2026-11-17T08:25:08.687248Z",
+        "ended_at": "2026-11-17T08:25:17.308520Z"
+      },
+      {
+        "id": 24,
+        "node_id": "node_02",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T08:17:00.546753Z",
+        "ended_at": "2026-11-17T08:17:01.398558Z"
+      },
+      {
+        "id": 23,
+        "node_id": "node_03",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T08:17:00.194793Z",
+        "ended_at": "2026-11-17T08:17:01.837830Z"
+      },
+      {
+        "id": 22,
+        "node_id": "node_01",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T08:16:58.625750Z",
+        "ended_at": "2026-11-17T08:17:00.744609Z"
+      },
+      {
+        "id": 21,
+        "node_id": "node_03",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:59:51.394956Z",
+        "ended_at": "2026-11-17T08:01:02.132752Z"
+      },
+      {
+        "id": 20,
+        "node_id": "node_02",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:59:51.394926Z",
+        "ended_at": "2026-11-17T08:01:01.339339Z"
+      },
+      {
+        "id": 19,
+        "node_id": "node_01",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:59:51.394836Z",
+        "ended_at": "2026-11-17T08:01:03.935308Z"
+      },
+      {
+        "id": 18,
+        "node_id": "node_02",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:56:03.556837Z",
+        "ended_at": "2026-11-17T07:57:22.368337Z"
+      },
+      {
+        "id": 17,
+        "node_id": "node_03",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:56:03.556603Z",
+        "ended_at": "2026-11-17T07:57:20.582598Z"
+      },
+      {
+        "id": 16,
+        "node_id": "node_01",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:56:03.556466Z",
+        "ended_at": "2026-11-17T07:57:22.894600Z"
+      },
+      {
+        "id": 15,
+        "node_id": "node_02",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:55:20.812890Z",
+        "ended_at": "2026-11-17T07:55:39.851571Z"
+      },
+      {
+        "id": 14,
+        "node_id": "node_02",
+        "kind": "OPEN_LOAD",
+        "started_at": "2026-11-17T07:54:04.049765Z",
+        "ended_at": "2026-11-17T07:54:11.178359Z"
+      },
+      {
+        "id": 13,
+        "node_id": "node_03",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:50:19.151487Z",
+        "ended_at": "2026-11-17T07:50:20.546662Z"
+      },
+      {
+        "id": 12,
+        "node_id": "node_01",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:50:17.051901Z",
+        "ended_at": "2026-11-17T07:50:18.996746Z"
+      },
+      {
+        "id": 11,
+        "node_id": "node_02",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:50:16.339081Z",
+        "ended_at": "2026-11-17T07:50:19.961782Z"
+      },
+      {
+        "id": 10,
+        "node_id": "node_03",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:45:36.737073Z",
+        "ended_at": "2026-11-17T07:45:36.949980Z"
+      },
+      {
+        "id": 9,
+        "node_id": "node_02",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:28:44.154165Z",
+        "ended_at": "2026-11-17T07:35:29.589068Z"
+      },
+      {
+        "id": 8,
+        "node_id": "node_01",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:28:44.150134Z",
+        "ended_at": "2026-11-17T07:35:28.483305Z"
+      },
+      {
+        "id": 7,
+        "node_id": "node_03",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:28:44.137878Z",
+        "ended_at": "2026-11-17T07:35:29.741497Z"
+      },
+      {
+        "id": 6,
+        "node_id": "node_01",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:26:03.069801Z",
+        "ended_at": "2026-11-17T07:27:00.260432Z"
+      },
+      {
+        "id": 5,
+        "node_id": "node_03",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:26:03.039188Z",
+        "ended_at": "2026-11-17T07:27:00.293363Z"
+      },
+      {
+        "id": 4,
+        "node_id": "node_02",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:26:03.028404Z",
+        "ended_at": "2026-11-17T07:27:00.232494Z"
+      },
+      {
+        "id": 3,
+        "node_id": "node_03",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:10:48.801486Z",
+        "ended_at": "2026-11-17T07:10:48.976924Z"
+      },
+      {
+        "id": 2,
+        "node_id": "node_02",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:10:48.660535Z",
+        "ended_at": "2026-11-17T07:10:48.837040Z"
+      },
+      {
+        "id": 1,
+        "node_id": "node_01",
+        "kind": "OFFLINE",
+        "started_at": "2026-11-17T07:10:48.586236Z",
+        "ended_at": "2026-11-17T07:10:48.794932Z"
+      }
+    ],
+    "total": 25,
+    "limit": 100,
+    "offset": 0
+  }
+}

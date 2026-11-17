@@ -1,0 +1,14 @@
+{
+  "text": "Simulator\n\nCommunity License\n\n05:57.643\n40%\n\nPhotoresistor (LDR)\n\nILLUMINATION (LUX)\n0.1\n\n0.1 lux",
+  "sliders": [
+    {
+      "outer": "<input data-index=\"0\" aria-valuenow=\"0.1\" aria-valuetext=\"0.1 lux\" aria-orientation=\"horizontal\" aria-valuemax=\"100000\" aria-valuemin=\"0.1\" min=\"-1\" max=\"5\" step=\"0.02\" type=\"range\" value=\"-1\" style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;\">"
+    },
+    {
+      "outer": "<input tabindex=\"0\" type=\"range\" class=\"hide-input\" max=\"1023\" min=\"0\" value=\"1023\" step=\"1\" aria-valuemin=\"0\" aria-valuenow=\"1023\">"
+    },
+    {
+      "outer": "<svg role=\"slider\" width=\"20mm\" height=\"20mm\" version=\"1.1\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\" style=\"--knob-angle: 135deg;\">\n      <defs>\n        <filter id=\"outline\">\n          <feDropShadow id=\"glow\" dx=\"0\" dy=\"0\" stdDeviation=\"0.5\" flood-color=\"cyan\"></feDropShadow>\n        </filter>\n      </defs>\n      <rect x=\".15\" y=\".15\" width=\"19.5\" height=\"19.5\" ry=\"1.23\" fill=\"#04588"
+    }
+  ]
+}

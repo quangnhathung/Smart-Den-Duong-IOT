@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "nodes": {
+    "node_01": [
+      {
+        "node_id": "node_01",
+        "port": 4000,
+        "host_ms": 1794904280271.708,
+        "monotonic_ns": 21864298240865,
+        "line": "CONTROL uptime_ms=664844 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=4063 target=25 applied=25 duty=64 ready=1 fault=OK mqtt=0"
+      },
+      {
+        "node_id": "node_01",
+        "port": 4000,
+        "host_ms": 1794904282372.6313,
+        "monotonic_ns": 21866399164363,
+        "line": "CONTROL uptime_ms=665844 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=4063 target=25 applied=25 duty=64 ready=1 fault=OK mqtt=0"
+      },
+      {
+        "node_id": "node_01",
+        "port": 4000,
+        "host_ms": 1794904284473.6277,
+        "monotonic_ns": 21868500160709,
+        "line": "CONTROL uptime_ms=666844 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=4063 target=25 applied=25 duty=64 ready=1 fault=OK mqtt=0"
+      }
+    ],
+    "node_02": [
+      {
+        "node_id": "node_02",
+        "port": 4001,
+        "host_ms": 1794904280266.7073,
+        "monotonic_ns": 21864293240178,
+        "line": "CONTROL uptime_ms=137845 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=4063 target=25 applied=25 duty=64 ready=1 fault=OK mqtt=0"
+      },
+      {
+        "node_id": "node_02",
+        "port": 4001,
+        "host_ms": 1794904282367.6814,
+        "monotonic_ns": 21866394214554,
+        "line": "CONTROL uptime_ms=138845 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=4063 target=25 applied=25 duty=64 ready=1 fault=OK mqtt=0"
+      },
+      {
+        "node_id": "node_02",
+        "port": 4001,
+        "host_ms": 1794904284168.5354,
+        "monotonic_ns": 21868195068813,
+        "line": "CONTROL uptime_ms=139845 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=4063 target=25 applied=25 duty=64 ready=1 fault=OK mqtt=0"
+      }
+    ],
+    "node_03": [
+      {
+        "node_id": "node_03",
+        "port": 4002,
+        "host_ms": 1794904280278.5337,
+        "monotonic_ns": 21864305066769,
+        "line": "CONTROL uptime_ms=661845 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=4063 target=25 applied=25 duty=64 ready=1 fault=OK mqtt=0"
+      },
+      {
+        "node_id": "node_03",
+        "port": 4002,
+        "host_ms": 1794904282079.43,
+        "monotonic_ns": 21866105962610,
+        "line": "CONTROL uptime_ms=662845 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=4063 target=25 applied=25 duty=64 ready=1 fault=OK mqtt=0"
+      },
+      {
+        "node_id": "node_03",
+        "port": 4002,
+        "host_ms": 1794904284180.403,
+        "monotonic_ns": 21868206936064,
+        "line": "CONTROL uptime_ms=663845 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=4063 target=25 applied=25 duty=64 ready=1 fault=OK mqtt=0"
+      }
+    ]
+  }
+}

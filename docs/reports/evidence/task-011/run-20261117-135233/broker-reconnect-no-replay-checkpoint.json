@@ -1,0 +1,73 @@
+{
+  "up_started": "2026-11-17T08:31:25.789523+00:00",
+  "recorder": {
+    "latest": {
+      "node_01": {
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "d6fe6a8a",
+          "seq": 817,
+          "uptime_ms": 671876,
+          "mode": "AUTO",
+          "environment": "NIGHT",
+          "motion": "NONE",
+          "ldr_adc": 4063,
+          "current_adc": 4095,
+          "distance_cm": 101.6724,
+          "brightness_target": 25,
+          "brightness_applied": 25,
+          "current_ma_sim": 500,
+          "power_sim_w": 6,
+          "faults": []
+        },
+        "host_ms": 1794904294635.6392
+      },
+      "node_03": {
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_03",
+          "boot_id": "9fbc1fc2",
+          "seq": 1423,
+          "uptime_ms": 668459,
+          "mode": "AUTO",
+          "environment": "NIGHT",
+          "motion": "NONE",
+          "ldr_adc": 4063,
+          "current_adc": 4095,
+          "distance_cm": 101.4138,
+          "brightness_target": 25,
+          "brightness_applied": 25,
+          "current_ma_sim": 500,
+          "power_sim_w": 6,
+          "faults": []
+        },
+        "host_ms": 1794904293239.0745
+      },
+      "node_02": {
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_02",
+          "boot_id": "33ec5fdb",
+          "seq": 203,
+          "uptime_ms": 145071,
+          "mode": "AUTO",
+          "environment": "NIGHT",
+          "motion": "NONE",
+          "ldr_adc": 4063,
+          "current_adc": 4095,
+          "distance_cm": 101.4138,
+          "brightness_target": 25,
+          "brightness_applied": 25,
+          "current_ma_sim": 500,
+          "power_sim_w": 6,
+          "faults": []
+        },
+        "host_ms": 1794904294651.335
+      }
+    },
+    "events_count": 6665,
+    "connected": true
+  },
+  "broker_log": "1794904286: mosquitto version 2.1.2 starting\n1794904286: Config loaded from /mosquitto/config/mosquitto.conf.\n1794904286: Bridge support available.\n1794904286: Persistence support available.\n1794904286: TLS support available.\n1794904286: TLS-PSK support available.\n1794904286: Websockets support available.\n1794904286: Opening ipv4 listen socket on port 1883.\n1794904286: mosquitto version 2.1.2 running\n1794904286: New connection from 172.17.0.1:51806 on port 1883.\n1794904286: New client connected from 172.17.0.1:51806 as task011-observer-fast (p4, c1, k20).\n1794904286: No will message specified.\n1794904286: Sending CONNACK to task011-observer-fast (0, 0)\n1794904286: Received SUBSCRIBE from task011-observer-fast\n1794904286: \thuit/nhom7/smartlight/v1/# (QoS 1)\n1794904286: task011-observer-fast 1 huit/nhom7/smartlight/v1/#\n1794904286: Sending SUBACK to task011-observer-fast\n1794904290: New connection from 172.17.0.1:59428 on port 1883.\n1794904290: New client connected from 172.17.0.1:59428 as smartlight-backend-29c7ef2f7416 (p4, c1, k15).\n1794904290: No will message specified.\n1794904290: Sending CONNACK to smartlight-backend-29c7ef2f7416 (0, 0)\n1794904290: Received SUBSCRIBE from smartlight-backend-29c7ef2f7416\n1794904290: \thuit/nhom7/smartlight/v1/+/telemetry (QoS 0)\n1794904290: smartlight-backend-29c7ef2f7416 0 huit/nhom7/smartlight/v1/+/telemetry\n1794904290: \thuit/nhom7/smartlight/v1/+/availability (QoS 0)\n1794904290: smartlight-backend-29c7ef2f7416 0 huit/nhom7/smartlight/v1/+/availability\n1794904290: \thuit/nhom7/smartlight/v1/+/ack (QoS 0)\n1794904290: smartlight-backend-29c7ef2f7416 0 huit/nhom7/smartlight/v1/+/ack\n1794904290: Sending SUBACK to smartlight-backend-29c7ef2f7416\n1794904290: New connection from 172.17.0.1:59432 on port 1883.\n1794904290: New client connected from 172.17.0.1:59432 as smartlight-node_03-p0 (p4, c1, k15).\n1794904290: Will message specified (80 bytes) (r1, q0).\n1794904290: \thuit/nhom7/smartlight/v1/node_03/availability\n1794904290: Sending CONNACK to smartlight-node_03-p0 (0, 0)\n1794904290: Received SUBSCRIBE from smartlight-node_03-p0\n1794904290: \thuit/nhom7/smartlight/v1/node_03/diagnostics/ping (QoS 1)\n1794904290: smartlight-node_03-p0 1 huit/nhom7/smartlight/v1/node_03/diagnostics/ping\n1794904290: Sending SUBACK to smartlight-node_03-p0\n1794904290: Received SUBSCRIBE from smartlight-node_03-p0\n1794904290: \thuit/nhom7/smartlight/v1/node_03/command (QoS 1)\n1794904290: smartlight-node_03-p0 1 huit/nhom7/smartlight/v1/node_03/command\n1794904290: Sending SUBACK to smartlight-node_03-p0\n1794904290: Received PUBLISH from smartlight-node_03-p0 (d0, q0, r1, m0, 'huit/nhom7/smartlight/v1/node_03/availability', ... (79 bytes))\n1794904290: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_03/availability', ... (79 bytes))\n1794904290: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_03/availability', ... (79 bytes))\n1794904291: Received PUBLISH from smartlight-node_03-p0 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_03/telemetry', ... (296 bytes))\n1794904291: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_03/telemetry', ... (296 bytes))\n1794904291: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_03/telemetry', ... (296 bytes))\n1794904291: New connection from 172.17.0.1:59448 on port 1883.\n1794904291: New client connected from 172.17.0.1:59448 as smartlight-node_02-p0 (p4, c1, k15).\n1794904291: Will message specified (80 bytes) (r1, q0).\n1794904291: \thuit/nhom7/smartlight/v1/node_02/availability\n1794904291: Sending CONNACK to smartlight-node_02-p0 (0, 0)\n1794904291: Received SUBSCRIBE from smartlight-node_02-p0\n1794904291: \thuit/nhom7/smartlight/v1/node_02/diagnostics/ping (QoS 1)\n1794904291: smartlight-node_02-p0 1 huit/nhom7/smartlight/v1/node_02/diagnostics/ping\n1794904291: Sending SUBACK to smartlight-node_02-p0\n1794904291: Received SUBSCRIBE from smartlight-node_02-p0\n1794904291: \thuit/nhom7/smartlight/v1/node_02/command (QoS 1)\n1794904291: smartlight-node_02-p0 1 huit/nhom7/smartlight/v1/node_02/command\n1794904291: Sending SUBACK to smartlight-node_02-p0\n1794904291: Received PUBLISH from smartlight-node_02-p0 (d0, q0, r1, m0, 'huit/nhom7/smartlight/v1/node_02/availability', ... (79 bytes))\n1794904291: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/availability', ... (79 bytes))\n1794904291: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/availability', ... (79 bytes))\n1794904291: Received PUBLISH from smartlight-node_02-p0 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904291: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904291: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904292: Received PUBLISH from smartlight-node_02-p0 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904292: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904292: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904292: Received PUBLISH from smartlight-node_02-p0 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904292: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904292: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904292: Received PUBLISH from smartlight-node_03-p0 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_03/telemetry', ... (295 bytes))\n1794904292: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_03/telemetry', ... (295 bytes))\n1794904292: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_03/telemetry', ... (295 bytes))\n1794904293: Received PUBLISH from smartlight-node_03-p0 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_03/telemetry', ... (296 bytes))\n1794904293: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_03/telemetry', ... (296 bytes))\n1794904293: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_03/telemetry', ... (296 bytes))\n1794904294: New connection from 172.17.0.1:59454 on port 1883.\n1794904294: New client connected from 172.17.0.1:59454 as smartlight-node_01-p0 (p4, c1, k15).\n1794904294: Will message specified (80 bytes) (r1, q0).\n1794904294: \thuit/nhom7/smartlight/v1/node_01/availability\n1794904294: Sending CONNACK to smartlight-node_01-p0 (0, 0)\n1794904294: Received PUBLISH from smartlight-node_02-p0 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904294: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904294: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904294: Received SUBSCRIBE from smartlight-node_01-p0\n1794904294: \thuit/nhom7/smartlight/v1/node_01/diagnostics/ping (QoS 1)\n1794904294: smartlight-node_01-p0 1 huit/nhom7/smartlight/v1/node_01/diagnostics/ping\n1794904294: Sending SUBACK to smartlight-node_01-p0\n1794904294: Received SUBSCRIBE from smartlight-node_01-p0\n1794904294: \thuit/nhom7/smartlight/v1/node_01/command (QoS 1)\n1794904294: smartlight-node_01-p0 1 huit/nhom7/smartlight/v1/node_01/command\n1794904294: Sending SUBACK to smartlight-node_01-p0\n1794904294: Received PUBLISH from smartlight-node_01-p0 (d0, q0, r1, m0, 'huit/nhom7/smartlight/v1/node_01/availability', ... (79 bytes))\n1794904294: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/availability', ... (79 bytes))\n1794904294: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/availability', ... (79 bytes))\n1794904294: Received PUBLISH from smartlight-node_01-p0 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/telemetry', ... (295 bytes))\n1794904294: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/telemetry', ... (295 bytes))\n1794904294: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_01/telemetry', ... (295 bytes))\n1794904294: Received PUBLISH from smartlight-node_02-p0 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904294: Sending PUBLISH to smartlight-backend-29c7ef2f7416 (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904294: Sending PUBLISH to task011-observer-fast (d0, q0, r0, m0, 'huit/nhom7/smartlight/v1/node_02/telemetry', ... (295 bytes))\n1794904286: Info: running mosquitto as user: mosquitto.\n"
+}

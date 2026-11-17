@@ -1,0 +1,20 @@
+{
+  "backend": {
+    "mismatched_original_tracked_paths": [],
+    "status": " M README.md\n M smartlight/service.py\n?? tests/test_service.py\n",
+    "original_status": " M README.md\n M smartlight/service.py\n?? tests/test_service.py\n"
+  },
+  "dashboard": {
+    "mismatched_original_tracked_paths": [],
+    "status": "",
+    "original_status": ""
+  },
+  "protected_firmware": {
+    "docs/srs.md": true,
+    "src/LightingController.cpp": true,
+    "src/DimmingController.cpp": true,
+    "src/FaultDetector.cpp": true,
+    "src/SensorReader.cpp": true,
+    "src/main.cpp": true
+  }
+}

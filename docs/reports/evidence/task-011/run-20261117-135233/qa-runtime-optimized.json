@@ -1,0 +1,68 @@
+{
+  "shared_group_stopped": [
+    435877
+  ],
+  "runtime": "Three independent QA profiles; background throttling disabled; AI features disabled only in QA profiles",
+  "flags": [
+    "--disable-background-timer-throttling",
+    "--disable-renderer-backgrounding",
+    "--disable-backgrounding-occluded-windows"
+  ],
+  "reason": "Shared VSCode runtime measured about 37% simulation speed; revert process isolation, avoid background scheduling throttling. No product code/timer change.",
+  "launches": [
+    {
+      "name": "vscode-optimized-1",
+      "pid": 442838,
+      "args": [
+        "/usr/share/code/code",
+        "--new-window",
+        "--user-data-dir=/tmp/task011-20261117-135233/node_01-optimized-profile",
+        "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+        "--remote-debugging-port=19222",
+        "--skip-welcome",
+        "--skip-release-notes",
+        "--disable-background-timer-throttling",
+        "--disable-renderer-backgrounding",
+        "--disable-backgrounding-occluded-windows",
+        "/tmp/task011-20261117-135233/node_01"
+      ],
+      "proc_start_ticks": "1810812"
+    },
+    {
+      "name": "vscode-optimized-2",
+      "pid": 442839,
+      "args": [
+        "/usr/share/code/code",
+        "--new-window",
+        "--user-data-dir=/tmp/task011-20261117-135233/node_02-optimized-profile",
+        "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+        "--remote-debugging-port=19223",
+        "--skip-welcome",
+        "--skip-release-notes",
+        "--disable-background-timer-throttling",
+        "--disable-renderer-backgrounding",
+        "--disable-backgrounding-occluded-windows",
+        "/tmp/task011-20261117-135233/node_02"
+      ],
+      "proc_start_ticks": "1810813"
+    },
+    {
+      "name": "vscode-optimized-3",
+      "pid": 442840,
+      "args": [
+        "/usr/share/code/code",
+        "--new-window",
+        "--user-data-dir=/tmp/task011-20261117-135233/node_03-optimized-profile",
+        "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+        "--remote-debugging-port=19224",
+        "--skip-welcome",
+        "--skip-release-notes",
+        "--disable-background-timer-throttling",
+        "--disable-renderer-backgrounding",
+        "--disable-backgrounding-occluded-windows",
+        "/tmp/task011-20261117-135233/node_03"
+      ],
+      "proc_start_ticks": "1810814"
+    }
+  ]
+}

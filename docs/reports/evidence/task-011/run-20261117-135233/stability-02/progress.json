@@ -1,0 +1,17 @@
+{
+  "elapsed_s": 1324.434571114,
+  "remaining_s": 475.56542888600006,
+  "samples": 661,
+  "errors": 0,
+  "stale_observations": 0,
+  "changed_samples": {
+    "node_01": 568,
+    "node_02": 653,
+    "node_03": 521
+  },
+  "max_age_s": {
+    "node_01": 4.452514770000562,
+    "node_02": 2.6282248409988824,
+    "node_03": 4.339944488998299
+  }
+}

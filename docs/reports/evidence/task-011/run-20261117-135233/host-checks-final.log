@@ -1,0 +1,38 @@
+CHECK protocol-node_01
+PASS protocol parser: strict fields/types/ranges, UUID/boot, complete JSON, wrong topic/node, malformed/oversized payload
+PASS cache: exact deadline, duplicate after expiry, content conflict, cached rejection, boot mismatch/reset, FIFO32
+PASS wire: full telemetry, uint64 beyond millis wrap, current/power model, null/invalid distance, faults, ACK/availability, bounded buffer
+PASS mailbox: queue8 overflow, result reservation/backpressure, disconnect flush, coherent latest snapshot/change coalescing
+CHECK protocol-node_02
+PASS protocol parser: strict fields/types/ranges, UUID/boot, complete JSON, wrong topic/node, malformed/oversized payload
+PASS cache: exact deadline, duplicate after expiry, content conflict, cached rejection, boot mismatch/reset, FIFO32
+PASS wire: full telemetry, uint64 beyond millis wrap, current/power model, null/invalid distance, faults, ACK/availability, bounded buffer
+PASS mailbox: queue8 overflow, result reservation/backpressure, disconnect flush, coherent latest snapshot/change coalescing
+CHECK protocol-node_03
+PASS protocol parser: strict fields/types/ranges, UUID/boot, complete JSON, wrong topic/node, malformed/oversized payload
+PASS cache: exact deadline, duplicate after expiry, content conflict, cached rejection, boot mismatch/reset, FIFO32
+PASS wire: full telemetry, uint64 beyond millis wrap, current/power model, null/invalid distance, faults, ACK/availability, bounded buffer
+PASS mailbox: queue8 overflow, result reservation/backpressure, disconnect flush, coherent latest snapshot/change coalescing
+CHECK controller-node_01
+PASS environment: 5 fresh samples, UNKNOWN startup, initial boundaries, hysteresis, 1s dwell, direct jumps, invalid ADC
+PASS AUTO/MANUAL: PIR gate, 100cm boundary, invalid distance, max hold/expiry, DAY priority, manual range/refresh/60s/offline, no stale hold
+PASS dimming/fault: 20ms/2-point limit, odd targets, duty mapping, stable1s, detect2s/recover3s, thresholds, invalid ADC, persistent fault
+PASS wrap: filter/dwell, MANUAL deadline, hold and fault across uint32 rollover
+CHECK sensors-node_01
+PASS sensors: async ECHO, 12us TRIG, 30ms timeout/late edges, invalidation/recovery 2/100/400cm, ADC/PIR scheduling, micros/millis wrap; no pulseIn
+CHECK app-node_01
+PASS remote app: ACK after target acceptance, dimming separate, expired/boot/session rejection, duplicate no MANUAL refresh, Serial/MQTT ordering
+PASS app integration: one PWM owner/no diagnostic cycle, nonblocking Serial/overflow/parser, manual/AUTO/offline control, sensor/CONTROL logs
+CHECK app-node_02
+PASS remote app: ACK after target acceptance, dimming separate, expired/boot/session rejection, duplicate no MANUAL refresh, Serial/MQTT ordering
+PASS app integration: one PWM owner/no diagnostic cycle, nonblocking Serial/overflow/parser, manual/AUTO/offline control, sensor/CONTROL logs
+CHECK app-node_03
+PASS remote app: ACK after target acceptance, dimming separate, expired/boot/session rejection, duplicate no MANUAL refresh, Serial/MQTT ordering
+PASS app integration: one PWM owner/no diagnostic cycle, nonblocking Serial/overflow/parser, manual/AUTO/offline control, sensor/CONTROL logs
+CHECK mqtt-node_01
+PASS MQTT integration: diagnostics, clean/LWT/QoS/subscriptions, telemetry rate/seq/reconnect, ACK after result, publish failure retry, session flush, offline backoff, uptime64
+CHECK mqtt-node_02
+PASS MQTT integration: diagnostics, clean/LWT/QoS/subscriptions, telemetry rate/seq/reconnect, ACK after result, publish failure retry, session flush, offline backoff, uptime64
+CHECK mqtt-node_03
+PASS MQTT integration: diagnostics, clean/LWT/QoS/subscriptions, telemetry rate/seq/reconnect, ACK after result, publish failure retry, session flush, offline backoff, uptime64
+PASS: 11 host runs and 2 invalid identity checks; Wokwi live remains separate

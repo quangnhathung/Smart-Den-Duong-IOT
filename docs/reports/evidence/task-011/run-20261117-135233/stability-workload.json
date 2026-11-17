@@ -1,0 +1,6 @@
+{
+  "window": "stability-01",
+  "workload": "First minutes include sequential LDR Home/End latency samples in AUTO, then steady AUTO. No planned disconnect/restart/fault or MANUAL during this window.",
+  "reason": "Normal sensor updates are operating load; all disruptive tests completed before start.",
+  "product_source_config_frozen": true
+}

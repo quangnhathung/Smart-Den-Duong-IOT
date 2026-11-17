@@ -1,0 +1,9 @@
+{
+  "status": "INCOMPLETE",
+  "ended_at": "2026-11-17T08:13:48.148132+00:00",
+  "observed_seconds": 451.328914103,
+  "required_seconds": 1800,
+  "samples": 226,
+  "reason": "Stopped before firmware sensor-change coalescing fix; full new window required after rebuilding/restarting. Partial run is not stability acceptance.",
+  "observed_problems": []
+}

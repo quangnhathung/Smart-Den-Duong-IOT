@@ -1,0 +1,5 @@
+{
+  "workload": "Sequential LDR latency matrix in AUTO at beginning, then steady AUTO NIGHT25. No MANUAL, fault, restart, or outage in the acceptance window.",
+  "firmware": "sensor-coalescing-fixed; three final artifact manifests pinned in start.json",
+  "previous_window": "stability-01 is INCOMPLETE and excluded entirely from 1800 seconds"
+}

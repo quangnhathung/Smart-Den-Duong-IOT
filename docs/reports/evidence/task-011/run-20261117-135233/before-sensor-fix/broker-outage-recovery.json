@@ -1,0 +1,1271 @@
+{
+  "status": "PASS",
+  "start": {
+    "before": [
+      {
+        "node_id": "node_01",
+        "connection": "ONLINE",
+        "freshness": "FRESH",
+        "last_seen": "2026-11-17T07:59:50.188923Z",
+        "age_s": 1.1000792890008597,
+        "telemetry": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "7c30d5e4",
+          "seq": "222",
+          "uptime_ms": "461088",
+          "mode": "AUTO",
+          "environment": "DAY",
+          "ldr_adc": 32,
+          "motion": "NONE",
+          "distance_cm": 101.5345,
+          "brightness_target": 0,
+          "brightness_applied": 0,
+          "current_adc": 4095,
+          "current_ma_sim": 0.0,
+          "power_sim_w": 0.0,
+          "faults": []
+        },
+        "faults": [],
+        "pending_command_id": null,
+        "can_command": true
+      },
+      {
+        "node_id": "node_02",
+        "connection": "ONLINE",
+        "freshness": "FRESH",
+        "last_seen": "2026-11-17T07:59:50.619391Z",
+        "age_s": 0.6696588839986362,
+        "telemetry": {
+          "schema_version": 1,
+          "node_id": "node_02",
+          "boot_id": "c96867c8",
+          "seq": "48",
+          "uptime_ms": "140789",
+          "mode": "AUTO",
+          "environment": "DAY",
+          "ldr_adc": 32,
+          "motion": "NONE",
+          "distance_cm": 101.4138,
+          "brightness_target": 0,
+          "brightness_applied": 0,
+          "current_adc": 4095,
+          "current_ma_sim": 0.0,
+          "power_sim_w": 0.0,
+          "faults": []
+        },
+        "faults": [],
+        "pending_command_id": null,
+        "can_command": true
+      },
+      {
+        "node_id": "node_03",
+        "connection": "ONLINE",
+        "freshness": "FRESH",
+        "last_seen": "2026-11-17T07:59:51.172116Z",
+        "age_s": 0.11694279199946322,
+        "telemetry": {
+          "schema_version": 1,
+          "node_id": "node_03",
+          "boot_id": "2d32a9e8",
+          "seq": "221",
+          "uptime_ms": "461440",
+          "mode": "AUTO",
+          "environment": "DAY",
+          "ldr_adc": 32,
+          "motion": "NONE",
+          "distance_cm": 101.431,
+          "brightness_target": 0,
+          "brightness_applied": 0,
+          "current_adc": 4095,
+          "current_ma_sim": 0.0,
+          "power_sim_w": 0.0,
+          "faults": []
+        },
+        "faults": [],
+        "pending_command_id": null,
+        "can_command": true
+      }
+    ],
+    "down": [
+      {
+        "node_id": "node_01",
+        "connection": "OFFLINE",
+        "freshness": "STALE",
+        "last_seen": "2026-11-17T07:59:50.188923Z",
+        "age_s": null,
+        "telemetry": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "7c30d5e4",
+          "seq": "222",
+          "uptime_ms": "461088",
+          "mode": "AUTO",
+          "environment": "DAY",
+          "ldr_adc": 32,
+          "motion": "NONE",
+          "distance_cm": 101.5345,
+          "brightness_target": 0,
+          "brightness_applied": 0,
+          "current_adc": 4095,
+          "current_ma_sim": 0.0,
+          "power_sim_w": 0.0,
+          "faults": []
+        },
+        "faults": [],
+        "pending_command_id": "aa9341a8-783b-4d1c-9f36-37b0e32484f2",
+        "can_command": false
+      },
+      {
+        "node_id": "node_02",
+        "connection": "OFFLINE",
+        "freshness": "STALE",
+        "last_seen": "2026-11-17T07:59:50.619391Z",
+        "age_s": null,
+        "telemetry": {
+          "schema_version": 1,
+          "node_id": "node_02",
+          "boot_id": "c96867c8",
+          "seq": "48",
+          "uptime_ms": "140789",
+          "mode": "AUTO",
+          "environment": "DAY",
+          "ldr_adc": 32,
+          "motion": "NONE",
+          "distance_cm": 101.4138,
+          "brightness_target": 0,
+          "brightness_applied": 0,
+          "current_adc": 4095,
+          "current_ma_sim": 0.0,
+          "power_sim_w": 0.0,
+          "faults": []
+        },
+        "faults": [],
+        "pending_command_id": "6ffe901a-7b0a-4f01-a880-484d8d3ba53b",
+        "can_command": false
+      },
+      {
+        "node_id": "node_03",
+        "connection": "OFFLINE",
+        "freshness": "STALE",
+        "last_seen": "2026-11-17T07:59:51.172116Z",
+        "age_s": null,
+        "telemetry": {
+          "schema_version": 1,
+          "node_id": "node_03",
+          "boot_id": "2d32a9e8",
+          "seq": "221",
+          "uptime_ms": "461440",
+          "mode": "AUTO",
+          "environment": "DAY",
+          "ldr_adc": 32,
+          "motion": "NONE",
+          "distance_cm": 101.431,
+          "brightness_target": 0,
+          "brightness_applied": 0,
+          "current_adc": 4095,
+          "current_ma_sim": 0.0,
+          "power_sim_w": 0.0,
+          "faults": []
+        },
+        "faults": [],
+        "pending_command_id": "f4d86c74-fa65-4074-bde7-b09499a9644c",
+        "can_command": false
+      }
+    ],
+    "commands": [
+      {
+        "command_id": "aa9341a8-783b-4d1c-9f36-37b0e32484f2",
+        "node_id": "node_01",
+        "boot_id": "7c30d5e4",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "7c30d5e4",
+          "command_id": "aa9341a8-783b-4d1c-9f36-37b0e32484f2",
+          "deadline_uptime_ms": "466088",
+          "mode": "MANUAL",
+          "brightness": 80
+        },
+        "created_at": "2026-11-17T07:59:51.346724Z",
+        "sent_at": "2026-11-17T07:59:51.346804Z",
+        "retry_at": null,
+        "result": "PENDING",
+        "reason": null,
+        "ack_at": null,
+        "attempts": 1
+      },
+      {
+        "command_id": "6ffe901a-7b0a-4f01-a880-484d8d3ba53b",
+        "node_id": "node_02",
+        "boot_id": "c96867c8",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_02",
+          "boot_id": "c96867c8",
+          "command_id": "6ffe901a-7b0a-4f01-a880-484d8d3ba53b",
+          "deadline_uptime_ms": "145789",
+          "mode": "MANUAL",
+          "brightness": 80
+        },
+        "created_at": "2026-11-17T07:59:51.350820Z",
+        "sent_at": "2026-11-17T07:59:51.350906Z",
+        "retry_at": null,
+        "result": "PENDING",
+        "reason": null,
+        "ack_at": null,
+        "attempts": 1
+      },
+      {
+        "command_id": "f4d86c74-fa65-4074-bde7-b09499a9644c",
+        "node_id": "node_03",
+        "boot_id": "2d32a9e8",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_03",
+          "boot_id": "2d32a9e8",
+          "command_id": "f4d86c74-fa65-4074-bde7-b09499a9644c",
+          "deadline_uptime_ms": "466440",
+          "mode": "MANUAL",
+          "brightness": 80
+        },
+        "created_at": "2026-11-17T07:59:51.354657Z",
+        "sent_at": "2026-11-17T07:59:51.354729Z",
+        "retry_at": null,
+        "result": "PENDING",
+        "reason": null,
+        "ack_at": null,
+        "attempts": 1
+      }
+    ],
+    "event_index": 93,
+    "down_monotonic_ns": 19975732087718,
+    "down_host_ms": 1794902391705.5615
+  },
+  "up": [
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:01:03.935308Z",
+      "age_s": 0.18226169899935485,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "7c30d5e4",
+        "seq": "223",
+        "uptime_ms": "506532",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.7069,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_02",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:01:01.339339Z",
+      "age_s": 2.7782839450010215,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "c96867c8",
+        "seq": "49",
+        "uptime_ms": "185832",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_03",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T08:01:02.132752Z",
+      "age_s": 1.9848871680005686,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "2d32a9e8",
+        "seq": "222",
+        "uptime_ms": "505922",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 101.931,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    }
+  ],
+  "events": [
+    {
+      "event": "mqtt",
+      "host_ms": 1794902391347.2678,
+      "monotonic_ns": 19975373800583,
+      "topic": "huit/nhom7/smartlight/v1/node_01/command",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "7c30d5e4",
+        "command_id": "aa9341a8-783b-4d1c-9f36-37b0e32484f2",
+        "deadline_uptime_ms": 466088,
+        "mode": "MANUAL",
+        "brightness": 80
+      },
+      "retain": false,
+      "qos": 1
+    },
+    {
+      "event": "mqtt",
+      "host_ms": 1794902391351.4624,
+      "monotonic_ns": 19975377995186,
+      "topic": "huit/nhom7/smartlight/v1/node_02/command",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "c96867c8",
+        "command_id": "6ffe901a-7b0a-4f01-a880-484d8d3ba53b",
+        "deadline_uptime_ms": 145789,
+        "mode": "MANUAL",
+        "brightness": 80
+      },
+      "retain": false,
+      "qos": 1
+    },
+    {
+      "event": "mqtt",
+      "host_ms": 1794902391355.2856,
+      "monotonic_ns": 19975381819376,
+      "topic": "huit/nhom7/smartlight/v1/node_03/command",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "2d32a9e8",
+        "command_id": "f4d86c74-fa65-4074-bde7-b09499a9644c",
+        "deadline_uptime_ms": 466440,
+        "mode": "MANUAL",
+        "brightness": 80
+      },
+      "retain": false,
+      "qos": 1
+    },
+    {
+      "event": "mqtt",
+      "host_ms": 1794902391391.86,
+      "monotonic_ns": 19975418393427,
+      "topic": "huit/nhom7/smartlight/v1/node_03/availability",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "2d32a9e8",
+        "status": "OFFLINE"
+      },
+      "retain": false,
+      "qos": 0
+    },
+    {
+      "event": "mqtt",
+      "host_ms": 1794902391393.367,
+      "monotonic_ns": 19975419900551,
+      "topic": "huit/nhom7/smartlight/v1/node_02/availability",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "c96867c8",
+        "status": "OFFLINE"
+      },
+      "retain": false,
+      "qos": 0
+    },
+    {
+      "event": "mqtt",
+      "host_ms": 1794902391395.7112,
+      "monotonic_ns": 19975422244183,
+      "topic": "huit/nhom7/smartlight/v1/node_01/availability",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "7c30d5e4",
+        "status": "OFFLINE"
+      },
+      "retain": false,
+      "qos": 0
+    },
+    {
+      "event": "disconnected",
+      "host_ms": 1794902391395.985,
+      "monotonic_ns": 19975422517932,
+      "reason": "Unspecified error"
+    },
+    {
+      "event": "connected",
+      "host_ms": 1794902450411.0872,
+      "monotonic_ns": 20034437620687,
+      "reason": "Success"
+    },
+    {
+      "event": "mqtt",
+      "host_ms": 1794902461215.4397,
+      "monotonic_ns": 20045241973313,
+      "topic": "huit/nhom7/smartlight/v1/node_02/availability",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "c96867c8",
+        "status": "ONLINE"
+      },
+      "retain": false,
+      "qos": 0
+    },
+    {
+      "event": "mqtt",
+      "host_ms": 1794902461339.4006,
+      "monotonic_ns": 20045365933273,
+      "topic": "huit/nhom7/smartlight/v1/node_02/telemetry",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "c96867c8",
+        "seq": 49,
+        "uptime_ms": 185832,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_adc": 4063,
+        "current_adc": 4095,
+        "distance_cm": 101.4138,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_ma_sim": 500,
+        "power_sim_w": 6,
+        "faults": []
+      },
+      "retain": false,
+      "qos": 0
+    },
+    {
+      "event": "mqtt",
+      "host_ms": 1794902462005.6858,
+      "monotonic_ns": 20046032218640,
+      "topic": "huit/nhom7/smartlight/v1/node_03/availability",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "2d32a9e8",
+        "status": "ONLINE"
+      },
+      "retain": false,
+      "qos": 0
+    },
+    {
+      "event": "mqtt",
+      "host_ms": 1794902462132.936,
+      "monotonic_ns": 20046159468850,
+      "topic": "huit/nhom7/smartlight/v1/node_03/telemetry",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "2d32a9e8",
+        "seq": 222,
+        "uptime_ms": 505922,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_adc": 4063,
+        "current_adc": 4095,
+        "distance_cm": 101.931,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_ma_sim": 500,
+        "power_sim_w": 6,
+        "faults": []
+      },
+      "retain": false,
+      "qos": 0
+    },
+    {
+      "event": "mqtt",
+      "host_ms": 1794902463804.9275,
+      "monotonic_ns": 20047831460694,
+      "topic": "huit/nhom7/smartlight/v1/node_01/availability",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "7c30d5e4",
+        "status": "ONLINE"
+      },
+      "retain": false,
+      "qos": 0
+    },
+    {
+      "event": "mqtt",
+      "host_ms": 1794902463935.2957,
+      "monotonic_ns": 20047961829275,
+      "topic": "huit/nhom7/smartlight/v1/node_01/telemetry",
+      "payload": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "7c30d5e4",
+        "seq": 223,
+        "uptime_ms": 506532,
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "motion": "NONE",
+        "ldr_adc": 4063,
+        "current_adc": 4095,
+        "distance_cm": 101.7069,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_ma_sim": 500,
+        "power_sim_w": 6,
+        "faults": []
+      },
+      "retain": false,
+      "qos": 0
+    }
+  ],
+  "fresh_commands": [
+    {
+      "node_id": "node_01",
+      "request": {
+        "mode": "AUTO"
+      },
+      "request_host_ms": 1794902464193.0286,
+      "status": "PASS",
+      "command": {
+        "command_id": "86d22a99-234f-474e-9c6f-8d1b9a8c20b0",
+        "node_id": "node_01",
+        "boot_id": "7c30d5e4",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_01",
+          "boot_id": "7c30d5e4",
+          "command_id": "86d22a99-234f-474e-9c6f-8d1b9a8c20b0",
+          "deadline_uptime_ms": "511532",
+          "mode": "AUTO"
+        },
+        "created_at": "2026-11-17T08:01:04.195818Z",
+        "sent_at": "2026-11-17T08:01:04.195902Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-17T08:01:04.432180Z",
+        "attempts": 1
+      },
+      "before": [
+        {
+          "node_id": "node_01",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:03.935308Z",
+          "age_s": 0.256558495999343,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_01",
+            "boot_id": "7c30d5e4",
+            "seq": "223",
+            "uptime_ms": "506532",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.7069,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_02",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:01.339339Z",
+          "age_s": 2.852573547002976,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_02",
+            "boot_id": "c96867c8",
+            "seq": "49",
+            "uptime_ms": "185832",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.4138,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_03",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:02.132752Z",
+          "age_s": 2.059168514999328,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_03",
+            "boot_id": "2d32a9e8",
+            "seq": "222",
+            "uptime_ms": "505922",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.931,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        }
+      ],
+      "after": [
+        {
+          "node_id": "node_01",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:03.935308Z",
+          "age_s": 0.5264987929986091,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_01",
+            "boot_id": "7c30d5e4",
+            "seq": "223",
+            "uptime_ms": "506532",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.7069,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_02",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:01.339339Z",
+          "age_s": 3.12251624000055,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_02",
+            "boot_id": "c96867c8",
+            "seq": "49",
+            "uptime_ms": "185832",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.4138,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": false
+        },
+        {
+          "node_id": "node_03",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:02.132752Z",
+          "age_s": 2.329116000000795,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_03",
+            "boot_id": "2d32a9e8",
+            "seq": "222",
+            "uptime_ms": "505922",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.931,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        }
+      ],
+      "mqtt_commands": [
+        {
+          "event": "mqtt",
+          "host_ms": 1794902464196.39,
+          "monotonic_ns": 20048222922510,
+          "topic": "huit/nhom7/smartlight/v1/node_01/command",
+          "payload": {
+            "schema_version": 1,
+            "node_id": "node_01",
+            "boot_id": "7c30d5e4",
+            "command_id": "86d22a99-234f-474e-9c6f-8d1b9a8c20b0",
+            "deadline_uptime_ms": 511532,
+            "mode": "AUTO"
+          },
+          "retain": false,
+          "qos": 1
+        }
+      ],
+      "mqtt_ack": [
+        {
+          "event": "mqtt",
+          "host_ms": 1794902464432.1953,
+          "monotonic_ns": 20048458728361,
+          "topic": "huit/nhom7/smartlight/v1/node_01/ack",
+          "payload": {
+            "schema_version": 1,
+            "node_id": "node_01",
+            "boot_id": "7c30d5e4",
+            "command_id": "86d22a99-234f-474e-9c6f-8d1b9a8c20b0",
+            "result": "APPLIED",
+            "reason": null
+          },
+          "retain": false,
+          "qos": 0
+        }
+      ],
+      "mqtt_command_ack_ms": 235.805419921875
+    },
+    {
+      "node_id": "node_02",
+      "request": {
+        "mode": "AUTO"
+      },
+      "request_host_ms": 1794902464668.6414,
+      "status": "PASS",
+      "command": {
+        "command_id": "96802ea1-70e9-49ab-a173-2f1186c44ca3",
+        "node_id": "node_02",
+        "boot_id": "c96867c8",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_02",
+          "boot_id": "c96867c8",
+          "command_id": "96802ea1-70e9-49ab-a173-2f1186c44ca3",
+          "deadline_uptime_ms": "192841",
+          "mode": "AUTO"
+        },
+        "created_at": "2026-11-17T08:01:04.671050Z",
+        "sent_at": "2026-11-17T08:01:04.671113Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-17T08:01:04.849134Z",
+        "attempts": 1
+      },
+      "before": [
+        {
+          "node_id": "node_01",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:03.935308Z",
+          "age_s": 0.7321332169995003,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_01",
+            "boot_id": "7c30d5e4",
+            "seq": "223",
+            "uptime_ms": "506532",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.7069,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_02",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:04.601106Z",
+          "age_s": 0.06640323900137446,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_02",
+            "boot_id": "c96867c8",
+            "seq": "50",
+            "uptime_ms": "187841",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.4138,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_03",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:02.132752Z",
+          "age_s": 2.534772286999214,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_03",
+            "boot_id": "2d32a9e8",
+            "seq": "222",
+            "uptime_ms": "505922",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.931,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        }
+      ],
+      "after": [
+        {
+          "node_id": "node_01",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:03.935308Z",
+          "age_s": 0.9782804409987875,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_01",
+            "boot_id": "7c30d5e4",
+            "seq": "223",
+            "uptime_ms": "506532",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.7069,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_02",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:04.601106Z",
+          "age_s": 0.3125363920007658,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_02",
+            "boot_id": "c96867c8",
+            "seq": "50",
+            "uptime_ms": "187841",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.4138,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_03",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:02.132752Z",
+          "age_s": 2.7809064489993034,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_03",
+            "boot_id": "2d32a9e8",
+            "seq": "222",
+            "uptime_ms": "505922",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.931,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        }
+      ],
+      "mqtt_commands": [
+        {
+          "event": "mqtt",
+          "host_ms": 1794902464671.611,
+          "monotonic_ns": 20048698143817,
+          "topic": "huit/nhom7/smartlight/v1/node_02/command",
+          "payload": {
+            "schema_version": 1,
+            "node_id": "node_02",
+            "boot_id": "c96867c8",
+            "command_id": "96802ea1-70e9-49ab-a173-2f1186c44ca3",
+            "deadline_uptime_ms": 192841,
+            "mode": "AUTO"
+          },
+          "retain": false,
+          "qos": 1
+        }
+      ],
+      "mqtt_ack": [
+        {
+          "event": "mqtt",
+          "host_ms": 1794902464844.0854,
+          "monotonic_ns": 20048870618157,
+          "topic": "huit/nhom7/smartlight/v1/node_02/ack",
+          "payload": {
+            "schema_version": 1,
+            "node_id": "node_02",
+            "boot_id": "c96867c8",
+            "command_id": "96802ea1-70e9-49ab-a173-2f1186c44ca3",
+            "result": "APPLIED",
+            "reason": null
+          },
+          "retain": false,
+          "qos": 0
+        }
+      ],
+      "mqtt_command_ack_ms": 172.474365234375
+    },
+    {
+      "node_id": "node_03",
+      "request": {
+        "mode": "AUTO"
+      },
+      "request_host_ms": 1794902465530.4897,
+      "status": "PASS",
+      "command": {
+        "command_id": "eb04be5a-e089-4b46-9376-cc16af4b4aba",
+        "node_id": "node_03",
+        "boot_id": "2d32a9e8",
+        "payload": {
+          "schema_version": 1,
+          "node_id": "node_03",
+          "boot_id": "2d32a9e8",
+          "command_id": "eb04be5a-e089-4b46-9376-cc16af4b4aba",
+          "deadline_uptime_ms": "512927",
+          "mode": "AUTO"
+        },
+        "created_at": "2026-11-17T08:01:05.533000Z",
+        "sent_at": "2026-11-17T08:01:05.533046Z",
+        "retry_at": null,
+        "result": "APPLIED",
+        "reason": null,
+        "ack_at": "2026-11-17T08:01:05.741358Z",
+        "attempts": 1
+      },
+      "before": [
+        {
+          "node_id": "node_01",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:03.935308Z",
+          "age_s": 1.5939478920008696,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_01",
+            "boot_id": "7c30d5e4",
+            "seq": "223",
+            "uptime_ms": "506532",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.7069,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_02",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:04.601106Z",
+          "age_s": 0.9281862230018305,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_02",
+            "boot_id": "c96867c8",
+            "seq": "50",
+            "uptime_ms": "187841",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.4138,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_03",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:05.429202Z",
+          "age_s": 0.10009603000071365,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_03",
+            "boot_id": "2d32a9e8",
+            "seq": "223",
+            "uptime_ms": "507927",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.4138,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        }
+      ],
+      "after": [
+        {
+          "node_id": "node_01",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:03.935308Z",
+          "age_s": 1.8142418099996576,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_01",
+            "boot_id": "7c30d5e4",
+            "seq": "223",
+            "uptime_ms": "506532",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.7069,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_02",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:04.601106Z",
+          "age_s": 1.148491506002756,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_02",
+            "boot_id": "c96867c8",
+            "seq": "50",
+            "uptime_ms": "187841",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.4138,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_03",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-17T08:01:05.429202Z",
+          "age_s": 0.3204035489980015,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_03",
+            "boot_id": "2d32a9e8",
+            "seq": "223",
+            "uptime_ms": "507927",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 101.4138,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        }
+      ],
+      "mqtt_commands": [
+        {
+          "event": "mqtt",
+          "host_ms": 1794902465533.498,
+          "monotonic_ns": 20049560031135,
+          "topic": "huit/nhom7/smartlight/v1/node_03/command",
+          "payload": {
+            "schema_version": 1,
+            "node_id": "node_03",
+            "boot_id": "2d32a9e8",
+            "command_id": "eb04be5a-e089-4b46-9376-cc16af4b4aba",
+            "deadline_uptime_ms": 512927,
+            "mode": "AUTO"
+          },
+          "retain": false,
+          "qos": 1
+        }
+      ],
+      "mqtt_ack": [
+        {
+          "event": "mqtt",
+          "host_ms": 1794902465741.3704,
+          "monotonic_ns": 20049767903696,
+          "topic": "huit/nhom7/smartlight/v1/node_03/ack",
+          "payload": {
+            "schema_version": 1,
+            "node_id": "node_03",
+            "boot_id": "2d32a9e8",
+            "command_id": "eb04be5a-e089-4b46-9376-cc16af4b4aba",
+            "result": "APPLIED",
+            "reason": null
+          },
+          "retain": false,
+          "qos": 0
+        }
+      ],
+      "mqtt_command_ack_ms": 207.872314453125
+    }
+  ]
+}

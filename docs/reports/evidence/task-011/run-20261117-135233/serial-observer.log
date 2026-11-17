@@ -1,0 +1,42 @@
+Exception in thread Thread-1 (observe):
+Exception in thread Thread-3 (observe):
+Exception in thread Thread-2 (observe):
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/threading.py", line 1083, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 1025, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task011-serial-observer.py", line 7, in observe
+    port.dtr=False;port.rts=False;port.open();pending=b''
+                                  ~~~~~~~~~^^
+  File "/home/quangnhathung/.platformio/penv/lib/python3.14/site-packages/serial/rfc2217.py", line 414, in open
+    raise SerialException("Port is already open.")
+serial.serialutil.SerialException: Port is already open.
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/threading.py", line 1083, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 1025, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task011-serial-observer.py", line 7, in observe
+    port.dtr=False;port.rts=False;port.open();pending=b''
+                                  ~~~~~~~~~^^
+  File "/home/quangnhathung/.platformio/penv/lib/python3.14/site-packages/serial/rfc2217.py", line 414, in open
+    raise SerialException("Port is already open.")
+serial.serialutil.SerialException: Port is already open.
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/threading.py", line 1083, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 1025, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/task011-serial-observer.py", line 7, in observe
+    port.dtr=False;port.rts=False;port.open();pending=b''
+                                  ~~~~~~~~~^^
+  File "/home/quangnhathung/.platformio/penv/lib/python3.14/site-packages/serial/rfc2217.py", line 414, in open
+    raise SerialException("Port is already open.")
+serial.serialutil.SerialException: Port is already open.
