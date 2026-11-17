@@ -9,9 +9,14 @@ import time
 import uuid
 
 
-def make_command(telemetry, mode, brightness=None, case='valid'):
-    if type(telemetry.get('schema_version')) is not int or telemetry.get('schema_version') != 1 or telemetry.get('node_id') != 'node_01':
-        raise ValueError('Expected schema v1 telemetry for node_01')
+NODE_IDS = ('node_01', 'node_02', 'node_03')
+
+
+def make_command(telemetry, mode, brightness=None, case='valid', node='node_01'):
+    if node not in NODE_IDS:
+        raise ValueError('Unknown node')
+    if type(telemetry.get('schema_version')) is not int or telemetry.get('schema_version') != 1 or telemetry.get('node_id') != node:
+        raise ValueError(f'Expected schema v1 telemetry for {node}')
     boot = telemetry.get('boot_id')
     uptime = telemetry.get('uptime_ms')
     if not isinstance(boot, str) or not re.fullmatch(r'[0-9a-fA-F]{8}', boot):
@@ -24,7 +29,7 @@ def make_command(telemetry, mode, brightness=None, case='valid'):
         raise ValueError('MANUAL needs integer brightness 0..100')
     if mode == 'AUTO' and brightness is not None:
         raise ValueError('AUTO must not include brightness')
-    result = dict(schema_version=1, node_id='node_01', boot_id=boot.lower(), command_id=str(uuid.uuid4()),
+    result = dict(schema_version=1, node_id=node, boot_id=boot.lower(), command_id=str(uuid.uuid4()),
                   deadline_uptime_ms=uptime + 5000, mode=mode)
     if mode == 'MANUAL':
         result['brightness'] = brightness
@@ -33,7 +38,7 @@ def make_command(telemetry, mode, brightness=None, case='valid'):
     elif case == 'wrong-boot':
         result['boot_id'] = '00000001' if boot.lower() == '00000000' else '00000000'
     elif case == 'wrong-node':
-        result['node_id'] = 'node_02'
+        result['node_id'] = NODE_IDS[(NODE_IDS.index(node) + 1) % len(NODE_IDS)]
     elif case == 'invalid-brightness':
         result['mode'] = 'MANUAL'
         result['brightness'] = 101
@@ -44,6 +49,7 @@ def make_command(telemetry, mode, brightness=None, case='valid'):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--node', choices=NODE_IDS, default='node_01')
     parser.add_argument('--telemetry', type=Path, required=True, help='Fresh mosquitto_sub payload, without topic prefix')
     parser.add_argument('--mode', choices=['AUTO', 'MANUAL'], required=True)
     parser.add_argument('--brightness', type=int)
@@ -57,7 +63,7 @@ def main(argv=None):
         telemetry = json.loads(args.telemetry.read_text(encoding='utf-8-sig'))
         if not isinstance(telemetry, dict):
             raise ValueError('Expected telemetry JSON object')
-        print(json.dumps(make_command(telemetry, args.mode, args.brightness, args.case), separators=(',', ':')))
+        print(json.dumps(make_command(telemetry, args.mode, args.brightness, args.case, args.node), separators=(',', ':')))
     except (OSError, ValueError) as error:
         print(f'Command not generated: {error}', file=sys.stderr)
         return 1

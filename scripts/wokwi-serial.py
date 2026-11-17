@@ -125,7 +125,7 @@ def main(argv=None):
                 raise ValueError('Wall timeout waiting for firmware confirmation; keep Wokwi visible/unpaused. No PASS recorded.')
         except (serial.SerialException, OSError, ValueError, KeyboardInterrupt) as error:
             record('RESULT', f'INCOMPLETE/FAIL: {error}')
-            print('Check Wokwi is running node_01 with rfc2217ServerPort=4000. No firmware/broker was changed.', file=sys.stderr)
+            print(f'Check the selected Wokwi simulation uses rfc2217ServerPort={args.port}. No firmware/broker was changed.', file=sys.stderr)
             return 1
 
 
