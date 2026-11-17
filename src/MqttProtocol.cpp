@@ -199,6 +199,14 @@ bool controlChanged(const ControlState &left, const ControlState &right) {
          left.brightnessApplied != right.brightnessApplied || left.openLoad != right.openLoad;
 }
 
+bool sensorsChanged(const SensorSnapshot &left, const SensorSnapshot &right) {
+  // Compare published fields only. Sampling counters and invalid distances (wire null) are not new data.
+  const bool leftDistanceValid = left.distanceValid && std::isfinite(left.distanceCm) && left.distanceCm > 0;
+  const bool rightDistanceValid = right.distanceValid && std::isfinite(right.distanceCm) && right.distanceCm > 0;
+  return left.ldrAdc != right.ldrAdc || left.currentAdc != right.currentAdc || left.pirMotion != right.pirMotion || leftDistanceValid != rightDistanceValid ||
+         (leftDistanceValid && left.distanceCm != right.distanceCm);
+}
+
 void CommandProcessor::reset(const char *bootId) {
   std::strcpy(currentBootId, bootId);
   count = 0;

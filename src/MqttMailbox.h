@@ -54,7 +54,7 @@ public:
   }
 
   void update(const MqttProtocol::TelemetrySnapshot &value) {
-    if (!ready || MqttProtocol::controlChanged(snapshot.control, value.control)) {
+    if (!ready || MqttProtocol::controlChanged(snapshot.control, value.control) || MqttProtocol::sensorsChanged(snapshot.sensors, value.sensors)) {
       ++generation;
     }
     snapshot = value;
