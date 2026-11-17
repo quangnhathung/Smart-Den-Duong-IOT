@@ -1,0 +1,45 @@
+{
+  "report_old_tail_byte_identical": true,
+  "report_old_sha256": "492c80e45d5bf80c57f11fa221cb41aef6d2345fe4ad1acc3e99c304a3c2eacc",
+  "checklist_old_tail_byte_identical": true,
+  "preexisting_evidence_files_checked": 270,
+  "preexisting_evidence_changes": [],
+  "added_markdown_links_missing": [],
+  "task_status_and_groups_unchanged": true,
+  "task011_still_unspecified": true,
+  "checked_repositories": {
+    "firmware": {
+      "head": "7e8f5c4c8afda0943db1f2b22d51cdac1d60c44d",
+      "status": "M docs/reports/checklists.md\n M docs/reports/next-task.md\n M docs/reports/report.md\n M docs/reports/task.md\n M docs/techs/dashboard.md\n M docs/techs/testing.md\n?? docs/reports/evidence/task-010/review-20261117-094517/"
+    },
+    "backend": {
+      "head": "2e6a15fc0b1d70be75e480f08dad8e22c6aa9376",
+      "status": ""
+    },
+    "dashboard": {
+      "head": "6cb402b3e364973b6e51a8ec769444441bfc5e6f",
+      "status": ""
+    }
+  },
+  "all_repo_heads_unchanged": true,
+  "backend_dashboard_worktrees_unchanged": true,
+  "tracked_paths_changed": [
+    "docs/reports/checklists.md",
+    "docs/reports/next-task.md",
+    "docs/reports/report.md",
+    "docs/reports/task.md",
+    "docs/techs/dashboard.md",
+    "docs/techs/testing.md"
+  ],
+  "git_diff_check": {
+    "exit_code": 0,
+    "output": ""
+  },
+  "scope": "Documentation and integrity review only; no new firmware/backend/dashboard/live execution result",
+  "verified_at": "2026-11-17T09:48:14+07:00",
+  "result": "PASS",
+  "review_artifacts_sha256": {
+    "review.json": "d3cb56ec27b2887872d06fd1c9f82cd0c2c85b0bb091dc9b14a9fcceb9f9a3cc",
+    "README.md": "0657c6cbd778ec305c5e31b98679f36d9330696729ebe586b9237daf6223d012"
+  }
+}

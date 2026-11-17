@@ -1,0 +1,81 @@
+{
+  "reviewed_at": "2026-11-17T09:45:17+07:00",
+  "scope": "Read-only review of pulled source, historical live evidence, and local configuration; documentation update only",
+  "repositories_at_start": {
+    "firmware": {
+      "head": "7e8f5c4c8afda0943db1f2b22d51cdac1d60c44d",
+      "branch": "main",
+      "status": ""
+    },
+    "backend": {
+      "head": "2e6a15fc0b1d70be75e480f08dad8e22c6aa9376",
+      "branch": "main",
+      "status": ""
+    },
+    "dashboard": {
+      "head": "6cb402b3e364973b6e51a8ec769444441bfc5e6f",
+      "branch": "main",
+      "status": ""
+    }
+  },
+  "manifest_checks": [
+    {
+      "manifest": "docs/reports/evidence/task-010/run-20261116-180648/manifest-sha256.json",
+      "matched": 31,
+      "mismatched": [],
+      "missing": []
+    },
+    {
+      "manifest": "docs/reports/evidence/task-010/run-20261116-184903/manifest-sha256.json",
+      "matched": 24,
+      "mismatched": [],
+      "missing": []
+    },
+    {
+      "manifest": "docs/reports/evidence/task-010/run-20261116-190549/manifest-sha256.json",
+      "matched": 24,
+      "mismatched": [],
+      "missing": []
+    },
+    {
+      "manifest": "docs/reports/evidence/task-010/run-20261116-193157/manifest-sha256.json",
+      "matched": 33,
+      "mismatched": [],
+      "missing": []
+    }
+  ],
+  "historical_json_check": {
+    "valid": 70,
+    "invalid": []
+  },
+  "acceptance": {
+    "task": "TASK-010",
+    "status": "Đang thực hiện",
+    "completed_groups": 2,
+    "total_groups": 4,
+    "source": "docs/reports/evidence/task-010/run-20261116-195307/final-status.json",
+    "sensor_trials_attempted": 5,
+    "sensor_to_dashboard_qualified_samples": 0,
+    "sensor_to_dashboard_required_samples": 10,
+    "command_to_ack_samples": 10,
+    "command_to_ack_median_ms": 686.217,
+    "command_to_ack_max_ms": 1002.001
+  },
+  "local_dashboard": {
+    "api_base_url": "http://127.0.0.1:8000",
+    "live_latency_page_present": false
+  },
+  "historical_windows_environment": {
+    "api_port": 8001,
+    "dashboard_port": 5500,
+    "live_health_note": "Historical capture only; no claim about running services today"
+  },
+  "tests_not_run": [
+    "Firmware build",
+    "Pytest/Node regression already documented as PASS",
+    "MQTT/Wokwi live",
+    "Latency trials",
+    "Service restart or outage"
+  ],
+  "report_before_sha256": "492c80e45d5bf80c57f11fa221cb41aef6d2345fe4ad1acc3e99c304a3c2eacc"
+}
