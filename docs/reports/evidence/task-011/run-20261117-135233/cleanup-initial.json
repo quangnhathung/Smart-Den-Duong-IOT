@@ -1,0 +1,65 @@
+{
+  "completed_at": "2026-11-17T09:17:56.369512+00:00",
+  "status": "INCOMPLETE",
+  "signals": [
+    {
+      "pid": 488776,
+      "reason": "owned QA UI controller"
+    },
+    {
+      "pid": 592685,
+      "reason": "owned QA UI controller"
+    },
+    {
+      "pid": 587516,
+      "reason": "backend"
+    },
+    {
+      "pid": 511555,
+      "reason": "observer-fast"
+    },
+    {
+      "pid": 371361,
+      "reason": "liveserver"
+    },
+    {
+      "group": 453818,
+      "reason": "owned isolated VS Code QA profile"
+    },
+    {
+      "group": 453819,
+      "reason": "owned isolated VS Code QA profile"
+    },
+    {
+      "group": 453820,
+      "reason": "owned isolated VS Code QA profile"
+    },
+    {
+      "pid": 592718,
+      "reason": "owned Playwright dashboard Chrome"
+    }
+  ],
+  "owned_broker_stopped": "smartlight-task011-run-20261117-135233",
+  "container_retained_stopped_for_traceability": true,
+  "ports_checked": [
+    1883,
+    8001,
+    5500,
+    4000,
+    4001,
+    4002,
+    19222,
+    19223,
+    19224,
+    19225,
+    19226,
+    18771,
+    18772,
+    18773
+  ],
+  "still_listening_ports": [
+    18773
+  ],
+  "qa_data_retained": "/tmp/task011-20261117-135233",
+  "user_services_and_databases": "not stopped or modified"
+}

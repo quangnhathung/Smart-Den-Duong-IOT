@@ -1,0 +1,50 @@
+[
+  {
+    "issue": "CLI open navigated owned VS Code to about:blank",
+    "resolution": "Restored only owned node_01 profile; used SDK/CDP with workbench selection, no goto on Code pages."
+  },
+  {
+    "issue": "Initial RFC2217 reader auto-opened in context manager, then opened twice",
+    "resolution": "Set DTR/RTS false before explicit open; corrected reader. Resets/setup errors are outside acceptance window."
+  },
+  {
+    "issue": "Three shared VS Code windows reduced simulation speed",
+    "resolution": "Returned to independent profiles; disabled background throttling only in QA. cpuFrequency cap4 documented as simulation-only."
+  },
+  {
+    "issue": "Command palette shortcut/focus and wrong stop-command label",
+    "resolution": "Read installed extension commands; focus workbench, F1, wait input/command label; use exact Stop Simulation."
+  },
+  {
+    "issue": "QA command tool expected status instead of API result; baseline/sensor target races",
+    "resolution": "Used actual OpenAPI result field; wait fresh telemetry and sensor ADC before isolation comparison; use actual potentiometer slider."
+  },
+  {
+    "issue": "Raw sensor latency exceeded 3 seconds before firmware fix",
+    "resolution": "Red/green mailbox sensor-change fix, all three binaries rebuilt; older FAIL trials retained, acceptance selects final firmware/window only."
+  },
+  {
+    "issue": "QA label parser treated 100k lux as 100 lux",
+    "resolution": "Independent audit parses k=1000 from stored labels; original flags/timestamps unchanged, fixed ten main samples per node; no valid latency FAIL removed."
+  },
+  {
+    "issue": "Preflight scrolling hit replaced dashboard DOM row",
+    "resolution": "Retried setup before any sensor action; error retained in UI stream, no trial silently discarded."
+  },
+  {
+    "issue": "MQTT QA recorder backoff missed first recovery ACK",
+    "resolution": "Recorder reconnect bound2s and broker verbose log checkpoint; repeated outage closes observation gap. Initial stream retained."
+  },
+  {
+    "issue": "First stability window stopped before firmware change",
+    "resolution": "stability-01 remains INCOMPLETE and contributes zero duration to acceptance."
+  },
+  {
+    "issue": "HTTP/resource probe received SIGTERM143 before full window, exact cause unestablished",
+    "resolution": "api-probe-status.json remains INCOMPLETE. Continuous raw MQTT and identical accepted SQLite rows independently prove the originally fixed1800s interval; unchanged backend PID and zero-drop health checked."
+  },
+  {
+    "issue": "QA controller kept HTTP18773 after SIGTERM closed its Chrome",
+    "resolution": "Preserved cleanup-initial.json; verified exact owned controller argv/PID, stopped it after grace; final cleanup confirms all QA ports closed."
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "file": "screenshots/broker-offline-dashboard.png",
+    "width": 960,
+    "height": 953,
+    "original_capture_file_mtime_utc": "2026-11-17T08:30:31.992843+00:00",
+    "caption": "Actual QA UI; images corroborate state, not photon-level latency or EX-series energy results"
+  },
+  {
+    "file": "screenshots/three-nodes-steady-verified.png",
+    "width": 960,
+    "height": 953,
+    "original_capture_file_mtime_utc": "2026-11-17T08:54:09.757526+00:00",
+    "caption": "Actual QA UI; images corroborate state, not photon-level latency or EX-series energy results"
+  },
+  {
+    "file": "screenshots/three-nodes-steady-end.png",
+    "width": 960,
+    "height": 953,
+    "original_capture_file_mtime_utc": "2026-11-17T09:17:28.692584+00:00",
+    "caption": "Actual QA UI; images corroborate state, not photon-level latency or EX-series energy results"
+  },
+  {
+    "file": "screenshots/wokwi-node_03-fit.png",
+    "width": 960,
+    "height": 1040,
+    "original_capture_file_mtime_utc": "2026-11-17T08:57:22.651712+00:00",
+    "caption": "Actual QA UI; images corroborate state, not photon-level latency or EX-series energy results"
+  }
+]

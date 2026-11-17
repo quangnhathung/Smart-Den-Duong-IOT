@@ -1,0 +1,7 @@
+{
+  "status": "INCOMPLETE",
+  "last_observed_elapsed_seconds": 1346.506109542,
+  "probe_samples": 672,
+  "observed_exit_code": 143,
+  "reason": "HTTP/resource probe process received SIGTERM before 1800s; precise cause not established. Raw MQTT recorder and backend continued. Probe log is not claimed as full-window coverage."
+}

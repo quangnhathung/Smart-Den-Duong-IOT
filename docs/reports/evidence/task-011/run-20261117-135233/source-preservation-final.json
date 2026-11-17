@@ -1,0 +1,67 @@
+{
+  "backend": {
+    "mismatched_original_tracked_paths": [],
+    "status": " M README.md\n M smartlight/service.py\n?? tests/test_service.py\n",
+    "original_status": " M README.md\n M smartlight/service.py\n?? tests/test_service.py\n",
+    "head": "2e6a15fc0b1d70be75e480f08dad8e22c6aa9376",
+    "original_head": "2e6a15fc0b1d70be75e480f08dad8e22c6aa9376"
+  },
+  "dashboard": {
+    "mismatched_original_tracked_paths": [],
+    "status": "",
+    "original_status": "",
+    "head": "6cb402b3e364973b6e51a8ec769444441bfc5e6f",
+    "original_head": "6cb402b3e364973b6e51a8ec769444441bfc5e6f"
+  },
+  "protected_firmware": {
+    "docs/srs.md": true,
+    "src/LightingController.cpp": true,
+    "src/LightingController.h": true,
+    "src/ControlConfig.h": true,
+    "src/DimmingController.cpp": true,
+    "src/DimmingController.h": true,
+    "src/FaultDetector.cpp": true,
+    "src/FaultDetector.h": true,
+    "src/SensorReader.cpp": true,
+    "src/SensorReader.h": true,
+    "src/main.cpp": true
+  },
+  "historical_tracked_evidence": {
+    "checked": 369,
+    "mismatches": []
+  },
+  "specification_evidence": {
+    "first_commit": "ff52ef3b2a4fcaae283571042d2dc148afbd08cd",
+    "checked": 3,
+    "unchanged": true
+  },
+  "report.md": {
+    "original_tail_bytes": 72368,
+    "original_tail_sha256": "d793184e665940cc9ac1c5d5f5ec3219fdccf0a62ed65ee79a4f330c3cd4bc6e",
+    "preserved": true
+  },
+  "checklists.md": {
+    "original_tail_bytes": 7819,
+    "original_tail_sha256": "06ef26a5542fced981465e33656d04b661a8dc63b66b8b002e0b741db9426a12",
+    "preserved": true
+  },
+  "archived_tasks_exact": true,
+  "final_built_inputs": {
+    "checked": 24,
+    "match_final_manifests": true
+  },
+  "artifacts": {
+    "node_01": {
+      "firmware.bin": "1334b1121fca4fa9e4d0a81fdd60afd782d885e2f25df7ede8757a1787a24318",
+      "firmware.elf": "c24b3ea78be5fa8db3be85f5d8858783501c80eda7f0d382b50f6daf956e83ae"
+    },
+    "node_02": {
+      "firmware.bin": "03ddc3e89258607de92af593bf74162e5371af9737863a5eb9cb98fc74dc3f9f",
+      "firmware.elf": "82cc12d981d05282dcaac01657f74b2a0d4667409340c1264db7eaf46146bf6e"
+    },
+    "node_03": {
+      "firmware.bin": "337aadb043f749c1b2692d3fa5559528dd45a1ca8fa21c0f4bdc3bc9eba09a1e",
+      "firmware.elf": "bd4f846724d827e8543d59b9a8727eed3a6e45e0d98a677fed672e39bd87eb32"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "stage": "final firmware latency in stability-02; do not restart services",
+  "stability_session": 38766,
+  "dashboard_session": 14915,
+  "ui_session": 30005,
+  "current_latency_session": 63944,
+  "expected_end_utc": "2026-11-17T09:06:05Z",
+  "no_source_or_runtime_changes_during_window": true
+}

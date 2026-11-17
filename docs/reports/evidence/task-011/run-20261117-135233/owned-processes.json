@@ -1,0 +1,392 @@
+[
+  {
+    "name": "backend",
+    "pid": 371359,
+    "args": [
+      "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/backend/.venv/bin/python",
+      "-B",
+      "-m",
+      "uvicorn",
+      "smartlight.api:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8001",
+      "--workers",
+      "1"
+    ],
+    "proc_start_ticks": "1622251"
+  },
+  {
+    "name": "liveserver",
+    "pid": 371361,
+    "args": [
+      "node",
+      "/tmp/task011-20261117-135233/live.cjs"
+    ],
+    "proc_start_ticks": "1622253"
+  },
+  {
+    "name": "vscode-node_01",
+    "pid": 371362,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_01-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19222",
+      "--no-first-run",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "/tmp/task011-20261117-135233/node_01"
+    ],
+    "proc_start_ticks": "1622254"
+  },
+  {
+    "name": "vscode-node_02",
+    "pid": 371363,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_02-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19223",
+      "--no-first-run",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "/tmp/task011-20261117-135233/node_02"
+    ],
+    "proc_start_ticks": "1622255"
+  },
+  {
+    "name": "vscode-node_03",
+    "pid": 371364,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_03-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19224",
+      "--no-first-run",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "/tmp/task011-20261117-135233/node_03"
+    ],
+    "proc_start_ticks": "1622255"
+  },
+  {
+    "name": "observer",
+    "pid": 374379,
+    "args": [
+      "/tmp/task011-observe.py"
+    ],
+    "proc_start_ticks": "1624420"
+  },
+  {
+    "name": "ui-controller",
+    "pid": 376306,
+    "args": [
+      "/tmp/task011-ui.cjs"
+    ],
+    "proc_start_ticks": "1630624"
+  },
+  {
+    "name": "vscode-node_01-recovered",
+    "pid": 377637,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_01-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19222",
+      "--no-first-run",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "/tmp/task011-20261117-135233/node_01"
+    ],
+    "proc_start_ticks": "1634823"
+  },
+  {
+    "name": "vscode-node_01-recovered2",
+    "pid": 379988,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_01-profile-recovered",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19222",
+      "--no-first-run",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "/tmp/task011-20261117-135233/node_01"
+    ],
+    "proc_start_ticks": "1641901"
+  },
+  {
+    "name": "serial-observer",
+    "pid": 402271,
+    "args": [
+      "/tmp/task011-serial-observer.py"
+    ],
+    "proc_start_ticks": "1702624"
+  },
+  {
+    "name": "serial-observer-v2",
+    "pid": 403717,
+    "args": [
+      "/tmp/task011-serial-observer.py"
+    ],
+    "proc_start_ticks": "1705590"
+  },
+  {
+    "name": "vscode-shared-1",
+    "pid": 435877,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/vscode-shared-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19226",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "/tmp/task011-20261117-135233/node_01"
+    ],
+    "proc_start_ticks": "1794703"
+  },
+  {
+    "name": "vscode-shared-2",
+    "pid": 436437,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/vscode-shared-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19226",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "/tmp/task011-20261117-135233/node_02"
+    ],
+    "proc_start_ticks": "1794854"
+  },
+  {
+    "name": "vscode-shared-3",
+    "pid": 436655,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/vscode-shared-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19226",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "/tmp/task011-20261117-135233/node_03"
+    ],
+    "proc_start_ticks": "1794954"
+  },
+  {
+    "name": "vscode-optimized-1",
+    "pid": 442838,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_01-optimized-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19222",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "--disable-background-timer-throttling",
+      "--disable-renderer-backgrounding",
+      "--disable-backgrounding-occluded-windows",
+      "/tmp/task011-20261117-135233/node_01"
+    ],
+    "proc_start_ticks": "1810812"
+  },
+  {
+    "name": "vscode-optimized-2",
+    "pid": 442839,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_02-optimized-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19223",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "--disable-background-timer-throttling",
+      "--disable-renderer-backgrounding",
+      "--disable-backgrounding-occluded-windows",
+      "/tmp/task011-20261117-135233/node_02"
+    ],
+    "proc_start_ticks": "1810813"
+  },
+  {
+    "name": "vscode-optimized-3",
+    "pid": 442840,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_03-optimized-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19224",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "--disable-background-timer-throttling",
+      "--disable-renderer-backgrounding",
+      "--disable-backgrounding-occluded-windows",
+      "/tmp/task011-20261117-135233/node_03"
+    ],
+    "proc_start_ticks": "1810814"
+  },
+  {
+    "name": "vscode-optimized-1",
+    "pid": 452075,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_01-optimized-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19222",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "--folder-uri=file:///tmp/task011-20261117-135233/node_01",
+      "--disable-background-timer-throttling=true",
+      "--disable-renderer-backgrounding=true",
+      "--disable-backgrounding-occluded-windows=true"
+    ],
+    "proc_start_ticks": "1836650"
+  },
+  {
+    "name": "vscode-optimized-2",
+    "pid": 452076,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_02-optimized-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19223",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "--folder-uri=file:///tmp/task011-20261117-135233/node_02",
+      "--disable-background-timer-throttling=true",
+      "--disable-renderer-backgrounding=true",
+      "--disable-backgrounding-occluded-windows=true"
+    ],
+    "proc_start_ticks": "1836650"
+  },
+  {
+    "name": "vscode-optimized-3",
+    "pid": 452077,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_03-optimized-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19224",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "--folder-uri=file:///tmp/task011-20261117-135233/node_03",
+      "--disable-background-timer-throttling=true",
+      "--disable-renderer-backgrounding=true",
+      "--disable-backgrounding-occluded-windows=true"
+    ],
+    "proc_start_ticks": "1836650"
+  },
+  {
+    "name": "vscode-optimized-1",
+    "pid": 453818,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_01-final-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19222",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "--folder-uri=file:///tmp/task011-20261117-135233/node_01",
+      "--disable-background-timer-throttling=true",
+      "--disable-renderer-backgrounding=true",
+      "--disable-backgrounding-occluded-windows=true"
+    ],
+    "proc_start_ticks": "1840983"
+  },
+  {
+    "name": "vscode-optimized-2",
+    "pid": 453819,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_02-final-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19223",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "--folder-uri=file:///tmp/task011-20261117-135233/node_02",
+      "--disable-background-timer-throttling=true",
+      "--disable-renderer-backgrounding=true",
+      "--disable-backgrounding-occluded-windows=true"
+    ],
+    "proc_start_ticks": "1840983"
+  },
+  {
+    "name": "vscode-optimized-3",
+    "pid": 453820,
+    "args": [
+      "/usr/share/code/code",
+      "--new-window",
+      "--user-data-dir=/tmp/task011-20261117-135233/node_03-final-profile",
+      "--extensions-dir=/tmp/task011-20261117-135233/extensions",
+      "--remote-debugging-port=19224",
+      "--skip-welcome",
+      "--skip-release-notes",
+      "--folder-uri=file:///tmp/task011-20261117-135233/node_03",
+      "--disable-background-timer-throttling=true",
+      "--disable-renderer-backgrounding=true",
+      "--disable-backgrounding-occluded-windows=true"
+    ],
+    "proc_start_ticks": "1840984"
+  },
+  {
+    "name": "observer-fast",
+    "pid": 511555,
+    "args": [
+      "/tmp/task011-observe.py"
+    ],
+    "proc_start_ticks": "1992424"
+  },
+  {
+    "name": "backend",
+    "pid": 518926,
+    "args": [
+      "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/backend/.venv/bin/python",
+      "-B",
+      "-m",
+      "uvicorn",
+      "smartlight.api:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8001",
+      "--workers",
+      "1"
+    ],
+    "proc_start_ticks": "2010756"
+  },
+  {
+    "name": "backend",
+    "pid": 587516,
+    "args": [
+      "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/backend/.venv/bin/python",
+      "-B",
+      "-m",
+      "uvicorn",
+      "smartlight.api:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8001",
+      "--workers",
+      "1"
+    ],
+    "proc_start_ticks": "2193321"
+  }
+]

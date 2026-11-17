@@ -1,0 +1,18 @@
+{
+  "quick_check": "ok",
+  "counts": {
+    "ack_events": 84,
+    "alerts": 29,
+    "availability": 57,
+    "boots": 21,
+    "commands": 93,
+    "experiments": 0,
+    "ingest_errors": 0,
+    "nodes": 3,
+    "telemetry": 16101
+  },
+  "pending_commands": 0,
+  "open_experiments": 0,
+  "backup_path": "/tmp/task011-20261117-135233/qa-final.db",
+  "backup_sha256": "3a597daf00ac65003549ffac1f3e0e32b75628f444c2f9d0627138cb12642cf1"
+}

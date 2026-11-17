@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "window": "stability-02",
+  "start_monotonic_ns": 22149385707421,
+  "end_monotonic_ns": 23949385707421,
+  "duration_real_seconds": 1800.0,
+  "audit_elapsed_since_start_seconds": 2330.378201246,
+  "raw_recorder_reconnects_in_window": [],
+  "commands_in_window": 0,
+  "nodes": {
+    "node_01": {
+      "boot_id": "d6fe6a8a",
+      "received_messages": 1561,
+      "first_seq": 949,
+      "last_seq": 2509,
+      "missing_sequences": [],
+      "all_raw_messages_match_accepted_sqlite_rows": true,
+      "continuity_keys": [
+        "6390fe98-46db-443c-af7f-46fb9e5236b1/5a2e8087-87ae-4924-be87-59f4fd233db4/1/0"
+      ],
+      "max_recorder_backend_receipt_skew_ms": 43.73291015625,
+      "median_arrival_gap_wall_ms": 500.5264695,
+      "max_arrival_gap_wall_ms": 4997.526485,
+      "node_elapsed_simulated_s": 1190.818,
+      "received_span_wall_s": 1796.158621828,
+      "boundary_before_monotonic_ns": 22148414643562,
+      "boundary_after_monotonic_ns": 23952315493829
+    },
+    "node_02": {
+      "boot_id": "33ec5fdb",
+      "received_messages": 2216,
+      "first_seq": 512,
+      "last_seq": 2727,
+      "missing_sequences": [],
+      "all_raw_messages_match_accepted_sqlite_rows": true,
+      "continuity_keys": [
+        "6390fe98-46db-443c-af7f-46fb9e5236b1/5a2e8087-87ae-4924-be87-59f4fd233db4/1/0"
+      ],
+      "max_recorder_backend_receipt_skew_ms": 41.41064453125,
+      "median_arrival_gap_wall_ms": 473.475157,
+      "max_arrival_gap_wall_ms": 4188.564048,
+      "node_elapsed_simulated_s": 1050.005,
+      "received_span_wall_s": 1799.395801171,
+      "boundary_before_monotonic_ns": 22147921710067,
+      "boundary_after_monotonic_ns": 23949491891704
+    },
+    "node_03": {
+      "boot_id": "9fbc1fc2",
+      "received_messages": 1583,
+      "first_seq": 1638,
+      "last_seq": 3220,
+      "missing_sequences": [],
+      "all_raw_messages_match_accepted_sqlite_rows": true,
+      "continuity_keys": [
+        "6390fe98-46db-443c-af7f-46fb9e5236b1/5a2e8087-87ae-4924-be87-59f4fd233db4/1/0"
+      ],
+      "max_recorder_backend_receipt_skew_ms": 41.8349609375,
+      "median_arrival_gap_wall_ms": 494.90782049999996,
+      "max_arrival_gap_wall_ms": 5323.374477,
+      "node_elapsed_simulated_s": 884.604,
+      "received_span_wall_s": 1797.025412672,
+      "boundary_before_monotonic_ns": 22149161638936,
+      "boundary_after_monotonic_ns": 23951581181497
+    }
+  },
+  "backend_pid_and_start_ticks_unchanged": true,
+  "final_health": {
+    "status": "OK",
+    "database": true,
+    "broker": true,
+    "queue": true,
+    "dropped_events": 0
+  },
+  "database_quick_check": "ok",
+  "api_probe": {
+    "status": "INCOMPLETE",
+    "last_observed_elapsed_seconds": 1346.506109542,
+    "probe_samples": 672,
+    "observed_exit_code": 143,
+    "reason": "HTTP/resource probe process received SIGTERM before 1800s; precise cause not established. Raw MQTT recorder and backend continued. Probe log is not claimed as full-window coverage."
+  },
+  "clock_basis": "Fixed original 1800 host monotonic seconds, not sum of node uptime. Continuous raw telemetry and identical accepted SQLite rows bracket and cover the full interval. Periodic arrival gap differs from causal sensor\u2192DOM latency."
+}
