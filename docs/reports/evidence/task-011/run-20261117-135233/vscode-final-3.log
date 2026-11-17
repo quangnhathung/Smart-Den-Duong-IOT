@@ -14,3 +14,49 @@ Warning: 'disable-backgrounding-occluded-windows' is not in the list of known op
 [90m[main 2026-11-17T07:33:47.438Z][0m update#setState disabled
 [453820:1117/143520.008617:ERROR:ui/gfx/x/atom_cache.cc:234] Add application/vnd.portal.filetransfer to kAtomsToCache
 [453820:1117/143520.009193:ERROR:ui/gfx/x/atom_cache.cc:234] Add application/vnd.portal.files to kAtomsToCache
+[91m[main 2026-11-17T09:17:47.476Z][0m ptyHost terminated unexpectedly with code 15
+[93m[main 2026-11-17T09:17:47.487Z][0m [UtilityProcess type: ptyHost, pid: 458757]: unable to kill the process
+[453820:1117/161747.517103:ERROR:content/common/zygote/zygote_communication_linux.cc:291] Failed to send GetTerminationStatus message to zygote
+[453820:1117/161747.542408:ERROR:content/common/zygote/zygote_communication_linux.cc:291] Failed to send GetTerminationStatus message to zygote
+[453820:1117/161747.569297:ERROR:content/browser/network_service_instance_impl.cc:721] Network service crashed or was terminated, restarting service.
+[90m[main 2026-11-17T09:17:47.580Z][0m [network process] gone - pid: 453953, exitCode: 15, crashed: true, crashedPreIPC: false
+[91m[main 2026-11-17T09:17:47.583Z][0m [UtilityProcess type: shared-process, pid: 454888]: crashed with code 15 and reason 'killed'
+[91m[main 2026-11-17T09:17:47.585Z][0m [UtilityProcessWorker]: terminated unexpectedly with code 15, signal: unknown
+[90m[main 2026-11-17T09:17:47.588Z][0m Extension host with pid 454982 exited with code: 15, signal: unknown.
+[91m[main 2026-11-17T09:17:47.589Z][0m [UtilityProcess id: 1, type: extensionHost, pid: 454982]: crashed with code 15 and reason 'killed'
+[453820:1117/161747.603699:ERROR:content/common/zygote/zygote_communication_linux.cc:291] Failed to send GetTerminationStatus message to zygote
+[90m[main 2026-11-17T09:17:47.615Z][0m [network process] launched with pid 689233
+[453820:1117/161747.616348:ERROR:content/common/zygote/zygote_communication_linux.cc:291] Failed to send GetTerminationStatus message to zygote
+[453820:1117/161747.617087:ERROR:content/browser/gpu/gpu_process_host.cc:1102] GPU process launch failed: error_code=1002
+[91m[main 2026-11-17T09:17:47.618Z][0m CodeWindow: renderer process gone (reason: clean-exit, code: <unknown>)
+[453820:1117/161747.827083:ERROR:content/browser/gpu/gpu_process_host.cc:1102] GPU process launch failed: error_code=1002
+[453820:1117/161747.830832:ERROR:content/browser/gpu/gpu_process_host.cc:1102] GPU process launch failed: error_code=1002
+Error sending from webFrameMain:  Error: Render frame was disposed before WebFrameMain could be accessed
+    at WebFrameMain.send (node:electron/js2c/browser_init:2:109972)
+    at WebContents.send (node:electron/js2c/browser_init:2:95254)
+    at og.send (file:///usr/share/code/resources/app/out/mainImpl.js:37:14231)
+    at zu.sendBuffer (file:///usr/share/code/resources/app/out/mainImpl.js:32:14127)
+    at zu.send (file:///usr/share/code/resources/app/out/mainImpl.js:32:14046)
+    at zu.sendResponse (file:///usr/share/code/resources/app/out/mainImpl.js:32:13895)
+    at wl.value (file:///usr/share/code/resources/app/out/mainImpl.js:33:336)
+    at x._deliver (file:///usr/share/code/resources/app/out/mainImpl.js:31:3644)
+    at x.fire (file:///usr/share/code/resources/app/out/mainImpl.js:31:3962)
+    at wl.value (file:///usr/share/code/resources/app/out/mainImpl.js:59:4948)
+    at x._deliver (file:///usr/share/code/resources/app/out/mainImpl.js:31:3644)
+    at x.fire (file:///usr/share/code/resources/app/out/mainImpl.js:31:3962)
+    at Rh.updateFeatureStatus (file:///usr/share/code/resources/app/out/mainImpl.js:58:12145)
+    at Rh.refreshFeatureStatus (file:///usr/share/code/resources/app/out/mainImpl.js:58:11979)
+    at wl.value (file:///usr/share/code/resources/app/out/mainImpl.js:58:11638)
+    at x._deliver (file:///usr/share/code/resources/app/out/mainImpl.js:31:3644)
+    at x.fire (file:///usr/share/code/resources/app/out/mainImpl.js:31:3962)
+    at EventEmitter.ie (file:///usr/share/code/resources/app/out/mainImpl.js:29:9649)
+    at EventEmitter.emit (node:events:514:28)
+[453820:1117/161747.836422:ERROR:content/browser/gpu/gpu_process_host.cc:1102] GPU process launch failed: error_code=1002
+[453820:1117/161747.839872:ERROR:content/browser/gpu/gpu_process_host.cc:1102] GPU process launch failed: error_code=1002
+[453820:1117/161747.840594:ERROR:content/browser/gpu/gpu_process_host.cc:1102] GPU process launch failed: error_code=1002
+[453820:1117/161747.840632:FATAL:content/browser/gpu/gpu_data_manager_impl_private.cc:416] GPU process isn't usable. Goodbye.
+[1117/161747.849560:ERROR:third_party/crashpad/crashpad/snapshot/elf/elf_dynamic_array_reader.h:64] tag not found
+[1117/161747.851148:ERROR:third_party/crashpad/crashpad/snapshot/elf/elf_dynamic_array_reader.h:64] tag not found
+[1117/161747.852540:ERROR:third_party/crashpad/crashpad/snapshot/elf/elf_dynamic_array_reader.h:64] tag not found
+[1117/161747.855632:ERROR:third_party/crashpad/crashpad/snapshot/elf/elf_dynamic_array_reader.h:64] tag not found
+[1117/161747.877734:ERROR:third_party/crashpad/crashpad/util/file/directory_reader_posix.cc:43] opendir /tmp/task011-20261117-135233/node_03-final-profile/Crashpad/attachments/1bee39f3-7dca-409a-b998-c3f578f95e30: No such file or directory (2)

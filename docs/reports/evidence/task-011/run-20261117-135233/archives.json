@@ -1,0 +1,85 @@
+{
+  "method": "Lossless gzip after owned QA services stopped; original byte streams also retained outside Git in QA raw-logs",
+  "files": [
+    {
+      "original": "mqtt-events.jsonl",
+      "archive": "mqtt-events.jsonl.gz",
+      "raw_bytes": 2595888,
+      "raw_sha256": "28c7ed7cda6a5a6f95405dee0ec0078059c63c45f20b7033aa1ae5f753f5b39a",
+      "gzip_sha256": "ec05661483adee92b2222597302d5fa53b44ad3326687935f0671b87c40b78cf",
+      "original_local_copy": "/tmp/task011-20261117-135233/raw-logs/mqtt-events.jsonl"
+    },
+    {
+      "original": "ui-events.jsonl",
+      "archive": "ui-events.jsonl.gz",
+      "raw_bytes": 15977627,
+      "raw_sha256": "bf03e8cc9a27a43e68970af6a63467e083eb3f7300b00a8a3a1d454010927fdf",
+      "gzip_sha256": "d6a4b077525033007c5cbc509cf8605ffa5fa0213f584a38a713d9a2c2cde488",
+      "original_local_copy": "/tmp/task011-20261117-135233/raw-logs/ui-events.jsonl"
+    },
+    {
+      "original": "serial-events.jsonl",
+      "archive": "serial-events.jsonl.gz",
+      "raw_bytes": 870240,
+      "raw_sha256": "87c40e0373800b10d13159d457e1d53c8cfbb63557c4fcce0b99a6f252847be5",
+      "gzip_sha256": "e51c6d5bc2052f1fb3df817077637057667661b80423d1a145340d238492a0db",
+      "original_local_copy": "/tmp/task011-20261117-135233/raw-logs/serial-events.jsonl"
+    },
+    {
+      "original": "serial-events-cpu4.jsonl",
+      "archive": "serial-events-cpu4.jsonl.gz",
+      "raw_bytes": 554039,
+      "raw_sha256": "7b495880c175ece9e1f5f97266605ee2459bc7ca60214df99865b9d3552b689c",
+      "gzip_sha256": "a9bcc2ea80b4b5c25e455d0a467d3dd621f5da9b3dc8d6f5def58e442dcbaaa9",
+      "original_local_copy": "/tmp/task011-20261117-135233/raw-logs/serial-events-cpu4.jsonl"
+    },
+    {
+      "original": "mqtt-events-fast.jsonl",
+      "archive": "mqtt-events-fast.jsonl.gz",
+      "raw_bytes": 7068524,
+      "raw_sha256": "527fc755c5044a853ffb66c661c85ce9ff90dc7a972c9953a8fb6c3c56b31548",
+      "gzip_sha256": "de6def544f68e358ccedecf0ec083f83f8f017e763ea42c63be7aa0a0f8dd77c",
+      "original_local_copy": "/tmp/task011-20261117-135233/raw-logs/mqtt-events-fast.jsonl"
+    },
+    {
+      "original": "stability-01/samples.jsonl",
+      "archive": "stability-01/samples.jsonl.gz",
+      "raw_bytes": 424504,
+      "raw_sha256": "5cb7e8af1be84055eef464a0f1a0572cb1c9acfec7b75cbc68f2cd91919b720b",
+      "gzip_sha256": "ea94cb9e952edbe80c2cadf0e75bd0020e717471d390702aac8f990dfee4badb",
+      "original_local_copy": "/tmp/task011-20261117-135233/raw-logs/stability-01/samples.jsonl"
+    },
+    {
+      "original": "stability-02/samples.jsonl",
+      "archive": "stability-02/samples.jsonl.gz",
+      "raw_bytes": 1269312,
+      "raw_sha256": "3da8603b87679862abc6320beaf7378f6b9688cf06f71590d85858ffca93ae04",
+      "gzip_sha256": "af6ee87d79eba3e2b2583ec2fc81c7fdd920cff155635897bf5d21174249c3c9",
+      "original_local_copy": "/tmp/task011-20261117-135233/raw-logs/stability-02/samples.jsonl"
+    },
+    {
+      "original": "backend.log",
+      "archive": "backend.log.gz",
+      "raw_bytes": 573593,
+      "raw_sha256": "977790308841694f9f3b77cd9a498d7bcd8fccdc62934c1cd85a8e3a7c9d60fa",
+      "gzip_sha256": "578a0dcf01f9f28d66a0610ad7910cf664f1e0773c7202d3d60b4af598807b80",
+      "original_local_copy": "/tmp/task011-20261117-135233/raw-logs/backend.log"
+    },
+    {
+      "original": "backend-restarted.log",
+      "archive": "backend-restarted.log.gz",
+      "raw_bytes": 457001,
+      "raw_sha256": "a67e44b181376e96eba202ab8d56c01ceaebc9d5c91ac491628817ba9030c543",
+      "gzip_sha256": "84f85e45ee6439e3ecc783995cef226a58d280742a79881fc9796c79e3b1ec4c",
+      "original_local_copy": "/tmp/task011-20261117-135233/raw-logs/backend-restarted.log"
+    },
+    {
+      "original": "broker-final.log",
+      "archive": "broker-final.log.gz",
+      "raw_bytes": 7955914,
+      "raw_sha256": "67feb003f016bc9e50acae506e1fb74fad0ccbe235a9836c92705c6d4b7eb8bc",
+      "gzip_sha256": "742f5480384a04ff5ca14d9e2c27dd6503c6d567d3ab6ef59a677619449ae399",
+      "original_local_copy": "/tmp/task011-20261117-135233/raw-logs/broker-final.log"
+    }
+  ]
+}
