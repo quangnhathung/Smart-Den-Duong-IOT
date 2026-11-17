@@ -1,5 +1,14 @@
 # Kiểm tra dự án — firmware, backend và dashboard
 
+## TASK-011 — Ma trận ba định danh
+
+`python3 -B scripts/check-firmware.py`: protocol/app/MQTT cho cả 3 chỉ số; controller/sensors chạy một lượt, tổng 11 lượt; chỉ số 0 và 4 phải compile-fail. Stub lưu client ID thực; kiểm topic/LWT/subscription và payload đúng node, diagnostics, từ chối sai topic/node; giữ hồi quy controller/queue/deadline/session.
+
+`python3 -B -m unittest discover -s test/host -p 'test_*.py'`: 20 test PASS ở lượt kiểm cuối, gồm generator ba node, freshness/deadline64, routing/default/thiếu/cũ/rỗng artifact, manifest/hash cấu hình/pin map/cap CPU của ba sơ đồ và 7 test Serial cũ. Ba environment build PASS. Các test prepare dùng dummy artifact có nhãn, không giả làm firmware thật.
+
+Live cuối trên firmware sửa coalescing đã PASS 30 lệnh đúng đích, cảm biến/fault/tắt node/outage/restart; 30 sensor→dashboard (10/node) đạt dưới3s theo latency-final-audit.json. Các FAIL >3s và INCOMPLETE trong lượt trước vẫn giữ nguyên; bản sửa có ca red trước/green sau. Cửa sổ stability-02 đang theo dõi, stability-01 INCOMPLETE không được cộng thời gian. Không coi host/build hoặc bản một node TASK-010 là hoàn tất P6. Nghiệm thu cuối cần đủ bốn nhóm và cửa sổ 1.800s monotonic đồng thời; giữ FAIL/INCOMPLETE cùng lượt mới. [Đặc tả](../reports/evidence/task-011/run-20261117-135233/task-011-accepted.md), [log host](../reports/evidence/task-011/run-20261117-135233/host-checks.log), [build](../reports/evidence/task-011/run-20261117-135233/firmware-build.log).
+
+
 ## TASK-010 — nghiệm thu hoàn tất một node, 2026-11-17T12:05:29+07:00
 
 4/4 nhóm PASS theo [audit và hồ sơ](../reports/evidence/task-010/completion-20261117-105535/README.md). Bổ sung UI REJECTED/TIMEOUT bằng ACK thật, pending/phiên mở qua restart, broker QA outage/reconnect/no-replay và Serial AUTO/PWM khi mqtt0. Sửa race actor nhận retained ONLINE sau chờ queue;72 Pytest/Ruff PASS,4 test lõi proxy PASS. Các PASS Windows trước giữ nguyên, các đoạn PENDING phía dưới là lịch sử tại thời điểm từng lượt.

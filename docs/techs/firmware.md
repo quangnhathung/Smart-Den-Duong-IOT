@@ -1,5 +1,14 @@
 # Firmware P2/A2 và MQTT P3/A3
 
+## TASK-011 — Định danh ba node từ một source
+
+`NodeIdentity.h` nhận `SMARTLIGHT_NODE_INDEX` 1/2/3; mặc định 1, giá trị khác làm compile-fail. Node ID, client ID `smartlight-node_0N-p0`, topic nghiệp vụ/diagnostics và banner Serial cùng lấy từ định danh biên dịch. MqttProtocol giữ tên hằng qua using declaration; không đổi JSON v1, controller, timer hoặc pin map. PlatformIO dùng cấu hình chung đã pin; `esp32dev`/`node_02`/`node_03` chỉ khác chỉ số. `esp32dev` vẫn mặc định.
+
+Sửa lỗi trễ raw telemetry khi tích hợp ba node: MqttMailbox tăng generation khi ADC/khoảng cách hoặc PIR đầu vào của motion thay đổi, ngoài các thay đổi control hiện có. So sánh bỏ qua bộ đếm lấy mẫu và chuẩn hóa invalid distance thành null như serializer. Connectivity giữ rate-limit 200ms và heartbeat định kỳ 2s, luôn gửi snapshot mới nhất; không sửa thuật toán đèn. Ca tái hiện raw ADC đổi mà generation giữ nguyên đã FAIL trước sửa, sau sửa ma trận host ba node PASS. Các kết quả live/ổn định trước bản sửa được giữ riêng, không dùng thay nghiệm thu firmware mới.
+
+11 lượt host (protocol/app/MQTT × 3; controller/sensors × 1), 2 compile-fail và ba build đã PASS; kiểm tra live đang tiếp tục, chưa nghiệm thu toàn TASK-011. [Hồ sơ](../reports/evidence/task-011/run-20261117-135233/task-011-accepted.md). Tham chiếu SRS FR06/07/08/12, P6/A6, TC17/23/25.
+
+
 ## Phạm vi và tham chiếu
 
 SRS 5.1–5.8, P2/A2, TC-01–16/27/28. TASK-005 đã nghiệm thu và giữ nguyên evidence; TASK-006 chuyển runtime từ PWM diagnostics sang điều khiển. TASK-007 bổ sung MQTT command/ACK/telemetry/availability A3 theo [MQTT](mqtt.md); chưa có backend/dashboard. Các phần P2 bên dưới giữ mô tả nền controller, giao diện Serial và thuật toán.

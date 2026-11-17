@@ -1,5 +1,10 @@
 # Backend/API P4/A4 — TASK-008 và bổ sung TASK-009
 
+## TASK-011 — Kiểm tích hợp ba node, không đổi API/schema
+
+Backend hiện có nhận đủ node_01/02/03; TASK-011 dùng source tại nhánh có bản sửa session sync của TASK-010, giữ nguyên mọi thay đổi người dùng. Không sửa code backend hoặc migration. Trên MQTT/Wokwi live: ba định danh cùng thu thập, lệnh đúng đích, tắt một node không chặn hai node khác, broker reconnect không replay command cũ; restart backend QA một worker giữ hash telemetry cũ và cả ba boot. Cửa sổ ổn định 30 phút cuối đang được theo dõi, chưa coi hoàn thành trước khi đủ thời lượng. [Hồ sơ](../reports/evidence/task-011/run-20261117-135233/backend-restart.json).
+
+
 ## TASK-010 — sửa race khi nhận availability sau restart/reconnect
 
 Hoàn tất 2026-11-17T12:05:29+07:00. Service đồng bộ transport connected/session ngay sau Queue.get và trước dispatch, bổ sung kiểm ở đầu vòng hiện có. Nếu readiness đổi khi actor đang chờ queue, retained ONLINE đầu tiên được xử lý theo session mới; event session cũ vẫn bị loại. Không thay schema/MQTT/API hoặc khôi phục freshness từ dữ liệu cũ. Cần telemetry mới hợp lệ trước khi can_command=true.

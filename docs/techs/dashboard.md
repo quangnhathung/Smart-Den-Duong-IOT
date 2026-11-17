@@ -1,5 +1,10 @@
 # Dashboard P5/A5 — TASK-009
 
+## TASK-011 — Dashboard ba node qua Live Server
+
+Giữ nguyên HTML/CSS/JS và API của repo dashboard, không sửa giao diện. Bản QA đối chiếu hash source, chỉ đổi URL API sang8001; Live Server5500 dùng engine từ extension VS Code đã cài. Đã kiểm ba node tách dữ liệu và điều khiển đúng đích; broker down hiển thị Kết nối suy giảm/0 node online/giá trị cũ, phục hồi nhận dữ liệu mới. Ba mươi phép đo LDR→API→DOM sau hai rAF hợp lệ,10/node, đều dưới3s trên firmware sửa coalescing cảm biến. Cận trên lớn nhất1.272,235ms; không phải phép đo photon màn hình. Raw flags INCOMPLETE do nhãn100k lux giữ nguyên, [audit cuối](../reports/evidence/task-011/run-20261117-135233/latency-final-audit.json) kiểm đơn vị k=1000 từ chính log đã thu, không thay timestamp hoặc bỏ mẫu chậm. Cửa sổ30phút cuối chưa đóng; EX-series chưa thực hiện.
+
+
 ## TASK-010 — UI đã kiểm live một node, 2026-11-17T12:05:29+07:00
 
 UI REJECTED/EXPIRED, TIMEOUT/ACK_TIMEOUT và ACK muộn giữ kết quả cuối đã quan sát trực tiếp; restart pending/open experiment, reload phiên, khóa khi broker QA ngừng và mở lại sau reconnect đều PASS. 10 mẫu LDR→DOM thật đạt3s, max cận trên2401,274ms; [ảnh/video, số liệu và phương pháp](../reports/evidence/task-010/completion-20261117-105535/README.md). Không dùng fixture hay mock response API trong các ca nghiệm thu này.

@@ -1,5 +1,16 @@
 # Chạy Wokwi — cập nhật A3 và lịch sử P2/P1
 
+## TASK-011 — Chuẩn bị và chạy ba cấu hình
+
+Tại gốc firmware: `pio run -e esp32dev -e node_02 -e node_03`, sau đó `python3 scripts/prepare-simulation.py --node all`. Có thể chọn `--node node_01|node_02|node_03`; bỏ tham số giữ node_01. Mỗi BIN/ELF lấy từ environment tương ứng; prepare kiểm tồn tại/độ mới/SHA256 và ghi manifest vào build/ đang được Git ignore. Manifest ghi định danh dự kiến, không thay xác nhận Serial/MQTT live.
+
+Cả ba ESP32 trong diagram.json dùng `cpuFrequency: "4"`: giới hạn tốc độ thực thi lệnh của bộ mô phỏng, không đổi clock ngoại vi hoặc các timer firmware. Wokwi mặc định auto cap khoảng 8 MHz; mức cap thấp hơn giảm tải máy khi chạy ba phiên. Đây không phải tần số MCU thật hoặc chứng cứ hiệu năng phần cứng. Xem [CPU frequency limit của Wokwi](https://docs.wokwi.com/guides/esp32#cpu-frequency-limit). Những sơ đồ cũ không có thuộc tính này vẫn giữ trong hồ sơ lịch sử; biến thể timeout riêng không thuộc ba node chạy đồng thời.
+
+Mở riêng `simulations/node_01`, `simulations/node_02`, `simulations/node_03` trong ba cửa sổ VS Code rồi Wokwi: Start Simulator. Sơ đồ phần cứng giống nhau, source C++ dùng chung; cổng RFC2217 lần lượt 4000/4001/4002. Tại gốc firmware cũng có thể dùng Wokwi: Select Config File để chọn đúng toml trong từng cửa sổ. Không sửa launch.json do PlatformIO sinh. Giữ biến thể timeout node_01 làm hồi quy riêng.
+
+Bảo đảm broker QA mà node truy cập được qua host.wokwi.internal:1883, backend một worker/SQLite riêng và Dashboard Live Server5500. Không chiếm cổng hoặc dừng dịch vụ không thuộc QA. Máy cần đủ tài nguyên cho ba mô phỏng; kiểm tốc độ mô phỏng và thời gian nhận thực, không sửa ngưỡng 3s để làm kiểm thử đạt. [Đặc tả được giao](../reports/evidence/task-011/run-20261117-135233/task-011-accepted.md); kết quả live/giới hạn chốt trong báo cáo lượt này. Tham chiếu SRS P6/A6, TC17/21–25.
+
+
 ## TASK-010 — môi trường nghiệm thu Linux đã hoàn tất
 
 Lượt 2026-11-17T12:05:29+07:00: dùng Wokwi VSCode4.1.0 với profile QA riêng, node_01/source/board/pin map giữ nguyên; copy BIN/ELF hiện có vào workspace QA và kiểm hash vì extension yêu cầu artifact trong workspace. Không build lại khi artifact còn fresh. CLI0.29.1 đã có nhưng token trả Unauthorized; không tự đăng ký/mua dịch vụ, dùng phương án VSCode dự phòng đã chọn.

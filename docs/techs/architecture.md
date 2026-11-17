@@ -1,5 +1,10 @@
 # Kiến trúc và ranh giới triển khai A0
 
+## TASK-011 — Ba định danh trên cùng source firmware
+
+NodeIdentity cấu hình biên dịch qua SMARTLIGHT_NODE_INDEX1/2/3, ba environment và ba mô phỏng độc lập dùng chung module controller/network. Backend và Dashboard đã có mô hình ba node, không thêm service/endpoint/schema. Bổ sung kích gửi telemetry khi dữ liệu cảm biến thay đổi, giữ heartbeat2s và khoảng cách thử publish200ms; không đổi thuật toán chiếu sáng. Tham chiếu SRS P6/A6, FR06/07/08/12. [Đặc tả được giao](../reports/evidence/task-011/run-20261117-135233/task-011-accepted.md), [task hiện tại](../reports/task.md) ghi riêng host/build/live và trạng thái ổn định, chưa suy ba build thành nghiệm thu ba node.
+
+
 ## Tham chiếu SRS
 
 [SRS](../srs.md) mục 2–7, 10–12, 16; [setup P0](setup.md), [MQTT v1](mqtt.md).

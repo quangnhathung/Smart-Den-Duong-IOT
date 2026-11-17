@@ -1,5 +1,12 @@
 # MQTT v1 — hợp đồng A0 và triển khai TASK-007/A3
 
+## TASK-011 — Định danh và công cụ theo node
+
+Một `NodeIdentity` cấp node ID, client ID và topic cho cả nghiệp vụ/diagnostics theo `SMARTLIGHT_NODE_INDEX=1|2|3`; không đổi prefix hoặc schema MQTT v1. Boot ID vẫn thuộc mỗi lần khởi động, không yêu cầu duy nhất toàn hệ thống. Client ID riêng ngăn ba node đá kết nối lẫn nhau; host checks xác minh từng định danh và đích topic/payload sai bị loại.
+
+`scripts/mqtt-command.py --node node_02 --telemetry <file> --mode MANUAL --brightness 80` tạo JSON cho node_02; tương tự node_01/03, mặc định node_01. Telemetry phải đúng node/schema/boot/uptime64 và file trong 3s hiện có. Ca wrong-node chọn node kế tiếp trong tập ba node. Script không publish; khi gửi kiểm thử cần chọn đúng topic và giữ command không retained. Tham chiếu SRS6, FR08, TC17–20/P6.
+
+
 TASK-006/A2 giữ nguyên diagnostics ping/pong/heartbeat, chuyển network sang FreeRTOS task riêng và dùng atomic trạng thái/mất kết nối để điều khiển fallback. Không subscribe command v1 hoặc phát telemetry/ACK trong A2. `AUTO` / `MANUAL <0..100>` trên Serial là giao diện thử cục bộ, không phải MQTT schema; command/ACK/deadline/cache thuộc A3.
 
 ## Tham chiếu và trạng thái
@@ -129,7 +136,7 @@ Tham chiếu SRS6,5.7,9.1,TC17–22/26. `MqttProtocol` dùng ArduinoJson **7.4.2
 - Core1 lấy tối đa1 lệnh/vòng khi result queue còn chỗ, kiểm tra phiên/loss-count và deadline64 tại lúc xử lý. Serial xử lý trước MQTT nếu cùng vòng. Sau requestAuto/requestManual và controller.update mới đưa kết quả sang task mạng. APPLIED không đo PWM hay xác nhận đã dimming xong.
 - Cache FIFO32 ở core1 giữ nội dung chuẩn hóa và reason, không refresh vị trí khi retry. Retry sau deadline vẫn nhận kết quả cũ; nội dung khác cùng ID bị từ chối, không sửa cache gốc. Kết quả invalid có ID hợp lệ cũng chiếm cache để tránh tái dùng ID đó thành lệnh khác. Sai boot được kiểm tra trước cache. Cache reset khi boot, giữ qua reconnect.
 - Callback gặp command queue đầy thì log/drop, không áp dụng hoặc thêm mã reason mới. Result queue đầy ngăn lấy lệnh mới. ACK publish thất bại giữ đầu queue để thử lại lúc network tick, không áp dụng lại controller; client còn có retry cùng ID. Session mất thì flush command/result đang chờ, giữ cache; result của lệnh đã lấy ở phiên cũ bị loại.
-- Snapshot mới nhất thay thế snapshot cũ, không có history offline. Chỉ mode/environment/motion/target/applied/fault làm bẩn trạng thái; raw ADC/distance vẫn cập nhật ở bản tin định kỳ. Telemetry định kỳ2s, thay đổi được gộp với khoảng cách tối thiểu200ms giữa mọi lần thử publish (kể cả thất bại/reconnect), tối đa5/s. Không phát lại các bước dimming đã bị gộp.
+- Snapshot mới nhất thay thế snapshot cũ, không có history offline. Từ TASK-011, mode/environment/motion/target/applied/fault và dữ liệu cảm biến (LDR/current ADC, khoảng cách hợp lệ hoặc null và PIR đầu vào của motion) đều làm bẩn snapshot để gửi sớm. analogSequence, uptime và thay đổi giá trị khoảng cách vẫn cùng biểu diễn null không làm bẩn snapshot. Sửa này tránh raw mới phải chờ control hoặc periodic, không thêm trường JSON hoặc đổi timer điều khiển. Telemetry định kỳ2s, thay đổi được gộp với khoảng cách tối thiểu200ms giữa mọi lần thử publish (kể cả thất bại/reconnect), tối đa5/s. Không phát lại các bước dimming đã bị gộp.
 - Current mô phỏng =2000mA×applied/100×current_adc/4095, power=12×current_mA/1000. distance invalid/nonfinite/nonpositive là null, ADC ngoài range không phát bản tin giả. Buffer2048 gồm MQTT header/topic; kiểm tra measureJson/overflow/serialize/publish.
 - CONNECT clean session, LWT OFFLINE retain/QoS0 được chuẩn bị trước; subscribe diagnostics/ping và command QoS1. Sau subscribe gửi ONLINE retain rồi snapshot telemetry mới nhất ở network tick tiếp. ONLINE publish fail sẽ thử lại trước telemetry. Ngắt chủ động khi transport còn dùng được phải publish OFFLINE trước DISCONNECT; transport mất/ghi lỗi thì đóng TCP, giữ will để broker phát. Broker chết không tự phát LWT tới client khác; backend tương lai phải dựa mất kết nối/stale.
 - PubSubClient callback không cung cấp retained flag: việc command không retained là yêu cầu publisher; không tuyên bố node nhận diện/reject retained command. Môi trường demo phải dùng broker sạch retained command; tuyệt đối không thêm -r cho command.
