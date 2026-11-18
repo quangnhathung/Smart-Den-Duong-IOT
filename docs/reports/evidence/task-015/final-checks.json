@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "at": "2026-11-18T15:51:41.979068+07:00",
+  "local_links_checked": 62,
+  "broken_links": [],
+  "history_byte_preserved": true,
+  "product_hashes_unchanged": true,
+  "word_pages_reviewed": 34,
+  "source_markdown_sha256": "b5322c6e6b46c9c8715baccf8bf500aa0f4faba85ce95565e850cdddf24a409f",
+  "docx_sha256": "9697ea66a78bd8594c21f1b756b3308811b0d74fdf4784777925a86216d4752b",
+  "git_diff_check": "PASS",
+  "editorial_scan_review": "Scan flags mostly technical ranges, semicolons, identifiers and inventories; reviewed context manually, no changes made solely to lower score.",
+  "not_run": [
+    "Windows/PowerShell execution",
+    "Docker/image pull and broker start",
+    "Wokwi live/15 experiment rerun",
+    "Firmware rebuild and full regression suites (product unchanged)"
+  ]
+}

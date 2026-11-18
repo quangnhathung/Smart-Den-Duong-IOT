@@ -1,0 +1,223 @@
+{
+  "host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+  "at": "2026-11-18T15:45:03+07:00",
+  "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-015/Huong-dan-cai-dat-va-van-hanh-toan-du-an-Nhom7-v01.docx",
+  "sha256": "9697ea66a78bd8594c21f1b756b3308811b0d74fdf4784777925a86216d4752b",
+  "owned_pid": 837445,
+  "start_ticks": "2373090",
+  "status": "RENDERED_IMAGES",
+  "images": [
+    {
+      "index": 1,
+      "path": "page-01.png",
+      "bytes": 78766,
+      "sha256": "886a7c82caaabf6dc8c202ef511ba2f18e277055be9375b8980883abadbb6b01"
+    },
+    {
+      "index": 2,
+      "path": "page-02.png",
+      "bytes": 105342,
+      "sha256": "87d249f2e79a84b656805038c837c754d1ee6561a045246f664497375c5edc10"
+    },
+    {
+      "index": 3,
+      "path": "page-03.png",
+      "bytes": 105354,
+      "sha256": "a59800076417ca9afa50d9113e6f46a77d8e833582dc6dde163a680481640737"
+    },
+    {
+      "index": 4,
+      "path": "page-04.png",
+      "bytes": 109691,
+      "sha256": "87ca8760c83ec0f51c14da7c153a56bd89afc822be915bf7e51e9c6e287cf7b9"
+    },
+    {
+      "index": 5,
+      "path": "page-05.png",
+      "bytes": 119804,
+      "sha256": "e28000675a5b5c3636835f6466e3eff83d5e6c32b44dbae1d8f3532450f3912e"
+    },
+    {
+      "index": 6,
+      "path": "page-06.png",
+      "bytes": 126947,
+      "sha256": "689ac658e90ca51f32772857f7185ec364309d927e428935cc4315c4c6e385d1"
+    },
+    {
+      "index": 7,
+      "path": "page-07.png",
+      "bytes": 112852,
+      "sha256": "5667a8a4598d10abe01c3e463aa0e073f73fc43f826bf92c02affa0500f554cd"
+    },
+    {
+      "index": 8,
+      "path": "page-08.png",
+      "bytes": 94345,
+      "sha256": "a3d43237b623fa6b8a02f8c72433179aeb49b0ad99f0f9742af7a5e17d936ad0"
+    },
+    {
+      "index": 9,
+      "path": "page-09.png",
+      "bytes": 115930,
+      "sha256": "8f9db64ac48680e4ac5f5dbb59df595840d70bb18c3fc35a24fe436f587ce373"
+    },
+    {
+      "index": 10,
+      "path": "page-10.png",
+      "bytes": 103045,
+      "sha256": "cdaa70036dfb85304fe9db16e4be632cc6f95634fcd8734852ad58e38fc9752e"
+    },
+    {
+      "index": 11,
+      "path": "page-11.png",
+      "bytes": 128725,
+      "sha256": "d6af58c3c0464f6e8ddfad4d4289434ef0caa2ff5bb65271ce252dc5634dcc9e"
+    },
+    {
+      "index": 12,
+      "path": "page-12.png",
+      "bytes": 130363,
+      "sha256": "350048e3b9aa8e45fe62345896af46bb4231ac0763e3f99df343dd3514bf662b"
+    },
+    {
+      "index": 13,
+      "path": "page-13.png",
+      "bytes": 118584,
+      "sha256": "4b05a5768ff3a525d67e2dfb1476b3f04819bb35bf3d8a3a51a6b8429ea5d71c"
+    },
+    {
+      "index": 14,
+      "path": "page-14.png",
+      "bytes": 123047,
+      "sha256": "9eca6a43a283c2ce153b5ce6ae75972d342a03dbf7c42a4e1f09af330135ca18"
+    },
+    {
+      "index": 15,
+      "path": "page-15.png",
+      "bytes": 135375,
+      "sha256": "efe6dfb5d198f3314ae58b0496a43a5a4827c04b364f300980508fef878f723b"
+    },
+    {
+      "index": 16,
+      "path": "page-16.png",
+      "bytes": 116108,
+      "sha256": "13fa2b83e47f8d6070a88c895572581320809e1b36acd11d619745061c1dac54"
+    },
+    {
+      "index": 17,
+      "path": "page-17.png",
+      "bytes": 108143,
+      "sha256": "a91508edbc9eb6a0603ac44a60fcd689b9945e4554dede4109d0843f1cc17332"
+    },
+    {
+      "index": 18,
+      "path": "page-18.png",
+      "bytes": 114790,
+      "sha256": "426dc64f8d1f155622078282f6eb8075831e3f07b9a05a500144feec17ec9983"
+    },
+    {
+      "index": 19,
+      "path": "page-19.png",
+      "bytes": 126063,
+      "sha256": "89ca712ae6ca02ffd09c073268c0829450c62f2bd515e1d87ef04c70b84428de"
+    },
+    {
+      "index": 20,
+      "path": "page-20.png",
+      "bytes": 112336,
+      "sha256": "7f972889c6448e265d263c0d1eaf5c84626e34ed988af7b0df7d5b1139f2f8ce"
+    },
+    {
+      "index": 21,
+      "path": "page-21.png",
+      "bytes": 119873,
+      "sha256": "2196558bb3b5c9d27c58b9da4a295709761c5f1ba257caff61ef25f25a0dfa61"
+    },
+    {
+      "index": 22,
+      "path": "page-22.png",
+      "bytes": 125609,
+      "sha256": "7d791f4d744ad845ef053ffe37a06612ec165750e5bddc063afd3bac33c39255"
+    },
+    {
+      "index": 23,
+      "path": "page-23.png",
+      "bytes": 131686,
+      "sha256": "05f93cff967ae14cd86b1101149caf72f9d1a5781c1958f40da3a6b1a268485f"
+    },
+    {
+      "index": 24,
+      "path": "page-24.png",
+      "bytes": 139747,
+      "sha256": "21f824866e127734f19de967df4343f2dd499898d252834a56638989ead2d114"
+    },
+    {
+      "index": 25,
+      "path": "page-25.png",
+      "bytes": 115942,
+      "sha256": "f0759c0c8fb5a9f4ea9995504c5bbd564ae14696e35e33a58fbc1ce86891ec0d"
+    },
+    {
+      "index": 26,
+      "path": "page-26.png",
+      "bytes": 123883,
+      "sha256": "1e70a468e3a3fc23678cc6a9edf6ba59f5510724475fef247259813975a46e3a"
+    },
+    {
+      "index": 27,
+      "path": "page-27.png",
+      "bytes": 129958,
+      "sha256": "5faeb4804354ae6775d691bd8d41223f2a0005756cefe2037d30559b6bd4dc46"
+    },
+    {
+      "index": 28,
+      "path": "page-28.png",
+      "bytes": 128764,
+      "sha256": "41d5aabe1fd9532393daae1a152a3809f2526ba37e883e260e829e98ecccfb11"
+    },
+    {
+      "index": 29,
+      "path": "page-29.png",
+      "bytes": 131147,
+      "sha256": "7f35307a99dd28c164e8df508246ca6997089ee1810b01d0da8e2643ee908851"
+    },
+    {
+      "index": 30,
+      "path": "page-30.png",
+      "bytes": 129533,
+      "sha256": "0d993ba17ce612e62b6e3b003d7b2ea371169748cd40226d8fbc576ff690f245"
+    },
+    {
+      "index": 31,
+      "path": "page-31.png",
+      "bytes": 134291,
+      "sha256": "e0e058597ac8eb8fc1a303ca295335beeddc686ccc9a4e9490d739ab54612af4"
+    },
+    {
+      "index": 32,
+      "path": "page-32.png",
+      "bytes": 121498,
+      "sha256": "ebaddef291267f47c747442a5a8d7da5516201044c600c6a933e4725c615060d"
+    },
+    {
+      "index": 33,
+      "path": "page-33.png",
+      "bytes": 147672,
+      "sha256": "330a1cbc99e050c3cf1e087ac72f1fd182e941c0b881755ba8812005321ce6a1"
+    },
+    {
+      "index": 34,
+      "path": "page-34.png",
+      "bytes": 128804,
+      "sha256": "8c6b8e47755cfed72bbe6171860dbcab30f09f2895e19154c5c6d863b92470e2"
+    }
+  ],
+  "preexisting_wps_pids": [],
+  "helper_sha256": "80fc14d739fe0f1915773c3cf161c763f856cd633def2027cbbd6a6af9196a55",
+  "count": 34,
+  "source_unchanged": true,
+  "remaining_documents": 0,
+  "quit_requested": true,
+  "owned_empty_instance_terminated": true,
+  "process_stopped": true
+}

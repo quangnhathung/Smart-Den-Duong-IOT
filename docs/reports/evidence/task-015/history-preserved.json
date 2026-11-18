@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "at": "2026-11-18T15:50:12+07:00",
+  "files": {
+    "report.md": {
+      "prefix_bytes": 2480,
+      "before_sha256": "31a217e2f34159ced67ab3fbd3d6c63600e1ec213120d6e43e936674cddc73ab",
+      "tail_sha256": "31a217e2f34159ced67ab3fbd3d6c63600e1ec213120d6e43e936674cddc73ab",
+      "before_bytes": 80312
+    },
+    "checklists.md": {
+      "prefix_bytes": 914,
+      "before_sha256": "366a9ed9a9595b015b62f47b982c308035496b2c23a7b158d040b2610dfe6555",
+      "tail_sha256": "366a9ed9a9595b015b62f47b982c308035496b2c23a7b158d040b2610dfe6555",
+      "before_bytes": 10864
+    }
+  }
+}
