@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-11-18T16:22:30.236421+07:00",
+  "files": {
+    "README.md": {
+      "bytes": 2491,
+      "sha256": "62ec6de3590d897678d71cf51fe2bbcacb83df5a45182d5b454a072c8e036f9a"
+    },
+    "build.json": {
+      "bytes": 444,
+      "sha256": "889dba6bd3c5637311e6c77b624b219224dd44ca3bffae5fa1a248d1375a4df2"
+    },
+    "content-checks.json": {
+      "bytes": 1106,
+      "sha256": "1a18468169b33d4991579c9ebc346f1bde3ce2cf3617fa994cb9e12ed13c120e"
+    },
+    "document-qa.json": {
+      "bytes": 1834,
+      "sha256": "a882da9da48351738ca5976a0de95e05dabeb545cf81d8f4fc60789eef7b4863"
+    },
+    "final-checks.json": {
+      "bytes": 843,
+      "sha256": "fc0480634859e9adf759c85d3d0f6abc0c9a3fa12b287daba3dff221bf410780"
+    },
+    "history-before-checklists.md": {
+      "bytes": 11778,
+      "sha256": "b48b9c97d9977519aa1f1425d77b048cb22f9ea74a35bc4a5e20961bfd7dbcc4"
+    },
+    "history-before-report.md": {
+      "bytes": 82792,
+      "sha256": "2b91e473d1ce4ed6d8c426e682418b00dc9b635849343a72009fb05566403696"
+    },
+    "history-preserved.json": {
+      "bytes": 604,
+      "sha256": "7f01fa1c5b22a2c15ddd18e309eb02e30948740d43a37473df82a7073aab3320"
+    },
+    "links-before-closure.json": {
+      "bytes": 89,
+      "sha256": "b1d3ba61915702794deb285b28b975403403447f88a644ae60338625a74b9c04"
+    },
+    "next-task.md-before.md": {
+      "bytes": 2004,
+      "sha256": "2df6ad4e9cac6ed92212299eba1a1f9d4cfa0105316f19685c35fa3a8f60ad4e"
+    },
+    "preview-v02-proof.json": {
+      "bytes": 4544,
+      "sha256": "6a6ef4a5b29ca94225136765fb5998dfe40fb661e7f8729405fd517878d7576b"
+    },
+    "preview-v03-proof.json": {
+      "bytes": 4544,
+      "sha256": "b02ba606b5418c5ab6857c46d922baa9ab5c6f37663b69100cb3c44242b32806"
+    },
+    "product-baseline.json": {
+      "bytes": 6834,
+      "sha256": "3c8d0127e5933d83503882242bb5e00b55453836b6e5fa26ad96e02513c816d8"
+    },
+    "schema-check.log": {
+      "bytes": 41,
+      "sha256": "790d521e72d764d8b1e42a4aad5506ae606ef3b08f139f5e1919a5f095fa6509"
+    },
+    "task.md-before.md": {
+      "bytes": 3278,
+      "sha256": "fc10660c823e4c0da71bee3be27dd4d39be05c48a64be23f45a8642543a1c56d"
+    }
+  }
+}

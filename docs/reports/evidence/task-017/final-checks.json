@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "at": "2026-11-18T16:22:30.236421+07:00",
+  "local_md_links_checked": 68,
+  "docx_source_sha256": "0c3fbb8ae4ec47bbda2e478dbc2168cd887d0ab29d908ef64d3e312ad100a0a9",
+  "pages_verified": 23,
+  "word_markdown_content": "411 lines match",
+  "final_png_byte_identity": "23/23 compared with visually reviewed v02",
+  "q_and_a_count": 14,
+  "ex04_r3_min_coverage_percent": 99.00427807416179,
+  "ex05_baseline_mean_w": 18.670894112198415,
+  "history_tail_byte_preserved": true,
+  "product_hashes_unchanged": true,
+  "task015_word_unchanged": true,
+  "existing_project_guide_matches_current_git_HEAD": true,
+  "project_guide_note": "Current committed Markdown differs from original TASK015 artifact source; kept current user version, did not restore older content.",
+  "git_diff_check": "PASS",
+  "live_rehearsal": "NOT RUN"
+}

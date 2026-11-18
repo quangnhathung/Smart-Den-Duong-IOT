@@ -1,0 +1,157 @@
+{
+  "host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+  "at": "2026-11-18T16:18:18+07:00",
+  "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-017/Kich-ban-gioi-thieu-va-demo-toan-du-an-Nhom7-v03.docx",
+  "sha256": "0c3fbb8ae4ec47bbda2e478dbc2168cd887d0ab29d908ef64d3e312ad100a0a9",
+  "owned_pid": 896009,
+  "start_ticks": "2572591",
+  "status": "RENDERED_IMAGES",
+  "images": [
+    {
+      "index": 1,
+      "path": "page-01.png",
+      "bytes": 91938,
+      "sha256": "24e43a24b130241c8649b1d193c9d819dd762ec7f60abd691709ec5a049e8d3f"
+    },
+    {
+      "index": 2,
+      "path": "page-02.png",
+      "bytes": 104820,
+      "sha256": "5e42a573d469f381c38e1281abeddda299452e34f653729d7f7b6ad9b3ec0e55"
+    },
+    {
+      "index": 3,
+      "path": "page-03.png",
+      "bytes": 130228,
+      "sha256": "1ff329ac76630ac597dc6f2a447e70ea554d9bb3726173917a1a3d8e4d7c5714"
+    },
+    {
+      "index": 4,
+      "path": "page-04.png",
+      "bytes": 125416,
+      "sha256": "c01e54014561a74a16d1e0d7ec25d7225a0e21473936cf6558c35b0b77aa118f"
+    },
+    {
+      "index": 5,
+      "path": "page-05.png",
+      "bytes": 141808,
+      "sha256": "4ee47575b10530c0e8ef9e3712e9d4aa9b22d0d4a7dcc7f30e4e320d9ce5b107"
+    },
+    {
+      "index": 6,
+      "path": "page-06.png",
+      "bytes": 124824,
+      "sha256": "b5c3e0be70540749091167b7fc5a9446f621aacb134dc727d447ff970f76b4d5"
+    },
+    {
+      "index": 7,
+      "path": "page-07.png",
+      "bytes": 127687,
+      "sha256": "68cbf7c881807db2bc21bbbca0250a95e0b06a54d44d208fd208fe5e35cd0d8d"
+    },
+    {
+      "index": 8,
+      "path": "page-08.png",
+      "bytes": 129109,
+      "sha256": "f00b9f171a3d155c4845485141a45f25cf62e273d6508e0693fe43aedab32ec2"
+    },
+    {
+      "index": 9,
+      "path": "page-09.png",
+      "bytes": 137216,
+      "sha256": "90a4d03abea53f87bed2a73efa29bea8e1f389e07710903c6a6cb2e65c292294"
+    },
+    {
+      "index": 10,
+      "path": "page-10.png",
+      "bytes": 127648,
+      "sha256": "ee6fa776671c6937be9d8445cc472e20978e9e615b8166c1cbe2b7855c42a4e3"
+    },
+    {
+      "index": 11,
+      "path": "page-11.png",
+      "bytes": 135696,
+      "sha256": "fe613f6be43de2e81648d3f1e320069d3e93083d6ee374d5635731bfffc20ceb"
+    },
+    {
+      "index": 12,
+      "path": "page-12.png",
+      "bytes": 128674,
+      "sha256": "44b477af7ea45a120499c40e34aecc42e10e6b56351ad8df451c76bbbff3b716"
+    },
+    {
+      "index": 13,
+      "path": "page-13.png",
+      "bytes": 117967,
+      "sha256": "bf483fc4cc12aac5ed56f72f341568783ba503f6f5cba480bbe8e5f7ea32d5d3"
+    },
+    {
+      "index": 14,
+      "path": "page-14.png",
+      "bytes": 122123,
+      "sha256": "1c97d9270a9a6616c6d7f3070ccbac0c405936f451278fe5814d43895c28b1f5"
+    },
+    {
+      "index": 15,
+      "path": "page-15.png",
+      "bytes": 135004,
+      "sha256": "ec9fae9f8bb5d3fe7b4ac54084d10a08efcdc23000e10ad03ce91552a4f8acf2"
+    },
+    {
+      "index": 16,
+      "path": "page-16.png",
+      "bytes": 140221,
+      "sha256": "f28feb52f85416b19d2f2e68724bbd2e7a50532703bf6e64c8e972238461b351"
+    },
+    {
+      "index": 17,
+      "path": "page-17.png",
+      "bytes": 123698,
+      "sha256": "50b171e081440d25d9eee25901d38be8e15674574518ba8e0925319d404e37be"
+    },
+    {
+      "index": 18,
+      "path": "page-18.png",
+      "bytes": 122158,
+      "sha256": "c644ba6b73d20cd938a44d214c8ab123ae8b35d71f0fb36e10031fb264e08d3d"
+    },
+    {
+      "index": 19,
+      "path": "page-19.png",
+      "bytes": 132592,
+      "sha256": "75b111852065d6f7bf0cab61a15cf817b3bb993f6e2028a4c0a550030542b6f7"
+    },
+    {
+      "index": 20,
+      "path": "page-20.png",
+      "bytes": 124710,
+      "sha256": "64961ec1acf020680930f8b9845c9b20ba4a1ca975c37f5fe80a57822710b2e9"
+    },
+    {
+      "index": 21,
+      "path": "page-21.png",
+      "bytes": 146796,
+      "sha256": "f0a80e92fb86fa92b8fae67ce93f4002eb06ccb98eb2f3157f5a8e2aab4211bb"
+    },
+    {
+      "index": 22,
+      "path": "page-22.png",
+      "bytes": 153697,
+      "sha256": "a20694ee7dbe69350b4cb8909391d45a336411ed235ecc0b745e00638da2f123"
+    },
+    {
+      "index": 23,
+      "path": "page-23.png",
+      "bytes": 113614,
+      "sha256": "7b1049172d34cce6edbb1df168caa2eadd131955d1c147a92429c1917351ea33"
+    }
+  ],
+  "preexisting_wps_pids": [],
+  "helper_sha256": "80fc14d739fe0f1915773c3cf161c763f856cd633def2027cbbd6a6af9196a55",
+  "count": 23,
+  "source_unchanged": true,
+  "remaining_documents": 0,
+  "quit_requested": true,
+  "owned_empty_instance_terminated": true,
+  "process_stopped": true
+}

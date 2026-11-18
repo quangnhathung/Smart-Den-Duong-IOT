@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "at": "2026-11-18T16:17:00.701995+07:00",
+  "main_timeline": {
+    "segments": 11,
+    "duration_seconds": 1200,
+    "contiguous": true
+  },
+  "short_timeline": {
+    "segments": 8,
+    "duration_seconds": 420,
+    "contiguous": true
+  },
+  "published_metrics_match": [
+    {
+      "scenario": "EX-02",
+      "power": "6.000 W",
+      "saving": "75.000%"
+    },
+    {
+      "scenario": "EX-03",
+      "power": "8.160 W",
+      "saving": "66.001%"
+    },
+    {
+      "scenario": "EX-04",
+      "power": "9.600 W",
+      "saving": "60.001%"
+    },
+    {
+      "scenario": "EX-05",
+      "power": "6.613 W",
+      "saving": "64.579%"
+    }
+  ],
+  "ex07_coverage_range_percent": [
+    79.07316257532163,
+    79.83615234788525
+  ],
+  "syntax": "JSON parsed; Bash syntax checked; Docker/PowerShell/live actions not executed",
+  "product_unchanged": {
+    "firmware": 30,
+    "backend": 26,
+    "dashboard": 15
+  },
+  "not_run": [
+    "Human rehearsal/presentation",
+    "Wokwi/MQTT/backend/dashboard live restart",
+    "Windows command execution",
+    "15 formal experiments rerun"
+  ]
+}
