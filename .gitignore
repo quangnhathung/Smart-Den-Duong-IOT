@@ -15,3 +15,6 @@ output/task-012/
 # Python tooling and host-test bytecode caches.
 __pycache__/
 *.pyc
+
+# TASK-015 generated Word, native WPS previews and temporary initialization checks.
+output/task-015/
