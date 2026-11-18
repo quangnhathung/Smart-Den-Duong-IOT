@@ -2,6 +2,7 @@
 
 ESP32 esp32dev, Arduino trên PlatformIO. Firmware hiện có controller P2 và MQTT nghiệp vụ A3 dùng chung cho ba định danh: telemetry, command AUTO/MANUAL, ACK/cache, availability/LWT và reconnect; giữ cảm biến, hold/dimming/fault, Serial và diagnostics. TASK-007 bàn giao code/test/build/hướng dẫn; backend/API A4 và dashboard HTML/CSS/JS A5 chạy Live Server nằm ở repo cùng cấp. TASK-010 đã hoàn tất4/4 tích hợp live một node, gồm outage/reconnect/restart và10 mẫu cảm biến→dashboard dưới3s. TASK-011 hoàn thành4/4 nghiệm thu live ba node và1800s monotonic; [hồ sơ và giới hạn](docs/reports/evidence/task-011/run-20261117-135233/README.md). TASK-012 hoàn thành5/5:15 lượt thực nghiệm hợp lệ, audit độc lập, Word/PPTX/video, runbook/cold-start/backup. Xem [hồ sơ bàn giao và giới hạn](docs/reports/evidence/task-012/run-20261117-200024/README.md).
 
+- [Hướng dẫn cài đặt và vận hành toàn dự án trên Linux và Windows](docs/project-guide.md)
 - [Chạy Wokwi và hướng dẫn A3](docs/techs/simulation.md)
 - [Pin map mô phỏng](docs/techs/hardware.md)
 - [Module và lịch đọc cảm biến](docs/techs/firmware.md)

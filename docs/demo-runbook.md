@@ -1,5 +1,7 @@
 # Runbook trình diễn và bàn giao — TASK-012
 
+Hướng dẫn đầy đủ cài lần đầu, khởi tạo, chạy hằng ngày và thao tác từng màn hình ở [project-guide.md](project-guide.md), kèm Word đã kiểm 34 trang trong output/task-015/. Runbook này tiếp tục là bản trình diễn ngắn của TASK-012.
+
 ## Phạm vi và nguồn
 
 SRS mục9,12,13,15; [setup](techs/setup.md), [simulation](techs/simulation.md), [backend](techs/backend.md), [dashboard](techs/dashboard.md), [thực nghiệm](techs/experiments.md). Đây là hướng dẫn vận hành mô hình ba phiên Wokwi local. Kết quả diễn tập thực tế phải có hồ sơ riêng; tệp hướng dẫn không chứng minh đã chạy thành công trên máy khác.

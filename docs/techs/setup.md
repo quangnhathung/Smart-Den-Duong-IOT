@@ -1,5 +1,9 @@
 # Setup P0: Docker MQTT và Wokwi một node
 
+## Hướng dẫn toàn hệ thống hiện hành
+
+[Tài liệu cài đặt và vận hành](../project-guide.md) của TASK-015 hướng dẫn Linux/Windows, ba repo, MQTT, backend/SQLite, build ba environment, Wokwi, Live Server, thao tác UI/API và sao lưu/khôi phục. Bản Word 34 trang đã kiểm WPS; [bằng chứng](../reports/evidence/task-015/document-qa.json). Chạy thông thường dùng API8000 và Live Server5500; API8001 thuộc môi trường QA cũ. Các phần P0 phía dưới giữ nguyên lịch sử, không dùng banner/khả năng P0 làm hướng dẫn firmware hiện tại.
+
 > Source hiện đã tích hợp cảm biến P1/A1. Các bước P0 dưới đây giữ làm nền broker/diagnostics; chạy và nghiệm thu bản mới theo [simulation](simulation.md), [firmware](firmware.md), [testing](testing.md). Banner hiện tại là P1/A1 sensor diagnostics.
 
 ## Tham chiếu và hiện trạng
