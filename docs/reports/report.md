@@ -1,3 +1,30 @@
+## 2026-11-18T15:50:12+07:00 — TASK-015 — Hướng dẫn cài đặt và vận hành toàn dự án
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 4/4 nhóm nghiệm thu
+
+### Đã thực hiện
+
+Soạn [hướng dẫn đầu-cuối](../project-guide.md), Word chỉnh sửa được34 trang và Markdown đồng nội dung. Bao gồm cài Linux/Windows, ba repo/cổng/cấu hình, Docker MQTT, Python3.12/SQLite init, PlatformIO/build ba node, license/gateway/Wokwi, Live Server, năm màn hình/UI/API, AUTO/MANUAL/ACK, cảm biến/fault, năng lượng/coverage/clock, thực nghiệm, kiểm thử, dừng/restart, backup/restore/chuyển máy và xử lý lỗi. Thêm generator DOCX, ảnh QA có nguồn và liên kết từ README/setup/runbook; giữ sản phẩm và dữ liệu cũ.
+
+### Kiểm tra và kết quả
+
+PASS schema DOCX; native WPS34/34 trang đã xem trực quan, source SHA không đổi và chỉ instance QA được đóng. Đối chiếu695 dòng nội dung Markdown→DOCX,34 heading chính, bảng/list/ảnh16:9 và số trang PASS. CLI plan --all trả15 lượt, prepare --help, Bash/Python/JSON cú pháp PASS. SQLite tạm init hai lần giữ3 node/fixture, backup/quick_check/đọc lại và từ chối ghi đè PASS, source/đích không đổi sau ca từ chối. Hash28 tệp firmware,14 backend,8 dashboard giữ nguyên. [Bằng chứng](evidence/task-015/README.md).
+
+### Vướng mắc
+
+Lệnh đối chiếu ban đầu gọi Python hệ thống thiếu lxml. Không có vướng mắc còn chặn. Chưa cài/chạy Windows/PowerShell hoặc tái chạy Docker/Wokwi/15 lượt live trong task tài liệu; không dùng kiểm cú pháp thay nghiệm thu máy mới.
+
+### Cách giải quyết
+
+Dùng đúng runtime Office riêng đã có; không cài thư viện vào sản phẩm. Dẫn nguồn cấu hình/source hiện hành và tách các đoạn lịch sử P0/QA khỏi thao tác mặc định. PDF do người dùng tự xuất WPS; không xuất lại PDF hoặc sửa tài liệu TASK-012 đã giao.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật setup/document-skills/runbook/README/task/checklist/next-task; SRS3–9/12–15, không sửa SRS hoặc sản phẩm. Bảo toàn TASK-012 và đề xuất TASK-014 cũ; giữ nguyên mọi byte report/checklist trước. Đề xuất tiếp TASK-016 diễn tập hai thành viên dùng hướng dẫn mới, chưa triển khai. Không commit/push/cloud.
+
+---
+
 ## 2026-11-18T15:25:24+07:00 — TASK-012 — Thực nghiệm và bàn giao đồ án
 
 - Trạng thái: Hoàn thành

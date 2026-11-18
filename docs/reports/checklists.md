@@ -1,3 +1,15 @@
+# TASK-015 — Hướng dẫn cài đặt và vận hành toàn dự án
+
+- Hoàn thành: 2026-11-18T15:50:12+07:00; **4/4 nhóm nghiệm thu**.
+- [x] Đối chiếu source/config ba repo và tài liệu, phân biệt chạy mặc định8000 với QA8001.
+- [x] Hướng dẫn đầy đủ setup/init/run/UI/API/cảm biến/clock/thực nghiệm/tests/backup/restore/lỗi; Linux và Windows.
+- [x] Word34 trang chỉnh sửa được, schema/WPS mọi trang/695 dòng nội dung/34 heading PASS; Markdown đồng nội dung.
+- [x] Kiểm CLI/cú pháp/SQLite tạm/idempotency/backup/guard, bảo toàn source và lịch sử, cập nhật hồ sơ/techs.
+
+[Hồ sơ và giới hạn](evidence/task-015/README.md). Không chạy lại stack live hoặc xác nhận toàn bộ Windows; không thay source sản phẩm, không commit/push. TASK-016 mới là đề xuất diễn tập, chưa thực hiện.
+
+---
+
 # TASK-012 — Thực nghiệm và bàn giao đồ án
 
 - Hoàn thành: 2026-11-18T15:25:24+07:00; **5/5 nhóm nghiệm thu**.
