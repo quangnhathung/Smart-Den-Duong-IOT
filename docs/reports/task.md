@@ -1,34 +1,34 @@
-# TASK-017 — Kịch bản giới thiệu và demo toàn diện
+# TASK-019 — Viết lại báo cáo tiểu luận bốn chương
 
 - Trạng thái: Hoàn thành
 - Tiến độ: 4/4 nhóm nghiệm thu
-- Cập nhật: 2026-11-18T16:20:56+07:00
+- Cập nhật: 2026-11-18T16:41:28+07:00
 
 ## Mô tả và phạm vi
 
-Người dùng yêu cầu kịch bản demo chi tiết toàn diện, giới thiệu chi tiết. Tạo lời dẫn có thể đọc trực tiếp, thao tác Wokwi/dashboard, phân vai gợi ý hai người, thời lượng khoảng20 phút, bản rút gọn, kết quả quan sát, số liệu thực nghiệm có nguồn, câu hỏi bảo vệ và phương án sự cố. Bàn giao Word chỉnh sửa được cùng Markdown. Giữ toàn bộ source sản phẩm/dữ liệu, không tự chạy buổi demo hoặc triển khai dashboard mô phỏng mới.
+Người dùng yêu cầu viết lại báo cáo: Lời nói đầu; Chương1 Giới thiệu về IoT có mục1.1/1.2…; Chương2 Giới thiệu phần cứng; Chương3 Giới thiệu phần mềm/kiến trúc/hoạt động; Chương4 Kết quả demo; Lời kết. Chỉ tạo Word, dùng kết quả hiện có, kế thừa bìa và style hiện tại, không dùng skill humanize/humanizer/viet-humanize. Nguồn kế thừa là báo cáo TASK-012 v05 sáu chương. Tạo tệp mới, giữ nguyên bản cũ; không PDF/Markdown/PPTX bàn giao, không chạy lại thực nghiệm hoặc sửa sản phẩm/dữ liệu.
 
-Task mới dùng017 vì016 đang là mã đề xuất diễn tập chưa bắt đầu. [Task015 trước đó](evidence/task-017/task.md-before.md) và đề xuất016 được giữ nguyên trong hồ sơ.
+Task mới019 vì018 đang là mã đề xuất diễn tập. [Task017 trước](evidence/task-019/task.md-before.md) và đề xuất018 được bảo toàn.
 
 ## Tham chiếu SRS
 
-SRS mục1–9,12,13,15; nhấn mạnh demo mô phỏng, AUTO tại node, PIR là điều kiện kích hoạt, MQTT/ACK và hai loại clock. Không dùng nội dung dự kiến làm bằng chứng chức năng.
+SRS mục1–9,12–15; biên soạn lại tài liệu học thuật, không triển khai FR mới. Mô tả phần cứng/phần mềm thực tế, dùng audit/CSV/ảnh/video TASK-011/012 đã có, công bố giới hạn mô phỏng và hai clock.
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [x] Đối chiếu controller/cấu hình/UI và số liệu TASK-012; chọn timeline, node và đầu vào không mâu thuẫn.
-- [x] Soạn mở đầu/kiến trúc, từng cảnh gồm lời nói/thao tác/kỳ vọng/chờ/xử lý lỗi, kết luận/Q&A/checklist và nhánh chỉ Wokwi khi MQTT chưa chạy.
-- [x] Tạo DOCX/Markdown đồng nội dung, schema và WPS kiểm mọi trang; giữ các tệp đã giao trước.
-- [x] Kiểm timeline/số liệu/luồng/cú pháp/liên kết, bảo toàn source/lịch sử; cập nhật tài liệu liên quan và đề xuất tiếp theo.
+- [x] Xác minh DOCX nguồn/bìa/style, lập bố cục và số liệu hiện có; tham chiếu nguồn lý thuyết phù hợp.
+- [x] Viết đủ lời nói đầu, bốn chương có mục con, kết quả demo thực và lời kết; số liệu/ảnh có nguồn, không thêm kết quả chưa chạy.
+- [x] Xuất DOCX mới, giữ nguyên bìa/styles và bản nguồn; schema, render WPS/kiểm mọi trang, mục lục/heading/bảng/ảnh đạt.
+- [x] Đối chiếu số liệu/nguồn/định dạng/bảo toàn sản phẩm và lịch sử; cập nhật hồ sơ/techs/task/report/checklist/đề xuất.
 
 ## Vướng mắc và cách giải quyết
 
-Không có vướng mắc chặn. Đã sửa đích liên kết nguồn trong bản cuối; WPS23 trang, schema,411 dòng nội dung và10 liên kết nội bộ đã kiểm. Tái dùng runtime riêng, không cài lại hoặc xuất PDF tự động. Mốc thời lượng là dự kiến cho trình bày, mỗi thao tác chuyển cảnh theo trạng thái thực, không giả định timer mô phỏng bằng giờ máy.
+Chưa có vướng mắc. Dùng skill docx và runtime Office riêng đã có, không dùng các skill humanize theo yêu cầu. WPS render PNG phục vụ QA, không tạo PDF bàn giao. Kết quả lịch sử được dẫn đúng phạm vi, không đổi thành nghiệm thu phần cứng thật.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Đã được giao soạn tài liệu. Dữ liệu và bằng chứng TASK-011/012, guide TASK-015 và source hiện hành có sẵn. Chưa có xác nhận hai thành viên đã tự diễn tập; không ghi PASS thay con người.
+Đã được giao. Báo cáo v05, audit/CSV/ảnh/biểu đồ và runtime WPS có sẵn. Không tự diễn tập con người, bật lại broker/Wokwi, chạy chiến dịch mới hoặc commit/push/cloud.
 
-## Kết quả bàn giao
+## Kết quả và bằng chứng
 
-[Markdown kịch bản](../demo-script.md); Word output/task-017/Kich-ban-gioi-thieu-va-demo-toan-du-an-Nhom7-v03.docx23 trang. [QA](evidence/task-017/document-qa.json), [timeline/số liệu](evidence/task-017/content-checks.json). Timeline chính20 phút và rút gọn7 phút là khung diễn tập, chưa xác nhận thời lượng buổi thực tế. Không chạy lại stack live, không ghi PASS cho hai người; đề xuất tiếp TASK-018 diễn tập theo kịch bản, chưa thực hiện.
+Word mới27 trang,6 ảnh/biểu đồ. Schema/WPS27 trang, PNG bìa/source style byte-identical, bảng CSV/audit và bảo toàn source/lịch sử PASS. [Hồ sơ, Word và giới hạn](evidence/task-019/README.md). Không dùng humanize/humanizer/viet-humanize; không tạo bản PDF/PPTX/Markdown của tiểu luận. Không chạy thực nghiệm/build hoặc sửa sản phẩm. Đề xuất tiếp theo020, chưa thực hiện.

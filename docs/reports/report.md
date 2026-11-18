@@ -1,3 +1,30 @@
+## 2026-11-18T16:41:28+07:00 — TASK-019 — Viết lại báo cáo tiểu luận bốn chương
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 4/4 nhóm nghiệm thu
+
+### Đã thực hiện
+
+Tạo Word mới27 trang theo yêu cầu: Lời nói đầu; Chương1 IoT; Chương2 phần cứng; Chương3 phần mềm/kiến trúc/hoạt động; Chương4 kết quả demo; Lời kết. Có28 mục con, mục lục, bảng và6 ảnh/biểu đồ từ hồ sơ hiện có, nguồn tham khảo. Giữ nguyên bìa/style/lề/header/footer của báo cáo v05 bằng ghép body vào OOXML; bản cũ bảo toàn. Chỉ bàn giao DOCX, không tạo PDF/PPTX/Markdown bài tiểu luận; không dùng skill humanize/humanizer/viet-humanize theo yêu cầu. Thêm generator body và helper merge có guard không ghi đè.
+
+### Kiểm tra và kết quả
+
+PASS schema462 paragraph, native WPS27/27 trang đã rà trực quan, mục lục/footer/heading/bảng/ảnh đạt.12 phần tử bìa và mọi package part gốc ngoài document/relationships giữ byte; PNG bìa trùng SHA bản v05. Source không đổi, WPS QA riêng đã đóng. Mean/min/max15 dòng CSV khớp variation; bảng Word khớp số sau làm tròn; audit15 lượt/45 cửa sổ;6 media khớp SHA. Kiểm đúng final latency audit30 mẫu và công bố probe HTTP lịch sử INCOMPLETE. Hash30 firmware/26 backend/15 dashboard không đổi. [Hồ sơ và Word](evidence/task-019/README.md).
+
+### Vướng mắc
+
+Không có vướng mắc còn chặn. Chưa có kết quả mạch thật/diễn tập con người mới; không chạy lại live hoặc build trong task biên soạn.
+
+### Cách giải quyết
+
+Phân biệt mô phỏng và số đo điện thực; AUTO phụ thuộc PIR, hold/dimming và hai clock được giải thích. Tách ảnh/video minh họa khỏi cửa sổ thực nghiệm, giữ các lượt lỗi và probe chưa đủ thời lượng trong phần giới hạn. Dùng runtime docx/WPS riêng đã có để render QA, không thay phụ thuộc hoặc xuất PDF.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật task/checklist/next-task và document-skills; SRS1–9/12–15 chỉ tham chiếu, không sửa sản phẩm/schema/pin. Đề xuất TASK-020 rà soát/diễn tập hai thành viên, kế thừa018 chưa thực hiện. Giữ mọi byte lịch sử cũ; không commit/push/cloud hoặc tự thực hiện đề xuất.
+
+---
+
 ## 2026-11-18T16:20:56+07:00 — TASK-017 — Kịch bản giới thiệu và demo chi tiết
 
 - Trạng thái: Hoàn thành

@@ -1,3 +1,15 @@
+# TASK-019 — Báo cáo tiểu luận bốn chương
+
+- Hoàn thành: 2026-11-18T16:41:28+07:00; **4/4 nhóm nghiệm thu**.
+- [x] Đối chiếu báo cáo v05, bìa/style và nguồn lý thuyết/kết quả hiện có.
+- [x] Viết đủ lời nói đầu/bốn chương28 mục con/lời kết, bảng và6 ảnh/biểu đồ có nguồn; chỉ Word.
+- [x] Word27 trang/schema/WPS mọi trang PASS; XML bìa/style và PNG bìa giữ nguyên, source không đổi.
+- [x] CSV/audit/ảnh/giới hạn khớp, sản phẩm và lịch sử bảo toàn; hồ sơ/techs/task/đề xuất cập nhật.
+
+[Word và bằng chứng](evidence/task-019/README.md). Không dùng humanize/humanizer/viet-humanize. Không chạy live mới hoặc xác nhận mạch thật/diễn tập. TASK-020 là đề xuất kế thừa018 chưa thực hiện.
+
+---
+
 # TASK-017 — Kịch bản giới thiệu và demo toàn diện
 
 - Hoàn thành: 2026-11-18T16:20:56+07:00; **4/4 nhóm nghiệm thu**.
