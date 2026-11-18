@@ -1,3 +1,16 @@
+# TASK-012 — Thực nghiệm và bàn giao đồ án
+
+- Hoàn thành: 2026-11-18T15:25:24+07:00; **5/5 nhóm nghiệm thu**.
+- [x] Baseline/phương pháp/pilot90s-node;34 Python test PASS.
+- [x] 15/15 lượt EX01–07 hợp lệ; giữ FAIL/INCOMPLETE, chạy lại trọn lượt bị lỗi.
+- [x] 45 cửa sổ node–lượt, raw MQTT/SQLite/API/CSV và năng lượng độc lập khớp1e-9Wh; công bố coverage/giới hạn mô phỏng.
+- [x] Word v05 sáu chương/23 trang, PPTX v05 12 slide16:9; schema và mọi ảnh WPS PASS. Video khoảng7 phút1080p/subtitle Việt, full decode/phát/16 cảnh trực quan PASS; PDF người dùng tự xuất.
+- [x] Runbook/cold-start/lệnh APPLIED,137.797 telemetry cũ giữ SHA, cleanup QA và backup SHA/đọc lại archive PASS; tài liệu/lịch sử bảo toàn.
+
+[Hồ sơ nghiệm thu](evidence/task-012/run-20261117-200024/README.md). Không sửa source sản phẩm hoặc commit/push/merge. Chưa mạch thật hoặc xác nhận hai thành viên tự vận hành/giải thích; đề xuất TASK-014 chưa thực hiện. Các mục dưới giữ nguyên lịch sử.
+
+---
+
 # TASK-013 — Cài skill tài liệu cho Codex cá nhân
 
 - Hoàn thành: 2026-11-17T21:04:27+07:00; 3/3 mục cài tệp.

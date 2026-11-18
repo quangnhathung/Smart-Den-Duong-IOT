@@ -1,24 +1,27 @@
-# Task tiếp theo — Chưa xác định
+# TASK-014 — Diễn tập vận hành và bảo vệ với hai thành viên
 
 - Trạng thái: Chưa bắt đầu
-- Tiến độ: 0/0
+- Tiến độ: 0/3 mục nghiệm thu dự kiến
+- Cập nhật: 2026-11-18T15:25:24+07:00
 
 ## Mô tả và phạm vi
 
-TASK-012 đang tiếp tục thực nghiệm và bàn giao theo yêu cầu đã giao. TASK-013 cài skill đã hoàn thành, lịch sử và bản trạng thái trước được giữ trong evidence/task-013/. Đề xuất task mới sẽ được chốt sau khi có kết quả TASK-012; không tự thực hiện task kế tiếp.
+Đề xuất sau TASK-012: hai thành viên dùng bộ bàn giao/runbook để tự khởi động mô hình, chạy demo và giải thích thuật toán, giao thức, năng lượng/độ phủ và giới hạn. Chỉ thực hiện khi người dùng giao task; chưa chạy trong TASK-012. Không thêm tính năng hoặc tự triển khai cloud.
 
 ## Tham chiếu SRS
 
-SRS mục15–16; trạng thái công việc hiện hành xem task.md.
+SRS mục13,15–16; kiểm khả năng vận hành/giải thích của nhóm, không thay bằng kiểm tự động.
 
 ## Tiêu chí hoàn thành và tiến độ
 
-Chưa xác định.
+- [ ] Mỗi thành viên tự khởi động ba node/backend/broker/dashboard bằng Live Server theo runbook; ghi máy/môi trường/kết quả và lỗi thực tế.
+- [ ] Mỗi người thực hiện các luồng demo và giải thích số liệu/giới hạn bằng bằng chứng, không coi mô phỏng là số đo phần cứng.
+- [ ] Chốt phản hồi, sửa hướng dẫn trong phạm vi được giao và ghi biên bản diễn tập; PDF do người dùng xuất nếu cần nộp.
 
 ## Vướng mắc và cách giải quyết
 
-Không có đề xuất mới cần triển khai trong lúc TASK-012 đang thực hiện.
+Chưa có xác nhận trực tiếp từ hai thành viên. Agent không tự ghi PASS; cần buổi diễn tập và phản hồi thực tế.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Chờ TASK-012 hoàn tất và yêu cầu giao việc tiếp theo.
+TASK-012 đã hoàn thành; cần người dùng giao TASK-014, hai thành viên sẵn sàng và máy có PlatformIO/Wokwi/gateway, Python backend, MQTT và VS Code Live Server. Kiểm lại manifest trước chạy; helper/PID của đợt QA cũ chỉ là tham chiếu, không chạy mù.

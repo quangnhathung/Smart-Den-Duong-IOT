@@ -1,3 +1,30 @@
+## 2026-11-18T15:25:24+07:00 — TASK-012 — Thực nghiệm và bàn giao đồ án
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 5/5 nhóm nghiệm thu
+
+### Đã thực hiện
+
+Hoàn thành15 lượt EX01–07 ba node,45 cửa sổ dữ liệu riêng, đối chiếu năng lượng/baseline/coverage; tạo Word v05 sáu chương/23 trang, PPTX v05 12 slide16:9 và video MP4 khoảng7 phút1080p/phụ đề Việt. Bổ sung công cụ QA, runbook, backup nguồn ba repo/SQLite/raw/attempt/artifact/deliverables. PDF do người dùng tự xuất WPS. Giữ source sản phẩm, dữ liệu cũ và mọi attempt lỗi; không commit/push/merge/cloud.
+
+### Kiểm tra và kết quả
+
+PASS34 Python test,15/15 lượt chính, audit raw MQTT→SQLite→API/CSV độc lập trong1e-9Wh, quick_check=ok;45 cửa sổ riêng, trễ lớn nhất1778ms≤2000ms. Office schema và toàn bộ23 trang/12 slide WPS PASS. Video full decode/phát Chrome/tỷ lệ16:9/16 cảnh trực quan PASS. Cold-start PASS: ba boot mới ONLINE/FRESH/AUTO, lệnh APPLIED,137.797 telemetry cũ giữ SHA; cleanup đúng dịch vụ QA/cổng trống. Backup đọc lại archive và SHA256 PASS. [Hồ sơ](evidence/task-012/run-20261117-200024/README.md), [backup đã kiểm](evidence/task-012/run-20261117-200024/backup-first-verification.json).
+
+### Vướng mắc
+
+Các pilot và attempt lỗi được giữ riêng: EX02/R1 chuyển động ngoài recipe chưa xác định nguyên nhân; EX02/R3 mất Serial/viewport/readiness; EX05/R1 trễ2257ms. Video helper sai trường status/result, vùng xám trong raw sau cuộn/tải CSV, rồi node02 paused khi setup; video06 gặp biên telemetry3s đúng lúc gửi lệnh. Không còn vướng mắc chặn phạm vi bàn giao. Chưa có mạch thật hoặc xác nhận hai thành viên tự vận hành/giải thích.
+
+### Cách giải quyết
+
+Tách host_boot_id qua reboot, bảo toàn raw/telemetry; chuẩn bị UI EX05 trước10s giữ lịch vật lý và ngưỡng2s, diễn tập18 lần rồi chạy lại trọn lượt lỗi. Sửa helper result, fit viewport/Resume thật, chờ telemetry mới ngay trước click, quay Chrome headless riêng; giữ bản quay lỗi, chỉ chốt sau kiểm ảnh. Native WPS render PNG, không tiếp tục xuất PDF tự động. Không dùng kiểm tự động thay xác nhận con người.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật experiments/testing/architecture, runbook, task/checklist/next-task và hồ sơ bằng chứng; SRS9/12/13/15. Word/PPTX cũ, đề cương và toàn bộ byte lịch sử báo cáo/checklist được giữ. Đề xuất TASK-014 diễn tập hai thành viên; chưa triển khai. Backup đầu đã kiểm làm bằng chứng nghiệm thu; snapshot cuối sau đóng tài liệu được tạo riêng, không ghi đè snapshot cũ.
+
+---
+
 ## 2026-11-17T21:04:27+07:00 — TASK-013 — Cài skill tài liệu chính thức cho Codex cá nhân
 
 - Trạng thái: Hoàn thành
