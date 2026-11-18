@@ -3,15 +3,17 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
-const [modulePath, targetArgument] = process.argv.slice(2);
-if (!modulePath || !targetArgument) throw Error('Usage: node scripts/build-project-guide.cjs DOCX_MODULE OUTPUT.docx');
+const [modulePath, targetArgument, sourceArgument] = process.argv.slice(2);
+if (!modulePath || !targetArgument) throw Error('Usage: node scripts/build-project-guide.cjs DOCX_MODULE OUTPUT.docx [SOURCE.md]');
 const d = require(path.resolve(modulePath));
 const root = path.resolve(__dirname, '..');
-const source = path.join(root, 'docs/project-guide.md');
+const source = sourceArgument ? path.resolve(sourceArgument) : path.join(root, 'docs/project-guide.md');
 const target = path.resolve(targetArgument);
 if (fs.existsSync(target)) throw Error('Use a new version; never overwrite a delivered file');
 const markdown = fs.readFileSync(source, 'utf8');
 const pages = markdown.split('<!-- PAGE -->');
+const title = markdown.match(/^# (.+)$/m)?.[1];
+if (!title) throw Error('Source must contain a document title');
 const W = 9638;
 const numbering = [];
 let listIndex = 0;
@@ -20,7 +22,8 @@ function runs(text, options = {}) {
   let at = 0, match;
   while ((match = regex.exec(text))) {
     if (match.index > at) parts.push(new d.TextRun({text:text.slice(at, match.index), ...options}));
-    parts.push(new d.ExternalHyperlink({link:match[2],children:[new d.TextRun({text:match[1],style:'Hyperlink',...options})]}));
+    const link = /^[a-z][a-z0-9+.-]*:/i.test(match[2]) ? match[2] : path.relative(path.dirname(target), path.resolve(path.dirname(source), match[2])).split(path.sep).join('/');
+    parts.push(new d.ExternalHyperlink({link,children:[new d.TextRun({text:match[1],style:'Hyperlink',...options})]}));
     at = regex.lastIndex;
   }
   if (at < text.length) parts.push(new d.TextRun({text:text.slice(at), ...options}));
@@ -92,7 +95,7 @@ function pageItems(text, pageIndex) {
 }
 const all = [];
 pages.forEach((page,index) => {if(index)all.push(new d.Paragraph({children:[new d.PageBreak()],spacing:{before:0,after:0,line:1}}));all.push(...pageItems(page,index));});
-const doc = new d.Document({creator:'Nhóm 7',title:'Hướng dẫn cài đặt và vận hành dự án đèn đường thông minh',description:'Hướng dẫn đầu cuối dự án ba node Wokwi MQTT FastAPI SQLite Live Server',
+const doc = new d.Document({creator:'Nhóm 7',title,description:'Tài liệu dự án ba node Wokwi MQTT FastAPI SQLite Live Server',
   styles:{default:{document:{run:{font:'Arial',size:22,color:'202C37'},paragraph:{spacing:{before:0,after:140,line:280}}},
     title:{run:{font:'Arial',size:40,bold:true,color:'000000'},paragraph:{spacing:{before:650,after:420},keepNext:true}},
     heading1:{run:{font:'Arial',size:29,bold:true,color:'163E34'},paragraph:{spacing:{before:0,after:220},keepNext:true}},
