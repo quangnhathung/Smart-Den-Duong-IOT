@@ -1,0 +1,157 @@
+{
+  "at": "2026-11-18T09:28:41+07:00",
+  "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/Bao-cao-Den-duong-thong-minh-Nhom7-v02.docx",
+  "sha256": "667a3a68ff9beb47cc2b797a3d92376a332e8e7764a7020da763de458a9a7e39",
+  "owned_pid": 39194,
+  "start_ticks": "114845",
+  "status": "RENDERED_IMAGES",
+  "images": [
+    {
+      "index": 1,
+      "path": "page-01.png",
+      "bytes": 86724,
+      "sha256": "1d8ad9a09cff84f531339332ff7a9cabf07a68a397a2a72b978951e8a3e748cf"
+    },
+    {
+      "index": 2,
+      "path": "page-02.png",
+      "bytes": 140579,
+      "sha256": "2b353a02631184440e1ca8100a8e7431c391017af3392acb746d86879cf4a2cc"
+    },
+    {
+      "index": 3,
+      "path": "page-03.png",
+      "bytes": 113261,
+      "sha256": "d584b5a487f4c2481bf5c9b82a63a18c0196c1210956052b718336162b21677d"
+    },
+    {
+      "index": 4,
+      "path": "page-04.png",
+      "bytes": 135802,
+      "sha256": "985fac5904c188221255b0f939ecea7e5970a88d823789eb9c4ccabaf14d10cb"
+    },
+    {
+      "index": 5,
+      "path": "page-05.png",
+      "bytes": 147881,
+      "sha256": "77fcc6822c9407e94af5f529112359297004cfea14c3f2d20e94527bcd3d7305"
+    },
+    {
+      "index": 6,
+      "path": "page-06.png",
+      "bytes": 161442,
+      "sha256": "cee5955b87c159cb819a176613fde5c68ee3c9465872fcdc15bec253f4f57177"
+    },
+    {
+      "index": 7,
+      "path": "page-07.png",
+      "bytes": 126146,
+      "sha256": "5fa418a485e9ca9cd19097b332020ec35fa13cc15973f863dc1e476486c84462"
+    },
+    {
+      "index": 8,
+      "path": "page-08.png",
+      "bytes": 118806,
+      "sha256": "7355bdb64f74c7bd6c51b03c0bd5d10400e19f1d2cc6b9fb22c430c469f2d048"
+    },
+    {
+      "index": 9,
+      "path": "page-09.png",
+      "bytes": 131166,
+      "sha256": "22d4d53c18266eb9cafed17095cb20282fa5dc26dfaca65db96493d0ee79fdef"
+    },
+    {
+      "index": 10,
+      "path": "page-10.png",
+      "bytes": 151902,
+      "sha256": "340bea9d276905eccff1aeafa2877f2fec1db7af505da2f86505a8a40e22b0ba"
+    },
+    {
+      "index": 11,
+      "path": "page-11.png",
+      "bytes": 140754,
+      "sha256": "8ed19e14bff228d30358b269c77824f85856100cf0223a989b1d4eb604956051"
+    },
+    {
+      "index": 12,
+      "path": "page-12.png",
+      "bytes": 129676,
+      "sha256": "4b4423d649e8f8872738d5f0427f08b6f871041572ac51cd243db0b8541601eb"
+    },
+    {
+      "index": 13,
+      "path": "page-13.png",
+      "bytes": 140894,
+      "sha256": "ffe7bd78436e6b96877075823f794da8374d8f0abad4f9f8d0da7e73203bbb31"
+    },
+    {
+      "index": 14,
+      "path": "page-14.png",
+      "bytes": 145744,
+      "sha256": "ed24b4fa03427f5ca82ca4b511bf010707696713e1242f1523acbde1decc06f0"
+    },
+    {
+      "index": 15,
+      "path": "page-15.png",
+      "bytes": 155991,
+      "sha256": "43162cee179e140c3e4674288f563b214488fbe7f87d34182883edf7683e3224"
+    },
+    {
+      "index": 16,
+      "path": "page-16.png",
+      "bytes": 102888,
+      "sha256": "bdd71210177ed974edf6ff8be62c5490a318ef610fae1813c31d25d44e5643f2"
+    },
+    {
+      "index": 17,
+      "path": "page-17.png",
+      "bytes": 76830,
+      "sha256": "467b0d26975054615c20c076c867d7649548f9c039b8ad73ef468a80803dd833"
+    },
+    {
+      "index": 18,
+      "path": "page-18.png",
+      "bytes": 105637,
+      "sha256": "eba4bfa8a6c4fe82f11f7371c80e3f39f12cfd255718ad70b18c1be329349946"
+    },
+    {
+      "index": 19,
+      "path": "page-19.png",
+      "bytes": 129245,
+      "sha256": "30c6244f2705ff67afe0d831e75c39a965c432ca1e52fd6c25790ca59525ef29"
+    },
+    {
+      "index": 20,
+      "path": "page-20.png",
+      "bytes": 143101,
+      "sha256": "0a4c50cd16e5a4906fa74c15886ed49798e257e88072f69c6a820c9868165c69"
+    },
+    {
+      "index": 21,
+      "path": "page-21.png",
+      "bytes": 133773,
+      "sha256": "22ec7e6a0ebeffe8f5799a3e5ec15c3d05f71de2b30a7d4a4346da84f2581d88"
+    },
+    {
+      "index": 22,
+      "path": "page-22.png",
+      "bytes": 128986,
+      "sha256": "487ba114b9a80ff8c2f85bcf93542985f12f395f5c7e2696ba97f6900d4f8816"
+    },
+    {
+      "index": 23,
+      "path": "page-23.png",
+      "bytes": 134569,
+      "sha256": "f345e58b7cbd8128aa6079df19364cc3058b46ac1ce8ae894b91664dd4a5a8ee"
+    }
+  ],
+  "count": 23,
+  "source_unchanged": true,
+  "remaining_documents": 0,
+  "quit_requested": true,
+  "owned_empty_instance_terminated": true,
+  "process_stopped": true,
+  "structure_validation": "PASS",
+  "visual_review": "Word changed pages1/3/17/18 inspected; previous unchanged content inspected in v01. PPTX12slides v01 reviewed, correctedslide9 in v02 inspected.",
+  "final_handover": false
+}

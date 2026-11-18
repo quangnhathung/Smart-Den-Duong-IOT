@@ -1,0 +1,201 @@
+{
+  "status": "PASS",
+  "nodes": {
+    "node_01": {
+      "independent": {
+        "total_energy_wh": 0.17367429999999998,
+        "auto_energy_wh": 0.16728929999999997,
+        "baseline_wh": 0.4773399999999994,
+        "valid_uptime_s": 90.27800000000003,
+        "auto_valid_uptime_s": 71.60100000000003,
+        "covered_wall_s": 162.67866921424866,
+        "missing_wall_s": 3.814697265625e-06,
+        "coverage_percent": 99.9999976550723,
+        "saving_percent": 64.95384840993837,
+        "average_auto_power_w": 8.411076381614777,
+        "sample_count": 216,
+        "excluded_intervals": {
+          "FIRST_SAMPLE": 1,
+          "LOAD_CALIBRATION_OR_FAULT_CONFIRMATION": 9,
+          "FAULT_OR_RECOVERY": 15,
+          "STATE_CHANGE": 2
+        }
+      },
+      "api": {
+        "from_time": "2026-11-17T13:57:07.734091Z",
+        "to_time": "2026-11-17T13:59:50.412764Z",
+        "clock_basis": {
+          "energy": "node_uptime",
+          "coverage": "receiver_utc"
+        },
+        "nodes": [
+          {
+            "node_id": "node_01",
+            "total_energy_wh": 0.1736743,
+            "auto_energy_wh": 0.1672893,
+            "baseline_wh": 0.47734,
+            "saving_percent": 64.9538484099384,
+            "valid_uptime_s": 90.27799999999999,
+            "covered_wall_s": 162.67866921424866,
+            "missing_wall_s": 3.814697265625e-06,
+            "coverage_percent": 99.9999976550723,
+            "auto_valid_uptime_s": 71.601,
+            "sample_count": 216,
+            "excluded_intervals": {
+              "FIRST_SAMPLE": 1,
+              "LOAD_CALIBRATION_OR_FAULT_CONFIRMATION": 9,
+              "FAULT_OR_RECOVERY": 15,
+              "STATE_CHANGE": 2
+            }
+          }
+        ],
+        "total_energy_wh": 0.1736743,
+        "auto_energy_wh": 0.1672893,
+        "baseline_wh": 0.47734,
+        "saving_percent": 64.9538484099384,
+        "valid_uptime_s": 90.27799999999999,
+        "covered_wall_s": 162.67866921424866,
+        "missing_wall_s": 3.814697265625e-06,
+        "coverage_percent": 99.9999976550723
+      },
+      "segment_count": 216,
+      "first_seq": 3627,
+      "last_seq": 3842,
+      "duration_uptime_ms": 90278,
+      "from_utc": "2026-11-17T13:57:07.734091Z",
+      "to_utc": "2026-11-17T13:59:50.412764Z",
+      "timestamp_boundary_policy": "Enclose selected SQL endpoints by2 microseconds before UTC serialization"
+    },
+    "node_03": {
+      "independent": {
+        "total_energy_wh": 0.17328176666666661,
+        "auto_energy_wh": 0.16797509999999993,
+        "baseline_wh": 0.47989999999999977,
+        "valid_uptime_s": 90.18299999999998,
+        "auto_valid_uptime_s": 71.98500000000001,
+        "covered_wall_s": 162.93301439285278,
+        "missing_wall_s": 3.5762786865234375e-06,
+        "coverage_percent": 99.99999780506202,
+        "saving_percent": 64.99789539487394,
+        "average_auto_power_w": 8.400505105230252,
+        "sample_count": 296,
+        "excluded_intervals": {
+          "FIRST_SAMPLE": 1,
+          "LOAD_CALIBRATION_OR_FAULT_CONFIRMATION": 44,
+          "FAULT_OR_RECOVERY": 42,
+          "STATE_CHANGE": 2
+        }
+      },
+      "api": {
+        "from_time": "2026-11-17T13:57:07.523636Z",
+        "to_time": "2026-11-17T13:59:50.456654Z",
+        "clock_basis": {
+          "energy": "node_uptime",
+          "coverage": "receiver_utc"
+        },
+        "nodes": [
+          {
+            "node_id": "node_03",
+            "total_energy_wh": 0.17328176666666667,
+            "auto_energy_wh": 0.16797510000000002,
+            "baseline_wh": 0.4799,
+            "saving_percent": 64.99789539487392,
+            "valid_uptime_s": 90.18299999999999,
+            "covered_wall_s": 162.93301439285278,
+            "missing_wall_s": 3.5762786865234375e-06,
+            "coverage_percent": 99.99999780506202,
+            "auto_valid_uptime_s": 71.985,
+            "sample_count": 296,
+            "excluded_intervals": {
+              "FIRST_SAMPLE": 1,
+              "LOAD_CALIBRATION_OR_FAULT_CONFIRMATION": 44,
+              "FAULT_OR_RECOVERY": 42,
+              "STATE_CHANGE": 2
+            }
+          }
+        ],
+        "total_energy_wh": 0.17328176666666667,
+        "auto_energy_wh": 0.16797510000000002,
+        "baseline_wh": 0.4799,
+        "saving_percent": 64.99789539487392,
+        "valid_uptime_s": 90.18299999999999,
+        "covered_wall_s": 162.93301439285278,
+        "missing_wall_s": 3.5762786865234375e-06,
+        "coverage_percent": 99.99999780506202
+      },
+      "segment_count": 296,
+      "first_seq": 4166,
+      "last_seq": 4461,
+      "duration_uptime_ms": 90183,
+      "from_utc": "2026-11-17T13:57:07.523636Z",
+      "to_utc": "2026-11-17T13:59:50.456654Z",
+      "timestamp_boundary_policy": "Enclose selected SQL endpoints by2 microseconds before UTC serialization"
+    },
+    "node_02": {
+      "independent": {
+        "total_energy_wh": 0.17349076666666643,
+        "auto_energy_wh": 0.1679924333333331,
+        "baseline_wh": 0.4800799999999996,
+        "valid_uptime_s": 90.6,
+        "auto_valid_uptime_s": 72.01199999999999,
+        "covered_wall_s": 168.10449862480164,
+        "missing_wall_s": 3.5762786865234375e-06,
+        "coverage_percent": 99.99999787258602,
+        "saving_percent": 65.00740848747432,
+        "average_auto_power_w": 8.398221963006156,
+        "sample_count": 303,
+        "excluded_intervals": {
+          "FIRST_SAMPLE": 1,
+          "LOAD_CALIBRATION_OR_FAULT_CONFIRMATION": 48,
+          "FAULT_OR_RECOVERY": 52,
+          "STATE_CHANGE": 2
+        }
+      },
+      "api": {
+        "from_time": "2026-11-17T13:57:08.042214Z",
+        "to_time": "2026-11-17T13:59:56.146716Z",
+        "clock_basis": {
+          "energy": "node_uptime",
+          "coverage": "receiver_utc"
+        },
+        "nodes": [
+          {
+            "node_id": "node_02",
+            "total_energy_wh": 0.17349076666666668,
+            "auto_energy_wh": 0.16799243333333333,
+            "baseline_wh": 0.48008,
+            "saving_percent": 65.00740848747432,
+            "valid_uptime_s": 90.6,
+            "covered_wall_s": 168.10449862480164,
+            "missing_wall_s": 3.5762786865234375e-06,
+            "coverage_percent": 99.99999787258602,
+            "auto_valid_uptime_s": 72.012,
+            "sample_count": 303,
+            "excluded_intervals": {
+              "FIRST_SAMPLE": 1,
+              "LOAD_CALIBRATION_OR_FAULT_CONFIRMATION": 48,
+              "FAULT_OR_RECOVERY": 52,
+              "STATE_CHANGE": 2
+            }
+          }
+        ],
+        "total_energy_wh": 0.17349076666666668,
+        "auto_energy_wh": 0.16799243333333333,
+        "baseline_wh": 0.48008,
+        "saving_percent": 65.00740848747432,
+        "valid_uptime_s": 90.6,
+        "covered_wall_s": 168.10449862480164,
+        "missing_wall_s": 3.5762786865234375e-06,
+        "coverage_percent": 99.99999787258602
+      },
+      "segment_count": 303,
+      "first_seq": 5684,
+      "last_seq": 5986,
+      "duration_uptime_ms": 90600,
+      "from_utc": "2026-11-17T13:57:08.042214Z",
+      "to_utc": "2026-11-17T13:59:56.146716Z",
+      "timestamp_boundary_policy": "Enclose selected SQL endpoints by2 microseconds before UTC serialization"
+    }
+  },
+  "errors": []
+}

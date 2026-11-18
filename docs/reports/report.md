@@ -1,3 +1,30 @@
+## 2026-11-17T21:04:27+07:00 — TASK-013 — Cài skill tài liệu chính thức cho Codex cá nhân
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 3/3 mục nghiệm thu cài tệp
+
+### Đã thực hiện
+
+Cài pptx/pdf/docx vào ~/.codex/skills từ anthropics/skills tại commit e4bb5d960d87126ff3b3a8af1a104b7db67560ba. Giữ plugin OpenAI, không cài runtime, không tạo tài liệu mẫu. Lưu nguyên trạng task/next-task trước khi chuyển task tại [hồ sơ TASK-013](evidence/task-013/).
+
+### Kiểm tra và kết quả
+
+PASS:131/131 tệp khớp danh sách và Git blob hash upstream (pptx58, pdf12, docx61); frontmatter, giấy phép và liên kết nội bộ SKILL.md hợp lệ. [Manifest](evidence/task-013/manifest.json) ghi nguồn, commit và SHA-256. Chưa chạy: nhận diện thực tế ở lượt/phiên Codex mới và tạo/render tệp Office/PDF. Không chạy build firmware vì không đổi firmware.
+
+### Vướng mắc
+
+Không có vướng mắc với cài tệp. Giới hạn: thiếu runtime tài liệu và chưa kiểm chứng nhận diện phiên mới.
+
+### Cách giải quyết
+
+Kiểm tra danh sách skill ở lượt tiếp theo, mở phiên mới nếu cần. Bổ sung runtime và kiểm mẫu chỉ khi được giao; không coi việc cài skill là nghiệm thu xuất tài liệu.
+
+### Tài liệu và bước tiếp theo
+
+Thêm [hướng dẫn skill](../techs/document-skills.md), cập nhật task/checklist/next-task. Task hỗ trợ SRS mục15; giữ công việc có sẵn và không thực hiện TASK-012.
+
+---
+
 ## 2026-11-17T16:32:01+07:00 — TASK-011 — Hoàn thiện ba node và nghiệm thu30 phút
 
 - Trạng thái: Hoàn thành

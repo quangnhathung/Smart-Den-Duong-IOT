@@ -1,3 +1,12 @@
+# TASK-013 — Cài skill tài liệu cho Codex cá nhân
+
+- Hoàn thành: 2026-11-17T21:04:27+07:00; 3/3 mục cài tệp.
+- [x] Cài pptx/pdf/docx cùng commit chính thức, không ghi đè skill cũ.
+- [x]131/131 tệp khớp upstream; kiểm frontmatter, giấy phép, liên kết nội bộ; [manifest](evidence/task-013/manifest.json).
+- [x] Lưu trạng thái TASK-012, cập nhật tài liệu và giới hạn kiểm tra. Nhận diện phiên mới và tạo/render tài liệu chưa chạy, ngoài nghiệm thu cài tệp.
+
+---
+
 # TASK-011 — Hoàn thiện ba node và nghiệm thu ổn định30 phút
 
 - Hoàn thành: 2026-11-17T16:32:01+07:00; **4/4 nhóm nghiệm thu**.

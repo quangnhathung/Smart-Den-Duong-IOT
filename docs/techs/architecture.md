@@ -15,8 +15,8 @@ Tài liệu chốt thiết kế A0 cho các gói tiếp theo. Nghiệm thu môi 
 
 - Một ESP32 `esp32dev`, source dùng chung với entry point `src/main.cpp`.
 - FirmwareApp điều phối SensorReader, LightingController, DimmingController/FaultDetector; LED GPIO26 theo AUTO/MANUAL, Serial và MQTT ping/pong/heartbeat diagnostics. Connectivity sở hữu PubSubClient ở task core0, vòng điều khiển core1 đọc atomic status/loss-count; ECHO bắt cạnh, không pulseIn.
-- Một cấu hình Wokwi node_01, script copy artifact, Mosquitto Docker local.
-- P1 đã nghiệm thu TASK-005; P2 có code và xác nhận live từ máy dev theo TASK-006. TASK-007 triển khai telemetry/command/ACK/availability một node, test/build và hướng dẫn live; kết quả live một node được bổ sung ở TASK-010. TASK-008 có backend/API/SQLite tại repo cùng cấp; TASK-009 có dashboard HTML/CSS/JS A5 chạy Live Server; browser test TASK-009 dùng fixture; TASK-010 nay đạt4/4 tích hợp live một node và10 mẫu sensor→dashboard. Ba node/EX-series chưa nghiệm thu.
+- Ba cấu hình Wokwi node_01/02/03 từ một source; script kiểm/copy artifact đúng environment, Mosquitto local. Cấu hình Docker của sản phẩm được giữ; môi trường thực nghiệm có thể chạy broker QA native riêng khi Docker daemon chưa hoạt động.
+- P1 đã nghiệm thu TASK-005; P2 có code và xác nhận live từ máy dev theo TASK-006. TASK-007 triển khai telemetry/command/ACK/availability; TASK-008 có backend/API/SQLite tại repo cùng cấp; TASK-009 có dashboard HTML/CSS/JS A5 qua Live Server. TASK-010 hoàn thành tích hợp một node; TASK-011 hoàn thành4/4 tích hợp ba node, sensor→DOM dưới3s và1800s thực qua audit MQTT/SQLite. TASK-012 đang thực hiện EX-series và bàn giao; không suy kết quả P6 thành kết quả năng lượng đại diện.
 - Đã pin các package trong PlatformIO. PlatformIO Core 6.1.19 là phiên bản công cụ đã dùng, không được cài lại bởi tệp cấu hình dự án.
 
 ## Kiến trúc mục tiêu
@@ -29,7 +29,7 @@ LDR/PIR/HC-SR04/biến trở -> ESP32 -> PWM LED
                                                                    <-> Dashboard HTTP
 ```
 
-Ba node mục tiêu chạy ba phiên mô phỏng riêng, mỗi phiên một ID/client ID. Dùng chung source, build theo cấu hình riêng; không đặt nhiều ESP32 vào một sơ đồ và không nhân bản source. Hiện chỉ có node_01; cấu hình ba node sẽ được làm ở A6.
+Ba node chạy ba phiên mô phỏng riêng, mỗi phiên một ID/client ID. Dùng chung source, build theo cấu hình riêng; không đặt nhiều ESP32 vào một sơ đồ và không nhân bản source. Cấu hình ba node đã được nghiệm thu TASK-011; phương pháp thực nghiệm tiếp theo xem [experiments.md](experiments.md).
 
 | Thành phần | Trách nhiệm và ranh giới |
 |---|---|

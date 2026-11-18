@@ -1,0 +1,91 @@
+{
+  "at": "2026-11-18T09:29:49+07:00",
+  "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/Bao-ve-Den-duong-thong-minh-Nhom7-v02.pptx",
+  "sha256": "03ebe46a0aaccb2e7d33de74c91a757d8663536b8bed2e07cbb2129f615b040f",
+  "owned_pid": 42552,
+  "start_ticks": "121685",
+  "status": "RENDERED_IMAGES",
+  "images": [
+    {
+      "index": 1,
+      "path": "slide-01.png",
+      "bytes": 144709,
+      "sha256": "31140381cffad470fae2406b393850acaad8d47b42354ba13454225f0365b614"
+    },
+    {
+      "index": 2,
+      "path": "slide-02.png",
+      "bytes": 190219,
+      "sha256": "ebfbee1d966e887f97ce8e4846c694b2249c87fc2de283cef2427fdb5240371c"
+    },
+    {
+      "index": 3,
+      "path": "slide-03.png",
+      "bytes": 177854,
+      "sha256": "edf49444774ec523a885c2e0cf841bddaf76e9701436d81537cab785c4777f5e"
+    },
+    {
+      "index": 4,
+      "path": "slide-04.png",
+      "bytes": 194966,
+      "sha256": "d64d748eee2da51e91d338b1755f7242a5b1ff3315e1dd046a82081a7fc39b2a"
+    },
+    {
+      "index": 5,
+      "path": "slide-05.png",
+      "bytes": 177862,
+      "sha256": "346f04ac0529582171944ddcd7d51d119b71a290b91a6cc4c16437d17f52e19e"
+    },
+    {
+      "index": 6,
+      "path": "slide-06.png",
+      "bytes": 152369,
+      "sha256": "0bc41291966f58519c13398c383fc81bd10eabacbc8eaca1aaef60449fc87e06"
+    },
+    {
+      "index": 7,
+      "path": "slide-07.png",
+      "bytes": 301937,
+      "sha256": "116bfc02319167c3a2b4c57bb338f2c4ed4eb288c06a92ca70015a59cd17e1f5"
+    },
+    {
+      "index": 8,
+      "path": "slide-08.png",
+      "bytes": 187770,
+      "sha256": "dd574dee0b886b4cf5ef0957df01bd78f6f3e76b33cb18d2e0a47013061bee8e"
+    },
+    {
+      "index": 9,
+      "path": "slide-09.png",
+      "bytes": 151888,
+      "sha256": "94c45ab73cd508efd0961fc27c1976c680596a3683bc0dd1f1a750b30a2aca89"
+    },
+    {
+      "index": 10,
+      "path": "slide-10.png",
+      "bytes": 178548,
+      "sha256": "dcd0183ee3130dbf4ac5ae319e41201b65b859d5faeae92cb90771f16834e31a"
+    },
+    {
+      "index": 11,
+      "path": "slide-11.png",
+      "bytes": 194322,
+      "sha256": "02fb33c292ba714c09e1ca2309a1f7026085dcc780906d6c1a40a594454a31fc"
+    },
+    {
+      "index": 12,
+      "path": "slide-12.png",
+      "bytes": 184903,
+      "sha256": "c486c4b49c2a7cfbe09db2b3d5c689e04f58159a2fd63e5cc02dcd361753cdbf"
+    }
+  ],
+  "count": 12,
+  "source_unchanged": true,
+  "remaining_documents": 0,
+  "quit_requested": true,
+  "owned_empty_instance_terminated": true,
+  "process_stopped": true,
+  "structure_validation": "PASS",
+  "visual_review": "Word changed pages1/3/17/18 inspected; previous unchanged content inspected in v01. PPTX12slides v01 reviewed, correctedslide9 in v02 inspected.",
+  "final_handover": false
+}

@@ -1,0 +1,109 @@
+{
+  "at": "2026-11-18T10:08:31+07:00",
+  "status": "INCOMPLETE",
+  "accepted_runs": 5,
+  "errors": [],
+  "first_pir_run": {
+    "scenario": "EX-03",
+    "repeat": 1,
+    "attempt": "EX-03-r01-a01",
+    "experiment_id": 10,
+    "nodes": {
+      "node_01": {
+        "total_energy_wh": 1.3599844666666914,
+        "auto_energy_wh": 1.3599844666666914,
+        "baseline_wh": 4.000086666666725,
+        "valid_uptime_s": 600.0130000000022,
+        "auto_valid_uptime_s": 600.0130000000022,
+        "covered_wall_s": 1089.7251784801483,
+        "missing_wall_s": 3.5762786865234375e-06,
+        "coverage_percent": 99.9999996718183,
+        "saving_percent": 66.0011249756254,
+        "average_auto_power_w": 8.159730005849992,
+        "sample_count": 2194,
+        "excluded_intervals": {
+          "FIRST_SAMPLE": 1
+        },
+        "duration_uptime_s": 600.013,
+        "boot_id": "826d7697",
+        "from_utc": "2026-11-18T02:45:42.396147Z",
+        "to_utc": "2026-11-18T03:03:52.121329Z",
+        "first_seq": "2778",
+        "last_seq": "4971",
+        "raw_sql_payload_sha256": "dfe57c2a9fc80af26db3b8990c7a006c17709b4c4e155f4a9ee1078431cc2906",
+        "raw_missing": [],
+        "payload_mismatch": [],
+        "raw_not_in_sql": [],
+        "independent_api_errors": [],
+        "independent_csv_errors": [],
+        "sequence_gaps": 0
+      },
+      "node_02": {
+        "total_energy_wh": 1.360317333333351,
+        "auto_energy_wh": 1.360317333333351,
+        "baseline_wh": 4.0012000000000425,
+        "valid_uptime_s": 600.1800000000035,
+        "auto_valid_uptime_s": 600.1800000000035,
+        "covered_wall_s": 1116.049072265625,
+        "missing_wall_s": 4.76837158203125e-06,
+        "coverage_percent": 99.99999957274535,
+        "saving_percent": 66.00226598687053,
+        "average_auto_power_w": 8.159456163151113,
+        "sample_count": 2360,
+        "excluded_intervals": {
+          "FIRST_SAMPLE": 1
+        },
+        "duration_uptime_s": 600.18,
+        "boot_id": "d255dbbb",
+        "from_utc": "2026-11-18T02:45:42.585928Z",
+        "to_utc": "2026-11-18T03:04:18.635005Z",
+        "first_seq": "3001",
+        "last_seq": "5360",
+        "raw_sql_payload_sha256": "99995a729d56fdee141a0e025469d651b6c453be6d76e9b832637a2f1a4e04c5",
+        "raw_missing": [],
+        "payload_mismatch": [],
+        "raw_not_in_sql": [],
+        "independent_api_errors": [],
+        "independent_csv_errors": [],
+        "sequence_gaps": 0
+      },
+      "node_03": {
+        "total_energy_wh": 1.3604437000000111,
+        "auto_energy_wh": 1.3604437000000111,
+        "baseline_wh": 4.000973333333383,
+        "valid_uptime_s": 600.146000000002,
+        "auto_valid_uptime_s": 600.146000000002,
+        "covered_wall_s": 1135.5681145191193,
+        "missing_wall_s": 4.5299530029296875e-06,
+        "coverage_percent": 99.99999960108487,
+        "saving_percent": 65.99718151916382,
+        "average_auto_power_w": 8.160676435400758,
+        "sample_count": 2100,
+        "excluded_intervals": {
+          "FIRST_SAMPLE": 1
+        },
+        "duration_uptime_s": 600.146,
+        "boot_id": "99a37fb4",
+        "from_utc": "2026-11-18T02:45:42.462977Z",
+        "to_utc": "2026-11-18T03:04:38.031096Z",
+        "first_seq": "3006",
+        "last_seq": "5105",
+        "raw_sql_payload_sha256": "79b6c1151ca9085cf3377caa715fb244bf379f98964e425f5bf6f10a51a85f2b",
+        "raw_missing": [],
+        "payload_mismatch": [],
+        "raw_not_in_sql": [],
+        "independent_api_errors": [],
+        "independent_csv_errors": [],
+        "sequence_gaps": 0
+      }
+    },
+    "errors": [],
+    "action_summary": {
+      "physical_actions": 60,
+      "minimum_offset_ms": 358,
+      "maximum_lateness_upper_ms": 658,
+      "upper_limit_ms": 2000
+    },
+    "status": "PASS"
+  }
+}

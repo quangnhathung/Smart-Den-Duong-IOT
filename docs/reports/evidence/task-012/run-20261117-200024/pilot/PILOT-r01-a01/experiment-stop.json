@@ -1,0 +1,124 @@
+{
+  "id": 1,
+  "name": "TASK012 PILOT-r01-a01 134735",
+  "configuration": {
+    "source": "Wokwi live",
+    "scenario": "PILOT",
+    "repeat": 1,
+    "duration_node_s": 90,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": true,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 40,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 40,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 40,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 60,
+        "node_id": "node_01",
+        "kind": "current",
+        "value": 0
+      },
+      {
+        "at_s": 60,
+        "node_id": "node_02",
+        "kind": "current",
+        "value": 0
+      },
+      {
+        "at_s": 60,
+        "node_id": "node_03",
+        "kind": "current",
+        "value": 0
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_01",
+        "kind": "current",
+        "value": 1023
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_02",
+        "kind": "current",
+        "value": 1023
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "current",
+        "value": 1023
+      }
+    ]
+  },
+  "notes": "Live Wokwi. Node uptime schedules; per-node windows finalized by accepted SQLite samples.",
+  "started_at": "2026-11-17T13:47:35.456716Z",
+  "ended_at": "2026-11-17T13:49:24.585580Z"
+}

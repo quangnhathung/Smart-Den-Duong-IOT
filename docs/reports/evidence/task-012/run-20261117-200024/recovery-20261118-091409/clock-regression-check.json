@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-18T09:16:24+07:00",
+  "command": "python3 -B -m unittest discover -s test/host -p 'test_*.py'",
+  "tests": 33,
+  "result": "PASS",
+  "regression": "Equal monotonic ranges from untagged history / boot-A / boot-B must never mix",
+  "independent_reaudit": "analysis-before-resume.json:3 accepted runs, no raw/SQL/API mismatch"
+}

@@ -1,0 +1,58 @@
+{
+  "attempt01-incomplete.json": {
+    "bytes": 37638,
+    "sha256": "5c2ba8cf682ffa95fbcc0481418b299c10f58947a4938f0f21b3eed9defc7476"
+  },
+  "before.json": {
+    "bytes": 449,
+    "sha256": "04ea4056f74d1c44d0a8e80eb8d31270bf1148f0978c1d21e906ec735d9dd982"
+  },
+  "physical-schedule-preserved.json": {
+    "bytes": 335,
+    "sha256": "26bbbda3763d5a862adb3e71c69a7aa0e4bfca7e13646a51f7fc229be4779ca6"
+  },
+  "pipeline-stopped.json": {
+    "bytes": 1247,
+    "sha256": "9c35addabb343e7fbbd492376f3ae2416eb8a28e318fef94cc1eaee6eb0e2288"
+  },
+  "recipes-prepared-plan-as-run.py": {
+    "bytes": 4031,
+    "sha256": "b9c89ad66e970180cd0b20b061faa56cc91deebeb12f3a083051d38c8031291d"
+  },
+  "rehearse-scene-as-run.py": {
+    "bytes": 2480,
+    "sha256": "6c5cbb5752d8d57c7c16a00460439fc745e6d59046c19e031d38dac342ad8e8e"
+  },
+  "scene-rehearsal-20261118-122645.json": {
+    "bytes": 306,
+    "sha256": "117df1b2431a491482f60cba5640e179544b1bc3e7da34199e3f3cb169ab172f"
+  },
+  "scene-rehearsal-20261118-122707.json": {
+    "bytes": 28341,
+    "sha256": "8e83996cdc852c9743cdd9adc2d4154472a8cd28e2e149210a36af752a43f661"
+  },
+  "scene-rehearsal-20261118-123000.json": {
+    "bytes": 308,
+    "sha256": "470eca085e42b7ec2f1f4e9238d80f60e64567349cc2fa87f88d9a64cafb9df9"
+  },
+  "scene-rehearsal-20261118-123016.json": {
+    "bytes": 28336,
+    "sha256": "64dd93a2d56ccdb11e2fe018d4e980370d3191a490c2a8a6aa21eb6e7dff285d"
+  },
+  "scene-rehearsal-20261118-123407.json": {
+    "bytes": 29248,
+    "sha256": "106b62cbf4c94923f004a419a5148de895cb7325fddde2697498b1718e5837f9"
+  },
+  "ui-before.cjs": {
+    "bytes": 7888,
+    "sha256": "1adec2923c525ec7744538490e7be1e06f7a0c78ee06acfe0b12eb63e728d023"
+  },
+  "ui-direct-pointer-as-run.cjs": {
+    "bytes": 8967,
+    "sha256": "5878b89e103bf2548d687ed137af935224e9ee929c870273b738cc361e28bbae"
+  },
+  "ui-prepared-plan-as-run.cjs": {
+    "bytes": 11294,
+    "sha256": "0e2d6a2f4a93095dffcf938b597475dbba502dab5d74557429f7b4f6b838c320"
+  }
+}

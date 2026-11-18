@@ -1,0 +1,1 @@
+{"pid": 178846, "monotonic_ns": 14190791532006, "serial_nodes": ["node_03", "node_01", "node_02"], "errors": ["Serial node_01: connection failed (reader thread died)", "Serial node_02: connection failed (reader thread died)", "Serial node_03: connection failed (reader thread died)"]}

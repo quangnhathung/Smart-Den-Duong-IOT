@@ -1,0 +1,7 @@
+{
+  "status": "INCOMPLETE",
+  "purpose": "QA scene latency rehearsal outside formal experiment windows; never a formal accepted run",
+  "rounds": [],
+  "ui_sha256": "5878b89e103bf2548d687ed137af935224e9ee929c870273b738cc361e28bbae",
+  "error": "URLError(ConnectionRefusedError(111, 'Connection refused'))"
+}

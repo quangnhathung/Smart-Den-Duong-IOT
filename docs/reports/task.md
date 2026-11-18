@@ -1,38 +1,65 @@
-# TASK-011 — Hoàn thiện ba node và nghiệm thu ổn định30 phút
+# TASK-012 — Thực nghiệm và bàn giao đồ án
 
-- Trạng thái: Hoàn thành
-- Tiến độ: 4/4 nhóm nghiệm thu
-- Cập nhật: 2026-11-17T16:32:01+07:00
+- Trạng thái: Đang thực hiện
+- Tiến độ: 1/5 nhóm nghiệm thu
+- Cập nhật: 2026-11-18T14:13:10+07:00
 
 ## Mô tả và phạm vi
 
-Đã triển khai `node_01`, `node_02`, `node_03` từ một source firmware, ba environment PlatformIO và ba phiên Wokwi VS Code đồng thời; dữ liệu/lệnh riêng qua MQTT → backend/SQLite → dashboard HTML/CSS/JS chạy Live Server. [Đặc tả được giao](evidence/task-011/run-20261117-135233/task-011-accepted.md) và [nhật ký trước khi đóng](evidence/task-011/run-20261117-135233/task-011-working.md) được lưu nguyên byte. TASK-010 vẫn giữ trong [bản lưu](evidence/task-011/run-20261117-135233/task-010-before.md) và hồ sơ lịch sử.
+Người dùng đã giao triển khai kế hoạch TASK-012: thực nghiệm đầy đủ, phân tích số liệu và bàn giao DOCX, PPTX, video MP4, runbook và backup. Kế thừa bìa/thông tin trường, nhóm, thành viên từ đề cương Word, tạo tệp mới và giữ nguyên đề cương. TASK-011 hoàn thành4/4 được lưu tại [bản trước](evidence/task-012/run-20261117-200024/task-011-before.md).
 
-Định danh biên dịch tập trung, client ID/topic/Serial nhất quán; prepare kiểm artifact đúng node/fresh/hash; command generator chọn node và giữ guard cũ. Sửa lỗi raw cảm biến chờ periodic bằng đánh dấu snapshot khi cảm biến đổi, vẫn gộp cập nhật và giữ rate-limit200ms/periodic2s. Giữ Arduino/esp32dev/entry point, pin map, controller/timer/ngưỡng, MQTT v1. Không sửa source backend/dashboard hoặc SRS. Ba diagram dùng cap thực thi mô phỏng4MHz đã ghi rõ trong runbook.
+Giữ firmware ba node, MQTT/API/schema, controller/pin map/toolchain và dashboard HTML/CSS/JS qua Live Server. Chỉ sửa lỗi trực tiếp cản trở thực nghiệm có tái hiện/hồi quy. Không tự commit/push/merge hoặc triển khai cloud. Dữ liệu và output lớn tại output/task-012/ được ignore; bằng chứng gọn ở docs/reports/evidence/task-012/.
 
 ## Tham chiếu SRS
 
-[SRS](../srs.md): FR-06/07/08/09/10/12; mục2.3,6–9, P6/A6, mục12.1–12.2; ca trọng tâm TC-12/13/14/16/17/21–25. Không dùng build/host hoặc nghiệm thu một node làm bằng chứng ba node live.
+[SRS](../srs.md) mục9.1–9.3,12,15; P7/A7. Mốc phiên5/10/15 phút và PIR mỗi30s dùng uptime riêng mỗi node theo lựa chọn người dùng. UTC/monotonic máy ghi riêng; năng lượng theo uptime, độ phủ theo thời gian nhận. Không diễn giải mô hình điện năng như đo phần cứng.
+
+## Phương pháp đã chốt
+
+15 lượt chính: EX01 một lượt5 phút; EX02/03/04 mỗi kịch bản3 lượt10 phút; EX05 ba lượt15 phút; EX06/07 mỗi kịch bản1 lượt5 phút. Cả3 node hoạt động; phân tích cửa sổ riêng, không tính thêm thời gian node nhanh. PIR ở giây15 rồi mỗi30s trong pha có chuyển động. EX03 distance150cm, EX04 distance50cm. EX01 DAY đổi chuyển động; EX02 NIGHT yên tĩnh. EX05 ba pha300s: (DAY, NIGHT yên tĩnh, NIGHT người), (TWILIGHT, NIGHT người, NIGHT xe), (NIGHT xe, DAY, NIGHT yên tĩnh). EX06 node02 tải0 giây60, phục hồi180. EX07 broker down60/recover120 theo uptime node02, kiểm AUTO offline bằng Serial và LDR node01. Pilot ngoài dữ liệu chính; không dồn thao tác khi trễ quá2s mô phỏng.
+
+Công cụ preflight/run/summarize/verify điều khiển Wokwi UI, thu raw MQTT/Serial/API/health và heartbeat độc lập. Giữ FAIL/INCOMPLETE, chạy lại trọn lượt lỗi; không chọn bỏ kết quả hợp lệ. API/CSV/phép tính độc lập phải khớp trong1e-9Wh; loại đúng MANUAL/fault/low-load/offline/gap/boot/session và công bố độ phủ. Không đặt tỷ lệ tiết kiệm mục tiêu.
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [x] **Nhóm1 — Source/config/công cụ:** chung source,3 environment,3 sơ đồ cùng pin map, định danh live đúng;20 Python test,11 lượt host và2 compile-fail đúng kỳ vọng; build cả3 PASS, artifact/source được kiểm hash.
-- [x] **Nhóm2 — Tích hợp đúng đích:**3 node cùng chạy MQTT/API/DOM;30 lệnh AUTO/MANUAL/ACK/PWM và cảm biến cách ly, không tác động chéo; MANUAL tự về AUTO sau khoảng60000ms theo clock node.
-- [x] **Nhóm3 — Lỗi/phục hồi/latency:** OPEN_LOAD/phục hồi, tắt riêng node02, AUTO khi broker down, reconnect không replay command cũ, restart backend giữ dữ liệu;10 lệnh→ACK và10 mẫu sensor→dashboard/node.30/30 mẫu cảm biến cuối dưới3s thực, max cận trên1272,235ms.
-- [x] **Nhóm4 — Ổn định và bàn giao:** một cửa sổ1800s monotonic đồng thời, không reset/dừng collector/mất sequence;5360 raw telemetry khớp SQLite ACCEPTED; hồ sơ/techs/báo cáo/checklist/manifest, kiểm toàn vẹn dữ liệu và cleanup QA hoàn tất.
-
-## Kiểm tra và bằng chứng
-
-[Hồ sơ nghiệm thu](evidence/task-011/run-20261117-135233/README.md) tổng hợp log cuối, artifact manifest, từng ca live, ảnh, phương pháp latency và giới hạn. Cửa sổ cuối **15:36:05–16:06:05+07:00 ngày2026-11-17** có1561/2216/1583 bản tin liên tục từ ba node; boot không đổi, raw recorder không reconnect, backend giữ PID/start ticks, health cuối dropped_events0, SQLite quick_check=ok. [Audit cửa sổ](evidence/task-011/run-20261117-135233/stability-02/wire-audit.json) dùng clock monotonic máy, không cộng uptime mô phỏng.
+- [x] Nhóm1 — Baseline, công cụ/phương pháp và pilot được kiểm chứng.
+- [ ] Nhóm2 — Đủ15 lượt chính hợp lệ, raw/CSV/ảnh/cấu hình tái lập.
+- [ ] Nhóm3 — Phân tích năng lượng/baseline/độ phủ, đối chiếu độc lập và API/CSV.
+- [ ] Nhóm4 — Báo cáo DOCX sáu chương,12 slide PPTX, video MP4 6–8 phút; kiểm trực quan mọi trang/slide và phát video.
+- [ ] Nhóm5 — Runbook, diễn tập khởi động, backup/manifest/toàn vẹn SQLite, cleanup và tài liệu tiến độ.
 
 ## Vướng mắc và cách giải quyết
 
-Không còn vướng mắc chặn TASK-011. Đã phát hiện/sửa lỗi telemetry cảm biến chậm với ca red/green, build lại cả3 và chạy nghiệm thu trên firmware cuối. Giữ nguyên các FAIL cũ. Parser QA nhãn100k gây INCOMPLETE sai được audit từ raw đã lưu; không đổi timestamp hoặc loại mẫu chậm hợp lệ.
+Đã có 14/15 lượt chính PASS (EX01/R1; EX02/R1–R3; EX03/R1–R3; EX04/R1–R3; EX05/R1–R3; EX06/R1); audit độc lập đã kiểm 10 lượt đầu, đang chờ audit cuối sau EX07, không sai lệch raw MQTT/SQLite/API/CSV. EX02/R3 attempt01 bị mất cả3 Serial và giữ INCOMPLETE; sau phục hồi có attempt02 lỗi viewport, attempt03 bridge chưa sẵn sàng. Đã sửa chuẩn bị QA và attempt04 đã PASS; EX05/R1 attempt01 INCOMPLETE do đổi pha node01 trễ2257ms, vượt giới hạn2000ms. Đã chuẩn bị UI trước10s,18 lần diễn tập PASS với cận lớn nhất1475ms; giữ nguyên lịch vật lý và10 cấu hình chính đã đạt. EX05/R1 attempt02 và R2/R3 đã PASS, trễ tác động lớn nhất lần lượt621/649/845ms. EX06 PASS; đang chạy EX07/R1; không ghép dữ liệu cũ. Health OK, dropped_events0, ba node ONLINE/FRESH.
 
-HTTP/resource probe bị SIGTERM143 sau1346,506s/672 mẫu, nguyên nhân chính xác chưa xác định; log đó vẫn **INCOMPLETE**. Kết quả1800s dựa trên raw MQTT và SQLite độc lập bao phủ toàn bộ cửa sổ đã định trước, backend không đổi PID và health cuối; không tuyên bố HTTP/tài nguyên/dashboard được quan sát liên tục đủ30 phút. stability-01 dừng trước sửa vẫn INCOMPLETE, không cộng thời gian. Chi tiết và các lỗi công cụ khác ở hồ sơ.
+34 Python test PASS, gồm hồi quy tách monotonic theo host_boot_id qua reboot và phát hiện CSV thiếu/sai/NaN. Đã xác nhận giữ nguyên43.719 telemetry cũ và prefix5 stream log. Source/artifact firmware, backend/dashboard khớp baseline; không sửa chức năng sản phẩm.
 
-## Giới hạn và bước tiếp theo
+Word v03 sáu chương đã render 23 trang bằng WPS và đạt schema; PPTX v03 đủ 12 slide, native chart/table, ảnh dashboard giữ đúng tỷ lệ. Lỗi tràn chữ slide9 đã được xác minh sửa. Hai tệp còn mang trạng thái đang hoàn thiện vì số liệu chính chưa đủ. PDF do người dùng tự xuất. Quay thử riêng 3 giây dashboard đạt 1920×1080, giải mã đủ 90 frame và trình duyệt mở được; đây chưa phải video 6–8 phút. Đã giữ lỗi thiếu FFmpeg và lỗi Video.path của kết nối từ xa, bổ sung runtime đúng phiên bản và dùng saveAs. Video chính, diễn tập cold-start và backup cuối chưa chạy; chưa chốt các nhóm2–5.
 
-Đây là nghiệm thu Wokwi trên cấu hình máy/cap mô phỏng đã ghi, DOM sau hai rAF là proxy render. Chưa thực hiện EX-series, so sánh tiết kiệm điện đại diện, báo cáo/video bàn giao cuối hoặc phần cứng thật. Dữ liệu cũ và thay đổi người dùng được bảo toàn; tài nguyên QA đã dừng. Không thực hiện thao tác Git commit/push/merge trong bước đóng hồ sơ này.
+## Phụ thuộc và điều kiện bắt đầu
 
-[Đề xuất TASK-012](next-task.md) là thực nghiệm và bàn giao cuối; chưa bắt đầu, chỉ triển khai khi được giao. TASK-011 giữ ở đây đến khi bắt đầu task mới.
+Đã có yêu cầu triển khai của người dùng. Cần ba Wokwi VS Code/gateway, broker QA, backend một worker/SQLite mới, Live Server, runtime tài liệu và công cụ video. Chỉ thao tác tài nguyên QA có quyền sở hữu; giữ dữ liệu cũ. Không tự ghi PASS khả năng hai thành viên chạy/giải thích nếu chưa có xác nhận trực tiếp.
+
+## Tiếp tục sau TASK-013
+
+Ở lượt tiếp tục ngày17/11, người dùng đã cài bộ skill docx/pptx/pdf Anthropic tại ~/.codex/skills và yêu cầu kiểm tra để tiếp tục TASK-012. Đã đọc cả3 SKILL.md và cài runtime QA riêng cho docx/pptxgenjs/Python. WPS native render PNG đã được kiểm chứng, không tiếp tục cài LibreOffice; giữ nguyên plugin OpenAI. TASK-013 hoàn thành và toàn bộ báo cáo/checklist/bằng chứng của lượt cài skill được bảo toàn. EX-01-r01-a01 đã PASS; đang chạy14 lượt còn lại, không chạy lại EX-01 đã đạt.
+
+## Điều chỉnh bàn giao theo người dùng
+
+- 2026-11-17T21:52:03+07:00 — Người dùng yêu cầu nhận Word và tự xuất PDF bằng WPS. Bỏ PDF khỏi đầu ra bắt buộc; dừng xử lý xuất PDF tự động. Giữ DOCX và PPTX chỉnh sửa được, kiểm tra cấu trúc và mở trên WPS; ghi rõ mức kiểm trực quan thực tế. Các nhóm nghiệm thu còn lại giữ nguyên.
+
+## Tiến độ tài liệu và kiểm tra WPS
+
+- 2026-11-17T22:16:08+07:00 — Bản DOCX sáu chương đã mở đúng22 trang trên WPS; SaveAsPNG xuất đủ22 trang, đã rà trực quan bản nháp. PPTX12 slide có bảng/biểu đồ native đã qua schema, WPS xuất ảnh12/12; đã rà và sửa tràn chữ slide9. Hai tệp hiện là bản đang hoàn thiện, chưa chốt nhóm4. Đã có runbook tại docs/demo-runbook.md.
+- Audit raw MQTT→SQLite→API đã đối chiếu2 lượt chính PASS; còn13 lượt. Không thay đổi source sản phẩm. WPS RPC có lỗi destructor sau cleanup; kết quả ảnh đã xuất thành công, chưa coi Quit request là đã dừng tiến trình.
+
+## Tiếp tục ngày18/11/2026
+
+- 2026-11-18T09:14:09+07:00 — Người dùng yêu cầu tiếp tục. Còn3/15 lượt chính PASS; EX-02-r03-a01 INCOMPLETE do cả3 kết nối Serial ngắt. Không còn process QA sống; đã giữ trạng thái/log và backup SQLite trước phục hồi (quick_check=ok). Khôi phục cùng source/artifact, giữ lượt đã đạt và chạy lại trọn lượt bị ngắt.
+- Bổ sung host_boot_id cho raw/result để tách clock monotonic qua các lần khởi động máy; audit cũ chỉ dùng cohort cũ, không trộn record của clock mới. Không sửa công thức, schema sản phẩm hoặc recipe.
+
+- Đã phục hồi đủ3 node ONLINE/FRESH, health OK/dropped_events0; source/artifact khớp TASK-011. Runner tiếp tục --all --resume, tái dùng EX01/R1 và EX02/R1,R2; đang chạy lại EX02/R3 từ đầu.
+
+## Chuỗi bàn giao sau thực nghiệm
+
+Đã chuẩn bị pipeline riêng trong QA root: chờ đủ15 lượt, audit/verify, tạo biểu đồ/Word/PPTX và render WPS, quay demo, kiểm decode/phát video, diễn tập cold-start, dừng đúng dịch vụ QA. Pipeline dừng khi gặp lỗi; không tự bỏ lượt. Sau các bước tự động vẫn cần rà mọi ảnh tài liệu/slide và các cảnh video, rồi mới chốt video/backup/tài liệu hoàn thành. Source/helper as-run và hash được giữ trong evidence/recovery-20261118-091409/automation-as-run/.

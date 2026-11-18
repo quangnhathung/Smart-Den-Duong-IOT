@@ -1,5 +1,9 @@
 # Kiểm tra dự án — firmware, backend và dashboard
 
+## TASK-012 — Công cụ thực nghiệm đang kiểm chứng
+
+34 test Python PASS, gồm20 ca cũ,12 ca recipe/clock/độc lập năng lượng và2 ca hồi quy tách clock qua reboot/toàn vẹn CSV. Fixture kiểm15 lượt/150 phút mô phỏng, PIR15+30k, EX05 lặp cùng lịch, chuẩn bị popup không đổi mốc tác động, predictor bị chặn1s, hai clock tách biệt, baseline null và không nối qua boot/gap/session/quality. Đây là kiểm công cụ, chưa phải15 lượt live đạt. Xem [phương pháp và trạng thái](experiments.md), [task](../reports/task.md). Không chạy lại host/build/30 phút TASK-011 khi source/artifact giữ nguyên.
+
 ## TASK-011 — Ma trận ba định danh
 
 `python3 -B scripts/check-firmware.py`: protocol/app/MQTT cho cả 3 chỉ số; controller/sensors chạy một lượt, tổng 11 lượt; chỉ số 0 và 4 phải compile-fail. Stub lưu client ID thực; kiểm topic/LWT/subscription và payload đúng node, diagnostics, từ chối sai topic/node; giữ hồi quy controller/queue/deadline/session.

@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-11-17T13:57:07.485356+00:00",
+  "health": {
+    "status": "OK",
+    "database": true,
+    "broker": true,
+    "queue": true,
+    "dropped_events": 0
+  },
+  "nodes": [
+    {
+      "node_id": "node_01",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T13:57:06.259079Z",
+      "age_s": 1.1903713379997498,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_01",
+        "boot_id": "16634a4e",
+        "seq": "3626",
+        "uptime_ms": "2331067",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 152.1897,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_02",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T13:57:07.345958Z",
+      "age_s": 0.10352993500055163,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_02",
+        "boot_id": "3a8b19bd",
+        "seq": "5683",
+        "uptime_ms": "2303262",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 152.1897,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    },
+    {
+      "node_id": "node_03",
+      "connection": "ONLINE",
+      "freshness": "FRESH",
+      "last_seen": "2026-11-17T13:57:07.142149Z",
+      "age_s": 0.30734640800073976,
+      "telemetry": {
+        "schema_version": 1,
+        "node_id": "node_03",
+        "boot_id": "44dabee8",
+        "seq": "4165",
+        "uptime_ms": "2328475",
+        "mode": "AUTO",
+        "environment": "NIGHT",
+        "ldr_adc": 4063,
+        "motion": "NONE",
+        "distance_cm": 152.1207,
+        "brightness_target": 25,
+        "brightness_applied": 25,
+        "current_adc": 4095,
+        "current_ma_sim": 500.0,
+        "power_sim_w": 6.0,
+        "faults": []
+      },
+      "faults": [],
+      "pending_command_id": null,
+      "can_command": true
+    }
+  ],
+  "serial": {
+    "node_03": {
+      "uptime_ms": 2327845,
+      "host_ms": 1794923826270.9878,
+      "monotonic_ns": 8675835154218,
+      "line": "SENSORS uptime_ms=2327845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.12"
+    },
+    "node_01": {
+      "uptime_ms": 2330844,
+      "host_ms": 1794923825966.2424,
+      "monotonic_ns": 8675530407664,
+      "line": "SENSORS uptime_ms=2330844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+    },
+    "node_02": {
+      "uptime_ms": 2303024,
+      "host_ms": 1794923827154.737,
+      "monotonic_ns": 8676718902810,
+      "line": "uptime_ms=2303024 HEARTBEAT published=1 state=0"
+    }
+  },
+  "source_and_artifacts_match_task011": true
+}

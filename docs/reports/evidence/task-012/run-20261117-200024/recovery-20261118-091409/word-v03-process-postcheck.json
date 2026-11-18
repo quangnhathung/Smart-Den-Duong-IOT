@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-11-18T10:05:32+07:00",
+  "owned_pid": 115441,
+  "original_render_process_stopped": false,
+  "postcheck_process_stopped": true,
+  "note": "WPS instance completed native shutdown after the initial bounded check. Source and23 rendered pages were unchanged."
+}

@@ -1,0 +1,909 @@
+{
+  "status": "INCOMPLETE",
+  "purpose": "QA scene latency rehearsal outside formal experiment windows; never a formal accepted run",
+  "rounds": [
+    {
+      "index": 1,
+      "scene": {
+        "environment": "NIGHT",
+        "distance": 50
+      },
+      "actions": [
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_01",
+            "kind": "scene",
+            "value": {
+              "environment": "NIGHT",
+              "distance": 50
+            }
+          },
+          "started_host_ms": 1794979824896.452,
+          "finished_host_ms": 1794979827659.2417,
+          "before_clock": {
+            "uptime_ms": 6554112,
+            "host_ms": 1794979824210.01,
+            "monotonic_ns": 12052238251064,
+            "line": "uptime_ms=6554112 HEARTBEAT published=1 state=0"
+          },
+          "after_clock": {
+            "uptime_ms": 6554844,
+            "host_ms": 1794979825711.0552,
+            "monotonic_ns": 12053739295216,
+            "line": "SENSORS uptime_ms=6554844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.12"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 0.1,
+                "host_ms": 1794979825373
+              },
+              {
+                "kind": "distance",
+                "value": 50,
+                "host_ms": 1794979827658
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6555912,
+            "seq": 15643,
+            "host_ms": 1794979827889.5857
+          },
+          "conservative_duration_node_ms": 1800
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_02",
+            "kind": "scene",
+            "value": {
+              "environment": "NIGHT",
+              "distance": 50
+            }
+          },
+          "started_host_ms": 1794979824895.9885,
+          "finished_host_ms": 1794979827502.676,
+          "before_clock": {
+            "uptime_ms": 6014845,
+            "host_ms": 1794979823643.6235,
+            "monotonic_ns": 12051671864352,
+            "line": "SENSORS uptime_ms=6014845 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.52"
+          },
+          "after_clock": {
+            "uptime_ms": 6016434,
+            "host_ms": 1794979826945.5686,
+            "monotonic_ns": 12054973809036,
+            "line": "uptime_ms=6016434 HEARTBEAT published=1 state=0"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 0.1,
+                "host_ms": 1794979825292
+              },
+              {
+                "kind": "distance",
+                "value": 50,
+                "host_ms": 1794979827501
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6016870,
+            "seq": 20296,
+            "host_ms": 1794979827826.2205
+          },
+          "conservative_duration_node_ms": 2025
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_03",
+            "kind": "scene",
+            "value": {
+              "environment": "NIGHT",
+              "distance": 50
+            }
+          },
+          "started_host_ms": 1794979824895.6392,
+          "finished_host_ms": 1794979827754.397,
+          "before_clock": {
+            "uptime_ms": 5937845,
+            "host_ms": 1794979822579.1975,
+            "monotonic_ns": 12050607437176,
+            "line": "SENSORS uptime_ms=5937845 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.52"
+          },
+          "after_clock": {
+            "uptime_ms": 5939845,
+            "host_ms": 1794979827081.8384,
+            "monotonic_ns": 12055110078024,
+            "line": "SENSORS uptime_ms=5939845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 0.1,
+                "host_ms": 1794979825408
+              },
+              {
+                "kind": "distance",
+                "value": 50,
+                "host_ms": 1794979827753
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 5940312,
+            "seq": 19458,
+            "host_ms": 1794979828104.566
+          },
+          "conservative_duration_node_ms": 2467
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "scene": {
+        "environment": "TWILIGHT",
+        "distance": 150
+      },
+      "actions": [
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_01",
+            "kind": "scene",
+            "value": {
+              "environment": "TWILIGHT",
+              "distance": 150
+            }
+          },
+          "started_host_ms": 1794979835144.6482,
+          "finished_host_ms": 1794979838189.0962,
+          "before_clock": {
+            "uptime_ms": 6558844,
+            "host_ms": 1794979834419.8184,
+            "monotonic_ns": 12062448058211,
+            "line": "SENSORS uptime_ms=6558844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+          },
+          "after_clock": {
+            "uptime_ms": 6560125,
+            "host_ms": 1794979837121.8142,
+            "monotonic_ns": 12065150054844,
+            "line": "uptime_ms=6560125 HEARTBEAT published=1 state=0"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 100,
+                "host_ms": 1794979836280
+              },
+              {
+                "kind": "distance",
+                "value": 150,
+                "host_ms": 1794979838187
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6560689,
+            "seq": 15652,
+            "host_ms": 1794979838309.5776
+          },
+          "conservative_duration_node_ms": 1845
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_02",
+            "kind": "scene",
+            "value": {
+              "environment": "TWILIGHT",
+              "distance": 150
+            }
+          },
+          "started_host_ms": 1794979835145.8728,
+          "finished_host_ms": 1794979838240.3088,
+          "before_clock": {
+            "uptime_ms": 6019845,
+            "host_ms": 1794979835055.0044,
+            "monotonic_ns": 12063083243808,
+            "line": "SENSORS uptime_ms=6019845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+          },
+          "after_clock": {
+            "uptime_ms": 6020845,
+            "host_ms": 1794979837457.6846,
+            "monotonic_ns": 12065485923923,
+            "line": "SENSORS uptime_ms=6020845 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 100,
+                "host_ms": 1794979836300
+              },
+              {
+                "kind": "distance",
+                "value": 150,
+                "host_ms": 1794979838239
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6021517,
+            "seq": 20315,
+            "host_ms": 1794979838698.2036
+          },
+          "conservative_duration_node_ms": 1672
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_03",
+            "kind": "scene",
+            "value": {
+              "environment": "TWILIGHT",
+              "distance": 150
+            }
+          },
+          "started_host_ms": 1794979835145.2847,
+          "finished_host_ms": 1794979838288.6587,
+          "before_clock": {
+            "uptime_ms": 5943126,
+            "host_ms": 1794979834891.4792,
+            "monotonic_ns": 12062919719679,
+            "line": "uptime_ms=5943126 HEARTBEAT published=1 state=0"
+          },
+          "after_clock": {
+            "uptime_ms": 5943845,
+            "host_ms": 1794979836392.7937,
+            "monotonic_ns": 12064421033597,
+            "line": "SENSORS uptime_ms=5943845 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=51.09"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 100,
+                "host_ms": 1794979836252
+              },
+              {
+                "kind": "distance",
+                "value": 150,
+                "host_ms": 1794979838288
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 5944870,
+            "seq": 19473,
+            "host_ms": 1794979838676.6282
+          },
+          "conservative_duration_node_ms": 1744
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "scene": {
+        "environment": "NIGHT",
+        "distance": 50
+      },
+      "actions": [
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_01",
+            "kind": "scene",
+            "value": {
+              "environment": "NIGHT",
+              "distance": 50
+            }
+          },
+          "started_host_ms": 1794979845467.6782,
+          "finished_host_ms": 1794979847998.6565,
+          "before_clock": {
+            "uptime_ms": 6562844,
+            "host_ms": 1794979843126.324,
+            "monotonic_ns": 12071154563470,
+            "line": "SENSORS uptime_ms=6562844 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.12"
+          },
+          "after_clock": {
+            "uptime_ms": 6564844,
+            "host_ms": 1794979847630.8577,
+            "monotonic_ns": 12075659097667,
+            "line": "SENSORS uptime_ms=6564844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.10"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 0.1,
+                "host_ms": 1794979845904
+              },
+              {
+                "kind": "distance",
+                "value": 50,
+                "host_ms": 1794979847998
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6565278,
+            "seq": 15668,
+            "host_ms": 1794979848356.2908
+          },
+          "conservative_duration_node_ms": 2434
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_02",
+            "kind": "scene",
+            "value": {
+              "environment": "NIGHT",
+              "distance": 50
+            }
+          },
+          "started_host_ms": 1794979845467.9185,
+          "finished_host_ms": 1794979847376.159,
+          "before_clock": {
+            "uptime_ms": 6023845,
+            "host_ms": 1794979844063.201,
+            "monotonic_ns": 12072091440807,
+            "line": "SENSORS uptime_ms=6023845 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.52"
+          },
+          "after_clock": {
+            "uptime_ms": 6024845,
+            "host_ms": 1794979846465.1582,
+            "monotonic_ns": 12074493397923,
+            "line": "SENSORS uptime_ms=6024845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 0.1,
+                "host_ms": 1794979845850
+              },
+              {
+                "kind": "distance",
+                "value": 50,
+                "host_ms": 1794979847375
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6025489,
+            "seq": 20332,
+            "host_ms": 1794979847687.6338
+          },
+          "conservative_duration_node_ms": 1644
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_03",
+            "kind": "scene",
+            "value": {
+              "environment": "NIGHT",
+              "distance": 50
+            }
+          },
+          "started_host_ms": 1794979845468.5564,
+          "finished_host_ms": 1794979848113.82,
+          "before_clock": {
+            "uptime_ms": 5947155,
+            "host_ms": 1794979843900.43,
+            "monotonic_ns": 12071928671451,
+            "line": "uptime_ms=5947155 HEARTBEAT published=1 state=0"
+          },
+          "after_clock": {
+            "uptime_ms": 5948845,
+            "host_ms": 1794979848107.1567,
+            "monotonic_ns": 12076135396514,
+            "line": "SENSORS uptime_ms=5948845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.52"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 0.1,
+                "host_ms": 1794979845969
+              },
+              {
+                "kind": "distance",
+                "value": 50,
+                "host_ms": 1794979848113
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 5949101,
+            "seq": 19491,
+            "host_ms": 1794979848345.64
+          },
+          "conservative_duration_node_ms": 1946
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "scene": {
+        "environment": "TWILIGHT",
+        "distance": 150
+      },
+      "actions": [
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_01",
+            "kind": "scene",
+            "value": {
+              "environment": "TWILIGHT",
+              "distance": 150
+            }
+          },
+          "started_host_ms": 1794979855152.545,
+          "finished_host_ms": 1794979858644.0618,
+          "before_clock": {
+            "uptime_ms": 6568145,
+            "host_ms": 1794979854837.9404,
+            "monotonic_ns": 12082866181643,
+            "line": "uptime_ms=6568145 HEARTBEAT published=1 state=0"
+          },
+          "after_clock": {
+            "uptime_ms": 6568844,
+            "host_ms": 1794979856639.52,
+            "monotonic_ns": 12084667760347,
+            "line": "SENSORS uptime_ms=6568844 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 100,
+                "host_ms": 1794979856469
+              },
+              {
+                "kind": "distance",
+                "value": 150,
+                "host_ms": 1794979858643
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6569889,
+            "seq": 15678,
+            "host_ms": 1794979858782.4644
+          },
+          "conservative_duration_node_ms": 1744
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_02",
+            "kind": "scene",
+            "value": {
+              "environment": "TWILIGHT",
+              "distance": 150
+            }
+          },
+          "started_host_ms": 1794979855151.669,
+          "finished_host_ms": 1794979858672.8958,
+          "before_clock": {
+            "uptime_ms": 6028488,
+            "host_ms": 1794979854571.2112,
+            "monotonic_ns": 12082599452275,
+            "line": "uptime_ms=6028488 HEARTBEAT published=1 state=0"
+          },
+          "after_clock": {
+            "uptime_ms": 6029845,
+            "host_ms": 1794979857879.5698,
+            "monotonic_ns": 12085907809375,
+            "line": "SENSORS uptime_ms=6029845 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=51.09"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 100,
+                "host_ms": 1794979856328
+              },
+              {
+                "kind": "distance",
+                "value": 150,
+                "host_ms": 1794979858672
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6030459,
+            "seq": 20350,
+            "host_ms": 1794979859078.8083
+          },
+          "conservative_duration_node_ms": 1971
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_03",
+            "kind": "scene",
+            "value": {
+              "environment": "TWILIGHT",
+              "distance": 150
+            }
+          },
+          "started_host_ms": 1794979855155.6702,
+          "finished_host_ms": 1794979858768.068,
+          "before_clock": {
+            "uptime_ms": 5951845,
+            "host_ms": 1794979854713.99,
+            "monotonic_ns": 12082742229759,
+            "line": "SENSORS uptime_ms=5951845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+          },
+          "after_clock": {
+            "uptime_ms": 5953167,
+            "host_ms": 1794979858016.9934,
+            "monotonic_ns": 12086045233788,
+            "line": "uptime_ms=5953167 HEARTBEAT published=1 state=0"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 100,
+                "host_ms": 1794979856413
+              },
+              {
+                "kind": "distance",
+                "value": 150,
+                "host_ms": 1794979858767
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 5953658,
+            "seq": 19506,
+            "host_ms": 1794979858866.3706
+          },
+          "conservative_duration_node_ms": 1813
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "scene": {
+        "environment": "NIGHT",
+        "distance": 50
+      },
+      "actions": [
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_01",
+            "kind": "scene",
+            "value": {
+              "environment": "NIGHT",
+              "distance": 50
+            }
+          },
+          "started_host_ms": 1794979865746.0828,
+          "finished_host_ms": 1794979868679.23,
+          "before_clock": {
+            "uptime_ms": 6572844,
+            "host_ms": 1794979865344.4673,
+            "monotonic_ns": 12093372707428,
+            "line": "SENSORS uptime_ms=6572844 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.12"
+          },
+          "after_clock": {
+            "uptime_ms": 6574156,
+            "host_ms": 1794979868347.0156,
+            "monotonic_ns": 12096375255992,
+            "line": "uptime_ms=6574156 HEARTBEAT published=1 state=0"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 0.1,
+                "host_ms": 1794979866200
+              },
+              {
+                "kind": "distance",
+                "value": 50,
+                "host_ms": 1794979868678
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6574497,
+            "seq": 15690,
+            "host_ms": 1794979869065.1082
+          },
+          "conservative_duration_node_ms": 1653
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_02",
+            "kind": "scene",
+            "value": {
+              "environment": "NIGHT",
+              "distance": 50
+            }
+          },
+          "started_host_ms": 1794979865746.4185,
+          "finished_host_ms": 1794979868752.8083,
+          "before_clock": {
+            "uptime_ms": 6032845,
+            "host_ms": 1794979864484.919,
+            "monotonic_ns": 12092513158271,
+            "line": "SENSORS uptime_ms=6032845 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.52"
+          },
+          "after_clock": {
+            "uptime_ms": 6034506,
+            "host_ms": 1794979868389.841,
+            "monotonic_ns": 12096418081987,
+            "line": "uptime_ms=6034506 HEARTBEAT published=1 state=0"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 0.1,
+                "host_ms": 1794979866268
+              },
+              {
+                "kind": "distance",
+                "value": 50,
+                "host_ms": 1794979868752
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6035046,
+            "seq": 20367,
+            "host_ms": 1794979869512.0627
+          },
+          "conservative_duration_node_ms": 2201
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_03",
+            "kind": "scene",
+            "value": {
+              "environment": "NIGHT",
+              "distance": 50
+            }
+          },
+          "started_host_ms": 1794979865746.7188,
+          "finished_host_ms": 1794979868688.4084,
+          "before_clock": {
+            "uptime_ms": 5955845,
+            "host_ms": 1794979863722.525,
+            "monotonic_ns": 12091750764693,
+            "line": "SENSORS uptime_ms=5955845 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+          },
+          "after_clock": {
+            "uptime_ms": 5957845,
+            "host_ms": 1794979868530.0684,
+            "monotonic_ns": 12096558308741,
+            "line": "SENSORS uptime_ms=5957845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.12"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 0.1,
+                "host_ms": 1794979866228
+              },
+              {
+                "kind": "distance",
+                "value": 50,
+                "host_ms": 1794979868687
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 5958249,
+            "seq": 19523,
+            "host_ms": 1794979869422.1597
+          },
+          "conservative_duration_node_ms": 2404
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "scene": {
+        "environment": "TWILIGHT",
+        "distance": 150
+      },
+      "actions": [
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_01",
+            "kind": "scene",
+            "value": {
+              "environment": "TWILIGHT",
+              "distance": 150
+            }
+          },
+          "started_host_ms": 1794979876250.1257,
+          "finished_host_ms": 1794979879483.5935,
+          "before_clock": {
+            "uptime_ms": 6576844,
+            "host_ms": 1794979874353.0938,
+            "monotonic_ns": 12102381333500,
+            "line": "SENSORS uptime_ms=6576844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+          },
+          "after_clock": {
+            "uptime_ms": 6578844,
+            "host_ms": 1794979878556.7095,
+            "monotonic_ns": 12106584949397,
+            "line": "SENSORS uptime_ms=6578844 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.28"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 100,
+                "host_ms": 1794979877335
+              },
+              {
+                "kind": "distance",
+                "value": 150,
+                "host_ms": 1794979879483
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6579518,
+            "seq": 15708,
+            "host_ms": 1794979880002.5298
+          },
+          "conservative_duration_node_ms": 2674
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_02",
+            "kind": "scene",
+            "value": {
+              "environment": "TWILIGHT",
+              "distance": 150
+            }
+          },
+          "started_host_ms": 1794979876249.0234,
+          "finished_host_ms": 1794979879505.4136,
+          "before_clock": {
+            "uptime_ms": 6037845,
+            "host_ms": 1794979875897.2446,
+            "monotonic_ns": 12103925484324,
+            "line": "SENSORS uptime_ms=6037845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+          },
+          "after_clock": {
+            "uptime_ms": 6038845,
+            "host_ms": 1794979877998.6875,
+            "monotonic_ns": 12106026927290,
+            "line": "SENSORS uptime_ms=6038845 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 100,
+                "host_ms": 1794979877349
+              },
+              {
+                "kind": "distance",
+                "value": 150,
+                "host_ms": 1794979879504
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 6039667,
+            "seq": 20387,
+            "host_ms": 1794979879699.3599
+          },
+          "conservative_duration_node_ms": 1822
+        },
+        {
+          "recipe": {
+            "at_s": 0,
+            "node_id": "node_03",
+            "kind": "scene",
+            "value": {
+              "environment": "TWILIGHT",
+              "distance": 150
+            }
+          },
+          "started_host_ms": 1794979876249.838,
+          "finished_host_ms": 1794979879429.425,
+          "before_clock": {
+            "uptime_ms": 5961184,
+            "host_ms": 1794979876035.8481,
+            "monotonic_ns": 12104064088911,
+            "line": "uptime_ms=5961184 HEARTBEAT published=1 state=0"
+          },
+          "after_clock": {
+            "uptime_ms": 5961845,
+            "host_ms": 1794979877837.279,
+            "monotonic_ns": 12105865518443,
+            "line": "SENSORS uptime_ms=5961845 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+          },
+          "result": {
+            "scene_applied": true,
+            "effects": [
+              {
+                "kind": "lux",
+                "value": 100,
+                "host_ms": 1794979877352
+              },
+              {
+                "kind": "distance",
+                "value": 150,
+                "host_ms": 1794979879428
+              }
+            ]
+          },
+          "physical_confirmation": {
+            "source": "raw MQTT sensor sample",
+            "uptime_ms": 5962872,
+            "seq": 19540,
+            "host_ms": 1794979879816.6099
+          },
+          "conservative_duration_node_ms": 1688
+        }
+      ]
+    }
+  ],
+  "ui_sha256": "5878b89e103bf2548d687ed137af935224e9ee929c870273b738cc361e28bbae",
+  "maximum_conservative_node_ms": 2674,
+  "error": "RuntimeError('Scene preparation still exceeds conservative2s bound')"
+}

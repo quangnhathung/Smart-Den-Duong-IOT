@@ -1,0 +1,9 @@
+{
+  "version": "2.1.2",
+  "source": "https://mosquitto.org/files/source/mosquitto-2.1.2.tar.gz",
+  "source_sha256": "fd905380691ac65ea5a93779e8214941829e3d6e038d5edff9eac5fd74cbed02",
+  "cjson": "1.7.19",
+  "cjson_source_sha256": "7fa616e3046edfa7a28a32d5f9eacfd23f92900fe1f8ccd988c1662f30454562",
+  "broker_binary_sha256": "7d4570c1df9bc4445b28e4c7ffe17681f9355ae0cd609e63aa3c47e1e5750e35",
+  "runtime": "Native QA process, bound127.0.0.1:1883. Docker daemon unavailable; no system service started. TLS compiler const warnings retained, local MQTT uses no TLS."
+}

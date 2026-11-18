@@ -1,0 +1,4184 @@
+[
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-01",
+    "repeat": 1,
+    "duration_node_s": 300,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "DAY",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "DAY",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "DAY",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 5,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 5,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 5,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 10,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 10,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 10,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 35,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 35,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 35,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 40,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 40,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 40,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 65,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 65,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 65,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 70,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 70,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 70,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 95,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 95,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 95,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 100,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 100,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 100,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 125,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 125,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 125,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 130,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 130,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 130,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 155,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 155,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 155,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 160,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 160,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 160,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 185,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 185,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 185,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 190,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 190,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 190,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 215,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 215,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 215,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 220,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 220,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 220,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 245,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 245,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 245,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 150
+      },
+      {
+        "at_s": 250,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 250,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 250,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 150
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 275,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 275,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 275,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 280,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 280,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 280,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      }
+    ]
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-02",
+    "repeat": 1,
+    "duration_node_s": 600,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": []
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-02",
+    "repeat": 2,
+    "duration_node_s": 600,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": []
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-02",
+    "repeat": 3,
+    "duration_node_s": 600,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": []
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-03",
+    "repeat": 1,
+    "duration_node_s": 600,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      }
+    ]
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-03",
+    "repeat": 2,
+    "duration_node_s": 600,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      }
+    ]
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-03",
+    "repeat": 3,
+    "duration_node_s": 600,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      }
+    ]
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-04",
+    "repeat": 1,
+    "duration_node_s": 600,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 50
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 50
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 50
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      }
+    ]
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-04",
+    "repeat": 2,
+    "duration_node_s": 600,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 50
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 50
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 50
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      }
+    ]
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-04",
+    "repeat": 3,
+    "duration_node_s": 600,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 50
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 50
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 50
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      }
+    ]
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-05",
+    "repeat": 1,
+    "duration_node_s": 900,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "DAY",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_01",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "TWILIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_02",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_03",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_01",
+        "kind": "scene",
+        "value": {
+          "environment": "TWILIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_02",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_03",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_01",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_02",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "DAY",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_03",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_01",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_02",
+        "kind": "scene",
+        "value": {
+          "environment": "DAY",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_03",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 615,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 645,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 675,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 705,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 735,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 765,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 795,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 825,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 855,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 885,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      }
+    ]
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-05",
+    "repeat": 2,
+    "duration_node_s": 900,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "DAY",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_01",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "TWILIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_02",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_03",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_01",
+        "kind": "scene",
+        "value": {
+          "environment": "TWILIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_02",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_03",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_01",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_02",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "DAY",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_03",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_01",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_02",
+        "kind": "scene",
+        "value": {
+          "environment": "DAY",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_03",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 615,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 645,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 675,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 705,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 735,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 765,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 795,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 825,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 855,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 885,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      }
+    ]
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-05",
+    "repeat": 3,
+    "duration_node_s": 900,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "DAY",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_01",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "TWILIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_02",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_03",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_01",
+        "kind": "scene",
+        "value": {
+          "environment": "TWILIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_02",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_03",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_01",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_02",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "DAY",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_03",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_01",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_02",
+        "kind": "scene",
+        "value": {
+          "environment": "DAY",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_03",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 615,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 645,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 675,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 705,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 735,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 765,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 795,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 825,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 855,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 885,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      }
+    ]
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-06",
+    "repeat": 1,
+    "duration_node_s": 300,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 60,
+        "node_id": "node_02",
+        "kind": "current",
+        "value": 0
+      },
+      {
+        "at_s": 180,
+        "node_id": "node_02",
+        "kind": "current",
+        "value": 1023
+      }
+    ]
+  },
+  {
+    "source": "Wokwi live",
+    "scenario": "EX-07",
+    "repeat": 1,
+    "duration_node_s": 300,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 60,
+        "node_id": "node_02",
+        "kind": "broker",
+        "value": "stop"
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_02",
+        "kind": "offline_ldr",
+        "value": "DAY"
+      },
+      {
+        "at_s": 90,
+        "node_id": "node_02",
+        "kind": "offline_ldr",
+        "value": "NIGHT"
+      },
+      {
+        "at_s": 120,
+        "node_id": "node_02",
+        "kind": "broker",
+        "value": "start"
+      }
+    ]
+  }
+]

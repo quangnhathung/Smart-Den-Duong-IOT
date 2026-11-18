@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-18T12:04:41.513255+07:00",
+  "files": {
+    "ui-before.cjs": "1adec2923c525ec7744538490e7be1e06f7a0c78ee06acfe0b12eb63e728d023",
+    "pipeline-stopped.json": "9c35addabb343e7fbbd492376f3ae2416eb8a28e318fef94cc1eaee6eb0e2288",
+    "attempt01-incomplete.json": "5c2ba8cf682ffa95fbcc0481418b299c10f58947a4938f0f21b3eed9defc7476"
+  },
+  "change_scope": "QA UI action timing only; do not relax2s, recipes, clocks or product sources"
+}

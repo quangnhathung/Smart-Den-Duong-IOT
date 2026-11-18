@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-18T11:26:13+07:00",
+  "event": "Agent daemon restarted; independent campaign continued without restart",
+  "status": "PASS",
+  "attempt": "EX-04-r02-a01",
+  "actions": 60,
+  "max_lateness_ms": 837,
+  "durations_ms": {
+    "node_01": 600604,
+    "node_02": 600603,
+    "node_03": 600198
+  },
+  "producer_restarted": false
+}

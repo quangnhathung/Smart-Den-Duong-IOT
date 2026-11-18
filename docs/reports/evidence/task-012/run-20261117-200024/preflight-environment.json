@@ -1,0 +1,6 @@
+{
+  "docker": "daemon unavailable inside and outside sandbox; no system services changed",
+  "artifact_runtime": "workspace dependency loader absent; managed runtime dependencies absent",
+  "previous_task_tmp": "absent after reboot; will not use previous PID or state",
+  "firmware_prepare": "all three source/target hashes match final TASK-011 artifacts"
+}

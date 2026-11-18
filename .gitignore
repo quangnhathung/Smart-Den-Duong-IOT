@@ -8,3 +8,10 @@ simulations/*/build/
 # Active TASK-010 streams; frozen evidence snapshots are versioned.
 docs/reports/evidence/task-010/run-20261116-193157/backend-restored.log
 docs/reports/evidence/task-010/run-20261116-195307/latency-events-20261116-201020.jsonl
+
+# TASK-012 private QA databases, generated deliverables and runtime state.
+output/task-012/
+
+# Python tooling and host-test bytecode caches.
+__pycache__/
+*.pyc

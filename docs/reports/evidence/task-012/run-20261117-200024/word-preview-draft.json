@@ -1,0 +1,155 @@
+{
+  "pid": 317760,
+  "start_ticks": "1317687",
+  "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/Bao-cao-Den-duong-thong-minh-Nhom7.docx",
+  "sha256": "c23517e551daa0907349f48de9fd3c55e700f01995a9570426a3c67ce5e7f66d",
+  "status": "READY",
+  "pages_result": 0,
+  "pages": 22,
+  "window_id": 54526251,
+  "images": [
+    {
+      "page": 1,
+      "hr": 0,
+      "bytes": 86724
+    },
+    {
+      "page": 2,
+      "hr": 0,
+      "bytes": 139872
+    },
+    {
+      "page": 3,
+      "hr": 0,
+      "bytes": 113297
+    },
+    {
+      "page": 4,
+      "hr": 0,
+      "bytes": 135410
+    },
+    {
+      "page": 5,
+      "hr": 0,
+      "bytes": 147802
+    },
+    {
+      "page": 6,
+      "hr": 0,
+      "bytes": 162318
+    },
+    {
+      "page": 7,
+      "hr": 0,
+      "bytes": 126094
+    },
+    {
+      "page": 8,
+      "hr": 0,
+      "bytes": 119592
+    },
+    {
+      "page": 9,
+      "hr": 0,
+      "bytes": 131612
+    },
+    {
+      "page": 10,
+      "hr": 0,
+      "bytes": 151873
+    },
+    {
+      "page": 11,
+      "hr": 0,
+      "bytes": 141406
+    },
+    {
+      "page": 12,
+      "hr": 0,
+      "bytes": 130295
+    },
+    {
+      "page": 13,
+      "hr": 0,
+      "bytes": 141096
+    },
+    {
+      "page": 14,
+      "hr": 0,
+      "bytes": 145923
+    },
+    {
+      "page": 15,
+      "hr": 0,
+      "bytes": 156545
+    },
+    {
+      "page": 16,
+      "hr": 0,
+      "bytes": 103382
+    },
+    {
+      "page": 17,
+      "hr": 0,
+      "bytes": 73480
+    },
+    {
+      "page": 18,
+      "hr": 0,
+      "bytes": 129795
+    },
+    {
+      "page": 19,
+      "hr": 0,
+      "bytes": 142880
+    },
+    {
+      "page": 20,
+      "hr": 0,
+      "bytes": 133663
+    },
+    {
+      "page": 21,
+      "hr": 0,
+      "bytes": 129180
+    },
+    {
+      "page": 22,
+      "hr": 0,
+      "bytes": 134608
+    }
+  ],
+  "source_unchanged": true,
+  "close_requested": true,
+  "visual_qa": {
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "findings": [
+      "No clipping or overlaps observed in draft; improve table left alignment and prose spacing.",
+      "Add repetition mean/min-max and plot in next revision."
+    ],
+    "is_final": false
+  }
+}

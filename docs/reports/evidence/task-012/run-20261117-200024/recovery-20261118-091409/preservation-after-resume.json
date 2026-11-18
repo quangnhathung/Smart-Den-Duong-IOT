@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-18T09:33:32+07:00",
+  "raw_prefixes": {
+    "ui-events.jsonl": {
+      "prefix_bytes": 84669,
+      "sha256": "4149b04b3895e4461cb937f6627e7f7b9049d7b5f9b12fb20f97474e889180a7",
+      "unchanged": true
+    },
+    "mqtt-events.jsonl": {
+      "prefix_bytes": 17867262,
+      "sha256": "815d8506de4b817261d109174e2d81627de4eb8fc57564ba222c31006d45e8d4",
+      "unchanged": true
+    },
+    "serial-events.jsonl": {
+      "prefix_bytes": 5711008,
+      "sha256": "a0e0a871263cb387f356d4d91c9b7630d9c24439ad48f86847990c938e219dc1",
+      "unchanged": true
+    },
+    "probe-events.jsonl": {
+      "prefix_bytes": 6220506,
+      "sha256": "9e5254da63a728a3cee7c682d73d06f2cc6521be0dc2fc0acf8348868d312426",
+      "unchanged": true
+    },
+    "dashboard-events.jsonl": {
+      "prefix_bytes": 7994797,
+      "sha256": "451aafa31a9eb56d11254c5e44f6b49ecbd6de265a11c88384d410aa72a6e9e3",
+      "unchanged": true
+    }
+  },
+  "sqlite_before": {
+    "sha256": "e8d907015b35fffddefefb161d1c002410ee3b30afb1a367bc95da4d149f62dd",
+    "rows": 43719
+  },
+  "sqlite_after": {
+    "sha256": "e8d907015b35fffddefefb161d1c002410ee3b30afb1a367bc95da4d149f62dd",
+    "rows": 43719
+  },
+  "history_unchanged": true,
+  "status": "PASS"
+}

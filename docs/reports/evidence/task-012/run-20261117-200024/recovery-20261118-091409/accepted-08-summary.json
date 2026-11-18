@@ -1,0 +1,51 @@
+{
+  "status": "INCOMPLETE",
+  "generated_at": "2026-11-18T04:06:19.268462+00:00",
+  "accepted_runs": 8,
+  "planned_runs": 15,
+  "missing": [
+    {
+      "scenario": "EX-04",
+      "repeat": 2
+    },
+    {
+      "scenario": "EX-04",
+      "repeat": 3
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 1
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 2
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 3
+    },
+    {
+      "scenario": "EX-06",
+      "repeat": 1
+    },
+    {
+      "scenario": "EX-07",
+      "repeat": 1
+    }
+  ],
+  "sqlite_quick_check": [
+    "ok"
+  ],
+  "errors": [],
+  "last_accepted": {
+    "attempt": "EX-04-r01-a01",
+    "experiment_id": 13,
+    "status": "PASS",
+    "action_summary": {
+      "physical_actions": 60,
+      "minimum_offset_ms": 343,
+      "maximum_lateness_upper_ms": 683,
+      "upper_limit_ms": 2000
+    }
+  }
+}

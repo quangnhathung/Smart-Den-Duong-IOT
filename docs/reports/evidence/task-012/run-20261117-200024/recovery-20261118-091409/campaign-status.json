@@ -1,0 +1,9 @@
+{
+  "status": "INCOMPLETE",
+  "current": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-02-r03-a01",
+  "scenario": "EX-02",
+  "repeat": 3,
+  "errors": [
+    "['Serial node_01: connection failed (reader thread died)']"
+  ]
+}

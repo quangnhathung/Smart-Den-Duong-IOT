@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "proof": [
+    {
+      "node_id": "node_03",
+      "at_s": 15,
+      "kind": "motion",
+      "seq": 4226,
+      "motion": "PEDESTRIAN",
+      "target": 70
+    },
+    {
+      "node_id": "node_01",
+      "at_s": 15,
+      "kind": "motion",
+      "seq": 3683,
+      "motion": "PEDESTRIAN",
+      "target": 70
+    },
+    {
+      "node_id": "node_02",
+      "at_s": 15,
+      "kind": "motion",
+      "seq": 5736,
+      "motion": "PEDESTRIAN",
+      "target": 70
+    },
+    {
+      "node_id": "node_03",
+      "at_s": 45,
+      "kind": "motion",
+      "seq": 4331,
+      "motion": "VEHICLE",
+      "target": 100
+    },
+    {
+      "node_id": "node_01",
+      "at_s": 45,
+      "kind": "motion",
+      "seq": 3793,
+      "motion": "VEHICLE",
+      "target": 100
+    },
+    {
+      "node_id": "node_02",
+      "at_s": 45,
+      "kind": "motion",
+      "seq": 5840,
+      "motion": "VEHICLE",
+      "target": 100
+    },
+    {
+      "node_id": "node_01",
+      "kind": "OPEN_LOAD/recovery",
+      "fault_seq": 3822,
+      "clear_seq": 3836
+    },
+    {
+      "node_id": "node_02",
+      "kind": "OPEN_LOAD/recovery",
+      "fault_seq": 5893,
+      "clear_seq": 5944
+    },
+    {
+      "node_id": "node_03",
+      "kind": "OPEN_LOAD/recovery",
+      "fault_seq": 4386,
+      "clear_seq": 4427
+    }
+  ],
+  "errors": [],
+  "raw_event_counts": {
+    "mqtt": 956,
+    "serial": 704,
+    "probes": 168
+  }
+}

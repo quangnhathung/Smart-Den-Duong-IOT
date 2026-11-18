@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-18T10:14:31+07:00",
+  "source_sha256": {
+    "resume-runtime.py": "7c211bcd938d35858fd1bce71b70d683bfdec23eac888f89943eb151914884f7",
+    "finish-pipeline.py": "4f8ce5094e8df8f4744e01eb611ba4748f09f70a38ee0f3c90026aa536e87d1a",
+    "cold-rehearsal.py": "ec35983debcef98a72dd9d46764bb52854fb61c43378674b490ba3c596a72e66",
+    "cleanup-runtime.py": "7222cee1e3463b776e74f34ee52f6b726727e8d1e91f38c0cbd2479a4af33ab4",
+    "qa-video.cjs": "5bd49f89f0f51ff8178290b4f8a80cfe04f4b48a8594f9396fd8c33a991f85f9",
+    "render-office.py": "80fc14d739fe0f1915773c3cf161c763f856cd633def2027cbbd6a6af9196a55"
+  },
+  "scope": "Owned QA only; paths/PIDs/runtime are machine-specific. Do not run blindly on another session."
+}

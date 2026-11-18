@@ -1,0 +1,12 @@
+{
+  "python_ast_files": [
+    "scripts/experiments.py",
+    "scripts/experiment-collector.py",
+    "scripts/experiment_tools/__init__.py",
+    "scripts/experiment_tools/recipes.py",
+    "scripts/experiment_tools/analysis.py",
+    "scripts/experiment_tools/live.py"
+  ],
+  "node_check": "PASS",
+  "purpose": "Static checks only; not live acceptance"
+}

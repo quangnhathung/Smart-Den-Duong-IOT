@@ -561,6 +561,8 @@ So sánh AUTO loại khoảng MANUAL, fault, xác minh/phục hồi fault, hiệ
 
 EX-02 đến EX-05 lặp ba lần cùng lịch tác động. Kịch bản định kỳ dùng một lần kích PIR mỗi 30 giây; EX-03 đặt 150 cm, EX-04 đặt 50 cm. EX-05 ghi trước bảng thao tác theo node và mốc thời gian, tái dùng đúng bảng cho mọi lượt. Các phiên còn lại kiểm tra chức năng và giới hạn.
 
+Quy ước được người dùng chốt khi lập TASK-012 ngày 17/11/2026: thời lượng phiên và lịch PIR ở mục này tính theo uptime mô phỏng riêng của từng node. Ghi UTC/monotonic máy và thời gian thực đạt được riêng; phân tích đúng cửa sổ từng node, không tính thêm đoạn chạy của node nhanh hơn. Quy ước này không thay tiêu chí ổn định30 phút thực của P6/TC-25, công thức năng lượng hoặc cách tính độ phủ.
+
 Mỗi phiên lưu mã phiên bản, cấu hình, nhật ký thao tác, CSV, ảnh, điện năng, baseline, độ phủ và nhận xét. Báo cáo trung bình, khoảng biến thiên giữa các lượt; ghi rõ số mẫu bị loại.
 
 Không đặt trước một tỷ lệ tiết kiệm bắt buộc. Ở tải bình thường, mức 25% lý tưởng cho khoảng tiết kiệm 75% so với nền 100%; chỉ dùng kiểm tra công thức. Các kết quả số chưa được thực nghiệm không được điền như thành tích đã đạt.

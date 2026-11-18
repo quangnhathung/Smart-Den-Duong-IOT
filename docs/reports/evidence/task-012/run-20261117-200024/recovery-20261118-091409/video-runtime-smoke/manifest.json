@@ -1,0 +1,26 @@
+{
+  "playwright-ffmpeg.json": {
+    "bytes": 353,
+    "sha256": "1d9f6295bff14b0bc57a79013d3570f500a3387ef3a7227388f2ed3c51c7289a"
+  },
+  "proof-attempt01-incomplete.json": {
+    "bytes": 1326,
+    "sha256": "ae13ba5c81064caea68f9d412d8214f46ce6e8604232f64f26d0558bca47eb12"
+  },
+  "proof-attempt02-incomplete.json": {
+    "bytes": 506,
+    "sha256": "80f54faf0a6b05963dfef6d2bc89d981a32a23b891dbf281ca0801304da1d2d0"
+  },
+  "proof.json": {
+    "bytes": 2856,
+    "sha256": "c62f2082fbe4941e932b59e3a192fa8a340f9ab6e87f6dc0e254ec746221c10f"
+  },
+  "recorder-after-smoke.cjs": {
+    "bytes": 14556,
+    "sha256": "5616a6f95e657c911089a442128befdd59a081aa48738f87c8d5909a546aa5d8"
+  },
+  "video-smoke.cjs": {
+    "bytes": 2545,
+    "sha256": "b0ca29e2541878a696c545037aec92f63750e348d12ebd9089f55d99e0e2260f"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "desktop": "TASK012-QA",
+  "user_focused_desktop_preserved": "II",
+  "owned_windows": [
+    {
+      "wid": "62914564",
+      "pid": 130598,
+      "node": 1
+    },
+    {
+      "wid": "65011716",
+      "pid": 130604,
+      "node": 2
+    },
+    {
+      "wid": "71303172",
+      "pid": 130605,
+      "node": 3
+    },
+    {
+      "wid": "136314884",
+      "pid": 206569,
+      "app": "dashboard"
+    }
+  ],
+  "reason": "Unexpected PIR/distance changes outside recipe in EX02-r01-a01; exact cause not established. Isolate QA from user desktop input before full retry."
+}

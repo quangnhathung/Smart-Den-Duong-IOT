@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-18T09:14:09+07:00",
+  "current_host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+  "reason": "Previous collector lost all3 RFC2217 connections; no owned QA processes remain. Exact external shutdown cause not established.",
+  "raw_before_resume": {
+    "ui-events.jsonl": {
+      "bytes": 84669,
+      "sha256": "4149b04b3895e4461cb937f6627e7f7b9049d7b5f9b12fb20f97474e889180a7"
+    },
+    "mqtt-events.jsonl": {
+      "bytes": 17867262,
+      "sha256": "815d8506de4b817261d109174e2d81627de4eb8fc57564ba222c31006d45e8d4"
+    },
+    "serial-events.jsonl": {
+      "bytes": 5711008,
+      "sha256": "a0e0a871263cb387f356d4d91c9b7630d9c24439ad48f86847990c938e219dc1"
+    },
+    "probe-events.jsonl": {
+      "bytes": 6220506,
+      "sha256": "9e5254da63a728a3cee7c682d73d06f2cc6521be0dc2fc0acf8348868d312426"
+    },
+    "dashboard-events.jsonl": {
+      "bytes": 7994797,
+      "sha256": "451aafa31a9eb56d11254c5e44f6b49ecbd6de265a11c88384d410aa72a6e9e3"
+    }
+  },
+  "quick_check": [
+    "ok"
+  ],
+  "open_experiments": [],
+  "telemetry_count": 43719
+}

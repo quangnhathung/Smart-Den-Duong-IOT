@@ -1,0 +1,7 @@
+{
+  "purpose": "Cold-start helper revision: isolate owned windows and restore prior user desktop; not yet executed",
+  "files": {
+    "cold-rehearsal.py": "133e33c12b470a73f4d01edb3ee3b629817c6a17d905a2895457060dfbb00a66",
+    "resume-isolate.py": "6a9066c7c43a8b5af8e48a3e7013d3d460959b87d0b0262608d840bb4b157e08"
+  }
+}

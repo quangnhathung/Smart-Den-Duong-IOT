@@ -1,0 +1,7 @@
+{
+  "path": "/home/quangnhathung/.cache/ms-playwright/ffmpeg-1013/ffmpeg-linux",
+  "bytes": 5270472,
+  "sha256": "e829f7f8c497178109f4a388247b778a86637bf075d7bba5834c797a9d61a269",
+  "version": "ffmpeg version n7.0.1-playwright-build-1013 Copyright (c) 2000-2024 the FFmpeg developers",
+  "source": "Playwright official CLI install ffmpeg, build1013"
+}

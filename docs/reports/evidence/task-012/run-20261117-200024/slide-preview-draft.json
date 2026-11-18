@@ -1,0 +1,104 @@
+{
+  "owned_pid": 314576,
+  "start_ticks": "1307750",
+  "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/Bao-ve-Den-duong-thong-minh-Nhom7.pptx",
+  "sha256": "e771f9c60948b1f31d0057260a2bdd2db0204ca2559f484f5df3ca7578b4dcc8",
+  "status": "EXPORTED_IMAGES",
+  "slides": [
+    {
+      "slide": 1,
+      "hr": 0,
+      "exists": true,
+      "bytes": 144545
+    },
+    {
+      "slide": 2,
+      "hr": 0,
+      "exists": true,
+      "bytes": 190219
+    },
+    {
+      "slide": 3,
+      "hr": 0,
+      "exists": true,
+      "bytes": 177854
+    },
+    {
+      "slide": 4,
+      "hr": 0,
+      "exists": true,
+      "bytes": 194966
+    },
+    {
+      "slide": 5,
+      "hr": 0,
+      "exists": true,
+      "bytes": 177862
+    },
+    {
+      "slide": 6,
+      "hr": 0,
+      "exists": true,
+      "bytes": 152369
+    },
+    {
+      "slide": 7,
+      "hr": 0,
+      "exists": true,
+      "bytes": 301937
+    },
+    {
+      "slide": 8,
+      "hr": 0,
+      "exists": true,
+      "bytes": 187770
+    },
+    {
+      "slide": 9,
+      "hr": 0,
+      "exists": true,
+      "bytes": 152221
+    },
+    {
+      "slide": 10,
+      "hr": 0,
+      "exists": true,
+      "bytes": 178548
+    },
+    {
+      "slide": 11,
+      "hr": 0,
+      "exists": true,
+      "bytes": 194322
+    },
+    {
+      "slide": 12,
+      "hr": 0,
+      "exists": true,
+      "bytes": 184903
+    }
+  ],
+  "count": 12,
+  "source_unchanged": true,
+  "quit_requested": true,
+  "visual_qa": {
+    "inspected_slides": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "findings": [
+      "Slide9 right-side text overflow; generator corrected, rerender required."
+    ],
+    "is_final": false
+  }
+}

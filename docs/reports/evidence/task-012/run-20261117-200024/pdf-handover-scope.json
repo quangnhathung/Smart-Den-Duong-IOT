@@ -1,0 +1,6 @@
+{
+  "updated_at": "2026-11-17T21:52:03+07:00",
+  "user_instruction": "word cho tôi tôi pdf để tôi tự làm",
+  "decision": "Deliver DOCX/PPTX; user exports PDF in WPS. Automated PDF export removed from acceptance.",
+  "pdf_export_status": "Not delivered by agent; previous RPC failures retained as evidence."
+}

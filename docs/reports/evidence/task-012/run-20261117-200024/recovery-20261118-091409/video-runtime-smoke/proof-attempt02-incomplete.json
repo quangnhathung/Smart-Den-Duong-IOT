@@ -1,0 +1,6 @@
+{
+  "status": "INCOMPLETE",
+  "purpose": "Real3-second runtime smoke only; not the final6–8minute video",
+  "at": "2026-11-18T03:37:07.314Z",
+  "error": "Error: Path is not available when connecting remotely. Use saveAs() to save a local copy.\n    at Video.path (/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright-core/lib/coreBundle.js:63278:17)\n    at /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-smoke.cjs:1:1003"
+}

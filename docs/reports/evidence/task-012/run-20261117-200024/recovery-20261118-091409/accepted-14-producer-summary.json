@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-18T14:13:10+07:00",
+  "accepted_main_runs": 14,
+  "independent_audit": "Pending final15-run audit; this file summarizes producer PASS only",
+  "latest": [
+    {
+      "attempt": "EX-05-r01-a02",
+      "status": "PASS",
+      "actions": 52,
+      "max_physical_lateness_ms": 621,
+      "durations_ms": {
+        "node_01": 901191,
+        "node_02": 900029,
+        "node_03": 900407
+      }
+    },
+    {
+      "attempt": "EX-05-r02-a01",
+      "status": "PASS",
+      "actions": 52,
+      "max_physical_lateness_ms": 649,
+      "durations_ms": {
+        "node_01": 900570,
+        "node_02": 900001,
+        "node_03": 900155
+      }
+    },
+    {
+      "attempt": "EX-05-r03-a01",
+      "status": "PASS",
+      "actions": 52,
+      "max_physical_lateness_ms": 845,
+      "durations_ms": {
+        "node_01": 900282,
+        "node_02": 900011,
+        "node_03": 900200
+      }
+    },
+    {
+      "attempt": "EX-06-r01-a01",
+      "status": "PASS",
+      "actions": 2,
+      "max_physical_lateness_ms": 431,
+      "durations_ms": {
+        "node_01": 300015,
+        "node_02": 300338,
+        "node_03": 300210
+      }
+    }
+  ]
+}

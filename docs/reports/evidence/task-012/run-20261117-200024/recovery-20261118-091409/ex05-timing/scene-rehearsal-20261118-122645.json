@@ -1,0 +1,7 @@
+{
+  "status": "INCOMPLETE",
+  "purpose": "QA scene latency rehearsal outside formal experiment windows; never a formal accepted run",
+  "rounds": [],
+  "ui_sha256": "fa84fde5be202aeb3d6b87ee93b0377d47aa96f88f7d7d03456d9d9a188eafab",
+  "error": "TypeError(\"string indices must be integers, not 'str'\")"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "STOPPED_ON_ERROR",
+  "started_at": "2026-11-18T10:14:30+07:00",
+  "steps": [],
+  "campaign": {
+    "status": "RUNNING",
+    "current": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-05-r01-a01",
+    "scenario": "EX-05",
+    "repeat": 1,
+    "elapsed_node_s": {
+      "node_01": 601.4307216147789,
+      "node_02": 440.6310160967465,
+      "node_03": 451.0477650414817
+    },
+    "completed_nodes": [],
+    "pending_actions": 24
+  },
+  "heartbeat_at": "2026-11-18T12:02:51+07:00",
+  "error": "RuntimeError('Campaign stopped; preserve failed attempt and inspect before retrying')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/finish-pipeline.py\", line 17, in <module>\n    if campaign['status'] in ['FAIL','INCOMPLETE']:raise RuntimeError('Campaign stopped; preserve failed attempt and inspect before retrying')\n                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Campaign stopped; preserve failed attempt and inspect before retrying\n"
+}

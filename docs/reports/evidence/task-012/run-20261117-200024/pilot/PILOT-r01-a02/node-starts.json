@@ -1,0 +1,35 @@
+{
+  "node_01": {
+    "id": 11857,
+    "node_id": "node_01",
+    "boot_id": "16634a4e",
+    "seq": "3107",
+    "uptime_ms": "2147867",
+    "received_at": 1794923434.9159787,
+    "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"16634a4e\", \"seq\": 3107, \"uptime_ms\": 2147867, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 4063, \"motion\": \"NONE\", \"distance_cm\": 152.1207, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+    "quality": "ACCEPTED",
+    "continuity": "9f8dfd60-b726-4d3b-bffe-cb4e6a9bd3d5/7db0ba6c-9f8c-40df-92da-daa537471855/2/0"
+  },
+  "node_02": {
+    "id": 11851,
+    "node_id": "node_02",
+    "boot_id": "3a8b19bd",
+    "seq": "5051",
+    "uptime_ms": "2121888",
+    "received_at": 1794923433.2312107,
+    "payload": "{\"schema_version\": 1, \"node_id\": \"node_02\", \"boot_id\": \"3a8b19bd\", \"seq\": 5051, \"uptime_ms\": 2121888, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 4063, \"motion\": \"NONE\", \"distance_cm\": 152.4483, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+    "quality": "ACCEPTED",
+    "continuity": "9f8dfd60-b726-4d3b-bffe-cb4e6a9bd3d5/7db0ba6c-9f8c-40df-92da-daa537471855/2/0"
+  },
+  "node_03": {
+    "id": 11852,
+    "node_id": "node_03",
+    "boot_id": "44dabee8",
+    "seq": "3692",
+    "uptime_ms": "2140873",
+    "received_at": 1794923433.6615736,
+    "payload": "{\"schema_version\": 1, \"node_id\": \"node_03\", \"boot_id\": \"44dabee8\", \"seq\": 3692, \"uptime_ms\": 2140873, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 4063, \"motion\": \"NONE\", \"distance_cm\": 152.1207, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+    "quality": "ACCEPTED",
+    "continuity": "9f8dfd60-b726-4d3b-bffe-cb4e6a9bd3d5/7db0ba6c-9f8c-40df-92da-daa537471855/2/0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-18T09:39:04+07:00",
+  "python_tests": 34,
+  "status": "PASS",
+  "actual_audit": "analysis-integrity-snapshot.json:3 prior PASS attempts match raw JSON, SQL, API, CSV",
+  "negative_fixture_cases": [
+    "missing row",
+    "changed power with unchanged energy columns",
+    "nonfinite CSV energy"
+  ],
+  "first_boundary": "Ignore energy of first selected CSV row, retain full payload comparison"
+}

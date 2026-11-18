@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-18T11:53:45.014148+07:00",
+  "host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+  "processes": {
+    "ALL": {
+      "pid": 33743,
+      "start_ticks": "99377",
+      "same_current_process": true,
+      "same_host_boot": true
+    },
+    "collector": {
+      "pid": 18316,
+      "start_ticks": "42803",
+      "same_current_process": true,
+      "same_host_boot": true
+    },
+    "handover-pipeline": {
+      "pid": 141902,
+      "start_ticks": "389894",
+      "same_current_process": true,
+      "same_host_boot": true
+    }
+  }
+}

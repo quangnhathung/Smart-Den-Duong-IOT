@@ -1,0 +1,6 @@
+{
+  "status": "INCOMPLETE",
+  "purpose": "Real3-second runtime smoke only; not the final6–8minute video",
+  "at": "2026-11-18T03:28:57.522Z",
+  "error": "browserContext.newPage: Executable doesn't exist at /home/quangnhathung/.cache/ms-playwright/ffmpeg-1013/ffmpeg-linux\n╔═════════════════════════════════════════════════════════════════╗\n║ Video rendering requires ffmpeg binary.                         ║\n║ Downloading it will not affect any of the system-wide settings. ║\n║ Please run the following command:                               ║\n║                                                                 ║\n║     npx playwright install ffmpeg                               ║\n║                                                                 ║\n║ <3 Playwright Team                                              ║\n╚═════════════════════════════════════════════════════════════════╝\n    at /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-smoke.cjs:1:812"
+}

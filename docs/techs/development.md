@@ -61,6 +61,7 @@ Tạo `docs/techs/<danh-muc>.md` khi có nội dung, tên tiếng Anh dạng `ke
 | `mqtt` | [Hợp đồng MQTT v1](mqtt.md): topic, schema, ACK, deadline, chống trùng và reconnect |
 | `simulation` | [Chạy Wokwi và hướng dẫn A3](simulation.md) |
 | `testing` | [Host checks và ma trận live P1–A3](testing.md) |
+| `experiments` | [Công cụ, clock, recipe và bàn giao TASK-012](experiments.md) |
 
 Chưa tạo sẵn các trang trống. Task chạm nhiều danh mục phải cập nhật các trang chịu ảnh hưởng; nếu kiểm tra không dẫn đến thay đổi kỹ thuật, ghi kết quả ở báo cáo và lý do không cần sửa techs. Không biến thiết kế dự kiến thành mô tả triển khai thực tế.
 

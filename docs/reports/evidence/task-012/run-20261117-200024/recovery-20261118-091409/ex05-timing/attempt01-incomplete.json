@@ -1,0 +1,1332 @@
+{
+  "status": "INCOMPLETE",
+  "scenario": "EX-05",
+  "repeat": 1,
+  "attempt": 1,
+  "configuration": {
+    "source": "Wokwi live",
+    "scenario": "EX-05",
+    "repeat": 1,
+    "duration_node_s": 900,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": false,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "DAY",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_01",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "TWILIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_02",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 295,
+        "node_id": "node_03",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_01",
+        "kind": "scene",
+        "value": {
+          "environment": "TWILIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_02",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 300,
+        "node_id": "node_03",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 315,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 345,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 375,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 405,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 435,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 465,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 495,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 525,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 555,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 585,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_01",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_02",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "DAY",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 595,
+        "node_id": "node_03",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_01",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_02",
+        "kind": "scene",
+        "value": {
+          "environment": "DAY",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 600,
+        "node_id": "node_03",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      {
+        "at_s": 615,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 645,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 675,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 705,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 735,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 765,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 795,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 825,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 855,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 885,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      }
+    ]
+  },
+  "errors": [
+    "Action late beyond2s upper bound: Action(at_s=600, node_id='node_01', kind='scene', value={'environment': 'NIGHT', 'distance': 50}) 2257ms"
+  ],
+  "actions": [
+    {
+      "recipe": {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977239270.4446,
+      "finished_host_ms": 1794977240061.3884,
+      "before_clock": {
+        "uptime_ms": 4617845,
+        "host_ms": 1794977238362.6648,
+        "monotonic_ns": 9466390904421,
+        "line": "SENSORS uptime_ms=4617845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 4617845,
+        "host_ms": 1794977238362.6648,
+        "monotonic_ns": 9466390904421,
+        "line": "SENSORS uptime_ms=4617845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977240060
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4618741,
+        "host_ms": 1794977240163.6929
+      },
+      "lateness_upper_node_ms": 470
+    },
+    {
+      "recipe": {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977303570.6191,
+      "finished_host_ms": 1794977304649.6782,
+      "before_clock": {
+        "uptime_ms": 4647845,
+        "host_ms": 1794977302616.3105,
+        "monotonic_ns": 9530644550289,
+        "line": "SENSORS uptime_ms=4647845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 4647845,
+        "host_ms": 1794977302616.3105,
+        "monotonic_ns": 9530644550289,
+        "line": "SENSORS uptime_ms=4647845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977304647
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4648801,
+        "host_ms": 1794977304719.5178
+      },
+      "lateness_upper_node_ms": 530
+    },
+    {
+      "recipe": {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977365100.437,
+      "finished_host_ms": 1794977365947.1555,
+      "before_clock": {
+        "uptime_ms": 4677845,
+        "host_ms": 1794977364164.4783,
+        "monotonic_ns": 9592192718186,
+        "line": "SENSORS uptime_ms=4677845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 4677845,
+        "host_ms": 1794977364164.4783,
+        "monotonic_ns": 9592192718186,
+        "line": "SENSORS uptime_ms=4677845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977365946
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4678841,
+        "host_ms": 1794977365965.3496
+      },
+      "lateness_upper_node_ms": 570
+    },
+    {
+      "recipe": {
+        "at_s": 105,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977423278.1914,
+      "finished_host_ms": 1794977424113.6626,
+      "before_clock": {
+        "uptime_ms": 4707845,
+        "host_ms": 1794977422405.537,
+        "monotonic_ns": 9650433776832,
+        "line": "SENSORS uptime_ms=4707845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 4707845,
+        "host_ms": 1794977422405.537,
+        "monotonic_ns": 9650433776832,
+        "line": "SENSORS uptime_ms=4707845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977424113
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4708802,
+        "host_ms": 1794977424206.4211
+      },
+      "lateness_upper_node_ms": 531
+    },
+    {
+      "recipe": {
+        "at_s": 135,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977483967.0457,
+      "finished_host_ms": 1794977484798.09,
+      "before_clock": {
+        "uptime_ms": 4737845,
+        "host_ms": 1794977483062.0151,
+        "monotonic_ns": 9711090254474,
+        "line": "SENSORS uptime_ms=4737845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.50"
+      },
+      "after_clock": {
+        "uptime_ms": 4737845,
+        "host_ms": 1794977483062.0151,
+        "monotonic_ns": 9711090254474,
+        "line": "SENSORS uptime_ms=4737845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.50"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977484796
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4738762,
+        "host_ms": 1794977484862.9348
+      },
+      "lateness_upper_node_ms": 491
+    },
+    {
+      "recipe": {
+        "at_s": 295,
+        "node_id": "node_01",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "TWILIGHT",
+          "distance": 150
+        }
+      },
+      "started_host_ms": 1794977507548.0571,
+      "finished_host_ms": 1794977508059.8687,
+      "before_clock": {
+        "uptime_ms": 5326844,
+        "host_ms": 1794977506662.2676,
+        "monotonic_ns": 9734690507446,
+        "line": "SENSORS uptime_ms=5326844 ldr_adc=32 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.12"
+      },
+      "after_clock": {
+        "uptime_ms": 5327844,
+        "host_ms": 1794977507862.9385,
+        "monotonic_ns": 9735891178021,
+        "line": "SENSORS uptime_ms=5327844 ldr_adc=32 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.17"
+      },
+      "result": {
+        "prepared": true,
+        "no_sensor_change": true
+      },
+      "physical_confirmation": null,
+      "lateness_upper_node_ms": 1159
+    },
+    {
+      "recipe": {
+        "at_s": 300,
+        "node_id": "node_01",
+        "kind": "scene",
+        "value": {
+          "environment": "TWILIGHT",
+          "distance": 150
+        }
+      },
+      "started_host_ms": 1794977512640.044,
+      "finished_host_ms": 1794977513218.4321,
+      "before_clock": {
+        "uptime_ms": 5331844,
+        "host_ms": 1794977511768.7546,
+        "monotonic_ns": 9739796994389,
+        "line": "SENSORS uptime_ms=5331844 ldr_adc=32 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.17"
+      },
+      "after_clock": {
+        "uptime_ms": 5332844,
+        "host_ms": 1794977512969.6453,
+        "monotonic_ns": 9740997885094,
+        "line": "SENSORS uptime_ms=5332844 ldr_adc=32 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.17"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "lux",
+            "value": 100,
+            "host_ms": 1794977513217
+          }
+        ]
+      },
+      "physical_confirmation": {
+        "source": "raw MQTT sensor sample",
+        "uptime_ms": 5333485,
+        "seq": 13219,
+        "host_ms": 1794977513329.5056
+      },
+      "lateness_upper_node_ms": 800
+    },
+    {
+      "recipe": {
+        "at_s": 165,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977546135.8298,
+      "finished_host_ms": 1794977547014.3098,
+      "before_clock": {
+        "uptime_ms": 4767845,
+        "host_ms": 1794977545216.66,
+        "monotonic_ns": 9773244900446,
+        "line": "SENSORS uptime_ms=4767845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.50"
+      },
+      "after_clock": {
+        "uptime_ms": 4767845,
+        "host_ms": 1794977545216.66,
+        "monotonic_ns": 9773244900446,
+        "line": "SENSORS uptime_ms=4767845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.50"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977547013
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4768902,
+        "host_ms": 1794977547017.9043
+      },
+      "lateness_upper_node_ms": 631
+    },
+    {
+      "recipe": {
+        "at_s": 195,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977604333.368,
+      "finished_host_ms": 1794977605008.9094,
+      "before_clock": {
+        "uptime_ms": 4797845,
+        "host_ms": 1794977603461.1218,
+        "monotonic_ns": 9831489361549,
+        "line": "SENSORS uptime_ms=4797845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 4797845,
+        "host_ms": 1794977603461.1218,
+        "monotonic_ns": 9831489361549,
+        "line": "SENSORS uptime_ms=4797845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977605008
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4798762,
+        "host_ms": 1794977605262.8425
+      },
+      "lateness_upper_node_ms": 491
+    },
+    {
+      "recipe": {
+        "at_s": 225,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977711710.56,
+      "finished_host_ms": 1794977712957.3755,
+      "before_clock": {
+        "uptime_ms": 4827845,
+        "host_ms": 1794977709995.246,
+        "monotonic_ns": 9938023486036,
+        "line": "SENSORS uptime_ms=4827845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.28"
+      },
+      "after_clock": {
+        "uptime_ms": 4828845,
+        "host_ms": 1794977712699.3953,
+        "monotonic_ns": 9940727634991,
+        "line": "SENSORS uptime_ms=4828845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.28"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977712956
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4829042,
+        "host_ms": 1794977712999.5894
+      },
+      "lateness_upper_node_ms": 771
+    },
+    {
+      "recipe": {
+        "at_s": 255,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977774671.2473,
+      "finished_host_ms": 1794977775569.6775,
+      "before_clock": {
+        "uptime_ms": 4857845,
+        "host_ms": 1794977773656.9265,
+        "monotonic_ns": 10001685166405,
+        "line": "SENSORS uptime_ms=4857845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 4857845,
+        "host_ms": 1794977773656.9265,
+        "monotonic_ns": 10001685166405,
+        "line": "SENSORS uptime_ms=4857845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977775569
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4858642,
+        "host_ms": 1794977775761.5442
+      },
+      "lateness_upper_node_ms": 371
+    },
+    {
+      "recipe": {
+        "at_s": 285,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977842811.086,
+      "finished_host_ms": 1794977843633.0754,
+      "before_clock": {
+        "uptime_ms": 4887845,
+        "host_ms": 1794977841832.396,
+        "monotonic_ns": 10069860635664,
+        "line": "SENSORS uptime_ms=4887845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.12"
+      },
+      "after_clock": {
+        "uptime_ms": 4888842,
+        "host_ms": 1794977843633.3733,
+        "monotonic_ns": 10071661613626,
+        "line": "PIR uptime_ms=4888842 motion=1"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977843632
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4888842,
+        "host_ms": 1794977843633.3733
+      },
+      "lateness_upper_node_ms": 571
+    },
+    {
+      "recipe": {
+        "at_s": 295,
+        "node_id": "node_02",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      "started_host_ms": 1794977859217.2886,
+      "finished_host_ms": 1794977859218.8252,
+      "before_clock": {
+        "uptime_ms": 4981845,
+        "host_ms": 1794977857897.3877,
+        "monotonic_ns": 10085925627992,
+        "line": "SENSORS uptime_ms=4981845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.50"
+      },
+      "after_clock": {
+        "uptime_ms": 4981845,
+        "host_ms": 1794977857897.3877,
+        "monotonic_ns": 10085925627992,
+        "line": "SENSORS uptime_ms=4981845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.50"
+      },
+      "result": {
+        "prepared": true,
+        "no_sensor_change": true
+      },
+      "physical_confirmation": null,
+      "lateness_upper_node_ms": 363
+    },
+    {
+      "recipe": {
+        "at_s": 295,
+        "node_id": "node_03",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      "started_host_ms": 1794977863501.6128,
+      "finished_host_ms": 1794977865376.0454,
+      "before_clock": {
+        "uptime_ms": 4897845,
+        "host_ms": 1794977862548.4697,
+        "monotonic_ns": 10090576710101,
+        "line": "SENSORS uptime_ms=4897845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 4898845,
+        "host_ms": 1794977864349.6685,
+        "monotonic_ns": 10092377908820,
+        "line": "SENSORS uptime_ms=4898845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.50"
+      },
+      "result": {
+        "prepared": true,
+        "no_sensor_change": true
+      },
+      "physical_confirmation": null,
+      "lateness_upper_node_ms": 1574
+    },
+    {
+      "recipe": {
+        "at_s": 300,
+        "node_id": "node_02",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 150
+        }
+      },
+      "started_host_ms": 1794977869079.0825,
+      "finished_host_ms": 1794977869080.1724,
+      "before_clock": {
+        "uptime_ms": 4986861,
+        "host_ms": 1794977867805.134,
+        "monotonic_ns": 10095833373771,
+        "line": "uptime_ms=4986861 HEARTBEAT published=1 state=0"
+      },
+      "after_clock": {
+        "uptime_ms": 4986861,
+        "host_ms": 1794977867805.134,
+        "monotonic_ns": 10095833373771,
+        "line": "uptime_ms=4986861 HEARTBEAT published=1 state=0"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": []
+      },
+      "physical_confirmation": {
+        "source": "No input change; desired value already set",
+        "uptime_ms": 4986861,
+        "not_applicable": true
+      },
+      "lateness_upper_node_ms": 0
+    },
+    {
+      "recipe": {
+        "at_s": 300,
+        "node_id": "node_03",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      "started_host_ms": 1794977874979.195,
+      "finished_host_ms": 1794977877139.8093,
+      "before_clock": {
+        "uptime_ms": 4902845,
+        "host_ms": 1794977873961.957,
+        "monotonic_ns": 10101990197374,
+        "line": "SENSORS uptime_ms=4902845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 4903845,
+        "host_ms": 1794977876365.0198,
+        "monotonic_ns": 10104393259552,
+        "line": "SENSORS uptime_ms=4903845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "distance",
+            "value": 50,
+            "host_ms": 1794977877139
+          }
+        ]
+      },
+      "physical_confirmation": {
+        "source": "raw MQTT sensor sample",
+        "uptime_ms": 4904278,
+        "seq": 16621,
+        "host_ms": 1794977877380.4797
+      },
+      "lateness_upper_node_ms": 1007
+    },
+    {
+      "recipe": {
+        "at_s": 315,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977903757.7148,
+      "finished_host_ms": 1794977904534.3245,
+      "before_clock": {
+        "uptime_ms": 5001845,
+        "host_ms": 1794977902333.4875,
+        "monotonic_ns": 10130361727201,
+        "line": "SENSORS uptime_ms=5001845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 5002861,
+        "host_ms": 1794977904434.8044,
+        "monotonic_ns": 10132463044384,
+        "line": "uptime_ms=5002861 HEARTBEAT published=1 state=0"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977904533
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 5003041,
+        "host_ms": 1794977904734.996
+      },
+      "lateness_upper_node_ms": 559
+    },
+    {
+      "recipe": {
+        "at_s": 315,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977907908.4412,
+      "finished_host_ms": 1794977908701.9077,
+      "before_clock": {
+        "uptime_ms": 4917845,
+        "host_ms": 1794977906989.4023,
+        "monotonic_ns": 10135017641918,
+        "line": "SENSORS uptime_ms=4917845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+      },
+      "after_clock": {
+        "uptime_ms": 4917845,
+        "host_ms": 1794977906989.4023,
+        "monotonic_ns": 10135017641918,
+        "line": "SENSORS uptime_ms=4917845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977908701
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4918762,
+        "host_ms": 1794977908791.2917
+      },
+      "lateness_upper_node_ms": 491
+    },
+    {
+      "recipe": {
+        "at_s": 345,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977970842.4233,
+      "finished_host_ms": 1794977971729.1921,
+      "before_clock": {
+        "uptime_ms": 4947845,
+        "host_ms": 1794977969770.8079,
+        "monotonic_ns": 10197799047247,
+        "line": "SENSORS uptime_ms=4947845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+      },
+      "after_clock": {
+        "uptime_ms": 4947845,
+        "host_ms": 1794977969770.8079,
+        "monotonic_ns": 10197799047247,
+        "line": "SENSORS uptime_ms=4947845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977971728
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4948822,
+        "host_ms": 1794977971873.1162
+      },
+      "lateness_upper_node_ms": 551
+    },
+    {
+      "recipe": {
+        "at_s": 345,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794977971683.4998,
+      "finished_host_ms": 1794977972815.5173,
+      "before_clock": {
+        "uptime_ms": 5031845,
+        "host_ms": 1794977970207.4243,
+        "monotonic_ns": 10198235663780,
+        "line": "SENSORS uptime_ms=5031845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.50"
+      },
+      "after_clock": {
+        "uptime_ms": 5032845,
+        "host_ms": 1794977972608.7961,
+        "monotonic_ns": 10200637036529,
+        "line": "SENSORS uptime_ms=5032845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794977972814
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 5033001,
+        "host_ms": 1794977972909.1174
+      },
+      "lateness_upper_node_ms": 519
+    },
+    {
+      "recipe": {
+        "at_s": 375,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794978025923.1426,
+      "finished_host_ms": 1794978026760.8835,
+      "before_clock": {
+        "uptime_ms": 4977845,
+        "host_ms": 1794978025018.0015,
+        "monotonic_ns": 10253046241326,
+        "line": "SENSORS uptime_ms=4977845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+      },
+      "after_clock": {
+        "uptime_ms": 4977845,
+        "host_ms": 1794978025018.0015,
+        "monotonic_ns": 10253046241326,
+        "line": "SENSORS uptime_ms=4977845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794978026760
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 4978802,
+        "host_ms": 1794978026819.8523
+      },
+      "lateness_upper_node_ms": 531
+    },
+    {
+      "recipe": {
+        "at_s": 375,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794978032862.7234,
+      "finished_host_ms": 1794978033633.3018,
+      "before_clock": {
+        "uptime_ms": 5061845,
+        "host_ms": 1794978031457.7673,
+        "monotonic_ns": 10259486007793,
+        "line": "SENSORS uptime_ms=5061845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 5063013,
+        "host_ms": 1794978033559.679,
+        "monotonic_ns": 10261587919404,
+        "line": "uptime_ms=5063013 HEARTBEAT published=1 state=0"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794978033632
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 5063081,
+        "host_ms": 1794978033859.9438
+      },
+      "lateness_upper_node_ms": 599
+    },
+    {
+      "recipe": {
+        "at_s": 405,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794978082121.5994,
+      "finished_host_ms": 1794978082919.5083,
+      "before_clock": {
+        "uptime_ms": 5007845,
+        "host_ms": 1794978081164.6116,
+        "monotonic_ns": 10309192851428,
+        "line": "SENSORS uptime_ms=5007845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=51.09"
+      },
+      "after_clock": {
+        "uptime_ms": 5007845,
+        "host_ms": 1794978081164.6116,
+        "monotonic_ns": 10309192851428,
+        "line": "SENSORS uptime_ms=5007845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=51.09"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794978082919
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 5008782,
+        "host_ms": 1794978082966.0037
+      },
+      "lateness_upper_node_ms": 511
+    },
+    {
+      "recipe": {
+        "at_s": 405,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794978093434.5017,
+      "finished_host_ms": 1794978094170.1213,
+      "before_clock": {
+        "uptime_ms": 5091845,
+        "host_ms": 1794978092108.1519,
+        "monotonic_ns": 10320136392289,
+        "line": "SENSORS uptime_ms=5091845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 5091845,
+        "host_ms": 1794978092108.1519,
+        "monotonic_ns": 10320136392289,
+        "line": "SENSORS uptime_ms=5091845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794978094169
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 5092942,
+        "host_ms": 1794978094209.311
+      },
+      "lateness_upper_node_ms": 460
+    },
+    {
+      "recipe": {
+        "at_s": 435,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794978141571.5842,
+      "finished_host_ms": 1794978142321.592,
+      "before_clock": {
+        "uptime_ms": 5037845,
+        "host_ms": 1794978140331.6414,
+        "monotonic_ns": 10368359880837,
+        "line": "SENSORS uptime_ms=5037845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=51.09"
+      },
+      "after_clock": {
+        "uptime_ms": 5037845,
+        "host_ms": 1794978140331.6414,
+        "monotonic_ns": 10368359880837,
+        "line": "SENSORS uptime_ms=5037845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=51.09"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794978142321
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 5038922,
+        "host_ms": 1794978142432.8618
+      },
+      "lateness_upper_node_ms": 651
+    },
+    {
+      "recipe": {
+        "at_s": 595,
+        "node_id": "node_01",
+        "kind": "prepare-scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      "started_host_ms": 1794978155414.6697,
+      "finished_host_ms": 1794978157382.5066,
+      "before_clock": {
+        "uptime_ms": 5627162,
+        "host_ms": 1794978154283.4817,
+        "monotonic_ns": 10382311722938,
+        "line": "uptime_ms=5627162 HEARTBEAT published=1 state=0"
+      },
+      "after_clock": {
+        "uptime_ms": 5627844,
+        "host_ms": 1794978155784.51,
+        "monotonic_ns": 10383812749460,
+        "line": "SENSORS uptime_ms=5627844 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=151.78"
+      },
+      "result": {
+        "prepared": true,
+        "no_sensor_change": true
+      },
+      "physical_confirmation": null,
+      "lateness_upper_node_ms": 1159
+    },
+    {
+      "recipe": {
+        "at_s": 435,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794978156824.032,
+      "finished_host_ms": 1794978157586.8274,
+      "before_clock": {
+        "uptime_ms": 5121845,
+        "host_ms": 1794978155473.0479,
+        "monotonic_ns": 10383501287818,
+        "line": "SENSORS uptime_ms=5121845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 5121845,
+        "host_ms": 1794978155473.0479,
+        "monotonic_ns": 10383501287818,
+        "line": "SENSORS uptime_ms=5121845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794978157585
+      },
+      "physical_confirmation": {
+        "source": "raw Serial PIR edge",
+        "uptime_ms": 5122842,
+        "host_ms": 1794978157875.7112
+      },
+      "lateness_upper_node_ms": 360
+    },
+    {
+      "recipe": {
+        "at_s": 600,
+        "node_id": "node_01",
+        "kind": "scene",
+        "value": {
+          "environment": "NIGHT",
+          "distance": 50
+        }
+      },
+      "started_host_ms": 1794978166673.5051,
+      "finished_host_ms": 1794978170465.4067,
+      "before_clock": {
+        "uptime_ms": 5632844,
+        "host_ms": 1794978166592.909,
+        "monotonic_ns": 10394621148775,
+        "line": "SENSORS uptime_ms=5632844 ldr_adc=2045 pir=0 current_adc=4095 distance_valid=1 distance_cm=151.78"
+      },
+      "after_clock": {
+        "uptime_ms": 5633844,
+        "host_ms": 1794978168696.783,
+        "monotonic_ns": 10396725023115,
+        "line": "SENSORS uptime_ms=5633844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=151.78"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "lux",
+            "value": 0.1,
+            "host_ms": 1794978167045
+          },
+          {
+            "kind": "distance",
+            "value": 50,
+            "host_ms": 1794978170464
+          }
+        ]
+      },
+      "physical_confirmation": {
+        "source": "raw MQTT sensor sample",
+        "uptime_ms": 5634942,
+        "seq": 14164,
+        "host_ms": 1794978170750.3708
+      },
+      "lateness_upper_node_ms": 2257
+    }
+  ],
+  "windows": {},
+  "started_host_ms": 1794977198542.7544,
+  "host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+  "experiment_id": 16,
+  "start_monotonic_ns": 9435922164420,
+  "boots": {
+    "node_01": "826d7697",
+    "node_02": "d255dbbb",
+    "node_03": "99a37fb4"
+  },
+  "origin_uptime_ms": {
+    "node_01": 5032685,
+    "node_02": 4687482,
+    "node_03": 4603271
+  },
+  "exception_traceback": "Traceback (most recent call last):\n  File \"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/scripts/experiment_tools/live.py\", line 318, in collect_attempt\n    raise RuntimeError(f\"Action late beyond2s upper bound: {event} {row['lateness_upper_node_ms']}ms\")\nRuntimeError: Action late beyond2s upper bound: Action(at_s=600, node_id='node_01', kind='scene', value={'environment': 'NIGHT', 'distance': 50}) 2257ms\n"
+}

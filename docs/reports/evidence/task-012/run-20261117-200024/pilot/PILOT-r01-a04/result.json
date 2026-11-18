@@ -1,0 +1,775 @@
+{
+  "status": "PASS",
+  "scenario": "PILOT",
+  "repeat": 1,
+  "attempt": 4,
+  "configuration": {
+    "source": "Wokwi live",
+    "scenario": "PILOT",
+    "repeat": 1,
+    "duration_node_s": 90,
+    "clock_basis": "per_node_uptime",
+    "energy_clock": "node_uptime",
+    "coverage_clock": "receiver_utc",
+    "action_max_lateness_node_ms": 2000,
+    "pilot": true,
+    "initial_scenes": {
+      "node_01": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_02": {
+        "environment": "NIGHT",
+        "distance": 150
+      },
+      "node_03": {
+        "environment": "NIGHT",
+        "distance": 150
+      }
+    },
+    "actions": [
+      {
+        "at_s": 15,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 35,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 35,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 35,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      {
+        "at_s": 40,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 40,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 40,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 50
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      {
+        "at_s": 60,
+        "node_id": "node_01",
+        "kind": "current",
+        "value": 0
+      },
+      {
+        "at_s": 60,
+        "node_id": "node_02",
+        "kind": "current",
+        "value": 0
+      },
+      {
+        "at_s": 60,
+        "node_id": "node_03",
+        "kind": "current",
+        "value": 0
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_01",
+        "kind": "current",
+        "value": 1023
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_02",
+        "kind": "current",
+        "value": 1023
+      },
+      {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "current",
+        "value": 1023
+      }
+    ]
+  },
+  "errors": [],
+  "actions": [
+    {
+      "recipe": {
+        "at_s": 15,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794923856148.9817,
+      "finished_host_ms": 1794923856904.7356,
+      "before_clock": {
+        "uptime_ms": 2342845,
+        "host_ms": 1794923854492.5728,
+        "monotonic_ns": 8704056738055,
+        "line": "SENSORS uptime_ms=2342845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.17"
+      },
+      "after_clock": {
+        "uptime_ms": 2343845,
+        "host_ms": 1794923856293.573,
+        "monotonic_ns": 8705857737798,
+        "line": "SENSORS uptime_ms=2343845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.17"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794923856903
+      },
+      "lateness_upper_node_ms": 1164
+    },
+    {
+      "recipe": {
+        "at_s": 15,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794923856354.5225,
+      "finished_host_ms": 1794923857161.5244,
+      "before_clock": {
+        "uptime_ms": 2346844,
+        "host_ms": 1794923856285.2075,
+        "monotonic_ns": 8705849372856,
+        "line": "SENSORS uptime_ms=2346844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=151.78"
+      },
+      "after_clock": {
+        "uptime_ms": 2346844,
+        "host_ms": 1794923856285.2075,
+        "monotonic_ns": 8705849372856,
+        "line": "SENSORS uptime_ms=2346844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=151.78"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794923857161
+      },
+      "lateness_upper_node_ms": 977
+    },
+    {
+      "recipe": {
+        "at_s": 15,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794923856972.134,
+      "finished_host_ms": 1794923857769.4446,
+      "before_clock": {
+        "uptime_ms": 2317845,
+        "host_ms": 1794923855374.0054,
+        "monotonic_ns": 8704938170529,
+        "line": "SENSORS uptime_ms=2317845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.50"
+      },
+      "after_clock": {
+        "uptime_ms": 2318845,
+        "host_ms": 1794923857475.1619,
+        "monotonic_ns": 8707039328038,
+        "line": "SENSORS uptime_ms=2318845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794923857768
+      },
+      "lateness_upper_node_ms": 1189
+    },
+    {
+      "recipe": {
+        "at_s": 35,
+        "node_id": "node_03",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      "started_host_ms": 1794923893259.6084,
+      "finished_host_ms": 1794923894918.624,
+      "before_clock": {
+        "uptime_ms": 2362864,
+        "host_ms": 1794923891720.1104,
+        "monotonic_ns": 8741284275649,
+        "line": "uptime_ms=2362864 HEARTBEAT published=1 state=0"
+      },
+      "after_clock": {
+        "uptime_ms": 2363845,
+        "host_ms": 1794923893521.0522,
+        "monotonic_ns": 8743085217997,
+        "line": "SENSORS uptime_ms=2363845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.17"
+      },
+      "result": {
+        "prepared": true,
+        "no_sensor_change": true
+      },
+      "lateness_upper_node_ms": 1164
+    },
+    {
+      "recipe": {
+        "at_s": 35,
+        "node_id": "node_01",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      "started_host_ms": 1794923894499.4956,
+      "finished_host_ms": 1794923896054.8662,
+      "before_clock": {
+        "uptime_ms": 2366844,
+        "host_ms": 1794923894417.291,
+        "monotonic_ns": 8743981456532,
+        "line": "SENSORS uptime_ms=2366844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "after_clock": {
+        "uptime_ms": 2366844,
+        "host_ms": 1794923894417.291,
+        "monotonic_ns": 8743981456532,
+        "line": "SENSORS uptime_ms=2366844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "prepared": true,
+        "no_sensor_change": true
+      },
+      "lateness_upper_node_ms": 977
+    },
+    {
+      "recipe": {
+        "at_s": 35,
+        "node_id": "node_02",
+        "kind": "prepare-distance",
+        "value": 50
+      },
+      "started_host_ms": 1794923895739.912,
+      "finished_host_ms": 1794923897390.7432,
+      "before_clock": {
+        "uptime_ms": 2337845,
+        "host_ms": 1794923894106.3647,
+        "monotonic_ns": 8743670531103,
+        "line": "SENSORS uptime_ms=2337845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.50"
+      },
+      "after_clock": {
+        "uptime_ms": 2339096,
+        "host_ms": 1794923896208.1008,
+        "monotonic_ns": 8745772267135,
+        "line": "uptime_ms=2339096 HEARTBEAT published=1 state=0"
+      },
+      "result": {
+        "prepared": true,
+        "no_sensor_change": true
+      },
+      "lateness_upper_node_ms": 1440
+    },
+    {
+      "recipe": {
+        "at_s": 40,
+        "node_id": "node_03",
+        "kind": "distance",
+        "value": 50
+      },
+      "started_host_ms": 1794923902675.7305,
+      "finished_host_ms": 1794923904312.482,
+      "before_clock": {
+        "uptime_ms": 2367845,
+        "host_ms": 1794923901025.2822,
+        "monotonic_ns": 8750589447327,
+        "line": "SENSORS uptime_ms=2367845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.17"
+      },
+      "after_clock": {
+        "uptime_ms": 2368864,
+        "host_ms": 1794923903126.8828,
+        "monotonic_ns": 8752691047999,
+        "line": "uptime_ms=2368864 HEARTBEAT published=1 state=0"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "distance",
+            "value": 50,
+            "host_ms": 1794923904311
+          }
+        ]
+      },
+      "lateness_upper_node_ms": 1183
+    },
+    {
+      "recipe": {
+        "at_s": 40,
+        "node_id": "node_01",
+        "kind": "distance",
+        "value": 50
+      },
+      "started_host_ms": 1794923903818.4763,
+      "finished_host_ms": 1794923905450.5928,
+      "before_clock": {
+        "uptime_ms": 2371844,
+        "host_ms": 1794923903723.1897,
+        "monotonic_ns": 8753287355788,
+        "line": "CONTROL uptime_ms=2371844 mode=AUTO environment=NIGHT motion=NONE ldr_filtered=4063 target=25 applied=25 duty=64 ready=1 fault=OK mqtt=1"
+      },
+      "after_clock": {
+        "uptime_ms": 2371844,
+        "host_ms": 1794923904023.4338,
+        "monotonic_ns": 8753587600201,
+        "line": "SENSORS uptime_ms=2371844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.19"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "distance",
+            "value": 50,
+            "host_ms": 1794923905449
+          }
+        ]
+      },
+      "lateness_upper_node_ms": 977
+    },
+    {
+      "recipe": {
+        "at_s": 40,
+        "node_id": "node_02",
+        "kind": "distance",
+        "value": 50
+      },
+      "started_host_ms": 1794923905163.1746,
+      "finished_host_ms": 1794923906935.2769,
+      "before_clock": {
+        "uptime_ms": 2343096,
+        "host_ms": 1794923904013.924,
+        "monotonic_ns": 8753578090403,
+        "line": "uptime_ms=2343096 HEARTBEAT published=1 state=0"
+      },
+      "after_clock": {
+        "uptime_ms": 2343845,
+        "host_ms": 1794923905515.256,
+        "monotonic_ns": 8755079421267,
+        "line": "SENSORS uptime_ms=2343845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=152.50"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "distance",
+            "value": 50,
+            "host_ms": 1794923906930
+          }
+        ]
+      },
+      "lateness_upper_node_ms": 1189
+    },
+    {
+      "recipe": {
+        "at_s": 45,
+        "node_id": "node_03",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794923912245.3293,
+      "finished_host_ms": 1794923912998.777,
+      "before_clock": {
+        "uptime_ms": 2372867,
+        "host_ms": 1794923910631.1445,
+        "monotonic_ns": 8760195310677,
+        "line": "uptime_ms=2372867 HEARTBEAT published=1 state=0"
+      },
+      "after_clock": {
+        "uptime_ms": 2373845,
+        "host_ms": 1794923912432.5872,
+        "monotonic_ns": 8761996752637,
+        "line": "SENSORS uptime_ms=2373845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794923912998
+      },
+      "lateness_upper_node_ms": 1164
+    },
+    {
+      "recipe": {
+        "at_s": 45,
+        "node_id": "node_01",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794923913395.2139,
+      "finished_host_ms": 1794923914258.6396,
+      "before_clock": {
+        "uptime_ms": 2376857,
+        "host_ms": 1794923913330.2683,
+        "monotonic_ns": 8762894433517,
+        "line": "uptime_ms=2376857 HEARTBEAT published=1 state=0"
+      },
+      "after_clock": {
+        "uptime_ms": 2376857,
+        "host_ms": 1794923913330.2683,
+        "monotonic_ns": 8762894433517,
+        "line": "uptime_ms=2376857 HEARTBEAT published=1 state=0"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794923914258
+      },
+      "lateness_upper_node_ms": 990
+    },
+    {
+      "recipe": {
+        "at_s": 45,
+        "node_id": "node_02",
+        "kind": "motion",
+        "value": null
+      },
+      "started_host_ms": 1794923915587.9595,
+      "finished_host_ms": 1794923916379.1067,
+      "before_clock": {
+        "uptime_ms": 2347845,
+        "host_ms": 1794923913924.5056,
+        "monotonic_ns": 8763488671881,
+        "line": "SENSORS uptime_ms=2347845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+      },
+      "after_clock": {
+        "uptime_ms": 2349107,
+        "host_ms": 1794923916326.0347,
+        "monotonic_ns": 8765890200573,
+        "line": "uptime_ms=2349107 HEARTBEAT published=1 state=0"
+      },
+      "result": {
+        "motion_clicked": true,
+        "applied_host_ms": 1794923916377
+      },
+      "lateness_upper_node_ms": 1451
+    },
+    {
+      "recipe": {
+        "at_s": 60,
+        "node_id": "node_03",
+        "kind": "current",
+        "value": 0
+      },
+      "started_host_ms": 1794923935912.6174,
+      "finished_host_ms": 1794923936252.312,
+      "before_clock": {
+        "uptime_ms": 2387845,
+        "host_ms": 1794923934354.3982,
+        "monotonic_ns": 8783918563179,
+        "line": "SENSORS uptime_ms=2387845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+      },
+      "after_clock": {
+        "uptime_ms": 2388845,
+        "host_ms": 1794923936156.2593,
+        "monotonic_ns": 8785720424714,
+        "line": "SENSORS uptime_ms=2388845 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=51.22"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "current",
+            "value": 0,
+            "host_ms": 1794923936251
+          }
+        ]
+      },
+      "lateness_upper_node_ms": 1164
+    },
+    {
+      "recipe": {
+        "at_s": 60,
+        "node_id": "node_01",
+        "kind": "current",
+        "value": 0
+      },
+      "started_host_ms": 1794923936856.756,
+      "finished_host_ms": 1794923937167.344,
+      "before_clock": {
+        "uptime_ms": 2391844,
+        "host_ms": 1794923936745.2817,
+        "monotonic_ns": 8786309447064,
+        "line": "SENSORS uptime_ms=2391844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+      },
+      "after_clock": {
+        "uptime_ms": 2391844,
+        "host_ms": 1794923936745.2817,
+        "monotonic_ns": 8786309447064,
+        "line": "SENSORS uptime_ms=2391844 ldr_adc=4063 pir=0 current_adc=4095 distance_valid=1 distance_cm=50.71"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "current",
+            "value": 0,
+            "host_ms": 1794923937166
+          }
+        ]
+      },
+      "lateness_upper_node_ms": 977
+    },
+    {
+      "recipe": {
+        "at_s": 60,
+        "node_id": "node_02",
+        "kind": "current",
+        "value": 0
+      },
+      "started_host_ms": 1794923939258.045,
+      "finished_host_ms": 1794923939613.464,
+      "before_clock": {
+        "uptime_ms": 2363142,
+        "host_ms": 1794923938243.291,
+        "monotonic_ns": 8787807456583,
+        "line": "uptime_ms=2363142 HEARTBEAT published=1 state=0"
+      },
+      "after_clock": {
+        "uptime_ms": 2363142,
+        "host_ms": 1794923938243.291,
+        "monotonic_ns": 8787807456583,
+        "line": "uptime_ms=2363142 HEARTBEAT published=1 state=0"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "current",
+            "value": 0,
+            "host_ms": 1794923939612
+          }
+        ]
+      },
+      "lateness_upper_node_ms": 486
+    },
+    {
+      "recipe": {
+        "at_s": 75,
+        "node_id": "node_03",
+        "kind": "current",
+        "value": 1023
+      },
+      "started_host_ms": 1794923963628.6545,
+      "finished_host_ms": 1794923963967.0378,
+      "before_clock": {
+        "uptime_ms": 2402971,
+        "host_ms": 1794923962273.3044,
+        "monotonic_ns": 8811837470575,
+        "line": "uptime_ms=2402971 HEARTBEAT published=1 state=0"
+      },
+      "after_clock": {
+        "uptime_ms": 2403845,
+        "host_ms": 1794923963774.1958,
+        "monotonic_ns": 8813338361454,
+        "line": "SENSORS uptime_ms=2403845 ldr_adc=4063 pir=0 current_adc=0 distance_valid=1 distance_cm=50.71"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "current",
+            "value": 1023,
+            "host_ms": 1794923963966
+          }
+        ]
+      },
+      "lateness_upper_node_ms": 1164
+    },
+    {
+      "recipe": {
+        "at_s": 75,
+        "node_id": "node_01",
+        "kind": "current",
+        "value": 1023
+      },
+      "started_host_ms": 1794923963838.2163,
+      "finished_host_ms": 1794923964218.047,
+      "before_clock": {
+        "uptime_ms": 2406889,
+        "host_ms": 1794923963761.0312,
+        "monotonic_ns": 8813325196150,
+        "line": "uptime_ms=2406889 HEARTBEAT published=1 state=0"
+      },
+      "after_clock": {
+        "uptime_ms": 2406889,
+        "host_ms": 1794923963761.0312,
+        "monotonic_ns": 8813325196150,
+        "line": "uptime_ms=2406889 HEARTBEAT published=1 state=0"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "current",
+            "value": 1023,
+            "host_ms": 1794923964217
+          }
+        ]
+      },
+      "lateness_upper_node_ms": 1022
+    },
+    {
+      "recipe": {
+        "at_s": 75,
+        "node_id": "node_02",
+        "kind": "current",
+        "value": 1023
+      },
+      "started_host_ms": 1794923967399.7068,
+      "finished_host_ms": 1794923967753.9822,
+      "before_clock": {
+        "uptime_ms": 2377845,
+        "host_ms": 1794923965862.3599,
+        "monotonic_ns": 8815426525263,
+        "line": "SENSORS uptime_ms=2377845 ldr_adc=4063 pir=0 current_adc=0 distance_valid=1 distance_cm=50.71"
+      },
+      "after_clock": {
+        "uptime_ms": 2378845,
+        "host_ms": 1794923967663.4717,
+        "monotonic_ns": 8817227636628,
+        "line": "SENSORS uptime_ms=2378845 ldr_adc=4063 pir=0 current_adc=0 distance_valid=1 distance_cm=50.71"
+      },
+      "result": {
+        "scene_applied": true,
+        "effects": [
+          {
+            "kind": "current",
+            "value": 1023,
+            "host_ms": 1794923967753
+          }
+        ]
+      },
+      "lateness_upper_node_ms": 1189
+    }
+  ],
+  "windows": {
+    "node_01": {
+      "first": {
+        "id": 13479,
+        "node_id": "node_01",
+        "boot_id": "16634a4e",
+        "seq": "3627",
+        "uptime_ms": "2331867",
+        "received_at": 1794923827.734093,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"16634a4e\", \"seq\": 3627, \"uptime_ms\": 2331867, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 4063, \"motion\": \"NONE\", \"distance_cm\": 152.1207, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+        "quality": "ACCEPTED",
+        "continuity": "9f8dfd60-b726-4d3b-bffe-cb4e6a9bd3d5/7db0ba6c-9f8c-40df-92da-daa537471855/2/0"
+      },
+      "last": {
+        "id": 14283,
+        "node_id": "node_01",
+        "boot_id": "16634a4e",
+        "seq": "3842",
+        "uptime_ms": "2422145",
+        "received_at": 1794923990.4127622,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"16634a4e\", \"seq\": 3842, \"uptime_ms\": 2422145, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 4063, \"motion\": \"NONE\", \"distance_cm\": 50.7069, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+        "quality": "ACCEPTED",
+        "continuity": "9f8dfd60-b726-4d3b-bffe-cb4e6a9bd3d5/7db0ba6c-9f8c-40df-92da-daa537471855/2/0"
+      },
+      "duration_uptime_ms": 90278
+    },
+    "node_03": {
+      "first": {
+        "id": 13478,
+        "node_id": "node_03",
+        "boot_id": "44dabee8",
+        "seq": "4166",
+        "uptime_ms": "2328681",
+        "received_at": 1794923827.5236375,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_03\", \"boot_id\": \"44dabee8\", \"seq\": 4166, \"uptime_ms\": 2328681, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 4063, \"motion\": \"NONE\", \"distance_cm\": 152.1724, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+        "quality": "ACCEPTED",
+        "continuity": "9f8dfd60-b726-4d3b-bffe-cb4e6a9bd3d5/7db0ba6c-9f8c-40df-92da-daa537471855/2/0"
+      },
+      "last": {
+        "id": 14284,
+        "node_id": "node_03",
+        "boot_id": "44dabee8",
+        "seq": "4461",
+        "uptime_ms": "2418864",
+        "received_at": 1794923990.456652,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_03\", \"boot_id\": \"44dabee8\", \"seq\": 4461, \"uptime_ms\": 2418864, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 4063, \"motion\": \"NONE\", \"distance_cm\": 50.7069, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+        "quality": "ACCEPTED",
+        "continuity": "9f8dfd60-b726-4d3b-bffe-cb4e6a9bd3d5/7db0ba6c-9f8c-40df-92da-daa537471855/2/0"
+      },
+      "duration_uptime_ms": 90183
+    },
+    "node_02": {
+      "first": {
+        "id": 13481,
+        "node_id": "node_02",
+        "boot_id": "3a8b19bd",
+        "seq": "5684",
+        "uptime_ms": "2303656",
+        "received_at": 1794923828.0422158,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_02\", \"boot_id\": \"3a8b19bd\", \"seq\": 5684, \"uptime_ms\": 2303656, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 4063, \"motion\": \"NONE\", \"distance_cm\": 152.5, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+        "quality": "ACCEPTED",
+        "continuity": "9f8dfd60-b726-4d3b-bffe-cb4e6a9bd3d5/7db0ba6c-9f8c-40df-92da-daa537471855/2/0"
+      },
+      "last": {
+        "id": 14300,
+        "node_id": "node_02",
+        "boot_id": "3a8b19bd",
+        "seq": "5986",
+        "uptime_ms": "2394256",
+        "received_at": 1794923996.1467144,
+        "payload": "{\"schema_version\": 1, \"node_id\": \"node_02\", \"boot_id\": \"3a8b19bd\", \"seq\": 5986, \"uptime_ms\": 2394256, \"mode\": \"AUTO\", \"environment\": \"NIGHT\", \"ldr_adc\": 4063, \"motion\": \"NONE\", \"distance_cm\": 51.08621, \"brightness_target\": 25, \"brightness_applied\": 25, \"current_adc\": 4095, \"current_ma_sim\": 500.0, \"power_sim_w\": 6.0, \"faults\": []}",
+        "quality": "ACCEPTED",
+        "continuity": "9f8dfd60-b726-4d3b-bffe-cb4e6a9bd3d5/7db0ba6c-9f8c-40df-92da-daa537471855/2/0"
+      },
+      "duration_uptime_ms": 90600
+    }
+  },
+  "started_host_ms": 1794923825693.5576,
+  "experiment_id": 3,
+  "start_monotonic_ns": 8677661481235,
+  "boots": {
+    "node_01": "16634a4e",
+    "node_02": "3a8b19bd",
+    "node_03": "44dabee8"
+  },
+  "origin_uptime_ms": {
+    "node_01": 2331867,
+    "node_02": 2303656,
+    "node_03": 2328681
+  },
+  "end_monotonic_ns": 8845820897794
+}

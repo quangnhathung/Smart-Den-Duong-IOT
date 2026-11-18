@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-18T12:36:27.673448+07:00",
+  "status": "PASS",
+  "accepted_configurations_unchanged": 10,
+  "ex05_physical_actions_unchanged": true,
+  "ui_only_preparation_old_s": [
+    295,
+    295,
+    295,
+    595,
+    595,
+    595
+  ],
+  "ui_only_preparation_new_s": [
+    290,
+    290,
+    290,
+    590,
+    590,
+    590
+  ]
+}
