@@ -99,3 +99,9 @@ Video01 INCOMPLETE do helper đọc `status` thay trường `result`; lệnh th�
 Video phải được kiểm full decode, phát trong Chrome, tỷ lệ16:9 và rà16 cảnh trước khi `QA_PASSED`. Backup chỉ chạy khi audit15 lượt, cold-start, cleanup và QA video đều đạt; giữ cả lần lỗi, log gốc, snapshot nguồn ba repo, SQLite backup API, cấu hình/artifact và bộ tài liệu. Đọc lại mọi member archive với SHA256 manifest, không coi tạo xong tar là đã kiểm toàn vẹn. Trạng thái cuối xem task và hồ sơ bàn giao.
 
 Kết thúc TASK-012: video chính đã qua full decode/phát Chrome và16 cảnh trực quan, cleanup hiện hành PASS, backup đã kiểm SHA256 và từng member archive. Xem video-final-qa.json, cleanup-final.json và backup-first-verification.json trong hồ sơ. Word v05/PPTX v05 là bản chính; các bản cũ giữ để truy vết. Bộ bàn giao không nghiệm thu thay hai thành viên hoặc mạch thật.
+
+## Kịch bản trình bày kết quả TASK-017
+
+[Kịch bản demo chi tiết](../demo-script.md) dùng phiên chức năng mới tách bộ15 lượt chính; không dùng tỷ lệ của phiên có MANUAL/fault/outage để thay kết quả EX-series. Lời trình bày dẫn đúng bảng variation.json và audit TASK-012, công bố cửa sổ riêng từng node, baseline/coverage và giới hạn mô phỏng. Timeline chính20 phút/rút gọn7 phút chỉ là phân bổ trình bày; không đổi clock/timer hoặc recipe. Các cảnh chuyển theo telemetry/ACK/Serial thật; MQTT0 chỉ cho phép kết luận demo cục bộ khi chưa có dữ liệu mới trên web.
+
+TASK-017 là tạo tài liệu, không chạy lại live/15 lượt hoặc nghiệm thu khả năng hai thành viên. Word23 trang đã kiểm schema/WPS; [QA và kiểm số liệu/timeline](../reports/evidence/task-017/README.md).

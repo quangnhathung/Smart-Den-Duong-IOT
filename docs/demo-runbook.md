@@ -1,5 +1,7 @@
 # Runbook trình diễn và bàn giao — TASK-012
 
+[Kịch bản giới thiệu và demo chi tiết](demo-script.md) bổ sung lời dẫn đầy đủ, phân vai hai người, timeline20 phút, bản rút gọn7 phút, Q&A và nhánh dự phòng khi MQTT chưa sẵn sàng. Đây là tài liệu soạn cho diễn tập TASK-017, không phải xác nhận buổi demo mới đã đạt.
+
 Hướng dẫn đầy đủ cài lần đầu, khởi tạo, chạy hằng ngày và thao tác từng màn hình ở [project-guide.md](project-guide.md), kèm Word đã kiểm 34 trang trong output/task-015/. Runbook này tiếp tục là bản trình diễn ngắn của TASK-012.
 
 ## Phạm vi và nguồn

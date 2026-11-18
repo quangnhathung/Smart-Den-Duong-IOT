@@ -41,3 +41,13 @@ node scripts/build-project-guide.cjs /path/to/node_modules/docx /path/to/new-gui
 Dùng runtime docx9.15.4 riêng đã có của TASK-012; không cần dependency tài liệu để chạy firmware/backend/dashboard. Native WPS Writer Page.SaveAsPNG xuất34/34 trang, đã xem từng trang; schema và695 dòng nội dung đối chiếu Markdown→DOCX PASS. Tỷ lệ ảnh dashboard16:9 giữ nguyên; [QA](../reports/evidence/task-015/document-qa.json). Instance WPS QA đã đóng, source không bị sửa. Không xuất PDF theo lựa chọn người dùng.
 
 Kiểm hướng dẫn dùng SQLite tạm: init hai lần giữ3 ID và fixture phiên đã có, backup API/quick_check/đọc lại và guard từ chối đích tồn tại PASS. Linux Bash/Python/JSON được kiểm cú pháp; PowerShell/Windows và stack live không được chạy lại trong task tài liệu. Các mốc TASK-013 phía trên vẫn là lịch sử cài skill, không sửa lại thành kết quả tạo tài liệu.
+
+## Kịch bản giới thiệu và demo TASK-017
+
+Generator build-project-guide.cjs nhận thêm tham số Markdown tùy chọn sau output, tự lấy title từ heading đầu. Giữ cách gọi hai tham số cho guide cũ. Ví dụ:
+
+```bash
+node scripts/build-project-guide.cjs /path/to/node_modules/docx /path/to/new-demo.docx docs/demo-script.md
+```
+
+Liên kết nguồn tương đối trong Word được tính từ vị trí output tới source thật; không lấy thư mục Markdown làm vị trí của tệp Word. Word v03 của TASK-01723 trang có10 liên kết nguồn nội bộ đã kiểm tồn tại,411 dòng nội dung khớp Markdown và schema PASS. WPS render23 trang v02 đã xem hết; v03 sửa đích hyperlink, render lại và23/23 PNG giống nguyên byte bản đã xem. Source không đổi trong render, instance WPS QA đã đóng. Bản v01/v02 được giữ, tệp guide TASK-015 đã bàn giao không ghi đè. [Bằng chứng](../reports/evidence/task-017/document-qa.json).
