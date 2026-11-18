@@ -56,7 +56,7 @@ Xác nhận health, ba card node, ADC/môi trường/motion, target/applied và 
 | Bước | Thao tác thực | Kỳ vọng / bằng chứng |
 |---|---|---|
 | 1 | Chỉ tổng quan và ba mạch/Serial | Đủ3 định danh, ONLINE/FRESH; không dùng ảnh giả thay live |
-| 2 | Đổi LDR node01 DAY→TWILIGHT→NIGHT | Mức nền0/50/25 sau lọc/xác nhận/dimming; hai node khác giữ độc l  ập |
+| 2 | Đổi LDR node01 DAY→TWILIGHT→NIGHT | Mức nền0/50/25 sau lọc/xác nhận/dimming; hai node khác giữ độc lập |
 | 3 | NIGHT, distance150cm rồi kích PIR | PEDESTRIAN/target70; sau hold giảm về25 |
 | 4 | NIGHT, distance50cm rồi kích PIR | VEHICLE/target100; giải thích đây là quy ước |
 | 5 | Gửi MANUAL80 trên dashboard, rồi AUTO | 202/PENDING→ACK APPLIED; applied tiến dần đến mục tiêu |
@@ -65,7 +65,7 @@ Xác nhận health, ba card node, ADC/môi trường/motion, target/applied và 
 | 8 | Khởi động lại broker QA | Telemetry mới, ONLINE/FRESH; không phát lại command cũ |
 | 9 | Xem phiên đo đã đóng, lịch sử và CSV | ID/config/biên thời gian rõ; không dùng tổng1h làm số riêng một phiên |
 
-Giữ đủ thời gian quan sát theo clock phù hợp; không nói “đã xảy ra” trước khi đọc telemetry/ACK/Serial. Khi API lỗi, giữ nhãn dữ liệu cũ và trình bày lỗi, không chuyển sang dữ liệu giả.
+Trước khi gửi lệnh, chờ telemetry mới và nút điều khiển khả dụng; API từ chối khi telemetry quá3s. Không tự gửi lại lệnh chưa rõ kết quả. Giữ đủ thời gian quan sát theo clock phù hợp; không nói “đã xảy ra” trước khi đọc telemetry/ACK/Serial. Khi API lỗi, giữ nhãn dữ liệu cũ và trình bày lỗi, không chuyển sang dữ liệu giả.
 
 ## Thực nghiệm EX-series
 
@@ -79,6 +79,8 @@ python3 scripts/audit-experiments.py --run-dir /absolute/path/to/QA_ROOT --outpu
 ```
 
 `--resume` chỉ bỏ qua lượt PASS cùng recipe; không tiếp tục giữa lượt bị ngắt. FAIL/INCOMPLETE giữ nguyên, chạy lại toàn lượt bị ảnh hưởng. Không chọn phần trăm đẹp hoặc ghép các đoạn để tạo đủ thời lượng. Công cụ UI CDP là QA riêng trên profile sở hữu, không dùng trình duyệt/cửa sổ cá nhân.
+
+CSV và thống kê chọn nguyên phiên trong dashboard dùng cửa sổ chung từ lúc mở đến lúc dừng phiên. Bảng thực nghiệm chính chọn biên riêng từng node để loại thời gian node nhanh chờ node chậm. Vì vậy số nguyên phiên trên UI có thể khác bảng Word; muốn đối chiếu phải dùng cùng node_id/from/to/experiment_id và cùng quy tắc bỏ năng lượng hàng đầu ở biên.
 
 ## Khi có lỗi
 
@@ -104,3 +106,5 @@ python3 scripts/audit-experiments.py --run-dir /absolute/path/to/QA_ROOT --outpu
 ## Tình trạng diễn tập và bàn giao
 
 Kết quả cold-start, video, backup/integrity và cleanup được ghi tại hồ sơ TASK-012; chỉ đánh dấu đạt sau khi chạy thật. Báo cáo DOCX/PPTX có thể mở/chỉnh trong WPS, PDF do người dùng tự xuất. Yêu cầu hai thành viên tự chạy/giải thích còn cần xác nhận trực tiếp.
+
+TASK-012 đã kiểm cold-start ba node/lệnh APPLIED, bảo toàn137.797 telemetry cũ và dừng đúng dịch vụ QA. Video cuối đã kiểm decode/phát Chrome/16 cảnh; backup SHA256 và archive toàn vẹn đã đạt. Bằng chứng tại reports/evidence/task-012/run-20261117-200024/README.md. Các xác nhận này áp dụng máy/lượt QA đã ghi; diễn tập con người hoặc máy khác chưa thực hiện.

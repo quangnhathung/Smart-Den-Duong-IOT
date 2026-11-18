@@ -56,9 +56,13 @@ Một phiên API chung chứa dữ liệu cả3; phân tích chính dùng cửa 
 
 ## Kiểm tra và giới hạn hiện tại
 
-34 Python test đã PASS:20 test cũ,12 ca recipe/clock/số học và2 ca hồi quy clock qua reboot/toàn vẹn CSV. PILOT-r01-a04 PASS đầy đủ90s/node, người/xe, fault/phục hồi và đối chiếu API/CSV. Ba pilot trước giữ INCOMPLETE (hai lượt vượt biên trễ2s, một lượt timeout chuẩn bị), không nới giới hạn. EX-01-r01-a01 đã PASS; các lượt khác đang chạy, chưa đủ điều kiện công bố15 lượt chính. Xem hồ sơ/task để biết kết quả cập nhật.
+34 Python test PASS:20 test cũ,12 ca recipe/clock/số học và2 ca hồi quy clock qua reboot/toàn vẹn CSV. PILOT-r01-a04 PASS90s/node ngoài dữ liệu chính; ba pilot trước giữ INCOMPLETE. Đợt chính đã đủ15/15 lượt PASS,45 cửa sổ node–lượt; audit độc lập `analysis-final.json` PASS, errors/missing rỗng và SQLite quick_check=ok. Trễ tác động vật lý lớn nhất1778ms, trong giới hạn2000ms. Xem [audit cuối](../reports/evidence/task-012/run-20261117-200024/analysis-final.json) và [danh sách lượt](../reports/evidence/task-012/run-20261117-200024/campaign-summary.json).
 
-Người dùng đã cài bộ docx/pptx/pdf Anthropic trong TASK-013 và yêu cầu kiểm tra để tiếp tục; đã đọc các hướng dẫn. DOCX dùng npm docx, PPTX dùng pptxgenjs; WPS Page.SaveAsPNG/Slide.Export PNG render trực tiếp để kiểm ảnh, không cần PDF. Runtime riêng trong QA, không sửa plugin OpenAI hoặc venv sản phẩm. Đã có bản nháp Word23 trang và PPTX12 slide kiểm cấu trúc/ảnh; chưa chốt bản cuối hoặc video. Tiêu chí hai thành viên tự chạy/giải thích cần xác nhận trực tiếp, không tự ghi PASS.
+Không bỏ các attempt lỗi: EX02/R1 attempt01 FAIL vì PIR/khoảng cách ngoài recipe, nguyên nhân chưa xác định; EX02/R3 attempt01–03 INCOMPLETE vì mất Serial/viewport/readiness; EX05/R1 attempt01 INCOMPLETE vì đổi pha trễ2257ms. Giữ raw và chạy lại trọn lượt liên quan. Không nới thời lượng, clock hay giới hạn trễ.
+
+Kết quả công suất AUTO trung bình giữa các lần lặp: EX02 6W, EX03 khoảng8,160W, EX04 khoảng9,600W, EX05 khoảng6,613W. Baseline EX05 có pha DAY nên không mặc định24W. Độ phủ EX04/R3 có node thấp nhất99,004%; EX07 khoảng79,073–79,836% do mất broker chủ động. Công bố từng node/lượt, không ghi mọi lượt100% hoặc dùng kết quả mô phỏng làm số đo phần cứng.
+
+Người dùng đã cài skill docx/pptx/pdf trong TASK-013. DOCX dùng docx9.15.4, PPTX dùng pptxgenjs4.0.1; WPS11.1.0.11723 render PNG trực tiếp. Word v05 sáu chương đã kiểm schema và23/23 trang, PPTX v05 có bảng/biểu đồ native đã kiểm12/12 slide16:9. [Bằng chứng Office](../reports/evidence/task-012/run-20261117-200024/office-final-qa.json) giữ source SHA256 và render proof. Không đổi plugin/runtime sản phẩm. Tiêu chí hai thành viên tự vận hành/giải thích cần xác nhận trực tiếp, chưa nghiệm thu.
 
 ## Điều chỉnh đầu ra tài liệu
 
@@ -66,13 +70,13 @@ Ngày 2026-11-17T21:52:03+07:00, người dùng yêu cầu nhận bản Word và
 
 ## Tiếp tục qua lần khởi động máy
 
-Lượt bị ngắt giữ INCOMPLETE và được chạy lại trọn lượt; --resume chỉ tái dùng PASS cùng recipe. Từ lần tiếp tục18/11, collector ghi host_boot_id của máy vào MQTT/Serial/probe và runner ghi cùng giá trị vào result. Audit chỉ so monotonic trong đúng cohort; bản ghi cũ chưa có tag được giữ riêng với các result cũ chưa có tag. Không đổi timestamp/raw lịch sử hoặc thuật toán sản phẩm. Hồi quy33 Python test PASS, gồm ca cố ý trùng giá trị monotonic qua ba cohort.
+Lượt bị ngắt giữ INCOMPLETE và được chạy lại trọn lượt; --resume chỉ tái dùng PASS cùng recipe. Từ lần tiếp tục18/11, collector ghi host_boot_id của máy vào MQTT/Serial/probe và runner ghi cùng giá trị vào result. Audit chỉ so monotonic trong đúng cohort; bản ghi cũ chưa có tag được giữ riêng với các result cũ chưa có tag. Không đổi timestamp/raw lịch sử hoặc thuật toán sản phẩm. Hồi quy34 Python test PASS, gồm ca cố ý trùng giá trị monotonic qua ba cohort.
 
-WPS Writer Page.SaveAsPNG đã xuất22 trang bản nháp; Presentation Slide.Export PNG xuất12 slide. Đã rà hết bản nháp và sửa tràn chữ slide9 trong generator; bản cập nhật cần render lại trước chốt. Không cần PDF để kiểm ảnh; PDF vẫn do người dùng tự xuất.
+WPS Writer Page.SaveAsPNG và Presentation Slide.Export PNG giữ ảnh từng bản. V04 Word có một ghi chú tách thành trang riêng; đã sửa generator, render v05 còn23 trang và rà hết. PPTX đã sửa tràn chữ slide9 từ bản nháp; v05 kiểm đủ12 slide. Giữ bản cũ và đề cương, không ghi đè tệp người dùng đã nhận. PDF do người dùng tự xuất.
 
 Sau khôi phục cửa sổ, EX02/R3 attempt02 INCOMPLETE ngay bước chuẩn bị do LDR bị toolbar che. Đã kéo vùng nền trống để đưa cảm biến vào viewport, không di chuyển linh kiện. Bridge chỉ gửi Home/End cho biến trở khi giá trị UI thực khác giá trị yêu cầu; bỏ thao tác vô ích khi đã1023 để tránh browser focus tự cuộn mạch. Không bỏ tác động tải0/phục hồi của EX06, không sửa recipe hoặc firmware. Các lượt bị lỗi được giữ nguyên.
 
-Audit cuối có thêm đối chiếu toàn bộ trường payload CSV với SQLite, số mẫu/quality/continuity và tổng ba cột năng lượng sau biên đầu. Seq/uptime so bằng int, không qua float. Fixture thiếu hàng/sai công suất/NaN bị phát hiện;34 Python test PASS. Audit3 lượt cũ với raw/SQL/API/CSV đều không sai lệch; chưa coi các lượt thiếu là đã đạt.
+Audit cuối có thêm đối chiếu toàn bộ trường payload CSV với SQLite, số mẫu/quality/continuity và tổng ba cột năng lượng sau biên đầu. Seq/uptime so bằng int, không qua float. Fixture thiếu hàng/sai công suất/NaN bị phát hiện;34 Python test PASS. Audit cuối đủ15 lượt với raw/SQL/API/CSV không sai lệch; các snapshot audit3/7/14 lượt được giữ làm lịch sử.
 
 ## Công cụ phân tích và bàn giao
 
@@ -84,4 +88,14 @@ Audit cuối có thêm đối chiếu toàn bộ trường payload CSV với SQL
 
 Runbook vận hành ở [docs/demo-runbook.md](../demo-runbook.md). Helper khôi phục/render/cold-start trong QA root có đường dẫn/PID guard của đúng máy; lưu as-run khi đóng hồ sơ. Không chạy mù helper cũ trên máy hoặc PID khác. Runtime tài liệu: docx9.15.4, pptxgenjs4.0.1, Python3.12 và WPS11.1.0.11723; log phụ thuộc/lockfile ở QA runtime/office/. WPS RPC có lỗi destructor ở teardown; helper render ghi đủ ảnh, kiểm source không đổi và chỉ dừng instance QA mới đã đóng hết tài liệu trước khi thoát.
 
-Quay dashboard dùng context mới, được tạo và điều khiển qua cùng kết nối BrowserServer; context của kết nối khác không xuất hiện trong danh sách context hiện tại. Playwright cần FFmpeg v1013 riêng; FFmpeg hệ thống dùng cho encode/decode sau đó. Với kết nối từ xa, lưu Video bằng `saveAs()` sau khi đóng context; `path()` không được hỗ trợ. Quay thử 3 giây thực đã đạt 1920×1080/90 frame, decode thành công và mở trong Chrome. Giữ hai lần thử lỗi trong bằng chứng; thử runtime này không thay cho video demo cuối hoặc kiểm phát đầy đủ.
+Bản quay đầu dùng context mới trên BrowserServer. Bản quay hoàn thiện dùng Chrome headless riêng với viewport và recordVideo1920×1080, tránh phụ thuộc kích thước/che khuất cửa sổ native. Playwright cần FFmpeg v1013 riêng; FFmpeg hệ thống dùng cho encode/decode sau đó. Với kết nối từ xa, lưu Video bằng `saveAs()` sau khi đóng context; `path()` không được hỗ trợ. Quay thử 3 giây thực đã đạt 1920×1080/90 frame, decode thành công và mở trong Chrome. Giữ hai lần thử lỗi trong bằng chứng; thử runtime này không thay cho video demo cuối hoặc kiểm phát đầy đủ.
+
+## Kiểm tra bàn giao sau thực nghiệm
+
+Cold-start ngày18/11 lúc14:38+07:00 PASS: dừng đúng9 dịch vụ QA, cổng trống rồi khởi động lại ba node với boot mới; cả3 ONLINE/FRESH/AUTO, health OK/dropped_events0 và lệnh AUTO có ACK APPLIED. SHA256 của137.797 telemetry có sẵn trước/sau giống nhau, không còn lệnh PENDING hoặc phiên mở, quick_check=ok. Sau đó đã dừng QA; dịch vụ được mở riêng lần nữa để hoàn thiện video, nên phải có cleanup hiện hành trước backup.
+
+Video01 INCOMPLETE do helper đọc `status` thay trường `result`; lệnh thực tế APPLIED sau khoảng371ms. Đã sửa riêng helper, không phát lại lệnh cũ. Video02 giải mã/phát được nhưng không đạt kiểm trực quan vì vùng xám bên phải xuất hiện ngay trong WebM sau cuộn/tải CSV. Quay thử headless riêng qua đúng luồng tải CSV48MB đạt ảnh toàn khung, byte CSV khớp bản đã lưu. Các lần setup03–05 giữ INCOMPLETE vì viewport rồi node02 paused; đã xác nhận nút Resume, nhấn thật để chạy tiếp cùng boot, cả3 ONLINE/FRESH/can_command. Nguyên nhân click cảm biến chạm toolbar là suy luận từ vị trí cũ, không khẳng định đã quan sát trực tiếp. Không đưa setup/video vào15 lượt đo chính.
+
+Video phải được kiểm full decode, phát trong Chrome, tỷ lệ16:9 và rà16 cảnh trước khi `QA_PASSED`. Backup chỉ chạy khi audit15 lượt, cold-start, cleanup và QA video đều đạt; giữ cả lần lỗi, log gốc, snapshot nguồn ba repo, SQLite backup API, cấu hình/artifact và bộ tài liệu. Đọc lại mọi member archive với SHA256 manifest, không coi tạo xong tar là đã kiểm toàn vẹn. Trạng thái cuối xem task và hồ sơ bàn giao.
+
+Kết thúc TASK-012: video chính đã qua full decode/phát Chrome và16 cảnh trực quan, cleanup hiện hành PASS, backup đã kiểm SHA256 và từng member archive. Xem video-final-qa.json, cleanup-final.json và backup-first-verification.json trong hồ sơ. Word v05/PPTX v05 là bản chính; các bản cũ giữ để truy vết. Bộ bàn giao không nghiệm thu thay hai thành viên hoặc mạch thật.

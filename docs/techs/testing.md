@@ -1,8 +1,10 @@
 # Kiểm tra dự án — firmware, backend và dashboard
 
-## TASK-012 — Công cụ thực nghiệm đang kiểm chứng
+## TASK-012 — Thực nghiệm và kiểm tra bàn giao
 
-34 test Python PASS, gồm20 ca cũ,12 ca recipe/clock/độc lập năng lượng và2 ca hồi quy tách clock qua reboot/toàn vẹn CSV. Fixture kiểm15 lượt/150 phút mô phỏng, PIR15+30k, EX05 lặp cùng lịch, chuẩn bị popup không đổi mốc tác động, predictor bị chặn1s, hai clock tách biệt, baseline null và không nối qua boot/gap/session/quality. Đây là kiểm công cụ, chưa phải15 lượt live đạt. Xem [phương pháp và trạng thái](experiments.md), [task](../reports/task.md). Không chạy lại host/build/30 phút TASK-011 khi source/artifact giữ nguyên.
+34 Python test PASS, gồm20 ca cũ,12 ca recipe/clock/năng lượng độc lập và2 ca hồi quy tách clock qua reboot/toàn vẹn CSV. Fixture kiểm15 lượt/150 phút mô phỏng, PIR15+30k, EX05 lặp cùng lịch, chuẩn bị popup không đổi mốc tác động, predictor tối đa1s, baseline null và không nối qua boot/gap/session/quality.
+
+Live đủ15/15 lượt chính PASS,45 cửa sổ node–lượt; audit raw MQTT→SQLite→API/CSV/phép tính độc lập PASS trong1e-9Wh. Các lượt lỗi giữ nguyên và chạy lại trọn lượt, không ghép dữ liệu. Word v05 schema/23 trang và PPTX v05 schema/12 slide đã kiểm trực quan bằng WPS. Cold-start PASS, giữ SHA137.797 telemetry cũ, ba boot mới ONLINE/FRESH/AUTO và lệnh APPLIED. Video/backup/cleanup cuối chỉ được chốt theo bằng chứng hiện hành tại [hồ sơ](../reports/evidence/task-012/run-20261117-200024/README.md). Xem [phương pháp](experiments.md), [task](../reports/task.md). Không chạy lại host/build/30 phút TASK-011 khi source/artifact giữ nguyên; không suy kết quả mô phỏng thành thử mạch thật.
 
 ## TASK-011 — Ma trận ba định danh
 
