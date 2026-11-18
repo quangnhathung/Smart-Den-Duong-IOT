@@ -51,3 +51,18 @@ node scripts/build-project-guide.cjs /path/to/node_modules/docx /path/to/new-dem
 ```
 
 Liên kết nguồn tương đối trong Word được tính từ vị trí output tới source thật; không lấy thư mục Markdown làm vị trí của tệp Word. Word v03 của TASK-01723 trang có10 liên kết nguồn nội bộ đã kiểm tồn tại,411 dòng nội dung khớp Markdown và schema PASS. WPS render23 trang v02 đã xem hết; v03 sửa đích hyperlink, render lại và23/23 PNG giống nguyên byte bản đã xem. Source không đổi trong render, instance WPS QA đã đóng. Bản v01/v02 được giữ, tệp guide TASK-015 đã bàn giao không ghi đè. [Bằng chứng](../reports/evidence/task-017/document-qa.json).
+
+## Viết lại báo cáo bốn chương TASK-019
+
+Người dùng yêu cầu chỉ Word, kế thừa bìa/style và không dùng skill humanize; đã tạo DOCX27 trang theo bố cục Lời nói đầu/IoT/phần cứng/phần mềm/kết quả demo/Lời kết. Không tạo bản Markdown của tiểu luận hoặc xuất PDF/PPTX. [Hồ sơ và Word](../reports/evidence/task-019/README.md).
+
+scripts/build-essay-report.cjs dùng docx-js riêng của TASK-012 để dựng body26 trang, đọc variation.json/audit và6 ảnh/biểu đồ đã có. scripts/merge-essay-report.py cần Python có lxml trong runtime Office riêng; ghép body vào báo cáo v05. Giữ12 phần tử bìa có section break, sectPr cuối, mọi part gốc ngoài document.xml/document.xml.rels; remap rId/media mới để không đụng ảnh bìa. Các đầu ra DOCX có guard từ chối ghi đè.
+
+```bash
+node scripts/build-essay-report.cjs output/task-012/run-20261117-200024 output/task-019/body-new.docx
+output/task-012/run-20261117-200024/runtime/office/venv/bin/python scripts/merge-essay-report.py output/task-012/deliverables/Bao-cao-Den-duong-thong-minh-Nhom7-v05.docx output/task-019/body-new.docx output/task-019/report-new.docx
+```
+
+Schema PASS462 paragraph; WPS read-only render27 trang, đã xem tất cả. PNG bìa trùng SHA với nguồn v05; styles/header/footer/theme/settings giữ nguyên byte. Mục lục hiện là bảng số trang đã kiểm đúng với bản27 trang, không phải field TOC tự cập nhật; khi sửa độ dài phải render và cập nhật lại. Native helper output/task-019/render-office.py tái dùng quy trình WPS của TASK-015, chỉ điều khiển instance mới, không chạm cửa sổ người dùng.
+
+Bảng kết quả lấy CSV/audit15 lượt/45 cửa sổ; kiểm mean/min/max và nguồn ảnh SHA. Lý thuyết dùng nguồn ITU/OASIS/Espressif/Wokwi, kết quả chỉ kế thừa hồ sơ cũ. Không chạy lại mô hình hoặc xác nhận phần cứng thật. Điều kiện không dùng humanize là yêu cầu của task này, không thay quy tắc dùng skill cho các task khác.
