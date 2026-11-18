@@ -11,17 +11,18 @@ Hệ thống đã có bộ nghiệm thu mô phỏng TASK-011 và TASK-012. Các 
 Bản Word chỉnh sửa được trong WPS hoặc Microsoft Word. Bản Markdown đi kèm để tìm kiếm và sao chép các lệnh dài. PDF có thể xuất từ WPS khi cần nộp.
 
 <!-- PAGE -->
+
 # Mục lục và cách dùng
 
-| Phần | Nội dung |
-|---|---|
-| 1 đến 4 | Kiến trúc, thư mục, cài Linux và Windows, cấu hình và cổng |
-| 5 đến 10 | Broker, backend, khởi tạo SQLite, build, Wokwi và khởi động nhanh |
-| 11 đến 17 | Cảm biến, AUTO, tổng quan, điều khiển, lịch sử, cảnh báo và phiên đo |
-| 18 đến 22 | API, lệnh, năng lượng, thực nghiệm thủ công và công cụ QA |
-| 23 đến 26 | Kiểm thử, xử lý lỗi, dừng và khởi động lại |
-| 27 đến 29 | Sao lưu SQLite, khôi phục gói bàn giao và chuyển máy |
-| 30 và phụ lục | Tìm source, checklist vận hành và tài liệu tham chiếu |
+| Phần          | Nội dung                                                             |
+| ------------- | -------------------------------------------------------------------- |
+| 1 đến 4       | Kiến trúc, thư mục, cài Linux và Windows, cấu hình và cổng           |
+| 5 đến 10      | Broker, backend, khởi tạo SQLite, build, Wokwi và khởi động nhanh    |
+| 11 đến 17     | Cảm biến, AUTO, tổng quan, điều khiển, lịch sử, cảnh báo và phiên đo |
+| 18 đến 22     | API, lệnh, năng lượng, thực nghiệm thủ công và công cụ QA            |
+| 23 đến 26     | Kiểm thử, xử lý lỗi, dừng và khởi động lại                           |
+| 27 đến 29     | Sao lưu SQLite, khôi phục gói bàn giao và chuyển máy                 |
+| 30 và phụ lục | Tìm source, checklist vận hành và tài liệu tham chiếu                |
 
 Trong Word hoặc WPS, mở Navigation hoặc Đề mục để nhảy đến tiêu đề. Các phần chính bắt đầu ở trang mới; số trang nằm ở chân trang.
 
@@ -32,6 +33,7 @@ Ký hiệu DoAn là thư mục cha chứa ba repo. Ví dụ Linux có thể là 
 Chạy hằng ngày không cần Node.js, npm, Playwright hoặc các helper trong output/task-012. Chỉ cần những thành phần runtime ở phần 2 đến 10. Node.js dùng cho kiểm thử dashboard và công cụ QA nâng cao; WPS dùng đọc tài liệu, không phải thành phần của hệ thống điều khiển.
 
 <!-- PAGE -->
+
 # 1 Kiến trúc và vị trí các thành phần
 
 Dữ liệu đi theo luồng cảm biến → ESP32 → MQTT → backend → SQLite → dashboard. Lệnh đi ngược từ dashboard → HTTP API → MQTT → node → ACK. Quyết định AUTO nằm ở từng ESP32; backend không tính mức PWM thay node.
@@ -64,6 +66,7 @@ Một source firmware tạo ba binary theo environment. Không sao chép src cho
 Giới hạn mô hình: khoảng cách tạo quy ước người/xe; biến trở giả lập tải; công suất và điện năng là kết quả tính toán. Sơ đồ này không phải thiết kế driver đèn công suất hoặc dây điện dùng với ESP32 thật.
 
 <!-- PAGE -->
+
 # 2 Chuẩn bị trên Linux
 
 Cài VS Code chính thức, Git, Python 3.12 cùng hỗ trợ venv, Docker Engine và Compose plugin theo hướng dẫn phù hợp bản phân phối. Không mặc định Python hệ thống đã là 3.12. Nếu chỉ có 3.13 hoặc 3.14, cài thêm 3.12 để dùng backend, giữ Python hệ thống.
@@ -96,6 +99,7 @@ Nếu terminal thường chưa nhận pio nhưng PlatformIO đã cài xong, dùn
 Trình duyệt cần mở được dashboard local. Internet được dùng khi cài package/image và chạy Wokwi với quyền tài khoản phù hợp; broker local không đồng nghĩa mô phỏng hoạt động hoàn toàn offline. Wokwi license được kích hoạt ở phần 9. WPS có thể dùng để đọc/chỉnh tài liệu.
 
 <!-- PAGE -->
+
 # 3 Chuẩn bị trên Windows
 
 Cài VS Code, Git for Windows, Python 3.12 và Docker Desktop từ nguồn chính thức. Hoàn tất yêu cầu hệ thống của Docker Desktop theo máy, mở ứng dụng và chờ Engine sẵn sàng. Dùng PowerShell cho các khối lệnh Windows. Cài ba extension PlatformIO IDE, Wokwi Simulator và Live Server như phần 2.
@@ -122,17 +126,18 @@ Nên chạy cả backend, Docker, VS Code và trình duyệt trên cùng môi tr
 Các bước MQTT trong phần 5 dùng docker compose exec để tránh phụ thuộc host networking của service mqtt-client trên Windows. Việc sub/pub trong container chỉ kiểm broker nội bộ; vẫn phải kiểm cổng host và telemetry thật từ Wokwi.
 
 <!-- PAGE -->
+
 # 4 Cấu hình cố định và bảng cổng
 
-| Thành phần | Giá trị chạy thông thường |
-|---|---|
-| MQTT trên máy host | 127.0.0.1:1883 |
-| MQTT từ ESP32 Wokwi | host.wokwi.internal:1883 |
-| API backend | http://127.0.0.1:8000 |
-| Swagger | http://127.0.0.1:8000/docs |
-| Dashboard Live Server | http://127.0.0.1:5500/ |
+| Thành phần                         | Giá trị chạy thông thường       |
+| ---------------------------------- | ------------------------------- |
+| MQTT trên máy host                 | 127.0.0.1:1883                  |
+| MQTT từ ESP32 Wokwi                | host.wokwi.internal:1883        |
+| API backend                        | http://127.0.0.1:8000           |
+| Swagger                            | http://127.0.0.1:8000/docs      |
+| Dashboard Live Server              | http://127.0.0.1:5500/          |
 | Serial node_01 / node_02 / node_03 | RFC2217 cổng 4000 / 4001 / 4002 |
-| Environment ba node | esp32dev / node_02 / node_03 |
+| Environment ba node                | esp32dev / node_02 / node_03    |
 
 Source đã khóa Espressif32 8.0.0, Arduino package 4.30312.261113, ESP32 libs 3.3.12, PubSubClient 2.8.0 và ArduinoJson 7.4.2. Giữ platformio.ini; không tự nâng package khi đang dùng bộ nghiệm thu.
 
@@ -152,6 +157,7 @@ Nếu chủ động đổi API sang 8001, phải đổi cả tham số --port c�
 Đợt QA TASK-012 dùng API 8001, SQLite riêng và cổng helper 18771–18773/CDP 19222–19224. Đây không phải các cổng cần mở cho chạy thông thường. Kiểm cổng đang dùng trước khi chạy, không dừng nhầm ứng dụng khác.
 
 <!-- PAGE -->
+
 # 5 Khởi động và kiểm tra broker MQTT
 
 Thư mục làm việc: DoAn/firmware. Các lệnh dưới dùng được trong Bash và PowerShell.
@@ -184,6 +190,7 @@ Terminal A phải nhận đúng setup-check-001. Topic diagnostics này không p
 Nếu Docker Engine chưa chạy, xử lý Engine trước. TASK-012 đã dùng broker native riêng trong QA khi daemon không hoạt động; đó là phương án của đợt kiểm, không phải yêu cầu build Mosquitto lại để chạy dự án. Không chạy đồng thời hai broker trên 1883.
 
 <!-- PAGE -->
+
 # 6 Cài backend và thiết lập môi trường
 
 Thư mục làm việc: DoAn/backend. Cài lần đầu; các lần sau dùng lại venv của chính máy đó.
@@ -225,6 +232,7 @@ $env:SMARTLIGHT_MQTT_PORT='1883'
 Chọn một tên DB nhất quán từ bước khởi tạo đến khởi động. SMARTLIGHT_DB tương đối tính từ thư mục chạy backend. Một terminal khác không tự kế thừa biến vừa khai báo. Muốn trở lại mặc định, bỏ biến của terminal hoặc mở terminal mới.
 
 <!-- PAGE -->
+
 # 7 Khởi tạo SQLite và chạy API
 
 Thư mục: DoAn/backend; backend phải đang dừng khi chạy init_db. Ví dụ sau dùng DB mặc định. Nếu phần 6 chọn demo-moi.db, thay đúng đường dẫn ở --db và giữ SMARTLIGHT_DB trỏ cùng tệp.
@@ -252,6 +260,7 @@ Mở http://127.0.0.1:8000/docs. Kiểm GET /api/health và /api/nodes. Health 2
 DB mới không có telemetry hoặc lịch sử giả để hiển thị. Dữ liệu thật sẽ đến khi Wokwi kết nối. Dừng API bằng Ctrl+C và đợi shutdown xong trước khởi tạo lại hoặc đổi DB.
 
 <!-- PAGE -->
+
 # 8 Build firmware và chuẩn bị ba node
 
 Mở DoAn/firmware bằng VS Code, dùng terminal PlatformIO. Lệnh chung Bash hoặc PowerShell:
@@ -274,17 +283,18 @@ py -3.12 scripts/prepare-simulation.py --node all
 
 Script kiểm source/config, độ mới và SHA256, sao chép đúng binary/ELF vào simulations/node_0N/build và ghi manifest.json. Các thư mục build bị Git ignore. Nếu báo artifact thiếu/cũ, kiểm build log; không copy một tệp cũ chỉ vì nó tồn tại.
 
-| Node | Environment | Cổng Serial |
-|---|---|---|
-| node_01 | esp32dev | 4000 |
-| node_02 | node_02 | 4001 |
-| node_03 | node_03 | 4002 |
+| Node    | Environment | Cổng Serial |
+| ------- | ----------- | ----------- |
+| node_01 | esp32dev    | 4000        |
+| node_02 | node_02     | 4001        |
+| node_03 | node_03     | 4002        |
 
 NodeIdentity.h chọn định danh từ SMARTLIGHT_NODE_INDEX=1/2/3; client ID khác nhau. Không build esp32dev rồi gán lại cùng binary cho cả ba node. Khi sửa source: build lại environment liên quan, chạy prepare lại và restart đúng mô phỏng để nạp tệp mới.
 
 Trong node_01 có thư mục timeout để thử mất ECHO. Đây là ca lỗi riêng, không phải node thứ tư; không chạy cùng node_01 chính vì trùng định danh.
 
 <!-- PAGE -->
+
 # 9 Kích hoạt và chạy ba Wokwi
 
 Trong VS Code bấm F1, chọn Wokwi Request a new License nếu chưa kích hoạt. Cho phép mở trang Wokwi, đăng nhập và gửi license về VS Code theo hướng dẫn chính thức. Không ghi license/token vào repo hoặc tài liệu; kiểm quyền sử dụng của tài khoản trước buổi demo. [Wokwi Getting Started](https://docs.wokwi.com/vscode/getting-started)
@@ -310,6 +320,7 @@ Xác nhận trên /api/nodes cả ba ONLINE/FRESH với telemetry mới. Các s�
 Giữ mô phỏng đang chạy, không Pause. Nếu cảm biến bị thanh công cụ che, click vùng nền trống và dùng Fit theo công cụ Wokwi, kiểm linh kiện đã nhìn rõ trước khi click. Không di chuyển dây hoặc linh kiện để chữa lỗi viewport.
 
 <!-- PAGE -->
+
 # 10 Chạy dashboard và khởi động hằng ngày
 
 Mở riêng DoAn/dashboard bằng VS Code. Nhấp phải index.html → Open with Live Server hoặc bấm Go Live. Mở http://127.0.0.1:5500/; không mở tệp bằng file://.
@@ -327,36 +338,37 @@ Dashboard không cần npm install, npm run dev, Vite hoặc framework. config.j
 
 ## Dấu hiệu đã sẵn sàng
 
-| Tầng | Cần quan sát |
-|---|---|
-| MQTT | Broker chạy, không lỗi bind hoặc liên tục đá client trùng ID |
-| Wokwi | Ba ID đúng, uptime tăng, không Pause, mqtt=1 |
-| Backend | /api/health 200, dropped_events=0 |
-| Node | ONLINE/FRESH, boot/sequence mới, không pending chưa xử lý |
+| Tầng      | Cần quan sát                                                         |
+| --------- | -------------------------------------------------------------------- |
+| MQTT      | Broker chạy, không lỗi bind hoặc liên tục đá client trùng ID         |
+| Wokwi     | Ba ID đúng, uptime tăng, không Pause, mqtt=1                         |
+| Backend   | /api/health 200, dropped_events=0                                    |
+| Node      | ONLINE/FRESH, boot/sequence mới, không pending chưa xử lý            |
 | Dashboard | Có dữ liệu đúng ba node; thay cảm biến một node chỉ tác động node đó |
 
 Tab trình duyệt bị ẩn sẽ tạm ngừng polling. Khi quay lại, chờ đồng bộ trước thao tác. Nếu chỉ mở dashboard mà backend/broker chưa chạy, dữ liệu trống hoặc suy giảm là phản hồi bình thường, không có chế độ tự sinh dữ liệu demo.
 
 <!-- PAGE -->
+
 # 11 Mạch và cách chỉnh từng cảm biến
 
-| Linh kiện | Chân tín hiệu ESP32 | Thao tác Wokwi |
-|---|---|---|
-| LDR | AO → GPIO34 | Click cảm biến, thay Lux |
-| PIR | OUT → GPIO27 | Click và Simulate Motion |
-| HC-SR04 | TRIG18, ECHO19 | Click và thay Distance cm |
-| Biến trở tải | SIG → GPIO35 | Xoay hoặc thay value 0–1023 |
-| LED vàng | PWM GPIO26 qua 220 Ω | Quan sát mức sáng; không phải đo dòng |
+| Linh kiện    | Chân tín hiệu ESP32  | Thao tác Wokwi                        |
+| ------------ | -------------------- | ------------------------------------- |
+| LDR          | AO → GPIO34          | Click cảm biến, thay Lux              |
+| PIR          | OUT → GPIO27         | Click và Simulate Motion              |
+| HC-SR04      | TRIG18, ECHO19       | Click và thay Distance cm             |
+| Biến trở tải | SIG → GPIO35         | Xoay hoặc thay value 0–1023           |
+| LED vàng     | PWM GPIO26 qua 220 Ω | Quan sát mức sáng; không phải đo dòng |
 
 LDR và biến trở dùng 3V3, PIR/HC-SR04 dùng 5V trong mô phỏng, GND chung. ADC firmware là 12 bit 0–4095; thang núm biến trở 0–1023 là thang UI khác, không phải ADC của ESP32.
 
 Bộ giá trị thuận tiện đã dùng trong QA:
 
 | Môi trường | Lux trên UI | ADC quan sát gần đúng |
-|---|---|---|
-| DAY | 100000 | 32 |
-| TWILIGHT | 100 | 2045 |
-| NIGHT | 0.1 | 4063 |
+| ---------- | ----------- | --------------------- |
+| DAY        | 100000      | 32                    |
+| TWILIGHT   | 100         | 2045                  |
+| NIGHT      | 0.1         | 4063                  |
 
 ADC thực có thể dao động; xác nhận bằng Serial/telemetry thay vì chỉ nhìn Lux. Lux là đầu vào mô phỏng, dashboard hiển thị ADC raw. Thay LDR rồi chờ bộ lọc 5 mẫu, xác nhận 1 giây theo clock node và quá trình dimming; không yêu cầu PWM đổi tức thì.
 
@@ -365,17 +377,18 @@ ADC thực có thể dao động; xác nhận bằng Serial/telemetry thay vì c
 Giữ các nút cảm biến rõ trong viewport, không click xuyên toolbar Pause. Khi đổi nhiều đầu vào, theo dõi raw từng trường để phát hiện thao tác chưa đến đúng linh kiện.
 
 <!-- PAGE -->
+
 # 12 Hiểu AUTO MANUAL và các mức sáng
 
-| Điều kiện AUTO | Mức mục tiêu |
-|---|---|
-| DAY kể cả có chuyển động | 0% |
-| TWILIGHT yên tĩnh | 50% |
-| NIGHT yên tĩnh | 25% |
-| TWILIGHT/NIGHT và người giả lập | 70% |
-| TWILIGHT/NIGHT và xe giả lập | 100% |
-| PIR HIGH nhưng khoảng cách lỗi | 100%, motion UNKNOWN |
-| Môi trường chưa xác định | 50% |
+| Điều kiện AUTO                  | Mức mục tiêu         |
+| ------------------------------- | -------------------- |
+| DAY kể cả có chuyển động        | 0%                   |
+| TWILIGHT yên tĩnh               | 50%                  |
+| NIGHT yên tĩnh                  | 25%                  |
+| TWILIGHT/NIGHT và người giả lập | 70%                  |
+| TWILIGHT/NIGHT và xe giả lập    | 100%                 |
+| PIR HIGH nhưng khoảng cách lỗi  | 100%, motion UNKNOWN |
+| Môi trường chưa xác định        | 50%                  |
 
 LDR lúc khởi tạo: ADC đã lọc <1200 là DAY, 1200–2600 là TWILIGHT, >2600 là NIGHT. Sau đó dùng hysteresis: vào DAY ở ≤1100, rời DAY ở ≥1300; vào NIGHT ở ≥2700, rời NIGHT ở ≤2500. Điều kiện mới phải ổn định 1 giây mô phỏng.
 
@@ -388,6 +401,7 @@ MANUAL nhận số nguyên 0–100 và ưu tiên cả ban ngày. Hết 60 giây 
 Đổi chế độ không xóa OPEN_LOAD. Tải lỗi, kết nối, môi trường và mode là các chiều độc lập; một node có thể vừa MANUAL vừa NIGHT vừa có OPEN_LOAD.
 
 <!-- PAGE -->
+
 # 13 Thao tác màn hình tổng quan
 
 Mở mục Tổng quan ở sidebar hoặc địa chỉ http://127.0.0.1:5500/#overview. Đây là nơi kiểm nhanh toàn tuyến trước demo.
@@ -405,6 +419,7 @@ Mở mục Tổng quan ở sidebar hoặc địa chỉ http://127.0.0.1:5500/#ov
 Nút Cập nhật yêu cầu đồng bộ lại; dữ liệu vẫn lấy từ API. Nếu các trường là dấu gạch và “chưa có dữ liệu”, kiểm Wokwi/backend/broker; không nhập số mẫu vào DB để làm dashboard có số.
 
 <!-- PAGE -->
+
 # 14 Điều khiển node trên dashboard
 
 Vào Điều khiển node, chọn node_01/node_02/node_03. Trước khi gửi, kiểm node được chọn, kết nối, dữ liệu lần cuối và mode thực nhận ở khung Trạng thái tại node.
@@ -421,18 +436,19 @@ Vào Điều khiển node, chọn node_01/node_02/node_03. Trước khi gửi, k
 
 Chọn AUTO và bấm Áp dụng thiết lập. AUTO không gửi brightness. Kiểm ACK và mức mục tiêu mới theo cảm biến hiện tại. Bản nháp ở form không tự gửi; chỉ nút Áp dụng mới tạo POST, polling không biến bản nháp thành telemetry.
 
-| Hiện tượng | Cách hiểu và thao tác |
-|---|---|
-| HTTP 202 hoặc PENDING | Đã tiếp nhận; chưa được coi là áp dụng |
-| APPLIED | Node xác nhận mode/mục tiêu; kiểm applied riêng |
-| REJECTED | Đọc reason, xác nhận boot/deadline/giá trị trước lệnh mới |
-| TIMEOUT | Hết hạn chờ ACK; ACK muộn không đổi kết quả cũ |
-| Không rõ kết quả do mất HTTP | Đọc command/pending của node, không bấm lặp liên tục |
-| Nút bị khóa dù node Online | Telemetry có thể quá 3s hoặc đang pending/API suy giảm |
+| Hiện tượng                   | Cách hiểu và thao tác                                     |
+| ---------------------------- | --------------------------------------------------------- |
+| HTTP 202 hoặc PENDING        | Đã tiếp nhận; chưa được coi là áp dụng                    |
+| APPLIED                      | Node xác nhận mode/mục tiêu; kiểm applied riêng           |
+| REJECTED                     | Đọc reason, xác nhận boot/deadline/giá trị trước lệnh mới |
+| TIMEOUT                      | Hết hạn chờ ACK; ACK muộn không đổi kết quả cũ            |
+| Không rõ kết quả do mất HTTP | Đọc command/pending của node, không bấm lặp liên tục      |
+| Nút bị khóa dù node Online   | Telemetry có thể quá 3s hoặc đang pending/API suy giảm    |
 
 Node được coi fresh theo ngưỡng giám sát 10s, nhưng gửi lệnh cần telemetry không quá 3s. Khi Wokwi chậm, cửa sổ cho gửi lệnh có thể ngắn; chờ mẫu mới, không tăng ngưỡng để bỏ qua bảo vệ.
 
 <!-- PAGE -->
+
 # 15 Lịch sử và cách đọc biểu đồ
 
 Vào Lịch sử dữ liệu hoặc #history. Chọn đúng node trước; lịch sử của node_01 không đại diện hai node còn lại.
@@ -457,6 +473,7 @@ Một trang truy vấn tối đa 1000 mẫu; biểu đồ chỉ thể hiện tra
 API và CSV dùng UTC. Ví dụ 18/11/2026 15:00 giờ Việt Nam là 2026-11-18T08:00:00Z. Với API, from/to phải kèm Z hoặc +00:00; không gửi +07:00 rồi kỳ vọng backend tự chấp nhận như UTC.
 
 <!-- PAGE -->
+
 # 16 Cảnh báo tải và mất kết nối
 
 Vào Cảnh báo, lọc theo node khi cần. Bảng có loại cảnh báo, trạng thái, bắt đầu và kết thúc. Phân biệt cảnh báo đang mở với các dòng Đã kết thúc còn được lưu làm lịch sử.
@@ -484,6 +501,7 @@ docker compose -f infra/compose.yaml start mosquitto
 Giữa hai lệnh, giữ Wokwi chạy và đổi LDR một node; xem Serial mode AUTO và target/applied phản ứng khi mqtt=0. Dashboard phải báo suy giảm/dữ liệu cũ, không báo tải đã phục hồi chỉ vì offline. Sau start, chờ ba node có telemetry mới; MANUAL cũ không được phát lại. Không reset ESP32 giữa ca nếu muốn chứng minh reconnect không reset.
 
 <!-- PAGE -->
+
 # 17 Tạo phiên đo và xuất CSV trên giao diện
 
 Vào Phiên thực nghiệm hoặc #experiments. Đảm bảo chưa có phiên đang mở, ba node fresh và đã chuẩn bị đầu vào. Một database chỉ có một phiên mở tại một thời điểm.
@@ -513,6 +531,7 @@ Reload trang sẽ đọc lại phiên từ server. Nếu bắt đầu nhận 409
 CSV chứa mẫu/quality, cấu hình/notes và các trường năng lượng/lý do loại. Mở trong WPS Spreadsheet hoặc công cụ CSV, giữ bản gốc; không sửa timestamp, seq hoặc dữ liệu lỗi để làm kết quả đẹp hơn.
 
 <!-- PAGE -->
+
 # 18 Dùng API để xem trạng thái và dữ liệu
 
 Mở Swagger tại http://127.0.0.1:8000/docs, chọn endpoint → Try it out → nhập tham số → Execute. Đọc HTTP status và JSON. Swagger là cách thuận tiện để tránh khác biệt quoting giữa hai shell.
@@ -535,20 +554,21 @@ Invoke-RestMethod http://127.0.0.1:8000/api/nodes
 Invoke-RestMethod 'http://127.0.0.1:8000/api/stats?node_id=node_01'
 ```
 
-| Endpoint GET | Mục đích |
-|---|---|
-| /api/health | Broker, DB, queue, dropped_events |
-| /api/nodes | Ba node, telemetry, age_s, can_command và pending |
-| /api/nodes/{node_id}/history | Lịch sử node, from/to/experiment_id/limit/offset |
-| /api/commands/{command_id} | result/reason của đúng lệnh |
-| /api/alerts | Cảnh báo, lọc node/phân trang |
-| /api/stats | Năng lượng/coverage theo node/khoảng/phiên |
-| /api/experiments và /api/experiments/{id} | Danh sách và chi tiết phiên |
-| /api/experiments/{id}/export.csv | Xuất nguyên phiên |
+| Endpoint GET                              | Mục đích                                          |
+| ----------------------------------------- | ------------------------------------------------- |
+| /api/health                               | Broker, DB, queue, dropped_events                 |
+| /api/nodes                                | Ba node, telemetry, age_s, can_command và pending |
+| /api/nodes/{node_id}/history              | Lịch sử node, from/to/experiment_id/limit/offset  |
+| /api/commands/{command_id}                | result/reason của đúng lệnh                       |
+| /api/alerts                               | Cảnh báo, lọc node/phân trang                     |
+| /api/stats                                | Năng lượng/coverage theo node/khoảng/phiên        |
+| /api/experiments và /api/experiments/{id} | Danh sách và chi tiết phiên                       |
+| /api/experiments/{id}/export.csv          | Xuất nguyên phiên                                 |
 
 HTTP seq/uptime_ms/deadline_uptime_ms là chuỗi thập phân để giữ uint64 chính xác. MQTT dùng số JSON. Không ép các giá trị lớn qua JavaScript Number để so thứ tự.
 
 <!-- PAGE -->
+
 # 19 Gửi lệnh và tạo phiên bằng API
 
 Ưu tiên dashboard cho thao tác thường ngày. Khi dùng API trực tiếp, chờ can_command=true và age_s nhỏ ngay trước POST; chỉ gửi một lần rồi dùng command_id để theo dõi.
@@ -573,7 +593,7 @@ Tạo phiên qua Swagger POST /api/experiments với body sau, thay tên/config/
 ```json
 {
   "name": "DEMO-NIGHT-R1",
-  "configuration": {"source":"live","rated_power_w":24},
+  "configuration": { "source": "live", "rated_power_w": 24 },
   "notes": "Ba node NIGHT, tai binh thuong; ghi lich thuc te"
 }
 ```
@@ -583,6 +603,7 @@ Dùng ID trả về để POST /api/experiments/{id}/stop và GET /api/experimen
 422: body/tham số không hợp lệ. 409: telemetry cũ/offline/pending hoặc phiên khác đang mở. 404: sai ID. 503: thành phần hệ thống không sẵn sàng. Khi mất phản hồi POST, đọc nodes/pending hoặc danh sách phiên trước, không tự phát lại.
 
 <!-- PAGE -->
+
 # 20 Điện năng baseline và hai loại đồng hồ
 
 Mỗi đèn mô hình có điện áp danh định 12 V, công suất 24 W, dòng định mức 2 A. Với tải bình thường:
@@ -607,6 +628,7 @@ Coverage tính theo thời gian nhận UTC, công bố covered_wall_s và missin
 API/UI chọn nguyên phiên dùng cửa sổ chung. Báo cáo TASK-012 chọn biên riêng từng node để bỏ thời gian node nhanh chờ node chậm, và xử lý năng lượng hàng đầu ở biên. Muốn so CSV/API/bảng Word phải giữ đúng node_id, from/to, experiment_id và quy tắc biên.
 
 <!-- PAGE -->
+
 # 21 Tổ chức một lượt thực nghiệm thủ công
 
 Tạo DB và tên lượt mới để không trộn với số liệu đã nghiệm thu. Chuẩn bị biểu ghi: mã kịch bản/lần lặp, source/hash binary, node/boot, đầu vào, UTC bắt đầu/kết thúc, uptime từng node và từng thao tác thực.
@@ -618,28 +640,29 @@ Tạo DB và tên lượt mới để không trộn với số liệu đã nghi�
 5. Dừng phiên, xuất CSV và ghi ID. Lưu ảnh/log có thời gian, không coi ảnh cuối là bằng chứng của toàn khoảng.
 6. Phân tích từng cửa sổ riêng, công bố đoạn loại/coverage và đối chiếu phép tính; chưa đối chiếu thì chưa gọi audit PASS.
 
-| Recipe | Lặp và thời lượng mỗi node |
-|---|---|
-| EX01 DAY, đổi chuyển động | 1 lần, 300s |
-| EX02 NIGHT yên tĩnh | 3 lần, 600s |
-| EX03 NIGHT, 150cm, PIR định kỳ | 3 lần, 600s |
-| EX04 NIGHT, 50cm, PIR định kỳ | 3 lần, 600s |
-| EX05 ba pha hỗn hợp | 3 lần, 900s |
-| EX06 tải0/phục hồi node02 | 1 lần, 300s |
-| EX07 mất broker/reconnect | 1 lần, 300s |
+| Recipe                         | Lặp và thời lượng mỗi node |
+| ------------------------------ | -------------------------- |
+| EX01 DAY, đổi chuyển động      | 1 lần, 300s                |
+| EX02 NIGHT yên tĩnh            | 3 lần, 600s                |
+| EX03 NIGHT, 150cm, PIR định kỳ | 3 lần, 600s                |
+| EX04 NIGHT, 50cm, PIR định kỳ  | 3 lần, 600s                |
+| EX05 ba pha hỗn hợp            | 3 lần, 900s                |
+| EX06 tải0/phục hồi node02      | 1 lần, 300s                |
+| EX07 mất broker/reconnect      | 1 lần, 300s                |
 
 PIR ở giây 15 rồi mỗi 30s trong pha có chuyển động. EX06 tác động tải0 tại60s, khôi phục180s. EX07 broker down60/recover120 theo node02; đổi LDR node01 DAY75/NIGHT90 để kiểm AUTO offline bằng Serial. Không dồn thao tác sau khi trễ; giới hạn chính là 2s mô phỏng. Pilot phải tách khỏi dữ liệu chính.
 
 <!-- PAGE -->
+
 # 22 EX05 và công cụ QA nâng cao
 
 EX05 dùng ba pha 300s, tổng 900s mỗi node; lặp lại nguyên lịch cho cả ba lượt.
 
-| Pha | node01 | node02 | node03 |
-|---|---|---|---|
-| 0 đến 300s | DAY | NIGHT yên tĩnh | NIGHT người150cm |
-| 300 đến 600s | TWILIGHT | NIGHT người150cm | NIGHT xe50cm |
-| 600 đến 900s | NIGHT xe50cm | DAY | NIGHT yên tĩnh |
+| Pha          | node01       | node02           | node03           |
+| ------------ | ------------ | ---------------- | ---------------- |
+| 0 đến 300s   | DAY          | NIGHT yên tĩnh   | NIGHT người150cm |
+| 300 đến 600s | TWILIGHT     | NIGHT người150cm | NIGHT xe50cm     |
+| 600 đến 900s | NIGHT xe50cm | DAY              | NIGHT yên tĩnh   |
 
 Trong công cụ TASK-012, UI chuẩn bị popup/tọa độ tại290/590s, nhưng chỉ đổi cảm biến tại300/600s. Không chỉnh lịch vật lý hoặc ngưỡng2s để làm lượt đạt. Giữ FAIL/INCOMPLETE và chạy lại trọn lượt lỗi; --resume chỉ tái dùng lượt PASS đúng recipe, không tiếp tục giữa cửa sổ bị ngắt.
 
@@ -662,6 +685,7 @@ QA_ROOT là đường dẫn cần thay, không phải thư mục được CLI t�
 Để lập một đợt tự động mới, cần dựng lại profile/license/cổng/đường dẫn và metadata PID/start ticks/boot của chính máy, hiệu chỉnh Lux, kiểm readiness và pilot. Helper as-run trong backup là hồ sơ tham chiếu, không phải bộ cài một lệnh đa nền tảng. Phương án thao tác tay ở phần21 vẫn dùng được độc lập. Xem docs/techs/experiments.md và source collector/ui/live trước khi triển khai QA mới; không chạy cleanup chứa PID của đợt cũ.
 
 <!-- PAGE -->
+
 # 23 Kiểm tra theo từng tầng
 
 Chạy kiểm tra khi thay đổi source hoặc cần xác nhận bộ môi trường; không lấy test logic thay cho mô phỏng. Các lệnh dưới không phải yêu cầu chạy lại15 lượt TASK-012 mỗi lần mở dashboard.
@@ -695,51 +719,54 @@ Hai tệp core.test.mjs và api.test.mjs hiện có trong repo. Node không bắ
 Tầng tích hợp: chạy broker/Wokwi/API/Live Server thật, kiểm đúng node, ACK và telemetry, mất/phục hồi kết nối, lịch sử/CSV. Tầng ổn định: cần một cửa sổ giám sát đủ dài có log, không suy từ build SUCCESS. TASK-011 đã có1800s thực; TASK-012 có15 lượt và audit độc lập. Kết quả kế thừa không chứng minh máy mới đã chạy đạt.
 
 <!-- PAGE -->
+
 # 24 Xử lý lỗi cài đặt và khởi động
 
-| Hiện tượng | Kiểm tra theo thứ tự |
-|---|---|
-| pio không được nhận diện | Chờ extension PlatformIO cài xong; dùng PlatformIO terminal hoặc đường dẫn Core ở phần2/3 |
-| Build tải package thất bại | Kiểm Internet/proxy/dung lượng/quyền cache; giữ pin platformio.ini và log lỗi |
-| Prepare báo cũ/thiếu | Đọc kết quả build đúng cả3 environment; không lấy binary khác node |
-| Docker không có Server | Mở Docker Desktop/Engine, kiểm context; chỉ cài CLI là chưa đủ |
-| Docker permission denied | Dùng quyền/context được cấu hình hợp lệ; không mở socket cho mọi user |
-| Bind1883 hoặc8000 thất bại | Kiểm tiến trình đang giữ cổng; dừng đúng dịch vụ của mình hoặc thống nhất cấu hình mới |
-| Python venv không tạo được | Xác nhận Python3.12 và gói venv phù hợp; không chép venv máy khác |
-| Module smartlight không thấy | Đang đứng đúng thư mục backend, dùng đúng .venv Python |
-| Database already owned | Chỉ một backend/worker trên DB; tìm instance cũ, Ctrl+C và đợi dừng |
-| Wokwi thiếu binary | Build và prepare, kiểm đường dẫn tương đối trong đúng folder mô phỏng |
-| Wokwi lỗi license | Kích hoạt qua extension/tài khoản, kiểm quyền sử dụng; không lưu token trong repo |
-| Browser không kết nối API | Mở /docs trực tiếp, so API_BASE_URL và cổng uvicorn |
-| CORS lỗi nhưng API mở được | So origin thật của Live Server với SMARTLIGHT_ORIGINS; đổi biến rồi restart backend |
+| Hiện tượng                   | Kiểm tra theo thứ tự                                                                      |
+| ---------------------------- | ----------------------------------------------------------------------------------------- |
+| pio không được nhận diện     | Chờ extension PlatformIO cài xong; dùng PlatformIO terminal hoặc đường dẫn Core ở phần2/3 |
+| Build tải package thất bại   | Kiểm Internet/proxy/dung lượng/quyền cache; giữ pin platformio.ini và log lỗi             |
+| Prepare báo cũ/thiếu         | Đọc kết quả build đúng cả3 environment; không lấy binary khác node                        |
+| Docker không có Server       | Mở Docker Desktop/Engine, kiểm context; chỉ cài CLI là chưa đủ                            |
+| Docker permission denied     | Dùng quyền/context được cấu hình hợp lệ; không mở socket cho mọi user                     |
+| Bind1883 hoặc8000 thất bại   | Kiểm tiến trình đang giữ cổng; dừng đúng dịch vụ của mình hoặc thống nhất cấu hình mới    |
+| Python venv không tạo được   | Xác nhận Python3.12 và gói venv phù hợp; không chép venv máy khác                         |
+| Module smartlight không thấy | Đang đứng đúng thư mục backend, dùng đúng .venv Python                                    |
+| Database already owned       | Chỉ một backend/worker trên DB; tìm instance cũ, Ctrl+C và đợi dừng                       |
+| Wokwi thiếu binary           | Build và prepare, kiểm đường dẫn tương đối trong đúng folder mô phỏng                     |
+| Wokwi lỗi license            | Kích hoạt qua extension/tài khoản, kiểm quyền sử dụng; không lưu token trong repo         |
+| Browser không kết nối API    | Mở /docs trực tiếp, so API_BASE_URL và cổng uvicorn                                       |
+| CORS lỗi nhưng API mở được   | So origin thật của Live Server với SMARTLIGHT_ORIGINS; đổi biến rồi restart backend       |
 
 Kiểm listener Linux bằng ss -ltnp; Windows bằng Get-NetTCPConnection -State Listen hoặc Test-NetConnection với cổng cần thử. Chỉ PID/tên cổng chưa đủ để cho phép dừng tiến trình không thuộc dự án.
 
 Khi đổi config.js, tải lại trang dashboard. Khi đổi biến môi trường, restart backend trong terminal có biến mới. Khi đổi C++ hoặc định danh, build/prepare/restart Wokwi. Ba loại thay đổi có ba cách áp dụng khác nhau.
 
 <!-- PAGE -->
+
 # 25 Xử lý dữ liệu cũ lệnh và mô phỏng
 
-| Hiện tượng | Nguyên nhân cần kiểm và thao tác |
-|---|---|
-| Một node offline, hai node khác chạy | Kiểm đúng cửa sổ Wokwi, nút Pause/Resume, uptime Serial, cổng và binary/node ID |
-| Node MQTT nối rồi rớt liên tục | Có hai mô phỏng cùng client ID không; timeout/gateway/mạng có log gì |
-| Tất cả node mất dữ liệu | Broker/API/collector, gateway và host có ngủ/reboot không; không vội sửa cảm biến |
-| Online nhưng nút điều khiển khóa | age_s có quá3s, pending hay health suy giảm; chờ mẫu mới |
-| POST409 sát thời điểm nhấn | Dữ liệu có thể vừa vượt3s; kiểm trạng thái rồi chủ động thao tác mới, không vòng retry tự động |
-| 202 nhưng PWM chưa đổi | Poll command result, sau APPLIED chờ dimming/telemetry; kiểm đúng node |
-| MANUAL tự mất | Đã hết60s uptime hoặc MQTT ngắt; reconnect không phục hồi lệnh cũ |
-| Khoảng cách gần nhưng không tăng sáng | PIR cần HIGH và AUTO không phải DAY; kiểm hold và giá trị raw |
-| Fault không phục hồi | Tải đã lên đủ chưa, applied≥20% và ổn định chưa; đèn tắt không tự xóa lỗi |
-| Chart trống/ngắt | Bộ lọc giờ/phiên, phân trang, quality/boot/gap; không nối dữ liệu thiếu bằng tay |
-| CSV khác số trên Word | So đúng node, phiên, biên riêng và đoạn loại; tổng1h/nguyên phiên không phải cửa sổ chính |
-| Trạng thái không cập nhật khi quay lại tab | Tab ẩn dừng polling; chờ đồng bộ và kiểm nút Cập nhật |
+| Hiện tượng                                 | Nguyên nhân cần kiểm và thao tác                                                               |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| Một node offline, hai node khác chạy       | Kiểm đúng cửa sổ Wokwi, nút Pause/Resume, uptime Serial, cổng và binary/node ID                |
+| Node MQTT nối rồi rớt liên tục             | Có hai mô phỏng cùng client ID không; timeout/gateway/mạng có log gì                           |
+| Tất cả node mất dữ liệu                    | Broker/API/collector, gateway và host có ngủ/reboot không; không vội sửa cảm biến              |
+| Online nhưng nút điều khiển khóa           | age_s có quá3s, pending hay health suy giảm; chờ mẫu mới                                       |
+| POST409 sát thời điểm nhấn                 | Dữ liệu có thể vừa vượt3s; kiểm trạng thái rồi chủ động thao tác mới, không vòng retry tự động |
+| 202 nhưng PWM chưa đổi                     | Poll command result, sau APPLIED chờ dimming/telemetry; kiểm đúng node                         |
+| MANUAL tự mất                              | Đã hết60s uptime hoặc MQTT ngắt; reconnect không phục hồi lệnh cũ                              |
+| Khoảng cách gần nhưng không tăng sáng      | PIR cần HIGH và AUTO không phải DAY; kiểm hold và giá trị raw                                  |
+| Fault không phục hồi                       | Tải đã lên đủ chưa, applied≥20% và ổn định chưa; đèn tắt không tự xóa lỗi                      |
+| Chart trống/ngắt                           | Bộ lọc giờ/phiên, phân trang, quality/boot/gap; không nối dữ liệu thiếu bằng tay               |
+| CSV khác số trên Word                      | So đúng node, phiên, biên riêng và đoạn loại; tổng1h/nguyên phiên không phải cửa sổ chính      |
+| Trạng thái không cập nhật khi quay lại tab | Tab ẩn dừng polling; chờ đồng bộ và kiểm nút Cập nhật                                          |
 
 Nếu Wokwi Pause, uptime đứng và telemetry dừng dù giao diện mạch vẫn hiện. Nhấn Resume ở đúng phiên; không restart ngay nếu đang kiểm tính liên tục của boot. Nếu phải restart, ghi boot mới và không nối năng lượng xuyên boot.
 
 Giữ bằng chứng FAIL/INCOMPLETE: thời điểm, hành động, node/boot, Serial/API/log. Không xóa DB, sửa thời gian hoặc làm mới cache để che nguyên nhân. Sau sửa công cụ hoặc môi trường, chỉ chạy lại ca bị ảnh hưởng theo tiêu chí đã định.
 
 <!-- PAGE -->
+
 # 26 Dừng khởi động lại và demo ngắn
 
 ## Dừng bình thường
@@ -758,18 +785,19 @@ Làm theo phần10; dùng lại đúng DB nếu muốn giữ lịch sử. Khởi
 
 ## Trình diễn khoảng tám đến mười phút
 
-| Đoạn | Thao tác và điều cần giải thích |
-|---|---|
-| Mở đầu | Kiến trúc,3 ID, dữ liệu mô phỏng và điều khiển tại node |
-| Cảm biến | LDR DAY/TWILIGHT/NIGHT, PIR150/50cm, hold và dimming |
-| Điều khiển | MANUAL80 đúng node, ACK và applied, trở lại AUTO |
-| Cảnh báo | Tải0, OPEN_LOAD, phục hồi tải và alert đóng |
-| Kết nối | Stop/start riêng broker, Serial AUTO offline, ba node reconnect |
-| Kết quả | Phiên đã lưu/CSV, công thức, baseline và coverage |
+| Đoạn       | Thao tác và điều cần giải thích                                 |
+| ---------- | --------------------------------------------------------------- |
+| Mở đầu     | Kiến trúc,3 ID, dữ liệu mô phỏng và điều khiển tại node         |
+| Cảm biến   | LDR DAY/TWILIGHT/NIGHT, PIR150/50cm, hold và dimming            |
+| Điều khiển | MANUAL80 đúng node, ACK và applied, trở lại AUTO                |
+| Cảnh báo   | Tải0, OPEN_LOAD, phục hồi tải và alert đóng                     |
+| Kết nối    | Stop/start riêng broker, Serial AUTO offline, ba node reconnect |
+| Kết quả    | Phiên đã lưu/CSV, công thức, baseline và coverage               |
 
 Không chờ đo15 phút trong buổi trình bày; dùng dữ liệu đã ghi cho phân tích. Nếu live gián đoạn, có thể dùng video bàn giao và nói rõ đang dùng video. Không nâng toolchain sát buổi bảo vệ.
 
 <!-- PAGE -->
+
 # 27 Sao lưu SQLite không làm mất dữ liệu
 
 Chọn tên backup mới, giữ DB gốc. Có thể dùng SQLite backup API để lấy snapshot nhất quán; không chỉ copy một tệp .db đang ghi mà bỏ WAL. Để đơn giản cho vận hành, dừng backend theo phần26 trước khi chạy đoạn mã dưới.
@@ -811,6 +839,7 @@ Chạy từ backend nếu tệp script đặt tại đây. Linux: .venv/bin/pyth
 Giữ đầu ra số dòng, quick_check và SHA256 cùng thời điểm/cấu hình. Backup báo lỗi thì giữ log và kiểm nguyên nhân; đừng coi một tệp đích đã xuất hiện là backup thành công.
 
 <!-- PAGE -->
+
 # 28 Khôi phục bộ bàn giao đầy đủ
 
 Gói TASK-012 cuối là backup-verified-20261118-r02.tar.gz, khoảng375 MiB. SHA256 tại thời điểm bàn giao:
@@ -838,6 +867,7 @@ Gói còn có qa-final.db, raw gzip, mọi attempt kể cả lỗi, artifact/con
 Không có license/profile Wokwi, credential, .venv hoặc node_modules trong gói. Cài lại dependency/extension và kích hoạt quyền trên máy mới. Các đường dẫn/PID trong qa-tooling là tham chiếu đợt đã chạy; không thực thi cleanup hoặc startup cũ nguyên xi.
 
 <!-- PAGE -->
+
 # 29 Chuyển máy và xác minh dữ liệu phục hồi
 
 1. Lấy đủ ba source và gói dữ liệu nếu cần lịch sử; giữ backup gốc và verification.
@@ -870,20 +900,21 @@ with sqlite3.connect(p.as_uri() + "?mode=ro", uri=True) as db:
 Gói r02 có145.861 telemetry,17 command,21 experiment, pending0, phiên mở0 và ingest_errors0. Đó là số snapshot, không phải số kỳ vọng cố định sau khi đã chạy thêm. quick_check=ok kiểm cấu trúc DB; SHA và số dòng/bằng chứng đối chiếu mới giúp kiểm dữ liệu đúng bản. Không xóa các phiên lỗi để số liệu khớp báo cáo15 lượt chính.
 
 <!-- PAGE -->
+
 # 30 Tìm source và kiểm tra trước khi demo
 
-| Muốn hiểu hoặc sửa | Nơi đọc trước |
-|---|---|
-| Entry point Arduino | firmware/src/main.cpp và FirmwareApp.cpp |
-| Ngưỡng/timer/mức sáng | ControlConfig.h, LightingController, DimmingController |
-| Cảm biến, pin/timeout | SensorReader; simulations/node_0N/diagram.json |
-| Lỗi tải | FaultDetector |
-| ID/topic/wire | NodeIdentity.h, MqttProtocol, Connectivity |
-| Khởi tạo/cấu hình API | backend/smartlight/config.py, init_db.py, api.py |
-| SQLite và collector | storage.py, service.py, engine.py, transport.py |
-| Năng lượng/CSV | reporting.py và firmware/scripts/experiment_tools/analysis.py |
-| Màn hình/polling/chart | dashboard/js/app.js, api.js, core.js, charts.js |
-| Phương pháp/lịch sử | firmware/docs/techs và docs/reports/evidence |
+| Muốn hiểu hoặc sửa     | Nơi đọc trước                                                 |
+| ---------------------- | ------------------------------------------------------------- |
+| Entry point Arduino    | firmware/src/main.cpp và FirmwareApp.cpp                      |
+| Ngưỡng/timer/mức sáng  | ControlConfig.h, LightingController, DimmingController        |
+| Cảm biến, pin/timeout  | SensorReader; simulations/node_0N/diagram.json                |
+| Lỗi tải                | FaultDetector                                                 |
+| ID/topic/wire          | NodeIdentity.h, MqttProtocol, Connectivity                    |
+| Khởi tạo/cấu hình API  | backend/smartlight/config.py, init_db.py, api.py              |
+| SQLite và collector    | storage.py, service.py, engine.py, transport.py               |
+| Năng lượng/CSV         | reporting.py và firmware/scripts/experiment_tools/analysis.py |
+| Màn hình/polling/chart | dashboard/js/app.js, api.js, core.js, charts.js               |
+| Phương pháp/lịch sử    | firmware/docs/techs và docs/reports/evidence                  |
 
 ## Checklist trước buổi chạy
 
@@ -898,18 +929,19 @@ Gói r02 có145.861 telemetry,17 command,21 experiment, pending0, phiên mở0 v
 Thay đổi tài liệu này không đổi thuật toán hoặc pin map. Nếu sửa code sản phẩm, kiểm tầng liên quan và cập nhật manifest/bằng chứng mới; không tái dùng kết quả cũ như nghiệm thu source mới. Năng lượng chỉ là mô hình; khả năng hai thành viên tự vận hành/giải thích cần được diễn tập thực tế riêng.
 
 <!-- PAGE -->
+
 # Phụ lục MQTT và giao diện Serial
 
 Prefix MQTT là huit/nhom7/smartlight/v1. Node ID hợp lệ node_01/node_02/node_03 phải khớp cả topic và payload; mỗi boot có boot_id mới. Client ID thực có dạng smartlight-node_01-p0; hậu tố p0 còn trong tên vì tương thích lịch sử, không có nghĩa đang chạy firmware P0 cũ.
 
-| Topic sau prefix/node_id | Hướng và ý nghĩa |
-|---|---|
-| telemetry | Node gửi sensor/control/boot/seq/uptime; QoS0, không retained |
-| availability | ONLINE/OFFLINE retained và LWT; chưa đủ chứng minh telemetry fresh |
-| command | Backend gửi QoS1, không retained; đúng boot/deadline/command_id |
-| ack | Node xác nhận APPLIED/REJECTED/reason, QoS0 |
-| diagnostics/ping và diagnostics/pong | Kiểm đường mạng, không thay nghiệp vụ/ACK |
-| diagnostics/heartbeat | Chẩn đoán; không dùng làm mẫu năng lượng |
+| Topic sau prefix/node_id             | Hướng và ý nghĩa                                                   |
+| ------------------------------------ | ------------------------------------------------------------------ |
+| telemetry                            | Node gửi sensor/control/boot/seq/uptime; QoS0, không retained      |
+| availability                         | ONLINE/OFFLINE retained và LWT; chưa đủ chứng minh telemetry fresh |
+| command                              | Backend gửi QoS1, không retained; đúng boot/deadline/command_id    |
+| ack                                  | Node xác nhận APPLIED/REJECTED/reason, QoS0                        |
+| diagnostics/ping và diagnostics/pong | Kiểm đường mạng, không thay nghiệp vụ/ACK                          |
+| diagnostics/heartbeat                | Chẩn đoán; không dùng làm mẫu năng lượng                           |
 
 Trong firmware, nghe telemetry node_02 thật bằng Bash hoặc PowerShell:
 
@@ -924,6 +956,7 @@ Serial nhận dòng MANUAL 80 hoặc AUTO có newline. Đây là lệnh cục b�
 Khi muốn kiểm cache/retry/deadline wire, xem docs/techs/mqtt.md và source protocol. Cache32 ID trong một boot trả ACK cũ cho lệnh trùng đúng nội dung, không gia hạn MANUAL lần hai; backend retry tối đa một lần sau2s và TIMEOUT sau10s. Không dùng retained command hoặc phát lại lệnh đã hết boot để khôi phục MANUAL.
 
 <!-- PAGE -->
+
 # Phụ lục nguồn đối chiếu và mức kiểm chứng
 
 ## Nguồn cục bộ
