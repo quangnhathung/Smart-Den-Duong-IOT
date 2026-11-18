@@ -1,12 +1,12 @@
-# TASK-016 — Diễn tập vận hành và bảo vệ với hai thành viên
+# TASK-018 — Diễn tập vận hành và bảo vệ với hai thành viên
 
 - Trạng thái: Chưa bắt đầu
 - Tiến độ: 0/3 mục nghiệm thu dự kiến
-- Cập nhật: 2026-11-18T15:50:12+07:00
+- Cập nhật: 2026-11-18T16:20:56+07:00
 
 ## Mô tả và phạm vi
 
-Kế thừa nội dung đề xuất TASK-014 chưa triển khai, sau khi người dùng ưu tiên TASK-015 tạo hướng dẫn. Mã đề xuất kế tiếp theo lịch sử là TASK-016. Đề xuất sau TASK-015: hai thành viên dùng bộ bàn giao/runbook để tự khởi động mô hình, chạy demo và giải thích thuật toán, giao thức, năng lượng/độ phủ và giới hạn. Chỉ thực hiện khi người dùng giao task; chưa chạy trong TASK-015. Không thêm tính năng hoặc tự triển khai cloud.
+Kế thừa đề xuất TASK-016 chưa thực hiện, đã có thêm kịch bản TASK-017. Mã đề xuất kế tiếp theo lịch sử là TASK-018. Đề xuất sau TASK-017: hai thành viên dùng bộ bàn giao/runbook/kịch bản demo để tự khởi động mô hình, chạy demo và giải thích thuật toán, giao thức, năng lượng/độ phủ và giới hạn. Chỉ thực hiện khi người dùng giao task; chưa chạy trong TASK-017. Không thêm tính năng hoặc tự triển khai cloud.
 
 ## Tham chiếu SRS
 
@@ -24,4 +24,4 @@ Chưa có xác nhận trực tiếp từ hai thành viên. Agent không tự ghi
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-TASK-012 và TASK-015 đã hoàn thành; cần người dùng giao TASK-016, hai thành viên sẵn sàng và máy có PlatformIO/Wokwi/gateway, Python backend, MQTT và VS Code Live Server. Kiểm lại manifest trước chạy; helper/PID của đợt QA cũ chỉ là tham chiếu, không chạy mù.
+TASK-012, TASK-015 và TASK-017 đã hoàn thành; cần người dùng giao TASK-018, hai thành viên sẵn sàng và máy có PlatformIO/Wokwi/gateway, Python backend, MQTT và VS Code Live Server. Kiểm lại manifest trước chạy; helper/PID của đợt QA cũ chỉ là tham chiếu, không chạy mù.

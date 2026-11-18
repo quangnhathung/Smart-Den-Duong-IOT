@@ -1,3 +1,15 @@
+# TASK-017 — Kịch bản giới thiệu và demo toàn diện
+
+- Hoàn thành: 2026-11-18T16:20:56+07:00; **4/4 nhóm nghiệm thu**.
+- [x] Đối chiếu source/controller/UI và dữ liệu TASK-012, chốt node/đầu vào/timeline.
+- [x] Lời mở đầu/kiến trúc/kết luận, cảnh Wokwi/dashboard, bản20 phút/7 phút,14 Q&A và xử lý sự cố.
+- [x] Word v03 23 trang, schema/WPS,411 dòng nội dung và10 liên kết nội bộ PASS; Markdown đồng nội dung.
+- [x] Kiểm timeline/số liệu/cú pháp, giữ source/lịch sử, cập nhật techs và đề xuất diễn tập.
+
+[Hồ sơ](evidence/task-017/README.md). Chưa chạy diễn tập con người hoặc stack live mới; không dùng kịch bản làm bằng chứng PASS. Bộ tài liệu trước giữ nguyên. TASK-018 là đề xuất, chưa thực hiện.
+
+---
+
 # TASK-015 — Hướng dẫn cài đặt và vận hành toàn dự án
 
 - Hoàn thành: 2026-11-18T15:50:12+07:00; **4/4 nhóm nghiệm thu**.

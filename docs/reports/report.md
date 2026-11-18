@@ -1,3 +1,30 @@
+## 2026-11-18T16:20:56+07:00 — TASK-017 — Kịch bản giới thiệu và demo chi tiết
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 4/4 nhóm nghiệm thu
+
+### Đã thực hiện
+
+Soạn [kịch bản](../demo-script.md), Word v03 chỉnh sửa được23 trang và Markdown đồng nội dung. Có mở đầu chi tiết/bài toán/kiến trúc, phân vai A/B, timeline20 phút, từng cảnh thao tác/lời nói/kỳ vọng/chờ/lỗi, nhánh chỉ Wokwi khi MQTT0, kết quả thực nghiệm có nguồn, kết luận, bản rút gọn7 phút,14 câu hỏi bảo vệ và phiếu diễn tập. Tái dùng generator, thêm source Markdown tùy chọn/title động và sửa liên kết nguồn theo vị trí DOCX; giữ cách gọi guide cũ và mọi tệp đã giao.
+
+### Kiểm tra và kết quả
+
+PASS schema, native WPS23 trang. V02 đã xem hết; v03 chỉ sửa đích hyperlink, render lại và23/23 PNG giống nguyên byte ảnh đã xem.411 dòng nội dung Markdown→DOCX,23 heading và10 liên kết nội bộ PASS; source không đổi trong render, WPS QA đã đóng. Timeline11 đoạn liên tục1200s/bản ngắn8 đoạn420s; số trung bình/tỷ lệ EX02–05 và coverage EX07 khớp JSON/CSV sau làm tròn. JSON/Bash cú pháp PASS. Hash30 tệp firmware,26 backend,15 dashboard không đổi. [Hồ sơ](evidence/task-017/README.md).
+
+### Vướng mắc
+
+Không có vướng mắc còn chặn. Các lệnh và lời dẫn là kịch bản cần diễn tập, không phải bằng chứng buổi demo mới hoặc Windows đã chạy. Không tự xác nhận hai thành viên đã trình bày thành công.
+
+### Cách giải quyết
+
+Mỗi cảnh có điều kiện chuyển thật theo telemetry/ACK/Serial; nhấn PIR mới kích người/xe, giữ hold/clock và tách target/applied. Phần no-replay/pending không được suy từ cảnh không tạo pending; số liệu chính tách phiên demo. Giữ giới hạn dữ liệu mô phỏng/coverage và chuyển video có thông báo khi live gián đoạn.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật runbook/README/experiments/document-skills/task/checklist/next-task, tham chiếu SRS1–9/12/13/15. Giữ nguyên mọi byte report/checklist cũ và snapshot task/đề xuất trước. Đề xuất TASK-018 diễn tập hai thành viên theo kịch bản mới, kế thừa016 chưa thực hiện; chưa triển khai. Không chạy lại stack live/build/15 lượt, không sửa sản phẩm/DB hoặc commit/push/cloud.
+
+---
+
 ## 2026-11-18T15:50:12+07:00 — TASK-015 — Hướng dẫn cài đặt và vận hành toàn dự án
 
 - Trạng thái: Hoàn thành

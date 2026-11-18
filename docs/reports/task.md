@@ -1,34 +1,34 @@
-# TASK-015 — Hướng dẫn cài đặt và vận hành toàn dự án
+# TASK-017 — Kịch bản giới thiệu và demo toàn diện
 
 - Trạng thái: Hoàn thành
 - Tiến độ: 4/4 nhóm nghiệm thu
-- Cập nhật: 2026-11-18T15:50:12+07:00
+- Cập nhật: 2026-11-18T16:20:56+07:00
 
 ## Mô tả và phạm vi
 
-Người dùng yêu cầu một tài liệu chi tiết, toàn diện về setup, khởi tạo, chạy và thao tác toàn bộ dự án. Tạo Word chỉnh sửa được và bản Markdown đồng nội dung, hướng dẫn Linux/Windows, ba repo, MQTT/Docker, PlatformIO, ba Wokwi, backend/SQLite, dashboard Live Server, API, thực nghiệm, backup/restore và xử lý lỗi. Đối chiếu source thực tế; giữ source sản phẩm, pin map/schema/toolchain và mọi dữ liệu cũ. Không chạy lại chiến dịch TASK-012, không commit/push/cloud.
+Người dùng yêu cầu kịch bản demo chi tiết toàn diện, giới thiệu chi tiết. Tạo lời dẫn có thể đọc trực tiếp, thao tác Wokwi/dashboard, phân vai gợi ý hai người, thời lượng khoảng20 phút, bản rút gọn, kết quả quan sát, số liệu thực nghiệm có nguồn, câu hỏi bảo vệ và phương án sự cố. Bàn giao Word chỉnh sửa được cùng Markdown. Giữ toàn bộ source sản phẩm/dữ liệu, không tự chạy buổi demo hoặc triển khai dashboard mô phỏng mới.
 
-Đây là yêu cầu mới, dùng TASK-015; TASK-014 đã là mã đề xuất diễn tập con người, chưa triển khai. [TASK-012 hoàn thành trước đó](evidence/task-015/task.md-before.md) được bảo toàn.
+Task mới dùng017 vì016 đang là mã đề xuất diễn tập chưa bắt đầu. [Task015 trước đó](evidence/task-017/task.md-before.md) và đề xuất016 được giữ nguyên trong hồ sơ.
 
 ## Tham chiếu SRS
 
-SRS mục3–9,12–15, hỗ trợ vận hành và bàn giao; không triển khai tính năng mới hoặc coi thiết kế SRS là bằng chứng chức năng.
+SRS mục1–9,12,13,15; nhấn mạnh demo mô phỏng, AUTO tại node, PIR là điều kiện kích hoạt, MQTT/ACK và hai loại clock. Không dùng nội dung dự kiến làm bằng chứng chức năng.
 
 ## Tiêu chí hoàn thành và tiến độ
 
-- [x] Đối chiếu cấu hình/lệnh/source ba repo, phân biệt chạy mặc định và QA; ghi nguồn và giới hạn kiểm chứng.
-- [x] Soạn hướng dẫn đầu-cuối: cài, khởi tạo, khởi động, năm màn hình, demo/API, dữ liệu, thử nghiệm, dừng/khôi phục và lỗi thường gặp.
-- [x] Tạo DOCX chỉnh sửa được, kiểm cấu trúc và render/kiểm trực quan mọi trang bằng WPS; giữ Markdown đồng nội dung.
-- [x] Kiểm các lệnh đọc/khởi tạo an toàn trên dữ liệu tạm phù hợp, liên kết và bảo toàn source/lịch sử; cập nhật techs/task/report/checklist/đề xuất tiếp theo.
+- [x] Đối chiếu controller/cấu hình/UI và số liệu TASK-012; chọn timeline, node và đầu vào không mâu thuẫn.
+- [x] Soạn mở đầu/kiến trúc, từng cảnh gồm lời nói/thao tác/kỳ vọng/chờ/xử lý lỗi, kết luận/Q&A/checklist và nhánh chỉ Wokwi khi MQTT chưa chạy.
+- [x] Tạo DOCX/Markdown đồng nội dung, schema và WPS kiểm mọi trang; giữ các tệp đã giao trước.
+- [x] Kiểm timeline/số liệu/luồng/cú pháp/liên kết, bảo toàn source/lịch sử; cập nhật tài liệu liên quan và đề xuất tiếp theo.
 
 ## Vướng mắc và cách giải quyết
 
-Đã giải quyết: lệnh đối chiếu ban đầu gọi Python hệ thống thiếu lxml; chuyển đúng runtime Office QA riêng đã có, không cài vào venv sản phẩm. Native WPS đã render/kiểm đủ34 trang; schema,695 dòng nội dung và heading/table/ảnh/numbering đạt. PDF không bắt buộc; người dùng tự xuất WPS. Không xác nhận đã cài/chạy toàn stack trên Windows hoặc máy mới nếu chưa làm thực tế.
+Không có vướng mắc chặn. Đã sửa đích liên kết nguồn trong bản cuối; WPS23 trang, schema,411 dòng nội dung và10 liên kết nội bộ đã kiểm. Tái dùng runtime riêng, không cài lại hoặc xuất PDF tự động. Mốc thời lượng là dự kiến cho trình bày, mỗi thao tác chuyển cảnh theo trạng thái thực, không giả định timer mô phỏng bằng giờ máy.
 
 ## Phụ thuộc và điều kiện bắt đầu
 
-Đã được người dùng giao. Đọc source/docs tại ba repo cùng cấp, runtime DOCX và WPS có sẵn. Chỉ thao tác tài liệu, công cụ xuất và SQLite tạm; không tự khởi động mô phỏng hoặc thay DB người dùng.
+Đã được giao soạn tài liệu. Dữ liệu và bằng chứng TASK-011/012, guide TASK-015 và source hiện hành có sẵn. Chưa có xác nhận hai thành viên đã tự diễn tập; không ghi PASS thay con người.
 
 ## Kết quả bàn giao
 
-Word output/task-015/Huong-dan-cai-dat-va-van-hanh-toan-du-an-Nhom7-v01.docx và Markdown đồng nội dung docs/project-guide.md. [QA từng trang](evidence/task-015/document-qa.json), [kiểm lệnh/dữ liệu tạm](evidence/task-015/command-checks.json). Không chạy lại firmware/build/live hoặc xác nhận Windows toàn stack; các kết quả TASK-011/012 được dẫn nguồn riêng. Đề xuất diễn tập kế tiếp TASK-016, chưa thực hiện; đề xuất TASK-014 cũ được bảo toàn trong hồ sơ.
+[Markdown kịch bản](../demo-script.md); Word output/task-017/Kich-ban-gioi-thieu-va-demo-toan-du-an-Nhom7-v03.docx23 trang. [QA](evidence/task-017/document-qa.json), [timeline/số liệu](evidence/task-017/content-checks.json). Timeline chính20 phút và rút gọn7 phút là khung diễn tập, chưa xác nhận thời lượng buổi thực tế. Không chạy lại stack live, không ghi PASS cho hai người; đề xuất tiếp TASK-018 diễn tập theo kịch bản, chưa thực hiện.
