@@ -1,0 +1,16 @@
+{
+  "report.md": {
+    "before_sha256": "54554bd6ab4bde10fc576aecdcd83339eaf2aabafe84be1f2f678bcf5ee832ea",
+    "before_bytes": 85342,
+    "after_sha256": "4df8bcbec2763aece39818ca987cb893803433fb767b6bf65a05a011de38080f",
+    "old_tail_exact": true,
+    "prefix_bytes": 2453
+  },
+  "checklists.md": {
+    "before_sha256": "6b8d35ec367f5f0bb1ce9158748fb92dc140412de378fb0c133ff83afc81f857",
+    "before_bytes": 12640,
+    "after_sha256": "78515248c71a87a17b9db8bef9bd2d37b48bcadf648b8f06ab777488f78bad60",
+    "old_tail_exact": true,
+    "prefix_bytes": 844
+  }
+}

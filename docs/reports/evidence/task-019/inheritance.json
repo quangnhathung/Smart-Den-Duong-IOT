@@ -1,0 +1,41 @@
+{
+  "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/Bao-cao-Den-duong-thong-minh-Nhom7-v05.docx",
+  "source_sha256": "f59971322dbe7883e5fc6af8e4dfe92899fa61b132305abd482141391007dc11",
+  "output": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-019/Bao-cao-tieu-luan-Den-duong-thong-minh-Nhom7-v01.docx",
+  "output_sha256": "fb79505d398bb9e449d3f01c76b24c83aeaf2b9d022ace9968dbc2ee5b4662c7",
+  "cover_nodes_preserved": 12,
+  "retained_parts": [
+    "word/styles.xml",
+    "docProps/core.xml",
+    "_rels/.rels",
+    "word/_rels/header1.xml.rels",
+    "word/_rels/footer1.xml.rels",
+    "word/header1.xml",
+    "word/footer1.xml",
+    "docProps/custom.xml",
+    "docProps/app.xml",
+    "word/footnotes.xml",
+    "word/_rels/footnotes.xml.rels",
+    "word/endnotes.xml",
+    "word/_rels/endnotes.xml.rels",
+    "word/settings.xml",
+    "word/fontTable.xml",
+    "word/_rels/fontTable.xml.rels",
+    "word/theme/theme1.xml",
+    "word/numbering.xml",
+    "[Content_Types].xml",
+    "word/media/image1.jpg",
+    "word/media/image1.png",
+    "word/media/image2.png"
+  ],
+  "all_retained_parts_byte_identical": true,
+  "section_properties_preserved": true,
+  "chapters": [
+    "CHƯƠNG 1. GIỚI THIỆU VỀ IoT",
+    "CHƯƠNG 2. GIỚI THIỆU PHẦN CỨNG",
+    "CHƯƠNG 3. GIỚI THIỆU PHẦN MỀM",
+    "CHƯƠNG 4. KẾT QUẢ DEMO"
+  ],
+  "new_media": 6,
+  "package_files": 30
+}

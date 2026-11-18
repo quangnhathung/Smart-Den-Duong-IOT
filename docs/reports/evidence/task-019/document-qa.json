@@ -1,0 +1,389 @@
+{
+  "status": "PASS",
+  "at": "2026-11-18T16:40:00+07:00",
+  "docx": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-019/Bao-cao-tieu-luan-Den-duong-thong-minh-Nhom7-v01.docx",
+  "sha256": "fb79505d398bb9e449d3f01c76b24c83aeaf2b9d022ace9968dbc2ee5b4662c7",
+  "source_sha256": "f59971322dbe7883e5fc6af8e4dfe92899fa61b132305abd482141391007dc11",
+  "pages": 27,
+  "body_pages": 26,
+  "chapters": [
+    "CHƯƠNG 1. GIỚI THIỆU VỀ IoT",
+    "CHƯƠNG 2. GIỚI THIỆU PHẦN CỨNG",
+    "CHƯƠNG 3. GIỚI THIỆU PHẦN MỀM",
+    "CHƯƠNG 4. KẾT QUẢ DEMO"
+  ],
+  "subsections": 28,
+  "paragraphs": 462,
+  "words_whitespace": 7788,
+  "figures": [
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/screenshots/video-viewport-node01.png",
+      "caption": "Hình 2.1. Các linh kiện và dây nối của node_01 trên Wokwi. Nguồn: TASK-012, video-viewport-node01.png.",
+      "width": 960,
+      "height": 1000,
+      "sha256": "1b865b5dbd31dd2ef98da1f272c05192d9ac818ebece06420ac2b3d3362b8e16"
+    },
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/screenshots/handover-overview-1920.png",
+      "caption": "Hình 3.1. Dashboard tổng quan ba node từ hồ sơ bàn giao TASK-012. KPI trên ảnh thuộc phiên đang được chọn trong ảnh, không thay cho bảng thực nghiệm chính của chương 4.",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "dfead666a9e6ec4574c814d7c6503d412773d24c0051ed9da4ef71c400ee7190"
+    },
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-review/extra/frame-144.png",
+      "caption": "Hình 4.1. Khung hình video tại khoảng giây 144: minh họa sự kiện xe theo quy ước và mức sáng 100%. Nguồn: video-review/extra/frame-144.png, TASK-012.",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "a902f90a69d68e8638a14100f1da5532eccd5d194268f23773b593398fb00a88"
+    },
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-review/frame-215.png",
+      "caption": "Hình 4.2. Minh họa OPEN_LOAD tại node_02 trong video demo đã ghi. Nguồn: video-review/frame-215.png, TASK-012.",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "8d84db0c12f770c8f0e884ee262097a11bcaccf11e9162da45949161199104fe"
+    },
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-review/extra/frame-347.png",
+      "caption": "Hình 4.3. Ba node ONLINE sau reconnect trong video demo. Nguồn: video-review/extra/frame-347.png, TASK-012; ảnh minh họa, không thay cho log của EX-07.",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "bb07c859fb3194c2ec6fe22d0aaa7515f83ed9d4ee9652f13337bf1eaf9fd8ad"
+    },
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/data/auto-power-repetitions.png",
+      "caption": "Hình 4.4. Công suất AUTO qua các lần lặp; biểu đồ đã có của TASK-012, lấy từ cùng nguồn số liệu với Bảng 4.1.",
+      "width": 1920,
+      "height": 920,
+      "sha256": "7db67a5254acfeb4f2cc45c308333128083a3612ff719697eb2b620a83fe86df"
+    }
+  ],
+  "original_cover_nodes_identical": 12,
+  "retained_package_parts_byte_identical": [
+    "word/styles.xml",
+    "docProps/core.xml",
+    "_rels/.rels",
+    "word/_rels/header1.xml.rels",
+    "word/_rels/footer1.xml.rels",
+    "word/header1.xml",
+    "word/footer1.xml",
+    "docProps/custom.xml",
+    "docProps/app.xml",
+    "word/footnotes.xml",
+    "word/_rels/footnotes.xml.rels",
+    "word/endnotes.xml",
+    "word/_rels/endnotes.xml.rels",
+    "word/settings.xml",
+    "word/fontTable.xml",
+    "word/_rels/fontTable.xml.rels",
+    "word/theme/theme1.xml",
+    "word/numbering.xml",
+    "[Content_Types].xml",
+    "word/media/image1.jpg",
+    "word/media/image1.png",
+    "word/media/image2.png"
+  ],
+  "section_properties_identical": true,
+  "cover_png_byte_identical": true,
+  "schema": "PASS: docx/scripts/office/validate.py, 462 paragraphs, all validations passed",
+  "native_render": {
+    "host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+    "at": "2026-11-18T16:36:57+07:00",
+    "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-019/Bao-cao-tieu-luan-Den-duong-thong-minh-Nhom7-v01.docx",
+    "sha256": "fb79505d398bb9e449d3f01c76b24c83aeaf2b9d022ace9968dbc2ee5b4662c7",
+    "owned_pid": 935318,
+    "start_ticks": "2684521",
+    "status": "RENDERED_IMAGES",
+    "images": [
+      {
+        "index": 1,
+        "path": "page-01.png",
+        "bytes": 86170,
+        "sha256": "45ff9b16f22d3501345d61c4fddfc3ffd04e414a5f010b21faa3a3a32a15a8d4"
+      },
+      {
+        "index": 2,
+        "path": "page-02.png",
+        "bytes": 134838,
+        "sha256": "d7ad850284b568e4229c8085f17e53cbbacb1746b7457e5866323460ccbaa210"
+      },
+      {
+        "index": 3,
+        "path": "page-03.png",
+        "bytes": 100221,
+        "sha256": "92eae5ae6261ccc23c9e8d6ccff10e82644eecdb7e93ce19118fb7e8be443cab"
+      },
+      {
+        "index": 4,
+        "path": "page-04.png",
+        "bytes": 122648,
+        "sha256": "5a47178f2f6f996bd3a10b334f4f11db831056c7d12cbb3d42836ca9dfff8b67"
+      },
+      {
+        "index": 5,
+        "path": "page-05.png",
+        "bytes": 140400,
+        "sha256": "37a9b0a7f48fc8a6a040a757fd53d654995516f1597324023b7a7f9073bb6e63"
+      },
+      {
+        "index": 6,
+        "path": "page-06.png",
+        "bytes": 146665,
+        "sha256": "f63d69a4899f1f4d3025f83ca19d629f47d5e4dacc0e0c14105a8f26176ac764"
+      },
+      {
+        "index": 7,
+        "path": "page-07.png",
+        "bytes": 153659,
+        "sha256": "6f5dfba3871df075b451249700fbcc86bce911e9e774231fc41c981909080f7a"
+      },
+      {
+        "index": 8,
+        "path": "page-08.png",
+        "bytes": 147295,
+        "sha256": "77fdc51aab60fd1ba0e3b23b0e846fd343ff6197ed4519a0c8a0a9f4abd203bb"
+      },
+      {
+        "index": 9,
+        "path": "page-09.png",
+        "bytes": 151729,
+        "sha256": "ebf857db68b3e46dcc5ffdcc68dbbf8fd7d7ed91a4a6c15313f63547df0c1874"
+      },
+      {
+        "index": 10,
+        "path": "page-10.png",
+        "bytes": 147808,
+        "sha256": "be19b7d9787fa497cbf8fafb5ed793848bfa67d63a132b265a9ef088aae52cd9"
+      },
+      {
+        "index": 11,
+        "path": "page-11.png",
+        "bytes": 145812,
+        "sha256": "3ebb6699ff9c5c8cca8ab2d76ee41547c0dee14e692dc1b62f2c29899ff6dbf5"
+      },
+      {
+        "index": 12,
+        "path": "page-12.png",
+        "bytes": 137792,
+        "sha256": "8c3c3f0546fe56b8acd893ab52e4303b1ca1458c17db7925a7add342b5a6f8cc"
+      },
+      {
+        "index": 13,
+        "path": "page-13.png",
+        "bytes": 144657,
+        "sha256": "d139ddfdfc1d7f1ef219a2924a85d310b5136466b13a34e97d96fba3c36781d0"
+      },
+      {
+        "index": 14,
+        "path": "page-14.png",
+        "bytes": 150729,
+        "sha256": "9751a5eeccca9f0ec91d21a7ea20220021dfc9e26fca0680901d00cf31a3febc"
+      },
+      {
+        "index": 15,
+        "path": "page-15.png",
+        "bytes": 140563,
+        "sha256": "799f0a762c5a31799315136b8753ff716ac265c1ef1c984f14a44cb45acc541d"
+      },
+      {
+        "index": 16,
+        "path": "page-16.png",
+        "bytes": 144760,
+        "sha256": "64782b98e525fa5338e349cebd82e509938c2c5c866b33b8a9d3fddd3b042040"
+      },
+      {
+        "index": 17,
+        "path": "page-17.png",
+        "bytes": 139899,
+        "sha256": "a5b42685befde4c7074de40a392774c162c028ca5403d394b6d1c9ae2a11a798"
+      },
+      {
+        "index": 18,
+        "path": "page-18.png",
+        "bytes": 156831,
+        "sha256": "21b8eab33aeeef04979dc6e207e08314c583a358b04ce7062e6719bd352510d9"
+      },
+      {
+        "index": 19,
+        "path": "page-19.png",
+        "bytes": 142604,
+        "sha256": "0618f3408d81b3a0b671e65379c52f2202af28828af1a3fc4df0636cd4c9d9fe"
+      },
+      {
+        "index": 20,
+        "path": "page-20.png",
+        "bytes": 133109,
+        "sha256": "a6c4e345623e9e72e75fbf9dcaf6567c945d4b0f09e881e17291bf7fb653ed2f"
+      },
+      {
+        "index": 21,
+        "path": "page-21.png",
+        "bytes": 190578,
+        "sha256": "1ea48ae9554f64f53aeed6844c351f789e0f309786cefbe4074d3a72d9d8fbba"
+      },
+      {
+        "index": 22,
+        "path": "page-22.png",
+        "bytes": 169876,
+        "sha256": "1aa1a6e4617f1f7e7845d67639342801ab9d77ab35a0de87ccb87114831a61b6"
+      },
+      {
+        "index": 23,
+        "path": "page-23.png",
+        "bytes": 199562,
+        "sha256": "14091c0f091fcca555696e93d51aa0b715e73e1c34008c8828884eb0a6ddc40d"
+      },
+      {
+        "index": 24,
+        "path": "page-24.png",
+        "bytes": 159729,
+        "sha256": "9825d258034029ed1962272adec56712984b2e8e534ac49b5b0c0b16079187e1"
+      },
+      {
+        "index": 25,
+        "path": "page-25.png",
+        "bytes": 156751,
+        "sha256": "df633f1ec7bb207a65a1058a442034431a3278f4a2f270c78de302fddb52af5b"
+      },
+      {
+        "index": 26,
+        "path": "page-26.png",
+        "bytes": 140710,
+        "sha256": "c09543db437ddadede53c25f3e18f151d2683535c63139c89391a32fe695f12c"
+      },
+      {
+        "index": 27,
+        "path": "page-27.png",
+        "bytes": 149970,
+        "sha256": "ee291ddf700e0ee52dda52ef25eaafd7890e613b9a9a1acf96e5ddbc00e347a0"
+      }
+    ],
+    "preexisting_wps_pids": [],
+    "helper_sha256": "80fc14d739fe0f1915773c3cf161c763f856cd633def2027cbbd6a6af9196a55",
+    "count": 27,
+    "source_unchanged": true,
+    "remaining_documents": 0,
+    "quit_requested": true,
+    "owned_empty_instance_terminated": true,
+    "process_stopped": true
+  },
+  "visual_review": {
+    "reviewed_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "method": "All 27 native WPS PNGs reviewed in nine full-resolution contact sheets",
+    "result": "PASS: no overflow, clipping, blank pages, distorted figures or broken tables; headings and TOC page numbers agree with footers"
+  },
+  "metric_proof": [
+    {
+      "scenario": "EX-02",
+      "displayed": [
+        "EX-02",
+        "6,000",
+        "24,000",
+        "75,000",
+        "6,000–6,000"
+      ]
+    },
+    {
+      "scenario": "EX-03",
+      "displayed": [
+        "EX-03",
+        "8,160",
+        "24,000",
+        "66,001",
+        "8,159–8,160"
+      ]
+    },
+    {
+      "scenario": "EX-04",
+      "displayed": [
+        "EX-04",
+        "9,600",
+        "24,000",
+        "60,001",
+        "9,597–9,605"
+      ]
+    },
+    {
+      "scenario": "EX-05",
+      "displayed": [
+        "EX-05",
+        "6,613",
+        "18,671",
+        "64,579",
+        "6,612–6,615"
+      ]
+    }
+  ],
+  "historical_audit_sha256": "0f56d5b5820224c204f48a55c1aaa96237441907af9571b4f13ab14ac6ce1cfd",
+  "accepted_runs": 15,
+  "node_windows": 45,
+  "maximum_action_lateness_ms": 1778,
+  "latency_final_audit_sha256": "5bcfa600a4edc44909ca53e940021bc267560c412451fa1e3600b714db037385",
+  "historical_probe_incomplete_preserved": {
+    "status": "INCOMPLETE",
+    "last_observed_elapsed_seconds": 1346.506109542,
+    "probe_samples": 672,
+    "observed_exit_code": 143,
+    "reason": "HTTP/resource probe process received SIGTERM before 1800s; precise cause not established. Raw MQTT recorder and backend continued. Probe log is not claimed as full-window coverage."
+  },
+  "product_hashes": {
+    "firmware": {
+      "count": 30,
+      "unchanged": true
+    },
+    "backend": {
+      "count": 26,
+      "unchanged": true
+    },
+    "dashboard": {
+      "count": 15,
+      "unchanged": true
+    }
+  },
+  "not_run": [
+    "new live stack or experiment",
+    "firmware build: unchanged product source",
+    "physical hardware",
+    "human rehearsal"
+  ],
+  "skills_used": [
+    "docx"
+  ],
+  "excluded_skills": [
+    "humanize",
+    "humanizer",
+    "viet-humanize"
+  ],
+  "deliverable_formats": [
+    "docx"
+  ]
+}

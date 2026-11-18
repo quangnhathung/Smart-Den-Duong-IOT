@@ -1,0 +1,255 @@
+{
+  "logical_pages": [
+    {
+      "page": 1,
+      "title": "LỜI NÓI ĐẦU"
+    },
+    {
+      "page": 2,
+      "title": "MỤC LỤC"
+    },
+    {
+      "page": 3,
+      "title": "CHƯƠNG 1. GIỚI THIỆU VỀ IoT"
+    },
+    {
+      "page": 4,
+      "title": "1.3. Kết nối và truyền thông trong IoT"
+    },
+    {
+      "page": 5,
+      "title": "1.4. Xử lý tại thiết bị và quản lý dữ liệu"
+    },
+    {
+      "page": 6,
+      "title": "CHƯƠNG 2. GIỚI THIỆU PHẦN CỨNG"
+    },
+    {
+      "page": 7,
+      "title": "2.2. Vi điều khiển ESP32 và ánh xạ chân"
+    },
+    {
+      "page": 8,
+      "title": "2.3. Cảm biến ánh sáng LDR"
+    },
+    {
+      "page": 9,
+      "title": "2.5. Cảm biến khoảng cách HC-SR04"
+    },
+    {
+      "page": 10,
+      "title": "2.7. LED, PWM và quá trình chuyển mức sáng"
+    },
+    {
+      "page": 11,
+      "title": "CHƯƠNG 3. GIỚI THIỆU PHẦN MỀM"
+    },
+    {
+      "page": 12,
+      "title": "3.2. Cấu trúc và lịch chạy firmware"
+    },
+    {
+      "page": 13,
+      "title": "3.3. Thuật toán điều khiển AUTO"
+    },
+    {
+      "page": 14,
+      "title": "3.4. MANUAL và phát hiện lỗi tải"
+    },
+    {
+      "page": 15,
+      "title": "3.5. Giao thức MQTT và tính nhất quán của lệnh"
+    },
+    {
+      "page": 16,
+      "title": "3.6. Backend, cơ sở dữ liệu và API"
+    },
+    {
+      "page": 17,
+      "title": "3.7. Dashboard và thao tác giám sát"
+    },
+    {
+      "page": 18,
+      "title": "3.8. Mô hình năng lượng và phương pháp thống kê"
+    },
+    {
+      "page": 19,
+      "title": "CHƯƠNG 4. KẾT QUẢ DEMO"
+    },
+    {
+      "page": 20,
+      "title": "4.2. Kết quả demo điều khiển AUTO"
+    },
+    {
+      "page": 21,
+      "title": "4.3. Kết quả điều khiển và cảnh báo tải"
+    },
+    {
+      "page": 22,
+      "title": "4.4. Mất kết nối, khôi phục và độ ổn định"
+    },
+    {
+      "page": 23,
+      "title": "4.5. Kết quả năng lượng mô phỏng"
+    },
+    {
+      "page": 24,
+      "title": "4.6. Chất lượng dữ liệu và đánh giá kết quả"
+    },
+    {
+      "page": 25,
+      "title": "LỜI KẾT"
+    },
+    {
+      "page": 26,
+      "title": "TÀI LIỆU THAM KHẢO"
+    }
+  ],
+  "figures": [
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/screenshots/video-viewport-node01.png",
+      "caption": "Hình 2.1. Các linh kiện và dây nối của node_01 trên Wokwi. Nguồn: TASK-012, video-viewport-node01.png.",
+      "width": 960,
+      "height": 1000,
+      "sha256": "1b865b5dbd31dd2ef98da1f272c05192d9ac818ebece06420ac2b3d3362b8e16"
+    },
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/screenshots/handover-overview-1920.png",
+      "caption": "Hình 3.1. Dashboard tổng quan ba node từ hồ sơ bàn giao TASK-012. KPI trên ảnh thuộc phiên đang được chọn trong ảnh, không thay cho bảng thực nghiệm chính của chương 4.",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "dfead666a9e6ec4574c814d7c6503d412773d24c0051ed9da4ef71c400ee7190"
+    },
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-review/extra/frame-144.png",
+      "caption": "Hình 4.1. Khung hình video tại khoảng giây 144: minh họa sự kiện xe theo quy ước và mức sáng 100%. Nguồn: video-review/extra/frame-144.png, TASK-012.",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "a902f90a69d68e8638a14100f1da5532eccd5d194268f23773b593398fb00a88"
+    },
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-review/frame-215.png",
+      "caption": "Hình 4.2. Minh họa OPEN_LOAD tại node_02 trong video demo đã ghi. Nguồn: video-review/frame-215.png, TASK-012.",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "8d84db0c12f770c8f0e884ee262097a11bcaccf11e9162da45949161199104fe"
+    },
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-review/extra/frame-347.png",
+      "caption": "Hình 4.3. Ba node ONLINE sau reconnect trong video demo. Nguồn: video-review/extra/frame-347.png, TASK-012; ảnh minh họa, không thay cho log của EX-07.",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "bb07c859fb3194c2ec6fe22d0aaa7515f83ed9d4ee9652f13337bf1eaf9fd8ad"
+    },
+    {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/data/auto-power-repetitions.png",
+      "caption": "Hình 4.4. Công suất AUTO qua các lần lặp; biểu đồ đã có của TASK-012, lấy từ cùng nguồn số liệu với Bảng 4.1.",
+      "width": 1920,
+      "height": 920,
+      "sha256": "7db67a5254acfeb4f2cc45c308333128083a3612ff719697eb2b620a83fe86df"
+    }
+  ],
+  "audit": {
+    "path": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/analysis-final.json",
+    "sha256": "0f56d5b5820224c204f48a55c1aaa96237441907af9571b4f13ab14ac6ce1cfd",
+    "accepted_runs": 15
+  },
+  "sourceMetrics": [
+    {
+      "scenario": "EX-02",
+      "repetitions": 3,
+      "average_auto_power_w": {
+        "mean": 6.000000000000066,
+        "minimum": 6.0000000000000595,
+        "maximum": 6.000000000000076
+      },
+      "average_baseline_power_w": {
+        "mean": 24.000000000000263,
+        "minimum": 24.000000000000238,
+        "maximum": 24.000000000000306
+      },
+      "saving_percent": {
+        "mean": 75,
+        "minimum": 74.99999999999999,
+        "maximum": 75.00000000000001
+      },
+      "coverage_min_percent": {
+        "mean": 99.99999964107242,
+        "minimum": 99.9999995834496,
+        "maximum": 99.99999969153498
+      }
+    },
+    {
+      "scenario": "EX-03",
+      "repetitions": 3,
+      "average_auto_power_w": {
+        "mean": 8.159808102531876,
+        "minimum": 8.1593610004284,
+        "maximum": 8.160109098543117
+      },
+      "average_baseline_power_w": {
+        "mean": 24.000000000000234,
+        "minimum": 24.0000000000002,
+        "maximum": 24.000000000000263
+      },
+      "saving_percent": {
+        "mean": 66.00079957278419,
+        "minimum": 65.99954542273737,
+        "maximum": 66.00266249821539
+      },
+      "coverage_min_percent": {
+        "mean": 99.99999964226213,
+        "minimum": 99.99999957274535,
+        "maximum": 99.9999996864059
+      }
+    },
+    {
+      "scenario": "EX-04",
+      "repetitions": 3,
+      "average_auto_power_w": {
+        "mean": 9.599849620796915,
+        "minimum": 9.5965751745546,
+        "maximum": 9.605434034065858
+      },
+      "average_baseline_power_w": {
+        "mean": 24.000000000000213,
+        "minimum": 24.00000000000018,
+        "maximum": 24.000000000000256
+      },
+      "saving_percent": {
+        "mean": 60.0006265800132,
+        "minimum": 59.97735819139259,
+        "maximum": 60.01427010602292
+      },
+      "coverage_min_percent": {
+        "mean": 99.66809246080548,
+        "minimum": 99.00427807416179,
+        "maximum": 99.99999966749233
+      }
+    },
+    {
+      "scenario": "EX-05",
+      "repetitions": 3,
+      "average_auto_power_w": {
+        "mean": 6.613397828778388,
+        "minimum": 6.61177453379717,
+        "maximum": 6.615069565053184
+      },
+      "average_baseline_power_w": {
+        "mean": 18.670894112198415,
+        "minimum": 18.667296763986265,
+        "maximum": 18.677893969547366
+      },
+      "saving_percent": {
+        "mean": 64.57910404402598,
+        "minimum": 64.57290819726325,
+        "maximum": 64.58342907482792
+      },
+      "coverage_min_percent": {
+        "mean": 99.99999970860873,
+        "minimum": 99.99999968319968,
+        "maximum": 99.99999972655081
+      }
+    }
+  ]
+}
