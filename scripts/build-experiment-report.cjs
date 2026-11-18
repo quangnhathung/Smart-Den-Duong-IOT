@@ -13,7 +13,10 @@ const stage = complete ? 'BÁO CÁO ĐỒ ÁN' : 'BẢN ĐANG HOÀN THIỆN';
 const W = 9071, pages = [], manuscript = [];
 const REPORT_TEXT = Symbol('reportText');
 fs.mkdirSync(out, { recursive: true });
-const display = text => text.replace(/(tháng|năm|cả|đủ|gồm|mỗi|giây|phút|tối đa|ổn định|nhân|mục|dưới|trong|sáng|nền|người|xe|hồi|về|ở|thêm)(?=\d)/gu, '$1 ');
+const display = text => text
+  .replace(/(tháng|năm|cả|đủ|gồm|mỗi|giây|phút|tối đa|ổn định|nhân|mục|dưới|trong|sáng|nền|người|xe|hồi|về|ở|thêm|Nhóm|NHÓM|tại|quá|thứ|trễ|hạn|sang|đến|lớn nhất|theo|PASS|baseline|ADC|HTTP|uptime)(?=\d)/gu, '$1 ')
+  .replace(/(\d)(?=(?:ms|cm|kHz|Hz|giây|phút|bit|W|Wh|s)(?:\b|\/|[.,;]))/gu, '$1 ')
+  .replace(/([.;])(?=\d+\s*(?:lần|lượt))/gu, '$1 ');
 const p = (text, options = {}) => { const paragraph = new d.Paragraph({ children: [new d.TextRun({ text: display(text) })], ...options }); paragraph[REPORT_TEXT] = display(text); return paragraph; };
 const heading = (text, level = 1) => { const paragraph = new d.Paragraph({ text, heading: level === 1 ? d.HeadingLevel.HEADING_1 : d.HeadingLevel.HEADING_2 }); paragraph[REPORT_TEXT] = '#'.repeat(level)+' '+text; return paragraph; };
 const note = text => p(text, { style: 'Note' });
@@ -258,14 +261,13 @@ if (fs.existsSync(plotFile) && fs.existsSync(plotSource) && JSON.parse(fs.readFi
 variationItems.push('Khoảng biến thiên chỉ mô tả mô hình và recipe này. Không dùng các lần lặp trên cùng máy như bằng chứng định lượng cho tuyến đường thật hoặc làm khoảng tin cậy dân số.');
 page('5.7. BIẾN THIÊN GIỮA CÁC LẦN LẶP', variationItems);
 page('5.8. LƯỢT LỖI, PHỤC HỒI VÀ TOÀN VẸN', [
-  'Ba pilot đầu được giữ INCOMPLETE: hai lượt trễ thao tác quá2 giây, một lượt timeout chuẩn bị giao diện. Công cụ được điều chỉnh chuẩn bị sẵn bảng cảm biến và tăng timeout setup, giữ nguyên giới hạn trễ tác động. Pilot thứ4 PASS90 giây/node, tách khỏi số liệu chính.',
+  'Ba pilot đầu INCOMPLETE: hai lượt trễ quá2 giây mô phỏng, một lượt timeout chuẩn bị UI. Đã chuẩn bị bảng cảm biến sớm, tăng timeout setup và giữ ngưỡng2s. Pilot thứ4 PASS90s/node, tách khỏi số liệu chính.',
   'Các lượt dưới đây được giữ nguyên trong hồ sơ và không đưa vào trung bình chính. Chỉ lượt chạy lại đủ điều kiện mới tham gia so sánh.',
   table(['Lượt','Kết quả','Nguyên nhân và xử lý'],failed.map(item=>[item.folder,item.status,failureReason(item)]),[2400,1500,5171]),
   'Lượt EX-02 đầu có hai PIR ngoài recipe và khoảng cách node_03 đổi bất ngờ; log không có request tác động tương ứng. Chưa xác định nguyên nhân. Sau đó UI cache được làm mới và khoảng cách thực được kiểm trước mỗi lượt; các cửa sổ QA được tách sang desktop riêng để giảm tương tác ngoài kịch bản.',
-  'EX-05/R1 attempt01 bị giữ INCOMPLETE do đổi LDR/khoảng cách node01 tại600s trễ2257ms. Công cụ chuyển việc mở bảng và đọc tọa độ sang290/590s; đến300/600s mới đổi cảm biến bằng chuột/phím thật. Giữ nguyên lịch vật lý và giới hạn2000ms.18 lần diễn tập ngoài phiên đo đạt cận lớn nhất1475ms; lượt lỗi không tham gia kết quả chính.',
+  'EX-05/R1 attempt01 INCOMPLETE: đổi LDR/khoảng cách node01 tại600s trễ2257ms. Chuẩn bị UI ở290/590s; chỉ đổi cảm biến bằng chuột/phím thật tại300/600s. Giữ lịch vật lý và giới hạn2000ms.18 lần diễn tập ngoài phiên đạt cận lớn nhất1475ms; lượt lỗi không tham gia kết quả chính.',
   'Đối chiếu độc lập đọc raw MQTT, SQLite và API theo đúng cửa sổ từng node. Audit kiểm payload, quality, boot/seq, số mẫu, thời lượng, công thức và SQLite quick_check. Mất sequence trong EX-07 phải được mô tả như khoảng thiếu do outage, không tự nối hình thang qua khoảng đó.',
-  'Source sản phẩm, artifact và đề cương gốc được giữ nguyên theo baseline; chỉ công cụ thực nghiệm, báo cáo và tài liệu liên quan được bổ sung. Tệp output lớn và database nằm ngoài Git, đi kèm manifest SHA256 và bản sao dự phòng theo runbook.',
-  note('Sự cố của công cụ đo được công bố cùng cách xử lý. Nguyên nhân thay đổi ngoài recipe chưa được xác định; dữ liệu lỗi được lưu và không tham gia so sánh chính.')
+  'Source sản phẩm, artifact và đề cương gốc được giữ nguyên theo baseline; chỉ công cụ thực nghiệm, báo cáo và tài liệu liên quan được bổ sung. Tệp output lớn và database nằm ngoài Git, đi kèm manifest SHA256 và bản sao dự phòng theo runbook.'
 ]);
 page('CHƯƠNG 6. KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN', [
   'Hệ thống đã có luồng cảm biến → điều khiển tại ESP32 → MQTT → FastAPI/SQLite → dashboard và luồng command/ACK ngược lại. Nghiệm thu TASK-011 chứng minh ba node độc lập, lệnh đúng đích, lỗi tải/phục hồi, AUTO khi mất broker và lưu lịch sử qua restart trong môi trường đã ghi.',

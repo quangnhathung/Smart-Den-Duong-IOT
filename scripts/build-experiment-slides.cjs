@@ -15,11 +15,14 @@ for (const dark of [false, true]) pres.defineSlideMaster({ title: dark ? 'Dark' 
   objects: [{ placeholder: { text: '', options: { name: 'title', type: 'title', x: .6, y: .45, w: 12.1, h: .85, fontSize: 31, bold: true, color: dark ? C.background1 : C.text1, margin: 0 } } },
     { text: { text: 'NHÓM 7  ·  WOKWI / ESP32 / MQTT', options: { x: .6, y: 7.02, w: 9.5, h: .2, fontSize: 10, margin: 0, color: dark ? C.accent6 : C.text2, isTextBox: true } } }],
   slideNumber: { x: 12.1, y: 7.02, w: .6, h: .2, fontSize: 10, margin: 0, color: dark ? C.accent6 : C.text2 } });
-const text = (slide, value, x, y, w, h, opts = {}) => slide.addText(value, { x, y, w, h, fontSize: 22, color: C.text1, margin: 0, breakLine: false, isTextBox: true, ...opts });
+const display = value => String(value)
+  .replace(/(nền|người|xe|hold|lọc|xác nhận|dưới|đủ|mỗi|cả|tại|ở|thêm|tối đa|ổn định|nhân|mục|trong|sang|đến|theo|PASS|baseline|ADC|HTTP|TRIG|ECHO|DAY|TWILIGHT|NIGHT|đêm|biến trở)(?=\d)/giu, '$1 ')
+  .replace(/(\d)(?=(?:ms|cm|kHz|Hz|bit|W|Wh|s)(?:\b|\/|[.,;]))/gu, '$1 ');
+const text = (slide, value, x, y, w, h, opts = {}) => slide.addText(display(value), { x, y, w, h, fontSize: 22, color: C.text1, margin: 0, breakLine: false, isTextBox: true, ...opts });
 const box = (slide, name, x, y, w, h, fill = C.background2) => slide.addShape(S.roundRect, { x, y, w, h, rectRadius: .15, radius: .15, line: { color: fill, transparency: 100 }, fill: { color: fill }, objectName: name });
 function newSlide(title, section, dark = false) { const s = pres.addSlide({ masterName: dark ? 'Dark' : 'Light', sectionTitle: section }); s.addText(title, { placeholder: 'title' }); return s; }
 function card(slide, title, body, x, y, w, h, number) { box(slide, title, x, y, w, h); if (number) text(slide, number, x + .25, y + .18, w - .5, .7, { fontSize: 42, bold: true, color: C.accent1 }); text(slide, title, x + .25, y + (number ? 1.05 : .25), w - .5, .5, { fontSize: 23, bold: true }); text(slide, body, x + .25, y + (number ? 1.8 : 1), w - .5, h - (number ? 2 : 1.2), { fontSize: 20, color: C.text2, valign: 'top' }); }
-function tbl(slide, rows, opts = {}) { slide.addTable(rows, { x: .6, y: 1.7, w: 12.1, h: 3.8, fontSize: 20, margin: .13, color: C.text1, fill: C.background1, border: { type: 'solid', color: THEME.colors.accent6, pt: 1 }, rowH: .6, bold: false, autoPage: false, ...opts }); }
+function tbl(slide, rows, opts = {}) { slide.addTable(rows.map(row=>row.map(display)), { x: .6, y: 1.7, w: 12.1, h: 3.8, fontSize: 20, margin: .13, color: C.text1, fill: C.background1, border: { type: 'solid', color: THEME.colors.accent6, pt: 1 }, rowH: .6, bold: false, autoPage: false, ...opts }); }
 function lamp(slide, x, y, label, lit) { slide.addShape(S.line, { x, y, w: 0, h: 1.8, line: { color: C.accent6, width: 4 }, objectName: 'Cột đèn ' + label }); slide.addShape(S.line, { x, y, w: .6, h: 0, line: { color: C.accent6, width: 4 } }); slide.addShape(S.ellipse, { x: x + .4, y: y - .12, w: .48, h: .25, line: { transparency: 100 }, fill: { color: lit ? C.accent2 : C.text2 }, objectName: 'Đèn ' + label }); text(slide, label, x - .3, y + 2, 1.6, .35, { fontSize: 16, color: C.accent6 }); }
 pres.addSection({ title: 'Bài toán và thiết kế' });
 let s = newSlide('Đèn đường thông minh', 'Bài toán và thiết kế', true);
