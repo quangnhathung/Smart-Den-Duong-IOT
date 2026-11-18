@@ -90,7 +90,7 @@ def main():
     original.close()
     check = [row[0] for row in destination.execute("PRAGMA quick_check")]
     counts = {table: destination.execute(f'SELECT COUNT(*) FROM "{table}"').fetchone()[0] for table in ("telemetry", "commands", "alerts", "experiments", "ingest_errors")}
-    pending = destination.execute("SELECT COUNT(*) FROM commands WHERE status='PENDING'").fetchone()[0]
+    pending = destination.execute("SELECT COUNT(*) FROM commands WHERE result='PENDING'").fetchone()[0]
     opened = destination.execute("SELECT COUNT(*) FROM experiments WHERE ended_at IS NULL").fetchone()[0]
     destination.close()
     if check != ["ok"] or pending or opened:
@@ -99,7 +99,7 @@ def main():
     shutil.copytree(q/"attempts", out/"attempts", ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
     shutil.copytree(args.deliverables, out/"deliverables")
     shutil.copytree(q/"screenshots", out/"screenshots")
-    for pattern in ("word-preview*", "slide-preview*", "video-demo-*", "video-raw", "video-review", "office-smoke"):
+    for pattern in ("word-preview*", "slide-preview*", "video-demo-*", "video-raw", "video-review*", "video-smoke*", "office-smoke", "handover-steps-*"):
         for folder in sorted(q.glob(pattern)):
             if folder.is_dir():
                 shutil.copytree(folder, out/folder.name)
@@ -123,9 +123,18 @@ def main():
                 value.update(chunk)
             if value.hexdigest() != digest(source):
                 raise RuntimeError("Raw log changed during backup: " + source.name)
-    for name in ("runtime.json", "analysis-final.json", "campaign-completed.json", "campaign-summary.json", "demo-status.json", "owned-processes.json", "mosquitto.conf", "main.log", "cold-start.json", "cleanup.json"):
+    for name in ("runtime.json", "analysis-final.json", "campaign-completed.json", "campaign-summary.json", "demo-status.json", "owned-processes.json", "mosquitto.conf", "main.log", "cold-start.json", "cleanup.json", "cold-start-r01-pass.json", "cleanup-r01-pass.json", "video-runtime-startup.json", "pipeline-status.json", "finish-pipeline.log", "broker-build.json", "calibration.json", "node02-resume-proof.json", "video-viewport-fit.json", "handover-recovery.json"):
         if (q/name).is_file():
             shutil.copy2(q/name, out/name)
+    tooling = out/"qa-tooling"
+    tooling.mkdir()
+    for name in ("finish-pipeline.py", "finish-after-audit.py", "resume-runtime.py", "resume-isolate.py", "render-office.py", "cold-rehearsal.py", "cleanup-runtime.py", "qa-video.cjs", "rehearse-scene.py", "live.cjs", "status.py", "prepare-proof.py", "video-smoke.cjs", "start-video-runtime.py", "extract-video-frames.py", "view-fix.cjs", "view-inspect.cjs", "resume-node02.cjs", "close-task.py", "final-integrity.py"):
+        if (q/name).is_file():
+            shutil.copy2(q/name, tooling/name)
+    for source in q.glob("scene-rehearsal-*.json"):
+        shutil.copy2(source, tooling/source.name)
+    if (q/"reference-assets").is_dir():
+        shutil.copytree(q/"reference-assets", out/"reference-assets")
     for node in ("node_01", "node_02", "node_03"):
         folder = out/"simulations"/node
         folder.mkdir(parents=True)
