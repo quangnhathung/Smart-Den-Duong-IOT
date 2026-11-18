@@ -21,3 +21,6 @@ output/task-015/
 
 # TASK-017 demo script and native WPS previews.
 output/task-017/
+
+# TASK-019 Word rewrite and native WPS QA artifacts.
+output/task-019/
