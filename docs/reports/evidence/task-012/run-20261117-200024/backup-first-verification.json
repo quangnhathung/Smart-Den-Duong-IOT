@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "archive": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/backup-verified-20261118-r01.tar.gz",
+  "sha256": "170aabb5d7ad54e66a3987b362797992b0ec17391457b7ddedbb553d947345af",
+  "bytes": 392895981,
+  "verified_files": 1732,
+  "database_quick_check": [
+    "ok"
+  ]
+}

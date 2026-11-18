@@ -1,0 +1,328 @@
+{
+  "at": "2026-11-18T15:13:46.505162+07:00",
+  "observed": "135s demo command returned409. Last pre-click probe at08:08:56.666Z had node01 age2.99645s; click at08:08:56.971Z. Next telemetry at08:08:57.519Z. No command created by rejectedPOST.",
+  "fix": "Wait actual can_command and age<0.75 immediately before UI apply, bounded click1s; no change to API3s guard and no POST retry.",
+  "probes": [
+    {
+      "event": "health",
+      "host_ms": 1794989334659.2014,
+      "monotonic_ns": 21562687442345,
+      "host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+      "status_code": 200,
+      "value": {
+        "status": "OK",
+        "database": true,
+        "broker": true,
+        "queue": true,
+        "dropped_events": 0
+      }
+    },
+    {
+      "event": "nodes",
+      "host_ms": 1794989334661.0566,
+      "monotonic_ns": 21562689297212,
+      "host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+      "status_code": 200,
+      "value": [
+        {
+          "node_id": "node_01",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-18T08:08:53.668528Z",
+          "age_s": 0.9914584350008226,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_01",
+            "boot_id": "ec1c404e",
+            "seq": "1344",
+            "uptime_ms": "812495",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 50.7069,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_02",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-18T08:08:54.453577Z",
+          "age_s": 0.20644081499995082,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_02",
+            "boot_id": "b3f6b599",
+            "seq": "592",
+            "uptime_ms": "255269",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 152.3965,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_03",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-18T08:08:54.290044Z",
+          "age_s": 0.36997988000075566,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_03",
+            "boot_id": "ece5a08f",
+            "seq": "2865",
+            "uptime_ms": "968866",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 152.4483,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        }
+      ]
+    },
+    {
+      "event": "health",
+      "host_ms": 1794989336663.9253,
+      "monotonic_ns": 21564692165592,
+      "host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+      "status_code": 200,
+      "value": {
+        "status": "OK",
+        "database": true,
+        "broker": true,
+        "queue": true,
+        "dropped_events": 0
+      }
+    },
+    {
+      "event": "nodes",
+      "host_ms": 1794989336666.009,
+      "monotonic_ns": 21564694249392,
+      "host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+      "status_code": 200,
+      "value": [
+        {
+          "node_id": "node_01",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-18T08:08:53.668528Z",
+          "age_s": 2.9964497510009096,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_01",
+            "boot_id": "ec1c404e",
+            "seq": "1344",
+            "uptime_ms": "812495",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 50.7069,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_02",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-18T08:08:56.035199Z",
+          "age_s": 0.6298122270018212,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_02",
+            "boot_id": "b3f6b599",
+            "seq": "596",
+            "uptime_ms": "256090",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 152.1897,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_03",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-18T08:08:56.367822Z",
+          "age_s": 0.29719551199741545,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_03",
+            "boot_id": "ece5a08f",
+            "seq": "2870",
+            "uptime_ms": "969890",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 152.1207,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        }
+      ]
+    },
+    {
+      "event": "health",
+      "host_ms": 1794989338668.2239,
+      "monotonic_ns": 21566696464680,
+      "host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+      "status_code": 200,
+      "value": {
+        "status": "OK",
+        "database": true,
+        "broker": true,
+        "queue": true,
+        "dropped_events": 0
+      }
+    },
+    {
+      "event": "nodes",
+      "host_ms": 1794989338670.0742,
+      "monotonic_ns": 21566698314452,
+      "host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+      "status_code": 200,
+      "value": [
+        {
+          "node_id": "node_01",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-18T08:08:57.519705Z",
+          "age_s": 1.1494149650025065,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_01",
+            "boot_id": "ec1c404e",
+            "seq": "1345",
+            "uptime_ms": "814495",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 50.7069,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_02",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-18T08:08:57.917530Z",
+          "age_s": 0.7516305789977196,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_02",
+            "boot_id": "b3f6b599",
+            "seq": "598",
+            "uptime_ms": "257069",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 152.1897,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        },
+        {
+          "node_id": "node_03",
+          "connection": "ONLINE",
+          "freshness": "FRESH",
+          "last_seen": "2026-11-18T08:08:58.403797Z",
+          "age_s": 0.26537201100290986,
+          "telemetry": {
+            "schema_version": 1,
+            "node_id": "node_03",
+            "boot_id": "ece5a08f",
+            "seq": "2874",
+            "uptime_ms": "970866",
+            "mode": "AUTO",
+            "environment": "NIGHT",
+            "ldr_adc": 4063,
+            "motion": "NONE",
+            "distance_cm": 152.4483,
+            "brightness_target": 25,
+            "brightness_applied": 25,
+            "current_adc": 4095,
+            "current_ma_sim": 500.0,
+            "power_sim_w": 6.0,
+            "faults": []
+          },
+          "faults": [],
+          "pending_command_id": null,
+          "can_command": true
+        }
+      ]
+    }
+  ]
+}

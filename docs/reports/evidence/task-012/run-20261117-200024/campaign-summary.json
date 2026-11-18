@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "attempts": [
+    {
+      "scenario": "EX-01",
+      "repeat": 1,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-01-r01-a01"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 1,
+      "status": "FAIL",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-02-r01-a01"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 1,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-02-r01-a02"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 2,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-02-r02-a01"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 3,
+      "status": "INCOMPLETE",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-02-r03-a01"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 3,
+      "status": "INCOMPLETE",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-02-r03-a02"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 3,
+      "status": "INCOMPLETE",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-02-r03-a03"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 3,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-02-r03-a04"
+    },
+    {
+      "scenario": "EX-03",
+      "repeat": 1,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-03-r01-a01"
+    },
+    {
+      "scenario": "EX-03",
+      "repeat": 2,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-03-r02-a01"
+    },
+    {
+      "scenario": "EX-03",
+      "repeat": 3,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-03-r03-a01"
+    },
+    {
+      "scenario": "EX-04",
+      "repeat": 1,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-04-r01-a01"
+    },
+    {
+      "scenario": "EX-04",
+      "repeat": 2,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-04-r02-a01"
+    },
+    {
+      "scenario": "EX-04",
+      "repeat": 3,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-04-r03-a01"
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 1,
+      "status": "INCOMPLETE",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-05-r01-a01"
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 1,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-05-r01-a02"
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 2,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-05-r02-a01"
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 3,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-05-r03-a01"
+    },
+    {
+      "scenario": "EX-06",
+      "repeat": 1,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-06-r01-a01"
+    },
+    {
+      "scenario": "EX-07",
+      "repeat": 1,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-07-r01-a01"
+    },
+    {
+      "scenario": "PILOT",
+      "repeat": 1,
+      "status": "INCOMPLETE",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/PILOT-r01-a01"
+    },
+    {
+      "scenario": "PILOT",
+      "repeat": 1,
+      "status": "INCOMPLETE",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/PILOT-r01-a02"
+    },
+    {
+      "scenario": "PILOT",
+      "repeat": 1,
+      "status": "INCOMPLETE",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/PILOT-r01-a03"
+    },
+    {
+      "scenario": "PILOT",
+      "repeat": 1,
+      "status": "PASS",
+      "folder": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/PILOT-r01-a04"
+    }
+  ],
+  "missing": []
+}

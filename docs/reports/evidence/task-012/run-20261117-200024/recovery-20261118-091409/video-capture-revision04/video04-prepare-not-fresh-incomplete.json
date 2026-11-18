@@ -1,0 +1,5 @@
+{
+  "status": "INCOMPLETE",
+  "directory": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-demo-20261118T075550614",
+  "error": "{\"detail\":\"Node offline, telemetry older than 3s, or command pending\"}"
+}

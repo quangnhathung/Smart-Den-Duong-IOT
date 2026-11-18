@@ -1,0 +1,6 @@
+{
+  "status": "COLLECTED",
+  "main_runs": 15,
+  "clock_basis": "per_node_uptime",
+  "next": "verify all frozen evidence before handover"
+}

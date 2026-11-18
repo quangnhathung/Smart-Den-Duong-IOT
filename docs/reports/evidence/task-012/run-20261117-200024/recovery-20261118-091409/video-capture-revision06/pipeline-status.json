@@ -1,0 +1,18 @@
+{
+  "status": "STOPPED_ON_ERROR",
+  "started_at": "2026-11-18T15:06:00+07:00",
+  "steps": [
+    {
+      "name": "record-demo-headless",
+      "returncode": 1,
+      "elapsed_s": 176.84434628486633,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-150600/record-demo-headless.log"
+    }
+  ],
+  "audit_sha256": "0f56d5b5820224c204f48a55c1aaa96237441907af9571b4f13ab14ac6ce1cfd",
+  "resume_reason": "Video02 visual QA failed on gray captured region; short headless scroll/download regression passed. Reuse unchanged audited data, validated/visually reviewed documents and successful cold-start.",
+  "reused_cold_start_sha256": "d318d883b7ca0d58eb949fe6e26594355ae813c35fe5e7356d8fe35884b89508",
+  "current_step": "record-demo-headless",
+  "error": "RuntimeError('Step failed: record-demo-headless; inspect /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-150600/record-demo-headless.log')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/finish-after-audit.py\", line 22, in <module>\n    run('record-demo-headless',['node',root/'scripts/record-experiment-demo.cjs',q/'runtime.json'],{'SMARTLIGHT_PLAYWRIGHT_MODULE':'/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright'},timeout=1500)\n  File \"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/finish-after-audit.py\", line 11, in run\n    if process.returncode:raise RuntimeError('Step failed: '+name+'; inspect '+str(target))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Step failed: record-demo-headless; inspect /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-150600/record-demo-headless.log\n"
+}

@@ -1,0 +1,38 @@
+{
+  "backup-experiments.py.latest": {
+    "bytes": 10360,
+    "sha256": "8595b5b819bda5c7d2e5a219599bc4c0336fd519ecfadad126d5cb5e90a3a9b4"
+  },
+  "cleanup-before-broker-ownership.py": {
+    "bytes": 2921,
+    "sha256": "7222cee1e3463b776e74f34ee52f6b726727e8d1e91f38c0cbd2479a4af33ab4"
+  },
+  "cleanup-broker-ownership-as-run.py": {
+    "bytes": 3470,
+    "sha256": "0a3116a1b10a9008323e1636b4dc1c98495e27bf982e6df0c91d470a20fb9b6d"
+  },
+  "command-freshness-window.json": {
+    "bytes": 9938,
+    "sha256": "91bf79c6ea524eb5ba88577c0610511099025e0cab4eaa4415bb1449cb7fbd2c"
+  },
+  "demo-status.json": {
+    "bytes": 294,
+    "sha256": "6b181f5873cf3268ee02bd1515c91c0f227132b650de355b462b6ab29ca3c822"
+  },
+  "pipeline-status.json": {
+    "bytes": 2045,
+    "sha256": "b81b5b45f3b9e3e8050806cf6130e7680806e40e4442f51c911ca987e1b24ac4"
+  },
+  "record-experiment-demo.cjs.latest": {
+    "bytes": 15371,
+    "sha256": "2a06c27be47e678674ebe2042adce247d38e2064eeab0a2ee0af640532e5c1bd"
+  },
+  "recorder-before-fresh-click.cjs": {
+    "bytes": 15255,
+    "sha256": "4f6e0e8e6bd484fc0dff1fa73eafb8243ba3f7286b375ae707b3d0c5d75b40e3"
+  },
+  "recorder-fresh-click-as-run.cjs": {
+    "bytes": 15371,
+    "sha256": "2a06c27be47e678674ebe2042adce247d38e2064eeab0a2ee0af640532e5c1bd"
+  }
+}

@@ -1,0 +1,2037 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-11-18T07:21:56.087893+00:00",
+  "accepted_runs": 15,
+  "planned_runs": 15,
+  "attempts": [
+    {
+      "scenario": "EX-01",
+      "repeat": 1,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-01-r01-a01"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 1,
+      "attempt": 1,
+      "status": "FAIL",
+      "errors": [
+        {
+          "node_id": "node_03",
+          "error": "Quiet NIGHT25 not maintained"
+        }
+      ],
+      "folder": "EX-02-r01-a01"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 1,
+      "attempt": 2,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-02-r01-a02"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 2,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-02-r02-a01"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 3,
+      "attempt": 1,
+      "status": "INCOMPLETE",
+      "errors": [
+        "['Serial node_01: connection failed (reader thread died)']"
+      ],
+      "folder": "EX-02-r03-a01"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 3,
+      "attempt": 2,
+      "status": "INCOMPLETE",
+      "errors": [
+        "HTTP Error 500: Internal Server Error"
+      ],
+      "folder": "EX-02-r03-a02"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 3,
+      "attempt": 3,
+      "status": "INCOMPLETE",
+      "errors": [
+        "<urlopen error [Errno 111] Connection refused>"
+      ],
+      "folder": "EX-02-r03-a03"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 3,
+      "attempt": 4,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-02-r03-a04"
+    },
+    {
+      "scenario": "EX-03",
+      "repeat": 1,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-03-r01-a01"
+    },
+    {
+      "scenario": "EX-03",
+      "repeat": 2,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-03-r02-a01"
+    },
+    {
+      "scenario": "EX-03",
+      "repeat": 3,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-03-r03-a01"
+    },
+    {
+      "scenario": "EX-04",
+      "repeat": 1,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-04-r01-a01"
+    },
+    {
+      "scenario": "EX-04",
+      "repeat": 2,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-04-r02-a01"
+    },
+    {
+      "scenario": "EX-04",
+      "repeat": 3,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-04-r03-a01"
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 1,
+      "attempt": 1,
+      "status": "INCOMPLETE",
+      "errors": [
+        "Action late beyond2s upper bound: Action(at_s=600, node_id='node_01', kind='scene', value={'environment': 'NIGHT', 'distance': 50}) 2257ms"
+      ],
+      "folder": "EX-05-r01-a01"
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 1,
+      "attempt": 2,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-05-r01-a02"
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 2,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-05-r02-a01"
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 3,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-05-r03-a01"
+    },
+    {
+      "scenario": "EX-06",
+      "repeat": 1,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-06-r01-a01"
+    },
+    {
+      "scenario": "EX-07",
+      "repeat": 1,
+      "attempt": 1,
+      "status": "PASS",
+      "errors": [],
+      "folder": "EX-07-r01-a01"
+    }
+  ],
+  "missing": [],
+  "raw_snapshot_bytes": 71557355,
+  "raw_snapshot_sha256": "fd598ee3248660938bc1ca8063cc2172de55c2e1834704008aa9ed6e86dd55c5",
+  "sqlite_quick_check": [
+    "ok"
+  ],
+  "runs": [
+    {
+      "scenario": "EX-01",
+      "repeat": 1,
+      "attempt": "EX-01-r01-a01",
+      "experiment_id": 4,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 0.0,
+          "auto_energy_wh": 0.0,
+          "baseline_wh": 0.0,
+          "valid_uptime_s": 300.0009999999997,
+          "auto_valid_uptime_s": 300.0009999999997,
+          "covered_wall_s": 312.2341260910034,
+          "missing_wall_s": 2.86102294921875e-06,
+          "coverage_percent": 99.99999908369307,
+          "saving_percent": null,
+          "average_auto_power_w": 0.0,
+          "sample_count": 688,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 300.001,
+          "boot_id": "16634a4e",
+          "from_utc": "2026-11-17T14:02:51.931812Z",
+          "to_utc": "2026-11-17T14:08:04.165941Z",
+          "first_seq": "3929",
+          "last_seq": "4616",
+          "raw_sql_payload_sha256": "8863608976c12838bae686cbfd96018956c0565ed65538c4c02e607adac243df",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 0.0,
+          "auto_energy_wh": 0.0,
+          "baseline_wh": 0.0,
+          "valid_uptime_s": 300.00000000000034,
+          "auto_valid_uptime_s": 300.00000000000034,
+          "covered_wall_s": 314.4979066848755,
+          "missing_wall_s": 3.337860107421875e-06,
+          "coverage_percent": 99.99999893867017,
+          "saving_percent": null,
+          "average_auto_power_w": 0.0,
+          "sample_count": 992,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 300.0,
+          "boot_id": "3a8b19bd",
+          "from_utc": "2026-11-17T14:02:51.891207Z",
+          "to_utc": "2026-11-17T14:08:06.389117Z",
+          "first_seq": "6277",
+          "last_seq": "7268",
+          "raw_sql_payload_sha256": "681cb8076444cd2c8f38c2f234fed48c62ba34b2598d614386f026fa5d546098",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 0.0,
+          "auto_energy_wh": 0.0,
+          "baseline_wh": 0.0,
+          "valid_uptime_s": 300.7910000000005,
+          "auto_valid_uptime_s": 300.7910000000005,
+          "covered_wall_s": 313.3333718776703,
+          "missing_wall_s": 4.291534423828125e-06,
+          "coverage_percent": 99.99999863036155,
+          "saving_percent": null,
+          "average_auto_power_w": 0.0,
+          "sample_count": 929,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 300.791,
+          "boot_id": "44dabee8",
+          "from_utc": "2026-11-17T14:02:52.422680Z",
+          "to_utc": "2026-11-17T14:08:05.756056Z",
+          "first_seq": "4700",
+          "last_seq": "5628",
+          "raw_sql_payload_sha256": "832395f24c0f7c78762627e868b42db5f2775cc9b5d17e320e87bce7246776e6",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 60,
+        "minimum_offset_ms": 774,
+        "maximum_lateness_upper_ms": 1778,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 1,
+      "attempt": "EX-02-r01-a02",
+      "experiment_id": 6,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.0000483333333445,
+          "auto_energy_wh": 1.0000483333333445,
+          "baseline_wh": 4.000193333333378,
+          "valid_uptime_s": 600.0290000000014,
+          "auto_valid_uptime_s": 600.0290000000014,
+          "covered_wall_s": 1073.0287759304047,
+          "missing_wall_s": 4.0531158447265625e-06,
+          "coverage_percent": 99.99999962227334,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 6.000000000000054,
+          "sample_count": 1756,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.029,
+          "boot_id": "16634a4e",
+          "from_utc": "2026-11-17T14:41:16.662730Z",
+          "to_utc": "2026-11-17T14:59:09.691510Z",
+          "first_seq": "7661",
+          "last_seq": "9416",
+          "raw_sql_payload_sha256": "58b8c3c29e6212567886ad925432ed1b44e6b02373c90b2e4583798cc65e5b87",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.0003366666666755,
+          "auto_energy_wh": 1.0003366666666755,
+          "baseline_wh": 4.001346666666702,
+          "valid_uptime_s": 600.2019999999972,
+          "auto_valid_uptime_s": 600.2019999999972,
+          "covered_wall_s": 1087.4921414852142,
+          "missing_wall_s": 4.5299530029296875e-06,
+          "coverage_percent": 99.9999995834496,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 6.000000000000082,
+          "sample_count": 2212,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.202,
+          "boot_id": "3a8b19bd",
+          "from_utc": "2026-11-17T14:41:16.006229Z",
+          "to_utc": "2026-11-17T14:59:23.498375Z",
+          "first_seq": "11415",
+          "last_seq": "13626",
+          "raw_sql_payload_sha256": "7cdc2ee2f509da4c6a51ca43020cf0524a2c1856d11e6dbc607dbd1ebb642f35",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.0002750000000111,
+          "auto_energy_wh": 1.0002750000000111,
+          "baseline_wh": 4.0011000000000445,
+          "valid_uptime_s": 600.1650000000021,
+          "auto_valid_uptime_s": 600.1650000000021,
+          "covered_wall_s": 1077.6360552310944,
+          "missing_wall_s": 3.814697265625e-06,
+          "coverage_percent": 99.99999964601247,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 6.000000000000046,
+          "sample_count": 2108,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.165,
+          "boot_id": "44dabee8",
+          "from_utc": "2026-11-17T14:41:15.908352Z",
+          "to_utc": "2026-11-17T14:59:13.544411Z",
+          "first_seq": "8837",
+          "last_seq": "10944",
+          "raw_sql_payload_sha256": "16fe0d8b73a8208048c878eb73e8319aad910097ef7d713e230ea7ea956cce51",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 0,
+        "minimum_offset_ms": null,
+        "maximum_lateness_upper_ms": null,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 2,
+      "attempt": "EX-02-r02-a01",
+      "experiment_id": 7,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.0003316666666722,
+          "auto_energy_wh": 1.0003316666666722,
+          "baseline_wh": 4.001326666666689,
+          "valid_uptime_s": 600.1990000000015,
+          "auto_valid_uptime_s": 600.1990000000015,
+          "covered_wall_s": 1066.0084493160248,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.99999966451685,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 6.000000000000018,
+          "sample_count": 1601,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.199,
+          "boot_id": "16634a4e",
+          "from_utc": "2026-11-17T14:59:33.274099Z",
+          "to_utc": "2026-11-17T15:17:19.282552Z",
+          "first_seq": "9467",
+          "last_seq": "11067",
+          "raw_sql_payload_sha256": "b7e732bb78943f88e3f8a5e99a34ff056a5affe2ced7746536912da1c6abeff9",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.0000466666666843,
+          "auto_energy_wh": 1.0000466666666843,
+          "baseline_wh": 4.000186666666737,
+          "valid_uptime_s": 600.0279999999995,
+          "auto_valid_uptime_s": 600.0279999999995,
+          "covered_wall_s": 1084.437658071518,
+          "missing_wall_s": 3.814697265625e-06,
+          "coverage_percent": 99.99999964823269,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 6.000000000000111,
+          "sample_count": 2329,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.028,
+          "boot_id": "3a8b19bd",
+          "from_utc": "2026-11-17T14:59:34.087285Z",
+          "to_utc": "2026-11-17T15:17:38.524947Z",
+          "first_seq": "13637",
+          "last_seq": "15965",
+          "raw_sql_payload_sha256": "2e103418470ade390bd4db1d17e8c6c7bdc0d3b7417dc5963e8d4d08ee7c1fc2",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.0000016666666764,
+          "auto_energy_wh": 1.0000016666666764,
+          "baseline_wh": 4.000006666666706,
+          "valid_uptime_s": 600.0009999999957,
+          "auto_valid_uptime_s": 600.0009999999957,
+          "covered_wall_s": 1076.2166430950165,
+          "missing_wall_s": 2.86102294921875e-06,
+          "coverage_percent": 99.9999997341592,
+          "saving_percent": 74.99999999999999,
+          "average_auto_power_w": 6.000000000000102,
+          "sample_count": 2370,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.001,
+          "boot_id": "44dabee8",
+          "from_utc": "2026-11-17T14:59:33.314095Z",
+          "to_utc": "2026-11-17T15:17:29.530741Z",
+          "first_seq": "10979",
+          "last_seq": "13348",
+          "raw_sql_payload_sha256": "dfea76624118901274743db7896bb43f4fd896d852d0087464fde06fda898815",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 0,
+        "minimum_offset_ms": null,
+        "maximum_lateness_upper_ms": null,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-02",
+      "repeat": 3,
+      "attempt": "EX-02-r03-a04",
+      "experiment_id": 9,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.0003450000000103,
+          "auto_energy_wh": 1.0003450000000103,
+          "baseline_wh": 4.001380000000041,
+          "valid_uptime_s": 600.2069999999985,
+          "auto_valid_uptime_s": 600.2069999999985,
+          "covered_wall_s": 1105.104915857315,
+          "missing_wall_s": 3.0994415283203125e-06,
+          "coverage_percent": 99.99999971953419,
+          "saving_percent": 75.00000000000001,
+          "average_auto_power_w": 6.000000000000076,
+          "sample_count": 1802,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.207,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T02:26:13.617830Z",
+          "to_utc": "2026-11-18T02:44:38.722749Z",
+          "first_seq": "862",
+          "last_seq": "2663",
+          "raw_sql_payload_sha256": "f663836ac77981eb2e35628c50e948699c6eaaf8f94668430d656db3a533ad15",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.0003566666666743,
+          "auto_energy_wh": 1.0003566666666743,
+          "baseline_wh": 4.001426666666697,
+          "valid_uptime_s": 600.214000000001,
+          "auto_valid_uptime_s": 600.214000000001,
+          "covered_wall_s": 1129.903909444809,
+          "missing_wall_s": 3.337860107421875e-06,
+          "coverage_percent": 99.99999970458903,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 6.000000000000036,
+          "sample_count": 1818,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.214,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T02:26:13.839785Z",
+          "to_utc": "2026-11-18T02:45:03.743698Z",
+          "first_seq": "1102",
+          "last_seq": "2919",
+          "raw_sql_payload_sha256": "5b454b2af64c624f86bc7fb8a6b3b26707c6954c33ff45e8785231c3ac15c7ef",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.000000000000003,
+          "auto_energy_wh": 1.000000000000003,
+          "baseline_wh": 4.000000000000012,
+          "valid_uptime_s": 599.9999999999948,
+          "auto_valid_uptime_s": 599.9999999999948,
+          "covered_wall_s": 1159.3790254592896,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.99999969153498,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 6.000000000000071,
+          "sample_count": 2049,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.0,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T02:26:13.426976Z",
+          "to_utc": "2026-11-18T02:45:32.806005Z",
+          "first_seq": "948",
+          "last_seq": "2996",
+          "raw_sql_payload_sha256": "9dbc30c8a7d8f290726a1d157adb98043de79f64e0123cca0bdff41a38aaae26",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 0,
+        "minimum_offset_ms": null,
+        "maximum_lateness_upper_ms": null,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-03",
+      "repeat": 1,
+      "attempt": "EX-03-r01-a01",
+      "experiment_id": 10,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.3599844666666914,
+          "auto_energy_wh": 1.3599844666666914,
+          "baseline_wh": 4.000086666666725,
+          "valid_uptime_s": 600.0130000000022,
+          "auto_valid_uptime_s": 600.0130000000022,
+          "covered_wall_s": 1089.7251784801483,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.9999996718183,
+          "saving_percent": 66.0011249756254,
+          "average_auto_power_w": 8.159730005849992,
+          "sample_count": 2194,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.013,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T02:45:42.396147Z",
+          "to_utc": "2026-11-18T03:03:52.121329Z",
+          "first_seq": "2778",
+          "last_seq": "4971",
+          "raw_sql_payload_sha256": "dfe57c2a9fc80af26db3b8990c7a006c17709b4c4e155f4a9ee1078431cc2906",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.360317333333351,
+          "auto_energy_wh": 1.360317333333351,
+          "baseline_wh": 4.0012000000000425,
+          "valid_uptime_s": 600.1800000000035,
+          "auto_valid_uptime_s": 600.1800000000035,
+          "covered_wall_s": 1116.049072265625,
+          "missing_wall_s": 4.76837158203125e-06,
+          "coverage_percent": 99.99999957274535,
+          "saving_percent": 66.00226598687053,
+          "average_auto_power_w": 8.159456163151113,
+          "sample_count": 2360,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.18,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T02:45:42.585928Z",
+          "to_utc": "2026-11-18T03:04:18.635005Z",
+          "first_seq": "3001",
+          "last_seq": "5360",
+          "raw_sql_payload_sha256": "99995a729d56fdee141a0e025469d651b6c453be6d76e9b832637a2f1a4e04c5",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.3604437000000111,
+          "auto_energy_wh": 1.3604437000000111,
+          "baseline_wh": 4.000973333333383,
+          "valid_uptime_s": 600.146000000002,
+          "auto_valid_uptime_s": 600.146000000002,
+          "covered_wall_s": 1135.5681145191193,
+          "missing_wall_s": 4.5299530029296875e-06,
+          "coverage_percent": 99.99999960108487,
+          "saving_percent": 65.99718151916382,
+          "average_auto_power_w": 8.160676435400758,
+          "sample_count": 2100,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.146,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T02:45:42.462977Z",
+          "to_utc": "2026-11-18T03:04:38.031096Z",
+          "first_seq": "3006",
+          "last_seq": "5105",
+          "raw_sql_payload_sha256": "79b6c1151ca9085cf3377caa715fb244bf379f98964e425f5bf6f10a51a85f2b",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 60,
+        "minimum_offset_ms": 358,
+        "maximum_lateness_upper_ms": 658,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-03",
+      "repeat": 2,
+      "attempt": "EX-03-r02-a01",
+      "experiment_id": 11,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.3604210000000154,
+          "auto_energy_wh": 1.3604210000000154,
+          "baseline_wh": 4.001326666666707,
+          "valid_uptime_s": 600.1989999999994,
+          "auto_valid_uptime_s": 600.1989999999994,
+          "covered_wall_s": 1152.524703502655,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.99999968970047,
+          "saving_percent": 66.00075141744651,
+          "average_auto_power_w": 8.159819659812928,
+          "sample_count": 1558,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.199,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T03:04:48.458581Z",
+          "to_utc": "2026-11-18T03:24:00.983288Z",
+          "first_seq": "5080",
+          "last_seq": "6637",
+          "raw_sql_payload_sha256": "f8c28c441dae0cd80f3c1aadc21656b8c68151ab997967a333ab738af573ddbf",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.3606338666666893,
+          "auto_energy_wh": 1.3606338666666893,
+          "baseline_wh": 4.001306666666734,
+          "valid_uptime_s": 600.196000000003,
+          "auto_valid_uptime_s": 600.196000000003,
+          "covered_wall_s": 1193.6736135482788,
+          "missing_wall_s": 3.337860107421875e-06,
+          "coverage_percent": 99.9999997203708,
+          "saving_percent": 65.99526154789434,
+          "average_auto_power_w": 8.16113722850545,
+          "sample_count": 2207,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.196,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T03:04:49.298408Z",
+          "to_utc": "2026-11-18T03:24:42.972025Z",
+          "first_seq": "5420",
+          "last_seq": "7626",
+          "raw_sql_payload_sha256": "8246440ed7ca64d00c295d3279d4e2a7896e7c92d510083ffe7997a95819bb2c",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.3603007666666842,
+          "auto_energy_wh": 1.3603007666666842,
+          "baseline_wh": 4.001193333333369,
+          "valid_uptime_s": 600.1790000000009,
+          "auto_valid_uptime_s": 600.1790000000009,
+          "covered_wall_s": 1219.4777610301971,
+          "missing_wall_s": 4.0531158447265625e-06,
+          "coverage_percent": 99.99999966763512,
+          "saving_percent": 66.00262338402362,
+          "average_auto_power_w": 8.15937038783439,
+          "sample_count": 2300,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.179,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T03:04:48.628794Z",
+          "to_utc": "2026-11-18T03:25:08.106559Z",
+          "first_seq": "5130",
+          "last_seq": "7429",
+          "raw_sql_payload_sha256": "ffdb1fb845d5360e0b2b7e849b801a208a5dd884707eeca0cbb5fdf601db6a0d",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 60,
+        "minimum_offset_ms": 393,
+        "maximum_lateness_upper_ms": 713,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-03",
+      "repeat": 3,
+      "attempt": "EX-03-r03-a01",
+      "experiment_id": 12,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.3598034000000163,
+          "auto_energy_wh": 1.3598034000000163,
+          "baseline_wh": 4.000020000000032,
+          "valid_uptime_s": 600.0029999999978,
+          "auto_valid_uptime_s": 600.0029999999978,
+          "covered_wall_s": 1240.2179934978485,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.99999971164112,
+          "saving_percent": 66.00508497457498,
+          "average_auto_power_w": 8.158779606102097,
+          "sample_count": 1915,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.003,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T03:25:19.932507Z",
+          "to_utc": "2026-11-18T03:46:00.150504Z",
+          "first_seq": "6775",
+          "last_seq": "8689",
+          "raw_sql_payload_sha256": "0502eb73c8236e4d7a1467bf09ec8688b7f9393a3fd676fa057e872c72578f64",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.360024633333347,
+          "auto_energy_wh": 1.360024633333347,
+          "baseline_wh": 4.000026666666692,
+          "valid_uptime_s": 600.0039999999982,
+          "auto_valid_uptime_s": 600.0039999999982,
+          "covered_wall_s": 1258.8200602531433,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.99999971590232,
+          "saving_percent": 65.99961083592763,
+          "average_auto_power_w": 8.160093399377443,
+          "sample_count": 2073,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.004,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T03:25:20.988845Z",
+          "to_utc": "2026-11-18T03:46:19.808909Z",
+          "first_seq": "7701",
+          "last_seq": "9773",
+          "raw_sql_payload_sha256": "0059dfb9eb215c69dfb00e36427afa396129094cb808d5ca081657c57100fcb9",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.3602808333333543,
+          "auto_energy_wh": 1.3602808333333543,
+          "baseline_wh": 4.001213333333397,
+          "valid_uptime_s": 600.1820000000026,
+          "auto_valid_uptime_s": 600.1820000000026,
+          "covered_wall_s": 1292.4719388484955,
+          "missing_wall_s": 4.0531158447265625e-06,
+          "coverage_percent": 99.9999996864059,
+          "saving_percent": 66.00329150157786,
+          "average_auto_power_w": 8.159210039621405,
+          "sample_count": 2285,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.182,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T03:25:19.891395Z",
+          "to_utc": "2026-11-18T03:46:52.363338Z",
+          "first_seq": "7446",
+          "last_seq": "9730",
+          "raw_sql_payload_sha256": "374a63a959cf331ae3ac75017bc41746e498bbe81d3238fe6b53e9a70a8c0998",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 60,
+        "minimum_offset_ms": 354,
+        "maximum_lateness_upper_ms": 714,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-04",
+      "repeat": 1,
+      "attempt": "EX-04-r01-a01",
+      "experiment_id": 13,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.6011160666666757,
+          "auto_energy_wh": 1.6011160666666757,
+          "baseline_wh": 4.003873333333355,
+          "valid_uptime_s": 600.5810000000021,
+          "auto_valid_uptime_s": 600.5810000000021,
+          "covered_wall_s": 1075.547752380371,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.99999966749233,
+          "saving_percent": 60.010821188149464,
+          "average_auto_power_w": 9.597402914844146,
+          "sample_count": 1289,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.581,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T03:47:08.183445Z",
+          "to_utc": "2026-11-18T04:05:03.731201Z",
+          "first_seq": "8749",
+          "last_seq": "10037",
+          "raw_sql_payload_sha256": "77742aca5a2fc83cd5e1821ff50ab68ed694b576279927b644a530d23c143cc1",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.6011321666666773,
+          "auto_energy_wh": 1.6011321666666773,
+          "baseline_wh": 4.0038533333333675,
+          "valid_uptime_s": 600.5779999999978,
+          "auto_valid_uptime_s": 600.5779999999978,
+          "covered_wall_s": 1098.994112253189,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.99999967458618,
+          "saving_percent": 60.01021932205315,
+          "average_auto_power_w": 9.597547362707358,
+          "sample_count": 1777,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.578,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T03:47:07.792308Z",
+          "to_utc": "2026-11-18T04:05:26.786424Z",
+          "first_seq": "9865",
+          "last_seq": "11641",
+          "raw_sql_payload_sha256": "1e7c0cce3af4fd6b0a718a96c76b136df1e1852b9cf6680725af9ff6d4689d55",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.6017946333333428,
+          "auto_energy_wh": 1.6017946333333428,
+          "baseline_wh": 4.00666666666671,
+          "valid_uptime_s": 600.9999999999961,
+          "auto_valid_uptime_s": 600.9999999999961,
+          "covered_wall_s": 1118.530387878418,
+          "missing_wall_s": 3.0994415283203125e-06,
+          "coverage_percent": 99.99999972290055,
+          "saving_percent": 60.021764559068416,
+          "average_auto_power_w": 9.594776505823745,
+          "sample_count": 1855,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 601.0,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T03:47:07.963005Z",
+          "to_utc": "2026-11-18T04:05:46.493396Z",
+          "first_seq": "9753",
+          "last_seq": "11607",
+          "raw_sql_payload_sha256": "ae611d704b95dac2e6705e1c3cb5d71dd1636b77a9d1aacd00957af1ef0442ad",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 60,
+        "minimum_offset_ms": 343,
+        "maximum_lateness_upper_ms": 683,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-04",
+      "repeat": 2,
+      "attempt": "EX-04-r02-a01",
+      "experiment_id": 14,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.6007518333333404,
+          "auto_energy_wh": 1.6007518333333404,
+          "baseline_wh": 4.004026666666683,
+          "valid_uptime_s": 600.6040000000002,
+          "auto_valid_uptime_s": 600.6040000000002,
+          "covered_wall_s": 1157.7800197601318,
+          "missing_wall_s": 4.0531158447265625e-06,
+          "coverage_percent": 99.9999996499235,
+          "saving_percent": 60.02144924109729,
+          "average_auto_power_w": 9.594852182136687,
+          "sample_count": 1223,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.604,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T04:05:58.602101Z",
+          "to_utc": "2026-11-18T04:25:16.382125Z",
+          "first_seq": "10098",
+          "last_seq": "11320",
+          "raw_sql_payload_sha256": "f1069f846187c3393c79d6c1495e7f01edf21eb39f1ad0e97d9fb516594c3677",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.6013839000000074,
+          "auto_energy_wh": 1.6013839000000074,
+          "baseline_wh": 4.004020000000038,
+          "valid_uptime_s": 600.6029999999993,
+          "auto_valid_uptime_s": 600.6029999999993,
+          "covered_wall_s": 1194.622564792633,
+          "missing_wall_s": 4.291534423828125e-06,
+          "coverage_percent": 99.99999964076231,
+          "saving_percent": 60.00559687514068,
+          "average_auto_power_w": 9.59865674996634,
+          "sample_count": 1935,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.603,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T04:05:58.306815Z",
+          "to_utc": "2026-11-18T04:25:52.929384Z",
+          "first_seq": "11697",
+          "last_seq": "13631",
+          "raw_sql_payload_sha256": "2b91412e28298e60c7b207e3c06ab398853c903041249e0bf207e07e25788e12",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.6003798000000105,
+          "auto_energy_wh": 1.6003798000000105,
+          "baseline_wh": 4.0013200000000495,
+          "valid_uptime_s": 600.1980000000028,
+          "auto_valid_uptime_s": 600.1980000000028,
+          "covered_wall_s": 1206.8168404102325,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.9999997036602,
+          "saving_percent": 60.00370377775357,
+          "average_auto_power_w": 9.599111093339216,
+          "sample_count": 1902,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.198,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T04:05:58.521238Z",
+          "to_utc": "2026-11-18T04:26:05.338082Z",
+          "first_seq": "11619",
+          "last_seq": "13520",
+          "raw_sql_payload_sha256": "f08641b7f83392a8d82740c81fa6bd6ddfcaac3261a5b1e2809e8ebd09e4cfa7",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 60,
+        "minimum_offset_ms": 232,
+        "maximum_lateness_upper_ms": 837,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-04",
+      "repeat": 3,
+      "attempt": "EX-04-r03-a01",
+      "experiment_id": 15,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.5981578666666745,
+          "auto_energy_wh": 1.5981578666666745,
+          "baseline_wh": 3.99328666666668,
+          "valid_uptime_s": 598.9930000000007,
+          "auto_valid_uptime_s": 598.9930000000007,
+          "covered_wall_s": 1165.6231105327606,
+          "missing_wall_s": 10.897067546844482,
+          "coverage_percent": 99.07378829960814,
+          "saving_percent": 59.97888456125525,
+          "average_auto_power_w": 9.605067705298762,
+          "sample_count": 1129,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "DISCONTINUITY": 1
+          },
+          "duration_uptime_s": 600.788,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T04:26:20.875970Z",
+          "to_utc": "2026-11-18T04:45:57.396148Z",
+          "first_seq": "11346",
+          "last_seq": "12474",
+          "raw_sql_payload_sha256": "1a0ce5e02d688f1986224c0414463f894eff2a3e821f3324d0ca0de48729b13b",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.6003292000000116,
+          "auto_energy_wh": 1.6003292000000116,
+          "baseline_wh": 4.000166666666692,
+          "valid_uptime_s": 600.0249999999969,
+          "auto_valid_uptime_s": 600.0249999999969,
+          "covered_wall_s": 1205.5457742214203,
+          "missing_wall_s": 3.814697265625e-06,
+          "coverage_percent": 99.99999968357093,
+          "saving_percent": 59.99343694012746,
+          "average_auto_power_w": 9.60157513436952,
+          "sample_count": 1859,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 600.025,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T04:26:17.765059Z",
+          "to_utc": "2026-11-18T04:46:23.310837Z",
+          "first_seq": "13658",
+          "last_seq": "15516",
+          "raw_sql_payload_sha256": "e273d85b8311e0309187397f45ff600931beb5d0e49acda42c7c36f236d3a34f",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.5973060333333442,
+          "auto_energy_wh": 1.5973060333333442,
+          "baseline_wh": 3.9892466666667032,
+          "valid_uptime_s": 598.3869999999984,
+          "auto_valid_uptime_s": 598.3869999999984,
+          "covered_wall_s": 1205.4262857437134,
+          "missing_wall_s": 12.123409271240234,
+          "coverage_percent": 99.00427807416179,
+          "saving_percent": 59.95970751369943,
+          "average_auto_power_w": 9.609670196712253,
+          "sample_count": 1896,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "DISCONTINUITY": 1
+          },
+          "duration_uptime_s": 600.387,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T04:26:17.436085Z",
+          "to_utc": "2026-11-18T04:46:34.985780Z",
+          "first_seq": "13539",
+          "last_seq": "15434",
+          "raw_sql_payload_sha256": "d6ed4d85f7907433c3bb44a38c368ded4ced5ac9078c3e72ff0d706a367a64d5",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 60,
+        "minimum_offset_ms": 352,
+        "maximum_lateness_upper_ms": 704,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 1,
+      "attempt": "EX-05-r01-a02",
+      "experiment_id": 17,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.7987416000000105,
+          "auto_energy_wh": 1.7981539333333438,
+          "baseline_wh": 3.9968800000000195,
+          "valid_uptime_s": 901.1910000000041,
+          "auto_valid_uptime_s": 899.6900000000038,
+          "covered_wall_s": 1429.9079484939575,
+          "missing_wall_s": 4.5299530029296875e-06,
+          "coverage_percent": 99.99999968319968,
+          "saving_percent": 55.0110602936957,
+          "average_auto_power_w": 7.195094043503885,
+          "sample_count": 1979,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "STATE_CHANGE": 2
+          },
+          "duration_uptime_s": 901.191,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T05:36:09.560464Z",
+          "to_utc": "2026-11-18T05:59:59.468417Z",
+          "first_seq": "16116",
+          "last_seq": "18094",
+          "raw_sql_payload_sha256": "ffec72074139ad85db89521217ed46b9c70cc5b599d44afe8dcf246024990d67",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.182667333333346,
+          "auto_energy_wh": 1.182202333333346,
+          "baseline_wh": 4.008033333333384,
+          "valid_uptime_s": 900.0289999999943,
+          "auto_valid_uptime_s": 899.7499999999943,
+          "covered_wall_s": 1548.393996477127,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.99999976903302,
+          "saving_percent": 70.50417910696025,
+          "average_auto_power_w": 4.730123256460208,
+          "sample_count": 2881,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "STATE_CHANGE": 1
+          },
+          "duration_uptime_s": 900.029,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T05:36:09.102393Z",
+          "to_utc": "2026-11-18T06:01:57.496393Z",
+          "first_seq": "20897",
+          "last_seq": "23777",
+          "raw_sql_payload_sha256": "ed1ab8fb2a14c816877fcfef51c6ecf78c823feba3f4e1e505407423f1a5c47c",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.980664766666692,
+          "auto_energy_wh": 1.980664766666692,
+          "baseline_wh": 6.002713333333442,
+          "valid_uptime_s": 900.4070000000067,
+          "auto_valid_uptime_s": 900.4070000000067,
+          "covered_wall_s": 1799.5036091804504,
+          "missing_wall_s": 3.814697265625e-06,
+          "coverage_percent": 99.99999978801391,
+          "saving_percent": 67.00384215138283,
+          "average_auto_power_w": 7.919077883668205,
+          "sample_count": 3102,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 900.407,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T05:36:09.168087Z",
+          "to_utc": "2026-11-18T06:06:08.671700Z",
+          "first_seq": "20059",
+          "last_seq": "23160",
+          "raw_sql_payload_sha256": "20cad538702cac9b6fdd603928e67699577b6423c3cce9af3effc829951b3705",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 46,
+        "minimum_offset_ms": 0,
+        "maximum_lateness_upper_ms": 621,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 2,
+      "attempt": "EX-05-r02-a01",
+      "experiment_id": 18,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.7969078000000087,
+          "auto_energy_wh": 1.7962930666666752,
+          "baseline_wh": 3.9906200000000123,
+          "valid_uptime_s": 900.5700000000061,
+          "auto_valid_uptime_s": 900.1620000000061,
+          "covered_wall_s": 1343.561418056488,
+          "missing_wall_s": 3.814697265625e-06,
+          "coverage_percent": 99.9999997160757,
+          "saving_percent": 54.987118125337176,
+          "average_auto_power_w": 7.183879168416337,
+          "sample_count": 2245,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "STATE_CHANGE": 2
+          },
+          "duration_uptime_s": 900.57,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T06:06:19.806231Z",
+          "to_utc": "2026-11-18T06:28:43.367653Z",
+          "first_seq": "18421",
+          "last_seq": "20665",
+          "raw_sql_payload_sha256": "509487397ff7615377e86daf505897d7d9feb6b2d63c93274c55b65866a4fa1d",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.1828050000000032,
+          "auto_energy_wh": 1.18250286666667,
+          "baseline_wh": 4.00940000000002,
+          "valid_uptime_s": 900.0009999999929,
+          "auto_valid_uptime_s": 899.7949999999929,
+          "covered_wall_s": 1411.3456106185913,
+          "missing_wall_s": 3.337860107421875e-06,
+          "coverage_percent": 99.99999976349804,
+          "saving_percent": 70.5067375002079,
+          "average_auto_power_w": 4.731089103629211,
+          "sample_count": 3052,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "STATE_CHANGE": 1
+          },
+          "duration_uptime_s": 900.001,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T06:06:19.937473Z",
+          "to_utc": "2026-11-18T06:29:51.283087Z",
+          "first_seq": "24582",
+          "last_seq": "27633",
+          "raw_sql_payload_sha256": "b24c2c49ecfe2ba6bd2ae98f9b5ebea6f5def1a7ceb007d70140bed7a4f85f8f",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.980240666666684,
+          "auto_energy_wh": 1.980240666666684,
+          "baseline_wh": 6.001033333333407,
+          "valid_uptime_s": 900.1549999999959,
+          "auto_valid_uptime_s": 900.1549999999959,
+          "covered_wall_s": 1664.9943556785583,
+          "missing_wall_s": 4.291534423828125e-06,
+          "coverage_percent": 99.99999974224932,
+          "saving_percent": 67.00167193427811,
+          "average_auto_power_w": 7.9195987357733895,
+          "sample_count": 2909,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 900.155,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T06:06:19.631321Z",
+          "to_utc": "2026-11-18T06:34:04.625681Z",
+          "first_seq": "23184",
+          "last_seq": "26092",
+          "raw_sql_payload_sha256": "ee5e2120331868e97297af70d834e2cbb1445ceaec6a1091e21d0fad276e6de1",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 46,
+        "minimum_offset_ms": 0,
+        "maximum_lateness_upper_ms": 649,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-05",
+      "repeat": 3,
+      "attempt": "EX-05-r03-a01",
+      "experiment_id": 19,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 1.7972027000000104,
+          "auto_energy_wh": 1.7965199000000105,
+          "baseline_wh": 3.989833333333342,
+          "valid_uptime_s": 900.2820000000015,
+          "auto_valid_uptime_s": 899.8760000000015,
+          "covered_wall_s": 1395.0296411514282,
+          "missing_wall_s": 3.814697265625e-06,
+          "coverage_percent": 99.99999972655081,
+          "saving_percent": 54.972557750950166,
+          "average_auto_power_w": 7.187069818508358,
+          "sample_count": 1981,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "STATE_CHANGE": 2
+          },
+          "duration_uptime_s": 900.282,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T06:34:16.358336Z",
+          "to_utc": "2026-11-18T06:57:31.387981Z",
+          "first_seq": "21032",
+          "last_seq": "23012",
+          "raw_sql_payload_sha256": "18d8ce88e7dd1e155e2525358208d2f60e72cfa2fea98f326234b5ff92b04413",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 1.1830775000000116,
+          "auto_energy_wh": 1.1816551000000115,
+          "baseline_wh": 4.0052933333333876,
+          "valid_uptime_s": 900.0109999999958,
+          "auto_valid_uptime_s": 899.1219999999958,
+          "covered_wall_s": 1475.351493358612,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.99999975759819,
+          "saving_percent": 70.49766392473971,
+          "average_auto_power_w": 4.731235983548464,
+          "sample_count": 2876,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "STATE_CHANGE": 1
+          },
+          "duration_uptime_s": 900.011,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T06:34:18.613188Z",
+          "to_utc": "2026-11-18T06:58:53.964685Z",
+          "first_seq": "28459",
+          "last_seq": "31334",
+          "raw_sql_payload_sha256": "56a000684961262c908a9dadd8419a4ba47cf2f441e696d6fc660da20206102f",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 1.9803637333333477,
+          "auto_energy_wh": 1.9803637333333477,
+          "baseline_wh": 6.001333333333388,
+          "valid_uptime_s": 900.199999999988,
+          "auto_valid_uptime_s": 900.199999999988,
+          "covered_wall_s": 1725.3744201660156,
+          "missing_wall_s": 3.814697265625e-06,
+          "coverage_percent": 99.99999977890612,
+          "saving_percent": 67.00127082870479,
+          "average_auto_power_w": 7.919695001111028,
+          "sample_count": 2747,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 900.2,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T06:34:16.866723Z",
+          "to_utc": "2026-11-18T07:03:02.241147Z",
+          "first_seq": "26110",
+          "last_seq": "28856",
+          "raw_sql_payload_sha256": "56a50d02765e33a0ebf1233a7ce8cfc77b6476df99c3e6dc860578bb263854b2",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 46,
+        "minimum_offset_ms": 0,
+        "maximum_lateness_upper_ms": 845,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-06",
+      "repeat": 1,
+      "attempt": "EX-06-r01-a01",
+      "experiment_id": 20,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 0.5000250000000002,
+          "auto_energy_wh": 0.5000250000000002,
+          "baseline_wh": 2.0001000000000007,
+          "valid_uptime_s": 300.01500000000055,
+          "auto_valid_uptime_s": 300.01500000000055,
+          "covered_wall_s": 507.5500576496124,
+          "missing_wall_s": 4.291534423828125e-06,
+          "coverage_percent": 99.99999915446087,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 5.999999999999991,
+          "sample_count": 971,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 300.015,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T07:03:13.118047Z",
+          "to_utc": "2026-11-18T07:11:40.668109Z",
+          "first_seq": "23389",
+          "last_seq": "24359",
+          "raw_sql_payload_sha256": "e8f4afe4dfa5732742b9799201e6cfe787faec629dd448d36f1cb180c56a9576",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 0.30063583333333393,
+          "auto_energy_wh": 0.2949100000000006,
+          "baseline_wh": 1.1796400000000025,
+          "valid_uptime_s": 300.3380000000004,
+          "auto_valid_uptime_s": 176.94600000000023,
+          "covered_wall_s": 513.0958697795868,
+          "missing_wall_s": 4.291534423828125e-06,
+          "coverage_percent": 99.9999991635999,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 6.000000000000004,
+          "sample_count": 1006,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "LOAD_CALIBRATION_OR_FAULT_CONFIRMATION": 353,
+            "FAULT_OR_RECOVERY": 357,
+            "STATE_CHANGE": 2
+          },
+          "duration_uptime_s": 300.338,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T07:03:12.790489Z",
+          "to_utc": "2026-11-18T07:11:45.886363Z",
+          "first_seq": "32150",
+          "last_seq": "33155",
+          "raw_sql_payload_sha256": "34b86aa822782d2c721cba7eca2f9ce8aa41039f1700a3f31383e02d7abebf5d",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 0.5003499999999995,
+          "auto_energy_wh": 0.5003499999999995,
+          "baseline_wh": 2.001399999999998,
+          "valid_uptime_s": 300.21000000000015,
+          "auto_valid_uptime_s": 300.21000000000015,
+          "covered_wall_s": 528.6236743927002,
+          "missing_wall_s": 3.5762786865234375e-06,
+          "coverage_percent": 99.99999932347362,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 5.999999999999991,
+          "sample_count": 1116,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1
+          },
+          "duration_uptime_s": 300.21,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T07:03:13.233903Z",
+          "to_utc": "2026-11-18T07:12:01.857581Z",
+          "first_seq": "28873",
+          "last_seq": "29988",
+          "raw_sql_payload_sha256": "46d01a35dc96465c3d9758c631c2acdb1bcd18e26dbfcabb9af5df987ab15c4d",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 2,
+        "minimum_offset_ms": 335,
+        "maximum_lateness_upper_ms": 431,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    },
+    {
+      "scenario": "EX-07",
+      "repeat": 1,
+      "attempt": "EX-07-r01-a01",
+      "experiment_id": 21,
+      "nodes": {
+        "node_01": {
+          "total_energy_wh": 0.37720499999999907,
+          "auto_energy_wh": 0.37720499999999907,
+          "baseline_wh": 1.5088199999999963,
+          "valid_uptime_s": 226.32300000000023,
+          "auto_valid_uptime_s": 226.32300000000023,
+          "covered_wall_s": 418.74548149108887,
+          "missing_wall_s": 110.82165336608887,
+          "coverage_percent": 79.07316257532163,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 5.99999999999998,
+          "sample_count": 732,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "DISCONTINUITY": 1,
+            "ORDER_OR_GAP": 1
+          },
+          "duration_uptime_s": 300.603,
+          "boot_id": "826d7697",
+          "from_utc": "2026-11-18T07:12:09.675646Z",
+          "to_utc": "2026-11-18T07:20:59.242781Z",
+          "first_seq": "24411",
+          "last_seq": "25142",
+          "raw_sql_payload_sha256": "e5d88ed0a551a4f1c658e62e3a70653e58461527ca70daae7ee3ee9626268f9e",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_02": {
+          "total_energy_wh": 0.39219499999999835,
+          "auto_energy_wh": 0.39219499999999835,
+          "baseline_wh": 1.5687799999999934,
+          "valid_uptime_s": 235.31699999999952,
+          "auto_valid_uptime_s": 235.31699999999952,
+          "covered_wall_s": 441.8326642513275,
+          "missing_wall_s": 112.02148580551147,
+          "coverage_percent": 79.77419040842877,
+          "saving_percent": 75.0,
+          "average_auto_power_w": 5.999999999999988,
+          "sample_count": 734,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "DISCONTINUITY": 1,
+            "ORDER_OR_GAP": 1
+          },
+          "duration_uptime_s": 300.018,
+          "boot_id": "d255dbbb",
+          "from_utc": "2026-11-18T07:12:09.975626Z",
+          "to_utc": "2026-11-18T07:21:23.829776Z",
+          "first_seq": "33203",
+          "last_seq": "33936",
+          "raw_sql_payload_sha256": "65799cfa7f78e26f636c1df156ddf313ffeae3f235a0582745257dfe1841d135",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 0
+        },
+        "node_03": {
+          "total_energy_wh": 0.39390666666666585,
+          "auto_energy_wh": 0.39390666666666585,
+          "baseline_wh": 1.5756266666666634,
+          "valid_uptime_s": 236.3440000000004,
+          "auto_valid_uptime_s": 236.3440000000004,
+          "covered_wall_s": 452.1678555011749,
+          "missing_wall_s": 114.20194339752197,
+          "coverage_percent": 79.83615234788525,
+          "saving_percent": 75.00000000000001,
+          "average_auto_power_w": 5.999999999999978,
+          "sample_count": 826,
+          "excluded_intervals": {
+            "FIRST_SAMPLE": 1,
+            "DISCONTINUITY": 1,
+            "ORDER_OR_GAP": 1
+          },
+          "duration_uptime_s": 300.794,
+          "boot_id": "99a37fb4",
+          "from_utc": "2026-11-18T07:12:09.493405Z",
+          "to_utc": "2026-11-18T07:21:35.863204Z",
+          "first_seq": "30005",
+          "last_seq": "30831",
+          "raw_sql_payload_sha256": "d23f7e24fa354f4ff27e16c9e72b97a009c3fd1e77c9131de56376aaf62ad0e0",
+          "raw_missing": [],
+          "payload_mismatch": [],
+          "raw_not_in_sql": [],
+          "independent_api_errors": [],
+          "independent_csv_errors": [],
+          "sequence_gaps": 1
+        }
+      },
+      "errors": [],
+      "action_summary": {
+        "physical_actions": 4,
+        "minimum_offset_ms": 381,
+        "maximum_lateness_upper_ms": 381,
+        "upper_limit_ms": 2000
+      },
+      "status": "PASS"
+    }
+  ],
+  "aggregates": {
+    "EX-01": {
+      "node_run_observations": 3,
+      "fields": {
+        "auto_energy_wh": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "n": 3
+        },
+        "baseline_wh": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "n": 3
+        },
+        "saving_percent": null,
+        "average_auto_power_w": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "n": 3
+        },
+        "auto_valid_uptime_s": {
+          "mean": 300.2640000000002,
+          "minimum": 300.00000000000034,
+          "maximum": 300.7910000000005,
+          "n": 3
+        },
+        "coverage_percent": {
+          "mean": 99.99999888424159,
+          "minimum": 99.99999863036155,
+          "maximum": 99.99999908369307,
+          "n": 3
+        }
+      }
+    },
+    "EX-02": {
+      "node_run_observations": 9,
+      "fields": {
+        "auto_energy_wh": {
+          "mean": 1.000193518518528,
+          "minimum": 1.000000000000003,
+          "maximum": 1.0003566666666743,
+          "n": 9
+        },
+        "baseline_wh": {
+          "mean": 4.000774074074112,
+          "minimum": 4.000000000000012,
+          "maximum": 4.001426666666697,
+          "n": 9
+        },
+        "saving_percent": {
+          "mean": 75.0,
+          "minimum": 74.99999999999999,
+          "maximum": 75.00000000000001,
+          "n": 9
+        },
+        "average_auto_power_w": {
+          "mean": 6.000000000000067,
+          "minimum": 6.000000000000018,
+          "maximum": 6.000000000000111,
+          "n": 9
+        },
+        "auto_valid_uptime_s": {
+          "mean": 600.1161111111102,
+          "minimum": 599.9999999999948,
+          "maximum": 600.214000000001,
+          "n": 9
+        },
+        "coverage_percent": {
+          "mean": 99.99999966825581,
+          "minimum": 99.9999995834496,
+          "maximum": 99.9999997341592,
+          "n": 9
+        }
+      }
+    },
+    "EX-03": {
+      "node_run_observations": 9,
+      "fields": {
+        "auto_energy_wh": {
+          "mean": 1.3602455555555732,
+          "minimum": 1.3598034000000163,
+          "maximum": 1.3606338666666893,
+          "n": 9
+        },
+        "baseline_wh": {
+          "mean": 4.0008162962963425,
+          "minimum": 4.000020000000032,
+          "maximum": 4.001326666666707,
+          "n": 9
+        },
+        "saving_percent": {
+          "mean": 66.00079957145607,
+          "minimum": 65.99526154789434,
+          "maximum": 66.00508497457498,
+          "n": 9
+        },
+        "average_auto_power_w": {
+          "mean": 8.159808102850619,
+          "minimum": 8.158779606102097,
+          "maximum": 8.16113722850545,
+          "n": 9
+        },
+        "auto_valid_uptime_s": {
+          "mean": 600.1224444444455,
+          "minimum": 600.0029999999978,
+          "maximum": 600.1989999999994,
+          "n": 9
+        },
+        "coverage_percent": {
+          "mean": 99.99999967081159,
+          "minimum": 99.99999957274535,
+          "maximum": 99.9999997203708,
+          "n": 9
+        }
+      }
+    },
+    "EX-04": {
+      "node_run_observations": 9,
+      "fields": {
+        "auto_energy_wh": {
+          "mean": 1.6002612777777872,
+          "minimum": 1.5973060333333442,
+          "maximum": 1.6017946333333428,
+          "n": 9
+        },
+        "baseline_wh": {
+          "mean": 4.000717777777809,
+          "minimum": 3.9892466666667032,
+          "maximum": 4.00666666666671,
+          "n": 9
+        },
+        "saving_percent": {
+          "mean": 60.000620442038304,
+          "minimum": 59.95970751369943,
+          "maximum": 60.021764559068416,
+          "n": 9
+        },
+        "average_auto_power_w": {
+          "mean": 9.599851093910893,
+          "minimum": 9.594776505823745,
+          "maximum": 9.609670196712253,
+          "n": 9
+        },
+        "auto_valid_uptime_s": {
+          "mean": 600.107666666666,
+          "minimum": 598.3869999999984,
+          "maximum": 600.9999999999961,
+          "n": 9
+        },
+        "coverage_percent": {
+          "mean": 99.78645156851843,
+          "minimum": 99.00427807416179,
+          "maximum": 99.99999972290055,
+          "n": 9
+        }
+      }
+    },
+    "EX-05": {
+      "node_run_observations": 9,
+      "fields": {
+        "auto_energy_wh": {
+          "mean": 1.6531773740740867,
+          "minimum": 1.1816551000000115,
+          "maximum": 1.980664766666692,
+          "n": 9
+        },
+        "baseline_wh": {
+          "mean": 4.667237777777823,
+          "minimum": 3.989833333333342,
+          "maximum": 6.002713333333442,
+          "n": 9
+        },
+        "saving_percent": {
+          "mean": 64.16512240180629,
+          "minimum": 54.972557750950166,
+          "maximum": 70.5067375002079,
+          "n": 9
+        },
+        "average_auto_power_w": {
+          "mean": 6.612984777179898,
+          "minimum": 4.730123256460208,
+          "maximum": 7.919695001111028,
+          "n": 9
+        },
+        "auto_valid_uptime_s": {
+          "mean": 899.9063333333316,
+          "minimum": 899.1219999999958,
+          "maximum": 900.4070000000067,
+          "n": 9
+        },
+        "coverage_percent": {
+          "mean": 99.99999974723609,
+          "minimum": 99.99999968319968,
+          "maximum": 99.99999978801391,
+          "n": 9
+        }
+      }
+    },
+    "EX-06": {
+      "node_run_observations": 3,
+      "fields": {
+        "auto_energy_wh": {
+          "mean": 0.43176166666666677,
+          "minimum": 0.2949100000000006,
+          "maximum": 0.5003499999999995,
+          "n": 3
+        },
+        "baseline_wh": {
+          "mean": 1.727046666666667,
+          "minimum": 1.1796400000000025,
+          "maximum": 2.001399999999998,
+          "n": 3
+        },
+        "saving_percent": {
+          "mean": 75.0,
+          "minimum": 75.0,
+          "maximum": 75.0,
+          "n": 3
+        },
+        "average_auto_power_w": {
+          "mean": 5.999999999999996,
+          "minimum": 5.999999999999991,
+          "maximum": 6.000000000000004,
+          "n": 3
+        },
+        "auto_valid_uptime_s": {
+          "mean": 259.0570000000003,
+          "minimum": 176.94600000000023,
+          "maximum": 300.21000000000015,
+          "n": 3
+        },
+        "coverage_percent": {
+          "mean": 99.99999921384479,
+          "minimum": 99.99999915446087,
+          "maximum": 99.99999932347362,
+          "n": 3
+        }
+      }
+    },
+    "EX-07": {
+      "node_run_observations": 3,
+      "fields": {
+        "auto_energy_wh": {
+          "mean": 0.3877688888888878,
+          "minimum": 0.37720499999999907,
+          "maximum": 0.39390666666666585,
+          "n": 3
+        },
+        "baseline_wh": {
+          "mean": 1.551075555555551,
+          "minimum": 1.5088199999999963,
+          "maximum": 1.5756266666666634,
+          "n": 3
+        },
+        "saving_percent": {
+          "mean": 75.0,
+          "minimum": 75.0,
+          "maximum": 75.00000000000001,
+          "n": 3
+        },
+        "average_auto_power_w": {
+          "mean": 5.999999999999981,
+          "minimum": 5.999999999999978,
+          "maximum": 5.999999999999988,
+          "n": 3
+        },
+        "auto_valid_uptime_s": {
+          "mean": 232.66133333333337,
+          "minimum": 226.32300000000023,
+          "maximum": 236.3440000000004,
+          "n": 3
+        },
+        "coverage_percent": {
+          "mean": 79.56116844387854,
+          "minimum": 79.07316257532163,
+          "maximum": 79.83615234788525,
+          "n": 3
+        }
+      }
+    }
+  },
+  "errors": [],
+  "aggregation_note": "Descriptive node-run observations; not independent real-world subjects. Report repetition totals separately."
+}

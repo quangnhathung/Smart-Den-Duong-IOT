@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-18T15:06:59.948683+07:00",
+  "status": "RESOLVED",
+  "cause_confirmed": "Node02 Wokwi exposed Resume button; simulated uptime and telemetry had stopped.",
+  "action": "Clicked actual Resume, same boot b3f6b599 resumed; all3 ONLINE/FRESH/can_command.",
+  "root_cause_inference": "Earlier scene click while LDR was behind toolbar likely hit Pause. Not independently observed at that instant.",
+  "scope": "Only video setup outside accepted formal windows; no product change or formal-data replacement."
+}

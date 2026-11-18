@@ -1,0 +1,29 @@
+{
+  "status": "AWAITING_VISUAL_REVIEW",
+  "started_at": "2026-11-18T15:13:46+07:00",
+  "steps": [
+    {
+      "name": "record-demo-headless",
+      "returncode": 0,
+      "elapsed_s": 497.7627890110016,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-151346/record-demo-headless.log"
+    },
+    {
+      "name": "video-decode-playback",
+      "returncode": 0,
+      "elapsed_s": 13.486531972885132,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-151346/video-decode-playback.log"
+    },
+    {
+      "name": "cleanup-final",
+      "returncode": 0,
+      "elapsed_s": 8.243282318115234,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-151346/cleanup-final.log"
+    }
+  ],
+  "audit_sha256": "0f56d5b5820224c204f48a55c1aaa96237441907af9571b4f13ab14ac6ce1cfd",
+  "resume_reason": "Video02 visual QA failed on gray captured region; short headless scroll/download regression passed. Reuse unchanged audited data, validated/visually reviewed documents and successful cold-start.",
+  "reused_cold_start_sha256": "d318d883b7ca0d58eb949fe6e26594355ae813c35fe5e7356d8fe35884b89508",
+  "current_step": "Review final16 video scenes, approve video and create backup/closure docs",
+  "finished_at": "2026-11-18T15:22:26+07:00"
+}

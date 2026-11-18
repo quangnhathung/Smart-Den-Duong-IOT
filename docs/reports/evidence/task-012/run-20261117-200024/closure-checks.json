@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "at": "2026-11-18T15:25:59.979478+07:00",
+  "checked_local_links": 108,
+  "broken_links": [],
+  "git_diff_check": "PASS",
+  "history_report_checklist_tail": "byte identical to current preclosure copies including TASK013",
+  "office_sources": "unchanged versus final WPS QA",
+  "deliverables_manifest_files": 27,
+  "note": "First backup already verified. Final snapshot r02 will include these closed documents; its external verification is produced after archive completes."
+}

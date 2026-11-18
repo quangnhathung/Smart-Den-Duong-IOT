@@ -1,0 +1,113 @@
+{
+  "created_at": "2026-11-18T15:25:59.978917+07:00",
+  "files": {
+    "Bao-cao-Den-duong-thong-minh-Nhom7-v02.docx": {
+      "bytes": 292884,
+      "sha256": "667a3a68ff9beb47cc2b797a3d92376a332e8e7764a7020da763de458a9a7e39"
+    },
+    "Bao-cao-Den-duong-thong-minh-Nhom7-v03.docx": {
+      "bytes": 259619,
+      "sha256": "788ed62bb5773be574a353f33ac53f8576f750b6724df8522621563d68338ce2"
+    },
+    "Bao-cao-Den-duong-thong-minh-Nhom7-v03.md": {
+      "bytes": 38216,
+      "sha256": "09dd0ef73320d2d17fd6320f0c4f3bcea4756082bef81d28dd7c696e551e193a"
+    },
+    "Bao-cao-Den-duong-thong-minh-Nhom7-v04.docx": {
+      "bytes": 270142,
+      "sha256": "e25dd796b5ead43fddd0eca801f4910749e54092022f55620c671b3d483ccceb"
+    },
+    "Bao-cao-Den-duong-thong-minh-Nhom7-v04.md": {
+      "bytes": 39406,
+      "sha256": "29ebb214363dc26f23bcef5aa14e7133635db4b6cbfb1e6335e98308704b1ee2"
+    },
+    "Bao-cao-Den-duong-thong-minh-Nhom7-v05.docx": {
+      "bytes": 270037,
+      "sha256": "f59971322dbe7883e5fc6af8e4dfe92899fa61b132305abd482141391007dc11"
+    },
+    "Bao-cao-Den-duong-thong-minh-Nhom7-v05.md": {
+      "bytes": 39068,
+      "sha256": "8037560db3129185994a28da8b815198f1591e116e2992ec31643c1425abf309"
+    },
+    "Bao-cao-Den-duong-thong-minh-Nhom7.docx": {
+      "bytes": 231129,
+      "sha256": "c23517e551daa0907349f48de9fd3c55e700f01995a9570426a3c67ce5e7f66d"
+    },
+    "Bao-cao-noi-dung.md": {
+      "bytes": 28087,
+      "sha256": "0581ffeb5ae7ac9fb946a3f589e7b6aa20131bb71ab0dc04a16fe4104bec2f1b"
+    },
+    "Bao-ve-Den-duong-thong-minh-Nhom7-v02.pptx": {
+      "bytes": 225229,
+      "sha256": "03ebe46a0aaccb2e7d33de74c91a757d8663536b8bed2e07cbb2129f615b040f"
+    },
+    "Bao-ve-Den-duong-thong-minh-Nhom7-v03.pptx": {
+      "bytes": 191099,
+      "sha256": "986870839a1ae761529f02071ed80212af1d911ed3c4c259f6ce1e3f9d4006af"
+    },
+    "Bao-ve-Den-duong-thong-minh-Nhom7-v04.pptx": {
+      "bytes": 191346,
+      "sha256": "aef3029903f4780d4198837c1c9ae9de34bf70cb98e486710521eaebb8124ac4"
+    },
+    "Bao-ve-Den-duong-thong-minh-Nhom7-v05.pptx": {
+      "bytes": 191374,
+      "sha256": "6badc0d7e72f0d5ef9c573d3e62e45d73d59174ac9086a71a5ae7e4193928361"
+    },
+    "Bao-ve-Den-duong-thong-minh-Nhom7.pptx": {
+      "bytes": 225213,
+      "sha256": "e771f9c60948b1f31d0057260a2bdd2db0204ca2559f484f5df3ca7578b4dcc8"
+    },
+    "Demo-Den-duong-thong-minh-Nhom7-v01.ass": {
+      "bytes": 3034,
+      "sha256": "0782e81a2caf1b1e19837e42479f32d0236fb6f7c16e9bbb0b854408616c03a8"
+    },
+    "Demo-Den-duong-thong-minh-Nhom7-v01.mp4": {
+      "bytes": 6843974,
+      "sha256": "914c564ea10da3a5e5eb52213fd55d1cd9f5b00fc06ce2641416765002285137"
+    },
+    "Demo-Den-duong-thong-minh-Nhom7-v01.srt": {
+      "bytes": 2179,
+      "sha256": "0667c730758d950e72b5ad3fd2c4fc085ccf647d67764421b55fbb99c42ac00b"
+    },
+    "README.md": {
+      "bytes": 1958,
+      "sha256": "f0c9b3b024f8dd71bb9190c18d63cbccceee6f1686f6555cf6a2056ca9efad49"
+    },
+    "RUNBOOK.md": {
+      "bytes": 10718,
+      "sha256": "98d5a2b56eb3e696baaf6d40511ce3e262654bfc588350fc0dd2c695e9c4721a"
+    },
+    "data/analysis-final.json": {
+      "bytes": 70163,
+      "sha256": "0f56d5b5820224c204f48a55c1aaa96237441907af9571b4f13ab14ac6ce1cfd"
+    },
+    "data/auto-power-repetitions.png": {
+      "bytes": 87137,
+      "sha256": "7db67a5254acfeb4f2cc45c308333128083a3612ff719697eb2b620a83fe86df"
+    },
+    "data/node-metrics.csv": {
+      "bytes": 12628,
+      "sha256": "681a0be6f2859536aad99a3ddb2295c9096be08b397b6b189f748a6f51238f9d"
+    },
+    "data/plot-source.json": {
+      "bytes": 112,
+      "sha256": "f3f9e7013c89bc511ad33088f8a9de2c715647f5539fcc5bbffbb031533e58a9"
+    },
+    "data/repetition-metrics.csv": {
+      "bytes": 1785,
+      "sha256": "00fd5c60d61eaa564f3f6e8c038a65552f5e688d8690c46c16703bdf4e2faca4"
+    },
+    "data/variation.json": {
+      "bytes": 4048,
+      "sha256": "35505a96ba73de17660f7a6e96531e0f55f9517d9ce78098a096d51c09689749"
+    },
+    "report-build.json": {
+      "bytes": 462,
+      "sha256": "b61374ce5a6f148d4d0ae6fde36a3e7b91dcd1689bcf159c8c91f162e5a95041"
+    },
+    "slides-build.json": {
+      "bytes": 215,
+      "sha256": "c3259db7cec2d9585c57d44a07c3dd3d5298cef0c18ef53b7b17e8fbd02f6f85"
+    }
+  }
+}

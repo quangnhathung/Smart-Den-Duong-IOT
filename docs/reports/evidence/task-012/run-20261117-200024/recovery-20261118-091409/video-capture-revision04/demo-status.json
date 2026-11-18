@@ -1,0 +1,6 @@
+{
+  "status": "RECORDED",
+  "directory": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-demo-20261118T072918110",
+  "target": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-demo-20261118T072918110/Demo-Den-duong-thong-minh-Nhom7.mp4",
+  "notes": "Needs ffprobe, playback and visual QA; no microphone/audio."
+}

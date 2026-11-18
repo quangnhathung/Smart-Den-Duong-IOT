@@ -1,0 +1,46 @@
+{
+  "backup-before-result-fix.py": {
+    "bytes": 9332,
+    "sha256": "2217f322968ef457c26db1b4827cdaad5ced6f561745c03fba8439d8519f3575"
+  },
+  "backup-fixed.py": {
+    "bytes": 9332,
+    "sha256": "e0a83abb423be570dca83eaacd821f38367edd5d1246d096f1f1191f0900288e"
+  },
+  "cold-before-result-fix.py": {
+    "bytes": 6377,
+    "sha256": "133e33c12b470a73f4d01edb3ee3b629817c6a17d905a2895457060dfbb00a66"
+  },
+  "cold-fixed.py": {
+    "bytes": 6377,
+    "sha256": "54386ec4ed5a90509425c248320ba02a26e0913de34f7c6a04cbf6751cae4736"
+  },
+  "command-actually-applied.json": {
+    "bytes": 512,
+    "sha256": "a8085397fadf63da743bc8b693758559b92128b5a5ed2be766cf2cfa1a8989f1"
+  },
+  "demo-attempt01-incomplete.json": {
+    "bytes": 218,
+    "sha256": "6bb7e0c3c28dfd357fdacbeaec43c5437f6c44731942ce41d7ca82ecaf8df885"
+  },
+  "finish-after-audit.py": {
+    "bytes": 3472,
+    "sha256": "aa989f6f6ad8bf2aa07a8d4e1bfa894ca659d89761cd2e56f7baa1a7924d6ddb"
+  },
+  "pipeline-stopped-video01.json": {
+    "bytes": 4804,
+    "sha256": "2589e7064910a055dfcdfe1675f41329d74840a39fca2a1099d753b2a7a3f245"
+  },
+  "recorder-before-result-fix.cjs": {
+    "bytes": 14556,
+    "sha256": "5616a6f95e657c911089a442128befdd59a081aa48738f87c8d5909a546aa5d8"
+  },
+  "recorder-fixed.cjs": {
+    "bytes": 14941,
+    "sha256": "89dc7641a76fe227cef491c3c1508dd96b5fe3912f2862af7c6ef2bb32b5a670"
+  },
+  "resume-runtime.py": {
+    "bytes": 4890,
+    "sha256": "26221d6ee7ee13a2a8986869e5f295f50d192415da53b4104c727e799ab97867"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "status": "INCOMPLETE",
+  "directory": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-demo-20261118T074923675",
+  "error": "{\"error\":\"locator.press: Timeout 5000ms exceeded.\\nCall log:\\n\\u001b[2m  - waiting for locator('input[aria-valuetext$=\\\"lux\\\"]')\\u001b[22m\\n\"}"
+}

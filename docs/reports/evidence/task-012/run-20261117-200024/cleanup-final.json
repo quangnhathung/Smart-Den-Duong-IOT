@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "at": "2026-11-18T15:22:17+07:00",
+  "stopped": [
+    {
+      "name": "ui",
+      "pid": 716556
+    },
+    {
+      "name": "dashboard",
+      "pid": 719011
+    },
+    {
+      "name": "collector",
+      "pid": 719004
+    },
+    {
+      "name": "vscode-node_01",
+      "pid": 716035
+    },
+    {
+      "name": "vscode-node_02",
+      "pid": 716036
+    },
+    {
+      "name": "vscode-node_03",
+      "pid": 716037
+    },
+    {
+      "name": "liveserver",
+      "pid": 716034
+    },
+    {
+      "name": "backend",
+      "pid": 716033
+    },
+    {
+      "name": "broker",
+      "pid": 784768
+    }
+  ],
+  "errors": [],
+  "broker_ownership_observation": {
+    "pid": 784768,
+    "proc_start_ticks": "2219630",
+    "current_host_boot_id": "c4e4fda3-54ad-420c-8ba8-c47fa1db3b76",
+    "exact_argv_verified": true,
+    "note": "owned_broker start omitted host_boot_id; PID/ticks/exact argv and process group independently verified"
+  },
+  "ports_still_open": [],
+  "office": [
+    {
+      "proof": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/word-preview-final-20261118-123654/proof.json",
+      "pid": 650982,
+      "stopped": true
+    },
+    {
+      "proof": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/word-preview-final-v05/proof.json",
+      "pid": 658739,
+      "stopped": true
+    },
+    {
+      "proof": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/slide-preview-final-20261118-123654/proof.json",
+      "pid": 652050,
+      "stopped": true
+    },
+    {
+      "proof": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/slide-preview-final-v05/proof.json",
+      "pid": 668690,
+      "stopped": true
+    }
+  ]
+}

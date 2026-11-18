@@ -1,0 +1,8 @@
+Command: python3 -B -m unittest discover -s test/host -p 'test_*.py'
+Observed at: 2026-11-18T15:08:55.602366+07:00
+Return code: 0
+..................................
+----------------------------------------------------------------------
+Ran 34 tests in 0.046s
+
+OK

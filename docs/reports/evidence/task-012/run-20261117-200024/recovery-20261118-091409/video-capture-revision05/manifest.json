@@ -1,0 +1,46 @@
+{
+  "backup-experiments.py": {
+    "bytes": 10205,
+    "sha256": "e18039614220cbb9ae535feee3ddb6a1ef36c21201370469c48dc88ec0fe16db"
+  },
+  "diagnosis.json": {
+    "bytes": 522,
+    "sha256": "b28ffa0bef7fbd59fff049f6aed1a73b362c19fd166475056f43344e29d222f5"
+  },
+  "finish-after-audit.py": {
+    "bytes": 3154,
+    "sha256": "d894a2bb512f744eeb6e07283246c3ea2b7a1f9a9f08b63b713bdcef7ce1e734"
+  },
+  "node02-resume-proof.json": {
+    "bytes": 2548,
+    "sha256": "0a7bd7201ac6da42bf81fe194c0486926ba6ad4ecf7db1c68e81e573f215bf15"
+  },
+  "qa-video.cjs": {
+    "bytes": 4425,
+    "sha256": "fbe8aab84d274c9d448c28f79b493a8826de6c4cf72a4f56538b593e45e2c597"
+  },
+  "record-experiment-demo.cjs": {
+    "bytes": 15255,
+    "sha256": "4f6e0e8e6bd484fc0dff1fa73eafb8243ba3f7286b375ae707b3d0c5d75b40e3"
+  },
+  "resume-node02.cjs": {
+    "bytes": 1925,
+    "sha256": "858842eec88148c69aa547f54066a7a6c90dae7ac3e1c877e31e351fcfc6a526"
+  },
+  "video-viewport-fit.json": {
+    "bytes": 924,
+    "sha256": "76114fdde0851ea1f58a942cc63706c29364164838c7a2577f253d1b73bac1e6"
+  },
+  "video05-incomplete-events.jsonl": {
+    "bytes": 2267,
+    "sha256": "0c03414afa2b43a7bc867abc948c2c3ede2f7a33c2d7ab1a1d56fdb8469734aa"
+  },
+  "view-fix.cjs": {
+    "bytes": 1954,
+    "sha256": "5729d0464b365c3e8ec76828b3c2b532426b905d68774e4170bb250c4c3938c6"
+  },
+  "view-inspect.cjs": {
+    "bytes": 1184,
+    "sha256": "0655b94a9812eee6d33034013413ac7daf34c7c1d01cf39bfed45233190ef37c"
+  }
+}

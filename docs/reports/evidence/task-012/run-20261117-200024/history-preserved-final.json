@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "at": "2026-11-18T15:23:35.490391+07:00",
+  "old_telemetry_bound": 137797,
+  "preserved_rows": 137797,
+  "old_sha256": "2f3a768025def2d29893393852026133e438a3f70efd285f24ad04eddb8dd846",
+  "final_sha256": "2f3a768025def2d29893393852026133e438a3f70efd285f24ad04eddb8dd846",
+  "quick_check": [
+    "ok"
+  ],
+  "pending_commands": 0,
+  "open_experiments": 0,
+  "final_counts": {
+    "telemetry": 145861,
+    "commands": 17,
+    "alerts": 32,
+    "experiments": 21,
+    "ingest_errors": 0
+  },
+  "formal_raw_mqtt_prefix_bytes": 71557355,
+  "formal_raw_mqtt_prefix_sha256": "fd598ee3248660938bc1ca8063cc2172de55c2e1834704008aa9ed6e86dd55c5",
+  "audit_sha256": "0f56d5b5820224c204f48a55c1aaa96237441907af9571b4f13ab14ac6ce1cfd",
+  "helper_sha256": "e03cfa06bdaf2f072c6076cc218d2adedb51183507bbb36355a6111d814c82de"
+}

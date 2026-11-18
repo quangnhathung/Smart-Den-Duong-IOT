@@ -1,0 +1,88 @@
+{
+  "status": "STOPPED_ON_ERROR",
+  "started_at": "2026-11-18T12:36:54+07:00",
+  "steps": [
+    {
+      "name": "audit-final",
+      "returncode": 0,
+      "elapsed_s": 11.294016361236572,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/audit-final.log"
+    },
+    {
+      "name": "verify-campaign",
+      "returncode": 0,
+      "elapsed_s": 0.16464471817016602,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/verify-campaign.log"
+    },
+    {
+      "name": "plot-final",
+      "returncode": 0,
+      "elapsed_s": 2.9797732830047607,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/plot-final.log"
+    },
+    {
+      "name": "build-word",
+      "returncode": 0,
+      "elapsed_s": 0.3160429000854492,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/build-word.log"
+    },
+    {
+      "name": "build-slides",
+      "returncode": 0,
+      "elapsed_s": 0.2684483528137207,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/build-slides.log"
+    },
+    {
+      "name": "validate-word",
+      "returncode": 0,
+      "elapsed_s": 0.46749019622802734,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/validate-word.log"
+    },
+    {
+      "name": "validate-slides",
+      "returncode": 0,
+      "elapsed_s": 0.36505794525146484,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/validate-slides.log"
+    },
+    {
+      "name": "render-word",
+      "returncode": 0,
+      "elapsed_s": 9.618192434310913,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/render-word.log"
+    },
+    {
+      "name": "render-slides",
+      "returncode": 0,
+      "elapsed_s": 5.134584665298462,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/render-slides.log"
+    },
+    {
+      "name": "record-demo",
+      "returncode": 1,
+      "elapsed_s": 176.3557403087616,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/record-demo.log"
+    }
+  ],
+  "campaign": {
+    "status": "RUNNING",
+    "current": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/attempts/EX-07-r01-a01",
+    "scenario": "EX-07",
+    "repeat": 1,
+    "elapsed_node_s": {
+      "node_01": 316.5151680657845,
+      "node_02": 303.38684699320606,
+      "node_03": 297.773
+    },
+    "completed_nodes": [
+      "node_01",
+      "node_02"
+    ],
+    "pending_actions": 0
+  },
+  "heartbeat_at": "2026-11-18T14:21:34+07:00",
+  "current_step": "record-demo",
+  "report": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/Bao-cao-Den-duong-thong-minh-Nhom7-v04.docx",
+  "slides": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/Bao-ve-Den-duong-thong-minh-Nhom7-v04.pptx",
+  "error": "RuntimeError('Step failed: record-demo; inspect /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/record-demo.log')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/finish-pipeline.py\", line 31, in <module>\n    run('record-demo',['node',root/'scripts/record-experiment-demo.cjs',q/'runtime.json'],{'SMARTLIGHT_PLAYWRIGHT_MODULE':'/home/quangnhathung/.npm/_npx/31e32ef8478fbf80/node_modules/playwright'},timeout=1500)\n  File \"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/finish-pipeline.py\", line 11, in run\n    if process.returncode:raise RuntimeError('Step failed: '+name+'; inspect '+str(target))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Step failed: record-demo; inspect /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-123654/record-demo.log\n"
+}

@@ -1,0 +1,169 @@
+{
+  "status": "REVIEW_PENDING",
+  "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-demo-20261118T072918110/Demo-Den-duong-thong-minh-Nhom7.mp4",
+  "sha256": "999213e6bbb62f99009abe32e64ef10a94b2991b3b181ca8c86e3ac079373332",
+  "started_at": "2026-11-18T07:37:49.339Z",
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640028",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "5184:5185",
+        "display_aspect_ratio": "9216:5185",
+        "pix_fmt": "yuvj420p",
+        "level": 40,
+        "color_range": "pc",
+        "color_space": "bt470bg",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 6449664,
+        "duration": "419.900000",
+        "bit_rate": "135238",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "12597",
+        "extradata_size": 54,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc63.1.102 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/video-demo-20261118T072918110/Demo-Den-duong-thong-minh-Nhom7.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "419.900000",
+      "size": "7250220",
+      "bit_rate": "138132",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf63.1.102"
+      }
+    }
+  },
+  "full_decode_frames": 12597,
+  "full_decode_stderr": "",
+  "media": {
+    "duration": 419.9,
+    "width": 1920,
+    "height": 1080,
+    "error": null
+  },
+  "playback_time_s": 3.0104,
+  "screenshots": [
+    {
+      "second": 0,
+      "file": "frame-000.png"
+    },
+    {
+      "second": 10,
+      "file": "frame-010.png"
+    },
+    {
+      "second": 30,
+      "file": "frame-030.png"
+    },
+    {
+      "second": 60,
+      "file": "frame-060.png"
+    },
+    {
+      "second": 90,
+      "file": "frame-090.png"
+    },
+    {
+      "second": 120,
+      "file": "frame-120.png"
+    },
+    {
+      "second": 150,
+      "file": "frame-150.png"
+    },
+    {
+      "second": 180,
+      "file": "frame-180.png"
+    },
+    {
+      "second": 215,
+      "file": "frame-215.png"
+    },
+    {
+      "second": 245,
+      "file": "frame-245.png"
+    },
+    {
+      "second": 275,
+      "file": "frame-275.png"
+    },
+    {
+      "second": 315,
+      "file": "frame-315.png"
+    },
+    {
+      "second": 340,
+      "file": "frame-340.png"
+    },
+    {
+      "second": 370,
+      "file": "frame-370.png"
+    },
+    {
+      "second": 400,
+      "file": "frame-400.png"
+    },
+    {
+      "second": 419,
+      "file": "frame-419.png"
+    }
+  ],
+  "source_unchanged": true,
+  "note": "Full decode and real browser playback passed. Inspect all16 scene screenshots before setting QA_PASSED."
+}

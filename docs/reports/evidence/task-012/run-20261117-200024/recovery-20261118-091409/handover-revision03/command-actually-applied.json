@@ -1,0 +1,13 @@
+{
+  "command_id": "d96296ca-a28a-411e-b747-33d101bdb258",
+  "node_id": "node_01",
+  "boot_id": "826d7697",
+  "payload": "{\"schema_version\": 1, \"node_id\": \"node_01\", \"boot_id\": \"826d7697\", \"command_id\": \"d96296ca-a28a-411e-b747-33d101bdb258\", \"deadline_uptime_ms\": 10761295, \"mode\": \"MANUAL\", \"brightness\": 80}",
+  "created_at": 1794986710.847164,
+  "sent_at": 1794986710.8488166,
+  "retry_at": null,
+  "result": "APPLIED",
+  "reason": null,
+  "ack_at": 1794986711.219371,
+  "attempts": 1
+}

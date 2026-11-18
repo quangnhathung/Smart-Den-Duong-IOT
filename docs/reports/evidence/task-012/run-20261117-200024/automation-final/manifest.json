@@ -1,0 +1,50 @@
+{
+  "backup-experiments.py": {
+    "bytes": 10382,
+    "sha256": "55be1d9d00dab2be68468ced6320051b38830af3700b0b0c18e6ea96b8b58590"
+  },
+  "cleanup-runtime.py": {
+    "bytes": 3470,
+    "sha256": "0a3116a1b10a9008323e1636b4dc1c98495e27bf982e6df0c91d470a20fb9b6d"
+  },
+  "close-task.py": {
+    "bytes": 15714,
+    "sha256": "b879e1e62fbd081e5c48b6a23d7d4cb960d7e167dab55065b9f509923a7966f3"
+  },
+  "final-integrity.py": {
+    "bytes": 2308,
+    "sha256": "e03cfa06bdaf2f072c6076cc218d2adedb51183507bbb36355a6111d814c82de"
+  },
+  "finish-after-audit.py": {
+    "bytes": 3154,
+    "sha256": "d894a2bb512f744eeb6e07283246c3ea2b7a1f9a9f08b63b713bdcef7ce1e734"
+  },
+  "qa-video.cjs": {
+    "bytes": 4555,
+    "sha256": "3353f16a0e681580a466f1c4af3c7e244222cc30816c5667c1a46803cb26ab9c"
+  },
+  "record-experiment-demo.cjs": {
+    "bytes": 15371,
+    "sha256": "2a06c27be47e678674ebe2042adce247d38e2064eeab0a2ee0af640532e5c1bd"
+  },
+  "render-office.py": {
+    "bytes": 4375,
+    "sha256": "80fc14d739fe0f1915773c3cf161c763f856cd633def2027cbbd6a6af9196a55"
+  },
+  "resume-node02.cjs": {
+    "bytes": 1925,
+    "sha256": "858842eec88148c69aa547f54066a7a6c90dae7ac3e1c877e31e351fcfc6a526"
+  },
+  "resume-runtime.py": {
+    "bytes": 5009,
+    "sha256": "e1fd4a5f55228babed52a16596068d59cc9ae8f3b709e27b1304d97421e24299"
+  },
+  "view-fix.cjs": {
+    "bytes": 1954,
+    "sha256": "5729d0464b365c3e8ec76828b3c2b532426b905d68774e4170bb250c4c3938c6"
+  },
+  "view-inspect.cjs": {
+    "bytes": 1184,
+    "sha256": "0655b94a9812eee6d33034013413ac7daf34c7c1d01cf39bfed45233190ef37c"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "status": "AWAITING_VISUAL_REVIEW",
+  "started_at": "2026-11-18T14:29:11+07:00",
+  "steps": [
+    {
+      "name": "validate-word-final",
+      "returncode": 0,
+      "elapsed_s": 0.6158409118652344,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-142911/validate-word-final.log"
+    },
+    {
+      "name": "validate-slides-final",
+      "returncode": 0,
+      "elapsed_s": 0.46776509284973145,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-142911/validate-slides-final.log"
+    },
+    {
+      "name": "render-slides-final",
+      "returncode": 0,
+      "elapsed_s": 5.3402111530303955,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-142911/render-slides-final.log"
+    },
+    {
+      "name": "record-demo-retry",
+      "returncode": 0,
+      "elapsed_s": 511.21802973747253,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-142911/record-demo-retry.log"
+    },
+    {
+      "name": "video-decode-playback",
+      "returncode": 0,
+      "elapsed_s": 15.31600308418274,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-142911/video-decode-playback.log"
+    },
+    {
+      "name": "cold-start",
+      "returncode": 0,
+      "elapsed_s": 31.27246618270874,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-142911/cold-start.log"
+    },
+    {
+      "name": "cleanup",
+      "returncode": 0,
+      "elapsed_s": 8.649827718734741,
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/handover-steps-20261118-142911/cleanup.log"
+    }
+  ],
+  "audit_sha256": "0f56d5b5820224c204f48a55c1aaa96237441907af9571b4f13ab14ac6ce1cfd",
+  "report": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/Bao-cao-Den-duong-thong-minh-Nhom7-v05.docx",
+  "slides": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/Bao-ve-Den-duong-thong-minh-Nhom7-v05.pptx",
+  "resume_reason": "Continue after preserved video01 harness result-field error; reuse final audited data and latest document builds",
+  "current_step": "Review final23 Word pages,12 slides and16 video scenes before video approval and backup",
+  "finished_at": "2026-11-18T14:38:44+07:00"
+}

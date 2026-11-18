@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "at": "2026-11-18T14:31:58.676507+07:00",
+  "method": "Viewed every final native WPS page/slide image; checked text/table/image/chart layout and data labels",
+  "reviews": {
+    "word": {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/Bao-cao-Den-duong-thong-minh-Nhom7-v05.docx",
+      "sha256": "f59971322dbe7883e5fc6af8e4dfe92899fa61b132305abd482141391007dc11",
+      "count": 23,
+      "reviewed_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "status": "PASS",
+      "render_proof": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/word-preview-final-v05/proof.json"
+    },
+    "slides": {
+      "source": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/deliverables/Bao-ve-Den-duong-thong-minh-Nhom7-v05.pptx",
+      "sha256": "6badc0d7e72f0d5ef9c573d3e62e45d73d59174ac9086a71a5ae7e4193928361",
+      "count": 12,
+      "reviewed_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "status": "PASS",
+      "render_proof": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-012/run-20261117-200024/slide-preview-final-v05/proof.json"
+    }
+  },
+  "previous_issue": "Wordv04 note alone on page20; preserved old file, resolved in v05 with23pages"
+}

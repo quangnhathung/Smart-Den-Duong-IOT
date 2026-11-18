@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "at": "2026-11-18T15:08:06.149205+07:00",
+  "checked_product_files": {
+    "firmware": 31,
+    "backend": 26,
+    "dashboard": 15
+  },
+  "changes": [],
+  "simulator_artifacts_sha256": {
+    "node_01": {
+      "diagram.json": "d5c7a37b67548cbc26c48180ebe4682a7227c77aec059202f903650b14fe5c6a",
+      "wokwi.toml": "2a4cac4b739ca8ace32a38a4e1005bbeafe5ce097878f5825a6ab00e1b26e6ee",
+      "build/firmware.bin": "1334b1121fca4fa9e4d0a81fdd60afd782d885e2f25df7ede8757a1787a24318",
+      "build/firmware.elf": "c24b3ea78be5fa8db3be85f5d8858783501c80eda7f0d382b50f6daf956e83ae"
+    },
+    "node_02": {
+      "diagram.json": "d5c7a37b67548cbc26c48180ebe4682a7227c77aec059202f903650b14fe5c6a",
+      "wokwi.toml": "442b880b42f6e050de4bb3872ff3ee7b8c6bc2568506a1639bf5bf340ca3e7c5",
+      "build/firmware.bin": "03ddc3e89258607de92af593bf74162e5371af9737863a5eb9cb98fc74dc3f9f",
+      "build/firmware.elf": "82cc12d981d05282dcaac01657f74b2a0d4667409340c1264db7eaf46146bf6e"
+    },
+    "node_03": {
+      "diagram.json": "d5c7a37b67548cbc26c48180ebe4682a7227c77aec059202f903650b14fe5c6a",
+      "wokwi.toml": "328fc94371e0efe2af98c30d9d2a8dcff918b7dfa541c2201108ff426f5b2f13",
+      "build/firmware.bin": "337aadb043f749c1b2692d3fa5559528dd45a1ca8fa21c0f4bdc3bc9eba09a1e",
+      "build/firmware.elf": "bd4f846724d827e8543d59b9a8727eed3a6e45e0d98a677fed672e39bd87eb32"
+    }
+  },
+  "note": "Product source compared with TASK012 startup baseline; documentation and QA tooling intentionally excluded."
+}
