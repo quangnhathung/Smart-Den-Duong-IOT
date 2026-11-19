@@ -1,3 +1,138 @@
+## 2026-11-19T07:28:45+07:00 — TASK-025 — Kiểm tra và khởi động hệ thống local
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 4/4 mục nghiệm thu vận hành
+
+### Đã thực hiện
+
+Kiểm cổng/cấu hình/hash3 source/artifact, chạy Compose MQTT1883, backend8000 một worker/DB hiện có,3 Wokwi và VS Code Live Server5500. Dùng launcher tạm qua extension API đã cài, giữ stack hoạt động và thay đổi người dùng.
+
+### Kiểm tra và kết quả
+
+PASS source/BIN/ELF khớp3 manifest. PASS ba node ONLINE/FRESH, subscriber độc lập nhận3/2/2 telemetry; health OK/database/broker/queue=true/dropped_events=0. PASS HTTP200/HTML dashboard. Lần đầu FAIL đủ3 node vì node03 chưa kết nối; kiểm lại đạt, giữ bằng chứng ban đầu. Chưa kiểm DOM/render, build/tests mới, command ACK hoặc30 phút ổn định. [Hồ sơ](evidence/task-025/README.md).
+
+### Vướng mắc
+
+Không có vướng mắc khởi động còn lại. Docker thiếu socket ban đầu; node03 kết nối chậm hơn. CUA không có apps/browsers kết nối. Live Server extension listen wildcard dù URL/config loopback.
+
+### Cách giải quyết
+
+Kiểm lại daemon đã active, node03 tự kết nối rồi kiểm MQTT/API/Serial thực; không đổi firmware. Ghi giới hạn DOM và listener thực tế, không sửa extension ngoài yêu cầu.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật setup/task/checklist/next-task theo SRS3–8/12–13. Giữ dịch vụ chạy, chờ yêu cầu tiếp theo; không chạy thực nghiệm hoặc diễn tập.
+
+---
+
+## 2026-11-18T20:30:55+07:00 — TASK-024 — Dừng dịch vụ dự án
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 3/3 mục nghiệm thu
+
+### Đã thực hiện
+
+Dừng MQTT, backend, ba node Wokwi và Live Server của TASK-023 theo yêu cầu. Đối chiếu code --status cho cửa sổ8–11 và PID/start ticks; giữ firmware gốc, ứng dụng khác, DB/source/artifact.
+
+### Kiểm tra và kết quả
+
+PASS Docker Compose stop exit0; sáu cổng1883/8000/5500/4000/4001/4002 không còn listener. [Bằng chứng](evidence/task-024/README.md). Không chạy build/tests vì chỉ dừng dịch vụ.
+
+### Vướng mắc
+
+Không có.
+
+### Cách giải quyết
+
+Không có.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật setup/task/checklist/next-task theo SRS3–8/13. Không tự khởi động lại hoặc chạy đề xuất kiểm dashboard đã lưu.
+
+---
+
+## 2026-11-18T20:05:42+07:00 — TASK-023 — Kiểm tra và khởi động hệ thống local
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 4/4 mục nghiệm thu vận hành
+
+### Đã thực hiện
+
+Đối chiếu source/cấu hình, hash artifact ba node; chạy broker Docker1883, backend8000 một worker với DB hiện có, Wokwi node01/02/03 và VS Code Live Server5500. Giữ stack chạy, bảo toàn thay đổi người dùng.
+
+### Kiểm tra và kết quả
+
+PASS hash source/BIN/ELF đã chuẩn bị khớp manifest. PASS subscriber MQTT độc lập nhận2 telemetry mỗi node, API đủ3 ONLINE/FRESH, health OK/database/broker/queue=true/dropped_events=0. PASS HTTP200/HTML dashboard. Chưa chạy DOM/render, build mới, bộ tests hoặc ổn định30 phút; không suy ra nghiệm thu lại toàn bộ SRS. [Bằng chứng](evidence/task-023/README.md).
+
+### Vướng mắc
+
+Không có vướng mắc khởi động còn lại. Sandbox cần quyền vận hành; helper ảnh thiếu Pillow sau khi đã gửi lệnh; CUA không có trình duyệt kết nối.
+
+### Cách giải quyết
+
+Dùng quyền đã cấp, bỏ ảnh tùy chọn và xác nhận mô phỏng qua MQTT/API. Ghi rõ chưa kiểm DOM/render; không dùng HTTP200 thay bằng chứng render.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật setup.md theo SRS3–8/12–13; task/checklist/next-task và bằng chứng. Đề xuất kiểm thao tác dashboard khi có yêu cầu; không tự chạy diễn tập hoặc thực nghiệm.
+
+---
+
+## 2026-11-18T19:58:51+07:00 — TASK-022 — Dừng toàn bộ hệ thống
+
+- Trạng thái: Hoàn thành
+- Tiến độ: 3/3 mục
+
+### Đã thực hiện
+
+Theo yêu cầu dừng tất cả, dừng MQTT Compose, backend và tiến trình của ba cửa sổ node/dashboard. Giữ DB/source/kết quả cũ và VS Code firmware gốc. Không khởi động lại.
+
+### Kiểm tra và kết quả
+
+PASS không còn listener1883/8000/5500/4000/4001/4002. PID/backend đối chiếu ownership; renderer/extension host/file watcher đối chiếu code --status. [Bằng chứng](evidence/task-022/stop-all.json).
+
+### Vướng mắc
+
+Đóng cửa sổ ban đầu chưa nhả4000/5500; chưa thể ghi dừng hoàn toàn ở lần kiểm đầu.
+
+### Cách giải quyết
+
+Dừng đúng các tiến trình còn giữ mô phỏng/Live Server và kiểm lại cổng, đã trống. Không có vướng mắc còn lại.
+
+### Tài liệu và bước tiếp theo
+
+Cập nhật task/techs/setup/checklist/next-task. Chỉ khởi động lại khi người dùng yêu cầu.
+
+---
+
+## 2026-11-18T19:58:51+07:00 — TASK-021 — Khởi động hệ thống, đã hủy
+
+- Trạng thái: Đã hủy
+- Tiến độ: 2/4 nhóm nghiệm thu
+
+### Đã thực hiện
+
+Kiểm SHA source/artifact ba node, khởi động MQTT1883/backend8000 và mở workspace ba node/FE. Node01 đã ONLINE/FRESH; FE trả HTTP200. Node02/03 chưa có telemetry và chưa nghiệm thu giao diện đủ ba node. Đang xử lý launcher thì người dùng yêu cầu dừng.
+
+### Kiểm tra và kết quả
+
+PASS artifact/health/broker/database/queue và node01. Chưa đạt3 node/FE DOM; không ghi hoàn thành toàn hệ thống. [Hồ sơ](evidence/task-021/README.md).
+
+### Vướng mắc
+
+Điều khiển bằng phím chưa vào đúng cửa sổ; helper lệnh trực tiếp chưa xác nhận hoàn tất. Công cụ CUA không có surface khả dụng.
+
+### Cách giải quyết
+
+Dừng mọi thao tác khởi động theo yêu cầu mới; TASK-022 đã dừng dịch vụ và kiểm cổng. Không tiếp tục sửa/khởi động.
+
+### Tài liệu và bước tiếp theo
+
+Giữ snapshot task019/đề xuất020, baseline và log. Không sửa source sản phẩm hoặc xóa DB. Không chạy lại thực nghiệm.
+
+---
+
 ## 2026-11-18T16:41:28+07:00 — TASK-019 — Viết lại báo cáo tiểu luận bốn chương
 
 - Trạng thái: Hoàn thành

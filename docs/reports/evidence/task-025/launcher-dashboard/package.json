@@ -1,0 +1,1 @@
+{"name": "smartlight-start-dashboard", "publisher": "local-task025", "version": "0.0.1", "engines": {"vscode": "^1.90.0"}, "main": "extension.cjs", "activationEvents": ["onStartupFinished"]}

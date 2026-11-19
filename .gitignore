@@ -24,3 +24,12 @@ output/task-017/
 
 # TASK-019 Word rewrite and native WPS QA artifacts.
 output/task-019/
+
+# TASK-021 local startup logs and launcher artifacts.
+output/task-021/
+
+# TASK-023 local startup logs and runtime state.
+output/task-023/
+
+# TASK-025 local startup logs and temporary launchers.
+output/task-025/

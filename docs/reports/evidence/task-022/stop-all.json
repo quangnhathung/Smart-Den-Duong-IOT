@@ -1,0 +1,103 @@
+{
+  "at": "2026-11-18T19:55:36.906179+07:00",
+  "actions": [
+    {
+      "action": "close-project-window",
+      "window": "50331716",
+      "title": "node_03 - Visual Studio Code",
+      "exit": 0
+    },
+    {
+      "action": "close-project-window",
+      "window": "50331702",
+      "title": "Wokwi Simulator - node_01 - Visual Studio Code",
+      "exit": 0
+    },
+    {
+      "action": "close-project-window",
+      "window": "50331709",
+      "title": "node_02 - Visual Studio Code",
+      "exit": 0
+    },
+    {
+      "action": "close-project-window",
+      "window": "50331724",
+      "title": "dashboard - Visual Studio Code",
+      "exit": 0
+    },
+    {
+      "action": "stop-backend",
+      "pid": 23116
+    },
+    {
+      "action": "stop-mqtt",
+      "exit": 0,
+      "message": " Container smartlight-p0-mosquitto-1 Stopping \n Container smartlight-p0-mosquitto-1 Stopped \n"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 23258,
+      "start_ticks": "66076"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 23330,
+      "start_ticks": "66161"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 23358,
+      "start_ticks": "66173"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 23428,
+      "start_ticks": "66194"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 23531,
+      "start_ticks": "66283"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 23584,
+      "start_ticks": "66297"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 23617,
+      "start_ticks": "66306"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 23794,
+      "start_ticks": "66421"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 23809,
+      "start_ticks": "66432"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 23835,
+      "start_ticks": "66461"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 24042,
+      "start_ticks": "66584"
+    },
+    {
+      "action": "stop-project-code-process",
+      "pid": 24062,
+      "start_ticks": "66609"
+    }
+  ],
+  "errors": [],
+  "remaining_project_listeners": [],
+  "listeners_after": "State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess\nLISTEN 0      4096       127.0.0.1:11434      0.0.0.0:*   \nLISTEN 0      511        127.0.0.1:44057      0.0.0.0:*    users:((\"code\",pid=13442,fd=48))\nLISTEN 0      511        127.0.0.1:44517      0.0.0.0:*    users:((\"code\",pid=11203,fd=48))\nLISTEN 0      511        127.0.0.1:18789      0.0.0.0:*    users:((\"MainThread\",pid=1370,fd=32))\nLISTEN 0      10         127.0.0.1:9222       0.0.0.0:*    users:((\"chrome\",pid=2722,fd=141))\nLISTEN 0      4096       127.0.0.1:41049      0.0.0.0:*   \nLISTEN 0      128        127.0.0.1:38031      0.0.0.0:*    users:((\"codex\",pid=13549,fd=36))\nLISTEN 0      511        127.0.0.1:45093      0.0.0.0:*    users:((\"code\",pid=7756,fd=42))\nLISTEN 0      128          0.0.0.0:22         0.0.0.0:*   \nLISTEN 0      2048       127.0.0.1:45969      0.0.0.0:*    users:((\"python\",pid=14443,fd=6))\nLISTEN 0      511            [::1]:18789         [::]:*    users:((\"MainThread\",pid=1370,fd=33))\nLISTEN 0      128             [::]:22            [::]:*   \n",
+  "status": "STOPPED",
+  "verified_at": "2026-11-18T19:57:39.238944+07:00"
+}

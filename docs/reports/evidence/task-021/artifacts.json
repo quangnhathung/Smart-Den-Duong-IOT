@@ -1,0 +1,50 @@
+[
+  {
+    "node_id": "node_01",
+    "mismatches": [],
+    "artifacts": {
+      "firmware.bin": {
+        "source": ".pio/build/esp32dev/firmware.bin",
+        "target": "simulations/node_01/build/firmware.bin",
+        "sha256": "1334b1121fca4fa9e4d0a81fdd60afd782d885e2f25df7ede8757a1787a24318"
+      },
+      "firmware.elf": {
+        "source": ".pio/build/esp32dev/firmware.elf",
+        "target": "simulations/node_01/build/firmware.elf",
+        "sha256": "c24b3ea78be5fa8db3be85f5d8858783501c80eda7f0d382b50f6daf956e83ae"
+      }
+    }
+  },
+  {
+    "node_id": "node_02",
+    "mismatches": [],
+    "artifacts": {
+      "firmware.bin": {
+        "source": ".pio/build/node_02/firmware.bin",
+        "target": "simulations/node_02/build/firmware.bin",
+        "sha256": "03ddc3e89258607de92af593bf74162e5371af9737863a5eb9cb98fc74dc3f9f"
+      },
+      "firmware.elf": {
+        "source": ".pio/build/node_02/firmware.elf",
+        "target": "simulations/node_02/build/firmware.elf",
+        "sha256": "82cc12d981d05282dcaac01657f74b2a0d4667409340c1264db7eaf46146bf6e"
+      }
+    }
+  },
+  {
+    "node_id": "node_03",
+    "mismatches": [],
+    "artifacts": {
+      "firmware.bin": {
+        "source": ".pio/build/node_03/firmware.bin",
+        "target": "simulations/node_03/build/firmware.bin",
+        "sha256": "337aadb043f749c1b2692d3fa5559528dd45a1ca8fa21c0f4bdc3bc9eba09a1e"
+      },
+      "firmware.elf": {
+        "source": ".pio/build/node_03/firmware.elf",
+        "target": "simulations/node_03/build/firmware.elf",
+        "sha256": "bd4f846724d827e8543d59b9a8727eed3a6e45e0d98a677fed672e39bd87eb32"
+      }
+    }
+  }
+]

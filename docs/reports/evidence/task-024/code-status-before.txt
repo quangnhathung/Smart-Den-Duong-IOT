@@ -1,0 +1,187 @@
+Version:          Code 1.143.0 (2d0b7506a36c1d6db9a466440131a8e01eab2289, 2026-10-20T14:31:47-07:00)
+OS Version:       Linux x64 7.3.4-arch1-2
+CPUs:             12th Gen Intel(R) Core(TM) i5-12450HX (12 x 3653)
+Memory (System):  15.32GB (3.56GB free)
+Load (avg):       3, 3, 3
+VM:               0%
+Screen Reader:    no
+Process Argv:     --crash-reporter-id f3fdf245-68f4-441c-a2e6-50e26175a3a4
+GPU Status:       2d_canvas:                              disabled_software
+                  GPU0:                                   VENDOR= 0x0000, DEVICE=0x0000
+                  Machine model name:                     
+                  Machine model version:                  
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        disabled_software
+                  multiple_raster_threads:                disabled_off
+                  opengl:                                 disabled_off
+                  rasterization:                          disabled_software
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           disabled_software
+                  video_encode:                           disabled_software
+                  vulkan:                                 disabled_off
+                  webgl:                                  disabled_off
+                  webgpu:                                 disabled_off
+                  webgpu_on_vk_via_gl_interop:            disabled_off
+                  webnn:                                  disabled_off
+GPU Log Messages:
+[7673:1118/194035.892129:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:130] : Should skip nVidia device named: nvidia-drm
+
+[7673:1118/194035.895844:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] : InitializeSandbox() called with multiple threads in process gpu-process.
+
+[7673:1118/195536.936840:ERROR:ui/gl/gl_surface_presentation_helper.cc:260] : GetVSyncParametersIfAvailable() failed for 1 times!
+
+GpuProcessHost: The GPU process crashed! Exit code: SIGSEGV.
+[44324:1118/195537.884299:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:130] : Should skip nVidia device named: nvidia-drm
+
+[44324:1118/195537.887929:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] : InitializeSandbox() called with multiple threads in process gpu-process.
+
+GpuProcessHost: The GPU process crashed! Exit code: SIGSEGV.
+[44396:1118/195538.491441:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:130] : Should skip nVidia device named: nvidia-drm
+
+[44396:1118/195538.494475:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] : InitializeSandbox() called with multiple threads in process gpu-process.
+
+GpuProcessHost: The GPU process crashed! Exit code: SIGSEGV.
+[44488:1118/195539.050917:ERROR:ui/base/x/x11_software_bitmap_presenter.cc:147] : XGetWindowAttributes failed for window 50331716
+
+[44488:1118/195539.051935:ERROR:ui/base/x/x11_software_bitmap_presenter.cc:147] : XGetWindowAttributes failed for window 50331724
+
+[44488:1118/195539.052480:ERROR:ui/base/x/x11_software_bitmap_presenter.cc:147] : XGetWindowAttributes failed for window 50331709
+
+[44488:1118/195539.054221:WARNING:ui/gfx/x/connection.cc:61] : X error received.  Request: CreateGCRequest, Error: DrawableError{.sequence = 195, .bad_value = 50331716, .minor_opcode = 0, .major_opcode = 55}
+
+[44488:1118/195539.054912:WARNING:ui/gfx/x/connection.cc:61] : X error received.  Request: CreateGCRequest, Error: DrawableError{.sequence = 197, .bad_value = 50331724, .minor_opcode = 0, .major_opcode = 55}
+
+[44488:1118/195539.055088:WARNING:ui/gfx/x/connection.cc:61] : X error received.  Request: CreateGCRequest, Error: DrawableError{.sequence = 199, .bad_value = 50331709, .minor_opcode = 0, .major_opcode = 55}
+
+[44488:1118/195539.055240:ERROR:ui/base/x/x11_software_bitmap_presenter.cc:147] : XGetWindowAttributes failed for window 50331702
+
+[44488:1118/195539.055435:WARNING:ui/gfx/x/connection.cc:61] : X error received.  Request: CreateGCRequest, Error: DrawableError{.sequence = 207, .bad_value = 50331702, .minor_opcode = 0, .major_opcode = 55}
+
+[44488:1118/195746.985065:WARNING:ui/gfx/x/connection.cc:61] : X error received.  Request: FreeGCRequest, Error: GContextError{.sequence = 4590, .bad_value = 56623105, .minor_opcode = 0, .major_opcode = 60}
+
+[44488:1118/195747.954895:WARNING:ui/gfx/x/connection.cc:61] : X error received.  Request: FreeGCRequest, Error: GContextError{.sequence = 4619, .bad_value = 56623108, .minor_opcode = 0, .major_opcode = 60}
+
+[44488:1118/195748.777351:WARNING:ui/gfx/x/connection.cc:61] : X error received.  Request: FreeGCRequest, Error: GContextError{.sequence = 4644, .bad_value = 56623104, .minor_opcode = 0, .major_opcode = 60}
+
+[44488:1118/195749.804657:WARNING:ui/gfx/x/connection.cc:61] : X error received.  Request: FreeGCRequest, Error: GContextError{.sequence = 4675, .bad_value = 56623106, .minor_opcode = 0, .major_opcode = 60}
+
+
+CPU %	Mem MB	   PID	Process
+    1	41306802029	  7637	code
+    0	7745025380	  7640	   zygote
+    0	23235076141	 44488	     gpu-process
+    0	2581675127	 44491	       broker
+    0	7745025380	  7641	   zygote
+    0	2581675127	  7643	     zygote
+    5	72286903550	  8795	window [2] (platformio.ini - firmware - Visual Studio Code)
+    0	15490050761	 14444	       window
+    0	18071725887	 14524	       window
+    0	59378527916	 59011	window [8] (Wokwi Simulator - node_01 - Visual Studio Code)
+    0	54215177662	 59164	window [9] (Wokwi Simulator - node_02 - Visual Studio Code)
+    0	56796852789	 59418	window [10] (Wokwi Simulator - node_03 - Visual Studio Code)
+    0	51633502536	 59662	window [11] (Welcome - dashboard - Visual Studio Code)
+    0	20653401014	 62097	       window
+    0	15490050761	  7677	   utility-network-service
+    0	28398426395	  7756	agent-host
+    0	18071725887	  7816	     /usr/share/code/resources/app/node_modules.asar.unpacked/@github/copilot-sdk-linux-x64/prebuilds/linux-x64/copilot-runtime --headless --no-auto-update --log-level info --stdio --no-auto-login
+    0	18071725887	 24318	     fileWatcher
+    0	18071725887	  7776	pty-host
+    0	     0	 12451	     /usr/sbin/bash --init-file /usr/share/code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 13089	     /usr/sbin/bash --init-file /usr/share/code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	28398426395	 13549	       codex
+    0	49051827409	 13612	         /home/quangnhathung/.codex/packages/app-server-daemon/releases/0.170.0-x86_64-unknown-linux-musl/bin/codex app-server --listen unix:// --analytics-default-enabled -c features.api_key_model_discovery=true -c features.auth_elicitation=true -c features.code_mode_host=true -c features.mcp_oauth_refresh_coordination=false --managed-daemon
+    0	5163350254	 14099	           /opt/codex-desktop/resources/cua_node/bin/node /opt/codex-desktop/resources/cua_node/lib/node_modules/@oai/cua-repl/bin/cua-repl.mjs
+    0	     0	 14199	             /opt/codex-desktop/resources/cua_node/bin/node_repl
+    0	     0	 14100	           /opt/codex-desktop/resources/cua_node/bin/node_repl
+    0	     0	 15982	           /home/quangnhathung/.codex/packages/app-server-daemon/releases/0.170.0-x86_64-unknown-linux-musl/bin/codex-code-mode-host --listen grpc+stdio://
+    0	7745025380	 52973	           /opt/codex-desktop/resources/cua_node/bin/node /opt/codex-desktop/resources/cua_node/lib/node_modules/@oai/cua-repl/bin/cua-repl.mjs
+    0	     0	 53012	             /opt/codex-desktop/resources/cua_node/bin/node_repl
+    0	7745025380	 63980	               /opt/codex-desktop/resources/codex sandbox -c shell_environment_policy.inherit="all" -c default_permissions="node_repl" -c permissions.node_repl={filesystem = {"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware" = "write", "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents" = "read", "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws" = "read", "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex" = "read", "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git" = "read", "/opt/codex-desktop/resources/cua_node/bin" = "read", "/opt/codex-desktop/resources/cua_node/lib/node_modules" = "read", "/tmp/.tmp7hAlBZ" = "read", ":root" = "read", ":slash_tmp" = "write", ":tmpdir" = "write"}, network = {enabled = false}} -- /opt/codex-desktop/resources/cua_node/bin/node --experimental-vm-modules /tmp/.tmp7hAlBZ/kernel.js --session-id 1ef18c6339a841e68482872901ed5a94 --working-dir /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware
+    0	2581675127	 64023	                 codex-linux-sandbox --sandbox-policy-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --command-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --permission-profile {"type":"managed","file_system":{"type":"restricted","entries":[{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware"},"access":"write"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/bin"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/lib/node_modules"},"access":"read"},{"path":{"type":"path","path":"/tmp/.tmp7hAlBZ"},"access":"read"},{"path":{"type":"special","value":{"kind":"root"}},"access":"read"},{"path":{"type":"special","value":{"kind":"slash_tmp"}},"access":"write"},{"path":{"type":"special","value":{"kind":"tmpdir"}},"access":"write"}]},"network":"restricted"} -- /opt/codex-desktop/resources/cua_node/bin/node --experimental-vm-modules /tmp/.tmp7hAlBZ/kernel.js --session-id 1ef18c6339a841e68482872901ed5a94 --working-dir /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware
+    0	     0	 64031	                   bwrap --as-pid-1 --new-session --die-with-parent --ro-bind / / --dev /dev --perms 000 --tmpfs /tmp/codex-daemon-1000 --remount-ro /tmp/codex-daemon-1000 --bind /tmp /tmp --perms 000 --tmpfs /tmp/codex-daemon-1000 --remount-ro /tmp/codex-daemon-1000 --ro-bind /tmp/.tmp7hAlBZ /tmp/.tmp7hAlBZ --perms 555 --tmpfs /tmp/.git --remount-ro /tmp/.git --perms 555 --tmpfs /tmp/.agents --remount-ro /tmp/.agents --perms 555 --tmpfs /tmp/.codex --remount-ro /tmp/.codex --perms 555 --tmpfs /tmp/.aws --remount-ro /tmp/.aws --ro-bind /tmp/codex-bwrap-synthetic-mount-targets-1000 /tmp/codex-bwrap-synthetic-mount-targets-1000 --bind /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --perms 555 --tmpfs /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents --remount-ro /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents --perms 555 --tmpfs /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws --remount-ro /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws --perms 555 --tmpfs /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex --remount-ro /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex --ro-bind /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git --unshare-user --unshare-pid --unshare-ipc --unshare-net --proc /proc --cap-drop ALL --argv0 codex-linux-sandbox -- /opt/codex-desktop/resources/codex --sandbox-policy-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --command-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --permission-profile {"type":"managed","file_system":{"type":"restricted","entries":[{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware"},"access":"write"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/bin"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/lib/node_modules"},"access":"read"},{"path":{"type":"path","path":"/tmp/.tmp7hAlBZ"},"access":"read"},{"path":{"type":"special","value":{"kind":"root"}},"access":"read"},{"path":{"type":"special","value":{"kind":"slash_tmp"}},"access":"write"},{"path":{"type":"special","value":{"kind":"tmpdir"}},"access":"write"}]},"network":"restricted"} --apply-seccomp-then-exec -- /opt/codex-desktop/resources/cua_node/bin/node --experimental-vm-modules /tmp/.tmp7hAlBZ/kernel.js --session-id 1ef18c6339a841e68482872901ed5a94 --working-dir /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware
+    0	2581675127	 64033	                     codex-linux-sandbox --sandbox-policy-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --command-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --permission-profile {"type":"managed","file_system":{"type":"restricted","entries":[{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware"},"access":"write"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/bin"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/lib/node_modules"},"access":"read"},{"path":{"type":"path","path":"/tmp/.tmp7hAlBZ"},"access":"read"},{"path":{"type":"special","value":{"kind":"root"}},"access":"read"},{"path":{"type":"special","value":{"kind":"slash_tmp"}},"access":"write"},{"path":{"type":"special","value":{"kind":"tmpdir"}},"access":"write"}]},"network":"restricted"} --apply-seccomp-then-exec -- /opt/codex-desktop/resources/cua_node/bin/node --experimental-vm-modules /tmp/.tmp7hAlBZ/kernel.js --session-id 1ef18c6339a841e68482872901ed5a94 --working-dir /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware
+    0	10326700507	 64036	                       /opt/codex-desktop/resources/cua_node/bin/node --experimental-vm-modules /tmp/.tmp7hAlBZ/kernel.js --session-id 1ef18c6339a841e68482872901ed5a94 --working-dir /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware
+    0	10326700507	 63981	               /opt/codex-desktop/resources/codex sandbox -c shell_environment_policy.inherit="all" -c default_permissions="node_repl" -c permissions.node_repl={filesystem = {"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware" = "write", "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents" = "read", "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws" = "read", "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex" = "read", "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git" = "read", "/opt/codex-desktop/resources/cua_node/bin" = "read", "/opt/codex-desktop/resources/cua_node/lib/node_modules" = "read", "/tmp/.tmp7hAlBZ" = "read", ":root" = "read", ":slash_tmp" = "write", ":tmpdir" = "write"}, network = {enabled = false}} -- /opt/codex-desktop/resources/cua_node/bin/node --experimental-vm-modules /tmp/.tmp7hAlBZ/trusted-worker.js /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware
+    0	2581675127	 64022	                 codex-linux-sandbox --sandbox-policy-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --command-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --permission-profile {"type":"managed","file_system":{"type":"restricted","entries":[{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware"},"access":"write"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/bin"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/lib/node_modules"},"access":"read"},{"path":{"type":"path","path":"/tmp/.tmp7hAlBZ"},"access":"read"},{"path":{"type":"special","value":{"kind":"root"}},"access":"read"},{"path":{"type":"special","value":{"kind":"slash_tmp"}},"access":"write"},{"path":{"type":"special","value":{"kind":"tmpdir"}},"access":"write"}]},"network":"restricted"} -- /opt/codex-desktop/resources/cua_node/bin/node --experimental-vm-modules /tmp/.tmp7hAlBZ/trusted-worker.js /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware
+    0	     0	 64032	                   bwrap --as-pid-1 --new-session --die-with-parent --ro-bind / / --dev /dev --perms 000 --tmpfs /tmp/codex-daemon-1000 --remount-ro /tmp/codex-daemon-1000 --bind /tmp /tmp --perms 000 --tmpfs /tmp/codex-daemon-1000 --remount-ro /tmp/codex-daemon-1000 --ro-bind /tmp/.tmp7hAlBZ /tmp/.tmp7hAlBZ --perms 555 --tmpfs /tmp/.git --remount-ro /tmp/.git --perms 555 --tmpfs /tmp/.agents --remount-ro /tmp/.agents --perms 555 --tmpfs /tmp/.codex --remount-ro /tmp/.codex --perms 555 --tmpfs /tmp/.aws --remount-ro /tmp/.aws --ro-bind /tmp/codex-bwrap-synthetic-mount-targets-1000 /tmp/codex-bwrap-synthetic-mount-targets-1000 --bind /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --perms 555 --tmpfs /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents --remount-ro /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents --perms 555 --tmpfs /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws --remount-ro /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws --perms 555 --tmpfs /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex --remount-ro /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex --ro-bind /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git --unshare-user --unshare-pid --unshare-ipc --unshare-net --proc /proc --cap-drop ALL --argv0 codex-linux-sandbox -- /opt/codex-desktop/resources/codex --sandbox-policy-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --command-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --permission-profile {"type":"managed","file_system":{"type":"restricted","entries":[{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware"},"access":"write"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/bin"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/lib/node_modules"},"access":"read"},{"path":{"type":"path","path":"/tmp/.tmp7hAlBZ"},"access":"read"},{"path":{"type":"special","value":{"kind":"root"}},"access":"read"},{"path":{"type":"special","value":{"kind":"slash_tmp"}},"access":"write"},{"path":{"type":"special","value":{"kind":"tmpdir"}},"access":"write"}]},"network":"restricted"} --apply-seccomp-then-exec -- /opt/codex-desktop/resources/cua_node/bin/node --experimental-vm-modules /tmp/.tmp7hAlBZ/trusted-worker.js /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware
+    0	2581675127	 64034	                     codex-linux-sandbox --sandbox-policy-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --command-cwd /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware --permission-profile {"type":"managed","file_system":{"type":"restricted","entries":[{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware"},"access":"write"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.agents"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.aws"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.codex"},"access":"read"},{"path":{"type":"path","path":"/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/.git"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/bin"},"access":"read"},{"path":{"type":"path","path":"/opt/codex-desktop/resources/cua_node/lib/node_modules"},"access":"read"},{"path":{"type":"path","path":"/tmp/.tmp7hAlBZ"},"access":"read"},{"path":{"type":"special","value":{"kind":"root"}},"access":"read"},{"path":{"type":"special","value":{"kind":"slash_tmp"}},"access":"write"},{"path":{"type":"special","value":{"kind":"tmpdir"}},"access":"write"}]},"network":"restricted"} --apply-seccomp-then-exec -- /opt/codex-desktop/resources/cua_node/bin/node --experimental-vm-modules /tmp/.tmp7hAlBZ/trusted-worker.js /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware
+    0	28398426395	 64035	                       /opt/codex-desktop/resources/cua_node/bin/node --experimental-vm-modules /tmp/.tmp7hAlBZ/trusted-worker.js /home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware
+    0	25816751268	 64061	               /opt/codex-desktop/resources/codex app-server --listen stdio://
+    0	     0	 52974	           /opt/codex-desktop/resources/cua_node/bin/node_repl
+    0	     0	 98758	           /home/quangnhathung/.pyenv/versions/3.12.15/bin/python3 /tmp/task024-stop.py
+    0	     0	 98803	             sh /usr/share/code/bin/code --status
+    0	15490050761	 98808	               electron-nodejs (cli.js)
+    0	25816751268	 98821	                 /usr/share/code/code --status
+    0	7745025380	 98824	                   zygote
+    0	12908375634	 98863	                     gpu-process
+    0	7745025380	 98825	                   zygote
+    0	     0	 98827	                     zygote
+    0	10326700507	 98866	                   utility-network-service
+    0	     0	 98901	                   /usr/sbin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	10326700507	 13710	         /home/quangnhathung/.codex/packages/app-server-daemon/releases/0.170.0-x86_64-unknown-linux-musl/bin/codex app-server daemon pid-update-loop
+    0	     0	 59512	     /usr/sbin/bash --init-file /usr/share/code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	23235076141	  7875	shared-process
+    0	     0	  7927	   dconf watch /system/proxy/
+    0	90358629437	 11203	extension-host [2]
+    0	15490050761	 12058	     electron-nodejs (languageServer.js)
+    0	12908375634	 12060	     electron-nodejs (serverMain.js)
+    0	     0	 12158	     /home/quangnhathung/.vscode/extensions/ms-python.vscode-python-envs-1.44.0-linux-x64/python-env-tools/bin/pet server
+    0	     0	 12338	     /home/quangnhathung/.vscode/extensions/ms-vscode.cpptools-1.35.6-linux-x64/bin/cpptools
+    0	12908375634	 12848	     /usr/share/code/code /usr/share/code/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=11203
+    0	18071725887	 12921	     /home/quangnhathung/.vscode/extensions/openai.chatgpt-26.1111.21308-linux-x64/bin/linux-x86_64/codex -c features.code_mode_host=true -c features.windows_sandbox_service=true app-server --analytics-default-enabled
+    0	25816751268	 13442	     electron-nodejs (bundle.js)
+    0	2581675127	 14443	     /home/quangnhathung/.platformio/penv/bin/python -m platformio -c vscode home --port 45969 --host 127.0.0.1 --session-id 947c588ac0a0fc5adb76ccc27208c41e6acf4976 --shutdown-timeout 3600 --no-open
+    0	18071725887	 11223	file-watcher [2]
+    0	18071725887	 59092	file-watcher [8]
+    0	141992131973	 59205	extension-host [8]
+    0	20653401014	 60057	     electron-nodejs (languageServer.js)
+    0	15490050761	 60058	     electron-nodejs (serverMain.js)
+    0	18071725887	 61120	     /home/quangnhathung/.vscode/extensions/openai.chatgpt-26.1111.21308-linux-x64/bin/linux-x86_64/codex -c features.code_mode_host=true -c features.windows_sandbox_service=true app-server --analytics-default-enabled
+    0	15490050761	 61354	     /usr/share/code/code /usr/share/code/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=59205
+    0	18071725887	 59272	file-watcher [9]
+    0	139410456846	 59301	extension-host [9]
+    0	15490050761	 60269	     electron-nodejs (serverMain.js)
+    0	20653401014	 60270	     electron-nodejs (languageServer.js)
+    0	20653401014	 61165	     /home/quangnhathung/.vscode/extensions/openai.chatgpt-26.1111.21308-linux-x64/bin/linux-x86_64/codex -c features.code_mode_host=true -c features.windows_sandbox_service=true app-server --analytics-default-enabled
+    0	15490050761	 61353	     /usr/share/code/code /usr/share/code/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=59301
+    0	18071725887	 59780	file-watcher [10]
+    0	139410456846	 59801	extension-host [10]
+    0	20653401014	 60576	     electron-nodejs (languageServer.js)
+    0	15490050761	 60610	     electron-nodejs (serverMain.js)
+    0	18071725887	 61583	     /home/quangnhathung/.vscode/extensions/openai.chatgpt-26.1111.21308-linux-x64/bin/linux-x86_64/codex -c features.code_mode_host=true -c features.windows_sandbox_service=true app-server --analytics-default-enabled
+    0	15490050761	 61847	     /usr/share/code/code /usr/share/code/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=59801
+    0	18071725887	 59858	file-watcher [11]
+    0	131665431466	 59892	extension-host [11]
+    0	15490050761	 60815	     electron-nodejs (serverMain.js)
+    0	20653401014	 60849	     electron-nodejs (languageServer.js)
+    0	18071725887	 61666	     /home/quangnhathung/.vscode/extensions/openai.chatgpt-26.1111.21308-linux-x64/bin/linux-x86_64/codex -c features.code_mode_host=true -c features.windows_sandbox_service=true app-server --analytics-default-enabled
+    0	15490050761	 61965	     /usr/share/code/code /usr/share/code/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=59892
+
+Workspace Stats: 
+|  Window (Welcome - dashboard - Visual Studio Code)
+|  Window (Wokwi Simulator - node_03 - Visual Studio Code)
+|  Window (Wokwi Simulator - node_02 - Visual Studio Code)
+|  Window (Wokwi Simulator - node_01 - Visual Studio Code)
+|  Window (platformio.ini - firmware - Visual Studio Code)
+|    Folder (node_03): 5 files
+|      File types: json(2) bin(1) elf(1) toml(1)
+|      Conf files:
+|    Folder (node_02): 5 files
+|      File types: json(2) bin(1) elf(1) toml(1)
+|      Conf files:
+|    Folder (node_01): 7 files
+|      File types: json(3) toml(2) bin(1) elf(1)
+|      Conf files:
+|    Folder (dashboard): 15 files
+|      File types: js(5) md(3) mjs(2) gitignore(1) json(1) css(1) svg(1)
+|                  html(1)
+|      Conf files: settings.json(1) agents.md(1)
+|    Folder (firmware): more than 20000 files
+|      File types: html(4843) py(2566) pyc(2056) jpg(1609) png(1361)
+|                  json(1041) h(617) log(569) hpp(523) pyi(402)
+|                  other(4413)
+|      Conf files: cmake(8) settings.json(4) package.json(3) agents.md(2)
+|                  launch.json(1) claude.md(1)
+|      Launch Configs: platformio-debug(3)

@@ -1,0 +1,10 @@
+{
+  "report.md": {
+    "before_sha256": "4df8bcbec2763aece39818ca987cb893803433fb767b6bf65a05a011de38080f",
+    "old_tail_exact": true
+  },
+  "checklists.md": {
+    "before_sha256": "78515248c71a87a17b9db8bef9bd2d37b48bcadf648b8f06ab777488f78bad60",
+    "old_tail_exact": true
+  }
+}

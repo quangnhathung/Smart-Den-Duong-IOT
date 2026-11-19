@@ -1,0 +1,13 @@
+{
+  "status": "STOPPED",
+  "verified_at": "2026-11-18T19:59:04.766514+07:00",
+  "ports_closed": {
+    "1883": true,
+    "8000": true,
+    "5500": true,
+    "4000": true,
+    "4001": true,
+    "4002": true
+  },
+  "mqtt_container_running": false
+}

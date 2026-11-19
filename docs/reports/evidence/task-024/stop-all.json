@@ -1,0 +1,77 @@
+{
+  "at": "2026-11-18T20:30:23.463582+07:00",
+  "actions": [
+    {
+      "role": "backend",
+      "pid": 58865
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59011,
+      "start_ticks": "162532"
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59780,
+      "start_ticks": "162905"
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59205,
+      "start_ticks": "162654"
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59301,
+      "start_ticks": "162738"
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59272,
+      "start_ticks": "162728"
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59662,
+      "start_ticks": "162885"
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59858,
+      "start_ticks": "163030"
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59092,
+      "start_ticks": "162623"
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59892,
+      "start_ticks": "163044"
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59801,
+      "start_ticks": "162938"
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59418,
+      "start_ticks": "162764"
+    },
+    {
+      "role": "project-code-process",
+      "pid": 59164,
+      "start_ticks": "162648"
+    }
+  ],
+  "broker_stop": {
+    "exit": 0,
+    "stderr": " Container smartlight-p0-mosquitto-1 Stopping \n Container smartlight-p0-mosquitto-1 Stopped \n"
+  },
+  "verified_at": "2026-11-18T20:30:23.947236+07:00",
+  "remaining_project_listeners": [],
+  "listeners_after": "State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess\nLISTEN 0      4096       127.0.0.1:11434      0.0.0.0:*   \nLISTEN 0      511        127.0.0.1:44057      0.0.0.0:*    users:((\"code\",pid=13442,fd=48))\nLISTEN 0      511        127.0.0.1:44517      0.0.0.0:*    users:((\"code\",pid=11203,fd=48))\nLISTEN 0      511        127.0.0.1:18789      0.0.0.0:*    users:((\"MainThread\",pid=1370,fd=32))\nLISTEN 0      10         127.0.0.1:9222       0.0.0.0:*    users:((\"chrome\",pid=2722,fd=141))\nLISTEN 0      4096       127.0.0.1:41049      0.0.0.0:*   \nLISTEN 0      128        127.0.0.1:38031      0.0.0.0:*    users:((\"codex\",pid=13549,fd=36))\nLISTEN 0      511        127.0.0.1:45093      0.0.0.0:*    users:((\"code\",pid=7756,fd=42))\nLISTEN 0      128          0.0.0.0:22         0.0.0.0:*   \nLISTEN 0      2048       127.0.0.1:45969      0.0.0.0:*    users:((\"python\",pid=14443,fd=6))\nLISTEN 0      511            [::1]:18789         [::]:*    users:((\"MainThread\",pid=1370,fd=33))\nLISTEN 0      128             [::]:22            [::]:*   \n",
+  "status": "STOPPED"
+}

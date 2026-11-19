@@ -181,3 +181,25 @@ Sau đó thử stop/start broker theo mục 6, mở subscriber mới nếu cửa
 ## Chốt nghiệm thu TASK-002
 
 Ưu tiên [biên bản mới nhất](../reports/evidence/task-002/acceptance.md) khi đọc tiến độ; các đoạn cập nhật theo thời điểm ở trên được giữ như lịch sử. Đã nhận đủ bốn pong và người vận hành xác nhận không restart ESP32 khi thử stop/start broker. Đủ năm mức PWM theo Serial trong hội thoại. Platform pin 8.0.0, Arduino package 4.30312.261113, ESP32 libs 3.3.12, PubSubClient 2.8.0; build sau pin và copy đạt. Các log timeout phiên dài vẫn được giữ và chưa khẳng định nguyên nhân; cần theo dõi ở giai đoạn mạng nghiệp vụ. Không ghi toàn đồ án hoặc ba node là PASS.
+
+## Dừng đợt vận hành TASK-021/022
+
+TASK-021 dùng broker Compose1883, backend mặc định8000/DB backend/data/smartlight.db và Live Server5500. Mới xác nhận node01 ONLINE/FRESH; node02/03 chưa có telemetry khi người dùng yêu cầu dừng, không nghiệm thu đủ ba node. TASK-022 dừng container/backend và tiến trình của bốn cửa sổ dự án; kiểm1883/8000/5500/4000/4001/4002 không còn listener. [Bằng chứng](../reports/evidence/task-022/README.md).
+
+Đóng cửa sổ có thể chưa dừng extension host/mô phỏng. Khi dừng phải đối chiếu code --status với đúng workspace/window và PID/start ticks, sau đó kiểm cổng; không dừng toàn bộ Code hoặc sao chép PID của lượt cũ. Dữ liệu được giữ, không xóa DB/lock để dừng dịch vụ. Không tự chạy lại sau yêu cầu dừng.
+
+## Khởi động lại TASK-023 — 2026-11-18T20:05:42+07:00
+
+Đã chạy lại Compose Mosquitto127.0.0.1:1883, backend một worker8000 với DB hiện có, ba cửa sổ Wokwi và VS Code Live Server5500. Hash source/BIN/ELF đã chuẩn bị khớp manifest cả ba node; không cần copy từ .pio/build hiện không có đầu ra. Khởi động mô phỏng bằng command palette từng cửa sổ đúng workspace, không dùng launcher extension của TASK-021.
+
+Subscriber độc lập nhận2 telemetry/node; backend đủ ba ONLINE/FRESH, health database/broker/queue=true, dropped_events=0. Live Server trả200/HTML; chưa kiểm DOM vì không có browser CUA kết nối. Không chạy nghiệm thu30 phút hoặc toàn bộ FR. [Bằng chứng/PID và giới hạn](../reports/evidence/task-023/README.md). Giữ stack chạy theo yêu cầu; khi dừng đối chiếu PID/start ticks hiện tại, không dùng PID của lượt021.
+
+## Dừng dịch vụ TASK-024 — 2026-11-18T20:30:55+07:00
+
+Đã dừng runtime TASK-023 theo yêu cầu. Đối chiếu backend qua boot ID/PID/start ticks và ba workspace Wokwi/dashboard qua code --status; chỉ dừng renderer/extension host/file watcher liên quan, giữ cửa sổ firmware gốc. Compose stop mosquitto đạt, kiểm1883/8000/5500/4000/4001/4002 không còn listener. DB/source/artifact được giữ. [Bằng chứng](../reports/evidence/task-024/README.md). Chỉ khởi động lại khi có yêu cầu mới.
+
+## Khởi động TASK-025 — 2026-11-19T07:28:45+07:00
+
+Sau reboot, kiểm socket Docker ban đầu lỗi; lần kiểm tiếp daemon đã active. Dùng broker Compose1883/backend8000 một worker với DB hiện có. Cả3 source/BIN/ELF khớp manifest nên không build mới. Mở4 cửa sổ bằng VS Code CLI với launcher tạm riêng trong output/task-025; launcher gọi API command Wokwi/Live Server đã cài, không sửa source hoặc cài vào profile.
+
+Ba node ONLINE/FRESH, subscriber độc lập nhận3/2/2 telemetry; node03 chưa kết nối ở kiểm đầu và tự kết nối sau đó, giữ bằng chứng cả hai lần. Health OK, dropped_events=0, Live Server5500 HTTP200. Live Server5.7.10 thực tế listen0.0.0.0 dù host URL/config127.0.0.1; không sửa extension trong lượt vận hành. Chưa kiểm DOM/render hoặc30 phút ổn định. [Bằng chứng/ownership mới](../reports/evidence/task-025/README.md). Giữ stack chạy theo yêu cầu, không dùng PID cũ khi dừng.

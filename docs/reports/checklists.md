@@ -1,3 +1,49 @@
+# TASK-025 — Kiểm tra và khởi động hệ thống local
+
+- Hoàn thành: 2026-11-19T07:28:45+07:00; **4/4 mục nghiệm thu vận hành**.
+- [x] Kiểm cấu hình/cổng và hash source/BIN/ELF3 node.
+- [x] MQTT/backend health OK, database/broker/queue đạt.
+- [x] Ba node ONLINE/FRESH và subscriber nhận telemetry mới3/2/2.
+- [x] Live Server HTTP200, lưu bằng chứng/cập nhật hồ sơ, giữ stack chạy.
+
+[Bằng chứng và giới hạn](evidence/task-025/README.md). Không nghiệm thu DOM/render, toàn bộ FR hoặc30 phút ổn định mới.
+
+---
+
+# TASK-024 — Dừng dịch vụ dự án
+
+- Hoàn thành: 2026-11-18T20:30:55+07:00; **3/3 mục nghiệm thu**.
+- [x] Xác minh đúng container/PID/workspace của TASK-023.
+- [x] Dừng3 node/backend/Live Server/MQTT, sáu cổng dự án trống.
+- [x] Giữ DB/source và ứng dụng khác, lưu bằng chứng và cập nhật lịch sử.
+
+[Bằng chứng](evidence/task-024/README.md). Không tự khởi động lại.
+
+---
+
+# TASK-023 — Kiểm tra và khởi động hệ thống local
+
+- Hoàn thành: 2026-11-18T20:05:42+07:00; **4/4 mục nghiệm thu vận hành**.
+- [x] Kiểm cấu hình/cổng và hash source/artifact ba node.
+- [x] MQTT1883/backend8000 health OK, database/broker/queue đạt.
+- [x] Ba node ONLINE/FRESH; subscriber độc lập nhận2 telemetry/node.
+- [x] Live Server5500 HTTP200; lưu bằng chứng, giữ hệ thống chạy.
+
+[Bằng chứng và giới hạn](evidence/task-023/README.md). Chưa kiểm DOM/render, build mới, toàn bộ FR hoặc30 phút ổn định.
+
+---
+
+# TASK-022 — Dừng toàn bộ dịch vụ dự án
+
+- Hoàn thành: 2026-11-18T19:58:51+07:00; **3/3 mục nghiệm thu**.
+- [x] Đối chiếu container/PID/cửa sổ thuộc đợt khởi động.
+- [x] Dừng MQTT/backend/Wokwi/Live Server, kiểm sáu cổng dự án không còn listener.
+- [x] Giữ dữ liệu/source, ghi bằng chứng và hủy TASK-021 chưa hoàn tất; không tự khởi động lại.
+
+[Bằng chứng](evidence/task-022/README.md). TASK-021 hủy ở2/4, không đánh dấu hoàn thành ba node.
+
+---
+
 # TASK-019 — Báo cáo tiểu luận bốn chương
 
 - Hoàn thành: 2026-11-18T16:41:28+07:00; **4/4 nhóm nghiệm thu**.

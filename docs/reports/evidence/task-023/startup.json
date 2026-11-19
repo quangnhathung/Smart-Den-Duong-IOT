@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-18T20:03:12.123125+07:00",
+  "boot_id": "ed10efcc-5bfd-4152-a403-0d50e6181a60",
+  "processes": [
+    {
+      "role": "backend",
+      "pid": 58865,
+      "start_ticks": "162387",
+      "args": [
+        "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/backend/.venv/bin/python",
+        "-m",
+        "uvicorn",
+        "smartlight.api:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000",
+        "--workers",
+        "1"
+      ],
+      "log": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/output/task-023/backend.log"
+    }
+  ],
+  "broker": "{\"Command\":\"\\\"/docker-entrypoint.…\\\"\",\"CreatedAt\":\"2026-11-18 19:47:08 +0700 +07\",\"Engine\":\"\",\"ExitCode\":0,\"Health\":\"\",\"ID\":\"c5b7c3ac8f82\",\"Image\":\"eclipse-mosquitto:2.1.2-alpine\",\"Labels\":\"com.docker.compose.depends_on=,com.docker.compose.oneoff=False,com.docker.compose.project=smartlight-p0,com.docker.compose.project.working_dir=/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/infra,com.docker.compose.service=mosquitto,org.opencontainers.image.title=eclipse-mosquitto,org.opencontainers.image.authors=Roger Light \\u003croger@atchoo.org\\u003e,org.opencontainers.image.licenses=EPL-2.0 OR BSD-3-Clause,com.docker.compose.config-hash=b1ccfbd25d8aea6a58d81bdb220038355c5acdeb37a120769456b14624c4b357,com.docker.compose.container-number=1,com.docker.compose.image=sha256:22075095e8790eec5592ff3c213b1974cd51aa458275af2f8b0595af4c385df2,org.opencontainers.image.version=2.1.2,com.docker.compose.project.config_files=/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/infra/compose.yaml,com.docker.compose.version=5.7.1,org.opencontainers.image.description=Eclipse Mosquitto MQTT Broker,org.opencontainers.image.documentation=https://mosquitto.org/documentation/,org.opencontainers.image.source=https://github.com/eclipse-mosquitto/mosquitto,org.opencontainers.image.url=https://mosquitto.org/\",\"LocalVolumes\":\"2\",\"Mounts\":\"0b6f2a28d14892…,1220061eb5903b…,/home/quangnha…\",\"Name\":\"smartlight-p0-mosquitto-1\",\"Names\":\"smartlight-p0-mosquitto-1\",\"Networks\":\"smartlight-p0_default\",\"Ports\":\"127.0.0.1:1883-\\u003e1883/tcp\",\"Project\":\"smartlight-p0\",\"Publishers\":[{\"URL\":\"127.0.0.1\",\"TargetPort\":1883,\"PublishedPort\":1883,\"Protocol\":\"tcp\"}],\"RunningFor\":\"16 minutes ago\",\"Service\":\"mosquitto\",\"Size\":\"0B\",\"State\":\"running\",\"Status\":\"Up Less than a second\"}\n",
+  "database": "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/backend/data/smartlight.db",
+  "vscode_folders": [
+    "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/simulations/node_01",
+    "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/simulations/node_02",
+    "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/firmware/simulations/node_03",
+    "/home/quangnhathung/HungQuang_WorkSpace/Learing/Iot/DoAn/dashboard"
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "node_01": {
+    "current_source_and_prepared_artifacts_match": true,
+    "manifest": {
+      "node_id": "node_01",
+      "environment": "esp32dev",
+      "identity_verification": "Expected identity from environment; confirm via live Serial/MQTT",
+      "inputs_sha256": {
+        "include/README": "347170baf5c3013f398bc0f83fa43903acaab07248acd231663644535d229f88",
+        "lib/README": "bb872e3005f9eb9c4bdaa38bd69dc935a4455e6c6982efb2d45161deb44f99f9",
+        "platformio.ini": "e6027327b267b4cda60258be3b908504ca8927aded9fa246ed3a7b168e10e1bf",
+        "src/Connectivity.cpp": "26ebde6e2389fc8b8a0fd6fa4b12fb8d28de058461374764f52bf73a2d92fec1",
+        "src/Connectivity.h": "625d44902351d266572ee735fbe221874ca7dcfbf7ebc0dc4754ff5700c8fdc7",
+        "src/ControlConfig.h": "58c7faab426707e859ae7c70b534490bb1464721f6fd4aebfe50b804b9f76a24",
+        "src/ControlTypes.h": "bf00124d2d737ae04f896d3e93c7e2e501e499844a1cff20fd7dc8db6d84c7f4",
+        "src/DimmingController.cpp": "4570f87843fffd64b04b7752e8bc113471e07d496f8d796c3feb27a88ff360af",
+        "src/DimmingController.h": "e3a4d170546ed99ff3d5e67a3cda1a2d99dad72cebdd138bf50e4e7edba741e6",
+        "src/FaultDetector.cpp": "1e85e393510282f5a598c5b2972471c4fd9baf083ba68eb178c2e7fb590b404f",
+        "src/FaultDetector.h": "4a9a3429bb6aeca3935bd1465e770d870291c6514a5a4020225cc7863f67d2d1",
+        "src/FirmwareApp.cpp": "d4d4f18af84bf602a6ce12424d3a2d3d33923dcf7a090360d31fe7a934734ae1",
+        "src/FirmwareApp.h": "f9cd267c262a869dc4dc7992357ea488ab691b8f31932757ee72a26fb3bb2f82",
+        "src/LightingController.cpp": "8ce3282aaecbfc7d4ccfbc44771bc89cf015cc29253d6e8321aeb5cb15f907c3",
+        "src/LightingController.h": "42062b3590c3281d140f829da932a8937cc17141f48c59142e3d6dae9571262b",
+        "src/LocalControlCommand.cpp": "9fcc989c95e82cf030d1dc8da36a0ac0a9ee9879aaa4c697004eec79bbc76681",
+        "src/LocalControlCommand.h": "1784a61d98d4cac1ffd1b02879d43bb6900eac790f82d9032306c84ba3635b64",
+        "src/MqttMailbox.h": "3ac5abdf0c60bf05e6f5e537a5d87f46002a00041d14579fa837795d112c0b19",
+        "src/MqttProtocol.cpp": "38a58f4c3f92fda1d609303534c1cb5bcab7ce6a595580be4879dae0d7516d93",
+        "src/MqttProtocol.h": "a98123ca50ed568a47ed86e3537f772631c707b7137d8875188200d301660fce",
+        "src/NodeIdentity.h": "929a5945bbd8511e510ad5410e621a115b96de878e0ee5c1460c1aaf00bd3c44",
+        "src/SensorReader.cpp": "38cbd8661b73e0c21a613ac90fc2306d4e1fda8ed8e97dc52c5e91c435ef1a53",
+        "src/SensorReader.h": "136352ecc8a368d30856071ca01b0b674f30e89c5fe015c3c43a6c9744723376",
+        "src/main.cpp": "3a76f42cc88911d1c1f60b61e55b6858fce947f626db01fac11ecb279bbf768b"
+      },
+      "artifacts": {
+        "firmware.bin": {
+          "source": ".pio/build/esp32dev/firmware.bin",
+          "target": "simulations/node_01/build/firmware.bin",
+          "sha256": "1334b1121fca4fa9e4d0a81fdd60afd782d885e2f25df7ede8757a1787a24318"
+        },
+        "firmware.elf": {
+          "source": ".pio/build/esp32dev/firmware.elf",
+          "target": "simulations/node_01/build/firmware.elf",
+          "sha256": "c24b3ea78be5fa8db3be85f5d8858783501c80eda7f0d382b50f6daf956e83ae"
+        }
+      }
+    }
+  },
+  "node_02": {
+    "current_source_and_prepared_artifacts_match": true,
+    "manifest": {
+      "node_id": "node_02",
+      "environment": "node_02",
+      "identity_verification": "Expected identity from environment; confirm via live Serial/MQTT",
+      "inputs_sha256": {
+        "include/README": "347170baf5c3013f398bc0f83fa43903acaab07248acd231663644535d229f88",
+        "lib/README": "bb872e3005f9eb9c4bdaa38bd69dc935a4455e6c6982efb2d45161deb44f99f9",
+        "platformio.ini": "e6027327b267b4cda60258be3b908504ca8927aded9fa246ed3a7b168e10e1bf",
+        "src/Connectivity.cpp": "26ebde6e2389fc8b8a0fd6fa4b12fb8d28de058461374764f52bf73a2d92fec1",
+        "src/Connectivity.h": "625d44902351d266572ee735fbe221874ca7dcfbf7ebc0dc4754ff5700c8fdc7",
+        "src/ControlConfig.h": "58c7faab426707e859ae7c70b534490bb1464721f6fd4aebfe50b804b9f76a24",
+        "src/ControlTypes.h": "bf00124d2d737ae04f896d3e93c7e2e501e499844a1cff20fd7dc8db6d84c7f4",
+        "src/DimmingController.cpp": "4570f87843fffd64b04b7752e8bc113471e07d496f8d796c3feb27a88ff360af",
+        "src/DimmingController.h": "e3a4d170546ed99ff3d5e67a3cda1a2d99dad72cebdd138bf50e4e7edba741e6",
+        "src/FaultDetector.cpp": "1e85e393510282f5a598c5b2972471c4fd9baf083ba68eb178c2e7fb590b404f",
+        "src/FaultDetector.h": "4a9a3429bb6aeca3935bd1465e770d870291c6514a5a4020225cc7863f67d2d1",
+        "src/FirmwareApp.cpp": "d4d4f18af84bf602a6ce12424d3a2d3d33923dcf7a090360d31fe7a934734ae1",
+        "src/FirmwareApp.h": "f9cd267c262a869dc4dc7992357ea488ab691b8f31932757ee72a26fb3bb2f82",
+        "src/LightingController.cpp": "8ce3282aaecbfc7d4ccfbc44771bc89cf015cc29253d6e8321aeb5cb15f907c3",
+        "src/LightingController.h": "42062b3590c3281d140f829da932a8937cc17141f48c59142e3d6dae9571262b",
+        "src/LocalControlCommand.cpp": "9fcc989c95e82cf030d1dc8da36a0ac0a9ee9879aaa4c697004eec79bbc76681",
+        "src/LocalControlCommand.h": "1784a61d98d4cac1ffd1b02879d43bb6900eac790f82d9032306c84ba3635b64",
+        "src/MqttMailbox.h": "3ac5abdf0c60bf05e6f5e537a5d87f46002a00041d14579fa837795d112c0b19",
+        "src/MqttProtocol.cpp": "38a58f4c3f92fda1d609303534c1cb5bcab7ce6a595580be4879dae0d7516d93",
+        "src/MqttProtocol.h": "a98123ca50ed568a47ed86e3537f772631c707b7137d8875188200d301660fce",
+        "src/NodeIdentity.h": "929a5945bbd8511e510ad5410e621a115b96de878e0ee5c1460c1aaf00bd3c44",
+        "src/SensorReader.cpp": "38cbd8661b73e0c21a613ac90fc2306d4e1fda8ed8e97dc52c5e91c435ef1a53",
+        "src/SensorReader.h": "136352ecc8a368d30856071ca01b0b674f30e89c5fe015c3c43a6c9744723376",
+        "src/main.cpp": "3a76f42cc88911d1c1f60b61e55b6858fce947f626db01fac11ecb279bbf768b"
+      },
+      "artifacts": {
+        "firmware.bin": {
+          "source": ".pio/build/node_02/firmware.bin",
+          "target": "simulations/node_02/build/firmware.bin",
+          "sha256": "03ddc3e89258607de92af593bf74162e5371af9737863a5eb9cb98fc74dc3f9f"
+        },
+        "firmware.elf": {
+          "source": ".pio/build/node_02/firmware.elf",
+          "target": "simulations/node_02/build/firmware.elf",
+          "sha256": "82cc12d981d05282dcaac01657f74b2a0d4667409340c1264db7eaf46146bf6e"
+        }
+      }
+    }
+  },
+  "node_03": {
+    "current_source_and_prepared_artifacts_match": true,
+    "manifest": {
+      "node_id": "node_03",
+      "environment": "node_03",
+      "identity_verification": "Expected identity from environment; confirm via live Serial/MQTT",
+      "inputs_sha256": {
+        "include/README": "347170baf5c3013f398bc0f83fa43903acaab07248acd231663644535d229f88",
+        "lib/README": "bb872e3005f9eb9c4bdaa38bd69dc935a4455e6c6982efb2d45161deb44f99f9",
+        "platformio.ini": "e6027327b267b4cda60258be3b908504ca8927aded9fa246ed3a7b168e10e1bf",
+        "src/Connectivity.cpp": "26ebde6e2389fc8b8a0fd6fa4b12fb8d28de058461374764f52bf73a2d92fec1",
+        "src/Connectivity.h": "625d44902351d266572ee735fbe221874ca7dcfbf7ebc0dc4754ff5700c8fdc7",
+        "src/ControlConfig.h": "58c7faab426707e859ae7c70b534490bb1464721f6fd4aebfe50b804b9f76a24",
+        "src/ControlTypes.h": "bf00124d2d737ae04f896d3e93c7e2e501e499844a1cff20fd7dc8db6d84c7f4",
+        "src/DimmingController.cpp": "4570f87843fffd64b04b7752e8bc113471e07d496f8d796c3feb27a88ff360af",
+        "src/DimmingController.h": "e3a4d170546ed99ff3d5e67a3cda1a2d99dad72cebdd138bf50e4e7edba741e6",
+        "src/FaultDetector.cpp": "1e85e393510282f5a598c5b2972471c4fd9baf083ba68eb178c2e7fb590b404f",
+        "src/FaultDetector.h": "4a9a3429bb6aeca3935bd1465e770d870291c6514a5a4020225cc7863f67d2d1",
+        "src/FirmwareApp.cpp": "d4d4f18af84bf602a6ce12424d3a2d3d33923dcf7a090360d31fe7a934734ae1",
+        "src/FirmwareApp.h": "f9cd267c262a869dc4dc7992357ea488ab691b8f31932757ee72a26fb3bb2f82",
+        "src/LightingController.cpp": "8ce3282aaecbfc7d4ccfbc44771bc89cf015cc29253d6e8321aeb5cb15f907c3",
+        "src/LightingController.h": "42062b3590c3281d140f829da932a8937cc17141f48c59142e3d6dae9571262b",
+        "src/LocalControlCommand.cpp": "9fcc989c95e82cf030d1dc8da36a0ac0a9ee9879aaa4c697004eec79bbc76681",
+        "src/LocalControlCommand.h": "1784a61d98d4cac1ffd1b02879d43bb6900eac790f82d9032306c84ba3635b64",
+        "src/MqttMailbox.h": "3ac5abdf0c60bf05e6f5e537a5d87f46002a00041d14579fa837795d112c0b19",
+        "src/MqttProtocol.cpp": "38a58f4c3f92fda1d609303534c1cb5bcab7ce6a595580be4879dae0d7516d93",
+        "src/MqttProtocol.h": "a98123ca50ed568a47ed86e3537f772631c707b7137d8875188200d301660fce",
+        "src/NodeIdentity.h": "929a5945bbd8511e510ad5410e621a115b96de878e0ee5c1460c1aaf00bd3c44",
+        "src/SensorReader.cpp": "38cbd8661b73e0c21a613ac90fc2306d4e1fda8ed8e97dc52c5e91c435ef1a53",
+        "src/SensorReader.h": "136352ecc8a368d30856071ca01b0b674f30e89c5fe015c3c43a6c9744723376",
+        "src/main.cpp": "3a76f42cc88911d1c1f60b61e55b6858fce947f626db01fac11ecb279bbf768b"
+      },
+      "artifacts": {
+        "firmware.bin": {
+          "source": ".pio/build/node_03/firmware.bin",
+          "target": "simulations/node_03/build/firmware.bin",
+          "sha256": "337aadb043f749c1b2692d3fa5559528dd45a1ca8fa21c0f4bdc3bc9eba09a1e"
+        },
+        "firmware.elf": {
+          "source": ".pio/build/node_03/firmware.elf",
+          "target": "simulations/node_03/build/firmware.elf",
+          "sha256": "bd4f846724d827e8543d59b9a8727eed3a6e45e0d98a677fed672e39bd87eb32"
+        }
+      }
+    }
+  }
+}
